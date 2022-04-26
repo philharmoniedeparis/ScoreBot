@@ -1,0 +1,26 @@
+# rasax specific settings
+rasax:
+    # Rasa X configuration you did in previous steps
+    # ...
+    tag: "1.0.1"
+# rasa: Settings common for all Rasa containers
+rasa:
+    # Rasa Open Source configuration you did in previous steps
+    # ...
+    # tag refers to the Rasa image tag
+    tag: "2.8.15-full"
+
+# # app (custom action server) specific settings
+# app:
+#   # name of the custom action server image to use
+#   name: "tantris/action_server"
+#   # tag refers to the custom action server image tag
+#   tag: "latest"
+
+# Duckling specific settings
+duckling:
+  # Enable or disable duckling
+  enabled: true
+
+# debugMode enables / disables the debug mode for Rasa and Rasa X
+debugMode: true

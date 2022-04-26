@@ -1,0 +1,48 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- get_sheet_music_by_casting:
+    use_entities: true
+entities:
+- number
+slots:
+  number:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Bonjour! Comment allez-vous?
+  utter_cheer_up:
+  - text: Ne soyez pas triste! Tout va s'arranger.
+  utter_happy:
+  - text: Super, continuons!
+  utter_goodbye:
+  - text: Au revoir
+  utter_iamabot:
+  - text: Je suis un chatbot, ou assistant conversationnel, là pour vous aider à naviguer dans les textes juridiques du Luxembourg.
+  utter_please_rephrase:
+  - text: Je suis désolé, je n'ai pas bien compris votre message. Pouvez-vous reformuler s'il-vous-plaît ?
+actions:
+- action_get_sheet_music_by_casting
+forms: {}
+e2e_actions: []

@@ -1,0 +1,38 @@
+version: "2.0"
+
+rules:
+
+- rule: Say hello anytime the user says hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Cheer up user if he is feeling down
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Ask the user to rephrase whenever NLU confidence score is low
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+- rule: Ask the user to rephrase whenever user-inputted message is out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_please_rephrase
+
+- rule: Get sheet music by casting
+  steps:
+  - intent: get_sheet_music_by_casting
+  - action: action_get_sheet_music_by_casting

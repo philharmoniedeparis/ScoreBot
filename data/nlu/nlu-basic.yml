@@ -1,0 +1,98 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello toi
+    - hello
+    - salut
+    - bonjour
+    - comment ça va ?
+    - ça va bien ?
+    - yo
+    - coucou
+    - bonsoir
+
+- intent: goodbye
+  examples: |
+    - au revoir
+    - à plus
+    - salut
+    - adieu
+    - à la revoyure
+    - à plus tard
+    - bonne soirée
+    - bonne nuit
+    - bonne journée
+    - ciao
+
+- intent: affirm
+  examples: |
+    - oui
+    - yes
+    - yep
+    - c'est ça
+    - exactement
+    - tout à fait
+    - c'est juste
+    - c'est exact
+
+- intent: deny
+  examples: |
+    - non
+    - nope
+    - nan
+    - surtout pas
+    - absolument pas
+    - pas du tout
+    - pas trop
+    - je ne crois pas
+
+- intent: mood_great
+  examples: |
+    - parfait
+    - super
+    - génial
+    - super cool!
+    - magnifique
+    - ça va très bien
+    - je me sens très bien
+    - ça roule
+    - comme sur des roulettes
+    - merci
+    - Merci beaucoup!
+
+- intent: mood_unhappy
+  examples: |
+    - ma journée était horrible
+    - je suis triste
+    - je ne me sens pas bien
+    - je suis déçu
+    - si triste
+    - je me sens tellement triste
+    - pas bien
+    - pas très bien
+    - je suis abattu
+
+- intent: bot_challenge
+  examples: |
+    - es-tu un robot?
+    - es-tu un humain?
+    - est-ce que je parle à un humain?
+    - est-ce que je parle à un robot?
+    - tu as l'air de ne pas être une vraie personne
+    - je crois que tu es un bot
+
+- intent: out_of_scope
+  examples: |
+    - Le seigneur des anneaux de Tolkien
+    - Le mardi et le jeudi
+    - Trois livres rouges et deux verts
+    - Je suis très à l'aise avec le snowboard mais pas en ski
+    - Combien d'animaux dans l'arche de Noé ?
+    - Aie je sais pas quoi demander
+    - Comment ça fonctionne
+    - Putain de merde
+    - Ta gueule
+    - Ca marche pas
