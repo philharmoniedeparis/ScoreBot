@@ -19,8 +19,6 @@ from utils import medias_synonyms as medias
 ENDPOINT = "http://graphdb.sparna.fr/sparql?name=&infer=true&sameAs=true&query="
 VOICE_CHANNELS = ["google_assistant", "alexa"]
 
-INSTRUMENT_VALUES = [v for k, listy in medias.medias.items() for v in listy]
-
 class NoEntityFoundException(Exception):
     pass
 
@@ -48,11 +46,11 @@ class ActionGetSheetMusicByCasting(Action):
                 if ent['entity'] == 'medium' and not inputted_medias:
                     inputted_medias.add(ent.get('value'))
             # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
-            if not inputted_medias or not inputted_medias.issubset(INSTRUMENT_VALUES):
+            if not inputted_medias or not inputted_medias.issubset(medias.medias.keys()):
                 raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
             results = self.get_query_results(inputted_medias)
             formatted_results = "\n".join(results)
-            answer += f" Voici les partitions avec un piano et une voix:\n{formatted_results}"
+            answer += f" Voici les partitions:\n{formatted_results}"
         except JSONDecodeError:
             answer += "Je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
         dispatcher.utter_message(text=answer)
