@@ -53,7 +53,7 @@ class ActionGetSheetMusicByCasting(Action):
                 raise Exception(f"No results found for medias: {inputted_medias}")
             formatted_results = "\n".join(results)
             answer += f" Voici les partitions:\n{formatted_results}"
-        except JSONDecodeError:
+        except Exception:
             answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
         dispatcher.utter_message(text=answer)
         return []
