@@ -19,7 +19,7 @@ from utils import medias_synonyms as medias
 ENDPOINT = "http://graphdb.sparna.fr/sparql?name=&infer=true&sameAs=true&query="
 VOICE_CHANNELS = ["google_assistant", "alexa"]
 
-INSTRUMENT_VALUES = [v for k, listy in medias.items() for v in listy]
+INSTRUMENT_VALUES = [v for k, listy in medias.medias.items() for v in listy]
 
 class NoEntityFoundException(Exception):
     pass
