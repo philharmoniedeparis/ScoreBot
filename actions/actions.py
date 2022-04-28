@@ -16,7 +16,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from utils import medias_synonyms as medias
 
 
-ENDPOINT = "http://graphdb.sparna.fr/sparql?name=&infer=true&sameAs=true&query="
+ENDPOINT = "http://graphdb.sparna.fr/repositories/philharmonie-chatbot?query="
 VOICE_CHANNELS = ["google_assistant", "alexa"]
 
 class NoEntityFoundException(Exception):
@@ -63,8 +63,8 @@ class ActionGetSheetMusicByCasting(Action):
         results = requests.get(route).json()
         texts = []
         for res in results["results"]["bindings"]:
-            url = res["EUTextURL"]["value"]
-            title = res["EUTextTitleShort"]["value"]
+            url = res["score"]["value"]
+            title = res["scoreLabel"]["value"]
             texts.append(f"- [{title}]({url})")
         return texts
 
