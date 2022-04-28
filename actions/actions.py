@@ -5,9 +5,7 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-import sys
 import requests
-import re
 import urllib
 import logging
 
@@ -40,7 +38,7 @@ class ActionGetSheetMusicByCasting(Action):
 
         channel = tracker.get_latest_input_channel()
         entities = tracker.latest_message['entities']
-        print(entities)
+        logging.info(entities)
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions. "
         try:
             inputted_medias = set()
