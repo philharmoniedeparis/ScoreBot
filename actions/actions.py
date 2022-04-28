@@ -40,6 +40,7 @@ class ActionGetSheetMusicByCasting(Action):
 
         channel = tracker.get_latest_input_channel()
         entities = tracker.latest_message['entities']
+        print(entities)
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions. "
         try:
             inputted_medias = set()
@@ -48,7 +49,7 @@ class ActionGetSheetMusicByCasting(Action):
                     inputted_medias.add(ent.get('value'))
             # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
             if not inputted_medias or not inputted_medias.issubset(medias.medias.keys()):
-                raise NoEntityFoundException("Je n'ai pas réussi à trouver les medias auxquels vous faisiez référence. Merci de reformuler votre question.")
+                raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
             results = self.get_query_results(inputted_medias)
             formatted_results = "\n".join(results)
             answer += f" Voici les partitions avec un piano et une voix:\n{formatted_results}"
