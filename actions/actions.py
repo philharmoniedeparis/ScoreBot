@@ -49,10 +49,12 @@ class ActionGetSheetMusicByCasting(Action):
             if not inputted_medias or not inputted_medias.issubset(medias.medias.keys()):
                 raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
             results = self.get_query_results(inputted_medias)
+            if not results:
+                raise Exception(f"No results found for medias: {inputted_medias}")
             formatted_results = "\n".join(results)
             answer += f" Voici les partitions:\n{formatted_results}"
         except JSONDecodeError:
-            answer += "Je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
+            answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
         dispatcher.utter_message(text=answer)
         return []
 
