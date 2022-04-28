@@ -60,7 +60,7 @@ class ActionGetSheetMusicByCasting(Action):
         formatted_query = self.format_sparql_query(inputted_medias)
         route = ENDPOINT + formatted_query
         logging.info(f"Requesting {route}")
-        results = requests.get(route).json()
+        results = requests.get(route, headers={'Accept': 'application/sparql-results+json'}).json()
         texts = []
         for res in results["results"]["bindings"]:
             url = res["score"]["value"]
