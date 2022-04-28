@@ -43,7 +43,7 @@ class ActionGetSheetMusicByCasting(Action):
         try:
             inputted_medias = set()
             for ent in entities:
-                if ent['entity'] == 'medium' and not inputted_medias:
+                if ent['entity'] == 'medium':
                     inputted_medias.add(ent.get('value'))
             # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
             if not inputted_medias or not inputted_medias.issubset(medias.medias.keys()):
