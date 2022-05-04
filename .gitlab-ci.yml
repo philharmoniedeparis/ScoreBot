@@ -34,8 +34,8 @@ AutoTrain:uate:
     name: uat
   rules:
     - if: '$CI_COMMIT_REF_NAME== "develop"'
-      changes:
-        - data/**/*
+      #changes:
+      #  - data/**/*
   extends: .rasa_train
 
 AutoBuildImage:uate:
