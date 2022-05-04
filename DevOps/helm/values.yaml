@@ -67,8 +67,13 @@ rasax:
     # scheme to be used by the `readinessProbe`
     scheme: "HTTP"
   # resources which Rasa X is required / allowed to use
-  resources: {}
-  # extraEnvs are environment variables which can be added to the Rasa X deployment
+  resources:
+    requests:
+      cpu: 2
+      memory: "2Gi"
+    limit:
+      cpu: 3
+      memory: "4Gi"  # extraEnvs are environment variables which can be added to the Rasa X deployment
   extraEnvs: []
   # - name: SOME_CUSTOM_ENV_VAR
   #   value: "custom value"
@@ -470,6 +475,8 @@ app:
   # tag refers to the custom action server image tag
   tag: "@CD_RASAX_APP_IMAGE_VERSION@"
   # replicaCount of the custom action server container
+  pullPolicy: Always
+
   replicaCount: 1
   # port on which the custom action server runs
   port: 5055
