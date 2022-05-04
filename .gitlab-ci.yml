@@ -29,8 +29,10 @@ AutoBuildImage:uate:
   environment:
     action: prepare
     name: uat
-  only:
-    - develop
+  rules:
+    - if: '$CI_COMMIT_REF_NAME== "develop"'
+      changes:
+        - actions/**/*
   image: docker:20.10.14
   variables:
     IMAGE_ENV: '-uate'
@@ -44,8 +46,10 @@ AutoDeploy:helmChart:uate:
     name: uat
   variables:
     IMAGE_ENV: '-uate'
-  only:
-    - develop
+  rules:
+    - if: '$CI_COMMIT_REF_NAME== "develop"'
+      changes:
+        - actions/**/*
   extends: .deploy_to_kubernetes
 
 
