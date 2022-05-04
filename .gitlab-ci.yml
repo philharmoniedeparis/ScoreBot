@@ -5,7 +5,7 @@ include:
 
 stages:
   - merge:capabilities
- # - build:environment
+  - build:environment
   - deploy
   - train
   - release
@@ -38,31 +38,31 @@ AutoTrain:uate:
         - data/**/*
   extends: .rasa_train
 
-#AutoBuildImage:uate:
-#  environment:
-#    action: prepare
-#    name: uat
-#  rules:
-#    - if: '$CI_COMMIT_REF_NAME== "develop"'
-#      changes:
-#        - actions/**/*
-#  image: docker:20.10.14
-#  variables:
-#    IMAGE_ENV: '-uate'
-#  extends: .build-docker-image
+AutoBuildImage:uate:
+  environment:
+    action: prepare
+    name: uat
+  rules:
+    - if: '$CI_COMMIT_REF_NAME== "develop"'
+      changes:
+        - actions/**/*
+  image: docker:20.10.14
+  variables:
+    IMAGE_ENV: '-uate'
+  extends: .build-docker-image
 
 
 AutoDeploy:helmChart:uate:
   stage: deploy
-#  needs: ['AutoBuildImage:uate']
+  needs: ['AutoBuildImage:uate']
   environment:
     name: uat
   variables:
     IMAGE_ENV: '-uate'
   rules:
     - if: '$CI_COMMIT_REF_NAME== "develop"'
-#      changes:
-#        - actions/**/*
+      changes:
+        - actions/**/*
   extends: .deploy_to_kubernetes
 
 
