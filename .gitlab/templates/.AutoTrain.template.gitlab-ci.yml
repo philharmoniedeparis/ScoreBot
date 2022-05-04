@@ -11,4 +11,4 @@
     - source $HOME/.bashrc
     - ovhai login --username $CI_OVH_AI_TRAINING_OP_USERNAME --password $CI_OVH_AI_TRAINING_OP_PASSWORD
   script:
-    -  ovhai job run --name legichat_train_model-$TIMESTAMP --flavor ai1-1-gpu --gpu 1 $CI_RASA_TRAIN_REGISTRY_IMAGE -- bash -c "export PK='"$CI_RASA_TRAIN_MY_PRIVATE_KEY"' && rasap -g '"$CI_SSH_GIT_REPO_URL"' -k \$PK -r '"$CI_RASA_TRAIN_RASA_UPLOAD_MODEL_URL"?api_token=$CI_RASA_TRAIN_RASA_UPLOAD_MODEL_API_TOKEN'"
+    -  ovhai job run --name philarmonie_train_model-$TIMESTAMP --flavor ai1-1-gpu --gpu 1 $CI_RASA_TRAIN_REGISTRY_IMAGE -- bash -c "export PK='"$CI_RASA_TRAIN_MY_PRIVATE_KEY"' && rasap -g '"$CI_SSH_GIT_REPO_URL"' -k \$PK -r '"$CI_RASA_TRAIN_RASA_UPLOAD_MODEL_URL"?api_token=$CI_RASA_TRAIN_RASA_UPLOAD_MODEL_API_TOKEN'"
