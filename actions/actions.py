@@ -19,7 +19,6 @@ from utils import medias_synonyms as medias
 ENDPOINT = "http://graphdb.sparna.fr/repositories/philharmonie-chatbot?query="
 VOICE_CHANNELS = ["google_assistant", "alexa"]
 
-
 class NoEntityFoundException(Exception):
     pass
 
