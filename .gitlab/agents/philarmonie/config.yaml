@@ -1,0 +1,12 @@
+gitops:
+  manifest_projects:
+    - id: "team_chatbot/chatbot_philarmonie"
+      default_namespace: rasa-x
+      paths:
+        # If 'paths' is not specified or is an empty list, the configuration below is used
+      - glob: '/**/*.{yaml,yml,json}'
+
+
+ci_access:
+  projects:
+    - id: team_chatbot/chatbot_philarmonie

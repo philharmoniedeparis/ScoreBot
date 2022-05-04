@@ -1,0 +1,13 @@
+.build-docker-image:
+  image: docker:20.10.14
+  stage: build:environment
+  services:
+    - docker:dind
+  when: on_success
+  script:
+    - docker login -u $CI_REGISTRY_EXTERNAL_USERNAME -p $CI_REGISTRY_EXTERNAL_PASSWORD $CI_REGISTRY_EXTERNAL_NAME
+    - docker pull $CI_DOCKER_HUB_REPO_NAME:latest$IMAGE_ENV  || true
+    - docker build --cache-from $CI_REGISTRY_EXTERNAL_NAME:latest$IMAGE_ENV --tag $CI_REGISTRY_EXTERNAL_NAME:$APP_VERSION$IMAGE_ENV --tag $CI_REGISTRY_EXTERNAL_NAME:latest$IMAGE_ENV --build-arg BUILDKIT_INLINE_CACHE=1 .
+    - docker push $CI_REGISTRY_EXTERNAL_NAME:$APP_VERSION$IMAGE_ENV
+    - docker push $CI_REGISTRY_EXTERNAL_NAME:latest$IMAGE_ENV 
+
