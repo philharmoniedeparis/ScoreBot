@@ -1,4 +1,4 @@
-from medias_synonyms import medias
+from medias_synonyms import iaml, mimo
 import string
 
 def preprocess_entity(entity: str):
@@ -23,4 +23,5 @@ def print_synonyms(synonyms: dict, filename: str):
                 f.write(f"    - {preprocess_entity(i)}\n")
 
 if __name__ == "__main__":
-    print_synonyms(medias, "nlu_philharmonie_entities_medias")
+    print_synonyms(iaml, "nlu_philharmonie_entities_iaml")
+    print_synonyms(mimo, "nlu_philharmonie_entities_mimo")
