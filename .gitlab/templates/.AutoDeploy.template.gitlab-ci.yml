@@ -2,7 +2,9 @@
   stage: deploy
   image: alpine/k8s:1.20.7
   before_script:
+    - TIMESTAMP=$(date +%s)
     - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
+    - sed -i "s|@CD_TIMESTAMP@|$CD_RASAX_PV_RASAX_PATH|" DevOps/helm/values.yaml
     - sed -i "s/@CD_KUBE_NAMESPACE@/$CD_KUBE_NAMESPACE/" DevOps/helm/values.yaml
     - sed -i "s~@CD_RASAX_MY_PASSWORD_SALT@~${CD_RASAX_MY_PASSWORD_SALT//&/\\&}~" DevOps/helm/values.yaml
     - sed -i "s|@CD_RASAX_MY_TOKEN@|$CD_RASAX_MY_TOKEN|" DevOps/helm/values.yaml
