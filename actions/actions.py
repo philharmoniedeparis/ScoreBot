@@ -22,6 +22,7 @@ VOICE_CHANNELS = ["google_assistant", "alexa"]
 class NoEntityFoundException(Exception):
     pass
 
+
 class ActionGetSheetMusicByCasting(Action):
     def __init__(self):
         super(ActionGetSheetMusicByCasting, self).__init__()

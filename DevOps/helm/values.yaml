@@ -549,7 +549,8 @@ app:
 
   # podLabels adds additional pod labels
   # https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
-  podLabels: {}
+  podLabels:
+    rollme: {{ randAlphaNum 5 | quote }}
 
 # nginx specific settings
 nginx:
