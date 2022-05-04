@@ -71,7 +71,7 @@ rasax:
     requests:
       cpu: 2
       memory: "2Gi"
-    limit:
+    limits:
       cpu: 3
       memory: "4Gi"  # extraEnvs are environment variables which can be added to the Rasa X deployment
   extraEnvs: []
