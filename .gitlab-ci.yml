@@ -71,6 +71,7 @@ AutoTag:uape:
   image: registry.gitlab.com/gitlab-org/release-cli:latest
   environment:
     name: uap
+    action: prepare
   cache: {}
   script:
     - release-cli create --name "Philarmonie v$APP_VERSION" --description "Version $APP_VERSION of Philarmonie" --tag-name "v$APP_VERSION" --milestone "1.0"
