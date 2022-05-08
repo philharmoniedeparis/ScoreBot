@@ -414,16 +414,13 @@ nlu:
 
 - synonym: "kpf"
   examples: |
-    - piano
     - luthéal
-    - piano
     - piano cycloide
-    - piano
     - piano droit
-    - piano
     - piano elliptique
-    - piano
     - piano-luthéal
+    - piano luthéal
+    - piano lutheal
 
 - synonym: "kpf__r"
   examples: |
