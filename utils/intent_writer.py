@@ -1,6 +1,6 @@
 import itertools
 
-from medias_synonyms import medias
+from medias_synonyms import iaml, mimo
 from write_entities import preprocess_entity
 
 
@@ -14,7 +14,7 @@ raw_sentences = {
             "Quels sont les morceaux jouables par un groupe de 2 _MEDIUM?"
         ],
         "entities": [
-            ([preprocess_entity(i) for sublist in medias.values() for i in sublist], "_MEDIUM"),
+            ([preprocess_entity(i) for sublist in list(iaml.values()) + list(mimo.values()) for i in sublist], "_MEDIUM"),
         ],
     },
 }
