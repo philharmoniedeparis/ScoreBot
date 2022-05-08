@@ -549,7 +549,8 @@ app:
 
   # podLabels adds additional pod labels
   # https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
-  podLabels: {}
+  podLabels:
+    app.kubernetes.io/rollme: "app-@CD_TIMESTAMP@"
 
 # nginx specific settings
 nginx:

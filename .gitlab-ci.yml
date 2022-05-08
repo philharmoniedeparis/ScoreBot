@@ -1,11 +1,13 @@
 include:
   - .gitlab/templates/.AutoBuildImage.template.gitlab-ci.yml
   - .gitlab/templates/.AutoDeploy.template.gitlab-ci.yml
+  - .gitlab/templates/.AutoTrain.template.gitlab-ci.yml
 
 stages:
   - merge:capabilities
   - build:environment
   - deploy
+  - train
   - release
 
 before_script:
@@ -24,6 +26,17 @@ AutoCheck:gitPullRequired:
       - merge_requests
     variables:
       - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "develop" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME != "main" && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME != "main"
+
+
+AutoTrain:uate:
+  environment:
+    action: prepare
+    name: uat
+  rules:
+    - if: '$CI_COMMIT_REF_NAME== "develop"'
+      changes:
+        - data/**/*
+  extends: .rasa_train
 
 AutoBuildImage:uate:
   environment:
@@ -58,6 +71,7 @@ AutoTag:uape:
   image: registry.gitlab.com/gitlab-org/release-cli:latest
   environment:
     name: uap
+    action: prepare
   cache: {}
   script:
     - release-cli create --name "Philarmonie v$APP_VERSION" --description "Version $APP_VERSION of Philarmonie" --tag-name "v$APP_VERSION" --milestone "1.0"
