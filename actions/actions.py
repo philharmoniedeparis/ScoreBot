@@ -83,11 +83,13 @@ class ActionGetSheetMusicByCasting(Action):
             # Check if mimo or iaml
             if medium.isdigit():
                 formatted_medium = f"<http://www.mimo-db.eu/InstrumentsKeywords/{medium}>"
-                formatted_mediums += f"{inputted_medias[medium]} {medias.mimo[medium][0]}, "
+                formatted_mediums += f"{inputted_medias[medium]} {medias.mimo[medium][0]}"
             else:
                 formatted_medium = f"<http://data.doremus.org/vocabulary/iaml/mop/{medium}>"
-                formatted_mediums += f"{inputted_medias[medium]} {medias.iaml[medium][0]}, "
-            if i < len(inputted_medias) - 1:
+                formatted_mediums += f"{inputted_medias[medium]} {medias.iaml[medium][0]}"
+            if i == len(inputted_medias) - 2:
+                formatted_mediums += " et "
+            elif i < len(inputted_medias) - 2:
                 formatted_mediums += ", "
             count = inputted_medias[medium]
             values += f"values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {formatted_medium})}}"
