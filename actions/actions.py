@@ -51,7 +51,7 @@ class ActionGetSheetMusicByCasting(Action):
                     else:
                         inputted_medias[key] = 1
             # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
-            if not inputted_medias or not inputted_medias.issubset(self.allowed_medias):
+            if not inputted_medias or not set(inputted_medias.keys()).issubset(self.allowed_medias):
                 raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
             results, formatted_mediums = self.get_query_results(inputted_medias)
             if not results:
