@@ -5,11 +5,12 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
+from collections import defaultdict
+from wsgiref.validate import InputWrapper
 import requests
 import urllib
 import logging
 
-from json import JSONDecodeError
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -41,25 +42,30 @@ class ActionGetSheetMusicByCasting(Action):
         logging.info(entities)
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions. "
         try:
-            inputted_medias = set()
-            for ent in entities:
-                if ent['entity'] == 'medium':
-                    inputted_medias.add(ent.get('value'))
+            inputted_medias = dict()
+            for i, ent in enumerate(entities):
+                key = ent.get('value')
+                if ent['entity'] == 'medium' and key not in inputted_medias:
+                    if i > 0 and entities[i-1]['entity'] == 'number':
+                        inputted_medias[key] = entities[i-1].get('value')
+                    else:
+                        inputted_medias[key] = 1
             # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
             if not inputted_medias or not inputted_medias.issubset(self.allowed_medias):
                 raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
-            results = self.get_query_results(inputted_medias)
+            results, formatted_mediums = self.get_query_results(inputted_medias)
             if not results:
                 raise Exception(f"No results found for medias: {inputted_medias}")
             formatted_results = "\n".join(results)
-            answer += f" Voici les partitions:\n{formatted_results}"
+            answer += f" Voici les partitions avec {formatted_mediums}:\n"
+            answer += formatted_results
         except Exception:
             answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
         dispatcher.utter_message(text=answer)
         return []
 
-    def get_query_results(self, inputted_medias: set) -> List[str]:
-        formatted_query = self.format_sparql_query(inputted_medias)
+    def get_query_results(self, inputted_medias: dict) -> List[str]:
+        formatted_query, formatted_mediums = self.format_sparql_query(inputted_medias)
         route = ENDPOINT + formatted_query
         logging.info(f"Requesting {route}")
         results = requests.get(route, headers={'Accept': 'application/sparql-results+json'}).json()
@@ -68,17 +74,23 @@ class ActionGetSheetMusicByCasting(Action):
             url = res["score"]["value"]
             title = res["scoreLabel"]["value"]
             texts.append(f"- [{title}]({url})")
-        return texts
+        return texts, formatted_mediums
 
-    def format_sparql_query(self, inputted_medias: set) -> str:
+    def format_sparql_query(self, inputted_medias: dict) -> str:
         values, query = "?score mus:U13_has_casting ?casting . ", ""
-        for i, medium in enumerate(inputted_medias):
+        formatted_mediums = ""
+        for i, medium in enumerate(inputted_medias.keys()):
             # Check if mimo or iaml
             if medium.isdigit():
                 formatted_medium = f"<http://www.mimo-db.eu/InstrumentsKeywords/{medium}>"
+                formatted_mediums += f"{inputted_medias[medium]} {medias.mimo[medium][0]}, "
             else:
                 formatted_medium = f"<http://data.doremus.org/vocabulary/iaml/mop/{medium}>"
-            values += f"values (?input_quantity_{i} ?input_medium_{i}) {{ (\"1\"^^xsd:integer {formatted_medium})}}"
+                formatted_mediums += f"{inputted_medias[medium]} {medias.iaml[medium][0]}, "
+            if i < len(inputted_medias) - 1:
+                formatted_mediums += ", "
+            count = inputted_medias[medium]
+            values += f"values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {formatted_medium})}}"
             query += f"?score mus:U13_has_casting ?casting . ?casting mus:U23_has_casting_detail ?castingDetail_{i}. ?castingDetail_{i} mus:U2_foresees_use_of_medium_of_performance ?input_medium_{i} . ?castingDetail_{i} mus:U30_foresees_quantity_of_mop ?input_quantity{i} ."
-        parse_query = urllib.parse.quote(self.route_prefix + values + query + self.route_suffix)
-        return parse_query
+        parsed_query = urllib.parse.quote(self.route_prefix + values + query + self.route_suffix)
+        return parsed_query, formatted_mediums
