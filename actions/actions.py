@@ -135,7 +135,7 @@ where {{
         results = requests.get(route, headers={'Accept': 'application/sparql-results+json'}).json()
         texts = []
         for res in results["results"]["bindings"][:20]:
-            url = res["score"]["value"]
+            url = res["scoreUrl"]["value"]
             title = res["scoreTitleLabel"]["value"]
             texts.append(f"- [{title}]({url})")
         return texts, formatted_mediums
