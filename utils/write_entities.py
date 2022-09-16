@@ -1,4 +1,7 @@
 from medias_synonyms import iaml, mimo
+from levels_synonyms import all_levels
+from genres_synonyms import genres
+from agents_synonyms import agents
 import string
 
 def preprocess_entity(entity: str):
@@ -23,5 +26,8 @@ def print_synonyms(synonyms: dict, filename: str):
                 f.write(f"    - {preprocess_entity(i)}\n")
 
 if __name__ == "__main__":
-    print_synonyms(iaml, "nlu_philharmonie_entities_iaml")
-    print_synonyms(mimo, "nlu_philharmonie_entities_mimo")
+    print_synonyms(iaml, "nlu_entities_iaml")
+    print_synonyms(mimo, "nlu_entities_mimo")
+    print_synonyms(genres, "nlu_entities_genres")
+    print_synonyms(agents, "nlu_entities_agents")
+    print_synonyms(all_levels, "nlu_entities_level")

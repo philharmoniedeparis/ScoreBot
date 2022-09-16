@@ -1,0 +1,84 @@
+version: "2.0"
+
+nlu:
+
+- synonym: "cycle-1"
+  examples: |
+    - pour apprendre le
+    - deux ans
+    - de 4ème année
+    - pour débuter en
+    - 2ème année
+    - pour débuter
+    - 1 an
+    - quatre ans
+    - de deuxième année
+    - pour petit niveau
+    - 3 ans
+    - troisième année
+    - accessibles aux débutants
+    - en 1ère année
+    - trois ans
+    - pour les débutants
+    - qui sont en 3e année
+    - 4e année
+    - 2 ans
+    - en 1er cycle
+    - de premier cycle
+    - élèves inscrits en
+    - élèves en 3ème année
+    - pour s'initier à
+    - un an
+    - de première annéeen 2e année
+    - 4 ans
+    - de 1e année
+
+- synonym: "cycle-2"
+  examples: |
+    - pour élèves de niveau confirmé en
+    - pour continuer le
+    - de cinquième annéeen 6e année
+    - destinés aux musiciens confirmés
+    - six ans
+    - de sixième année
+    - en 5ème année
+    - pour les confirmés
+    - de second cycle
+    - septième année
+    - sept ans
+    - 6ème année
+    - de 5e année
+    - accessibles aux confirmés
+    - pour se perfectionner en
+    - destinés aux musiciens de niveau intermédiaire en
+    - 7 ans
+    - en 2nd cycle
+    - qui sont en 7e année
+    - élèves en 7ème année
+    - 6 ans
+    - 5 ans
+
+- synonym: "cycle-3"
+  examples: |
+    - neuf ans
+    - pour les très bons joueurs de
+    - de troisième cycle
+    - de 8e année
+    - de neuvième année
+    - 9ème année
+    - en 3e cycle
+    - dix ans
+    - de niveau expert
+    - destinés aux musiciens chevronnés
+    - qui sont en 10e année
+    - 10 ans
+    - élèves en 10ème année
+    - 8 ans
+    - de huitième annéeen 9e année
+    - destinés aux musiciens experts en
+    - dixième année
+    - 9 ans
+    - en 8ème année
+    - pour les musiciens très expérimentés dans la pratique du
+    - huit ans
+    - pour élèves de niveau expert en

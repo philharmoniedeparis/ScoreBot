@@ -1,0 +1,746 @@
+version: "2.0"
+
+nlu:
+
+- synonym: "64624"
+  examples: |
+    - opéra
+    - opera
+    - opera
+    - opéra
+
+- synonym: "64626"
+  examples: |
+    - pièce concertante
+
+- synonym: "64628"
+  examples: |
+    - concerto
+
+- synonym: "67157"
+  examples: |
+    - air
+
+- synonym: "67162"
+  examples: |
+    - chanson politique
+
+- synonym: "67183"
+  examples: |
+    - caprice
+
+- synonym: "67197"
+  examples: |
+    - ouverture
+
+- synonym: "67216"
+  examples: |
+    - miserere
+
+- synonym: "67243"
+  examples: |
+    - motet
+
+- synonym: "67287"
+  examples: |
+    - cantate
+
+- synonym: "67301"
+  examples: |
+    - tragédie lyrique
+
+- synonym: "67306"
+  examples: |
+    - cabaret
+
+- synonym: "67352"
+  examples: |
+    - morceau de concours
+
+- synonym: "67358"
+  examples: |
+    - rhapsodie
+
+- synonym: "67396"
+  examples: |
+    - choral
+
+- synonym: "67402"
+  examples: |
+    - toccata
+
+- synonym: "67406"
+  examples: |
+    - landler
+
+- synonym: "67420"
+  examples: |
+    - ballet
+
+- synonym: "67453"
+  examples: |
+    - musique de film
+
+- synonym: "67455"
+  examples: |
+    - bicinium
+
+- synonym: "67467"
+  examples: |
+    - romance
+
+- synonym: "67471"
+  examples: |
+    - partita
+
+- synonym: "67487"
+  examples: |
+    - etude
+
+- synonym: "67516"
+  examples: |
+    - scherzo
+
+- synonym: "67530"
+  examples: |
+    - bagatelle
+
+- synonym: "67532"
+  examples: |
+    - mazurka
+
+- synonym: "67533"
+  examples: |
+    - impromptu
+
+- synonym: "67548"
+  examples: |
+    - aria
+
+- synonym: "67551"
+  examples: |
+    - berceuse
+
+- synonym: "67563"
+  examples: |
+    - novelette
+
+- synonym: "67564"
+  examples: |
+    - lied
+
+- synonym: "67566"
+  examples: |
+    - barcarolle
+
+- synonym: "67575"
+  examples: |
+    - etude de concert
+
+- synonym: "67577"
+  examples: |
+    - elégie
+
+- synonym: "67591"
+  examples: |
+    - passacaille
+
+- synonym: "67607"
+  examples: |
+    - messe
+
+- synonym: "67618"
+  examples: |
+    - chanson enfantine
+
+- synonym: "67620"
+  examples: |
+    - opéra chinois
+
+- synonym: "67672"
+  examples: |
+    - sinfonia
+
+- synonym: "67685"
+  examples: |
+    - entrée
+
+- synonym: "67702"
+  examples: |
+    - ronde
+
+- synonym: "67710"
+  examples: |
+    - hora lunga
+
+- synonym: "67711"
+  examples: |
+    - hymne national
+
+- synonym: "67714"
+  examples: |
+    - conte musical
+
+- synonym: "67725"
+  examples: |
+    - anglaise
+
+- synonym: "67732"
+  examples: |
+    - oratorio
+
+- synonym: "67738"
+  examples: |
+    - gospel
+
+- synonym: "67750"
+  examples: |
+    - air de concert
+
+- synonym: "67758"
+  examples: |
+    - théâtre lyrique
+
+- synonym: "67764"
+  examples: |
+    - ariette
+
+- synonym: "67778"
+  examples: |
+    - plain-chant
+
+- synonym: "67782"
+  examples: |
+    - mélodie française
+
+- synonym: "67796"
+  examples: |
+    - improvisation
+
+- synonym: "67803"
+  examples: |
+    - musique sacrée
+
+- synonym: "67805"
+  examples: |
+    - air d'opéra
+
+- synonym: "67808"
+  examples: |
+    - requiem
+
+- synonym: "67810"
+  examples: |
+    - leçon de ténèbres
+
+- synonym: "67818"
+  examples: |
+    - comptine
+
+- synonym: "67878"
+  examples: |
+    - hymne
+
+- synonym: "67879"
+  examples: |
+    - lachrimae
+
+- synonym: "67883"
+  examples: |
+    - poème musical
+
+- synonym: "67908"
+  examples: |
+    - théâtre musical
+
+- synonym: "67910"
+  examples: |
+    - récitatif
+
+- synonym: "67927"
+  examples: |
+    - ode
+
+- synonym: "67928"
+  examples: |
+    - musique de cour
+
+- synonym: "67935"
+  examples: |
+    - marche militaire
+
+- synonym: "67940"
+  examples: |
+    - opéra-comique
+
+- synonym: "67949"
+  examples: |
+    - comédie musicale
+
+- synonym: "67953"
+  examples: |
+    - passion
+
+- synonym: "67964"
+  examples: |
+    - chant sacré
+
+- synonym: "67968"
+  examples: |
+    - fado
+
+- synonym: "67975"
+  examples: |
+    - chant de marins
+
+- synonym: "67982"
+  examples: |
+    - tourdion
+
+- synonym: "67985"
+  examples: |
+    - arioso
+
+- synonym: "67987"
+  examples: |
+    - chanson à boire
+
+- synonym: "67989"
+  examples: |
+    - noël
+
+- synonym: "68008"
+  examples: |
+    - poème symphonique
+
+- synonym: "68024"
+  examples: |
+    - cassation
+
+- synonym: "68056"
+  examples: |
+    - opérette
+
+- synonym: "68100"
+  examples: |
+    - proverbe
+
+- synonym: "68116"
+  examples: |
+    - musique de cirque
+
+- synonym: "68138"
+  examples: |
+    - musique soufie
+
+- synonym: "68149"
+  examples: |
+    - musique klezmer
+
+- synonym: "68161"
+  examples: |
+    - musique de circonstance
+
+- synonym: "68164"
+  examples: |
+    - mort
+
+- synonym: "68169"
+  examples: |
+    - chasse
+
+- synonym: "68171"
+  examples: |
+    - sacrifice
+
+- synonym: "68172"
+  examples: |
+    - musique symphonique
+
+- synonym: "68175"
+  examples: |
+    - marche
+
+- synonym: "68177"
+  examples: |
+    - carnaval
+
+- synonym: "68244"
+  examples: |
+    - grand motet
+
+- synonym: "68245"
+  examples: |
+    - petit motet
+
+- synonym: "68269"
+  examples: |
+    - opera seria
+
+- synonym: "68273"
+  examples: |
+    - musette
+
+- synonym: "68286"
+  examples: |
+    - zarzuela
+
+- synonym: "68287"
+  examples: |
+    - singspiel
+
+- synonym: "68290"
+  examples: |
+    - chanson traditionnelle
+
+- synonym: "68296"
+  examples: |
+    - musique liturgique
+
+- synonym: "68351"
+  examples: |
+    - negro spiritual
+
+- synonym: "68353"
+  examples: |
+    - musique à programme
+
+- synonym: "68397"
+  examples: |
+    - opera comique
+
+- synonym: "68411"
+  examples: |
+    - cycle de lieder
+
+- synonym: "68460"
+  examples: |
+    - marche funèbre
+
+- synonym: "68560"
+  examples: |
+    - psaume
+
+- synonym: "68563"
+  examples: |
+    - aubade
+
+- synonym: "68568"
+  examples: |
+    - suite de pièces
+
+- synonym: "68574"
+  examples: |
+    - voluntary
+
+- synonym: "68576"
+  examples: |
+    - cantate profane
+
+- synonym: "68578"
+  examples: |
+    - rondeau
+
+- synonym: "68585"
+  examples: |
+    - musique scénique
+
+- synonym: "68594"
+  examples: |
+    - suite
+
+- synonym: "68599"
+  examples: |
+    - passamezzo
+
+- synonym: "68601"
+  examples: |
+    - villancico
+
+- synonym: "68602"
+  examples: |
+    - folia
+
+- synonym: "68603"
+  examples: |
+    - air de cour
+
+- synonym: "68604"
+  examples: |
+    - tombeau
+
+- synonym: "68605"
+  examples: |
+    - badinerie
+
+- synonym: "68606"
+  examples: |
+    - graduel
+
+- synonym: "68610"
+  examples: |
+    - chanson
+
+- synonym: "68617"
+  examples: |
+    - mélodie
+
+- synonym: "68625"
+  examples: |
+    - pot-pourri
+
+- synonym: "68626"
+  examples: |
+    - sérénade
+
+- synonym: "68629"
+  examples: |
+    - cycle de mélodies
+
+- synonym: "68648"
+  examples: |
+    - etude symphonique
+
+- synonym: "68650"
+  examples: |
+    - burlesque
+
+- synonym: "68658"
+  examples: |
+    - comédie-ballet
+
+- synonym: "68672"
+  examples: |
+    - hymne religieuse
+
+- synonym: "68674"
+  examples: |
+    - opéra pour enfants
+
+- synonym: "68676"
+  examples: |
+    - intermezzo
+
+- synonym: "68680"
+  examples: |
+    - symphonie
+
+- synonym: "68683"
+  examples: |
+    - te deum
+
+- synonym: "68684"
+  examples: |
+    - madrigal
+
+- synonym: "68694"
+  examples: |
+    - ballet de cour
+
+- synonym: "68695"
+  examples: |
+    - canon
+
+- synonym: "68696"
+  examples: |
+    - opéra-ballet
+
+- synonym: "68697"
+  examples: |
+    - tragédie-ballet
+
+- synonym: "68713"
+  examples: |
+    - ballade
+
+- synonym: "68720"
+  examples: |
+    - prélude
+
+- synonym: "68740"
+  examples: |
+    - concerto grosso
+
+- synonym: "68753"
+  examples: |
+    - fugue
+
+- synonym: "68772"
+  examples: |
+    - ricercare
+
+- synonym: "68782"
+  examples: |
+    - chanson polyphonique
+
+- synonym: "68792"
+  examples: |
+    - pastorale
+
+- synonym: "68805"
+  examples: |
+    - divertissement
+
+- synonym: "68818"
+  examples: |
+    - gavotte
+
+- synonym: "68833"
+  examples: |
+    - rondo
+
+- synonym: "68838"
+  examples: |
+    - sonate
+
+- synonym: "68864"
+  examples: |
+    - fantaisie
+
+- synonym: "68866"
+  examples: |
+    - musique de chambre
+
+- synonym: "68867"
+  examples: |
+    - chant grégorien
+
+- synonym: "68888"
+  examples: |
+    - invention
+
+- synonym: "68905"
+  examples: |
+    - nocturne
+
+- synonym: "68912"
+  examples: |
+    - variations
+
+- synonym: "137308"
+  examples: |
+    - magnificat
+
+- synonym: "138323"
+  examples: |
+    - aida
+
+- synonym: "145479"
+  examples: |
+    - mariage
+
+- synonym: "149143"
+  examples: |
+    - antiphonaire
+
+- synonym: "149187"
+  examples: |
+    - virelai
+
+- synonym: "149279"
+  examples: |
+    - fandango
+
+- synonym: "151100"
+  examples: |
+    - lai
+
+- synonym: "151304"
+  examples: |
+    - fête
+
+- synonym: "151413"
+  examples: |
+    - opera bouffe
+
+- synonym: "152335"
+  examples: |
+    - bal
+
+- synonym: "152612"
+  examples: |
+    - boléro
+
+- synonym: "152847"
+  examples: |
+    - esquisse
+
+- synonym: "153029"
+  examples: |
+    - parodie
+
+- synonym: "153031"
+  examples: |
+    - quadrille
+
+- synonym: "153034"
+  examples: |
+    - sonatine
+
+- synonym: "153976"
+  examples: |
+    - mélodrame
+
+- synonym: "154545"
+  examples: |
+    - cérémonie
+
+- synonym: "584327"
+  examples: |
+    - musique descriptive
+
+- synonym: "602290"
+  examples: |
+    - sinfonietta
+
+- synonym: "764163"
+  examples: |
+    - sérénade vocale
+
+- synonym: "767184"
+  examples: |
+    - masque
+
+- synonym: "800883"
+  examples: |
+    - oeuvre radiophonique
+
+- synonym: "819687"
+  examples: |
+    - cavatine
+
+- synonym: "833306"
+  examples: |
+    - couronnement
+
+- synonym: "834400"
+  examples: |
+    - drame musical
+
+- synonym: "885405"
+  examples: |
+    - chanson française
+
+- synonym: "891794"
+  examples: |
+    - rebetiko
+
+- synonym: "899208"
+  examples: |
+    - changgeuk
+
+- synonym: "932900"
+  examples: |
+    - onkyo
+
+- synonym: "1000164"
+  examples: |
+    - pâques
+
+- synonym: "1007649"
+  examples: |
+    - karaoke
+
+- synonym: "1110243"
+  examples: |
+    - parodie
