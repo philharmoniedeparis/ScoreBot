@@ -34369,6 +34369,7 @@ nlu:
 - synonym: "641364"
   examples: |
     - the beatles
+    - beatles
 
 - synonym: "1015957"
   examples: |

@@ -4,6 +4,8 @@ level_sentences = {
     "cycle-1": [
         "accessibles aux débutants",
         "pour les débutants",
+        "débutants",
+        "débutant",
         "pour apprendre le ",
         "pour petit niveau",
         "pour débuter en ",
@@ -16,12 +18,19 @@ level_sentences = {
         "destinés aux musiciens confirmés",
         "destinés aux musiciens de niveau intermédiaire en ",
         "pour les confirmés",
+        "pour les intermédiaires",
+        "confirmés",
+        "confirmé",
+        "intermédiaires",
+        "intermédiaire",
         "pour élèves de niveau confirmé en ",
         "pour se perfectionner en ",
         "pour continuer le ",
     ],
     "cycle-3": [
         "de niveau expert",
+        "expert",
+        "experts",
         "destinés aux musiciens chevronnés",
         "destinés aux musiciens experts en ",
         "pour les musiciens très expérimentés dans la pratique du ",
@@ -32,6 +41,8 @@ level_sentences = {
 
 level_worded = {
     "cycle-1": [
+        "débutants",
+        "débutant",
         "en 1er cycle",
         "de premier cycle",
         "de 1e année",
@@ -47,6 +58,10 @@ level_worded = {
         "de 4ème année",
     ],
     "cycle-2": [
+        "confirmés",
+        "confirmé",
+        "intermédiaires",
+        "intermédiaire",
         "en 2nd cycle",
         "de second cycle",
         "de 5e année",
@@ -60,6 +75,8 @@ level_worded = {
         "septième année",
     ],
     "cycle-3": [
+        "expert",
+        "experts",
         "en 3e cycle",
         "de troisième cycle",
         "de 8e année",
@@ -103,8 +120,8 @@ level_timing = {
     ]
 }
 
-all_levels = defaultdict(set)  # uses set to avoid duplicates
+all_levels = defaultdict(list)
 for d in [level_sentences, level_timing, level_worded]:
     for k, v in d.items():  # use d.iteritems() in python 2
         for i in v:
-            all_levels[k].add(i)
+            all_levels[k].append(i)

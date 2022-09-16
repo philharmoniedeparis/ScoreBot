@@ -82,49 +82,49 @@ where {{
         entities = tracker.latest_message['entities']
         logging.info(entities)
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions. "
-        # try:
-        inputted_medias = dict()
-        level, genre, agent = None, None, None
-        for i, ent in enumerate(entities):
-            key = ent.get('value')
-            if ent['entity'] == 'medium' and key not in inputted_medias:
-                if i > 0 and entities[i-1]['entity'] == 'number':
-                    inputted_medias[key] = entities[i-1].get('value')
-                else:
-                    inputted_medias[key] = 1
+        try:
+            inputted_medias = dict()
+            level, genre, agent = None, None, None
+            for i, ent in enumerate(entities):
+                key = ent.get('value')
+                if ent['entity'] == 'medium' and key not in inputted_medias:
+                    if i > 0 and entities[i-1]['entity'] == 'number':
+                        inputted_medias[key] = entities[i-1].get('value')
+                    else:
+                        inputted_medias[key] = 1
 
-            if ent['entity'] == 'level' and level is None:
-                level = ent.get("value")
-            if ent['entity'] == 'genre' and genre is None:
-                genre = ent.get("value")
-            if ent['entity'] == 'agent' and agent is None:
-                agent = ent.get("value")
+                if ent['entity'] == 'level' and level is None:
+                    level = ent.get("value")
+                if ent['entity'] == 'genre' and genre is None:
+                    genre = ent.get("value")
+                if ent['entity'] == 'agent' and agent is None:
+                    agent = ent.get("value")
 
-        # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
-        if not inputted_medias or not set(inputted_medias.keys()).issubset(self.allowed_medias):
-            raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
+            # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
+            if not inputted_medias or not set(inputted_medias.keys()).issubset(self.allowed_medias):
+                raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
 
-        if level not in levels.all_levels:
-            print(level)
-            level, level_name = self.get_closest_event(level, levels.all_levels)
-            print(level)
-        if genre not in genres.genres:
-            print(genre)
-            genre, genre_name = self.get_closest_event(genre, genres.genres)
-            print(genre)
-        if agent not in agents.agents:
-            print(agent)
-            agent, agent_name = self.get_closest_event(genre, agents.agents)
-            print(agent)
+            if level not in levels.all_levels:
+                print(level)
+                level, level_name = self.get_closest_event(level, levels.all_levels)
+                print(level)
+            if genre not in genres.genres:
+                print(genre)
+                genre, genre_name = self.get_closest_event(genre, genres.genres)
+                print(genre)
+            if agent not in agents.agents:
+                print(agent)
+                agent, agent_name = self.get_closest_event(genre, agents.agents)
+                print(agent)
 
-        results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent)
-        if not results:
-            raise Exception(f"No results found for medias: {inputted_medias}")
-        formatted_results = "\n".join(results)
-        answer += f" Voici les partitions avec {formatted_mediums}:\n"
-        answer += formatted_results
-        # except Exception:
-        #     answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
+            results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent)
+            if not results:
+                raise Exception(f"No results found for medias: {inputted_medias}")
+            formatted_results = "\n".join(results)
+            answer += f" Voici les partitions avec {formatted_mediums}:\n"
+            answer += formatted_results
+        except Exception:
+            answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
         dispatcher.utter_message(text=answer)
         return []
 
