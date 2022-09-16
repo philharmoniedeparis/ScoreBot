@@ -44,7 +44,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX phil: <https://data.philharmoniedeparis.fr/>
 PREFIX philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#>
 
-select ?score ?identifier ?scoreUrl  ?scoreTitleLabel ?genrelabel ?responsibilityLabel ?educationLevelLabel ?agent ?agentLabel ?roleLabel  ?medium ?mediumLabel ?mediumQuantity ?input_quantity_total 
+select distinct ?score ?identifier ?scoreUrl  ?scoreTitleLabel ?genrelabel ?responsibilityLabel ?educationLevelLabel ?agent ?agentLabel ?roleLabel ?input_quantity_total 
 
 where {{
     {filters}
@@ -134,7 +134,7 @@ where {{
         logging.info(f"Requesting {route}")
         results = requests.get(route, headers={'Accept': 'application/sparql-results+json'}).json()
         texts = []
-        for res in results["results"]["bindings"]:
+        for res in results["results"]["bindings"][:20]:
             url = res["score"]["value"]
             title = res["scoreTitleLabel"]["value"]
             texts.append(f"- [{title}]({url})")
