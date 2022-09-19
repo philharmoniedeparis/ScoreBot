@@ -1226,9 +1226,8 @@ nlu:
   examples: |
     - alto
     - haute-contre de violon
-    - alto
+    - altos
     - quinte de violon
-    - alto
     - taille de violon
 
 - synonym: "svc"

@@ -204,6 +204,7 @@ nlu:
 - synonym: "3237"
   examples: |
     - guitare
+    - guitares
 
 - synonym: "2299"
   examples: |
@@ -212,10 +213,14 @@ nlu:
 - synonym: "3573"
   examples: |
     - violon
+    - violons
 
 - synonym: "3226"
   examples: |
     - banjo
+    - banjos
+    - banjo
+    - banjos
 
 - synonym: "4164"
   examples: |
@@ -224,22 +229,27 @@ nlu:
 - synonym: "3836"
   examples: |
     - clarinette
+    - clarinettes
 
 - synonym: "2266"
   examples: |
     - orgue
+    - orgues
 
 - synonym: "3561"
   examples: |
     - alto
+    - altos
 
 - synonym: "3582"
   examples: |
     - violoncelle
+    - violoncelles
 
 - synonym: "2251"
   examples: |
     - clavecin
+    - clavecins
 
 - synonym: "4096"
   examples: |
@@ -256,6 +266,7 @@ nlu:
 - synonym: "3111"
   examples: |
     - contrebasse
+    - contrebasses
 
 - synonym: "3736"
   examples: |
@@ -264,6 +275,7 @@ nlu:
 - synonym: "3955"
   examples: |
     - flûte
+    - flûtes
 
 - synonym: "4039"
   examples: |
@@ -292,6 +304,7 @@ nlu:
 - synonym: "4446"
   examples: |
     - trompette
+    - trompettes
 
 - synonym: "2985"
   examples: |
@@ -324,10 +337,12 @@ nlu:
 - synonym: "4346"
   examples: |
     - saxophone
+    - saxophones
 
 - synonym: "4369"
   examples: |
     - trombone
+    - trombones
 
 - synonym: "4197"
   examples: |
@@ -484,6 +499,7 @@ nlu:
 - synonym: "3236"
   examples: |
     - guitare électrique
+    - guitares électriques
 
 - synonym: "3729"
   examples: |

@@ -1,4 +1,5 @@
 import itertools
+import numpy as np
 
 from medias_synonyms import iaml, mimo
 from levels_synonyms import level_sentences, level_timing, level_worded
@@ -6,6 +7,9 @@ from genres_synonyms import genres
 from agents_synonyms import agents
 from write_entities import preprocess_entity
 
+
+GENRES = np.repeat([preprocess_entity(i) for sublist in list(genres.values()) for i in sublist], 3)
+AGENTS = np.random.choice([preprocess_entity(i) for sublist in list(agents.values()) for i in sublist], size=len(GENRES), replace=False)
 
 raw_sentences = {
     "get_sheet_music_by_casting": {
@@ -51,12 +55,14 @@ raw_sentences = {
 
             # GENRES
             "je suis cheffe d'un ensemble vocal de 12 _MEDIUM et je cherche des transcriptions pour chœur de répertoire _GENRE.",
-            "Je dirige un chœur d'adultes et je cherche des partitions de _GENRE pour _MEDIUM.",
+            "Je dirige un _MEDIUM et je cherche des partitions de _GENRE.",
             "Est-ce que vous auriez de la _GENRE, mais en notation occidentale ?",
             "Je recherche des partitions de _GENRE pour _MEDIUM",
+            "Je recherche des partitions de _GENRE",
+            "Je voudrais des partitions de _GENRE",
             "J’aimerais accéder à un recueil de partitions de _GENRE de la fin du XVIème.",
-            "Des fac- similés de partitions de _GENRE française",
-            "Vous avez des partitions de musique irlandaise ?",
+            "Des fac- similés de partitions de _GENRE",
+            "Vous avez des partitions de _GENRE ?",
             "Qu'est-ce qui existe pour _MEDIUM en _GENRE ?",
             "Je souhaite accéder à des partitions pour _MEDIUM composées en France entre 1792 et 1830",
             "Des partitions de _GENRE",
@@ -68,7 +74,7 @@ raw_sentences = {
             "Je recherche des pièces pour _MEDIUM seule en _GENRE",
             "Nous sommes deux _MEDIUM et nous cherchons un _GENRE à jouer.",
             "je cherche des partitions de _GENRE pour trio à corde 2 _MEDIUM et _MEDIUM",
-            "Je cherche des partitions de musique irlandaise pour _MEDIUM et _MEDIUM",
+            "Je cherche des partitions de _GENRE pour _MEDIUM et _MEDIUM",
             "Je cherche des _GENRE",
             "Je cherche des scores pour groupe de _GENRE",
             "Je cherche des standards de _GENRE",
@@ -125,8 +131,8 @@ raw_sentences = {
             ([preprocess_entity(i) for sublist in list(level_sentences.values()) for i in sublist], "_LEVEL_SENTENCE"),
             ([preprocess_entity(i) for sublist in list(level_worded.values()) for i in sublist], "_LEVEL_WORDED"),
             ([preprocess_entity(i) for sublist in list(level_timing.values()) for i in sublist], "_LEVEL_TIMING"),
-            ([preprocess_entity(i) for sublist in list(genres.values()) for i in sublist], "_GENRE"),
-            ([preprocess_entity(i) for sublist in list(agents.values()) for i in sublist], "_AGENT"),
+            (GENRES, "_GENRE"),
+            (AGENTS, "_AGENT"),
         ],
     },
 }
