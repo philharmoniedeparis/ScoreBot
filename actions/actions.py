@@ -101,7 +101,7 @@ where {{
                     agent = ent.get("value")
 
             # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
-            if not inputted_medias or not set(inputted_medias.keys()).issubset(self.allowed_medias):
+            if inputted_medias and not set(inputted_medias.keys()).issubset(self.allowed_medias):
                 raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
 
             logging.info(f"level: {level}, genre: {genre}, agent: {agent}")
