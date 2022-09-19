@@ -179,7 +179,7 @@ values (?input_educational_level) {{ (<https://data.philharmoniedeparis.fr/vocab
         # Genre
         if genre is not None:
             filters += f"""
-values (?input_genre ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{genre}>)}}
+values (?input_genre ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/00{genre}>)}}
 ?score mus:U12_has_genre ?input_genre.
 ?input_genre skos:prefLabel ?genrelabel.
             """

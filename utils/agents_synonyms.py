@@ -7149,8 +7149,6 @@ agents = {
     "812491": 	["Musikverlag Bruno Uetz",],
     "426426": 	["Musikwissen-Schaftlicher Verlag",],
     "452522": 	["Musiluc",],
-    "425507": 	["Musique",],
-    "423073": 	["Musique moderne",],
     "421076": 	["Musique sémaphore diffusion",],
     "907444": 	["Mutual Music Society",],
     "462774": 	["Mutuelle",],

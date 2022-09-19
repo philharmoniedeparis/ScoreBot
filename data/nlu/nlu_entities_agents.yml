@@ -27078,14 +27078,6 @@ nlu:
   examples: |
     - musiluc
 
-- synonym: "425507"
-  examples: |
-    - musique
-
-- synonym: "423073"
-  examples: |
-    - musique moderne
-
 - synonym: "421076"
   examples: |
     - musique sémaphore diffusion
