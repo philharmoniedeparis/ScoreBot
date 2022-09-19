@@ -104,16 +104,16 @@ where {{
             if not inputted_medias or not set(inputted_medias.keys()).issubset(self.allowed_medias):
                 raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
 
-            print(f"level: {level}, genre: {genre}, agent: {agent}")
+            logging.info(f"level: {level}, genre: {genre}, agent: {agent}")
             if level is not None and level not in levels.all_levels:
                 level, level_name = self.get_closest_event(level, levels.all_levels)
-                print(level)
+                logging.info(level)
             if genre is not None and genre not in genres.genres:
                 genre, genre_name = self.get_closest_event(genre, genres.genres)
-                print(genre)
+                logging.info(genre)
             if agent is not None and agent not in agents.agents:
                 agent, agent_name = self.get_closest_event(genre, agents.agents)
-                print(agent)
+                logging.info(agent)
 
             results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent)
             if not results:
@@ -168,7 +168,7 @@ values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {for
 ?castingDetail_{i} mus:U30_foresees_quantity_of_mop ?input_quantity_{i} .
             """
             
-        print(f"level: {level}, genre: {genre}, agent: {agent}")
+        logging.info(f"level: {level}, genre: {genre}, agent: {agent}")
         # Level
         if level is not None:
             filters += f"""
