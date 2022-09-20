@@ -112,7 +112,7 @@ where {{
                 genre, genre_name = self.get_closest_event(genre, genres.genres)
                 logging.info(genre)
             if agent is not None and agent not in agents.agents:
-                agent, agent_name = self.get_closest_event(genre, agents.agents)
+                agent, agent_name = self.get_closest_event(agent, agents.agents)
                 logging.info(agent)
 
             results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent)
