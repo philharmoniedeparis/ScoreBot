@@ -204,7 +204,7 @@ filter (lang(?roleLabel)=\"fr\")
         # Use fuzz ratio to compare value to the candidates in the dictionary
         # Return highest match
         closest_match = None
-        closest_match_ratio = 70
+        closest_match_ratio = 71
         for key in candidates:
             for cand in candidates[key]:
                 ratio = fuzz.ratio(value, cand)
