@@ -187,14 +187,14 @@ values (?input_genre ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/00{genr
         # Agent
         if agent is not None:
             filters += f"""
-values (?input_agent_role ?input_agent ) {{ (<http://data.bnf.fr/vocabulary/roles/r220/> <https://ark.philharmoniedeparis.fr/ark:49250/{agent}>) }}
-filters += "?creation  mus:R24_created ?score .
+values (?input_agent_role ?input_agent ) {{ (<http://data.bnf.fr/vocabulary/roles/r220/> <https://ark.philharmoniedeparis.fr/ark:49250/00{agent}>) }}
+?creation  mus:R24_created ?score .
 ?creation ecrm:P9_consists_of ?task.
-?task ecrm:P14_carried_out_by ?agent.
+?task ecrm:P14_carried_out_by ?input_agent.
 ?task mus:U31_had_function ?input_agent_role.
 ?input_agent_role skos:prefLabel ?roleLabel.
 filter (lang(?roleLabel)=\"fr\")
-?agent rdfs:label ?agentLabel.
+?input_agent rdfs:label ?agentLabel.
 """
 
         parsed_query = urllib.parse.quote(self.route.format(filters=filters))
