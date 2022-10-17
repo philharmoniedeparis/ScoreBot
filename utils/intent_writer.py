@@ -16,6 +16,7 @@ raw_sentences = {
         "sentences": [
             # MEDIUM
             "Quelles partitions avez-vous pour trois _MEDIUM et un _MEDIUM ?",
+            "Je suis _MEDIUM et je cherche des partitions pour _MEDIUM et d'autres _MEDIUM.",
             "Pour un _MEDIUM, un _MEDIUM, et quatre _MEDIUM, quelles partitions?",
             "Je recherche une partition pour _MEDIUM et _MEDIUM ",
             "Avez-vous un morceau simple à me conseiller pour _MEDIUM et _MEDIUM ? ",
@@ -40,7 +41,7 @@ raw_sentences = {
             "Liste partitions deux _MEDIUM pour musicien avec niveau _LEVEL_WORDED",
             "Quels sont les morceaux jouables par un groupe de 2 _MEDIUM ayant un niveau _LEVEL_WORDED?"
             "Je cherche des partitions pour musiciens jouant du _MEDIUM et du _MEDIUM depuis _LEVEL_TIMING.",
-            "Je suis corniste et je cherche des partitions pour _MEDIUM pour élèves pratiquant depuis _LEVEL_TIMING. ",
+            "Je suis _MEDIUM et je cherche des partitions pour _MEDIUM pour élèves pratiquant depuis _LEVEL_TIMING. ",
             "Je cherche des duos avec une _MEDIUM _LEVEL_SENTENCE.",
             "Avez-vous une idée de morceau pour _MEDIUM et _MEDIUM  _LEVEL_SENTENCE? ",
             "Avez-vous des duos à jouer au _MEDIUM et au _MEDIUM _LEVEL_SENTENCE ?  ",
@@ -54,6 +55,8 @@ raw_sentences = {
             "Je souhaite trouver des œuvres pour _MEDIUM _LEVEL_SENTENCE",
 
             # GENRES
+            "Je recherche une oeuvre _GENRE que l’on pourrait jouer avec un _MEDIUM, une _MEDIUM et un _MEDIUM",
+            "[Sonate]{\"entity\": \"genre\"} pour _MEDIUM",
             "je suis cheffe d'un ensemble vocal de 12 _MEDIUM et je cherche des transcriptions pour chœur de répertoire _GENRE.",
             "Je dirige un _MEDIUM et je cherche des partitions de _GENRE.",
             "Est-ce que vous auriez de la _GENRE, mais en notation occidentale ?",
@@ -117,7 +120,6 @@ raw_sentences = {
             "Je recherche une oeuvre _GENRE composee par _AGENT que l'on pourrait jouer avec un _MEDIUM, une _MEDIUM et un _MEDIUM",
             "Je cherche des partitions de grands classiques de _AGENT, en version simplifiée, à jouer au _MEDIUM.",
             "Pourrais-je voir la liste de toutes vos partitions _AGENT pour _MEDIUM ?",
-            "Sonate _AGENT pour _MEDIUM",
             "Je voudrais trouver des arrangements de musique _GENRE de _AGENT pour _MEDIUM",
             "Je voudrais des jigs pour _MEDIUM crees par _AGENT",
             "_MEDIUM tab",
@@ -125,6 +127,17 @@ raw_sentences = {
             "Nous sommes 4 musiciens (_MEDIUM, _MEDIUM, _MEDIUM, et _MEDIUM). Vous auriez des partitions de _AGENT que l'on pourrait jouer",
             "œuvres de _AGENT",
             "Avez-vous des œuvres d'_AGENT ?",
+
+            # Formations
+            "Je cherche des _FORMATION avec une _MEDIUM.",
+            "Avez-vous des _FORMATION faciles à jouer au _MEDIUM et au _MEDIUM ?   ",
+            "Un morceau pour un _FORMATION de _MEDIUM ",
+            "Je recherche des _FORMATION pour _MEDIUM",
+            "Je recherche des _FORMATION _MEDIUM _MEDIUM.",
+            "Je voudrais trouver des arrangements de _GENRE pour _FORMATION à _MEDIUM",
+            "Je cherche des partitions pour _FORMATION à _MEDIUM",
+            "Je cherche des partitions de _GENRE pour _FORMATION à _MEDIUM",
+
         ],
         "entities": [
             ([preprocess_entity(i) for sublist in list(iaml.values()) + list(mimo.values()) for i in sublist], "_MEDIUM"),

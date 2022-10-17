@@ -2,4029 +2,10052 @@ version: "2.0"
 
 nlu:
 
-- synonym: "5639"
-  examples: |
-    - zang
-    - zang
-
-- synonym: "2419"
-  examples: |
-    - washint
-    - washint
-
-- synonym: "3305"
-  examples: |
-    - vielle à roue
-    - chifonie
-
-- synonym: "5649"
-  examples: |
-    - vase à percussion
-    - vase acoustique
-
-- synonym: "2227"
-  examples: |
-    - upic
-    - unité polyagogique informatique du cemamu
-
-- synonym: "2760"
-  examples: |
-    - tar
-    - tar
-
-- synonym: "2734"
-  examples: |
-    - tambourin à cordes
-    - tambour de béarn
-
-- synonym: "2887"
-  examples: |
-    - timbale
-    - tambour sur cuvette
-
-- synonym: "2617"
-  examples: |
-    - tambour en sablier
-    - tambour sablier
-
-- synonym: "2612"
-  examples: |
-    - tambour en gobelet
-    - tambour gobelet
-
-- synonym: "2504"
-  examples: |
-    - tambour tonneau
-    - tambour en tonneau
-
-- synonym: "2780"
-  examples: |
-    - trong com
-    - tambour de riz
-
-- synonym: "2730"
-  examples: |
-    - tambour à fente
-    - tambour de bois
-
-- synonym: "2585"
-  examples: |
-    - tambour
-    - tambour d'orchestre
-
-- synonym: "2978"
-  examples: |
-    - tambour métallique
-    - tambour d'acier
-
-- synonym: "2390"
-  examples: |
-    - sonnaille
-    - sonnailles
-
-- synonym: "2999"
-  examples: |
-    - semantron
-    - simandre
-
-- synonym: "2952"
-  examples: |
-    - lithophone
-    - phonolithe
-
-- synonym: "2273"
-  examples: |
-    - pianos
-    - pianofortes
-
-- synonym: "2302"
-  examples: |
-    - pianoharpe
-    - piano harpe
-
-- synonym: "3586"
-  examples: |
-    - pardessus de viole
-    - pardessus de viole de gambe
-
-- synonym: "5769"
-  examples: |
-    - orgue de chambre
-    - orgue de salon
-
-- synonym: "2937"
+- synonym: "4118"
   examples: |
     - marimba
     - marimba
+    - marimbiste
 
-- synonym: "2930"
+- synonym: "3886"
   examples: |
-    - lamellaphone
-    - lamellophone
-
-- synonym: "2475"
-  examples: |
-    - kartal
-    - kartal
-
-- synonym: "2429"
-  examples: |
-    - khartal
-    - kartal
+    - santur
+    - santour
+    - santouriste
 
 - synonym: "2886"
   examples: |
-    - kara
-    - kara
+    - timbale
+    - tambour sur cuvette
+    - timbalier
 
-- synonym: "4838"
+- synonym: "2429"
   examples: |
-    - idiophone frotté
-    - idiophone à friction
+    - timbale
+    - tambour sur cuvette
+    - timbalière
 
-- synonym: "3007"
+- synonym: "3305"
   examples: |
-    - aeoliphone
-    - eoliphone
+    - ching
+    - ching
 
-- synonym: "3020"
+- synonym: "3079"
   examples: |
-    - dibu dimbwa
-    - dibu dimbwa
+    - vielle à roue
+    - vielle à clavier
+    - vielleur
 
-- synonym: "2396"
+- synonym: "2217"
   examples: |
-    - dibu dimbwa
-    - dibu dimbwa
+    - vielle à roue
+    - vielle à clavier
+    - vielleuse
 
-- synonym: "2470"
+- synonym: "4297"
   examples: |
-    - crotales
-    - crotale
+    - vielle à roue
+    - vielle à clavier
+    - vielleux
 
-- synonym: "2529"
+- synonym: "2266"
   examples: |
-    - conga
-    - congas
+    - vielle à roue
+    - vielle à clavier
+    - vielliste
 
-- synonym: "2439"
+- synonym: "2585"
   examples: |
-    - sinh tien
-    - cliquette à sapèques
+    - accordéon
+    - accordéoniste
 
-- synonym: "2244"
+- synonym: "4364"
   examples: |
-    - clavicythérium
-    - clavecin vertical
+    - alto
+    - altiste
 
-- synonym: "4851"
+- synonym: "3995"
   examples: |
-    - cimta
-    - cimta
+    - balafon
+    - balafoniste
 
-- synonym: "6273"
+- synonym: "5156"
+  examples: |
+    - bandoneon
+    - bandonéoniste
+
+- synonym: "2937"
+  examples: |
+    - pandore
+    - bandore
+
+- synonym: "2273"
+  examples: |
+    - banjo
+    - banjoïste
+
+- synonym: "3689"
+  examples: |
+    - bombarde basse
+    - basse de hautbois
+
+- synonym: "4333"
+  examples: |
+    - basse électrique
+    - bassiste
+
+- synonym: "2999"
+  examples: |
+    - basson
+    - bassoniste
+
+- synonym: "2887"
+  examples: |
+    - flûte-canne
+    - canne flûte
+
+- synonym: "7071"
+  examples: |
+    - batterie
+    - batteur
+
+- synonym: "7072"
+  examples: |
+    - batterie
+    - batteuse
+
+- synonym: "5148"
+  examples: |
+    - bugles
+    - bugliste
+
+- synonym: "2572"
+  examples: |
+    - carillon
+    - carilloneur
+
+- synonym: "2573"
+  examples: |
+    - carillon
+    - carilloneuse
+
+- synonym: "3732"
   examples: |
     - ching
     - ching gong
 
-- synonym: "2462"
+- synonym: "3561"
   examples: |
-    - ching
-    - ching
+    - cimta
+    - cimta
+
+- synonym: "3063"
+  examples: |
+    - cithare sur table
+    - cithare sur planche
+
+- synonym: "2230"
+  examples: |
+    - cithare
+    - cithariste
+
+- synonym: "2221"
+  examples: |
+    - clarinette alto
+    - clarinettiste
+
+- synonym: "2730"
+  examples: |
+    - clarinette basse
+    - clarinettiste
+
+- synonym: "3429"
+  examples: |
+    - clarinette
+    - clarinettiste
+
+- synonym: "2222"
+  examples: |
+    - clarinette contrebasse
+    - clarinettiste
+
+- synonym: "3733"
+  examples: |
+    - clavicythérium
+    - clavecin vertical
+
+- synonym: "4341"
+  examples: |
+    - clavecin
+    - claveciniste
+
+- synonym: "2317"
+  examples: |
+    - synthétiseurs
+    - claviériste
+
+- synonym: "3319"
+  examples: |
+    - sinh tien
+    - cliquette à sapèques
+
+- synonym: "3226"
+  examples: |
+    - conga
+    - congas
+
+- synonym: "4177"
+  examples: |
+    - conque marine
+    - conque
+
+- synonym: "2390"
+  examples: |
+    - contrebasse
+    - contrebassiste
+
+- synonym: "3235"
+  examples: |
+    - mellophone
+    - cor alto
+
+- synonym: "3795"
+  examples: |
+    - trompe de chasse
+    - cor de chasse
 
 - synonym: "2993"
   examples: |
-    - tube à percussion
-    - bâton-pilon
+    - trompe de chasse
+    - corne de chasse
 
-- synonym: "4093"
+- synonym: "5703"
   examples: |
-    - flûte traversière
+    - crotales
+    - crotale
 
-- synonym: "3237"
+- synonym: "5146"
   examples: |
-    - guitare
-    - guitares
+    - cornets à pistons
+    - cornettiste
+
+- synonym: "2232"
+  examples: |
+    - cornet à bouquin
+    - cornettiste
+
+- synonym: "2734"
+  examples: |
+    - caisse claire
+
+- synonym: "3875"
+  examples: |
+    - crwth
+    - crouth
+
+- synonym: "2205"
+  examples: |
+    - cymbalum
+    - cymbaliste
+
+- synonym: "3909"
+  examples: |
+    - dibu dimbwa
+    - dibu dimbwa
+
+- synonym: "4182"
+  examples: |
+    - dibu dimbwa
+    - dibu dimbwa
+
+- synonym: "3060"
+  examples: |
+    - djembe
+    - djembéiste
+
+- synonym: "3566"
+  examples: |
+    - duduk
+    - duduk
+
+- synonym: "2387"
+  examples: |
+    - aeoliphone
+    - éoliphone
+
+- synonym: "3331"
+  examples: |
+    - flûte à embouchure terminale
+    - flûte à bouche terminale
+
+- synonym: "2462"
+  examples: |
+    - flûte à bec colonne
+    - flûte colonne
+
+- synonym: "6273"
+  examples: |
+    - flûte à embouchure terminale
+    - flûte droite
+
+- synonym: "4851"
+  examples: |
+    - flûte à embouchure terminale
+    - flûte oblique
+
+- synonym: "3628"
+  examples: |
+    - flûte traversière alto
+    - flûte traversière ténor
+
+- synonym: "5142"
+  examples: |
+    - flûtes
+    - flûtiste
+
+- synonym: "4836"
+  examples: |
+    - viole
+    - gambiste
+
+- synonym: "3729"
+  examples: |
+    - guitare battente
+    - guitare en bateau
+
+- synonym: "3828"
+  examples: |
+    - luth-guitare
+    - guitare-luth
+
+- synonym: "2952"
+  examples: |
+    - hautbois
+
+- synonym: "2213"
+  examples: |
+    - harmonica
+    - harmoniciste
+
+- synonym: "3471"
+  examples: |
+    - harmonium
+    - harmoniumiste
+
+- synonym: "4446"
+  examples: |
+    - harpe
+    - harpiste
+
+- synonym: "3832"
+  examples: |
+    - bombarde alto
+    - hautbois alto
+
+- synonym: "3836"
+  examples: |
+    - hautbois de poitou
+    - hautbois du poitou
+
+- synonym: "3839"
+  examples: |
+    - harmoni-cor
+    - hautbois-jaulin
+
+- synonym: "6406"
+  examples: |
+    - hautbois
+    - hautboïste
+
+- synonym: "2244"
+  examples: |
+    - pendule mécanique
+    - horloge mécanique
+
+- synonym: "2251"
+  examples: |
+    - idiophone frotté
+    - idiophone à friction
+
+- synonym: "2316"
+  examples: |
+    - kacapi
+    - kacapi
+
+- synonym: "2439"
+  examples: |
+    - kacapi
+    - kacapi
+
+- synonym: "2529"
+  examples: |
+    - kara
+    - kara
+
+- synonym: "4389"
+  examples: |
+    - kara
+    - kara
+
+- synonym: "3111"
+  examples: |
+    - khartal
+    - kartal
+
+- synonym: "3863"
+  examples: |
+    - kartal
+    - kartal
+
+- synonym: "4138"
+  examples: |
+    - kesle
+    - kisla
+
+- synonym: "2226"
+  examples: |
+    - kora
+    - koraïste
+
+- synonym: "3869"
+  examples: |
+    - lamellaphone
+    - lamellophone
+
+- synonym: "3859"
+  examples: |
+    - lamellaphone
+    - languettophone
+
+- synonym: "4467"
+  examples: |
+    - luth
+    - luthiste
+
+- synonym: "3868"
+  examples: |
+    - lyre sphérique
+    - lyre sur cuvette
+
+- synonym: "6809"
+  examples: |
+    - mandoline
+    - mandoliniste
+
+- synonym: "2470"
+  examples: |
+    - marimba
+    - marimba
+
+- synonym: "2278"
+  examples: |
+    - ondes martenot
+    - ondiste
+
+- synonym: "3495"
+  examples: |
+    - ophicléide contrebasse
+    - ophicléide monstre
+
+- synonym: "3198"
+  examples: |
+    - orgue
+    - organiste
+
+- synonym: "3633"
+  examples: |
+    - orgue mécanique
+    - orgue à cylindres
+
+- synonym: "2396"
+  examples: |
+    - orgue mécanique
+    - orgue à rouleaux
+
+- synonym: "3020"
+  examples: |
+    - orgue de chambre
+    - orgue de salon
+
+- synonym: "4498"
+  examples: |
+    - ud
+    - oudiste
+
+- synonym: "2579"
+  examples: |
+    - pardessus de viole
+    - pardessus de viole de gambe
+
+- synonym: "2264"
+  examples: |
+    - instruments à percussion
+    - percussioniste
+
+- synonym: "3933"
+  examples: |
+    - phagotum
+    - phagotus
+
+- synonym: "3007"
+  examples: |
+    - pianoharpe
+    - piano harpe
 
 - synonym: "2299"
   examples: |
     - piano
+    - pianiste
 
-- synonym: "3573"
+- synonym: "3940"
   examples: |
-    - violon
-    - violons
+    - rabab
+    - rabab
 
-- synonym: "3226"
+- synonym: "3956"
   examples: |
-    - banjo
-    - banjos
-    - banjo
-    - banjos
+    - lithophone
+    - pierre sonore
 
-- synonym: "4164"
+- synonym: "3883"
   examples: |
-    - hautbois
+    - sacqueboute
+    - saqueboute
 
-- synonym: "3836"
+- synonym: "3597"
   examples: |
-    - clarinette
-    - clarinettes
-
-- synonym: "2266"
-  examples: |
-    - orgue
-    - orgues
-
-- synonym: "3561"
-  examples: |
-    - alto
-    - altos
-
-- synonym: "3582"
-  examples: |
-    - violoncelle
-    - violoncelles
-
-- synonym: "2251"
-  examples: |
-    - clavecin
-    - clavecins
-
-- synonym: "4096"
-  examples: |
-    - flûte à bec alto
-
-- synonym: "3795"
-  examples: |
-    - basson
-
-- synonym: "3585"
-  examples: |
-    - baryton
-
-- synonym: "3111"
-  examples: |
-    - contrebasse
-    - contrebasses
-
-- synonym: "3736"
-  examples: |
-    - accordéon diatonique
-
-- synonym: "3955"
-  examples: |
-    - flûte
-    - flûtes
-
-- synonym: "4039"
-  examples: |
-    - flûte à bec
-
-- synonym: "3918"
-  examples: |
-    - flûte à bec soprano
-
-- synonym: "3732"
-  examples: |
-    - accordéon
-
-- synonym: "4118"
-  examples: |
-    - cor
-
-- synonym: "3832"
-  examples: |
-    - clarinette basse
-
-- synonym: "4342"
-  examples: |
-    - saxophone alto
-
-- synonym: "4446"
-  examples: |
-    - trompette
-    - trompettes
-
-- synonym: "2985"
-  examples: |
-    - vibraphone
-
-- synonym: "2968"
-  examples: |
-    - glockenspiel
-
-- synonym: "2420"
-  examples: |
-    - castagnettes
-
-- synonym: "2729"
-  examples: |
-    - caisse claire
-
-- synonym: "2319"
-  examples: |
-    - orgue électronique
-
-- synonym: "2235"
-  examples: |
-    - harmonium
-
-- synonym: "4377"
-  examples: |
-    - trompette basse
-
-- synonym: "4346"
-  examples: |
-    - saxophone
-    - saxophones
-
-- synonym: "4369"
-  examples: |
-    - trombone
-    - trombones
-
-- synonym: "4197"
-  examples: |
-    - cor anglais
-
-- synonym: "4349"
-  examples: |
-    - saxophone ténor
-
-- synonym: "3285"
-  examples: |
-    - harpe
-
-- synonym: "3394"
-  examples: |
-    - luth
-
-- synonym: "3598"
-  examples: |
-    - contrebasse de viole
-
-- synonym: "3604"
-  examples: |
-    - basse de viole
-
-- synonym: "4344"
-  examples: |
-    - saxophone basse
-
-- synonym: "4029"
-  examples: |
-    - flûte piccolo
-
-- synonym: "4024"
-  examples: |
-    - flûte de pan
-
-- synonym: "4347"
-  examples: |
-    - saxophone soprano
-
-- synonym: "2506"
-  examples: |
-    - grosse caisse
-
-- synonym: "2321"
-  examples: |
-    - synthétiseur
-
-- synonym: "3510"
-  examples: |
-    - mandoline
-
-- synonym: "2820"
-  examples: |
-    - gong
-
-- synonym: "4467"
-  examples: |
-    - tuba
-
-- synonym: "4362"
-  examples: |
-    - trombone basse
-
-- synonym: "4327"
-  examples: |
-    - saxhorn basse
-
-- synonym: "5702"
-  examples: |
-    - batterie
-
-- synonym: "3633"
-  examples: |
-    - cymbalum
-
-- synonym: "3609"
-  examples: |
-    - violone
-
-- synonym: "3286"
-  examples: |
-    - harpe celtique
-
-- synonym: "4368"
-  examples: |
-    - trombone ténor
-
-- synonym: "4459"
-  examples: |
-    - tuba basse
-
-- synonym: "3804"
-  examples: |
-    - contrebasson
-
-- synonym: "3834"
-  examples: |
-    - cor de basset
-
-- synonym: "4086"
-  examples: |
-    - flûte à bec ténor
-
-- synonym: "4111"
-  examples: |
-    - harmonica
-
-- synonym: "3473"
-  examples: |
-    - théorbe
-
-- synonym: "3898"
-  examples: |
-    - flûte à bec basse
-
-- synonym: "3099"
-  examples: |
-    - xylophone
-
-- synonym: "3594"
-  examples: |
-    - dessus de viole
-
-- synonym: "3591"
-  examples: |
-    - ténor de viole
-
-- synonym: "3828"
-  examples: |
-    - clarinette alto
-
-- synonym: "3839"
-  examples: |
-    - clarinette contrebasse
-
-- synonym: "4326"
-  examples: |
-    - saxhorn baryton
-
-- synonym: "3230"
-  examples: |
-    - guitare basse
-
-- synonym: "4343"
-  examples: |
-    - saxophone baryton
-
-- synonym: "3258"
-  examples: |
-    - kora
-
-- synonym: "3236"
-  examples: |
-    - guitare électrique
-    - guitares électriques
-
-- synonym: "3729"
-  examples: |
-    - cithare
-
-- synonym: "4462"
-  examples: |
-    - tuba contrebasse
-
-- synonym: "3868"
-  examples: |
-    - cornet à bouquin
-
-- synonym: "6538"
-  examples: |
-    - violoncelle piccolo
-
-- synonym: "3881"
-  examples: |
-    - bugle
-
-- synonym: "3820"
-  examples: |
-    - clairon basse
-
-- synonym: "3822"
-  examples: |
-    - clairon
-
-- synonym: "2783"
-  examples: |
-    - tumba
-
-- synonym: "2268"
-  examples: |
-    - orgue positif
-
-- synonym: "4463"
-  examples: |
-    - euphonium
-
-- synonym: "3250"
-  examples: |
-    - ukulele
-
-- synonym: "2354"
-  examples: |
-    - autres instruments
-
-- synonym: "2347"
-  examples: |
-    - mirlitons
-
-- synonym: "2230"
-  examples: |
-    - instruments à clavier
-
-- synonym: "2208"
-  examples: |
-    - instruments électroniques
-
-- synonym: "2205"
-  examples: |
-    - eléments d'instruments de musique
-
-- synonym: "4475"
-  examples: |
-    - instruments mécaniques
-
-- synonym: "3730"
-  examples: |
-    - instruments à vent
-
-- synonym: "3101"
-  examples: |
-    - instruments à cordes
-
-- synonym: "2370"
-  examples: |
-    - instruments à percussion
-
-- synonym: "2206"
-  examples: |
-    - archets
-
-- synonym: "6067"
-  examples: |
-    - embouchures
-
-- synonym: "6068"
-  examples: |
-    - baguettes
-
-- synonym: "6070"
-  examples: |
-    - plectres
-
-- synonym: "2207"
-  examples: |
-    - archet
-
-- synonym: "2209"
-  examples: |
-    - electroniques
-
-- synonym: "2226"
-  examples: |
-    - trautonium
-
-- synonym: "2219"
-  examples: |
-    - ondioline
-
-- synonym: "2225"
-  examples: |
-    - theremin
-
-- synonym: "6619"
-  examples: |
-    - assemblage de modules électroniques
-
-- synonym: "2215"
-  examples: |
-    - mellotron
-
-- synonym: "2217"
-  examples: |
-    - ondes martenot
-
-- synonym: "2211"
-  examples: |
-    - clavioline
-
-- synonym: "6617"
-  examples: |
-    - accord guitar
-
-- synonym: "6618"
-  examples: |
-    - accordéon-synthetiseur
-
-- synonym: "6118"
-  examples: |
-    - guitare midi
-
-- synonym: "5903"
-  examples: |
-    - croix sonore
-
-- synonym: "2213"
-  examples: |
-    - gmebogosse
-
-- synonym: "2214"
-  examples: |
-    - heliophon
-
-- synonym: "2210"
-  examples: |
-    - boite à rythmes
-
-- synonym: "2212"
-  examples: |
-    - gmebaphone
-
-- synonym: "2229"
-  examples: |
-    - violon midi
-
-- synonym: "2223"
-  examples: |
-    - solovox
-
-- synonym: "2224"
-  examples: |
-    - telharmonium
-
-- synonym: "2221"
-  examples: |
-    - sackbut
-
-- synonym: "2222"
-  examples: |
-    - sampler
-
-- synonym: "2216"
-  examples: |
-    - instrument midi
-
-- synonym: "2220"
-  examples: |
-    - pianoline
-
-- synonym: "4977"
-  examples: |
-    - vocoder
-
-- synonym: "2270"
-  examples: |
-    - autres
-
-- synonym: "2239"
-  examples: |
-    - clavecins
-
-- synonym: "2231"
-  examples: |
-    - clavicordes
-
-- synonym: "4479"
-  examples: |
-    - mécaniques
-
-- synonym: "2316"
-  examples: |
-    - synthétiseurs
-
-- synonym: "2264"
-  examples: |
-    - orgues
-
-- synonym: "2233"
-  examples: |
-    - harmoniums
-
-- synonym: "2232"
-  examples: |
-    - clavicorde
-
-- synonym: "6147"
-  examples: |
-    - orgue-clavicorde
-
-- synonym: "2234"
-  examples: |
-    - harmonicorde
-
-- synonym: "2236"
-  examples: |
-    - poikilorgue
-
-- synonym: "5767"
-  examples: |
-    - orgue expressif
-
-- synonym: "6643"
-  examples: |
-    - claviphone
-
-- synonym: "6652"
-  examples: |
-    - harmoniphone
-
-- synonym: "6674"
-  examples: |
-    - harmonium à bouche
-
-- synonym: "6691"
-  examples: |
-    - tonoscope-harmonium
-
-- synonym: "6543"
-  examples: |
-    - physharmonica
-
-- synonym: "2237"
-  examples: |
-    - régale
-
-- synonym: "2257"
-  examples: |
-    - virginale
-
-- synonym: "2256"
-  examples: |
-    - epinette
-
-- synonym: "2241"
-  examples: |
-    - clavecin brisé
-
-- synonym: "6542"
-  examples: |
-    - virginal double
-
-- synonym: "2253"
-  examples: |
-    - clavecin-luth
-
-- synonym: "2254"
-  examples: |
-    - muselaar
-
-- synonym: "2250"
-  examples: |
-    - clavecin électrique
-
-- synonym: "2252"
-  examples: |
-    - clavecin à maillets
-
-- synonym: "2246"
-  examples: |
-    - clavecin organisé
-
-- synonym: "2249"
-  examples: |
-    - clavecin numérique
-
-- synonym: "2243"
-  examples: |
-    - clavecin oculaire
-
-- synonym: "2240"
-  examples: |
-    - arpicordo
-
-- synonym: "2260"
-  examples: |
-    - piano mécanique
-
-- synonym: "6653"
-  examples: |
-    - harmonium-orgue
-
-- synonym: "6635"
-  examples: |
-    - orgue de cabinet
-
-- synonym: "5770"
-  examples: |
-    - orgue hydraulique
-
-- synonym: "2265"
-  examples: |
-    - orgue éolien
-
-- synonym: "2267"
-  examples: |
-    - orgue portatif
-
-- synonym: "2269"
-  examples: |
-    - pyrophone
-
-- synonym: "6705"
-  examples: |
-    - pianino
-
-- synonym: "6548"
-  examples: |
-    - melodion
-
-- synonym: "6544"
-  examples: |
-    - klavizilinder
-
-- synonym: "6546"
-  examples: |
-    - glockenspiel à clavier
-
-- synonym: "2272"
-  examples: |
-    - lyricorde
-
-- synonym: "2271"
-  examples: |
-    - archiquier
-
-- synonym: "4969"
-  examples: |
-    - terpodion
-
-- synonym: "6717"
-  examples: |
-    - streichklavier
-
-- synonym: "6141"
-  examples: |
-    - piano quatuor
-
-- synonym: "2284"
-  examples: |
-    - piano à queue
-
-- synonym: "2293"
-  examples: |
-    - piano à pédalier
-
-- synonym: "2308"
-  examples: |
-    - piano carré
-
-- synonym: "2311"
-  examples: |
-    - piano droit
-
-- synonym: "2297"
-  examples: |
-    - piano organisé
-
-- synonym: "2298"
-  examples: |
-    - piano table
-
-- synonym: "6148"
-  examples: |
-    - harmonium-piano
-
-- synonym: "2306"
-  examples: |
-    - piano pyramidal
-
-- synonym: "2310"
-  examples: |
-    - piano à tangentes
-
-- synonym: "2301"
-  examples: |
-    - piano-guitare
-
-- synonym: "2289"
-  examples: |
-    - piano orgue
-
-- synonym: "2290"
-  examples: |
-    - orphica
-
-- synonym: "2286"
-  examples: |
-    - piano lyre
-
-- synonym: "2287"
-  examples: |
-    - melopiano
-
-- synonym: "2296"
-  examples: |
-    - piano éolien
-
-- synonym: "2291"
-  examples: |
-    - pianet
-
-- synonym: "2292"
-  examples: |
-    - pianino
-
-- synonym: "2278"
-  examples: |
-    - piano console
-
-- synonym: "2279"
-  examples: |
-    - piano numérique
-
-- synonym: "2276"
-  examples: |
-    - claviharpe
-
-- synonym: "2277"
-  examples: |
-    - clavi-lame
-
-- synonym: "2283"
-  examples: |
-    - piano girafe
-
-- synonym: "2285"
-  examples: |
-    - lutheal
-
-- synonym: "2281"
-  examples: |
-    - piano électrique
-
-- synonym: "2282"
-  examples: |
-    - euphonicon
-
-- synonym: "2274"
-  examples: |
-    - piano automatique
-
-- synonym: "2275"
-  examples: |
-    - piano cabinet
-
-- synonym: "6713"
-  examples: |
-    - nähtischklavier
-
-- synonym: "6714"
-  examples: |
-    - piano oblique
-
-- synonym: "6712"
-  examples: |
-    - cembalet
-
-- synonym: "5726"
-  examples: |
-    - sostenente piano
-
-- synonym: "2320"
-  examples: |
-    - synclavier
-
-- synonym: "2318"
-  examples: |
-    - orgue électrique
-
-- synonym: "2317"
-  examples: |
-    - buchla
-
-- synonym: "2348"
-  examples: |
-    - mirlitons
-
-- synonym: "2352"
-  examples: |
-    - mirliton
-
-- synonym: "2353"
-  examples: |
-    - nyastaranga
-
-- synonym: "2349"
-  examples: |
-    - flûte eunuque
-
-- synonym: "2351"
-  examples: |
-    - kazoo
-
-- synonym: "2355"
-  examples: |
-    - autres
-
-- synonym: "2362"
-  examples: |
-    - mattauphone
-
-- synonym: "2364"
-  examples: |
-    - glass harmonica
-
-- synonym: "2358"
-  examples: |
-    - cristal baschet
-
-- synonym: "2361"
-  examples: |
-    - jaltarang
-
-- synonym: "2369"
-  examples: |
-    - violon de fer
-
-- synonym: "6649"
-  examples: |
-    - fusu de nuxi
-
-- synonym: "6547"
-  examples: |
-    - klaxon
-
-- synonym: "6403"
-  examples: |
-    - carapace de tortue
-
-- synonym: "4932"
-  examples: |
-    - dulcitone
-
-- synonym: "4769"
-  examples: |
-    - crystallophone
-
-- synonym: "2368"
-  examples: |
-    - scie musicale
-
-- synonym: "2359"
-  examples: |
-    - glace-chord
-
-- synonym: "6404"
-  examples: |
-    - effet du galop de cheval
-
-- synonym: "2451"
-  examples: |
-    - cymbales
-
-- synonym: "2912"
-  examples: |
-    - lamellophones
-
-- synonym: "2861"
-  examples: |
-    - guimbardes
-
-- synonym: "2879"
-  examples: |
-    - timbales
-
-- synonym: "2807"
-  examples: |
-    - gongs
-
-- synonym: "2424"
-  examples: |
-    - claquettes
-
-- synonym: "3062"
-  examples: |
-    - xylophones
-
-- synonym: "2805"
-  examples: |
-    - gamelan
-
-- synonym: "2949"
-  examples: |
-    - lithophones
-
-- synonym: "2988"
-  examples: |
-    - autres
-
-- synonym: "3010"
-  examples: |
-    - crécelles
-
-- synonym: "2965"
-  examples: |
-    - métallophones
-
-- synonym: "3012"
-  examples: |
-    - hochets
-
-- synonym: "3047"
-  examples: |
-    - râcloirs
-
-- synonym: "2870"
-  examples: |
-    - grelots
-
-- synonym: "2493"
-  examples: |
-    - tambours
-
-- synonym: "2371"
-  examples: |
-    - cloches
-
-- synonym: "2687"
-  examples: |
-    - ngonge
-
-- synonym: "2415"
-  examples: |
-    - clochette de traîneau
-
-- synonym: "2416"
-  examples: |
-    - cloche tubulaire
-
-- synonym: "2408"
-  examples: |
-    - kin
-
-- synonym: "2410"
-  examples: |
-    - mbombu
-
-- synonym: "2397"
-  examples: |
-    - dibu dinganga
-
-- synonym: "2407"
-  examples: |
-    - kili
-
-- synonym: "2395"
-  examples: |
-    - dibu
-
-- synonym: "2387"
-  examples: |
-    - carillon
-
-- synonym: "2381"
-  examples: |
-    - cloche
-
-- synonym: "2384"
-  examples: |
-    - bozhong
-
-- synonym: "2376"
-  examples: |
-    - ambassa
-
-- synonym: "2377"
-  examples: |
-    - aporo
-
-- synonym: "2372"
-  examples: |
-    - abanangbweli
-
-- synonym: "6622"
-  examples: |
-    - carillon électrique
-
-- synonym: "6796"
-  examples: |
-    - chung
-
-- synonym: "6666"
-  examples: |
-    - ling
-
-- synonym: "6318"
-  examples: |
-    - bol musical
-
-- synonym: "6274"
-  examples: |
-    - cai tiu
-
-- synonym: "6268"
-  examples: |
-    - ceinture à grelots
-
-- synonym: "6651"
-  examples: |
-    - gshang
-
-- synonym: "6364"
-  examples: |
-    - zang
-
-- synonym: "5387"
-  examples: |
-    - tribu
-
-- synonym: "5700"
-  examples: |
-    - tambour de bois
-
-- synonym: "5686"
-  examples: |
-    - cloche simple
-
-- synonym: "5655"
-  examples: |
-    - nzunzun
-
-- synonym: "5508"
-  examples: |
-    - klentong
-
-- synonym: "5503"
-  examples: |
-    - wadjira
-
-- synonym: "5139"
-  examples: |
-    - agongon
-
-- synonym: "4864"
-  examples: |
-    - ghungru
-
-- synonym: "4660"
-  examples: |
-    - apertintaille
-
-- synonym: "4887"
-  examples: |
-    - semakkalam
-
-- synonym: "5185"
-  examples: |
-    - dawuro
-
-- synonym: "2413"
-  examples: |
-    - p'yonjong
-
-- synonym: "2417"
-  examples: |
-    - t'ukchong
-
-- synonym: "2406"
-  examples: |
-    - hansho
-
-- synonym: "2409"
-  examples: |
-    - lawle
-
-- synonym: "2403"
-  examples: |
-    - ghanta
-
-- synonym: "2404"
-  examples: |
-    - clochette
-
-- synonym: "2400"
-  examples: |
-    - dril-bu
-
-- synonym: "2401"
-  examples: |
-    - ekiro
-
-- synonym: "2389"
-  examples: |
-    - cencerro
-
-- synonym: "2399"
-  examples: |
-    - dotaku
-
-- synonym: "2378"
-  examples: |
-    - banka
-
-- synonym: "2382"
-  examples: |
-    - pien-chung
-
-- synonym: "2373"
-  examples: |
-    - agogo
-
-- synonym: "6993"
-  examples: |
-    - zan
-
-- synonym: "5498"
-  examples: |
-    - cloche double
-
-- synonym: "5491"
-  examples: |
-    - ushinarashi
-
-- synonym: "5476"
-  examples: |
-    - gentorak
-
-- synonym: "5382"
-  examples: |
-    - yinqing
-
-- synonym: "5356"
-  examples: |
-    - skrabalas
-
-- synonym: "5263"
-  examples: |
-    - klengkleng
-
-- synonym: "5728"
-  examples: |
-    - windbell
-
-- synonym: "2411"
-  examples: |
-    - nzoro
-
-- synonym: "2421"
-  examples: |
-    - cap ke
-
-- synonym: "2423"
-  examples: |
-    - castagnettes
-
-- synonym: "5244"
-  examples: |
-    - kalenang
-
-- synonym: "5367"
-  examples: |
-    - tajeraste
-
-- synonym: "2436"
-  examples: |
-    - shkashek
-
-- synonym: "2444"
-  examples: |
-    - fouet
-
-- synonym: "2430"
-  examples: |
-    - paiban
-
-- synonym: "2426"
-  examples: |
-    - claquettes
-
-- synonym: "2428"
-  examples: |
-    - gandi
-
-- synonym: "2425"
-  examples: |
-    - bones
-
-- synonym: "4951"
-  examples: |
-    - phach
-
-- synonym: "4923"
-  examples: |
-    - chlefeli
-
-- synonym: "2445"
-  examples: |
-    - yotsudake
-
-- synonym: "2447"
-  examples: |
-    - zhong
-
-- synonym: "2442"
-  examples: |
-    - toka
-
-- synonym: "2443"
-  examples: |
-    - walet-hkok
-
-- synonym: "2435"
-  examples: |
-    - shakubyoshi
-
-- synonym: "2433"
-  examples: |
-    - pak
-
-- synonym: "2434"
-  examples: |
-    - scabellum
-
-- synonym: "2427"
-  examples: |
-    - claquoir
-
-- synonym: "6786"
-  examples: |
-    - kasik
-
-- synonym: "6787"
-  examples: |
-    - cuillères
-
-- synonym: "6636"
-  examples: |
-    - cai ban nhac
-
-- synonym: "6322"
-  examples: |
-    - sanh
-
-- synonym: "6267"
-  examples: |
-    - batte d'arlequin
-
-- synonym: "5513"
-  examples: |
-    - kemanak
-
-- synonym: "5386"
-  examples: |
-    - va let kyot
-
-- synonym: "5342"
-  examples: |
-    - sanqioban
-
-- synonym: "5317"
-  examples: |
-    - palipal
-
-- synonym: "5225"
-  examples: |
-    - grap saypha
-
-- synonym: "4885"
-  examples: |
-    - phal
-
-- synonym: "4819"
-  examples: |
-    - claquoir à marteau
-
-- synonym: "4821"
-  examples: |
-    - matraqueta
-
-- synonym: "4663"
-  examples: |
-    - knaptand
-
-- synonym: "4665"
-  examples: |
-    - troccola
-
-- synonym: "4661"
-  examples: |
-    - capra
-
-- synonym: "4662"
-  examples: |
-    - hanske knap
-
-- synonym: "4581"
-  examples: |
-    - matraca
-
-- synonym: "2488"
-  examples: |
-    - cymbale sizzle
-
-- synonym: "2489"
-  examples: |
-    - cymbale sock
-
-- synonym: "2476"
-  examples: |
-    - kasat
-
-- synonym: "2480"
-  examples: |
-    - sajat
-
-- synonym: "2471"
-  examples: |
-    - cymbales
-
-- synonym: "2467"
-  examples: |
-    - cymbale choke
-
-- synonym: "2469"
-  examples: |
-    - cymbale crash
-
-- synonym: "2454"
-  examples: |
-    - chabara
-
-- synonym: "2460"
-  examples: |
-    - chap
-
-- synonym: "2452"
-  examples: |
-    - bo
-
-- synonym: "6681"
-  examples: |
-    - penzhong
-
-- synonym: "2482"
-  examples: |
-    - sanj
-
-- synonym: "2484"
-  examples: |
-    - sbub-chal
-
-- synonym: "2478"
-  examples: |
-    - manjira
-
-- synonym: "2479"
-  examples: |
-    - rol-mo
-
-- synonym: "2472"
-  examples: |
-    - dobatsu
-
-- synonym: "2468"
-  examples: |
-    - chum choe
-
-- synonym: "2492"
-  examples: |
-    - zil
-
-- synonym: "2487"
-  examples: |
-    - sil-snyan
-
-- synonym: "2490"
-  examples: |
-    - ting-ting-shags
-
-- synonym: "5489"
-  examples: |
-    - silnen
-
-- synonym: "5372"
-  examples: |
-    - talam
-
-- synonym: "5365"
-  examples: |
-    - tah
-
-- synonym: "5243"
-  examples: |
-    - kangsi
-
-- synonym: "4930"
-  examples: |
-    - dobachi
-
-- synonym: "4880"
-  examples: |
-    - mandira
-
-- synonym: "5242"
-  examples: |
-    - jhalica
-
-- synonym: "5366"
-  examples: |
-    - tahca
-
-- synonym: "5351"
-  examples: |
-    - sichyah
-
-- synonym: "5334"
-  examples: |
-    - rincik
-
-- synonym: "5424"
-  examples: |
-    - bhusyah
-
-- synonym: "5384"
-  examples: |
-    - than lvin
-
-- synonym: "5506"
-  examples: |
-    - kecer
-
-- synonym: "2524"
-  examples: |
-    - changgo
-
-- synonym: "2532"
-  examples: |
-    - tambour cylindrique
-
-- synonym: "2508"
-  examples: |
-    - bendir
-
-- synonym: "2517"
-  examples: |
-    - tambour de bronze
-
-- synonym: "2548"
-  examples: |
-    - damaru
-
-- synonym: "2552"
-  examples: |
-    - daph
-
-- synonym: "2533"
-  examples: |
-    - daf
-
-- synonym: "2536"
-  examples: |
-    - daire
-
-- synonym: "2497"
-  examples: |
-    - bajiao gu
-
-- synonym: "2498"
-  examples: |
-    - ban
-
-- synonym: "2507"
-  examples: |
-    - bata
-
-- synonym: "2501"
-  examples: |
-    - bangu
-
-- synonym: "2610"
-  examples: |
-    - glaw ng yao
-
-- synonym: "2611"
-  examples: |
-    - go
-
-- synonym: "2602"
-  examples: |
-    - ganga
-
-- synonym: "2606"
-  examples: |
-    - gaza
-
-- synonym: "2656"
-  examples: |
-    - kiringi
-
-- synonym: "2670"
-  examples: |
-    - mazhar
-
-- synonym: "2640"
-  examples: |
-    - kabaro
-
-- synonym: "2652"
-  examples: |
-    - kendang
-
-- synonym: "2573"
-  examples: |
-    - dholak
-
-- synonym: "2581"
-  examples: |
-    - djoungdjoung
-
-- synonym: "2554"
-  examples: |
-    - darabukka
-
-- synonym: "2572"
-  examples: |
-    - dhol
-
-- synonym: "2596"
-  examples: |
-    - engalabi
-
-- synonym: "2598"
-  examples: |
-    - tambour sur cadre
-
-- synonym: "2586"
-  examples: |
-    - duff
-
-- synonym: "2595"
-  examples: |
-    - ekole
-
-- synonym: "2714"
-  examples: |
-    - riqq
-
-- synonym: "2728"
-  examples: |
-    - shagu
-
-- synonym: "2744"
-  examples: |
-    - tambora
-
-- synonym: "2746"
-  examples: |
-    - tambourin
-
-- synonym: "2738"
-  examples: |
-    - tabl
-
-- synonym: "2743"
-  examples: |
-    - tama
-
-- synonym: "2682"
-  examples: |
-    - ngoma
-
-- synonym: "2673"
-  examples: |
-    - mokita
-
-- synonym: "2678"
-  examples: |
-    - mukupiela
-
-- synonym: "2704"
-  examples: |
-    - pambai
-
-- synonym: "2712"
-  examples: |
-    - redap
-
-- synonym: "2688"
-  examples: |
-    - nkoko
-
-- synonym: "2697"
-  examples: |
-    - nonga
-
-- synonym: "2799"
-  examples: |
-    - zarb
-
-- synonym: "2790"
-  examples: |
-    - uganda drum
-
-- synonym: "2794"
-  examples: |
-    - wankara
-
-- synonym: "2762"
-  examples: |
-    - tarol
-
-- synonym: "2766"
-  examples: |
-    - tebashul
-
-- synonym: "2752"
-  examples: |
-    - tambour sur fût
-
-- synonym: "2777"
-  examples: |
-    - tomba
-
-- synonym: "2787"
-  examples: |
-    - tyepondo-pinge
-
-- synonym: "2768"
-  examples: |
-    - temple block
-
-- synonym: "2769"
-  examples: |
-    - caisse roulante
-
-- synonym: "6269"
-  examples: |
-    - bibliku
-
-- synonym: "6294"
-  examples: |
-    - garamut
-
-- synonym: "6308"
-  examples: |
-    - lali
-
-- synonym: "6328"
-  examples: |
-    - trong chien
-
-- synonym: "6329"
-  examples: |
-    - trong manh
-
-- synonym: "6326"
-  examples: |
-    - trong boc
-
-- synonym: "6327"
-  examples: |
-    - trong cai
-
-- synonym: "6332"
-  examples: |
-    - tuvung
-
-- synonym: "6330"
-  examples: |
-    - trong va
-
-- synonym: "6331"
-  examples: |
-    - tunkul
-
-- synonym: "6324"
-  examples: |
-    - tien-kou
-
-- synonym: "6325"
-  examples: |
-    - trong
-
-- synonym: "6366"
-  examples: |
-    - pan-kou
-
-- synonym: "6365"
-  examples: |
-    - zirbaghali
-
-- synonym: "6540"
-  examples: |
-    - tom-tom
-
-- synonym: "6631"
-  examples: |
-    - tambour automatique
-
-- synonym: "6684"
-  examples: |
-    - roto-toms
-
-- synonym: "6797"
-  examples: |
-    - dadabuan
-
-- synonym: "4578"
-  examples: |
-    - caja
-
-- synonym: "4585"
-  examples: |
-    - lppumin
-
-- synonym: "4586"
-  examples: |
-    - pandereta
-
-- synonym: "4583"
-  examples: |
-    - kultrun
-
-- synonym: "4584"
-  examples: |
-    - llamador
-
-- synonym: "4577"
-  examples: |
-    - bombo
-
-- synonym: "4597"
-  examples: |
-    - tlalpanhuetlhuetl
-
-- synonym: "4588"
-  examples: |
-    - tambor mayor
-
-- synonym: "4589"
-  examples: |
-    - teponaztli
-
-- synonym: "4680"
-  examples: |
-    - diplipito
-
-- synonym: "4685"
-  examples: |
-    - partrijzenlokker
-
-- synonym: "4686"
-  examples: |
-    - pignata
-
-- synonym: "4682"
-  examples: |
-    - duba
-
-- synonym: "4684"
-  examples: |
-    - fanfrnoch
-
-- synonym: "4693"
-  examples: |
-    - tambourin florentin
-
-- synonym: "4695"
-  examples: |
-    - tümïr
-
-- synonym: "4688"
-  examples: |
-    - rommelpot
-
-- synonym: "4690"
-  examples: |
-    - bourdon
-
-- synonym: "4699"
-  examples: |
-    - zambomba
-
-- synonym: "4698"
-  examples: |
-    - wawa
-
-- synonym: "4872"
-  examples: |
-    - joraghai
-
-- synonym: "4869"
-  examples: |
-    - jagajhampa
-
-- synonym: "4878"
-  examples: |
-    - madar
-
-- synonym: "4857"
-  examples: |
-    - dindimi
-
-- synonym: "4866"
-  examples: |
-    - gummati
-
-- synonym: "4868"
-  examples: |
-    - hudukka
-
-- synonym: "4884"
-  examples: |
-    - panaba
-
-- synonym: "5137"
-  examples: |
-    - gu
-
-- synonym: "5157"
-  examples: |
-    - bommaa
-
-- synonym: "5181"
-  examples: |
-    - contra surdo
-
-- synonym: "5175"
-  examples: |
-    - ciblon
-
-- synonym: "5221"
-  examples: |
-    - gongand
-
-- synonym: "5220"
-  examples: |
-    - gimbar
-
-- synonym: "5259"
-  examples: |
-    - ketipung
-
-- synonym: "5260"
-  examples: |
-    - khaijari
-
-- synonym: "5256"
-  examples: |
-    - kenang
-
-- synonym: "5299"
-  examples: |
-    - nodo
-
-- synonym: "5300"
-  examples: |
-    - nyamalwa
-
-- synonym: "5284"
-  examples: |
-    - libbit
-
-- synonym: "5278"
-  examples: |
-    - kvakhica
-
-- synonym: "5336"
-  examples: |
-    - repinique
-
-- synonym: "5368"
-  examples: |
-    - tajeraste
-
-- synonym: "5369"
-  examples: |
-    - tambor
-
-- synonym: "5378"
-  examples: |
-    - tapattai
-
-- synonym: "5381"
-  examples: |
-    - zambola
-
-- synonym: "5361"
-  examples: |
-    - soge
-
-- synonym: "5509"
-  examples: |
-    - gordang
-
-- synonym: "5692"
-  examples: |
-    - tambour d'eau
-
-- synonym: "5693"
-  examples: |
-    - tambour en vase
-
-- synonym: "5735"
-  examples: |
-    - ditumba
-
-- synonym: "5690"
-  examples: |
-    - tambour biconique
-
-- synonym: "5691"
-  examples: |
-    - tambour cylindro-conique
-
-- synonym: "6055"
-  examples: |
-    - tambour hochet
-
-- synonym: "6120"
-  examples: |
-    - atwereba
-
-- synonym: "6121"
-  examples: |
-    - jevetya
-
-- synonym: "6124"
-  examples: |
-    - ngoma za muheme
-
-- synonym: "6125"
-  examples: |
-    - woka
-
-- synonym: "6122"
-  examples: |
-    - klakacki
-
-- synonym: "6123"
-  examples: |
-    - laiyant
-
-- synonym: "2514"
-  examples: |
-    - bodhran
-
-- synonym: "2515"
-  examples: |
-    - bongos
-
-- synonym: "2494"
-  examples: |
-    - adufe
-
-- synonym: "2495"
-  examples: |
-    - agual
-
-- synonym: "2531"
-  examples: |
-    - tambour conique
-
-- synonym: "2535"
-  examples: |
-    - dagu
-
-- synonym: "2528"
-  examples: |
-    - chwago
-
-- synonym: "2564"
-  examples: |
-    - def
-
-- synonym: "2567"
-  examples: |
-    - dhak
-
-- synonym: "2551"
-  examples: |
-    - dap
-
-- synonym: "2561"
-  examples: |
-    - davul
-
-- synonym: "2519"
-  examples: |
-    - burczybas
-
-- synonym: "2520"
-  examples: |
-    - cajon
-
-- synonym: "2516"
-  examples: |
-    - bonko
-
-- synonym: "2518"
-  examples: |
-    - buhai
-
-- synonym: "2526"
-  examples: |
-    - cholgo
-
-- synonym: "2527"
-  examples: |
-    - chunggo
-
-- synonym: "2521"
-  examples: |
-    - cenda
-
-- synonym: "2525"
-  examples: |
-    - chingo
-
-- synonym: "2603"
-  examples: |
-    - garawung
-
-- synonym: "2605"
-  examples: |
-    - gata-bere
-
-- synonym: "2600"
-  examples: |
-    - furitsuzumi
-
-- synonym: "2601"
-  examples: |
-    - gakudaiko
-
-- synonym: "2615"
-  examples: |
-    - herrazi
-
-- synonym: "2607"
-  examples: |
-    - gendang
-
-- synonym: "2609"
-  examples: |
-    - ghata
-
-- synonym: "2584"
-  examples: |
-    - donno
-
-- synonym: "2570"
-  examples: |
-    - dhimay
-
-- synonym: "2579"
-  examples: |
-    - djembe
-
-- synonym: "2597"
-  examples: |
-    - fodrahi
-
-- synonym: "2599"
-  examples: |
-    - tambour à friction
-
-- synonym: "2588"
-  examples: |
-    - duma
-
-- synonym: "2590"
-  examples: |
-    - dumbelek
-
-- synonym: "2642"
-  examples: |
-    - kalangu
-
-- synonym: "2646"
-  examples: |
-    - kalgo
-
-- synonym: "2636"
-  examples: |
-    - ka
-
-- synonym: "2641"
-  examples: |
-    - kakko
-
-- synonym: "2650"
-  examples: |
-    - kelei
-
-- synonym: "2653"
-  examples: |
-    - khanjari
-
-- synonym: "2647"
-  examples: |
-    - kamango
-
-- synonym: "2649"
-  examples: |
-    - kanjira
-
-- synonym: "2622"
-  examples: |
-    - huaigu
-
-- synonym: "2623"
-  examples: |
-    - huangnigu
-
-- synonym: "2620"
-  examples: |
-    - huagu
-
-- synonym: "2631"
-  examples: |
-    - huruk
-
-- synonym: "2632"
-  examples: |
-    - idakka
-
-- synonym: "2626"
-  examples: |
-    - hudko
-
-- synonym: "2627"
-  examples: |
-    - huolang gu
-
-- synonym: "2672"
-  examples: |
-    - milavu
-
-- synonym: "2674"
-  examples: |
-    - mokugyo
-
-- synonym: "2668"
-  examples: |
-    - luogu
-
-- synonym: "2671"
-  examples: |
-    - mbejn
-
-- synonym: "2679"
-  examples: |
-    - muyu
-
-- synonym: "2681"
-  examples: |
-    - nangara
-
-- synonym: "2675"
-  examples: |
-    - mokusho
-
-- synonym: "2676"
-  examples: |
-    - mrdanga
-
-- synonym: "2658"
-  examples: |
-    - kong
-
-- synonym: "2659"
-  examples: |
-    - kon'go
-
-- synonym: "2654"
-  examples: |
-    - khol
-
-- synonym: "2655"
-  examples: |
-    - kidi
-
-- synonym: "2665"
-  examples: |
-    - kyobanggo
-
-- synonym: "2666"
-  examples: |
-    - kyondo
-
-- synonym: "2661"
-  examples: |
-    - kotsuzumi
-
-- synonym: "2664"
-  examples: |
-    - kwelli
-
-- synonym: "2717"
-  examples: |
-    - rnga
-
-- synonym: "2718"
-  examples: |
-    - sabaro
-
-- synonym: "2708"
-  examples: |
-    - pu-ti-pu
-
-- synonym: "2710"
-  examples: |
-    - rammana
-
-- synonym: "2724"
-  examples: |
-    - sambhor
-
-- synonym: "2726"
-  examples: |
-    - sgar dham
-
-- synonym: "2720"
-  examples: |
-    - sakara
-
-- synonym: "2721"
-  examples: |
-    - sakko
-
-- synonym: "2698"
-  examples: |
-    - odaiko
-
-- synonym: "2700"
-  examples: |
-    - otsuzumi
-
-- synonym: "2689"
-  examples: |
-    - nkumvi
-
-- synonym: "2690"
-  examples: |
-    - nogo
-
-- synonym: "2706"
-  examples: |
-    - pandeiro
-
-- synonym: "2707"
-  examples: |
-    - puk
-
-- synonym: "2701"
-  examples: |
-    - o-zi
-
-- synonym: "2703"
-  examples: |
-    - pakhavaj
-
-- synonym: "2772"
-  examples: |
-    - thon
-
-- synonym: "2775"
-  examples: |
-    - timila
-
-- synonym: "2764"
-  examples: |
-    - tbel
-
-- synonym: "2770"
-  examples: |
-    - terbang
-
-- synonym: "2782"
-  examples: |
-    - tsuridaiko
-
-- synonym: "2779"
-  examples: |
-    - trong chau
-
-- synonym: "2741"
-  examples: |
-    - taiko
-
-- synonym: "2745"
-  examples: |
-    - tambourin de provence
-
-- synonym: "2732"
-  examples: |
-    - sogo
-
-- synonym: "2757"
-  examples: |
-    - taogu
-
-- synonym: "2759"
-  examples: |
-    - tapan
-
-- synonym: "2750"
-  examples: |
-    - tamburu
-
-- synonym: "2756"
-  examples: |
-    - tanggu
-
-- synonym: "2798"
-  examples: |
-    - yonggo
-
-- synonym: "2804"
-  examples: |
-    - zhangu
-
-- synonym: "2788"
-  examples: |
-    - uchiwadaiko
-
-- synonym: "2789"
-  examples: |
-    - udukku
-
-- synonym: "2784"
-  examples: |
-    - tumbadora
-
-- synonym: "2785"
-  examples: |
-    - tuntui
-
-- synonym: "2796"
-  examples: |
-    - yaogu
-
-- synonym: "2797"
-  examples: |
-    - yondo
-
-- synonym: "2791"
-  examples: |
-    - unggo
-
-- synonym: "2793"
-  examples: |
-    - tambour d'aisselle
-
-- synonym: "4855"
-  examples: |
-    - davandai
-
-- synonym: "4860"
-  examples: |
-    - dukkar
-
-- synonym: "4678"
-  examples: |
-    - bubanj
-
-- synonym: "4691"
-  examples: |
-    - tamboril
-
-- synonym: "4904"
-  examples: |
-    - rabaga
-
-- synonym: "4919"
-  examples: |
-    - bedug
-
-- synonym: "4917"
-  examples: |
-    - atumpan
-
-- synonym: "4886"
-  examples: |
-    - pirai
-
-- synonym: "4867"
-  examples: |
-    - halgi
-
-- synonym: "4947"
-  examples: |
-    - mo
-
-- synonym: "4970"
-  examples: |
-    - thod-rnga
-
-- synonym: "4971"
-  examples: |
-    - togo
-
-- synonym: "4950"
-  examples: |
-    - ntenga
-
-- synonym: "4931"
-  examples: |
-    - dogdog
-
-- synonym: "4928"
-  examples: |
-    - cununo
-
-- synonym: "4945"
-  examples: |
-    - madal
-
-- synonym: "5000"
-  examples: |
-    - henggelege
-
-- synonym: "5010"
-  examples: |
-    - san-no-tsuzumi
-
-- synonym: "4975"
-  examples: |
-    - waldteufel
-
-- synonym: "4994"
-  examples: |
-    - chaozhou-biangu
-
-- synonym: "5146"
-  examples: |
-    - audh
-
-- synonym: "5159"
-  examples: |
-    - brekete
-
-- synonym: "5162"
-  examples: |
-    - caixa
-
-- synonym: "5014"
-  examples: |
-    - tai ping gu
-
-- synonym: "5011"
-  examples: |
-    - shimedaiko
-
-- synonym: "5013"
-  examples: |
-    - shugu
-
-- synonym: "5142"
-  examples: |
-    - apentemma
-
-- synonym: "5145"
-  examples: |
-    - atamo
+    - sarrusophone
+    - sarrussophone
 
 - synonym: "5138"
   examples: |
-    - adedemma
+    - saxophones
+    - saxophoniste
 
-- synonym: "5201"
+- synonym: "3233"
   examples: |
-    - ese
+    - serpent forveille
+    - serpent droit
 
-- synonym: "5189"
+- synonym: "3245"
   examples: |
-    - fontomfrom
+    - semantron
+    - simandre
 
-- synonym: "5190"
+- synonym: "4555"
   examples: |
-    - dhimayca
+    - sitar
+    - sitariste
 
-- synonym: "5211"
+- synonym: "3237"
   examples: |
-    - genderang
+    - sonnaille
+    - sonnailles
 
-- synonym: "5215"
+- synonym: "4111"
   examples: |
-    - ghaval
+    - sordun
+    - sourdine
 
-- synonym: "5207"
+- synonym: "2235"
   examples: |
-    - gandang
+    - sordun basse
+    - sourdine basse
 
-- synonym: "5208"
+- synonym: "3285"
   examples: |
-    - geduk
+    - sordun contrebasse
+    - sourdine contrebasse
 
-- synonym: "5182"
+- synonym: "4171"
   examples: |
-    - dabadaba
+    - tambour métallique
+    - tambour d'acier
 
-- synonym: "5183"
+- synonym: "4211"
   examples: |
-    - daluka
+    - tambour
+    - tambour d'orchestre
 
-- synonym: "5187"
+- synonym: "3737"
   examples: |
-    - dhah
+    - tambourin à cordes
+    - tambour de béarn
 
-- synonym: "5188"
+- synonym: "4232"
   examples: |
-    - dohol
+    - tambour à fente
+    - tambour de bois
 
-- synonym: "5186"
+- synonym: "4532"
   examples: |
-    - debakan
+    - trong com
+    - tambour de riz
 
-- synonym: "5272"
+- synonym: "4838"
   examples: |
-    - kulanter
+    - tambour tonneau
+    - tambour en tonneau
 
-- synonym: "5279"
+- synonym: "3658"
   examples: |
-    - lalakhi
+    - tambour tonneau
+    - tambour en tonnelet
 
-- synonym: "5216"
+- synonym: "6036"
   examples: |
-    - gimbal
+    - tambour en gobelet
+    - tambour gobelet
 
-- synonym: "5217"
+- synonym: "3379"
   examples: |
-    - gondang
+    - tambour en sablier
+    - tambour sablier
 
-- synonym: "5255"
+- synonym: "2475"
   examples: |
-    - kelmas
+    - tambourin à cordes
+    - tambourin de béarn
 
-- synonym: "5258"
+- synonym: "6037"
   examples: |
-    - kete
+    - tambourin à cordes
+    - tambourin de gascogne
 
-- synonym: "5245"
+- synonym: "3662"
   examples: |
-    - kagan
+    - tar
+    - tar
 
-- synonym: "5318"
+- synonym: "3258"
   examples: |
-    - penten
+    - tar
+    - tar
 
-- synonym: "5319"
+- synonym: "2930"
   examples: |
-    - perng mang khok
+    - tulum
+    - touloum
 
-- synonym: "5311"
+- synonym: "2214"
   examples: |
-    - pat waing
-
-- synonym: "5312"
-  examples: |
-    - pati
-
-- synonym: "5292"
-  examples: |
-    - mgba
-
-- synonym: "5291"
-  examples: |
-    - medium
-
-- synonym: "5309"
-  examples: |
-    - pat
-
-- synonym: "5310"
-  examples: |
-    - pat mah
-
-- synonym: "5307"
-  examples: |
-    - pachima
-
-- synonym: "5410"
-  examples: |
-    - taphon
-
-- synonym: "5426"
-  examples: |
-    - kantamdabadaba
-
-- synonym: "5411"
-  examples: |
-    - atsimewu
-
-- synonym: "5416"
-  examples: |
-    - bofu
-
-- synonym: "5370"
-  examples: |
-    - tamborim
-
-- synonym: "5371"
-  examples: |
-    - tamale
-
-- synonym: "5362"
-  examples: |
-    - sulibao
-
-- synonym: "5363"
-  examples: |
-    - surdo
-
-- synonym: "5379"
-  examples: |
-    - tapon mon
-
-- synonym: "5380"
-  examples: |
-    - ukom
-
-- synonym: "5493"
-  examples: |
-    - tabla tarang
-
-- synonym: "5507"
-  examples: |
-    - kao-kao
-
-- synonym: "5510"
-  examples: |
-    - mokko
-
-- synonym: "5470"
-  examples: |
-    - kundu
-
-- synonym: "5442"
-  examples: |
-    - naykhim
-
-- synonym: "5459"
-  examples: |
-    - thod dam
-
-- synonym: "5480"
-  examples: |
-    - kroboto
-
-- synonym: "5481"
-  examples: |
-    - krobotzi
-
-- synonym: "5474"
-  examples: |
-    - conka
-
-- synonym: "5720"
-  examples: |
-    - tambour à tension variable
-
-- synonym: "5638"
-  examples: |
-    - mbonda
-
-- synonym: "5521"
-  examples: |
-    - zaogu
-
-- synonym: "6558"
-  examples: |
-    - tambour pincé
-
-- synonym: "6936"
-  examples: |
-    - aki
-
-- synonym: "6937"
-  examples: |
-    - akilwa
-
-- synonym: "6965"
-  examples: |
-    - gangât
-
-- synonym: "6967"
-  examples: |
-    - goilbi
-
-- synonym: "6957"
-  examples: |
-    - gangango
-
-- synonym: "6962"
-  examples: |
-    - gangari
-
-- synonym: "6971"
-  examples: |
-    - guagulu
-
-- synonym: "6974"
-  examples: |
-    - gubié
-
-- synonym: "6968"
-  examples: |
-    - gongon
-
-- synonym: "6970"
-  examples: |
-    - gouagnon
-
-- synonym: "6946"
-  examples: |
-    - biô
-
-- synonym: "6947"
-  examples: |
-    - dangossènè
-
-- synonym: "6942"
-  examples: |
-    - bendré
-
-- synonym: "6945"
-  examples: |
-    - bérenté
-
-- synonym: "6952"
-  examples: |
-    - dontoumon
-
-- synonym: "6954"
-  examples: |
-    - eguan
-
-- synonym: "6948"
-  examples: |
-    - dendene-sa
-
-- synonym: "6950"
-  examples: |
-    - djolon
-
-- synonym: "6990"
-  examples: |
-    - lunga
-
-- synonym: "6991"
-  examples: |
-    - minigé
-
-- synonym: "6987"
-  examples: |
-    - palandan
-
-- synonym: "6988"
-  examples: |
-    - lonlonga
-
-- synonym: "6992"
-  examples: |
-    - ndo
-
-- synonym: "6981"
-  examples: |
-    - gussiné bié
-
-- synonym: "6982"
-  examples: |
-    - youba
-
-- synonym: "6976"
-  examples: |
-    - gudolo
-
-- synonym: "6978"
-  examples: |
-    - gufalo
-
-- synonym: "6985"
-  examples: |
-    - téhindé
-
-- synonym: "6986"
-  examples: |
-    - rabingo
-
-- synonym: "6983"
-  examples: |
-    - tourou
-
-- synonym: "6984"
-  examples: |
-    - tondôrou
-
-- synonym: "2806"
-  examples: |
-    - gamelan
-
-- synonym: "2808"
-  examples: |
-    - bonang
-
-- synonym: "2809"
-  examples: |
-    - canh
-
-- synonym: "2853"
-  examples: |
-    - waniguchi
-
-- synonym: "2854"
-  examples: |
-    - yaoling
-
-- synonym: "2821"
-  examples: |
-    - gong ageng
-
-- synonym: "2825"
-  examples: |
-    - jengglong
-
-- synonym: "2816"
-  examples: |
-    - gan dham
-
-- synonym: "2818"
-  examples: |
-    - gan tuc
-
-- synonym: "2828"
-  examples: |
-    - kenong
-
-- synonym: "2829"
-  examples: |
-    - ketuk
-
-- synonym: "2826"
-  examples: |
-    - kasar
-
-- synonym: "2827"
-  examples: |
-    - kempul
-
-- synonym: "2814"
-  examples: |
-    - dan cong chien
-
-- synonym: "2815"
-  examples: |
-    - dora
-
-- synonym: "2811"
-  examples: |
-    - cong
-
-- synonym: "2813"
-  examples: |
-    - daluo
-
-- synonym: "2849"
-  examples: |
-    - tam am la
-
-- synonym: "2851"
-  examples: |
-    - thanh la
-
-- synonym: "2845"
-  examples: |
-    - soban
-
-- synonym: "2846"
-  examples: |
-    - talempong
-
-- synonym: "2856"
-  examples: |
-    - yunluo
-
-- synonym: "2859"
-  examples: |
-    - zhengluo
-
-- synonym: "2833"
-  examples: |
-    - kkwaenggwari
-
-- synonym: "2835"
-  examples: |
-    - kyi-waing
-
-- synonym: "2830"
-  examples: |
-    - khar-rnga
-
-- synonym: "2831"
-  examples: |
-    - khong mong
-
-- synonym: "2843"
-  examples: |
-    - nyo
-
-- synonym: "2844"
-  examples: |
-    - shoko
-
-- synonym: "2838"
-  examples: |
-    - luo
-
-- synonym: "2842"
-  examples: |
-    - matsumushi
-
-- synonym: "5512"
-  examples: |
-    - canang
-
-- synonym: "5490"
-  examples: |
-    - suwukan
-
-- synonym: "5511"
-  examples: |
-    - tawak
-
-- synonym: "5209"
-  examples: |
-    - gangsa
-
-- synonym: "5222"
-  examples: |
-    - goong
-
-- synonym: "4995"
-  examples: |
-    - dscheng
-
-- synonym: "5437"
-  examples: |
-    - maung-zaing
-
-- synonym: "5383"
-  examples: |
-    - trompong
-
-- synonym: "5479"
-  examples: |
-    - kemong
-
-- synonym: "5477"
-  examples: |
-    - jing
-
-- synonym: "5478"
-  examples: |
-    - kajar
-
-- synonym: "5253"
-  examples: |
-    - kempyang
-
-- synonym: "5254"
-  examples: |
-    - khong
-
-- synonym: "5251"
-  examples: |
-    - kelenang
-
-- synonym: "5252"
-  examples: |
-    - kempur
-
-- synonym: "5290"
-  examples: |
-    - maung
-
-- synonym: "6272"
-  examples: |
-    - bonang panerus
-
-- synonym: "6270"
-  examples: |
-    - bonang barung
-
-- synonym: "6271"
-  examples: |
-    - bonang panembung
-
-- synonym: "6800"
-  examples: |
-    - tanggunggu
-
-- synonym: "5285"
-  examples: |
-    - malamala
-
-- synonym: "5274"
-  examples: |
-    - kulingtang
-
-- synonym: "5327"
-  examples: |
-    - pong
-
-- synonym: "5199"
-  examples: |
-    - engkuk
-
-- synonym: "5200"
-  examples: |
-    - emong
-
-- synonym: "5212"
-  examples: |
-    - gendingan
-
-- synonym: "5421"
-  examples: |
-    - babendil
-
-- synonym: "5409"
-  examples: |
-    - khawng
-
-- synonym: "5502"
-  examples: |
-    - breng
-
-- synonym: "4575"
-  examples: |
-    - ayotl
-
-- synonym: "4813"
-  examples: |
-    - tamtam
-
-- synonym: "2837"
-  examples: |
-    - kyi-zi
-
-- synonym: "2865"
-  examples: |
-    - murcang
-
-- synonym: "2864"
-  examples: |
-    - guimbarde
-
-- synonym: "5265"
-  examples: |
-    - kubing
-
-- synonym: "2862"
-  examples: |
-    - dan moi
-
-- synonym: "2863"
-  examples: |
-    - genggong
-
-- synonym: "2869"
-  examples: |
-    - tong
-
-- synonym: "6143"
-  examples: |
-    - tombagl
-
-- synonym: "6306"
-  examples: |
-    - komuz
-
-- synonym: "6323"
-  examples: |
-    - susap
-
-- synonym: "6675"
-  examples: |
-    - mukkuri
-
-- synonym: "6793"
-  examples: |
-    - afiw
-
-- synonym: "6794"
-  examples: |
-    - kinaban
-
-- synonym: "5271"
-  examples: |
-    - kuding
-
-- synonym: "4939"
-  examples: |
-    - karinding
-
-- synonym: "5156"
-  examples: |
-    - bikong
-
-- synonym: "5170"
-  examples: |
-    - cheng
-
-- synonym: "4748"
-  examples: |
-    - kovïzh
-
-- synonym: "4749"
-  examples: |
-    - marranzanu
-
-- synonym: "4746"
-  examples: |
-    - drimba
-
-- synonym: "4747"
-  examples: |
-    - drymba
-
-- synonym: "2877"
-  examples: |
-    - châpeau chinois
-
-- synonym: "2872"
-  examples: |
-    - grelots hit-hat
-
-- synonym: "4751"
-  examples: |
-    - lozhky
-
-- synonym: "2873"
-  examples: |
-    - grelot
-
-- synonym: "2874"
-  examples: |
-    - nupur
-
-- synonym: "2871"
-  examples: |
-    - chimta
-
-- synonym: "2875"
-  examples: |
-    - suzu
-
-- synonym: "2880"
-  examples: |
-    - baya
-
-- synonym: "2882"
-  examples: |
-    - baz
-
-- synonym: "2899"
-  examples: |
-    - tabla
-
-- synonym: "2907"
-  examples: |
-    - tobol
-
-- synonym: "2893"
-  examples: |
-    - nacaires
-
-- synonym: "2894"
-  examples: |
-    - naqqara
-
-- synonym: "2910"
-  examples: |
-    - tubilattes
-
-- synonym: "4856"
-  examples: |
-    - dhanki
-
-- synonym: "4858"
-  examples: |
-    - timbale double
-
-- synonym: "4929"
-  examples: |
-    - daya
-
-- synonym: "2904"
-  examples: |
-    - tasa
-
-- synonym: "2906"
-  examples: |
-    - tikara
-
-- synonym: "2884"
-  examples: |
-    - damaha
-
-- synonym: "2885"
-  examples: |
-    - damau
-
-- synonym: "2900"
-  examples: |
-    - tablak
-
-- synonym: "2901"
-  examples: |
-    - tammatta
-
-- synonym: "2890"
-  examples: |
-    - khurdak
-
-- synonym: "2892"
-  examples: |
-    - nagara
-
-- synonym: "5223"
-  examples: |
-    - gosha naghara
-
-- synonym: "5277"
-  examples: |
-    - kvakhi
-
-- synonym: "5375"
-  examples: |
-    - tamva
-
-- synonym: "5339"
-  examples: |
-    - sangad
-
-- synonym: "5408"
-  examples: |
-    - bülkül
-
-- synonym: "4870"
-  examples: |
-    - jharidap
-
-- synonym: "4859"
-  examples: |
-    - duggi
-
-- synonym: "4854"
-  examples: |
-    - damama
-
-- synonym: "4853"
-  examples: |
-    - dagara
-
-- synonym: "4696"
-  examples: |
-    - tymbalon
-
-- synonym: "2913"
-  examples: |
-    - bantyu
-
-- synonym: "2916"
-  examples: |
-    - ikembe
-
-- synonym: "2921"
-  examples: |
-    - kakolondondo
-
-- synonym: "2923"
-  examples: |
-    - kalimba
-
-- synonym: "2918"
-  examples: |
-    - ilimba
-
-- synonym: "2919"
-  examples: |
-    - insimbi
-
-- synonym: "2935"
-  examples: |
-    - madaku
-
-- synonym: "2936"
-  examples: |
-    - madiumba
-
-- synonym: "2933"
-  examples: |
-    - likembe
-
-- synonym: "2940"
-  examples: |
-    - modeku
-
-- synonym: "2941"
-  examples: |
-    - myonga
-
-- synonym: "2939"
-  examples: |
-    - mbira
-
-- synonym: "2945"
-  examples: |
-    - timbrh
-
-- synonym: "2948"
-  examples: |
-    - tsimbi
-
-- synonym: "2915"
-  examples: |
-    - dikembe
-
-- synonym: "2920"
-  examples: |
-    - kadimba
-
-- synonym: "2929"
-  examples: |
-    - kyanya
-
-- synonym: "2938"
-  examples: |
-    - marimbula
-
-- synonym: "2925"
-  examples: |
-    - kankobela
-
-- synonym: "2927"
-  examples: |
-    - kisaanj
-
-- synonym: "2942"
-  examples: |
-    - sanza
-
-- synonym: "4839"
-  examples: |
-    - agbomboya
-
-- synonym: "5264"
-  examples: |
-    - kondi
-
-- synonym: "5418"
-  examples: |
-    - setinkane
-
-- synonym: "7058"
-  examples: |
-    - kone
-
-- synonym: "6642"
-  examples: |
-    - claviola
-
-- synonym: "2955"
-  examples: |
-    - p'yon'gyong
-
-- synonym: "2950"
-  examples: |
-    - bianqing
-
-- synonym: "2958"
-  examples: |
-    - qing
-
-- synonym: "2963"
-  examples: |
-    - t'ukkyong
-
-- synonym: "2966"
-  examples: |
-    - bar-chime
-
-- synonym: "2967"
-  examples: |
-    - glockenspiel de verre
-
-- synonym: "2973"
-  examples: |
-    - saron barung
-
-- synonym: "2974"
-  examples: |
-    - saron demung
-
-- synonym: "2970"
-  examples: |
-    - lyra glockenspiel
-
-- synonym: "2975"
-  examples: |
-    - saron panerus
-
-- synonym: "2984"
-  examples: |
-    - tubaphone
-
-- synonym: "4544"
-  examples: |
-    - enclume
-
-- synonym: "5346"
-  examples: |
-    - saron peking
-
-- synonym: "5347"
-  examples: |
-    - saron ricik
-
-- synonym: "5248"
-  examples: |
-    - kenyir
-
-- synonym: "5316"
-  examples: |
-    - penyacah
-
-- synonym: "2972"
-  examples: |
-    - panghyang
-
-- synonym: "2976"
-  examples: |
-    - slentem
-
-- synonym: "2969"
-  examples: |
-    - kane
-
-- synonym: "2971"
-  examples: |
-    - metallophone
-
-- synonym: "2983"
-  examples: |
-    - thali
-
-- synonym: "2977"
-  examples: |
-    - slento
-
-- synonym: "4906"
-  examples: |
-    - gender
-
-- synonym: "5766"
-  examples: |
-    - celesta
-
-- synonym: "6660"
-  examples: |
-    - harpeal
-
-- synonym: "6677"
-  examples: |
-    - ocleal
-
-- synonym: "6680"
-  examples: |
-    - orpheal
-
-- synonym: "5240"
-  examples: |
-    - jegogan
-
-- synonym: "5247"
-  examples: |
-    - kantilan
-
-- synonym: "5345"
-  examples: |
-    - saron
-
-- synonym: "5348"
-  examples: |
-    - saron slentem
-
-- synonym: "2998"
-  examples: |
-    - machine à pluie
-
-- synonym: "3005"
-  examples: |
-    - triangle
-
-- synonym: "2990"
-  examples: |
-    - flexatone
-
-- synonym: "2989"
-  examples: |
-    - claves
-
-- synonym: "6686"
-  examples: |
-    - idiophone frappé
-
-- synonym: "6784"
-  examples: |
-    - ch'uk
-
-- synonym: "6282"
-  examples: |
-    - duri dana
-
-- synonym: "6309"
-  examples: |
-    - launut
-
-- synonym: "6623"
-  examples: |
-    - percussion électronique
-
-- synonym: "4835"
-  examples: |
-    - marteau
-
-- synonym: "4836"
-  examples: |
-    - idiophone pincé
-
-- synonym: "4834"
-  examples: |
-    - distinette
-
-- synonym: "4876"
-  examples: |
-    - kashtha tarang
-
-- synonym: "4863"
-  examples: |
-    - ghari
-
-- synonym: "5659"
-  examples: |
-    - plaque sonore
-
-- synonym: "5853"
-  examples: |
-    - récipient percuté
-
-- synonym: "5385"
-  examples: |
-    - tintinca
-
-- synonym: "5297"
-  examples: |
-    - mugu
-
-- synonym: "5298"
-  examples: |
-    - ndingo
-
-- synonym: "5315"
-  examples: |
-    - pattung
+    - théorbe
+    - théorbiste
 
 - synonym: "5152"
   examples: |
-    - bantula
+    - trombones
+    - tromboniste
 
-- synonym: "5149"
+- synonym: "2504"
   examples: |
-    - balingbing
+    - vibraphone
+    - vibraphoniste
 
-- synonym: "5150"
+- synonym: "3099"
   examples: |
-    - bangibang
+    - tuba
+    - tubiste
 
-- synonym: "5505"
+- synonym: "3394"
   examples: |
-    - selokkat
+    - upic
+    - unité polyagogique informatique du cemamu
 
-- synonym: "5472"
+- synonym: "3493"
   examples: |
-    - bukhsa
+    - vase à percussion
+    - vase acoustique
 
-- synonym: "5250"
+- synonym: "3510"
   examples: |
-    - kasuk
+    - vièle monocorde
+    - vièle à une corde
 
-- synonym: "5226"
+- synonym: "3808"
   examples: |
-    - gumanak
+    - violoncelle
+    - violoncelliste
 
-- synonym: "5230"
+- synonym: "2302"
   examples: |
-    - hsaing-waing
+    - violon
+    - violoniste
 
-- synonym: "4972"
+- synonym: "2359"
   examples: |
-    - toa
+    - virginale
+    - virginaliste
 
-- synonym: "4960"
+- synonym: "4493"
   examples: |
-    - quitiplas
+    - washint
+    - washint
 
-- synonym: "2991"
+- synonym: "5769"
   examples: |
-    - bâton à percussion
+    - xeremia
+    - xeremia
 
-- synonym: "2995"
+- synonym: "2216"
   examples: |
-    - pi phat
+    - xylophone
+    - xylophoniste
 
-- synonym: "3006"
+- synonym: "3476"
   examples: |
-    - txalaparta
+    - zamr
+    - zamr
 
-- synonym: "3008"
+- synonym: "3586"
   examples: |
-    - zhu
+    - zamr
+    - zamr
 
-- synonym: "3003"
+- synonym: "2370"
   examples: |
-    - shantu
+    - zang
+    - zang
 
-- synonym: "3004"
+- synonym: "2253"
   examples: |
-    - tavoletta
+    - eléments d'instruments de musique
 
-- synonym: "2997"
+- synonym: "2265"
   examples: |
-    - pinpeat
+    - archets
 
-- synonym: "4926"
+- synonym: "2270"
   examples: |
-    - cricri
+    - archet
 
-- synonym: "3011"
+- synonym: "2252"
   examples: |
-    - crécelle
+    - instruments électroniques
 
-- synonym: "6695"
+- synonym: "2271"
   examples: |
-    - hochet globulaire
+    - electroniques
 
-- synonym: "6676"
+- synonym: "2287"
   examples: |
-    - nhac
+    - boite à rythmes
 
-- synonym: "6827"
+- synonym: "2279"
   examples: |
-    - bâton de pluie
+    - clavioline
 
-- synonym: "6798"
+- synonym: "2289"
   examples: |
-    - hochet sur bâton
+    - gmebaphone
 
-- synonym: "6634"
+- synonym: "2285"
   examples: |
-    - cabaca
+    - gmebogosse
 
-- synonym: "6281"
+- synonym: "2286"
   examples: |
-    - cimta
+    - heliophon
 
-- synonym: "6142"
+- synonym: "2277"
   examples: |
-    - rangle
+    - mellotron
 
-- synonym: "6266"
+- synonym: "2297"
   examples: |
-    - arbu
+    - instrument midi
 
-- synonym: "6321"
+- synonym: "2274"
   examples: |
-    - rin-no-tama
+    - ondioline
 
-- synonym: "6307"
+- synonym: "2298"
   examples: |
-    - kulu
+    - pianoline
 
-- synonym: "3045"
+- synonym: "2293"
   examples: |
-    - taga
+    - sackbut
 
-- synonym: "3046"
+- synonym: "2296"
   examples: |
-    - wasamba
+    - sampler
 
-- synonym: "3041"
+- synonym: "2291"
   examples: |
-    - sesheh
+    - solovox
 
-- synonym: "3043"
+- synonym: "2292"
   examples: |
-    - swanga
+    - telharmonium
 
-- synonym: "3019"
+- synonym: "2275"
   examples: |
-    - azibwazi
+    - theremin
 
-- synonym: "3015"
+- synonym: "2272"
   examples: |
-    - assa muta chati
+    - trautonium
 
-- synonym: "3017"
+- synonym: "2290"
   examples: |
-    - atamo
+    - violon midi
 
-- synonym: "3013"
+- synonym: "2250"
   examples: |
-    - angklung
+    - instruments à clavier
 
-- synonym: "3014"
+- synonym: "2310"
   examples: |
-    - anzona
+    - clavicordes
 
-- synonym: "3037"
+- synonym: "2320"
   examples: |
-    - sanasel
+    - clavicorde
 
-- synonym: "3038"
+- synonym: "2319"
   examples: |
-    - sekere
+    - harmoniums
 
-- synonym: "3034"
+- synonym: "2347"
   examples: |
-    - qachel
+    - harmonicorde
 
-- synonym: "3036"
+- synonym: "2348"
   examples: |
-    - hochet
+    - poikilorgue
 
-- synonym: "3030"
+- synonym: "2358"
   examples: |
-    - legwegwe
+    - régale
 
-- synonym: "3031"
+- synonym: "2308"
   examples: |
-    - maracas
+    - clavecins
+
+- synonym: "2378"
+  examples: |
+    - arpicordo
+
+- synonym: "2362"
+  examples: |
+    - clavecin brisé
+
+- synonym: "2377"
+  examples: |
+    - clavecin oculaire
+
+- synonym: "2373"
+  examples: |
+    - clavecin organisé
+
+- synonym: "2376"
+  examples: |
+    - clavecin numérique
+
+- synonym: "2371"
+  examples: |
+    - clavecin électrique
+
+- synonym: "2372"
+  examples: |
+    - clavecin à maillets
+
+- synonym: "2368"
+  examples: |
+    - clavecin-luth
+
+- synonym: "2369"
+  examples: |
+    - muselaar
+
+- synonym: "2361"
+  examples: |
+    - epinette
+
+- synonym: "2381"
+  examples: |
+    - piano mécanique
+
+- synonym: "2318"
+  examples: |
+    - orgues
+
+- synonym: "2395"
+  examples: |
+    - orgue éolien
+
+- synonym: "2397"
+  examples: |
+    - orgue portatif
+
+- synonym: "2240"
+  examples: |
+    - orgue positif
+
+- synonym: "2399"
+  examples: |
+    - pyrophone
+
+- synonym: "2306"
+  examples: |
+    - autres
+
+- synonym: "2407"
+  examples: |
+    - archiquier
+
+- synonym: "2406"
+  examples: |
+    - lyricorde
+
+- synonym: "2454"
+  examples: |
+    - piano automatique
+
+- synonym: "2460"
+  examples: |
+    - piano cabinet
+
+- synonym: "2443"
+  examples: |
+    - claviharpe
+
+- synonym: "2444"
+  examples: |
+    - clavi-lame
+
+- synonym: "2436"
+  examples: |
+    - piano console
+
+- synonym: "2442"
+  examples: |
+    - piano numérique
+
+- synonym: "2451"
+  examples: |
+    - piano électrique
+
+- synonym: "2452"
+  examples: |
+    - euphonicon
+
+- synonym: "2445"
+  examples: |
+    - piano girafe
+
+- synonym: "2411"
+  examples: |
+    - piano à queue
+
+- synonym: "2447"
+  examples: |
+    - lutheal
+
+- synonym: "2428"
+  examples: |
+    - piano lyre
+
+- synonym: "2430"
+  examples: |
+    - melopiano
+
+- synonym: "2426"
+  examples: |
+    - piano orgue
+
+- synonym: "2427"
+  examples: |
+    - orphica
+
+- synonym: "2434"
+  examples: |
+    - pianet
+
+- synonym: "2435"
+  examples: |
+    - pianino
+
+- synonym: "2413"
+  examples: |
+    - piano à pédalier
+
+- synonym: "2433"
+  examples: |
+    - piano éolien
+
+- synonym: "2417"
+  examples: |
+    - piano organisé
+
+- synonym: "2420"
+  examples: |
+    - piano table
+
+- synonym: "2425"
+  examples: |
+    - piano-guitare
+
+- synonym: "2423"
+  examples: |
+    - piano pyramidal
+
+- synonym: "2415"
+  examples: |
+    - piano carré
+
+- synonym: "2424"
+  examples: |
+    - piano à tangentes
+
+- synonym: "2416"
+  examples: |
+    - piano droit
+
+- synonym: "2478"
+  examples: |
+    - buchla
+
+- synonym: "2476"
+  examples: |
+    - orgue électrique
+
+- synonym: "2472"
+  examples: |
+    - synclavier
+
+- synonym: "2419"
+  examples: |
+    - synthétiseur
+
+- synonym: "2249"
+  examples: |
+    - mirlitons
+
+- synonym: "2479"
+  examples: |
+    - mirlitons
+
+- synonym: "2484"
+  examples: |
+    - flûte eunuque
+
+- synonym: "2487"
+  examples: |
+    - kazoo
+
+- synonym: "2480"
+  examples: |
+    - mirliton
+
+- synonym: "2482"
+  examples: |
+    - nyastaranga
+
+- synonym: "2246"
+  examples: |
+    - autres instruments
+
+- synonym: "2488"
+  examples: |
+    - autres
+
+- synonym: "2492"
+  examples: |
+    - cristal baschet
+
+- synonym: "2508"
+  examples: |
+    - glace-chord
+
+- synonym: "2493"
+  examples: |
+    - jaltarang
+
+- synonym: "2489"
+  examples: |
+    - mattauphone
+
+- synonym: "2490"
+  examples: |
+    - glass harmonica
+
+- synonym: "2507"
+  examples: |
+    - scie musicale
+
+- synonym: "2494"
+  examples: |
+    - violon de fer
+
+- synonym: "2536"
+  examples: |
+    - cloches
+
+- synonym: "2590"
+  examples: |
+    - abanangbweli
+
+- synonym: "2652"
+  examples: |
+    - agogo
+
+- synonym: "2586"
+  examples: |
+    - ambassa
+
+- synonym: "2588"
+  examples: |
+    - aporo
+
+- synonym: "2649"
+  examples: |
+    - banka
+
+- synonym: "2581"
+  examples: |
+    - cloche
+
+- synonym: "2650"
+  examples: |
+    - pien-chung
+
+- synonym: "2584"
+  examples: |
+    - bozhong
+
+- synonym: "2646"
+  examples: |
+    - cencerro
+
+- synonym: "2570"
+  examples: |
+    - dibu
+
+- synonym: "2564"
+  examples: |
+    - dibu dinganga
+
+- synonym: "2647"
+  examples: |
+    - dotaku
+
+- synonym: "2641"
+  examples: |
+    - dril-bu
+
+- synonym: "2642"
+  examples: |
+    - ekiro
+
+- synonym: "2636"
+  examples: |
+    - ghanta
+
+- synonym: "2640"
+  examples: |
+    - clochette
+
+- synonym: "2631"
+  examples: |
+    - hansho
+
+- synonym: "2567"
+  examples: |
+    - kili
+
+- synonym: "2554"
+  examples: |
+    - kin
+
+- synonym: "2632"
+  examples: |
+    - lawle
+
+- synonym: "2561"
+  examples: |
+    - mbombu
+
+- synonym: "2665"
+  examples: |
+    - nzoro
+
+- synonym: "2626"
+  examples: |
+    - p'yonjong
+
+- synonym: "2551"
+  examples: |
+    - clochette de traîneau
+
+- synonym: "2552"
+  examples: |
+    - cloche tubulaire
+
+- synonym: "2627"
+  examples: |
+    - t'ukchong
+
+- synonym: "2617"
+  examples: |
+    - castagnettes
+
+- synonym: "2666"
+  examples: |
+    - cap ke
+
+- synonym: "2668"
+  examples: |
+    - castagnettes
+
+- synonym: "2520"
+  examples: |
+    - claquettes
+
+- synonym: "2678"
+  examples: |
+    - bones
+
+- synonym: "2675"
+  examples: |
+    - claquettes
+
+- synonym: "2700"
+  examples: |
+    - claquoir
+
+- synonym: "2676"
+  examples: |
+    - gandi
+
+- synonym: "2674"
+  examples: |
+    - paiban
+
+- synonym: "2697"
+  examples: |
+    - pak
+
+- synonym: "2698"
+  examples: |
+    - scabellum
+
+- synonym: "2690"
+  examples: |
+    - shakubyoshi
+
+- synonym: "2672"
+  examples: |
+    - shkashek
+
+- synonym: "2688"
+  examples: |
+    - toka
+
+- synonym: "2689"
+  examples: |
+    - walet-hkok
+
+- synonym: "2673"
+  examples: |
+    - fouet
+
+- synonym: "2682"
+  examples: |
+    - yotsudake
+
+- synonym: "2687"
+  examples: |
+    - zhong
+
+- synonym: "2515"
+  examples: |
+    - cymbales
+
+- synonym: "2757"
+  examples: |
+    - bo
+
+- synonym: "2752"
+  examples: |
+    - chabara
+
+- synonym: "2756"
+  examples: |
+    - chap
+
+- synonym: "2746"
+  examples: |
+    - cymbale choke
+
+- synonym: "2770"
+  examples: |
+    - chum choe
+
+- synonym: "2750"
+  examples: |
+    - cymbale crash
+
+- synonym: "2745"
+  examples: |
+    - cymbales
+
+- synonym: "2769"
+  examples: |
+    - dobatsu
+
+- synonym: "2743"
+  examples: |
+    - kasat
+
+- synonym: "2766"
+  examples: |
+    - manjira
+
+- synonym: "2768"
+  examples: |
+    - rol-mo
+
+- synonym: "2744"
+  examples: |
+    - sajat
+
+- synonym: "2762"
+  examples: |
+    - sanj
+
+- synonym: "2764"
+  examples: |
+    - sbub-chal
+
+- synonym: "2775"
+  examples: |
+    - sil-snyan
+
+- synonym: "2738"
+  examples: |
+    - cymbale sizzle
+
+- synonym: "2741"
+  examples: |
+    - cymbale sock
+
+- synonym: "2777"
+  examples: |
+    - ting-ting-shags
+
+- synonym: "2772"
+  examples: |
+    - zil
+
+- synonym: "2535"
+  examples: |
+    - tambours
 
 - synonym: "3021"
   examples: |
-    - ga
+    - adufe
 
 - synonym: "3022"
   examples: |
+    - agual
+
+- synonym: "2809"
+  examples: |
+    - bajiao gu
+
+- synonym: "2811"
+  examples: |
+    - ban
+
+- synonym: "2814"
+  examples: |
+    - bangu
+
+- synonym: "2257"
+  examples: |
+    - grosse caisse
+
+- synonym: "2813"
+  examples: |
+    - bata
+
+- synonym: "2799"
+  examples: |
+    - bendir
+
+- synonym: "3017"
+  examples: |
+    - bodhran
+
+- synonym: "3019"
+  examples: |
+    - bongos
+
+- synonym: "3038"
+  examples: |
+    - bonko
+
+- synonym: "2804"
+  examples: |
+    - tambour de bronze
+
+- synonym: "3041"
+  examples: |
+    - buhai
+
+- synonym: "3036"
+  examples: |
+    - burczybas
+
+- synonym: "3037"
+  examples: |
+    - cajon
+
+- synonym: "3045"
+  examples: |
+    - cenda
+
+- synonym: "2797"
+  examples: |
+    - changgo
+
+- synonym: "3046"
+  examples: |
+    - chingo
+
+- synonym: "3042"
+  examples: |
+    - cholgo
+
+- synonym: "3043"
+  examples: |
+    - chunggo
+
+- synonym: "3030"
+  examples: |
+    - chwago
+
+- synonym: "3023"
+  examples: |
+    - tambour conique
+
+- synonym: "2798"
+  examples: |
+    - tambour cylindrique
+
+- synonym: "2807"
+  examples: |
+    - daf
+
+- synonym: "3025"
+  examples: |
+    - dagu
+
+- synonym: "2808"
+  examples: |
+    - daire
+
+- synonym: "2805"
+  examples: |
+    - damaru
+
+- synonym: "3033"
+  examples: |
+    - dap
+
+- synonym: "2806"
+  examples: |
+    - daph
+
+- synonym: "2830"
+  examples: |
+    - darabukka
+
+- synonym: "3034"
+  examples: |
+    - davul
+
+- synonym: "3031"
+  examples: |
+    - def
+
+- synonym: "3032"
+  examples: |
+    - dhak
+
+- synonym: "3058"
+  examples: |
+    - dhimay
+
+- synonym: "2831"
+  examples: |
+    - dhol
+
+- synonym: "2828"
+  examples: |
+    - dholak
+
+- synonym: "2829"
+  examples: |
+    - djoungdjoung
+
+- synonym: "3057"
+  examples: |
+    - donno
+
+- synonym: "2837"
+  examples: |
+    - duff
+
+- synonym: "3067"
+  examples: |
+    - duma
+
+- synonym: "3070"
+  examples: |
+    - dumbelek
+
+- synonym: "2838"
+  examples: |
+    - ekole
+
+- synonym: "2833"
+  examples: |
+    - engalabi
+
+- synonym: "3061"
+  examples: |
+    - fodrahi
+
+- synonym: "2835"
+  examples: |
+    - tambour sur cadre
+
+- synonym: "3062"
+  examples: |
+    - tambour à friction
+
+- synonym: "3050"
+  examples: |
+    - furitsuzumi
+
+- synonym: "3052"
+  examples: |
+    - gakudaiko
+
+- synonym: "2818"
+  examples: |
+    - ganga
+
+- synonym: "3047"
+  examples: |
+    - garawung
+
+- synonym: "3048"
+  examples: |
+    - gata-bere
+
+- synonym: "2820"
+  examples: |
+    - gaza
+
+- synonym: "3055"
+  examples: |
+    - gendang
+
+- synonym: "3056"
+  examples: |
+    - ghata
+
+- synonym: "2815"
+  examples: |
+    - glaw ng yao
+
+- synonym: "2816"
+  examples: |
+    - go
+
+- synonym: "3054"
+  examples: |
+    - herrazi
+
+- synonym: "3092"
+  examples: |
+    - huagu
+
+- synonym: "3087"
+  examples: |
+    - huaigu
+
+- synonym: "3088"
+  examples: |
+    - huangnigu
+
+- synonym: "3102"
+  examples: |
+    - hudko
+
+- synonym: "3103"
+  examples: |
+    - huolang gu
+
+- synonym: "3100"
+  examples: |
+    - huruk
+
+- synonym: "3101"
+  examples: |
+    - idakka
+
+- synonym: "3073"
+  examples: |
+    - ka
+
+- synonym: "2826"
+  examples: |
+    - kabaro
+
+- synonym: "3075"
+  examples: |
+    - kakko
+
+- synonym: "3071"
+  examples: |
+    - kalangu
+
+- synonym: "3072"
+  examples: |
+    - kalgo
+
+- synonym: "3080"
+  examples: |
+    - kamango
+
+- synonym: "3082"
+  examples: |
+    - kanjira
+
+- synonym: "3076"
+  examples: |
+    - kelei
+
+- synonym: "2827"
+  examples: |
+    - kendang
+
+- synonym: "3078"
+  examples: |
+    - khanjari
+
+- synonym: "3117"
+  examples: |
+    - khol
+
+- synonym: "3120"
+  examples: |
+    - kidi
+
+- synonym: "2821"
+  examples: |
+    - kiringi
+
+- synonym: "3114"
+  examples: |
+    - kong
+
+- synonym: "3115"
+  examples: |
+    - kon'go
+
+- synonym: "3123"
+  examples: |
+    - kotsuzumi
+
+- synonym: "3125"
+  examples: |
+    - kwelli
+
+- synonym: "3121"
+  examples: |
+    - kyobanggo
+
+- synonym: "3122"
+  examples: |
+    - kyondo
+
+- synonym: "3106"
+  examples: |
+    - luogu
+
+- synonym: "2825"
+  examples: |
+    - mazhar
+
+- synonym: "3107"
+  examples: |
+    - mbejn
+
+- synonym: "3104"
+  examples: |
+    - milavu
+
+- synonym: "2853"
+  examples: |
+    - mokita
+
+- synonym: "3105"
+  examples: |
+    - mokugyo
+
+- synonym: "3112"
+  examples: |
+    - mokusho
+
+- synonym: "3113"
+  examples: |
+    - mrdanga
+
+- synonym: "2854"
+  examples: |
+    - mukupiela
+
+- synonym: "3108"
+  examples: |
+    - muyu
+
+- synonym: "3109"
+  examples: |
+    - nangara
+
+- synonym: "2851"
+  examples: |
+    - ngoma
+
+- synonym: "2548"
+  examples: |
+    - ngonge
+
+- synonym: "2861"
+  examples: |
+    - nkoko
+
+- synonym: "3145"
+  examples: |
+    - nkumvi
+
+- synonym: "3148"
+  examples: |
+    - nogo
+
+- synonym: "2862"
+  examples: |
+    - nonga
+
+- synonym: "3142"
+  examples: |
+    - odaiko
+
+- synonym: "3143"
+  examples: |
+    - otsuzumi
+
+- synonym: "3154"
+  examples: |
+    - o-zi
+
+- synonym: "3156"
+  examples: |
+    - pakhavaj
+
+- synonym: "2856"
+  examples: |
+    - pambai
+
+- synonym: "3150"
+  examples: |
+    - pandeiro
+
+- synonym: "3151"
+  examples: |
+    - puk
+
+- synonym: "3128"
+  examples: |
+    - pu-ti-pu
+
+- synonym: "3131"
+  examples: |
+    - rammana
+
+- synonym: "2859"
+  examples: |
+    - redap
+
+- synonym: "2842"
+  examples: |
+    - riqq
+
+- synonym: "3126"
+  examples: |
+    - rnga
+
+- synonym: "3127"
+  examples: |
+    - sabaro
+
+- synonym: "3139"
+  examples: |
+    - sakara
+
+- synonym: "3140"
+  examples: |
+    - sakko
+
+- synonym: "3132"
+  examples: |
+    - sambhor
+
+- synonym: "3134"
+  examples: |
+    - sgar dham
+
+- synonym: "2843"
+  examples: |
+    - shagu
+
+- synonym: "3181"
+  examples: |
+    - sogo
+
+- synonym: "2846"
+  examples: |
+    - tabl
+
+- synonym: "3178"
+  examples: |
+    - taiko
+
+- synonym: "2849"
+  examples: |
+    - tama
+
+- synonym: "2844"
+  examples: |
+    - tambora
+
+- synonym: "3180"
+  examples: |
+    - tambourin de provence
+
+- synonym: "2845"
+  examples: |
+    - tambourin
+
+- synonym: "3186"
+  examples: |
+    - tamburu
+
+- synonym: "2871"
+  examples: |
+    - tambour sur fût
+
+- synonym: "3188"
+  examples: |
+    - tanggu
+
+- synonym: "3183"
+  examples: |
+    - taogu
+
+- synonym: "3185"
+  examples: |
+    - tapan
+
+- synonym: "2869"
+  examples: |
+    - tarol
+
+- synonym: "3166"
+  examples: |
+    - tbel
+
+- synonym: "2870"
+  examples: |
+    - tebashul
+
+- synonym: "2874"
+  examples: |
+    - temple block
+
+- synonym: "2875"
+  examples: |
+    - caisse roulante
+
+- synonym: "3169"
+  examples: |
+    - terbang
+
+- synonym: "3158"
+  examples: |
+    - thon
+
+- synonym: "3162"
+  examples: |
+    - timila
+
+- synonym: "2872"
+  examples: |
+    - tomba
+
+- synonym: "3177"
+  examples: |
+    - trong chau
+
+- synonym: "3175"
+  examples: |
+    - tsuridaiko
+
+- synonym: "2239"
+  examples: |
+    - tumba
+
+- synonym: "3203"
+  examples: |
+    - tumbadora
+
+- synonym: "3204"
+  examples: |
+    - tuntui
+
+- synonym: "2873"
+  examples: |
+    - tyepondo-pinge
+
+- synonym: "3200"
+  examples: |
+    - uchiwadaiko
+
+- synonym: "3202"
+  examples: |
+    - udukku
+
+- synonym: "2864"
+  examples: |
+    - uganda drum
+
+- synonym: "3214"
+  examples: |
+    - unggo
+
+- synonym: "3216"
+  examples: |
+    - tambour d'aisselle
+
+- synonym: "2865"
+  examples: |
+    - wankara
+
+- synonym: "3207"
+  examples: |
+    - yaogu
+
+- synonym: "3211"
+  examples: |
+    - yondo
+
+- synonym: "3193"
+  examples: |
+    - yonggo
+
+- synonym: "2863"
+  examples: |
+    - zarb
+
+- synonym: "3195"
+  examples: |
+    - zhangu
+
+- synonym: "2524"
+  examples: |
+    - gamelan
+
+- synonym: "3406"
+  examples: |
+    - gamelan
+
+- synonym: "2519"
+  examples: |
+    - gongs
+
+- synonym: "3408"
+  examples: |
+    - bonang
+
+- synonym: "3409"
+  examples: |
+    - canh
+
+- synonym: "3443"
+  examples: |
+    - cong
+
+- synonym: "3444"
+  examples: |
+    - daluo
+
+- synonym: "3440"
+  examples: |
+    - dan cong chien
+
+- synonym: "3441"
+  examples: |
+    - dora
+
+- synonym: "3421"
+  examples: |
+    - gan dham
+
+- synonym: "3433"
+  examples: |
+    - gan tuc
+
+- synonym: "4672"
+  examples: |
+    - gong
+
+- synonym: "3413"
+  examples: |
+    - gong ageng
+
+- synonym: "3415"
+  examples: |
+    - jengglong
+
+- synonym: "3436"
+  examples: |
+    - kasar
+
+- synonym: "3439"
+  examples: |
+    - kempul
+
+- synonym: "3434"
+  examples: |
+    - kenong
+
+- synonym: "3435"
+  examples: |
+    - ketuk
+
+- synonym: "3469"
+  examples: |
+    - khar-rnga
+
+- synonym: "3475"
+  examples: |
+    - khong mong
+
+- synonym: "3461"
+  examples: |
+    - kkwaenggwari
+
+- synonym: "3466"
+  examples: |
+    - kyi-waing
+
+- synonym: "3539"
+  examples: |
+    - kyi-zi
+
+- synonym: "3487"
+  examples: |
+    - luo
+
+- synonym: "3489"
+  examples: |
+    - matsumushi
+
+- synonym: "3482"
+  examples: |
+    - nyo
+
+- synonym: "3486"
+  examples: |
+    - shoko
+
+- synonym: "3454"
+  examples: |
+    - soban
+
+- synonym: "3457"
+  examples: |
+    - talempong
+
+- synonym: "3450"
+  examples: |
+    - tam am la
+
+- synonym: "3451"
+  examples: |
+    - thanh la
+
+- synonym: "3411"
+  examples: |
+    - waniguchi
+
+- synonym: "3412"
+  examples: |
+    - yaoling
+
+- synonym: "3458"
+  examples: |
+    - yunluo
+
+- synonym: "3460"
+  examples: |
+    - zhengluo
+
+- synonym: "2517"
+  examples: |
+    - guimbardes
+
+- synonym: "3545"
+  examples: |
+    - dan moi
+
+- synonym: "3546"
+  examples: |
+    - genggong
+
+- synonym: "3541"
+  examples: |
+    - guimbarde
+
+- synonym: "3540"
+  examples: |
+    - murcang
+
+- synonym: "3551"
+  examples: |
+    - tong
+
+- synonym: "2533"
+  examples: |
+    - grelots
+
+- synonym: "3578"
+  examples: |
+    - chimta
+
+- synonym: "3574"
+  examples: |
+    - grelots hit-hat
+
+- synonym: "3576"
+  examples: |
+    - grelot
+
+- synonym: "3577"
+  examples: |
+    - nupur
+
+- synonym: "3580"
+  examples: |
+    - suzu
+
+- synonym: "3572"
+  examples: |
+    - châpeau chinois
+
+- synonym: "2518"
+  examples: |
+    - timbales
+
+- synonym: "3584"
+  examples: |
+    - baya
+
+- synonym: "3585"
+  examples: |
+    - baz
+
+- synonym: "3610"
+  examples: |
+    - damaha
+
+- synonym: "3612"
+  examples: |
+    - damau
+
+- synonym: "3615"
+  examples: |
+    - khurdak
+
+- synonym: "3616"
+  examples: |
+    - nagara
+
+- synonym: "3591"
+  examples: |
+    - nacaires
+
+- synonym: "3594"
+  examples: |
+    - naqqara
+
+- synonym: "3588"
+  examples: |
+    - tabla
+
+- synonym: "3613"
+  examples: |
+    - tablak
+
+- synonym: "3614"
+  examples: |
+    - tammatta
+
+- synonym: "3608"
+  examples: |
+    - tasa
+
+- synonym: "3609"
+  examples: |
+    - tikara
+
+- synonym: "3589"
+  examples: |
+    - tobol
+
+- synonym: "3598"
+  examples: |
+    - tubilattes
+
+- synonym: "2516"
+  examples: |
+    - lamellophones
+
+- synonym: "3643"
+  examples: |
+    - bantyu
+
+- synonym: "3664"
+  examples: |
+    - dikembe
+
+- synonym: "3644"
+  examples: |
+    - ikembe
+
+- synonym: "3648"
+  examples: |
+    - ilimba
+
+- synonym: "3649"
+  examples: |
+    - insimbi
+
+- synonym: "3665"
+  examples: |
+    - kadimba
+
+- synonym: "3645"
+  examples: |
+    - kakolondondo
+
+- synonym: "3646"
+  examples: |
+    - kalimba
+
+- synonym: "3673"
+  examples: |
+    - kankobela
+
+- synonym: "3674"
+  examples: |
+    - kisaanj
+
+- synonym: "3666"
+  examples: |
+    - kyanya
+
+- synonym: "3654"
+  examples: |
+    - likembe
+
+- synonym: "3650"
+  examples: |
+    - madaku
+
+- synonym: "3652"
+  examples: |
+    - madiumba
+
+- synonym: "3668"
+  examples: |
+    - marimbula
+
+- synonym: "3660"
+  examples: |
+    - mbira
+
+- synonym: "3656"
+  examples: |
+    - modeku
+
+- synonym: "3659"
+  examples: |
+    - myonga
+
+- synonym: "3676"
+  examples: |
+    - sanza
+
+- synonym: "3661"
+  examples: |
+    - timbrh
+
+- synonym: "3663"
+  examples: |
+    - tsimbi
+
+- synonym: "2525"
+  examples: |
+    - lithophones
+
+- synonym: "3694"
+  examples: |
+    - bianqing
+
+- synonym: "3693"
+  examples: |
+    - p'yon'gyong
+
+- synonym: "3695"
+  examples: |
+    - qing
+
+- synonym: "3697"
+  examples: |
+    - t'ukkyong
+
+- synonym: "2528"
+  examples: |
+    - métallophones
+
+- synonym: "3699"
+  examples: |
+    - bar-chime
+
+- synonym: "3700"
+  examples: |
+    - glockenspiel de verre
+
+- synonym: "2612"
+  examples: |
+    - glockenspiel
+
+- synonym: "3731"
+  examples: |
+    - kane
+
+- synonym: "3706"
+  examples: |
+    - lyra glockenspiel
+
+- synonym: "3734"
+  examples: |
+    - metallophone
+
+- synonym: "3724"
+  examples: |
+    - panghyang
+
+- synonym: "3702"
+  examples: |
+    - saron barung
+
+- synonym: "3705"
+  examples: |
+    - saron demung
+
+- synonym: "3708"
+  examples: |
+    - saron panerus
+
+- synonym: "3730"
+  examples: |
+    - slentem
+
+- synonym: "3736"
+  examples: |
+    - slento
+
+- synonym: "3735"
+  examples: |
+    - thali
+
+- synonym: "3710"
+  examples: |
+    - tubaphone
+
+- synonym: "2526"
+  examples: |
+    - autres
+
+- synonym: "3765"
+  examples: |
+    - claves
+
+- synonym: "3761"
+  examples: |
+    - flexatone
+
+- synonym: "3817"
+  examples: |
+    - bâton à percussion
+
+- synonym: "3818"
+  examples: |
+    - pi phat
+
+- synonym: "3823"
+  examples: |
+    - pinpeat
+
+- synonym: "3757"
+  examples: |
+    - machine à pluie
+
+- synonym: "3821"
+  examples: |
+    - shantu
+
+- synonym: "3822"
+  examples: |
+    - tavoletta
+
+- synonym: "3760"
+  examples: |
+    - triangle
+
+- synonym: "3819"
+  examples: |
+    - txalaparta
+
+- synonym: "3820"
+  examples: |
+    - zhu
+
+- synonym: "2527"
+  examples: |
+    - crécelles
+
+- synonym: "3825"
+  examples: |
+    - crécelle
+
+- synonym: "2531"
+  examples: |
+    - hochets
+
+- synonym: "3861"
+  examples: |
+    - angklung
+
+- synonym: "3862"
+  examples: |
+    - anzona
+
+- synonym: "3856"
+  examples: |
+    - assa muta chati
+
+- synonym: "3860"
+  examples: |
+    - atamo
+
+- synonym: "3853"
+  examples: |
+    - azibwazi
+
+- synonym: "3876"
+  examples: |
+    - ga
+
+- synonym: "3878"
+  examples: |
     - ifambu
 
-- synonym: "4772"
+- synonym: "3928"
   examples: |
-    - bordon as ones
+    - kauaha
 
-- synonym: "4871"
+- synonym: "3926"
   examples: |
-    - jhinka
+    - kayambi
 
-- synonym: "4580"
+- synonym: "3873"
   examples: |
-    - cascabel
+    - legwegwe
 
-- synonym: "4624"
+- synonym: "3874"
   examples: |
-    - sonaja
+    - maracas
 
-- synonym: "4626"
+- synonym: "3927"
   examples: |
-    - wada
+    - maruga
 
-- synonym: "4621"
+- synonym: "3918"
   examples: |
-    - kanyahte'ka'nowa
+    - muswai
+
+- synonym: "3871"
+  examples: |
+    - qachel
+
+- synonym: "3872"
+  examples: |
+    - hochet
+
+- synonym: "3866"
+  examples: |
+    - sanasel
+
+- synonym: "3867"
+  examples: |
+    - sekere
+
+- synonym: "3848"
+  examples: |
+    - sesheh
+
+- synonym: "3919"
+  examples: |
+    - sistre
+
+- synonym: "3849"
+  examples: |
+    - swanga
+
+- synonym: "3845"
+  examples: |
+    - taga
+
+- synonym: "3846"
+  examples: |
+    - wasamba
+
+- synonym: "2532"
+  examples: |
+    - râcloirs
+
+- synonym: "3976"
+  examples: |
+    - dikwakasa
+
+- synonym: "3977"
+  examples: |
+    - guachara
+
+- synonym: "3962"
+  examples: |
+    - guiro
+
+- synonym: "3963"
+  examples: |
+    - kenyen
+
+- synonym: "3978"
+  examples: |
+    - pandola
+
+- synonym: "3960"
+  examples: |
+    - bâton raclé
+
+- synonym: "3961"
+  examples: |
+    - récipient râclé
+
+- synonym: "3979"
+  examples: |
+    - râcloir
+
+- synonym: "3964"
+  examples: |
+    - washboard
+
+- synonym: "3966"
+  examples: |
+    - yu
+
+- synonym: "2521"
+  examples: |
+    - xylophones
+
+- synonym: "3992"
+  examples: |
+    - bolange
+
+- synonym: "4022"
+  examples: |
+    - claquebois
+
+- synonym: "4024"
+  examples: |
+    - dan krong-put
+
+- synonym: "4020"
+  examples: |
+    - dan t'rung
+
+- synonym: "3994"
+  examples: |
+    - gambang
+
+- synonym: "4021"
+  examples: |
+    - kilangay
+
+- synonym: "3989"
+  examples: |
+    - madimba
+
+- synonym: "3990"
+  examples: |
+    - manza
+
+- synonym: "4018"
+  examples: |
+    - mbila
+
+- synonym: "4019"
+  examples: |
+    - mendzan
+
+- synonym: "4016"
+  examples: |
+    - mokkin
+
+- synonym: "3987"
+  examples: |
+    - ranat
+
+- synonym: "4017"
+  examples: |
+    - valimba
+
+- synonym: "3986"
+  examples: |
+    - zanga
+
+- synonym: "2260"
+  examples: |
+    - instruments à cordes
+
+- synonym: "4034"
+  examples: |
+    - cistres
+
+- synonym: "4065"
+  examples: |
+    - harpe-luth arquée
+
+- synonym: "4066"
+  examples: |
+    - archicistre
+
+- synonym: "4061"
+  examples: |
+    - cisteron
+
+- synonym: "4064"
+  examples: |
+    - cistre
+
+- synonym: "4060"
+  examples: |
+    - guitare anglaise
+
+- synonym: "4036"
+  examples: |
+    - contrebasses
+
+- synonym: "4069"
+  examples: |
+    - new violin basse
+
+- synonym: "4068"
+  examples: |
+    - octobasse
+
+- synonym: "4033"
+  examples: |
+    - vièles
+
+- synonym: "4131"
+  examples: |
+    - banam
+
+- synonym: "4128"
+  examples: |
+    - banhu
+
+- synonym: "4312"
+  examples: |
+    - basetlya
+
+- synonym: "4313"
+  examples: |
+    - cithare à archet
+
+- synonym: "4310"
+  examples: |
+    - broanca
+
+- synonym: "4129"
+  examples: |
+    - izeze
+
+- synonym: "4109"
+  examples: |
+    - cikara
+
+- synonym: "4311"
+  examples: |
+    - dan co
+
+- synonym: "4110"
+  examples: |
+    - dan gao
+
+- synonym: "4302"
+  examples: |
+    - dan nhi
+
+- synonym: "4103"
+  examples: |
+    - dilruba
+
+- synonym: "4309"
+  examples: |
+    - dra
+
+- synonym: "4107"
+  examples: |
+    - endingidi
+
+- synonym: "4101"
+  examples: |
+    - erhu
+
+- synonym: "4318"
+  examples: |
+    - erxian
+
+- synonym: "4098"
+  examples: |
+    - esraj
+
+- synonym: "4319"
+  examples: |
+    - vièle
+
+- synonym: "4099"
+  examples: |
+    - gadulka
+
+- synonym: "4315"
+  examples: |
+    - ghichak
+
+- synonym: "4126"
+  examples: |
+    - ghugha
+
+- synonym: "4316"
+  examples: |
+    - gigue
+
+- synonym: "4127"
+  examples: |
+    - gusle
+
+- synonym: "4123"
+  examples: |
+    - violon de hardanger
+
+- synonym: "4124"
+  examples: |
+    - huqin
+
+- synonym: "4117"
+  examples: |
+    - imzad
+
+- synonym: "4122"
+  examples: |
+    - jinghu
+
+- synonym: "4112"
+  examples: |
+    - kamaica
+
+- synonym: "4116"
+  examples: |
+    - kamanche
+
+- synonym: "4159"
+  examples: |
+    - kementses
+
+- synonym: "4161"
+  examples: |
+    - kiiki
+
+- synonym: "4155"
+  examples: |
+    - kokyu
+
+- synonym: "4157"
+  examples: |
+    - kundye
+
+- synonym: "4152"
+  examples: |
+    - lira da braccio
+
+- synonym: "4154"
+  examples: |
+    - lirone
+
+- synonym: "4147"
+  examples: |
+    - lokanga
+
+- synonym: "4314"
+  examples: |
+    - lyra
+
+- synonym: "4148"
+  examples: |
+    - masenqo
+
+- synonym: "4173"
+  examples: |
+    - nyckelharpa
+
+- synonym: "4170"
+  examples: |
+    - qobuz
+
+- synonym: "4168"
+  examples: |
+    - ravanhattha
+
+- synonym: "4169"
+  examples: |
+    - rebec
+
+- synonym: "4164"
+  examples: |
+    - ruudga
+
+- synonym: "4165"
+  examples: |
+    - sarangi
+
+- synonym: "4144"
+  examples: |
+    - sarinda
+
+- synonym: "4145"
+  examples: |
+    - sihu
+
+- synonym: "4142"
+  examples: |
+    - so duang
+
+- synonym: "4143"
+  examples: |
+    - so sam sai
+
+- synonym: "4137"
+  examples: |
+    - so u
+
+- synonym: "4141"
+  examples: |
+    - träskofiol
+
+- synonym: "4133"
+  examples: |
+    - umkiki
+
+- synonym: "4136"
+  examples: |
+    - yehu
+
+- synonym: "4146"
+  examples: |
+    - zhonghu
+
+- synonym: "4058"
+  examples: |
+    - guitares
+
+- synonym: "4357"
+  examples: |
+    - arpi-guitare
+
+- synonym: "4339"
+  examples: |
+    - banjo-mandoline
+
+- synonym: "4361"
+  examples: |
+    - banjulele
+
+- synonym: "2224"
+  examples: |
+    - guitare basse
+
+- synonym: "4356"
+  examples: |
+    - bissex
+
+- synonym: "4342"
+  examples: |
+    - cavaquinho
+
+- synonym: "4345"
+  examples: |
+    - dobro
+
+- synonym: "2229"
+  examples: |
+    - guitare électrique
+
+- synonym: "4343"
+  examples: |
+    - guitarron
+
+- synonym: "4344"
+  examples: |
+    - guitare-harpe
+
+- synonym: "4367"
+  examples: |
+    - harpe-lyre
+
+- synonym: "4336"
+  examples: |
+    - guitare hawaïenne
+
+- synonym: "4337"
+  examples: |
+    - jarana
+
+- synonym: "4362"
+  examples: |
+    - lyre guitare
+
+- synonym: "4335"
+  examples: |
+    - machete
+
+- synonym: "4338"
+  examples: |
+    - guitare portugaise
+
+- synonym: "2243"
+  examples: |
+    - ukulele
+
+- synonym: "4363"
+  examples: |
+    - vihuela
+
+- synonym: "4041"
+  examples: |
+    - harpes-luths
+
+- synonym: "4370"
+  examples: |
+    - harpe-luth
+
+- synonym: "4371"
+  examples: |
+    - kasso
+
+- synonym: "4372"
+  examples: |
+    - kori
+
+- synonym: "4376"
+  examples: |
+    - soron
+
+- synonym: "4377"
+  examples: |
+    - donsonkoni
+
+- synonym: "4042"
+  examples: |
+    - harpes
+
+- synonym: "4386"
+  examples: |
+    - harpe arquée
+
+- synonym: "4387"
+  examples: |
+    - ardin
+
+- synonym: "4415"
+  examples: |
+    - bolo bogo
+
+- synonym: "4419"
+  examples: |
+    - bolon
+
+- synonym: "4412"
+  examples: |
+    - chang
+
+- synonym: "4391"
+  examples: |
+    - harpe chromatique
+
+- synonym: "4393"
+  examples: |
+    - clarsach
+
+- synonym: "4413"
+  examples: |
+    - harpe diatonique
+
+- synonym: "4388"
+  examples: |
+    - harpe ditale
+
+- synonym: "4421"
+  examples: |
+    - domo
+
+- synonym: "4390"
+  examples: |
+    - ennanga
+
+- synonym: "4429"
+  examples: |
+    - arc en terre
+
+- synonym: "2207"
+  examples: |
+    - harpe celtique
+
+- synonym: "4395"
+  examples: |
+    - kinde
+
+- synonym: "4396"
+  examples: |
+    - kundi
+
+- synonym: "4420"
+  examples: |
+    - kwarnda
+
+- synonym: "4401"
+  examples: |
+    - nedomu
+
+- synonym: "4402"
+  examples: |
+    - ngombi
+
+- synonym: "4397"
+  examples: |
+    - ombi
+
+- synonym: "4398"
+  examples: |
+    - para
+
+- synonym: "4375"
+  examples: |
+    - sarong
+
+- synonym: "4404"
+  examples: |
+    - saung-gauk
+
+- synonym: "4374"
+  examples: |
+    - simbing
+
+- synonym: "4055"
+  examples: |
+    - vielles à roue
+
+- synonym: "4443"
+  examples: |
+    - vielle organisée
+
+- synonym: "4437"
+  examples: |
+    - organistrum
+
+- synonym: "4432"
+  examples: |
+    - orpheon
+
+- synonym: "4441"
+  examples: |
+    - sanfona
+
+- synonym: "4029"
+  examples: |
+    - luths
+
+- synonym: "4646"
+  examples: |
+    - angélique
+
+- synonym: "4643"
+  examples: |
+    - archiluth
+
+- synonym: "4644"
+  examples: |
+    - baglama
 
 - synonym: "4623"
   examples: |
-    - katana
+    - balalaïka
+
+- synonym: "4624"
+  examples: |
+    - bandurria
 
 - synonym: "4620"
   examples: |
+    - bengala
+
+- synonym: "4621"
+  examples: |
+    - biwa
+
+- synonym: "4618"
+  examples: |
+    - bouzouki
+
+- synonym: "4712"
+  examples: |
+    - buzuq
+
+- synonym: "4619"
+  examples: |
+    - charango
+
+- synonym: "4616"
+  examples: |
+    - chogur
+
+- synonym: "4708"
+  examples: |
+    - citole
+
+- synonym: "4711"
+  examples: |
+    - cobza
+
+- synonym: "4617"
+  examples: |
+    - colachon
+
+- synonym: "4706"
+  examples: |
+    - cumbus
+
+- synonym: "4640"
+  examples: |
+    - dan day
+
+- synonym: "4642"
+  examples: |
+    - dan nguyet
+
+- synonym: "4636"
+  examples: |
+    - dan tam
+
+- synonym: "4639"
+  examples: |
+    - dan tinh
+
+- synonym: "4628"
+  examples: |
+    - dan ty ba
+
+- synonym: "4707"
+  examples: |
+    - dan xen
+
+- synonym: "4703"
+  examples: |
+    - dombra
+
+- synonym: "4635"
+  examples: |
+    - dotara
+
+- synonym: "4626"
+  examples: |
+    - dutar
+
+- synonym: "4627"
+  examples: |
+    - ekonting
+
+- synonym: "4601"
+  examples: |
+    - ektara
+
+- synonym: "4603"
+  examples: |
+    - gambus
+
+- synonym: "4597"
+  examples: |
+    - gekkin
+
+- synonym: "4704"
+  examples: |
+    - guiterne
+
+- synonym: "4720"
+  examples: |
+    - gottuvadyam
+
+- synonym: "4600"
+  examples: |
+    - guinbri
+
+- synonym: "4588"
+  examples: |
+    - hajhuj
+
+- synonym: "4721"
+  examples: |
+    - hoddu
+
+- synonym: "4589"
+  examples: |
+    - kaburu
+
+- synonym: "4586"
+  examples: |
+    - kambre
+
+- synonym: "4612"
+  examples: |
+    - kacchapi vina
+
+- synonym: "4718"
+  examples: |
+    - keleli
+
+- synonym: "4613"
+  examples: |
+    - guitare des mandingues
+
+- synonym: "4719"
+  examples: |
+    - komuz
+
+- synonym: "4608"
+  examples: |
+    - konting
+
+- synonym: "4715"
+  examples: |
+    - kopuz
+
+- synonym: "4611"
+  examples: |
+    - krajappi
+
+- synonym: "4606"
+  examples: |
+    - lutar
+
+- synonym: "4604"
+  examples: |
+    - lyre-bandurria
+
+- synonym: "4332"
+  examples: |
+    - mamokhorong
+
+- synonym: "4713"
+  examples: |
+    - mandole
+
+- synonym: "4605"
+  examples: |
+    - mandolone
+
+- synonym: "4577"
+  examples: |
+    - mandora
+
+- synonym: "4578"
+  examples: |
+    - molo
+
+- synonym: "4714"
+  examples: |
+    - nanduni
+
+- synonym: "4576"
+  examples: |
+    - nkoni
+
+- synonym: "4695"
+  examples: |
+    - orpharion
+
+- synonym: "4696"
+  examples: |
+    - pandoura
+
+- synonym: "4691"
+  examples: |
+    - panduri
+
+- synonym: "4693"
+  examples: |
+    - penorcon
+
+- synonym: "4096"
+  examples: |
+    - pi-bang
+
+- synonym: "4575"
+  examples: |
+    - pipa
+
+- synonym: "4564"
+  examples: |
+    - qanbus
+
+- synonym: "4573"
+  examples: |
+    - quwaytara
+
+- synonym: "4688"
+  examples: |
+    - rabel
+
+- synonym: "4690"
+  examples: |
+    - ruan
+
+- synonym: "4585"
+  examples: |
+    - sanshin
+
+- synonym: "4583"
+  examples: |
+    - sanxian
+
+- synonym: "4685"
+  examples: |
+    - saradiya vina
+
+- synonym: "4686"
+  examples: |
+    - sarasvati vina
+
+- synonym: "4584"
+  examples: |
+    - sarod
+
+- synonym: "4581"
+  examples: |
+    - saz
+
+- synonym: "4582"
+  examples: |
+    - setar
+
+- synonym: "4579"
+  examples: |
+    - sgra-snyan
+
+- synonym: "4580"
+  examples: |
+    - shamisen
+
+- synonym: "4700"
+  examples: |
+    - shuangqing
+
+- synonym: "4558"
+  examples: |
+    - sitari
+
+- synonym: "4701"
+  examples: |
+    - sixian
+
+- synonym: "4544"
+  examples: |
+    - surbahar
+
+- synonym: "4550"
+  examples: |
+    - tambura
+
+- synonym: "4499"
+  examples: |
+    - tanbur
+
+- synonym: "4698"
+  examples: |
+    - tandura
+
+- synonym: "4699"
+  examples: |
+    - tidinit
+
+- synonym: "4561"
+  examples: |
+    - yueqin
+
+- synonym: "4049"
+  examples: |
+    - lyres
+
+- synonym: "4735"
+  examples: |
+    - barbiton
+
+- synonym: "4730"
+  examples: |
+    - beganna
+
+- synonym: "4729"
+  examples: |
+    - chirawatta
+
+- synonym: "4726"
+  examples: |
+    - kissar
+
+- synonym: "4728"
+  examples: |
+    - krar
+
+- synonym: "4724"
+  examples: |
+    - kudu
+
+- synonym: "4725"
+  examples: |
+    - lyre
+
+- synonym: "4723"
+  examples: |
+    - ndongo
+
+- synonym: "4734"
+  examples: |
+    - phorminx
+
+- synonym: "4097"
+  examples: |
+    - rababa
+
+- synonym: "4039"
+  examples: |
+    - mandolines
+
+- synonym: "4743"
+  examples: |
+    - mandoloncelle
+
+- synonym: "4745"
+  examples: |
+    - mandore
+
+- synonym: "4740"
+  examples: |
+    - mandoline milanaise
+
+- synonym: "4742"
+  examples: |
+    - mandoline napolitaine
+
+- synonym: "4040"
+  examples: |
+    - monocordes
+
+- synonym: "4748"
+  examples: |
+    - gopiyantra
+
+- synonym: "4753"
+  examples: |
+    - monocorde
+
+- synonym: "4749"
+  examples: |
+    - trompette marine
+
+- synonym: "4052"
+  examples: |
+    - arcs musicaux
+
+- synonym: "4765"
+  examples: |
+    - adungu
+
+- synonym: "4766"
+  examples: |
+    - bagili
+
+- synonym: "4762"
+  examples: |
+    - bazombe
+
+- synonym: "4788"
+  examples: |
+    - berimbau
+
+- synonym: "4789"
+  examples: |
+    - chipendani
+
+- synonym: "4764"
+  examples: |
+    - chitende
+
+- synonym: "4772"
+  examples: |
+    - gora
+
+- synonym: "4786"
+  examples: |
+    - guru
+
+- synonym: "4787"
+  examples: |
+    - kalumbu
+
+- synonym: "4773"
+  examples: |
+    - lukombe
+
+- synonym: "4792"
+  examples: |
+    - lusuba
+
+- synonym: "4793"
+  examples: |
+    - arc en bouche
+
+- synonym: "4790"
+  examples: |
+    - arc musical
+
+- synonym: "4791"
+  examples: |
+    - ndaludali
+
+- synonym: "4768"
+  examples: |
+    - ndjembo
+
+- synonym: "4783"
+  examples: |
+    - nsambi
+
+- synonym: "4784"
+  examples: |
+    - pinak
+
+- synonym: "4778"
+  examples: |
+    - pluriarc
+
+- synonym: "4779"
+  examples: |
+    - ugubhu
+
+- synonym: "4769"
+  examples: |
+    - umakhweyana
+
+- synonym: "4761"
+  examples: |
+    - wambee
+
+- synonym: "4785"
+  examples: |
+    - xizambi
+
+- synonym: "4047"
+  examples: |
+    - autres
+
+- synonym: "4794"
+  examples: |
+    - fonic
+
+- synonym: "4795"
+  examples: |
+    - khuur
+
+- synonym: "4026"
+  examples: |
+    - altos
+
+- synonym: "4796"
+  examples: |
+    - ténor
+
+- synonym: "4797"
+  examples: |
+    - violaline
+
+- synonym: "4028"
+  examples: |
+    - violons
+
+- synonym: "4799"
+  examples: |
+    - basse de violon
+
+- synonym: "4810"
+  examples: |
+    - violon électrique
+
+- synonym: "4822"
+  examples: |
+    - violon expérimental
+
+- synonym: "4824"
+  examples: |
+    - violon irrégulier
+
+- synonym: "4800"
+  examples: |
+    - pochette
+
+- synonym: "4809"
+  examples: |
+    - viola arpa
+
+- synonym: "4819"
+  examples: |
+    - violon d'amour
+
+- synonym: "4046"
+  examples: |
+    - violoncelles
+
+- synonym: "4825"
+  examples: |
+    - arpeggione
+
+- synonym: "4830"
+  examples: |
+    - gardon
+
+- synonym: "4826"
+  examples: |
+    - new violin ténor
+
+- synonym: "4828"
+  examples: |
+    - viola pomposa
+
+- synonym: "4045"
+  examples: |
+    - violes
+
+- synonym: "3456"
+  examples: |
+    - baryton
+
+- synonym: "4831"
+  examples: |
+    - quinton
+
+- synonym: "4837"
+  examples: |
+    - sultana
+
+- synonym: "2220"
+  examples: |
+    - ténor de viole
+
+- synonym: "2219"
+  examples: |
+    - dessus de viole
+
+- synonym: "2227"
+  examples: |
+    - contrebasse de viole
+
+- synonym: "4835"
+  examples: |
+    - viola alta
+
+- synonym: "4834"
+  examples: |
+    - viola bastarda
+
+- synonym: "5649"
+  examples: |
+    - basse de viole
+
+- synonym: "4833"
+  examples: |
+    - viole d'amour
+
+- synonym: "2206"
+  examples: |
+    - violone
+
+- synonym: "4048"
+  examples: |
+    - cithares
+
+- synonym: "4919"
+  examples: |
+    - harpe éolienne
+
+- synonym: "4920"
+  examples: |
+    - dulcimer des appalaches
+
+- synonym: "4997"
+  examples: |
+    - armandine
+
+- synonym: "4923"
+  examples: |
+    - arpanetta
+
+- synonym: "4924"
+  examples: |
+    - autoharpe
+
+- synonym: "4921"
+  examples: |
+    - bandura
+
+- synonym: "4922"
+  examples: |
+    - bangwe
+
+- synonym: "4906"
+  examples: |
+    - bell harp
+
+- synonym: "4912"
+  examples: |
+    - bin
+
+- synonym: "4904"
+  examples: |
+    - bokongo
+
+- synonym: "4916"
+  examples: |
+    - bûche des flandres
+
+- synonym: "4917"
+  examples: |
+    - basse des flandres
+
+- synonym: "4998"
+  examples: |
+    - dan bau
+
+- synonym: "4914"
+  examples: |
+    - dan tranh
+
+- synonym: "4984"
+  examples: |
+    - psaltérion double
+
+- synonym: "4988"
+  examples: |
+    - cithare double
+
+- synonym: "4892"
+  examples: |
+    - dulcimer
+
+- synonym: "4977"
+  examples: |
+    - dunde
+
+- synonym: "4978"
+  examples: |
+    - ekatantri vina
+
+- synonym: "4893"
+  examples: |
+    - enanga
+
+- synonym: "4890"
+  examples: |
+    - epinette des vosges
+
+- synonym: "4891"
+  examples: |
+    - fenghuangqin
+
+- synonym: "4897"
+  examples: |
+    - hommel
+
+- synonym: "4995"
+  examples: |
+    - ikidi
+
+- synonym: "4902"
+  examples: |
+    - inanga
+
+- synonym: "4894"
+  examples: |
+    - kani
+
+- synonym: "4943"
+  examples: |
+    - kantele
+
+- synonym: "4944"
+  examples: |
+    - kayagum
+
+- synonym: "4942"
+  examples: |
+    - kinanda
+
+- synonym: "4996"
+  examples: |
+    - kinnari vina
+
+- synonym: "4991"
+  examples: |
+    - kisfejes citera
+
+- synonym: "4947"
+  examples: |
+    - komun'go
+
+- synonym: "4948"
+  examples: |
+    - koto
+
+- synonym: "4945"
+  examples: |
+    - ligombo
+
+- synonym: "4946"
+  examples: |
+    - mi-gyaung
+
+- synonym: "4937"
+  examples: |
+    - mvet
+
+- synonym: "4938"
+  examples: |
+    - psaltérion
+
+- synonym: "4935"
+  examples: |
+    - qanun
+
+- synonym: "4936"
+  examples: |
+    - qin
+
+- synonym: "4941"
+  examples: |
+    - cithare en radeau
+
+- synonym: "4994"
+  examples: |
+    - se
+
+- synonym: "4939"
+  examples: |
+    - shichigen-kin
+
+- synonym: "4974"
+  examples: |
+    - siter
+
+- synonym: "4975"
+  examples: |
+    - surmandal
+
+- synonym: "4940"
+  examples: |
+    - takhe
+
+- synonym: "4972"
+  examples: |
+    - tonkori
+
+- synonym: "4929"
+  examples: |
+    - cithare tubulaire
+
+- synonym: "4973"
+  examples: |
+    - tuntun
+
+- synonym: "4930"
+  examples: |
+    - tympanon
+
+- synonym: "4927"
+  examples: |
+    - valiha
+
+- synonym: "4976"
+  examples: |
+    - vina
+
+- synonym: "4928"
+  examples: |
+    - wagon
+
+- synonym: "4933"
+  examples: |
+    - yanggum
+
+- synonym: "4934"
+  examples: |
+    - yangqin
+
+- synonym: "4931"
+  examples: |
+    - yaqin
+
+- synonym: "4932"
+  examples: |
+    - yomkwo
+
+- synonym: "4925"
+  examples: |
+    - zeze
+
+- synonym: "4926"
+  examples: |
+    - zheng
+
+- synonym: "2256"
+  examples: |
+    - instruments à vent
+
+- synonym: "5144"
+  examples: |
+    - accordéons
+
+- synonym: "5157"
+  examples: |
+    - cecilium
+
+- synonym: "5155"
+  examples: |
+    - concertina
+
+- synonym: "3810"
+  examples: |
+    - accordéon diatonique
+
+- synonym: "5159"
+  examples: |
+    - harmonieflûte
+
+- synonym: "5158"
+  examples: |
+    - melodeon
+
+- synonym: "5145"
+  examples: |
+    - cornemuses
+
+- synonym: "5171"
+  examples: |
+    - cornemuse
+
+- synonym: "5174"
+  examples: |
+    - biniou
+
+- synonym: "5196"
+  examples: |
+    - veze
+
+- synonym: "5194"
+  examples: |
+    - bouhe
+
+- synonym: "5175"
+  examples: |
+    - cabrette
+
+- synonym: "5195"
+  examples: |
+    - chiboni
+
+- synonym: "5199"
+  examples: |
+    - dudy
+
+- synonym: "5172"
+  examples: |
+    - gaita
+
+- synonym: "5200"
+  examples: |
+    - gajde
+
+- synonym: "5197"
+  examples: |
+    - masak
+
+- synonym: "5198"
+  examples: |
+    - musette
+
+- synonym: "5204"
+  examples: |
+    - ney-e anban
+
+- synonym: "5173"
+  examples: |
+    - northumbrian pipe
+
+- synonym: "5201"
+  examples: |
+    - piva
+
+- synonym: "5177"
+  examples: |
+    - small-pipe
+
+- synonym: "5192"
+  examples: |
+    - txistu
+
+- synonym: "5178"
+  examples: |
+    - union pipe
+
+- synonym: "5193"
+  examples: |
+    - veuze
+
+- synonym: "5190"
+  examples: |
+    - xirularru
+
+- synonym: "5176"
+  examples: |
+    - zampogna
+
+- synonym: "5191"
+  examples: |
+    - zukra
+
+- synonym: "5015"
+  examples: |
+    - bassons
+
+- synonym: "5229"
+  examples: |
+    - dulcian alto
+
+- synonym: "5219"
+  examples: |
+    - alto fagotto
+
+- synonym: "5230"
+  examples: |
+    - bajon
+
+- synonym: "5227"
+  examples: |
+    - dulcian basse
+
+- synonym: "5228"
+  examples: |
+    - basson d'amour
+
+- synonym: "5218"
+  examples: |
+    - bassonore
+
+- synonym: "5217"
+  examples: |
+    - caledonica
+
+- synonym: "5222"
+  examples: |
+    - contrebasse à anche
+
+- synonym: "5225"
+  examples: |
+    - courtaut
+
+- synonym: "2210"
+  examples: |
+    - contrebasson
+
+- synonym: "5226"
+  examples: |
+    - dulcian
+
+- synonym: "5221"
+  examples: |
+    - cervelas
+
+- synonym: "5223"
+  examples: |
+    - dulcian ténor
+
+- synonym: "5220"
+  examples: |
+    - fagottino
+
+- synonym: "5224"
+  examples: |
+    - tritonikon
+
+- synonym: "5153"
+  examples: |
+    - clairons
+
+- synonym: "5231"
+  examples: |
+    - cor à clefs alto
+
+- synonym: "2236"
+  examples: |
+    - clairon basse
+
+- synonym: "5234"
+  examples: |
+    - bersag horn
+
+- synonym: "2237"
+  examples: |
+    - clairon
+
+- synonym: "5233"
+  examples: |
+    - cor à clefs
+
+- synonym: "5232"
+  examples: |
+    - sonorophone
+
+- synonym: "5013"
+  examples: |
+    - rhombes
+
+- synonym: "5237"
+  examples: |
+    - rhombe
+
+- synonym: "5017"
+  examples: |
+    - clarinettes
+
+- synonym: "5265"
+  examples: |
+    - arghul
+
+- synonym: "5264"
+  examples: |
+    - clarinette de basset
+
+- synonym: "2211"
+  examples: |
+    - cor de basset
+
+- synonym: "5286"
+  examples: |
+    - bilil
+
+- synonym: "5268"
+  examples: |
+    - clarinette d'amour
+
+- synonym: "5266"
+  examples: |
+    - clarinette double
+
+- synonym: "5284"
+  examples: |
+    - ken doi
+
+- synonym: "5285"
+  examples: |
+    - ken mot
+
+- synonym: "5263"
+  examples: |
+    - launeddas
+
+- synonym: "5287"
+  examples: |
+    - lira
+
+- synonym: "5281"
+  examples: |
+    - mijwiz
+
+- synonym: "5283"
+  examples: |
+    - qoshnai
+
+- synonym: "5280"
+  examples: |
+    - clarinette triple
+
+- synonym: "5262"
+  examples: |
+    - zummara
+
+- synonym: "5288"
+  examples: |
+    - cornet à pistons
+
+- synonym: "5290"
+  examples: |
+    - cornopean
+
+- synonym: "5291"
+  examples: |
+    - cornet echo
+
+- synonym: "5147"
+  examples: |
+    - cornets à bouquin
+
+- synonym: "5296"
+  examples: |
+    - cornet à bouquin basse
+
+- synonym: "5294"
+  examples: |
+    - cornet muet
+
+- synonym: "5295"
+  examples: |
+    - cornet droit
+
+- synonym: "5292"
+  examples: |
+    - cornet à bouquin ténor
+
+- synonym: "5293"
+  examples: |
+    - cornet à bouquin soprano
+
+- synonym: "5299"
+  examples: |
+    - bugle alto
+
+- synonym: "5297"
+  examples: |
+    - bugle ténor
+
+- synonym: "5298"
+  examples: |
+    - bugle basse
+
+- synonym: "2234"
+  examples: |
+    - bugle
+
+- synonym: "5300"
+  examples: |
+    - petit bugle
+
+- synonym: "5310"
+  examples: |
+    - algoja
+
+- synonym: "5309"
+  examples: |
+    - anata
+
+- synonym: "5305"
+  examples: |
+    - flûte de bambou
+
+- synonym: "5307"
+  examples: |
+    - basi
+
+- synonym: "5304"
+  examples: |
+    - flûte traversière basse
+
+- synonym: "2215"
+  examples: |
+    - flûte à bec basse
+
+- synonym: "5302"
+  examples: |
+    - flûte à bec basset
+
+- synonym: "5303"
+  examples: |
+    - basuri
+
+- synonym: "6270"
+  examples: |
+    - boatswains' call
+
+- synonym: "5301"
+  examples: |
+    - chi
+
+- synonym: "6268"
+  examples: |
+    - ciritma
+
+- synonym: "5343"
+  examples: |
+    - cuckoo
+
+- synonym: "6269"
+  examples: |
+    - denena
+
+- synonym: "2978"
+  examples: |
+    - flûte à bec soprano
+
+- synonym: "5340"
+  examples: |
+    - di
+
+- synonym: "5342"
+  examples: |
+    - djaouak
+
+- synonym: "5338"
+  examples: |
+    - djouak
+
+- synonym: "5339"
+  examples: |
+    - dongxiao
+
+- synonym: "5336"
+  examples: |
+    - flageolet double
+
+- synonym: "6266"
+  examples: |
+    - flûte double
+
+- synonym: "5337"
+  examples: |
+    - flûte à conduit
+
+- synonym: "6267"
+  examples: |
+    - dulali
+
+- synonym: "5334"
+  examples: |
+    - dvojnice
+
+- synonym: "5332"
+  examples: |
+    - ekinimba
+
+- synonym: "6264"
+  examples: |
+    - embilta
+
+- synonym: "5330"
+  examples: |
+    - enkwanzi
+
+- synonym: "5331"
+  examples: |
+    - fifre
+
+- synonym: "5329"
+  examples: |
+    - flageolet
+
+- synonym: "6265"
+  examples: |
+    - fluier
+
+- synonym: "3791"
+  examples: |
+    - flûte
+
+- synonym: "5328"
+  examples: |
+    - flûte d'accord
+
+- synonym: "5326"
+  examples: |
+    - flûte d'amour
+
+- synonym: "5327"
+  examples: |
+    - flûte harmonique
+
+- synonym: "6262"
+  examples: |
+    - flûte vermeulen
+
+- synonym: "5322"
+  examples: |
+    - flûtet
+
+- synonym: "6263"
+  examples: |
+    - frula
+
+- synonym: "6147"
+  examples: |
+    - fue
+
+- synonym: "5325"
+  examples: |
+    - fujara
+
+- synonym: "5320"
+  examples: |
+    - furulya
+
+- synonym: "5321"
+  examples: |
+    - galoubet
+
+- synonym: "6148"
+  examples: |
+    - gasba
+
+- synonym: "6143"
+  examples: |
+    - geling
+
+- synonym: "6146"
+  examples: |
+    - gemshorn
+
+- synonym: "5318"
+  examples: |
+    - gibeemba
+
+- synonym: "5319"
+  examples: |
+    - giorgi flute
+
+- synonym: "5316"
+  examples: |
+    - flûte à bec contrebasse
+
+- synonym: "5317"
+  examples: |
+    - hityogiri
+
+- synonym: "6141"
+  examples: |
+    - kagurabue
+
+- synonym: "5313"
+  examples: |
+    - kaval
+
+- synonym: "5315"
+  examples: |
+    - kena
+
+- synonym: "5311"
+  examples: |
+    - khlui
+
+- synonym: "6142"
+  examples: |
+    - khluy
+
+- synonym: "5312"
+  examples: |
+    - kiangl
+
+- synonym: "5374"
+  examples: |
+    - komabue
+
+- synonym: "5375"
+  examples: |
+    - kooauau
+
+- synonym: "6139"
+  examples: |
+    - kwan
+
+- synonym: "6140"
+  examples: |
+    - longdi
+
+- synonym: "5372"
+  examples: |
+    - lu
+
+- synonym: "5373"
+  examples: |
+    - ludaya
+
+- synonym: "6136"
+  examples: |
+    - luma
+
+- synonym: "6138"
+  examples: |
+    - masul
+
+- synonym: "5370"
+  examples: |
+    - mbelen gwara
+
+- synonym: "5371"
+  examples: |
+    - mishiba
+
+- synonym: "6134"
+  examples: |
+    - mobeke
+
+- synonym: "6135"
+  examples: |
+    - murali
+
+- synonym: "5368"
+  examples: |
+    - mwanzi
+
+- synonym: "6132"
+  examples: |
+    - nar
+
+- synonym: "5369"
+  examples: |
+    - ndere
+
+- synonym: "6133"
+  examples: |
+    - nguru
+
+- synonym: "5366"
+  examples: |
+    - nokan
+
+- synonym: "5367"
+  examples: |
+    - flûte nasale
+
+- synonym: "5364"
+  examples: |
+    - flûte à encoche
+
+- synonym: "5365"
+  examples: |
+    - nyamulere
+
+- synonym: "5362"
+  examples: |
+    - ocarina
+
+- synonym: "6130"
+  examples: |
+    - omubanda
+
+- synonym: "5363"
+  examples: |
+    - paixiao
+
+- synonym: "3582"
+  examples: |
+    - flûte de pan
+
+- synonym: "5361"
+  examples: |
+    - penny wistle
+
+- synonym: "5360"
+  examples: |
+    - picco pipe
+
+- synonym: "3194"
+  examples: |
+    - flûte piccolo
+
+- synonym: "5358"
+  examples: |
+    - pitu
+
+- synonym: "5359"
+  examples: |
+    - puutoorino
+
+- synonym: "5357"
+  examples: |
+    - qasaba
+
+- synonym: "3797"
+  examples: |
+    - flûte à bec
+
+- synonym: "6131"
+  examples: |
+    - pipeau
+
+- synonym: "5355"
+  examples: |
+    - rondador
+
+- synonym: "5356"
+  examples: |
+    - ryuteki
+
+- synonym: "6291"
+  examples: |
+    - saluang
+
+- synonym: "6292"
+  examples: |
+    - sao
+
+- synonym: "6286"
+  examples: |
+    - satara
+
+- synonym: "5351"
+  examples: |
+    - seljefloyte
+
+- synonym: "5352"
+  examples: |
+    - serdam
+
+- synonym: "5349"
+  examples: |
+    - shabbaba
+
+- synonym: "5350"
+  examples: |
+    - shakuhachi
+
+- synonym: "5347"
+  examples: |
+    - shilla-shilla
+
+- synonym: "5348"
+  examples: |
+    - shinobue
+
+- synonym: "5345"
+  examples: |
+    - shuiniao
+
+- synonym: "5346"
+  examples: |
+    - sigu nihu
+
+- synonym: "5391"
+  examples: |
+    - sioulet cristedou
+
+- synonym: "6290"
+  examples: |
+    - siyotanka
+
+- synonym: "5392"
+  examples: |
+    - flûte à coulisse
+
+- synonym: "6284"
+  examples: |
+    - sodina
+
+- synonym: "5389"
+  examples: |
+    - sopilka
+
+- synonym: "5390"
+  examples: |
+    - flûte à bec sopranino
+
+- synonym: "5387"
+  examples: |
+    - suffara
+
+- synonym: "6285"
+  examples: |
+    - sukwadi
+
+- synonym: "5388"
+  examples: |
+    - suling
+
+- synonym: "6282"
+  examples: |
+    - surune
+
+- synonym: "5385"
+  examples: |
+    - svirel
+
+- synonym: "5386"
+  examples: |
+    - sifflet à coulisse
+
+- synonym: "6283"
+  examples: |
+    - syrinx
+
+- synonym: "5384"
+  examples: |
+    - taegum
+
+- synonym: "2212"
+  examples: |
+    - flûte à bec ténor
+
+- synonym: "6274"
+  examples: |
+    - flûte traversière tierce
+
+- synonym: "5383"
+  examples: |
+    - tibia
+
+- synonym: "6281"
+  examples: |
+    - tilinca
+
+- synonym: "6271"
+  examples: |
+    - tirio
+
+- synonym: "3772"
+  examples: |
+    - flûte traversière
+
+- synonym: "4358"
+  examples: |
+    - flûte à bec alto
+
+- synonym: "6272"
+  examples: |
+    - txanbela
+
+- synonym: "5382"
+  examples: |
+    - txirula
+
+- synonym: "5380"
+  examples: |
+    - vamsa
+
+- synonym: "5381"
+  examples: |
+    - sifflet
+
+- synonym: "5378"
+  examples: |
+    - xiao
+
+- synonym: "5379"
+  examples: |
+    - xun
+
+- synonym: "5377"
+  examples: |
+    - zuffolo
+
+- synonym: "5143"
+  examples: |
+    - harmonicas
+
+- synonym: "6316"
+  examples: |
+    - mélodica
+
+- synonym: "5137"
+  examples: |
+    - cors
+
+- synonym: "6324"
+  examples: |
+    - cor double
+
+- synonym: "6331"
+  examples: |
+    - huchet
+
+- synonym: "6332"
+  examples: |
+    - cor d'invention
+
+- synonym: "6333"
+  examples: |
+    - cornet naturel
+
+- synonym: "6322"
+  examples: |
+    - cor naturel
+
+- synonym: "6334"
+  examples: |
+    - olifant
+
+- synonym: "6323"
+  examples: |
+    - cor omnitonique
+
+- synonym: "6326"
+  examples: |
+    - cor de poste
+
+- synonym: "6327"
+  examples: |
+    - shofar
+
+- synonym: "6325"
+  examples: |
+    - cor à pistons
+
+- synonym: "5140"
+  examples: |
+    - trompes de chasse
+
+- synonym: "6337"
+  examples: |
+    - coach horn
+
+- synonym: "6336"
+  examples: |
+    - reed horn
+
+- synonym: "6335"
+  examples: |
+    - trompe de lorraine
+
+- synonym: "5141"
+  examples: |
+    - orgues à bouche
+
+- synonym: "6364"
+  examples: |
+    - bawu
+
+- synonym: "6355"
+  examples: |
+    - dinh nam
+
+- synonym: "6394"
+  examples: |
+    - ken be
+
+- synonym: "6356"
+  examples: |
+    - ken meo
+
+- synonym: "6353"
+  examples: |
+    - khaen
+
+- synonym: "6400"
+  examples: |
+    - lu sheng
+
+- synonym: "6354"
+  examples: |
+    - orgue à bouche
+
+- synonym: "6401"
+  examples: |
+    - saenghwang
+
+- synonym: "6358"
+  examples: |
+    - sheng
+
+- synonym: "6360"
+  examples: |
+    - sho
+
+- synonym: "6357"
+  examples: |
+    - sumpotan
+
+- synonym: "5261"
+  examples: |
+    - alboka
+
+- synonym: "6538"
+  examples: |
+    - algaita
+
+- synonym: "6536"
+  examples: |
+    - cromorne alto
+
+- synonym: "6629"
+  examples: |
+    - rothophone alto
+
+- synonym: "6537"
+  examples: |
+    - aulos
+
+- synonym: "6628"
+  examples: |
+    - rothophone baryton
+
+- synonym: "6542"
+  examples: |
+    - cromorne basse
+
+- synonym: "6662"
+  examples: |
+    - rothophone basse
+
+- synonym: "6661"
+  examples: |
+    - basse de musette
+
+- synonym: "6543"
+  examples: |
+    - bombarde
+
+- synonym: "6539"
+  examples: |
+    - chalumeau
+
+- synonym: "6666"
+  examples: |
+    - chalumeau double
+
+- synonym: "6540"
+  examples: |
+    - chirimia
+
+- synonym: "6668"
+  examples: |
+    - clari
+
+- synonym: "6527"
+  examples: |
+    - cornamusa
+
+- synonym: "6664"
+  examples: |
+    - cromorne
+
+- synonym: "6528"
+  examples: |
+    - dessus de musette
+
+- synonym: "6526"
+  examples: |
+    - diple
+
+- synonym: "6665"
+  examples: |
+    - dolzaina
+
+- synonym: "6655"
+  examples: |
+    - doppioni
+
+- synonym: "3775"
+  examples: |
+    - cor anglais
+
+- synonym: "6534"
+  examples: |
+    - eraqyeh
+
+- synonym: "6535"
+  examples: |
+    - ghayta
+
+- synonym: "6529"
+  examples: |
+    - gheteh
+
+- synonym: "6656"
+  examples: |
+    - gralla
+
+- synonym: "6653"
+  examples: |
+    - bombarde contrebasse
+
+- synonym: "6530"
+  examples: |
+    - guan
+
+- synonym: "6407"
+  examples: |
+    - heckelphone
+
+- synonym: "6508"
+  examples: |
+    - hichiriki
+
+- synonym: "6659"
+  examples: |
+    - chalemie sopranino
+
+- synonym: "6660"
+  examples: |
+    - hnè
+
+- synonym: "6657"
+  examples: |
+    - ken
+
+- synonym: "6658"
+  examples: |
+    - ken bau
+
+- synonym: "6644"
+  examples: |
+    - mukhavina
+
+- synonym: "6646"
+  examples: |
+    - nagasvaram
+
+- synonym: "6642"
+  examples: |
+    - nai
+
+- synonym: "5344"
+  examples: |
+    - nay
+
+- synonym: "6643"
+  examples: |
+    - hautbois de chasse
+
+- synonym: "6524"
+  examples: |
+    - hautbois d'amour
+
+- synonym: "6651"
+  examples: |
+    - pi
+
+- synonym: "6525"
+  examples: |
+    - piffaro
+
+- synonym: "6510"
+  examples: |
+    - p'iri
+
+- synonym: "6521"
+  examples: |
+    - rgya-gling
+
+- synonym: "6652"
+  examples: |
+    - rothophone
+
+- synonym: "6648"
+  examples: |
+    - sahnai
+
+- synonym: "6555"
+  examples: |
+    - sarunai
+
+- synonym: "6649"
+  examples: |
+    - schreyerpfeife
+
+- synonym: "6632"
+  examples: |
+    - selompret
+
+- synonym: "6556"
+  examples: |
+    - chalemie
+
+- synonym: "6548"
+  examples: |
+    - cromorne soprano
+
+- synonym: "6634"
+  examples: |
+    - sralai
+
+- synonym: "6554"
+  examples: |
+    - still shawm
+
+- synonym: "6578"
+  examples: |
+    - suona
+
+- synonym: "6630"
+  examples: |
+    - surnay
+
+- synonym: "5260"
+  examples: |
+    - tarogato
+
+- synonym: "6557"
+  examples: |
+    - tarompet
+
+- synonym: "6558"
+  examples: |
+    - cromorne ténor
+
+- synonym: "6546"
+  examples: |
+    - hautbois ténor
+
+- synonym: "6631"
+  examples: |
+    - rothophone ténor
+
+- synonym: "6638"
+  examples: |
+    - bombarde ténor
+
+- synonym: "6544"
+  examples: |
+    - chalemie soprano
+
+- synonym: "6547"
+  examples: |
+    - zurna
+
+- synonym: "5149"
+  examples: |
+    - ophicléides
+
+- synonym: "6686"
+  examples: |
+    - ophicléide alto
+
+- synonym: "6685"
+  examples: |
+    - ophicléide basse
+
+- synonym: "6683"
+  examples: |
+    - ophicléide
+
+- synonym: "6684"
+  examples: |
+    - quinticlave
+
+- synonym: "6681"
+  examples: |
+    - serpentcleide
+
+- synonym: "6682"
+  examples: |
+    - tuba-dupré
+
+- synonym: "5139"
+  examples: |
+    - autres
+
+- synonym: "6714"
+  examples: |
+    - aérophone
+
+- synonym: "6712"
+  examples: |
+    - bilangdao
+
+- synonym: "6713"
+  examples: |
+    - melophone
+
+- synonym: "5279"
+  examples: |
+    - mizmar
+
+- synonym: "6688"
+  examples: |
+    - pi so
+
+- synonym: "6689"
+  examples: |
+    - popgun
+
+- synonym: "6687"
+  examples: |
+    - sruti-box
+
+- synonym: "5151"
+  examples: |
+    - saxhorns
+
+- synonym: "6759"
+  examples: |
+    - althorn
+
+- synonym: "6786"
+  examples: |
+    - clairon alto
+
+- synonym: "6787"
+  examples: |
+    - alto horn
+
+- synonym: "6778"
+  examples: |
+    - saxhorn alto
+
+- synonym: "6784"
+  examples: |
+    - antoniophone
+
+- synonym: "6794"
+  examples: |
+    - ballad horn
+
+- synonym: "6795"
+  examples: |
+    - clairon baryton
+
+- synonym: "2223"
+  examples: |
+    - saxhorn baryton
+
+- synonym: "4289"
+  examples: |
+    - saxhorn basse
+
+- synonym: "6793"
+  examples: |
+    - saxhorn contrebasse
+
+- synonym: "6718"
+  examples: |
+    - saxhorn contralto
+
+- synonym: "6719"
+  examples: |
+    - cornophone
+
+- synonym: "6716"
+  examples: |
+    - flicorno
+
+- synonym: "6717"
+  examples: |
+    - neocor
+
+- synonym: "6722"
+  examples: |
+    - saxhorn
+
+- synonym: "6723"
+  examples: |
+    - saxotromba
+
+- synonym: "6720"
+  examples: |
+    - clairon soprano
+
+- synonym: "6721"
+  examples: |
+    - saxhorn soprano
+
+- synonym: "6725"
+  examples: |
+    - sudrophone
+
+- synonym: "6726"
+  examples: |
+    - clairon ténor
+
+- synonym: "6724"
+  examples: |
+    - cor alto
+
+- synonym: "2780"
+  examples: |
+    - saxophone alto
+
+- synonym: "2225"
+  examples: |
+    - saxophone baryton
+
+- synonym: "2985"
+  examples: |
+    - saxophone basse
+
+- synonym: "6797"
+  examples: |
+    - octavin
+
+- synonym: "4285"
+  examples: |
+    - saxophone
+
+- synonym: "3573"
+  examples: |
+    - saxophone soprano
+
+- synonym: "6796"
+  examples: |
+    - swanee-sax
+
+- synonym: "4360"
+  examples: |
+    - saxophone ténor
+
+- synonym: "5150"
+  examples: |
+    - serpents
+
+- synonym: "6798"
+  examples: |
+    - cor grave
+
+- synonym: "6802"
+  examples: |
+    - cimbasso
+
+- synonym: "6800"
+  examples: |
+    - ophimonocleide
+
+- synonym: "6801"
+  examples: |
+    - basson russe
+
+- synonym: "6799"
+  examples: |
+    - serpent
+
+- synonym: "6815"
+  examples: |
+    - trombone alto
+
+- synonym: "6035"
+  examples: |
+    - trombone basse
+
+- synonym: "6807"
+  examples: |
+    - bimbonifono
+
+- synonym: "6806"
+  examples: |
+    - trombone soprano
+
+- synonym: "2208"
+  examples: |
+    - trombone ténor
+
+- synonym: "3473"
+  examples: |
+    - trombone
+
+- synonym: "5014"
+  examples: |
+    - trompettes
+
+- synonym: "6946"
+  examples: |
+    - agwara
+
+- synonym: "6854"
+  examples: |
+    - cor des alpes
+
+- synonym: "6855"
+  examples: |
+    - amakondere
+
+- synonym: "6942"
+  examples: |
+    - bak
+
+- synonym: "6853"
+  examples: |
+    - bargumi
+
+- synonym: "2760"
+  examples: |
+    - trompette basse
+
+- synonym: "6857"
+  examples: |
+    - buccin
+
+- synonym: "6945"
+  examples: |
+    - buccina
+
+- synonym: "6927"
+  examples: |
+    - bucium
+
+- synonym: "6858"
+  examples: |
+    - buruw
+
+- synonym: "6928"
+  examples: |
+    - carnyx
+
+- synonym: "6925"
+  examples: |
+    - chalmei
+
+- synonym: "6856"
+  examples: |
+    - clavicor
+
+- synonym: "6845"
+  examples: |
+    - cornu
+
+- synonym: "6846"
+  examples: |
+    - didjeridu
+
+- synonym: "6843"
+  examples: |
+    - dung-chen
+
+- synonym: "6844"
+  examples: |
+    - dung-dkar
+
+- synonym: "6849"
+  examples: |
+    - duplex
+
+- synonym: "6850"
+  examples: |
+    - embuchi
+
+- synonym: "6926"
+  examples: |
+    - faluo
+
+- synonym: "6847"
+  examples: |
+    - trompette de parade
+
+- synonym: "6848"
+  examples: |
+    - horagai
+
+- synonym: "6837"
+  examples: |
+    - kahala
+
+- synonym: "6838"
+  examples: |
+    - kakaki
+
+- synonym: "6937"
+  examples: |
+    - karna
+
+- synonym: "6835"
+  examples: |
+    - trompette à clefs
+
+- synonym: "6836"
+  examples: |
+    - laba
+
+- synonym: "6841"
+  examples: |
+    - lituus
+
+- synonym: "6939"
+  examples: |
+    - lur
+
+- synonym: "6842"
+  examples: |
+    - malakat
+
+- synonym: "6839"
+  examples: |
+    - nafir
+
+- synonym: "6840"
+  examples: |
+    - narsiga
+
+- synonym: "6827"
+  examples: |
+    - trompette naturelle
+
+- synonym: "6828"
+  examples: |
+    - nembongo
+
+- synonym: "6824"
+  examples: |
+    - pangi
+
+- synonym: "6825"
+  examples: |
+    - rkang-gling
+
+- synonym: "6833"
+  examples: |
+    - rozhok
+
+- synonym: "6929"
+  examples: |
+    - salpinx
+
+- synonym: "6834"
+  examples: |
+    - sankh
+
+- synonym: "6830"
+  examples: |
+    - sheypur
+
+- synonym: "6832"
+  examples: |
+    - trompette à coulisse
+
+- synonym: "6936"
+  examples: |
+    - trombita
+
+- synonym: "6957"
+  examples: |
+    - tuba curva
+
+- synonym: "6823"
+  examples: |
+    - tuohitorvi
+
+- synonym: "6962"
+  examples: |
+    - tori
+
+- synonym: "6821"
+  examples: |
+    - turi
+
+- synonym: "6822"
+  examples: |
+    - trompette à pistons
+
+- synonym: "5154"
+  examples: |
+    - tubas
+
+- synonym: "6974"
+  examples: |
+    - saxotromba alto
+
+- synonym: "6985"
+  examples: |
+    - sudrophone baryton
+
+- synonym: "2209"
+  examples: |
+    - tuba basse
+
+- synonym: "6983"
+  examples: |
+    - bombardon
+
+- synonym: "6984"
+  examples: |
+    - clairon contrebasse
+
+- synonym: "2231"
+  examples: |
+    - tuba contrebasse
+
+- synonym: "2241"
+  examples: |
+    - euphonium
+
+- synonym: "6982"
+  examples: |
+    - helicon
+
+- synonym: "6981"
+  examples: |
+    - sousaphone
+
+- synonym: "6978"
+  examples: |
+    - tuba wagner
+
+- synonym: "2254"
+  examples: |
+    - instruments mécaniques
+
+- synonym: "6987"
+  examples: |
+    - mécaniques
+
+- synonym: "2311"
+  examples: |
+    - mécaniques
+
+- synonym: "7035"
+  examples: |
+    - antiphonel
+
+- synonym: "7033"
+  examples: |
+    - automate
+
+- synonym: "7034"
+  examples: |
+    - autopanphone
+
+- synonym: "7006"
+  examples: |
+    - orgue de barbarie
+
+- synonym: "7028"
+  examples: |
+    - serinette
+
+- synonym: "7032"
+  examples: |
+    - componium
+
+- synonym: "7024"
+  examples: |
+    - orgue de foire
+
+- synonym: "7026"
+  examples: |
+    - limonaire
+
+- synonym: "7018"
+  examples: |
+    - tympanon mécanique
+
+- synonym: "7020"
+  examples: |
+    - clavecin mécanique
+
+- synonym: "7005"
+  examples: |
+    - boite à musique
+
+- synonym: "7017"
+  examples: |
+    - orchestrion
+
+- synonym: "7014"
+  examples: |
+    - panharmonicon
+
+- synonym: "7016"
+  examples: |
+    - pianola
+
+- synonym: "7012"
+  examples: |
+    - polyphon
+
+- synonym: "7013"
+  examples: |
+    - triola
+
+- synonym: "3712"
+  examples: |
+    - enclume
+
+- synonym: "5506"
+  examples: |
+    - bil
+
+- synonym: "6820"
+  examples: |
+    - plantation trumpet
+
+- synonym: "6635"
+  examples: |
+    - practice chanter
+
+- synonym: "5505"
+  examples: |
+    - sereu
+
+- synonym: "6819"
+  examples: |
+    - tuum
+
+- synonym: "5504"
+  examples: |
+    - antara
+
+- synonym: "3537"
+  examples: |
+    - ayotl
+
+- synonym: "4497"
+  examples: |
+    - bandola
+
+- synonym: "2920"
+  examples: |
+    - bombo
+
+- synonym: "2913"
+  examples: |
+    - caja
+
+- synonym: "5278"
+  examples: |
+    - cana de millo
+
+- synonym: "3882"
+  examples: |
+    - cascabel
+
+- synonym: "2732"
+  examples: |
+    - matraca
+
+- synonym: "5259"
+  examples: |
+    - erkencho
+
+- synonym: "2918"
+  examples: |
+    - kultrun
+
+- synonym: "2919"
+  examples: |
+    - llamador
+
+- synonym: "2915"
+  examples: |
+    - lppumin
+
+- synonym: "2916"
+  examples: |
+    - pandereta
+
+- synonym: "2923"
+  examples: |
+    - tambor mayor
+
+- synonym: "2925"
+  examples: |
+    - teponaztli
+
+- synonym: "2921"
+  examples: |
+    - tlalpanhuetlhuetl
+
+- synonym: "5517"
+  examples: |
+    - charka
+
+- synonym: "5515"
+  examples: |
+    - gaita
+
+- synonym: "5516"
+  examples: |
+    - lichiwayu
+
+- synonym: "5513"
+  examples: |
+    - mohoceno
+
+- synonym: "5514"
+  examples: |
+    - one goot
+
+- synonym: "5511"
+  examples: |
+    - pfalawita
+
+- synonym: "5512"
+  examples: |
+    - pincullo
+
+- synonym: "5509"
+  examples: |
+    - siku
+
+- synonym: "5510"
+  examples: |
+    - silbador
+
+- synonym: "5508"
+  examples: |
+    - silbato
+
+- synonym: "4355"
+  examples: |
+    - requinto
+
+- synonym: "4495"
+  examples: |
+    - iguana
+
+- synonym: "4496"
+  examples: |
+    - tiple
+
+- synonym: "6625"
+  examples: |
+    - sk'a'na
+
+- synonym: "3897"
+  examples: |
     - gurra
+
+- synonym: "3893"
+  examples: |
+    - kanyahte'ka'nowa
+
+- synonym: "3894"
+  examples: |
+    - katana
+
+- synonym: "3884"
+  examples: |
+    - sonaja
+
+- synonym: "3888"
+  examples: |
+    - wada
+
+- synonym: "3972"
+  examples: |
+    - omichicahuaztli
+
+- synonym: "6817"
+  examples: |
+    - quiquiztli
+
+- synonym: "6818"
+  examples: |
+    - trutruka
+
+- synonym: "5507"
+  examples: |
+    - zampona
+
+- synonym: "5162"
+  examples: |
+    - basse-aux-pieds
+
+- synonym: "5160"
+  examples: |
+    - garmoshka
+
+- synonym: "5161"
+  examples: |
+    - heligonka
+
+- synonym: "5181"
+  examples: |
+    - askomandoura
+
+- synonym: "5207"
+  examples: |
+    - bodega
+
+- synonym: "5182"
+  examples: |
+    - chekwa
+
+- synonym: "5208"
+  examples: |
+    - cimpoi
+
+- synonym: "5205"
+  examples: |
+    - duda
+
+- synonym: "5206"
+  examples: |
+    - dzhura gayda
+
+- synonym: "5211"
+  examples: |
+    - kaba ghayda
+
+- synonym: "5212"
+  examples: |
+    - muchosa
+
+- synonym: "5209"
+  examples: |
+    - parkapzuk
+
+- synonym: "5180"
+  examples: |
+    - piob mhor
+
+- synonym: "5210"
+  examples: |
+    - säckpipa
+
+- synonym: "5214"
+  examples: |
+    - shabr
+
+- synonym: "5215"
+  examples: |
+    - shüvir
+
+- synonym: "5213"
+  examples: |
+    - tsambouna
+
+- synonym: "5238"
+  examples: |
+    - hor
+
+- synonym: "2620"
+  examples: |
+    - apertintaille
+
+- synonym: "2728"
+  examples: |
+    - capra
+
+- synonym: "2729"
+  examples: |
+    - hanske knap
+
+- synonym: "2724"
+  examples: |
+    - knaptand
+
+- synonym: "2726"
+  examples: |
+    - troccola
+
+- synonym: "5256"
+  examples: |
+    - birbyne
+
+- synonym: "5258"
+  examples: |
+    - bryolka
+
+- synonym: "5254"
+  examples: |
+    - olym shüvir
+
+- synonym: "5255"
+  examples: |
+    - pibgorn
+
+- synonym: "5253"
+  examples: |
+    - skalmeye
+
+- synonym: "5277"
+  examples: |
+    - zhaleyka
+
+- synonym: "4072"
+  examples: |
+    - gorduna
+
+- synonym: "3221"
+  examples: |
+    - bubanj
+
+- synonym: "2927"
+  examples: |
+    - diplipito
+
+- synonym: "2935"
+  examples: |
+    - duba
+
+- synonym: "2936"
+  examples: |
+    - fanfrnoch
+
+- synonym: "2929"
+  examples: |
+    - partrijzenlokker
+
+- synonym: "2933"
+  examples: |
+    - pignata
+
+- synonym: "2940"
+  examples: |
+    - rommelpot
+
+- synonym: "2941"
+  examples: |
+    - bourdon
+
+- synonym: "3222"
+  examples: |
+    - tamboril
+
+- synonym: "2938"
+  examples: |
+    - tambourin florentin
+
+- synonym: "2939"
+  examples: |
+    - tümïr
+
+- synonym: "3642"
+  examples: |
+    - tymbalon
+
+- synonym: "2945"
+  examples: |
+    - wawa
+
+- synonym: "2942"
+  examples: |
+    - zambomba
+
+- synonym: "4073"
+  examples: |
+    - huibe
+
+- synonym: "4074"
+  examples: |
+    - kemençe
+
+- synonym: "5723"
+  examples: |
+    - caval
+
+- synonym: "5717"
+  examples: |
+    - curlika
+
+- synonym: "5720"
+  examples: |
+    - cwène
+
+- synonym: "5715"
+  examples: |
+    - dvodentssivka
+
+- synonym: "5716"
+  examples: |
+    - dvoyanka
+
+- synonym: "5702"
+  examples: |
+    - fieould
+
+- synonym: "5711"
+  examples: |
+    - firlinfeu
+
+- synonym: "6055"
+  examples: |
+    - flaviol
+
+- synonym: "6056"
+  examples: |
+    - floyara
+
+- synonym: "5903"
+  examples: |
+    - fobiol
+
+- synonym: "5960"
+  examples: |
+    - friscalettu
+
+- synonym: "5857"
+  examples: |
+    - fuchsreize
+
+- synonym: "5877"
+  examples: |
+    - kakukkolo
+
+- synonym: "5855"
+  examples: |
+    - kurai
+
+- synonym: "6314"
+  examples: |
+    - kwakkelbeen
+
+- synonym: "5856"
+  examples: |
+    - piculina
+
+- synonym: "5848"
+  examples: |
+    - pist'ala
+
+- synonym: "5853"
+  examples: |
+    - shvi
+
+- synonym: "5767"
+  examples: |
+    - sipovka
+
+- synonym: "5770"
+  examples: |
+    - siringa
+
+- synonym: "5764"
+  examples: |
+    - skuduciai
+
+- synonym: "5766"
+  examples: |
+    - souravli
+
+- synonym: "5756"
+  examples: |
+    - stabule
+
+- synonym: "5759"
+  examples: |
+    - svirala
+
+- synonym: "5728"
+  examples: |
+    - svirka
+
+- synonym: "5735"
+  examples: |
+    - svistulka
+
+- synonym: "5726"
+  examples: |
+    - trstenke
+
+- synonym: "5727"
+  examples: |
+    - valaska dvojka
+
+- synonym: "6315"
+  examples: |
+    - valaska pistela
+
+- synonym: "4351"
+  examples: |
+    - braguinho
+
+- synonym: "4354"
+  examples: |
+    - cavaco
+
+- synonym: "4436"
+  examples: |
+    - tekerö
+
+- synonym: "3570"
+  examples: |
+    - drimba
+
+- synonym: "3571"
+  examples: |
+    - drymba
+
+- synonym: "3568"
+  examples: |
+    - kovïzh
+
+- synonym: "3569"
+  examples: |
+    - marranzanu
+
+- synonym: "3575"
+  examples: |
+    - lozhky
+
+- synonym: "4494"
+  examples: |
+    - bugarija
+
+- synonym: "4491"
+  examples: |
+    - dala-fandir
+
+- synonym: "4669"
+  examples: |
+    - kabak
+
+- synonym: "4492"
+  examples: |
+    - karaduzen
+
+- synonym: "4489"
+  examples: |
+    - sargija
+
+- synonym: "4746"
+  examples: |
+    - bandolim
+
+- synonym: "6636"
+  examples: |
+    - graile
+
+- synonym: "5252"
+  examples: |
+    - reh-fiep
+
+- synonym: "6626"
+  examples: |
+    - salamuri
+
+- synonym: "6675"
+  examples: |
+    - whithorn
+
+- synonym: "2506"
+  examples: |
+    - crystallophone
+
+- synonym: "3880"
+  examples: |
+    - bordon as ones
+
+- synonym: "3968"
+  examples: |
+    - reque reque
+
+- synonym: "6866"
+  examples: |
+    - bion
+
+- synonym: "6954"
+  examples: |
+    - bockhorn
+
+- synonym: "6864"
+  examples: |
+    - midwinterhoorn
+
+- synonym: "6865"
+  examples: |
+    - surem-puch
+
+- synonym: "6862"
+  examples: |
+    - trimbita
+
+- synonym: "6863"
+  examples: |
+    - tulnic
+
+- synonym: "3980"
+  examples: |
+    - strohfiedel
+
+- synonym: "4858"
+  examples: |
+    - akkordolia
+
+- synonym: "5011"
+  examples: |
+    - citera
+
+- synonym: "4863"
+  examples: |
+    - cithare sur bâton
+
+- synonym: "4864"
+  examples: |
+    - guitare-cithare
+
+- synonym: "4859"
+  examples: |
+    - harpe-cithare
+
+- synonym: "4860"
+  examples: |
+    - higheghe
+
+- synonym: "4850"
+  examples: |
+    - hümmelke
+
+- synonym: "4853"
+  examples: |
+    - kanklès
+
+- synonym: "4848"
+  examples: |
+    - küsle
+
+- synonym: "5009"
+  examples: |
+    - langeleg
+
+- synonym: "5010"
+  examples: |
+    - langeleik
+
+- synonym: "4849"
+  examples: |
+    - langspil
+
+- synonym: "4856"
+  examples: |
+    - mandoline-cithare
+
+- synonym: "4857"
+  examples: |
+    - psalmodikon
+
+- synonym: "4854"
+  examples: |
+    - tambal
+
+- synonym: "4855"
+  examples: |
+    - türharfe
+
+- synonym: "4847"
+  examples: |
+    - violon-cithare
+
+- synonym: "4331"
+  examples: |
+    - violon à pavillon
+
+- synonym: "5216"
+  examples: |
+    - gayda
+
+- synonym: "3538"
+  examples: |
+    - tamtam
+
+- synonym: "2720"
+  examples: |
+    - claquoir à marteau
+
+- synonym: "2721"
+  examples: |
+    - matraqueta
+
+- synonym: "4075"
+  examples: |
+    - guslica
+
+- synonym: "5690"
+  examples: |
+    - flûte d'écorce
+
+- synonym: "5685"
+  examples: |
+    - darvyra
+
+- synonym: "5686"
+  examples: |
+    - pistalka
+
+- synonym: "6313"
+  examples: |
+    - quail lure
+
+- synonym: "5695"
+  examples: |
+    - sifflet chanteur
+
+- synonym: "5700"
+  examples: |
+    - siurell
+
+- synonym: "5692"
+  examples: |
+    - telenka
+
+- synonym: "5693"
+  examples: |
+    - flûte globulaire
+
+- synonym: "4350"
+  examples: |
+    - viola d'arame
+
+- synonym: "3781"
+  examples: |
+    - distinette
+
+- synonym: "3777"
+  examples: |
+    - marteau
+
+- synonym: "3779"
+  examples: |
+    - idiophone pincé
+
+- synonym: "6698"
+  examples: |
+    - aerophone libre
+
+- synonym: "3677"
+  examples: |
+    - agbomboya
+
+- synonym: "4751"
+  examples: |
+    - anandalahari
+
+- synonym: "6860"
+  examples: |
+    - ananta vijaya
+
+- synonym: "6861"
+  examples: |
+    - barataka
+
+- synonym: "4488"
+  examples: |
+    - bin sitar
+
+- synonym: "3638"
+  examples: |
+    - dagara
+
+- synonym: "3635"
+  examples: |
+    - damama
+
+- synonym: "3218"
+  examples: |
+    - davandai
+
+- synonym: "3601"
+  examples: |
+    - dhanki
+
+- synonym: "2955"
+  examples: |
+    - dindimi
+
+- synonym: "3602"
+  examples: |
+    - timbale double
+
+- synonym: "3631"
+  examples: |
+    - duggi
+
+- synonym: "3220"
+  examples: |
+    - dukkar
+
+- synonym: "3783"
+  examples: |
+    - ghari
+
+- synonym: "2615"
+  examples: |
+    - ghungru
+
+- synonym: "6859"
+  examples: |
+    - go-mukha
+
+- synonym: "2958"
+  examples: |
+    - gummati
+
+- synonym: "3229"
+  examples: |
+    - halgi
+
+- synonym: "2963"
+  examples: |
+    - hudukka
+
+- synonym: "2949"
+  examples: |
+    - jagajhampa
+
+- synonym: "3630"
+  examples: |
+    - jharidap
+
+- synonym: "3881"
+  examples: |
+    - jhinka
+
+- synonym: "2948"
+  examples: |
+    - joraghai
+
+- synonym: "4839"
+  examples: |
+    - kairata vina
+
+- synonym: "6627"
+  examples: |
+    - kalama
+
+- synonym: "3782"
+  examples: |
+    - kashtha tarang
+
+- synonym: "3938"
+  examples: |
+    - lezim
+
+- synonym: "2950"
+  examples: |
+    - madar
+
+- synonym: "5007"
+  examples: |
+    - mahati vina
+
+- synonym: "2787"
+  examples: |
+    - mandira
+
+- synonym: "6616"
+  examples: |
+    - moska
+
+- synonym: "4484"
+  examples: |
+    - nadecvara-vina
+
+- synonym: "6676"
+  examples: |
+    - ottu
+
+- synonym: "2965"
+  examples: |
+    - panaba
+
+- synonym: "2718"
+  examples: |
+    - phal
+
+- synonym: "3228"
+  examples: |
+    - pirai
+
+- synonym: "2622"
+  examples: |
+    - semakkalam
+
+- synonym: "6905"
+  examples: |
+    - su ghosha
+
+- synonym: "4480"
+  examples: |
+    - sur-sanga
+
+- synonym: "4483"
+  examples: |
+    - sursrngar
+
+- synonym: "4091"
+  examples: |
+    - ta'us
+
+- synonym: "6952"
+  examples: |
+    - tirucinnam
+
+- synonym: "5008"
+  examples: |
+    - tuila
+
+- synonym: "4487"
+  examples: |
+    - vipanci vina
+
+- synonym: "7008"
+  examples: |
+    - epinette mécanique
+
+- synonym: "7007"
+  examples: |
+    - organette
+
+- synonym: "3223"
+  examples: |
+    - rabaga
+
+- synonym: "3740"
+  examples: |
+    - gender
+
+- synonym: "6673"
+  examples: |
+    - t'aep'yongso
+
+- synonym: "6311"
+  examples: |
+    - tanso
+
+- synonym: "6310"
+  examples: |
+    - alamoru
+
+- synonym: "3225"
+  examples: |
+    - atumpan
+
+- synonym: "3224"
+  examples: |
+    - bedug
+
+- synonym: "4015"
+  examples: |
+    - calung
+
+- synonym: "3939"
+  examples: |
+    - ch'ajch'as
+
+- synonym: "3936"
+  examples: |
+    - chocalho
+
+- synonym: "2681"
+  examples: |
+    - chlefeli
+
+- synonym: "4486"
+  examples: |
+    - cifteli
+
+- synonym: "4067"
+  examples: |
+    - cithrinchen
+
+- synonym: "3824"
+  examples: |
+    - cricri
+
+- synonym: "4349"
+  examples: |
+    - cuatro
+
+- synonym: "3238"
+  examples: |
+    - cununo
+
+- synonym: "3604"
+  examples: |
+    - daya
+
+- synonym: "2785"
+  examples: |
+    - dobachi
+
+- synonym: "3236"
+  examples: |
+    - dogdog
+
+- synonym: "2501"
+  examples: |
+    - dulcitone
+
+- synonym: "4485"
+  examples: |
+    - gabbus
+
+- synonym: "4089"
+  examples: |
+    - goge
+
+- synonym: "4757"
+  examples: |
+    - gubgubi
+
+- synonym: "4407"
+  examples: |
+    - harpe à crochets
+
+- synonym: "4087"
+  examples: |
+    - igil
+
+- synonym: "6300"
+  examples: |
+    - jula jula
+
+- synonym: "3563"
+  examples: |
+    - karinding
+
+- synonym: "4733"
+  examples: |
+    - kithara
+
+- synonym: "6950"
+  examples: |
+    - kohorn
+
+- synonym: "4878"
+  examples: |
+    - kolitong
+
+- synonym: "5006"
+  examples: |
+    - kucapi
+
+- synonym: "4086"
+  examples: |
+    - lahute
+
+- synonym: "3239"
+  examples: |
+    - madal
+
+- synonym: "5276"
+  examples: |
+    - makuti
+
+- synonym: "3230"
+  examples: |
+    - mo
+
+- synonym: "6298"
+  examples: |
+    - naka ya lehlaka
+
+- synonym: "6299"
+  examples: |
+    - nama
+
+- synonym: "3234"
+  examples: |
+    - ntenga
+
+- synonym: "2679"
+  examples: |
+    - phach
+
+- synonym: "4880"
+  examples: |
+    - phin
+
+- synonym: "6297"
+  examples: |
+    - pifülka
+
+- synonym: "4821"
+  examples: |
+    - pochette d'amour
+
+- synonym: "3813"
+  examples: |
+    - quitiplas
+
+- synonym: "6674"
+  examples: |
+    - rauschpfeife
+
+- synonym: "4879"
+  examples: |
+    - sandouri
+
+- synonym: "4666"
+  examples: |
+    - sharki
+
+- synonym: "4667"
+  examples: |
+    - tamburica
+
+- synonym: "4798"
+  examples: |
+    - alto ténor
+
+- synonym: "5405"
+  examples: |
+    - supeljka
+
+- synonym: "2408"
+  examples: |
+    - terpodion
+
+- synonym: "3231"
+  examples: |
+    - thod-rnga
+
+- synonym: "3232"
+  examples: |
+    - togo
+
+- synonym: "3812"
+  examples: |
+    - toa
+
+- synonym: "3929"
+  examples: |
+    - towa
+
+- synonym: "3930"
+  examples: |
+    - vibra-slap
+
+- synonym: "3244"
+  examples: |
+    - waldteufel
+
+- synonym: "6295"
+  examples: |
+    - tunda
+
+- synonym: "2301"
+  examples: |
+    - vocoder
+
+- synonym: "6679"
+  examples: |
+    - zurla
+
+- synonym: "6294"
+  examples: |
+    - bangdi
+
+- synonym: "5004"
+  examples: |
+    - yazheng
+
+- synonym: "6365"
+  examples: |
+    - bo-cioski
+
+- synonym: "3247"
+  examples: |
+    - chaozhou-biangu
+
+- synonym: "3502"
+  examples: |
+    - dscheng
+
+- synonym: "4663"
+  examples: |
+    - genkwan
+
+- synonym: "5001"
+  examples: |
+    - go-kin
+
+- synonym: "6904"
+  examples: |
+    - haotong
+
+- synonym: "6986"
+  examples: |
+    - hau-tung
+
+- synonym: "3241"
+  examples: |
+    - henggelege
+
+- synonym: "6293"
+  examples: |
+    - hsiau
+
+- synonym: "5000"
+  examples: |
+    - ichigen-kin
+
+- synonym: "4876"
+  examples: |
+    - kakugnoto
+
+- synonym: "4665"
+  examples: |
+    - kao tari
+
+- synonym: "5002"
+  examples: |
+    - nigenkin
+
+- synonym: "5003"
+  examples: |
+    - san gen kin
+
+- synonym: "4088"
+  examples: |
+    - nisen
+
+- synonym: "3932"
+  examples: |
+    - shakujo
+
+- synonym: "3242"
+  examples: |
+    - san-no-tsuzumi
+
+- synonym: "3254"
+  examples: |
+    - shimedaiko
+
+- synonym: "3255"
+  examples: |
+    - shugu
+
+- synonym: "3252"
+  examples: |
+    - tai ping gu
+
+- synonym: "4999"
+  examples: |
+    - tsuma-koto
+
+- synonym: "6948"
+  examples: |
+    - tongjiao
+
+- synonym: "2966"
+  examples: |
+    - gu
+
+- synonym: "3261"
+  examples: |
+    - adedemma
+
+- synonym: "2611"
+  examples: |
+    - agongon
+
+- synonym: "4877"
+  examples: |
+    - ajaeng
+
+- synonym: "5404"
+  examples: |
+    - alto malta
+
+- synonym: "3257"
+  examples: |
+    - apentemma
+
+- synonym: "4085"
+  examples: |
+    - arbab
+
+- synonym: "4479"
+  examples: |
+    - arbajo
+
+- synonym: "3260"
+  examples: |
+    - atamo
+
+- synonym: "3248"
+  examples: |
+    - audh
+
+- synonym: "3937"
+  examples: |
+    - axatse
+
+- synonym: "4755"
+  examples: |
+    - babatoni
+
+- synonym: "3794"
+  examples: |
+    - balingbing
+
+- synonym: "3796"
+  examples: |
+    - bangibang
+
+- synonym: "5411"
+  examples: |
+    - bansari
+
+- synonym: "3793"
+  examples: |
+    - bantula
+
+- synonym: "6309"
+  examples: |
+    - belobat pendek
+
+- synonym: "4732"
+  examples: |
+    - benebene
+
+- synonym: "5249"
+  examples: |
+    - bhujanga
+
+- synonym: "3564"
+  examples: |
+    - bikong
+
+- synonym: "2967"
+  examples: |
+    - bommaa
+
+- synonym: "6680"
+  examples: |
+    - borazan
+
+- synonym: "3249"
+  examples: |
+    - brekete
+
+- synonym: "6902"
+  examples: |
+    - büchel
+
+- synonym: "5410"
+  examples: |
+    - bülbül
+
+- synonym: "3250"
+  examples: |
+    - caixa
+
+- synonym: "4405"
+  examples: |
+    - c'angi
+
+- synonym: "6903"
+  examples: |
+    - caracol
+
+- synonym: "5409"
+  examples: |
+    - carrizo
+
+- synonym: "6947"
+  examples: |
+    - cati
+
+- synonym: "3917"
+  examples: |
+    - caxixi
+
+- synonym: "4874"
+  examples: |
+    - celempung
+
+- synonym: "4873"
+  examples: |
+    - chakhe
+
+- synonym: "3565"
+  examples: |
+    - cheng
+
+- synonym: "6308"
+  examples: |
+    - chiba
+
+- synonym: "6306"
+  examples: |
+    - ch'ili
+
+- synonym: "5251"
+  examples: |
+    - chinkuyo
+
+- synonym: "4011"
+  examples: |
+    - chinzumana
+
+- synonym: "2969"
+  examples: |
+    - ciblon
+
+- synonym: "6307"
+  examples: |
+    - chunggum
+
+- synonym: "6321"
+  examples: |
+    - cor à embouchure terminale
+
+- synonym: "4476"
+  examples: |
+    - cinna vina
+
+- synonym: "4468"
+  examples: |
+    - c'onguri
+
+- synonym: "4475"
+  examples: |
+    - cura
+
+- synonym: "2968"
+  examples: |
+    - contra surdo
+
+- synonym: "3274"
+  examples: |
+    - dabadaba
+
+- synonym: "3275"
+  examples: |
+    - daluka
+
+- synonym: "2623"
+  examples: |
+    - dawuro
+
+- synonym: "3278"
+  examples: |
+    - debakan
+
+- synonym: "3276"
+  examples: |
+    - dhah
+
+- synonym: "3277"
+  examples: |
+    - dohol
+
+- synonym: "3265"
+  examples: |
+    - fontomfrom
+
+- synonym: "3266"
+  examples: |
+    - dhimayca
+
+- synonym: "6900"
+  examples: |
+    - dhavalashanka
+
+- synonym: "3983"
+  examples: |
+    - dibhinda
+
+- synonym: "6302"
+  examples: |
+    - dilli-kaval
+
+- synonym: "5250"
+  examples: |
+    - dozale
+
+- synonym: "6901"
+  examples: |
+    - dung
+
+- synonym: "5408"
+  examples: |
+    - dvojicka
+
+- synonym: "5406"
+  examples: |
+    - dvojkinje
+
+- synonym: "5407"
+  examples: |
+    - embra
+
+- synonym: "3528"
+  examples: |
+    - engkuk
+
+- synonym: "3529"
+  examples: |
+    - emong
+
+- synonym: "3262"
+  examples: |
+    - ese
+
+- synonym: "5396"
+  examples: |
+    - gab
+
+- synonym: "4012"
+  examples: |
+    - gabbang
+
+- synonym: "4010"
+  examples: |
+    - garantung
+
+- synonym: "3269"
+  examples: |
+    - gandang
+
+- synonym: "3273"
+  examples: |
+    - geduk
+
+- synonym: "3498"
+  examples: |
+    - gangsa
+
+- synonym: "3916"
+  examples: |
+    - ganza
+
+- synonym: "3267"
+  examples: |
+    - genderang
+
+- synonym: "3531"
+  examples: |
+    - gendingan
+
+- synonym: "4872"
+  examples: |
+    - ghangli
+
+- synonym: "4871"
+  examples: |
+    - gondang buluh
+
+- synonym: "3268"
+  examples: |
+    - ghaval
+
+- synonym: "3286"
+  examples: |
+    - gimbal
+
+- synonym: "3288"
+  examples: |
+    - gondang
+
+- synonym: "3970"
+  examples: |
+    - ghol
+
+- synonym: "5248"
+  examples: |
+    - ghongad
+
+- synonym: "2971"
+  examples: |
+    - gimbar
+
+- synonym: "2970"
+  examples: |
+    - gongand
+
+- synonym: "3501"
+  examples: |
+    - goong
+
+- synonym: "3617"
+  examples: |
+    - gosha naghara
+
+- synonym: "4009"
+  examples: |
+    - grantang
+
+- synonym: "2717"
+  examples: |
+    - grap saypha
+
+- synonym: "3806"
+  examples: |
+    - gumanak
+
+- synonym: "6617"
+  examples: |
+    - gya ling
+
+- synonym: "4093"
+  examples: |
+    - haegum
+
+- synonym: "4465"
+  examples: |
+    - hasapi
+
+- synonym: "3807"
+  examples: |
+    - hsaing-waing
+
+- synonym: "6320"
+  examples: |
+    - huajras
+
+- synonym: "4661"
+  examples: |
+    - husapi
+
+- synonym: "4662"
+  examples: |
+    - hyang-pip'a
+
+- synonym: "6677"
+  examples: |
+    - hyang p'iri
+
+- synonym: "5477"
+  examples: |
+    - innenspaltflöte
+
+- synonym: "5395"
+  examples: |
+    - jatun tukana
+
+- synonym: "4870"
+  examples: |
+    - jakdak-ulul
+
+- synonym: "5394"
+  examples: |
+    - jedinka
+
+- synonym: "5393"
+  examples: |
+    - julajula
+
+- synonym: "3748"
+  examples: |
+    - jegogan
+
+- synonym: "2788"
+  examples: |
+    - jhalica
+
+- synonym: "2784"
+  examples: |
+    - kangsi
+
+- synonym: "2670"
+  examples: |
+    - kalenang
+
+- synonym: "3294"
+  examples: |
+    - kagan
+
+- synonym: "6898"
+  examples: |
+    - kang ling
+
+- synonym: "3749"
+  examples: |
+    - kantilan
+
+- synonym: "3719"
+  examples: |
+    - kenyir
+
+- synonym: "3914"
+  examples: |
+    - karatali
+
+- synonym: "3804"
+  examples: |
+    - kasuk
+
+- synonym: "3516"
+  examples: |
+    - kelenang
+
+- synonym: "3517"
+  examples: |
+    - kempur
+
+- synonym: "3514"
+  examples: |
+    - kempyang
+
+- synonym: "3515"
+  examples: |
+    - khong
+
+- synonym: "3289"
+  examples: |
+    - kelmas
+
+- synonym: "2974"
+  examples: |
+    - kenang
+
+- synonym: "3293"
+  examples: |
+    - kete
+
+- synonym: "2972"
+  examples: |
+    - ketipung
+
+- synonym: "2973"
+  examples: |
+    - khaijari
+
+- synonym: "4868"
+  examples: |
+    - keteng-keteng
+
+- synonym: "4869"
+  examples: |
+    - kita
+
+- synonym: "2661"
+  examples: |
+    - klengkleng
+
+- synonym: "3678"
+  examples: |
+    - kondi
+
+- synonym: "3542"
+  examples: |
+    - kubing
+
+- synonym: "5476"
+  examples: |
+    - koncovka
+
+- synonym: "5470"
+  examples: |
+    - lakita
+
+- synonym: "4464"
+  examples: |
+    - kubangu
+
+- synonym: "3559"
+  examples: |
+    - kuding
+
+- synonym: "3280"
+  examples: |
+    - kulanter
+
+- synonym: "3525"
+  examples: |
+    - kulingtang
+
+- synonym: "4867"
+  examples: |
+    - kulliteng
+
+- synonym: "4463"
+  examples: |
+    - kulpaci
+
+- synonym: "3619"
+  examples: |
+    - kvakhi
+
+- synonym: "2983"
+  examples: |
+    - kvakhica
+
+- synonym: "3283"
+  examples: |
+    - lalakhi
+
+- synonym: "4774"
+  examples: |
+    - lesiba
+
+- synonym: "4462"
+  examples: |
+    - llg'ase
+
+- synonym: "4461"
+  examples: |
+    - lunko
+
+- synonym: "2977"
+  examples: |
+    - libbit
+
+- synonym: "3524"
+  examples: |
+    - malamala
+
+- synonym: "5465"
+  examples: |
+    - mala
+
+- synonym: "5403"
+  examples: |
+    - maliche
+
+- synonym: "5468"
+  examples: |
+    - mama
+
+- synonym: "3518"
+  examples: |
+    - maung
+
+- synonym: "3303"
+  examples: |
+    - medium
+
+- synonym: "3301"
+  examples: |
+    - mgba
+
+- synonym: "6970"
+  examples: |
+    - mini-caña
+
+- synonym: "6896"
+  examples: |
+    - nabal
+
+- synonym: "6897"
+  examples: |
+    - nag-beli-baja
+
+- synonym: "6971"
+  examples: |
+    - nambongo
+
+- synonym: "3788"
+  examples: |
+    - mugu
+
+- synonym: "3789"
+  examples: |
+    - ndingo
+
+- synonym: "2975"
+  examples: |
+    - nodo
+
+- synonym: "2976"
+  examples: |
+    - nyamalwa
+
+- synonym: "6678"
+  examples: |
+    - napiri
+
+- synonym: "4866"
+  examples: |
+    - nengnong
+
+- synonym: "4458"
+  examples: |
+    - ntja'ntuba
+
+- synonym: "5401"
+  examples: |
+    - orgo
+
+- synonym: "5402"
+  examples: |
+    - pava
+
+- synonym: "3309"
+  examples: |
+    - pachima
+
+- synonym: "3304"
+  examples: |
+    - pat
+
+- synonym: "3308"
+  examples: |
+    - pat mah
+
+- synonym: "3299"
+  examples: |
+    - pat waing
+
+- synonym: "3300"
+  examples: |
+    - pati
+
+- synonym: "3981"
+  examples: |
+    - pat-tala
+
+- synonym: "3790"
+  examples: |
+    - pattung
+
+- synonym: "3721"
+  examples: |
+    - penyacah
+
+- synonym: "2714"
+  examples: |
+    - palipal
+
+- synonym: "3296"
+  examples: |
+    - penten
+
+- synonym: "3298"
+  examples: |
+    - perng mang khok
+
+- synonym: "4865"
+  examples: |
+    - pagan
+
+- synonym: "4460"
+  examples: |
+    - piyapi
+
+- synonym: "6618"
+  examples: |
+    - pi mon
+
+- synonym: "5400"
+  examples: |
+    - pito
+
+- synonym: "6867"
+  examples: |
+    - pututu
+
+- synonym: "3527"
+  examples: |
+    - pong
+
+- synonym: "6671"
+  examples: |
+    - pujamahali
+
+- synonym: "5399"
+  examples: |
+    - p'ulu
+
+- synonym: "4459"
+  examples: |
+    - quatro
+
+- synonym: "5247"
+  examples: |
+    - qurma
+
+- synonym: "3969"
+  examples: |
+    - reco-reco
+
+- synonym: "2791"
+  examples: |
+    - rincik
+
+- synonym: "2984"
+  examples: |
+    - repinique
+
+- synonym: "5472"
+  examples: |
+    - ruisenor
+
+- synonym: "5474"
+  examples: |
+    - salamuri
+
+- synonym: "3626"
+  examples: |
+    - sangad
+
+- synonym: "3984"
+  examples: |
+    - sanje
+
+- synonym: "2712"
+  examples: |
+    - sanqioban
+
+- synonym: "5469"
+  examples: |
+    - sanka
+
+- synonym: "4456"
+  examples: |
+    - sapeh
+
+- synonym: "3753"
+  examples: |
+    - saron
+
+- synonym: "3713"
+  examples: |
+    - saron peking
+
+- synonym: "3717"
+  examples: |
+    - saron ricik
+
+- synonym: "3755"
+  examples: |
+    - saron slentem
+
+- synonym: "4722"
+  examples: |
+    - semsemiya
+
+- synonym: "4380"
+  examples: |
+    - seperewa
+
+- synonym: "2790"
+  examples: |
+    - sichyah
+
+- synonym: "5453"
+  examples: |
+    - sikuri
+
+- synonym: "4758"
+  examples: |
+    - sitolotolo
+
+- synonym: "2659"
+  examples: |
+    - skrabalas
+
+- synonym: "5461"
+  examples: |
+    - slowli
+
+- synonym: "5463"
+  examples: |
+    - sogum
+
+- synonym: "5455"
+  examples: |
+    - suli
+
+- synonym: "5459"
+  examples: |
+    - sulim
+
+- synonym: "2995"
+  examples: |
+    - soge
+
+- synonym: "3318"
+  examples: |
+    - sulibao
+
+- synonym: "3322"
+  examples: |
+    - surdo
+
+- synonym: "4455"
+  examples: |
+    - surmanjali
+
+- synonym: "2783"
+  examples: |
+    - tah
+
+- synonym: "2789"
+  examples: |
+    - tahca
+
+- synonym: "2671"
+  examples: |
+    - tajeraste
+
+- synonym: "2988"
+  examples: |
+    - tajeraste
+
+- synonym: "2989"
+  examples: |
+    - tambor
+
+- synonym: "3316"
+  examples: |
+    - tamborim
+
+- synonym: "3317"
+  examples: |
+    - tamale
+
+- synonym: "2782"
+  examples: |
+    - talam
+
+- synonym: "4888"
+  examples: |
+    - tambi
+
+- synonym: "4889"
+  examples: |
+    - tanggetong
+
+- synonym: "3624"
+  examples: |
+    - tamva
+
+- synonym: "6909"
+  examples: |
+    - tambuyuk
+
+- synonym: "2990"
+  examples: |
+    - tapattai
+
+- synonym: "3324"
+  examples: |
+    - tapon mon
+
+- synonym: "3325"
+  examples: |
+    - ukom
+
+- synonym: "2991"
+  examples: |
+    - zambola
+
+- synonym: "2658"
+  examples: |
+    - yinqing
+
+- synonym: "3506"
+  examples: |
+    - trompong
+
+- synonym: "2794"
+  examples: |
+    - than lvin
+
+- synonym: "3787"
+  examples: |
+    - tintinca
+
+- synonym: "2710"
+  examples: |
+    - va let kyot
+
+- synonym: "2603"
+  examples: |
+    - tribu
+
+- synonym: "4077"
+  examples: |
+    - tarawangsa
+
+- synonym: "4078"
+  examples: |
+    - tro u
+
+- synonym: "4369"
+  examples: |
+    - viola de cocho
+
+- synonym: "4682"
+  examples: |
+    - wolgum
+
+- synonym: "4408"
+  examples: |
+    - waji
+
+- synonym: "4409"
+  examples: |
+    - wa-konghu
+
+- synonym: "4684"
+  examples: |
+    - ut
+
+- synonym: "4454"
+  examples: |
+    - viola de cabaca
+
+- synonym: "5503"
+  examples: |
+    - tarba
+
+- synonym: "5498"
+  examples: |
+    - togus
+
+- synonym: "5502"
+  examples: |
+    - tongali
+
+- synonym: "6623"
+  examples: |
+    - tarpa
+
+- synonym: "6619"
+  examples: |
+    - tormay
+
+- synonym: "6622"
+  examples: |
+    - touloum
+
+- synonym: "5491"
+  examples: |
+    - tourterelle
+
+- synonym: "5493"
+  examples: |
+    - toyos
+
+- synonym: "6908"
+  examples: |
+    - tititala
+
+- synonym: "6624"
+  examples: |
+    - vilvile
+
+- synonym: "3629"
+  examples: |
+    - bülkül
+
+- synonym: "3534"
+  examples: |
+    - khawng
+
+- synonym: "3310"
+  examples: |
+    - taphon
+
+- synonym: "3313"
+  examples: |
+    - atsimewu
+
+- synonym: "5489"
+  examples: |
+    - dvojanka
+
+- synonym: "3314"
+  examples: |
+    - bofu
+
+- synonym: "3684"
+  examples: |
+    - setinkane
+
+- synonym: "5494"
+  examples: |
+    - au'taka'iori
+
+- synonym: "3533"
+  examples: |
+    - babendil
+
+- synonym: "2793"
+  examples: |
+    - bhusyah
+
+- synonym: "3311"
+  examples: |
+    - kantamdabadaba
+
+- synonym: "4452"
+  examples: |
+    - kudlung
+
+- synonym: "4678"
+  examples: |
+    - kudyapik
+
+- synonym: "4680"
+  examples: |
+    - kusyapik
+
+- synonym: "5484"
+  examples: |
+    - larchemi
+
+- synonym: "3505"
+  examples: |
+    - maung-zaing
+
+- synonym: "3335"
+  examples: |
+    - naykhim
+
+- synonym: "5488"
+  examples: |
+    - pusi p'iya
+
+- synonym: "5481"
+  examples: |
+    - salamiyya
+
+- synonym: "3911"
+  examples: |
+    - segbureh
+
+- synonym: "4885"
+  examples: |
+    - sluday
+
+- synonym: "4886"
+  examples: |
+    - takumbo
+
+- synonym: "3336"
+  examples: |
+    - thod dam
+
+- synonym: "5490"
+  examples: |
+    - tutek
+
+- synonym: "4887"
+  examples: |
+    - vicitra vina
+
+- synonym: "5479"
+  examples: |
+    - baju malta
+
+- synonym: "6907"
+  examples: |
+    - gulu
+
+- synonym: "5478"
+  examples: |
+    - hun
+
+- synonym: "3333"
+  examples: |
+    - kundu
+
+- synonym: "3800"
+  examples: |
+    - bukhsa
+
+- synonym: "3340"
+  examples: |
+    - conka
+
+- synonym: "2656"
+  examples: |
+    - gentorak
+
+- synonym: "3511"
+  examples: |
+    - jing
+
+- synonym: "3512"
+  examples: |
+    - kajar
+
+- synonym: "3509"
+  examples: |
+    - kemong
+
+- synonym: "3337"
+  examples: |
+    - kroboto
+
+- synonym: "3338"
+  examples: |
+    - krobotzi
+
+- synonym: "4675"
+  examples: |
+    - lavta
+
+- synonym: "4677"
+  examples: |
+    - sarki
+
+- synonym: "4447"
+  examples: |
+    - setar e rebab
+
+- synonym: "2779"
+  examples: |
+    - silnen
+
+- synonym: "3496"
+  examples: |
+    - suwukan
+
+- synonym: "2655"
+  examples: |
+    - ushinarashi
+
+- synonym: "3329"
+  examples: |
+    - tabla tarang
+
+- synonym: "5486"
+  examples: |
+    - muhali
+
+- synonym: "2654"
+  examples: |
+    - cloche double
+
+- synonym: "3536"
+  examples: |
+    - breng
+
+- synonym: "2610"
+  examples: |
+    - wadjira
+
+- synonym: "3971"
+  examples: |
+    - slentem
+
+- synonym: "3799"
+  examples: |
+    - selokkat
+
+- synonym: "2796"
+  examples: |
+    - kecer
+
+- synonym: "3330"
+  examples: |
+    - kao-kao
+
+- synonym: "2609"
+  examples: |
+    - klentong
+
+- synonym: "2997"
+  examples: |
+    - gordang
+
+- synonym: "3332"
+  examples: |
+    - mokko
+
+- synonym: "3497"
+  examples: |
+    - tawak
+
+- synonym: "3494"
+  examples: |
+    - canang
+
+- synonym: "2708"
+  examples: |
+    - kemanak
+
+- synonym: "4884"
+  examples: |
+    - lotong
+
+- synonym: "4883"
+  examples: |
+    - sasando
+
+- synonym: "5480"
+  examples: |
+    - flûte à bandeau
+
+- synonym: "6366"
+  examples: |
+    - keledi
+
+- synonym: "6696"
+  examples: |
+    - gangsingang
+
+- synonym: "3900"
+  examples: |
+    - gulung-gulung
+
+- synonym: "3349"
+  examples: |
+    - zaogu
+
+- synonym: "6692"
+  examples: |
+    - flûte traversière à membrane
+
+- synonym: "6672"
+  examples: |
+    - hautbois musette
+
+- synonym: "4951"
+  examples: |
+    - cithare sur caisse
+
+- synonym: "3347"
+  examples: |
+    - mbonda
+
+- synonym: "4450"
+  examples: |
+    - sangen
+
+- synonym: "6691"
+  examples: |
+    - sirène
+
+- synonym: "2607"
+  examples: |
+    - nzunzun
+
+- synonym: "4448"
+  examples: |
+    - ngonfi
+
+- synonym: "4008"
+  examples: |
+    - calon
+
+- synonym: "3784"
+  examples: |
+    - plaque sonore
+
+- synonym: "5424"
+  examples: |
+    - appeau
+
+- synonym: "4881"
+  examples: |
+    - cithare en bouclier
+
+- synonym: "4882"
+  examples: |
+    - cithare idiochorde
+
+- synonym: "5246"
+  examples: |
+    - clarinette idioglotte
+
+- synonym: "2606"
+  examples: |
+    - cloche simple
+
+- synonym: "3898"
+  examples: |
+    - hochet de cheville
+
+- synonym: "3899"
+  examples: |
+    - hochet en radeau
+
+- synonym: "3005"
+  examples: |
+    - tambour biconique
+
+- synonym: "3006"
+  examples: |
+    - tambour cylindro-conique
+
+- synonym: "2998"
+  examples: |
+    - tambour d'eau
+
+- synonym: "3003"
+  examples: |
+    - tambour en vase
+
+- synonym: "6693"
+  examples: |
+    - toupie à musique
+
+- synonym: "2605"
+  examples: |
+    - tambour de bois
+
+- synonym: "5639"
+  examples: |
+    - batterie
+
+- synonym: "5421"
+  examples: |
+    - cura kaval
+
+- synonym: "6976"
+  examples: |
+    - baritone
+
+- synonym: "5413"
+  examples: |
+    - english flageolet
+
+- synonym: "4832"
+  examples: |
+    - violette
+
+- synonym: "3343"
+  examples: |
+    - tambour à tension variable
+
+- synonym: "6968"
+  examples: |
+    - canne trompette
+
+- synonym: "2471"
+  examples: |
+    - sostenente piano
+
+- synonym: "4348"
+  examples: |
+    - guitare à la tierce
+
+- synonym: "2664"
+  examples: |
+    - windbell
+
+- synonym: "3004"
+  examples: |
+    - ditumba
+
+- synonym: "5275"
+  examples: |
+    - sigu bawa
+
+- synonym: "4084"
+  examples: |
+    - morin khuur
+
+- synonym: "5449"
+  examples: |
+    - flageolet français
+
+- synonym: "3743"
+  examples: |
+    - celesta
+
+- synonym: "2349"
+  examples: |
+    - orgue expressif
+
+- synonym: "2389"
+  examples: |
+    - orgue hydraulique
+
+- synonym: "3906"
+  examples: |
+    - andzolo
+
+- synonym: "3786"
+  examples: |
+    - récipient percuté
+
+- synonym: "4444"
+  examples: |
+    - prasarani vina
+
+- synonym: "4410"
+  examples: |
+    - harpe à pointe
+
+- synonym: "6906"
+  examples: |
+    - vuvuzela
+
+- synonym: "3945"
+  examples: |
+    - lengwow
+
+- synonym: "2284"
+  examples: |
+    - croix sonore
+
+- synonym: "4829"
+  examples: |
+    - controviolino
+
+- synonym: "3008"
+  examples: |
+    - tambour hochet
+
+- synonym: "6402"
+  examples: |
+    - symphonium
+
+- synonym: "4368"
+  examples: |
+    - decacorde
+
+- synonym: "2267"
+  examples: |
+    - embouchures
+
+- synonym: "2268"
+  examples: |
+    - baguettes
+
+- synonym: "2269"
+  examples: |
+    - plectres
+
+- synonym: "7075"
+  examples: |
+    - baguette
+
+- synonym: "7073"
+  examples: |
+    - embouchure
+
+- synonym: "7076"
+  examples: |
+    - plectre
+
+- synonym: "6690"
+  examples: |
+    - aérophone à implosion
+
+- synonym: "4347"
+  examples: |
+    - guitare alto
+
+- synonym: "4346"
+  examples: |
+    - guitare mandoline
+
+- synonym: "2283"
+  examples: |
+    - guitare midi
+
+- synonym: "4081"
+  examples: |
+    - ardanuchi
+
+- synonym: "3010"
+  examples: |
+    - atwereba
+
+- synonym: "3011"
+  examples: |
+    - jevetya
+
+- synonym: "3014"
+  examples: |
+    - klakacki
+
+- synonym: "3015"
+  examples: |
+    - laiyant
+
+- synonym: "3012"
+  examples: |
+    - ngoma za muheme
+
+- synonym: "3013"
+  examples: |
+    - woka
+
+- synonym: "5442"
+  examples: |
+    - cetirnice
+
+- synonym: "5444"
+  examples: |
+    - dul-ming
+
+- synonym: "5435"
+  examples: |
+    - ere-mugu
+
+- synonym: "5437"
+  examples: |
+    - fa'aili'ofe
+
+- synonym: "5430"
+  examples: |
+    - flutophone
+
+- synonym: "5431"
+  examples: |
+    - ko ling
+
+- synonym: "5426"
+  examples: |
+    - lopotökduda
+
+- synonym: "5428"
+  examples: |
+    - sijaltys
+
+- synonym: "6074"
+  examples: |
+    - trojnice
+
+- synonym: "6112"
+  examples: |
+    - xiflos
+
+- synonym: "6921"
+  examples: |
+    - hwang-teih
+
+- synonym: "6711"
+  examples: |
+    - klong put
+
+- synonym: "7069"
+  examples: |
+    - accordéon mécanique
+
+- synonym: "7068"
+  examples: |
+    - cithare mécanique
+
+- synonym: "2410"
+  examples: |
+    - piano quatuor
+
+- synonym: "3837"
+  examples: |
+    - rangle
+
+- synonym: "3552"
+  examples: |
+    - tombagl
+
+- synonym: "4738"
+  examples: |
+    - masonquo
+
+- synonym: "2321"
+  examples: |
+    - orgue-clavicorde
+
+- synonym: "2421"
+  examples: |
+    - harmonium-piano
+
+- synonym: "4968"
+  examples: |
+    - cithare d'accord
+
+- synonym: "4969"
+  examples: |
+    - dan tam thac luc
+
+- synonym: "4652"
+  examples: |
+    - bharata vina
+
+- synonym: "4653"
+  examples: |
+    - dambura
+
+- synonym: "3838"
+  examples: |
+    - arbu
+
+- synonym: "2707"
+  examples: |
+    - batte d'arlequin
+
+- synonym: "2600"
+  examples: |
+    - ceinture à grelots
+
+- synonym: "2877"
+  examples: |
+    - bibliku
+
+- synonym: "3521"
+  examples: |
+    - bonang barung
+
+- synonym: "3522"
+  examples: |
+    - bonang panembung
+
+- synonym: "3519"
+  examples: |
+    - bonang panerus
+
+- synonym: "2599"
+  examples: |
+    - cai tiu
+
+- synonym: "3835"
+  examples: |
+    - cimta
+
+- synonym: "3771"
+  examples: |
+    - duri dana
+
+- synonym: "5236"
+  examples: |
+    - balum
+
+- synonym: "5167"
+  examples: |
+    - accordéon chromatique
+
+- synonym: "5168"
+  examples: |
+    - accordéon électrique
+
+- synonym: "5245"
+  examples: |
+    - ciaramella
+
+- synonym: "6073"
+  examples: |
+    - fangufangu
+
+- synonym: "6071"
+  examples: |
+    - feku
+
+- synonym: "6403"
+  examples: |
+    - duduk
+
+- synonym: "5188"
+  examples: |
+    - dudy zywieckie
+
+- synonym: "2879"
+  examples: |
+    - garamut
+
+- synonym: "6919"
+  examples: |
+    - hai loa
+
+- synonym: "6920"
+  examples: |
+    - hwang-lapa
+
+- synonym: "4650"
+  examples: |
+    - kaca vina
+
+- synonym: "4651"
+  examples: |
+    - kachva sitar
+
+- synonym: "6117"
+  examples: |
+    - kaur
+
+- synonym: "6705"
+  examples: |
+    - kodokan
+
+- synonym: "3553"
+  examples: |
+    - komuz
+
+- synonym: "3843"
+  examples: |
+    - kulu
+
+- synonym: "2880"
+  examples: |
+    - lali
+
+- synonym: "3773"
+  examples: |
+    - launut
+
+- synonym: "5244"
+  examples: |
+    - madoura
+
+- synonym: "5170"
+  examples: |
+    - accordéon à bouche
+
+- synonym: "6116"
+  examples: |
+    - ong dich
+
+- synonym: "5169"
+  examples: |
+    - organetto
+
+- synonym: "4777"
+  examples: |
+    - pagolo
+
+- synonym: "5235"
+  examples: |
+    - peer boor egah
+
+- synonym: "6918"
+  examples: |
+    - pu
+
+- synonym: "2598"
+  examples: |
+    - bol musical
+
+- synonym: "6709"
+  examples: |
+    - anche à ruban
+
+- synonym: "3841"
+  examples: |
+    - rin-no-tama
+
+- synonym: "2706"
+  examples: |
+    - sanh
+
+- synonym: "3555"
+  examples: |
+    - susap
+
+- synonym: "2899"
+  examples: |
+    - tien-kou
+
+- synonym: "2900"
+  examples: |
+    - trong
+
+- synonym: "2885"
+  examples: |
+    - trong boc
+
+- synonym: "2890"
+  examples: |
+    - trong cai
+
+- synonym: "2882"
+  examples: |
+    - trong chien
+
+- synonym: "2884"
+  examples: |
+    - trong manh
+
+- synonym: "2893"
+  examples: |
+    - trong va
+
+- synonym: "2894"
+  examples: |
+    - tunkul
+
+- synonym: "2892"
+  examples: |
+    - tuvung
+
+- synonym: "6917"
+  examples: |
+    - shosh
+
+- synonym: "6715"
+  examples: |
+    - saxhorn sopranino
+
+- synonym: "6916"
+  examples: |
+    - tapae
+
+- synonym: "6913"
+  examples: |
+    - tu hoa
+
+- synonym: "6803"
+  examples: |
+    - trombone à pistons
+
+- synonym: "5187"
+  examples: |
+    - shuvir
+
+- synonym: "4967"
+  examples: |
+    - sruti vina
+
+- synonym: "4649"
+  examples: |
+    - torbane
+
+- synonym: "4965"
+  examples: |
+    - sousounou
+
+- synonym: "4966"
+  examples: |
+    - ta'khay
+
+- synonym: "4962"
+  examples: |
+    - tambol
+
+- synonym: "6068"
+  examples: |
+    - t'ongso
+
+- synonym: "6064"
+  examples: |
+    - svirchitsa
+
+- synonym: "6067"
+  examples: |
+    - tulak
+
+- synonym: "2602"
+  examples: |
+    - zang
+
+- synonym: "2904"
+  examples: |
+    - zirbaghali
+
+- synonym: "2901"
+  examples: |
+    - pan-kou
+
+- synonym: "6912"
+  examples: |
+    - bher
+
+- synonym: "6404"
+  examples: |
+    - hautbois basse
+
+- synonym: "6805"
+  examples: |
+    - trombone contrebasse
+
+- synonym: "6317"
+  examples: |
+    - cor à embouchure latérale
+
+- synonym: "2498"
+  examples: |
+    - carapace de tortue
+
+- synonym: "2514"
+  examples: |
+    - effet du galop de cheval
+
+- synonym: "6703"
+  examples: |
+    - effet klaxon
+
+- synonym: "6695"
+  examples: |
+    - megaphone
+
+- synonym: "6700"
+  examples: |
+    - raspberry
+
+- synonym: "5418"
+  examples: |
+    - flûte pigeon
+
+- synonym: "5419"
+  examples: |
+    - czakan
+
+- synonym: "6702"
+  examples: |
+    - tiet-tiet
+
+- synonym: "4648"
+  examples: |
+    - qinqin
+
+- synonym: "5166"
+  examples: |
+    - accordéon hybride
+
+- synonym: "5164"
+  examples: |
+    - concertina chemnitzer
+
+- synonym: "5165"
+  examples: |
+    - concertina anglais
+
+- synonym: "5185"
+  examples: |
+    - grande cornemuse écossaise
+
+- synonym: "5186"
+  examples: |
+    - svrljiske gajde
+
+- synonym: "5183"
+  examples: |
+    - vlaske gajde
+
+- synonym: "6318"
+  examples: |
+    - cor russe
+
+- synonym: "5243"
+  examples: |
+    - hornpipe
+
+- synonym: "4334"
+  examples: |
+    - guitare double
+
+- synonym: "4747"
+  examples: |
+    - mandoline double
+
+- synonym: "2233"
+  examples: |
+    - violoncelle piccolo
+
+- synonym: "4961"
+  examples: |
+    - scheitholt
+
+- synonym: "2906"
+  examples: |
+    - tom-tom
+
+- synonym: "2364"
+  examples: |
+    - virginal double
+
+- synonym: "2355"
+  examples: |
+    - physharmonica
+
+- synonym: "2403"
+  examples: |
+    - klavizilinder
+
+- synonym: "2404"
+  examples: |
+    - glockenspiel à clavier
+
+- synonym: "2497"
+  examples: |
+    - klaxon
+
+- synonym: "2401"
+  examples: |
+    - melodion
+
+- synonym: "6669"
+  examples: |
+    - hautbois double
+
+- synonym: "5416"
+  examples: |
+    - flûte triple
+
+- synonym: "6911"
+  examples: |
+    - trompe à embouchure terminale
+
+- synonym: "6967"
+  examples: |
+    - trompe à embouchure latérale
+
+- synonym: "3350"
+  examples: |
+    - tambour pincé
+
+- synonym: "7066"
+  examples: |
+    - piano reproducteur
+
+- synonym: "4960"
+  examples: |
+    - kundi
+
+- synonym: "2281"
+  examples: |
+    - accord guitar
+
+- synonym: "2282"
+  examples: |
+    - accordéon-synthetiseur
+
+- synonym: "2276"
+  examples: |
+    - assemblage de modules électroniques
+
+- synonym: "2595"
+  examples: |
+    - carillon électrique
+
+- synonym: "3774"
+  examples: |
+    - percussion électronique
+
+- synonym: "5163"
+  examples: |
+    - accordéon électronique
+
+- synonym: "6070"
+  examples: |
+    - flûte à bec alto
+
+- synonym: "7004"
+  examples: |
+    - amorette
+
+- synonym: "7000"
+  examples: |
+    - ariosa
+
+- synonym: "7003"
+  examples: |
+    - ariston
+
+- synonym: "7058"
+  examples: |
+    - autopiano
+
+- synonym: "7062"
+  examples: |
+    - autopleyela
+
+- synonym: "2907"
+  examples: |
+    - tambour automatique
+
+- synonym: "4301"
+  examples: |
+    - vièle à vessie
+
+- synonym: "3834"
+  examples: |
+    - cabaca
+
+- synonym: "2384"
+  examples: |
+    - orgue de cabinet
+
+- synonym: "2704"
+  examples: |
+    - cai ban nhac
+
+- synonym: "6997"
+  examples: |
+    - cartonium
+
+- synonym: "3692"
+  examples: |
+    - claviola
+
+- synonym: "2351"
+  examples: |
+    - claviphone
+
+- synonym: "6670"
+  examples: |
+    - cwane
+
+- synonym: "6995"
+  examples: |
+    - epinette à cylindre
+
+- synonym: "6699"
+  examples: |
+    - instrument à anche libre
+
+- synonym: "2495"
+  examples: |
+    - fusu de nuxi
+
+- synonym: "2601"
+  examples: |
+    - gshang
+
+- synonym: "2352"
+  examples: |
+    - harmoniphone
+
+- synonym: "2382"
+  examples: |
+    - harmonium-orgue
+
+- synonym: "7057"
+  examples: |
+    - harmonista
+
+- synonym: "6993"
+  examples: |
+    - herophon
+
+- synonym: "7051"
+  examples: |
+    - humanola
+
+- synonym: "7055"
+  examples: |
+    - kalliope
+
+- synonym: "6994"
+  examples: |
+    - kalliston
+
+- synonym: "3745"
+  examples: |
+    - harpeal
+
+- synonym: "6405"
+  examples: |
+    - hoep
+
+- synonym: "6910"
+  examples: |
+    - kamay
+
+- synonym: "6121"
+  examples: |
+    - flejguta
+
+- synonym: "7047"
+  examples: |
+    - komet
+
+- synonym: "2597"
+  examples: |
+    - ling
+
+- synonym: "6991"
+  examples: |
+    - manopan
+
+- synonym: "6992"
+  examples: |
+    - harmonium mécanique
+
+- synonym: "6120"
+  examples: |
+    - meifluitje
+
+- synonym: "7044"
+  examples: |
+    - melotrope
+
+- synonym: "6990"
+  examples: |
+    - mezon
+
+- synonym: "7045"
+  examples: |
+    - mira
+
+- synonym: "2353"
+  examples: |
+    - harmonium à bouche
+
+- synonym: "3556"
+  examples: |
+    - mukkuri
+
+- synonym: "3827"
+  examples: |
+    - nhac
+
+- synonym: "3746"
+  examples: |
+    - ocleal
+
+- synonym: "4191"
+  examples: |
+    - vièle à pique
+
+- synonym: "6988"
+  examples: |
+    - organina
+
+- synonym: "3747"
+  examples: |
+    - orpheal
+
+- synonym: "2759"
+  examples: |
+    - penzhong
+
+- synonym: "7039"
+  examples: |
+    - phonola
+
+- synonym: "7041"
+  examples: |
+    - piano pneumatique
+
+- synonym: "2910"
+  examples: |
+    - roto-toms
+
+- synonym: "5240"
+  examples: |
+    - scramia betu
+
+- synonym: "3768"
+  examples: |
+    - idiophone frappé
+
+- synonym: "6924"
+  examples: |
+    - sunnaya
+
+- synonym: "7036"
+  examples: |
+    - symphonion
+
+- synonym: "6119"
+  examples: |
+    - flûte à une main
+
+- synonym: "7037"
+  examples: |
+    - tingel-tangel
+
+- synonym: "2354"
+  examples: |
+    - tonoscope-harmonium
+
+- synonym: "5242"
+  examples: |
+    - trompet van halle
+
+- synonym: "6923"
+  examples: |
+    - tuiter
+
+- synonym: "3826"
+  examples: |
+    - hochet globulaire
+
+- synonym: "6118"
+  examples: |
+    - sifflet à eau
+
+- synonym: "4188"
+  examples: |
+    - braci
+
+- synonym: "4189"
+  examples: |
+    - bracsa
+
+- synonym: "4187"
+  examples: |
+    - violon-sabot
+
+- synonym: "3946"
+  examples: |
+    - idiophone râclé
+
+- synonym: "3947"
+  examples: |
+    - râcloir tube
+
+- synonym: "2400"
+  examples: |
+    - pianino
+
+- synonym: "4971"
+  examples: |
+    - gusli
+
+- synonym: "5179"
+  examples: |
+    - bock
+
+- synonym: "2469"
+  examples: |
+    - cembalet
+
+- synonym: "2467"
+  examples: |
+    - nähtischklavier
+
+- synonym: "2468"
+  examples: |
+    - piano oblique
+
+- synonym: "4670"
+  examples: |
+    - domra
+
+- synonym: "4671"
+  examples: |
+    - panôtar
+
+- synonym: "2409"
+  examples: |
+    - streichklavier
+
+- synonym: "6352"
+  examples: |
+    - fox horn
+
+- synonym: "6338"
+  examples: |
+    - jagdzink
+
+- synonym: "6965"
+  examples: |
+    - cor de berger
+
+- synonym: "4326"
+  examples: |
+    - katjapi
+
+- synonym: "4813"
+  examples: |
+    - violino piccolo
+
+- synonym: "5272"
+  examples: |
+    - martinstrompete
+
+- synonym: "6330"
+  examples: |
+    - parforce horn
+
+- synonym: "5446"
+  examples: |
+    - wildruf
+
+- synonym: "4949"
+  examples: |
+    - raffele
+
+- synonym: "4739"
+  examples: |
+    - kisir
+
+- synonym: "5274"
+  examples: |
+    - pungi
+
+- synonym: "3769"
+  examples: |
+    - ch'uk
+
+- synonym: "2701"
+  examples: |
+    - kasik
+
+- synonym: "2703"
+  examples: |
+    - cuillères
+
+- synonym: "3557"
+  examples: |
+    - afiw
+
+- synonym: "3558"
+  examples: |
+    - kinaban
+
+- synonym: "5189"
+  examples: |
+    - bayan
+
+- synonym: "2596"
+  examples: |
+    - chung
+
+- synonym: "2912"
+  examples: |
+    - dadabuan
+
+- synonym: "3833"
+  examples: |
+    - hochet sur bâton
+
+- synonym: "3959"
+  examples: |
+    - tagutok
+
+- synonym: "3523"
+  examples: |
+    - tanggunggu
+
+- synonym: "4647"
+  examples: |
+    - jungga
+
+- synonym: "4186"
+  examples: |
+    - kutet
+
+- synonym: "4970"
+  examples: |
+    - serongagandi
+
+- synonym: "5239"
+  examples: |
+    - sahunay
+
+- synonym: "6129"
+  examples: |
+    - mimby
+
+- synonym: "4411"
+  examples: |
+    - kin
+
+- synonym: "4950"
+  examples: |
+    - lokanga voatavo
+
+- synonym: "4185"
+  examples: |
+    - cimboa
+
+- synonym: "6922"
+  examples: |
+    - buzio
+
+- synonym: "3955"
+  examples: |
+    - ferrinho
+
+- synonym: "6127"
+  examples: |
+    - bangsi
+
+- synonym: "6128"
+  examples: |
+    - kaleleng
+
+- synonym: "6125"
+  examples: |
+    - paldong
+
+- synonym: "6126"
+  examples: |
+    - palendag
+
+- synonym: "6123"
+  examples: |
+    - parundag
+
+- synonym: "6124"
+  examples: |
+    - wot
+
+- synonym: "3829"
+  examples: |
+    - bâton de pluie
+
+- synonym: "6122"
+  examples: |
+    - choor
+
+- synonym: "4181"
+  examples: |
+    - akanyembe
+
+- synonym: "4184"
+  examples: |
+    - zlobcoki
+
+- synonym: "4327"
+  examples: |
+    - zeze
+
+- synonym: "4324"
+  examples: |
+    - wandidi
+
+- synonym: "4325"
+  examples: |
+    - tautirut
+
+- synonym: "4322"
+  examples: |
+    - tarhu
+
+- synonym: "4176"
+  examples: |
+    - taratibu
+
+- synonym: "4323"
+  examples: |
+    - speles
+
+- synonym: "4179"
+  examples: |
+    - soussi ribab
+
+- synonym: "4174"
+  examples: |
+    - so i
+
+- synonym: "4320"
+  examples: |
+    - segankuru
+
+- synonym: "4175"
+  examples: |
+    - arababu
+
+- synonym: "4282"
+  examples: |
+    - bambir
+
+- synonym: "4283"
+  examples: |
+    - biola
+
+- synonym: "4280"
+  examples: |
+    - byzaanchy
+
+- synonym: "4281"
+  examples: |
+    - chuniri
+
+- synonym: "4273"
+  examples: |
+    - dayuray
+
+- synonym: "4276"
+  examples: |
+    - dra khmer
+
+- synonym: "4266"
+  examples: |
+    - dra u
+
+- synonym: "4267"
+  examples: |
+    - duruga
+
+- synonym: "4299"
+  examples: |
+    - enserunai
+
+- synonym: "4300"
+  examples: |
+    - finini
+
+- synonym: "4295"
+  examples: |
+    - garadap
+
+- synonym: "4296"
+  examples: |
+    - gesok-gesok
+
+- synonym: "4291"
+  examples: |
+    - godié
+
+- synonym: "4294"
+  examples: |
+    - gondze
+
+- synonym: "4284"
+  examples: |
+    - gudok
+
+- synonym: "4321"
+  examples: |
+    - guslice
+
+- synonym: "4287"
+  examples: |
+    - huluhu
+
+- synonym: "4240"
+  examples: |
+    - hun tayàw
+
+- synonym: "4242"
+  examples: |
+    - huobusi
+
+- synonym: "4237"
+  examples: |
+    - hushtar
+
+- synonym: "4239"
+  examples: |
+    - husla
+
+- synonym: "4233"
+  examples: |
+    - idonongo
+
+- synonym: "4236"
+  examples: |
+    - iklig
+
+- synonym: "4228"
+  examples: |
+    - joza
+
+- synonym: "4229"
+  examples: |
+    - k'aman
+
+- synonym: "4263"
+  examples: |
+    - kalembete
+
+- synonym: "4264"
+  examples: |
+    - kaligo
+
+- synonym: "4257"
+  examples: |
+    - kalyakalya
+
+- synonym: "4258"
+  examples: |
+    - khuuchir
+
+- synonym: "4250"
+  examples: |
+    - kikir
+
+- synonym: "4329"
+  examples: |
+    - kízh kízh díhí
+
+- synonym: "4256"
+  examples: |
+    - kokin
+
+- synonym: "4243"
+  examples: |
+    - kowodigo
+
+- synonym: "4245"
+  examples: |
+    - kucho
+
+- synonym: "4330"
+  examples: |
+    - kukuma
+
+- synonym: "4205"
+  examples: |
+    - litlit
+
+- synonym: "4206"
+  examples: |
+    - maguhu
+
+- synonym: "4203"
+  examples: |
+    - mbeveve
+
+- synonym: "4204"
+  examples: |
+    - mbike
+
+- synonym: "4198"
+  examples: |
+    - mugole
+
+- synonym: "4200"
+  examples: |
+    - murdap
+
+- synonym: "4196"
+  examples: |
+    - niujiaoqin
+
+- synonym: "4197"
+  examples: |
+    - niutuiqin
+
+- synonym: "4224"
+  examples: |
+    - njarka
+
+- synonym: "4226"
+  examples: |
+    - nyanyeru
+
+- synonym: "4219"
+  examples: |
+    - orutu
+
+- synonym: "4221"
+  examples: |
+    - pena
+
+- synonym: "4217"
+  examples: |
+    - pi-wang
+
+- synonym: "4218"
+  examples: |
+    - pulluvan vina
+
+- synonym: "4328"
+  examples: |
+    - pusline
+
+- synonym: "4214"
+  examples: |
+    - rabeca
+
+- synonym: "4215"
+  examples: |
+    - remba
+
+- synonym: "4193"
+  examples: |
+    - riti
+
+- synonym: "4194"
+  examples: |
+    - robeka
+
+- synonym: "3352"
+  examples: |
+    - aki
+
+- synonym: "3353"
+  examples: |
+    - akilwa
+
+- synonym: "6329"
+  examples: |
+    - baoorgo
+
+- synonym: "3375"
+  examples: |
+    - bendré
+
+- synonym: "3376"
+  examples: |
+    - bérenté
+
+- synonym: "3368"
+  examples: |
+    - biô
+
+- synonym: "3373"
+  examples: |
+    - dangossènè
+
+- synonym: "3381"
+  examples: |
+    - dendene-sa
+
+- synonym: "3382"
+  examples: |
+    - djolon
+
+- synonym: "3377"
+  examples: |
+    - dontoumon
+
+- synonym: "3380"
+  examples: |
+    - eguan
+
+- synonym: "3360"
+  examples: |
+    - gangango
+
+- synonym: "3362"
+  examples: |
+    - gangari
+
+- synonym: "3355"
+  examples: |
+    - gangât
+
+- synonym: "3358"
+  examples: |
+    - goilbi
+
+- synonym: "3365"
+  examples: |
+    - gongon
+
+- synonym: "3366"
+  examples: |
+    - gouagnon
+
+- synonym: "3363"
+  examples: |
+    - guagulu
+
+- synonym: "3364"
+  examples: |
+    - gubié
+
+- synonym: "3397"
+  examples: |
+    - gudolo
+
+- synonym: "3398"
+  examples: |
+    - gufalo
+
+- synonym: "3395"
+  examples: |
+    - gussiné bié
+
+- synonym: "3396"
+  examples: |
+    - youba
+
+- synonym: "3403"
+  examples: |
+    - tourou
+
+- synonym: "3404"
+  examples: |
+    - tondôrou
+
+- synonym: "3399"
+  examples: |
+    - téhindé
+
+- synonym: "3402"
+  examples: |
+    - rabingo
+
+- synonym: "3386"
+  examples: |
+    - palandan
+
+- synonym: "3388"
+  examples: |
+    - lonlonga
+
+- synonym: "3384"
+  examples: |
+    - lunga
+
+- synonym: "3385"
+  examples: |
+    - minigé
+
+- synonym: "3391"
+  examples: |
+    - ndo
+
+- synonym: "2653"
+  examples: |
+    - zan
+
+- synonym: "5518"
+  examples: |
+    - chakolao
+
+- synonym: "5520"
+  examples: |
+    - hir
+
+- synonym: "5689"
+  examples: |
+    - juanhuru
+
+- synonym: "5691"
+  examples: |
+    - kaa-woubié
+
+- synonym: "5684"
+  examples: |
+    - koko
+
+- synonym: "5688"
+  examples: |
+    - netelewua
+
+- synonym: "5682"
+  examples: |
+    - wiiga
+
+- synonym: "5683"
+  examples: |
+    - wossir
+
+- synonym: "5658"
+  examples: |
+    - woua-parforô
+
+- synonym: "5659"
+  examples: |
+    - woubié
+
+- synonym: "5655"
+  examples: |
+    - woukon
+
+- synonym: "5656"
+  examples: |
+    - wujan
+
+- synonym: "5640"
+  examples: |
+    - wunagele
+
+- synonym: "5648"
+  examples: |
+    - yagapi
+
+- synonym: "5531"
+  examples: |
+    - ya-woubié
+
+- synonym: "5638"
+  examples: |
+    - yèrè
+
+- synonym: "5522"
+  examples: |
+    - cerelu
+
+- synonym: "5530"
+  examples: |
+    - duuliyaaru
+
+- synonym: "5521"
+  examples: |
+    - yéléga
+
+- synonym: "5271"
+  examples: |
+    - bumpan
+
+- synonym: "5269"
+  examples: |
+    - fawinin
+
+- synonym: "4385"
+  examples: |
+    - kolondjo
+
+- synonym: "4378"
+  examples: |
+    - n'goni
+
+- synonym: "4379"
+  examples: |
+    - tokô
+
+- synonym: "6328"
+  examples: |
+    - ninurunu
+
+- synonym: "4660"
+  examples: |
+    - gurmi
+
+- synonym: "4658"
+  examples: |
+    - jurukélé
+
+- synonym: "4659"
+  examples: |
+    - kone
+
+- synonym: "4655"
+  examples: |
+    - kundé
+
+- synonym: "4657"
+  examples: |
+    - tahardant
+
+- synonym: "4654"
+  examples: |
+    - tahardjan
+
+- synonym: "4775"
+  examples: |
+    - dienguela
+
+- synonym: "4776"
+  examples: |
+    - lonlon
+
+- synonym: "3942"
+  examples: |
+    - sissaka
+
+- synonym: "3688"
+  examples: |
+    - kone
+
+- synonym: "4005"
+  examples: |
+    - djanou
+
+- synonym: "4001"
+  examples: |
+    - djil
+
+- synonym: "4004"
+  examples: |
+    - golagni
+
+- synonym: "3999"
+  examples: |
+    - hélé
+
+- synonym: "4000"
+  examples: |
+    - tregnon
+
+- synonym: "3998"
+  examples: |
+    - xèma
+
+- synonym: "4954"
+  examples: |
+    - koni
+
+- synonym: "4959"
+  examples: |
+    - salangoun
+
+- synonym: "4952"
+  examples: |
+    - tianhoun

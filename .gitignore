@@ -4,6 +4,7 @@ action.json
 endpoints.yml
 **.db**
 rei.sh
+.rasa
 
 
 # Byte-compiled / optimized / DLL files
