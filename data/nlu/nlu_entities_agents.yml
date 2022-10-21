@@ -36,83 +36,83 @@ nlu:
 
 - synonym: "47278"
   examples: |
-    - a
+    - a. b. idiartborde
 
 - synonym: "48438"
   examples: |
-    - a
+    - a. barette
 
 - synonym: "46546"
   examples: |
-    - a
+    - a. beaufils
 
 - synonym: "39867"
   examples: |
-    - a
+    - a. chelard
 
 - synonym: "52891"
   examples: |
-    - a
+    - a. chevillard
 
 - synonym: "811173"
   examples: |
-    - a
+    - a. corret
 
 - synonym: "47459"
   examples: |
-    - a
+    - a. croisez
 
 - synonym: "33673"
   examples: |
-    - a
+    - a. de cousu
 
 - synonym: "47359"
   examples: |
-    - a
+    - a. donnadieu
 
 - synonym: "34157"
   examples: |
-    - a
+    - a. filipenko
 
 - synonym: "46963"
   examples: |
-    - a
+    - a. friez
 
 - synonym: "41554"
   examples: |
-    - a
+    - a. gebauer
 
 - synonym: "47268"
   examples: |
-    - a
+    - a. guidike
 
 - synonym: "54860"
   examples: |
-    - a
+    - a. hayes
 
 - synonym: "36121"
   examples: |
-    - a
+    - a. magnani
 
 - synonym: "47085"
   examples: |
-    - a
+    - a. marz
 
 - synonym: "56186"
   examples: |
-    - a
+    - a. neunhaber
 
 - synonym: "1000933"
   examples: |
-    - a
+    - a. seymour brown
 
 - synonym: "39480"
   examples: |
-    - a
+    - a.j. cavaillé
 
 - synonym: "42937"
   examples: |
-    - a
+    - a.w. benoy
 
 - synonym: "443424"
   examples: |
@@ -832,7 +832,7 @@ nlu:
 
 - synonym: "43922"
   examples: |
-    - albert d
+    - albert d. schmutz
 
 - synonym: "239863"
   examples: |
@@ -1468,7 +1468,7 @@ nlu:
 
 - synonym: "225303"
   examples: |
-    - allan w
+    - allan w. atlas
 
 - synonym: "432371"
   examples: |
@@ -1548,7 +1548,7 @@ nlu:
 
 - synonym: "618498"
   examples: |
-    - alpuerto
+    - alpuerto. ed.
 
 - synonym: "447682"
   examples: |
@@ -2076,11 +2076,11 @@ nlu:
 
 - synonym: "896320"
   examples: |
-    - andrew b
+    - andrew b. sterling
 
 - synonym: "45936"
   examples: |
-    - andrew c
+    - andrew c. fox
 
 - synonym: "44597"
   examples: |
@@ -2352,7 +2352,7 @@ nlu:
 
 - synonym: "39820"
   examples: |
-    - annie t
+    - annie t. weston
 
 - synonym: "431343"
   examples: |
@@ -2396,7 +2396,7 @@ nlu:
 
 - synonym: "48135"
   examples: |
-    - anthony g
+    - anthony g. petti
 
 - synonym: "47536"
   examples: |
@@ -2408,7 +2408,7 @@ nlu:
 
 - synonym: "37681"
   examples: |
-    - anthony j
+    - anthony j. cirone
 
 - synonym: "51233"
   examples: |
@@ -2596,7 +2596,7 @@ nlu:
 
 - synonym: "596784"
   examples: |
-    - anton j
+    - anton j. benjamin
 
 - synonym: "60986"
   examples: |
@@ -2904,7 +2904,7 @@ nlu:
 
 - synonym: "219456"
   examples: |
-    - armelin musica
+    - armelin musica. ed.
 
 - synonym: "47465"
   examples: |
@@ -2964,7 +2964,7 @@ nlu:
 
 - synonym: "42050"
   examples: |
-    - arnold f
+    - arnold f. riedhammer
 
 - synonym: "33432"
   examples: |
@@ -3348,7 +3348,7 @@ nlu:
 
 - synonym: "47440"
   examples: |
-    - austyn r
+    - austyn r. edwards
 
 - synonym: "462924"
   examples: |
@@ -3376,39 +3376,39 @@ nlu:
 
 - synonym: "34926"
   examples: |
-    - b
+    - b. bernards
 
 - synonym: "35679"
   examples: |
-    - b
+    - b. bjelinski
 
 - synonym: "59664"
   examples: |
-    - b
+    - b. ferreira
 
 - synonym: "59711"
   examples: |
-    - b
+    - b. hill
 
 - synonym: "35695"
   examples: |
-    - b
+    - b. kunc
 
 - synonym: "34904"
   examples: |
-    - b
+    - b. markevitch
 
 - synonym: "33654"
   examples: |
-    - b
+    - b. schmid
 
 - synonym: "50241"
   examples: |
-    - b
+    - b. tommy andersson
 
 - synonym: "47258"
   examples: |
-    - b
+    - b.b. king
 
 - synonym: "35398"
   examples: |
@@ -3496,7 +3496,7 @@ nlu:
 
 - synonym: "56616"
   examples: |
-    - barry e
+    - barry e. kopetz
 
 - synonym: "42982"
   examples: |
@@ -4396,7 +4396,7 @@ nlu:
 
 - synonym: "226464"
   examples: |
-    - bosse
+    - bosse. g.
 
 - synonym: "453334"
   examples: |
@@ -4516,7 +4516,7 @@ nlu:
 
 - synonym: "46766"
   examples: |
-    - brian l
+    - brian l. bowman
 
 - synonym: "53212"
   examples: |
@@ -4564,7 +4564,7 @@ nlu:
 
 - synonym: "812117"
   examples: |
-    - bruce a
+    - bruce a. thompson
 
 - synonym: "42738"
   examples: |
@@ -4732,7 +4732,7 @@ nlu:
 
 - synonym: "44685"
   examples: |
-    - burnet c
+    - burnet c. tuthill
 
 - synonym: "41052"
   examples: |
@@ -4760,51 +4760,51 @@ nlu:
 
 - synonym: "44896"
   examples: |
-    - c
+    - c. albertine
 
 - synonym: "42511"
   examples: |
-    - c
+    - c. cotterill scholefield
 
 - synonym: "56206"
   examples: |
-    - c
+    - c. flor
 
 - synonym: "52162"
   examples: |
-    - c
+    - c. forsberg
 
 - synonym: "38331"
   examples: |
-    - c
+    - c. galos
 
 - synonym: "56213"
   examples: |
-    - c
+    - c. geist
 
 - synonym: "34638"
   examples: |
-    - c
+    - c. mantovani
 
 - synonym: "59676"
   examples: |
-    - c
+    - c. putman
 
 - synonym: "559322"
   examples: |
-    - c
+    - c. webster
 
 - synonym: "45561"
   examples: |
-    - c
+    - c.h.h parry
 
 - synonym: "993151"
   examples: |
-    - c
+    - c.n.i.m.a. - jacques mornet
 
 - synonym: "33839"
   examples: |
-    - c
+    - c.r. brijon
 
 - synonym: "458793"
   examples: |
@@ -4900,7 +4900,7 @@ nlu:
 
 - synonym: "63015"
   examples: |
-    - canton de vaud
+    - canton de vaud. département de l'instruction publique et des cultes
 
 - synonym: "462872"
   examples: |
@@ -5216,7 +5216,7 @@ nlu:
 
 - synonym: "45697"
   examples: |
-    - carroll m
+    - carroll m. butts
 
 - synonym: "890461"
   examples: |
@@ -5476,15 +5476,15 @@ nlu:
 
 - synonym: "43483"
   examples: |
-    - ch
+    - ch. de marescot
 
 - synonym: "39794"
   examples: |
-    - ch
+    - ch. seringes
 
 - synonym: "43123"
   examples: |
-    - ch
+    - ch.g. soupe
 
 - synonym: "759240"
   examples: |
@@ -5616,7 +5616,7 @@ nlu:
 
 - synonym: "51559"
   examples: |
-    - charles e
+    - charles e. king
 
 - synonym: "558549"
   examples: |
@@ -5624,7 +5624,7 @@ nlu:
 
 - synonym: "45859"
   examples: |
-    - charles f
+    - charles f. gouse
 
 - synonym: "45307"
   examples: |
@@ -5760,11 +5760,11 @@ nlu:
 
 - synonym: "794853"
   examples: |
-    - charles s
+    - charles s. brauner
 
 - synonym: "821230"
   examples: |
-    - charles t
+    - charles t. yeago
 
 - synonym: "33941"
   examples: |
@@ -5784,7 +5784,7 @@ nlu:
 
 - synonym: "40284"
   examples: |
-    - charles w
+    - charles w. green
 
 - synonym: "44731"
   examples: |
@@ -6248,7 +6248,7 @@ nlu:
 
 - synonym: "53406"
   examples: |
-    - christopher m
+    - christopher m. edmunds
 
 - synonym: "44228"
   examples: |
@@ -6300,7 +6300,7 @@ nlu:
 
 - synonym: "906551"
   examples: |
-    - chuo art publishing co
+    - chuo art publishing co. inc
 
 - synonym: "462088"
   examples: |
@@ -6328,7 +6328,7 @@ nlu:
 
 - synonym: "53798"
   examples: |
-    - clair w
+    - clair w. johnson
 
 - synonym: "46636"
   examples: |
@@ -6524,7 +6524,7 @@ nlu:
 
 - synonym: "46246"
   examples: |
-    - claude t
+    - claude t. smith
 
 - synonym: "54735"
   examples: |
@@ -6700,7 +6700,7 @@ nlu:
 
 - synonym: "44983"
   examples: |
-    - colin a
+    - colin a. h. asher
 
 - synonym: "46213"
   examples: |
@@ -6776,7 +6776,7 @@ nlu:
 
 - synonym: "634770"
   examples: |
-    - concordia publ
+    - concordia publ. house
 
 - synonym: "45760"
   examples: |
@@ -6944,7 +6944,7 @@ nlu:
 
 - synonym: "59698"
   examples: |
-    - craig a
+    - craig a. penfield
 
 - synonym: "896616"
   examples: |
@@ -7076,7 +7076,7 @@ nlu:
 
 - synonym: "54425"
   examples: |
-    - cynthia c
+    - cynthia c. barlow
 
 - synonym: "1122321"
   examples: |
@@ -7092,27 +7092,27 @@ nlu:
 
 - synonym: "35685"
   examples: |
-    - d
+    - d. despic
 
 - synonym: "56220"
   examples: |
-    - d
+    - d. erich
 
 - synonym: "906560"
   examples: |
-    - d
+    - d. goyone
 
 - synonym: "47289"
   examples: |
-    - d
+    - d. semenzato
 
 - synonym: "56074"
   examples: |
-    - d
+    - d. wayne goforth
 
 - synonym: "35336"
   examples: |
-    - d
+    - d.p. walker
 
 - synonym: "444636"
   examples: |
@@ -7168,7 +7168,7 @@ nlu:
 
 - synonym: "992938"
   examples: |
-    - daniel a
+    - daniel a. d'adamo
 
 - synonym: "55069"
   examples: |
@@ -7476,7 +7476,7 @@ nlu:
 
 - synonym: "897086"
   examples: |
-    - david a
+    - david a. myers
 
 - synonym: "48576"
   examples: |
@@ -7588,11 +7588,11 @@ nlu:
 
 - synonym: "44003"
   examples: |
-    - david l
+    - david l. kuehn
 
 - synonym: "40409"
   examples: |
-    - david l
+    - david l. walters
 
 - synonym: "45433"
   examples: |
@@ -7620,7 +7620,7 @@ nlu:
 
 - synonym: "32785"
   examples: |
-    - david n
+    - david n. baker
 
 - synonym: "48890"
   examples: |
@@ -7632,7 +7632,7 @@ nlu:
 
 - synonym: "33992"
   examples: |
-    - david p
+    - david p. graham
 
 - synonym: "62171"
   examples: |
@@ -7648,7 +7648,7 @@ nlu:
 
 - synonym: "42373"
   examples: |
-    - david r
+    - david r. udell
 
 - synonym: "47037"
   examples: |
@@ -7772,7 +7772,7 @@ nlu:
 
 - synonym: "239607"
   examples: |
-    - demetrius c
+    - demetrius c.d. dounis
 
 - synonym: "429071"
   examples: |
@@ -8380,7 +8380,7 @@ nlu:
 
 - synonym: "36928"
   examples: |
-    - donald h
+    - donald h. white
 
 - synonym: "50940"
   examples: |
@@ -8448,7 +8448,7 @@ nlu:
 
 - synonym: "1117581"
   examples: |
-    - dr
+    - dr. j. butz muzikverlag
 
 - synonym: "57758"
   examples: |
@@ -8536,75 +8536,75 @@ nlu:
 
 - synonym: "37050"
   examples: |
-    - e
+    - e. anthiome
 
 - synonym: "54753"
   examples: |
-    - e
+    - e. bourdeau
 
 - synonym: "42312"
   examples: |
-    - e
+    - e. gauthier
 
 - synonym: "53433"
   examples: |
-    - e
+    - e. herbert-caesari
 
 - synonym: "785433"
   examples: |
-    - e
+    - e. herse
 
 - synonym: "56193"
   examples: |
-    - e
+    - e. hintz
 
 - synonym: "34668"
   examples: |
-    - e
+    - e. hooper
 
 - synonym: "54191"
   examples: |
-    - e
+    - e. krakamp
 
 - synonym: "559317"
   examples: |
-    - e
+    - e. mcdowell
 
 - synonym: "58233"
   examples: |
-    - e
+    - e. pässler
 
 - synonym: "39808"
   examples: |
-    - e
+    - e. rapin
 
 - synonym: "33683"
   examples: |
-    - e
+    - e. richard
 
 - synonym: "42699"
   examples: |
-    - e
+    - e. rusconi
 
 - synonym: "38360"
   examples: |
-    - e
+    - e. temporal
 
 - synonym: "44314"
   examples: |
-    - e
+    - e. vieulou
 
 - synonym: "43090"
   examples: |
-    - e
+    - e. wolf
 
 - synonym: "43351"
   examples: |
-    - e
+    - e.a. pushechnikov
 
 - synonym: "44657"
   examples: |
-    - e
+    - e.y. harburg
 
 - synonym: "448307"
   examples: |
@@ -8620,7 +8620,7 @@ nlu:
 
 - synonym: "934589"
   examples: |
-    - easton music co
+    - easton music co.
 
 - synonym: "35381"
   examples: |
@@ -8640,7 +8640,7 @@ nlu:
 
 - synonym: "827938"
   examples: |
-    - ebr
+    - ebr.
 
 - synonym: "965908"
   examples: |
@@ -8844,7 +8844,7 @@ nlu:
 
 - synonym: "815841"
   examples: |
-    - editions j
+    - editions j. maurer
 
 - synonym: "1108422"
   examples: |
@@ -8876,7 +8876,7 @@ nlu:
 
 - synonym: "907428"
   examples: |
-    - editions musicales ch
+    - editions musicales ch. bens
 
 - synonym: "423245"
   examples: |
@@ -9000,11 +9000,11 @@ nlu:
 
 - synonym: "36012"
   examples: |
-    - edmund j
+    - edmund j. campion
 
 - synonym: "896596"
   examples: |
-    - edmund j
+    - edmund j. siennicki
 
 - synonym: "36425"
   examples: |
@@ -9084,7 +9084,7 @@ nlu:
 
 - synonym: "43478"
   examples: |
-    - eduardo s
+    - eduardo s. de la maza
 
 - synonym: "35221"
   examples: |
@@ -9112,7 +9112,7 @@ nlu:
 
 - synonym: "261843"
   examples: |
-    - edward h
+    - edward h. tarr
 
 - synonym: "49932"
   examples: |
@@ -9128,7 +9128,7 @@ nlu:
 
 - synonym: "44655"
   examples: |
-    - edward j
+    - edward j. miller
 
 - synonym: "39297"
   examples: |
@@ -9312,7 +9312,7 @@ nlu:
 
 - synonym: "793909"
   examples: |
-    - elizabeth c
+    - elizabeth c. bartlet
 
 - synonym: "45702"
   examples: |
@@ -9336,7 +9336,7 @@ nlu:
 
 - synonym: "40462"
   examples: |
-    - elliot a
+    - elliot a. del borgo
 
 - synonym: "49994"
   examples: |
@@ -9604,7 +9604,7 @@ nlu:
 
 - synonym: "59665"
   examples: |
-    - emory b
+    - emory b. remington
 
 - synonym: "453086"
   examples: |
@@ -9964,11 +9964,11 @@ nlu:
 
 - synonym: "1001127"
   examples: |
-    - ernest r
+    - ernest r. ball
 
 - synonym: "62290"
   examples: |
-    - ernest s
+    - ernest s. williams
 
 - synonym: "46970"
   examples: |
@@ -10080,7 +10080,7 @@ nlu:
 
 - synonym: "51539"
   examples: |
-    - ervin t
+    - ervin t. rouse
 
 - synonym: "597404"
   examples: |
@@ -10308,7 +10308,7 @@ nlu:
 
 - synonym: "41071"
   examples: |
-    - eva b
+    - eva b. sipos
 
 - synonym: "56586"
   examples: |
@@ -10352,59 +10352,59 @@ nlu:
 
 - synonym: "39748"
   examples: |
-    - f
+    - f. garbe
 
 - synonym: "40762"
   examples: |
-    - f
+    - f. garilli
 
 - synonym: "53000"
   examples: |
-    - f
+    - f. jeanjean
 
 - synonym: "40145"
   examples: |
-    - f
+    - f. laun
 
 - synonym: "42609"
   examples: |
-    - f
+    - f. p. loup
 
 - synonym: "50929"
   examples: |
-    - f
+    - f. poliakin
 
 - synonym: "815840"
   examples: |
-    - f
+    - f. ruelle
 
 - synonym: "46728"
   examples: |
-    - f
+    - f. talgorn
 
 - synonym: "50712"
   examples: |
-    - f
+    - f. vobaron
 
 - synonym: "61892"
   examples: |
-    - f
+    - f.a. boehm
 
 - synonym: "443353"
   examples: |
-    - f
+    - f.c. publishing
 
 - synonym: "47506"
   examples: |
-    - f
+    - f.f. fichtel
 
 - synonym: "63193"
   examples: |
-    - f
+    - f.n.u.c.m.u.
 
 - synonym: "42618"
   examples: |
-    - f
+    - f.w. meacham
 
 - synonym: "449254"
   examples: |
@@ -10640,7 +10640,7 @@ nlu:
 
 - synonym: "50760"
   examples: |
-    - ferdinand g
+    - ferdinand g. bienemann
 
 - synonym: "41572"
   examples: |
@@ -10784,7 +10784,7 @@ nlu:
 
 - synonym: "37984"
   examples: |
-    - fidelio f
+    - fidelio f. finke
 
 - synonym: "444592"
   examples: |
@@ -10844,7 +10844,7 @@ nlu:
 
 - synonym: "33693"
   examples: |
-    - fl
+    - fl. arresti
 
 - synonym: "457922"
   examples: |
@@ -10972,7 +10972,7 @@ nlu:
 
 - synonym: "428855"
   examples: |
-    - france
+    - france. ministère de la culture
 
 - synonym: "811187"
   examples: |
@@ -11320,7 +11320,7 @@ nlu:
 
 - synonym: "45690"
   examples: |
-    - franck n
+    - franck n. ellis
 
 - synonym: "779596"
   examples: |
@@ -11672,7 +11672,7 @@ nlu:
 
 - synonym: "48968"
   examples: |
-    - frank d
+    - frank d. cofield
 
 - synonym: "48883"
   examples: |
@@ -11688,7 +11688,7 @@ nlu:
 
 - synonym: "51327"
   examples: |
-    - frank h
+    - frank h. siekmann
 
 - synonym: "38606"
   examples: |
@@ -11696,7 +11696,7 @@ nlu:
 
 - synonym: "40731"
   examples: |
-    - frank j
+    - frank j. halferty
 
 - synonym: "40357"
   examples: |
@@ -11984,7 +11984,7 @@ nlu:
 
 - synonym: "38216"
   examples: |
-    - fred d
+    - fred d. hinger
 
 - synonym: "52700"
   examples: |
@@ -12000,7 +12000,7 @@ nlu:
 
 - synonym: "45438"
   examples: |
-    - fred m
+    - fred m. hubbell
 
 - synonym: "821840"
   examples: |
@@ -12236,7 +12236,7 @@ nlu:
 
 - synonym: "35585"
   examples: |
-    - friedrich k
+    - friedrich k. wanek
 
 - synonym: "54867"
   examples: |
@@ -12396,59 +12396,59 @@ nlu:
 
 - synonym: "39872"
   examples: |
-    - g
+    - g. carulli
 
 - synonym: "34878"
   examples: |
-    - g
+    - g. coulpied-sevestre
 
 - synonym: "47097"
   examples: |
-    - g
+    - g. ridley
 
 - synonym: "52763"
   examples: |
-    - g
+    - g. rooda
 
 - synonym: "33624"
   examples: |
-    - g
+    - g. schapf
 
 - synonym: "40796"
   examples: |
-    - g
+    - g. von pasterwitz
 
 - synonym: "884522"
   examples: |
-    - g
+    - g. zanoli
 
 - synonym: "47512"
   examples: |
-    - g
+    - g. zechner
 
 - synonym: "436072"
   examples: |
-    - g
+    - g.
 
 - synonym: "43872"
   examples: |
-    - g
+    - g.a. bürger
 
 - synonym: "35624"
   examples: |
-    - g
+    - g.c. paribeni
 
 - synonym: "33781"
   examples: |
-    - g
+    - g.p. repichet
 
 - synonym: "45024"
   examples: |
-    - g
+    - g.t. desserre
 
 - synonym: "52167"
   examples: |
-    - g
+    - g.w. lotzenhiser
 
 - synonym: "32855"
   examples: |
@@ -12624,7 +12624,7 @@ nlu:
 
 - synonym: "49653"
   examples: |
-    - gary d
+    - gary d. cook
 
 - synonym: "46216"
   examples: |
@@ -12748,7 +12748,7 @@ nlu:
 
 - synonym: "1001129"
   examples: |
-    - geo
+    - geo. jr. graff
 
 - synonym: "559755"
   examples: |
@@ -12792,7 +12792,7 @@ nlu:
 
 - synonym: "37438"
   examples: |
-    - georg c
+    - georg c. klaren
 
 - synonym: "40029"
   examples: |
@@ -12880,7 +12880,7 @@ nlu:
 
 - synonym: "53323"
   examples: |
-    - george a
+    - george a. speckert
 
 - synonym: "47950"
   examples: |
@@ -14932,55 +14932,55 @@ nlu:
 
 - synonym: "925432"
   examples: |
-    - h
+    - h. cardew
 
 - synonym: "271042"
   examples: |
-    - h
+    - h. colin slim
 
 - synonym: "37348"
   examples: |
-    - h
+    - h. dallier
 
 - synonym: "34636"
   examples: |
-    - h
+    - h. enckhausen
 
 - synonym: "53845"
   examples: |
-    - h
+    - h. maurice jacquet
 
 - synonym: "53191"
   examples: |
-    - h
+    - h. maury
 
 - synonym: "49028"
   examples: |
-    - h
+    - h. rawson
 
 - synonym: "43589"
   examples: |
-    - h
+    - h. w. tyrell
 
 - synonym: "40819"
   examples: |
-    - h
+    - h. windels
 
 - synonym: "50400"
   examples: |
-    - h
+    - h. wolff
 
 - synonym: "47197"
   examples: |
-    - h
+    - h.-a. de villers
 
 - synonym: "45567"
   examples: |
-    - h
+    - h.j gauntlett
 
 - synonym: "34161"
   examples: |
-    - h
+    - h.w. clasen
 
 - synonym: "54153"
   examples: |
@@ -15368,7 +15368,7 @@ nlu:
 
 - synonym: "908257"
   examples: |
-    - harry m
+    - harry m. woods
 
 - synonym: "896321"
   examples: |
@@ -15388,7 +15388,7 @@ nlu:
 
 - synonym: "821204"
   examples: |
-    - havelock j
+    - havelock j. nelson
 
 - synonym: "451243"
   examples: |
@@ -15640,7 +15640,7 @@ nlu:
 
 - synonym: "33752"
   examples: |
-    - helmut c
+    - helmut c. jacobs
 
 - synonym: "56856"
   examples: |
@@ -16024,7 +16024,7 @@ nlu:
 
 - synonym: "44679"
   examples: |
-    - herbert b
+    - herbert b. feldman
 
 - synonym: "41868"
   examples: |
@@ -16336,7 +16336,7 @@ nlu:
 
 - synonym: "40717"
   examples: |
-    - howard jr
+    - howard jr. rowe
 
 - synonym: "45280"
   examples: |
@@ -16388,7 +16388,7 @@ nlu:
 
 - synonym: "56567"
   examples: |
-    - hugh m
+    - hugh m. stuart
 
 - synonym: "43277"
   examples: |
@@ -16476,7 +16476,7 @@ nlu:
 
 - synonym: "49789"
   examples: |
-    - i
+    - i.a. petrov
 
 - synonym: "43873"
   examples: |
@@ -16732,7 +16732,7 @@ nlu:
 
 - synonym: "46829"
   examples: |
-    - io
+    - io. iacobo albutio da milano
 
 - synonym: "47362"
   examples: |
@@ -16856,7 +16856,7 @@ nlu:
 
 - synonym: "596356"
   examples: |
-    - israeli music publ
+    - israeli music publ.
 
 - synonym: "1085629"
   examples: |
@@ -17004,151 +17004,151 @@ nlu:
 
 - synonym: "51262"
   examples: |
-    - j
+    - j. beurle
 
 - synonym: "40453"
   examples: |
-    - j
+    - j. c. kessler
 
 - synonym: "38105"
   examples: |
-    - j
+    - j. clarke
 
 - synonym: "41359"
   examples: |
-    - j
+    - j. e. kindermann
 
 - synonym: "39185"
   examples: |
-    - j
+    - j. faure
 
 - synonym: "33276"
   examples: |
-    - j
+    - j. feyzeau
 
 - synonym: "59670"
   examples: |
-    - j
+    - j. forest
 
 - synonym: "58378"
   examples: |
-    - j
+    - j. francisco ortiz
 
 - synonym: "33127"
   examples: |
-    - j
+    - j. fred coots
 
 - synonym: "44009"
   examples: |
-    - j
+    - j. fromont-delune
 
 - synonym: "44848"
   examples: |
-    - j
+    - j. h. feltkamp
 
 - synonym: "35690"
   examples: |
-    - j
+    - j. jez
 
 - synonym: "40422"
   examples: |
-    - j
+    - j. kawarsky
 
 - synonym: "59940"
   examples: |
-    - j
+    - j. kenneth alford
 
 - synonym: "56200"
   examples: |
-    - j
+    - j. kortkamp
 
 - synonym: "34306"
   examples: |
-    - j
+    - j. penalosa
 
 - synonym: "35013"
   examples: |
-    - j
+    - j. pischna
 
 - synonym: "50134"
   examples: |
-    - j
+    - j. satzenhofer
 
 - synonym: "43146"
   examples: |
-    - j
+    - j. schuster
 
 - synonym: "57689"
   examples: |
-    - j
+    - j. villatte
 
 - synonym: "36818"
   examples: |
-    - j
+    - j. zimmermann
 
 - synonym: "35200"
   examples: |
-    - j
+    - j.-g. penavaire
 
 - synonym: "53397"
   examples: |
-    - j
+    - j.b. anet
 
 - synonym: "54599"
   examples: |
-    - j
+    - j.b. duvernoy
 
 - synonym: "59693"
   examples: |
-    - j
+    - j.c. forgety
 
 - synonym: "56227"
   examples: |
-    - j
+    - j.c. schieferdecker
 
 - synonym: "43115"
   examples: |
-    - j
+    - j.e. geyer
 
 - synonym: "129201"
   examples: |
-    - j
+    - j.f. salomon
 
 - synonym: "37140"
   examples: |
-    - j
+    - j.g. pennequin
 
 - synonym: "54411"
   examples: |
-    - j
+    - j.h. descamps
 
 - synonym: "42927"
   examples: |
-    - j
+    - j.h. hopkins
 
 - synonym: "42088"
   examples: |
-    - j
+    - j.j. benedict münster
 
 - synonym: "938237"
   examples: |
-    - j
+    - j.j. rébillard
 
 - synonym: "40020"
   examples: |
-    - j
+    - j.r. mourik
 
 - synonym: "53485"
   examples: |
-    - j
+    - j.r. murray
 
 - synonym: "781775"
   examples: |
-    - j
+    - j.r. quignard
 
 - synonym: "48139"
   examples: |
-    - j
+    - j.s. cox
 
 - synonym: "941262"
   examples: |
@@ -17744,7 +17744,7 @@ nlu:
 
 - synonym: "60745"
   examples: |
-    - jaime m
+    - jaime m. zenamon
 
 - synonym: "41048"
   examples: |
@@ -17828,7 +17828,7 @@ nlu:
 
 - synonym: "42081"
   examples: |
-    - james d
+    - james d. ployhar
 
 - synonym: "48562"
   examples: |
@@ -17856,11 +17856,11 @@ nlu:
 
 - synonym: "896485"
   examples: |
-    - james l
+    - james l. hosay
 
 - synonym: "53891"
   examples: |
-    - james l
+    - james l. moore
 
 - synonym: "558963"
   examples: |
@@ -17868,7 +17868,7 @@ nlu:
 
 - synonym: "767437"
   examples: |
-    - james m
+    - james m. black
 
 - synonym: "46782"
   examples: |
@@ -17908,7 +17908,7 @@ nlu:
 
 - synonym: "45725"
   examples: |
-    - james w
+    - james w. langley
 
 - synonym: "44366"
   examples: |
@@ -17924,7 +17924,7 @@ nlu:
 
 - synonym: "420903"
   examples: |
-    - jamey aebersold jazz inc
+    - jamey aebersold jazz inc.
 
 - synonym: "54789"
   examples: |
@@ -18024,7 +18024,7 @@ nlu:
 
 - synonym: "51433"
   examples: |
-    - jan v
+    - jan v.d. waart
 
 - synonym: "44413"
   examples: |
@@ -18048,7 +18048,7 @@ nlu:
 
 - synonym: "45518"
   examples: |
-    - jan w
+    - jan w. morthenson
 
 - synonym: "52336"
   examples: |
@@ -19716,7 +19716,7 @@ nlu:
 
 - synonym: "37857"
   examples: |
-    - jesus benites r
+    - jesus benites r.
 
 - synonym: "54152"
   examples: |
@@ -20040,7 +20040,7 @@ nlu:
 
 - synonym: "781782"
   examples: |
-    - joh
+    - joh. georg lickl
 
 - synonym: "37865"
   examples: |
@@ -20420,7 +20420,7 @@ nlu:
 
 - synonym: "43901"
   examples: |
-    - johann p
+    - johann p. krieger
 
 - synonym: "41246"
   examples: |
@@ -20624,11 +20624,11 @@ nlu:
 
 - synonym: "39436"
   examples: |
-    - john a
+    - john a. greenwood
 
 - synonym: "57141"
   examples: |
-    - john a
+    - john a. speight
 
 - synonym: "56302"
   examples: |
@@ -20716,7 +20716,7 @@ nlu:
 
 - synonym: "948171"
   examples: |
-    - john d
+    - john d. s. adams
 
 - synonym: "47802"
   examples: |
@@ -20816,7 +20816,7 @@ nlu:
 
 - synonym: "56070"
   examples: |
-    - john h
+    - john h. beck
 
 - synonym: "45740"
   examples: |
@@ -20880,7 +20880,7 @@ nlu:
 
 - synonym: "40530"
   examples: |
-    - john l
+    - john l. heins
 
 - synonym: "39556"
   examples: |
@@ -20980,7 +20980,7 @@ nlu:
 
 - synonym: "41313"
   examples: |
-    - john r
+    - john r. beck
 
 - synonym: "60876"
   examples: |
@@ -21068,11 +21068,11 @@ nlu:
 
 - synonym: "42862"
   examples: |
-    - john w
+    - john w. duarte
 
 - synonym: "59507"
   examples: |
-    - john w
+    - john w.m. slangen
 
 - synonym: "49933"
   examples: |
@@ -21420,7 +21420,7 @@ nlu:
 
 - synonym: "45633"
   examples: |
-    - joseph a
+    - joseph a. stewart
 
 - synonym: "50009"
   examples: |
@@ -21464,7 +21464,7 @@ nlu:
 
 - synonym: "35245"
   examples: |
-    - joseph f
+    - joseph f. lamb
 
 - synonym: "47573"
   examples: |
@@ -21528,7 +21528,7 @@ nlu:
 
 - synonym: "1102396"
   examples: |
-    - joseph m
+    - joseph m. mooney
 
 - synonym: "790183"
   examples: |
@@ -21620,7 +21620,7 @@ nlu:
 
 - synonym: "906947"
   examples: |
-    - joseph v
+    - joseph v. tranchina
 
 - synonym: "39793"
   examples: |
@@ -21716,7 +21716,7 @@ nlu:
 
 - synonym: "921590"
   examples: |
-    - juan a
+    - juan a. medina
 
 - synonym: "38371"
   examples: |
@@ -21756,7 +21756,7 @@ nlu:
 
 - synonym: "47311"
   examples: |
-    - juan n
+    - juan n. bobrowitz
 
 - synonym: "55837"
   examples: |
@@ -21932,11 +21932,11 @@ nlu:
 
 - synonym: "794790"
   examples: |
-    - julio m
+    - julio m. viera
 
 - synonym: "37532"
   examples: |
-    - julio s
+    - julio s. sagreras
 
 - synonym: "41701"
   examples: |
@@ -22052,19 +22052,19 @@ nlu:
 
 - synonym: "47231"
   examples: |
-    - k
+    - k. konstantinoff
 
 - synonym: "47376"
   examples: |
-    - k
+    - k. m. kunz
 
 - synonym: "50718"
   examples: |
-    - k
+    - k. neyens
 
 - synonym: "44378"
   examples: |
-    - k
+    - k. r. cole
 
 - synonym: "443125"
   examples: |
@@ -22104,7 +22104,7 @@ nlu:
 
 - synonym: "48532"
   examples: |
-    - karel b
+    - karel b. jirak
 
 - synonym: "53967"
   examples: |
@@ -22692,27 +22692,27 @@ nlu:
 
 - synonym: "51496"
   examples: |
-    - l
+    - l. burrowes
 
 - synonym: "57276"
   examples: |
-    - l
+    - l. donne
 
 - synonym: "39412"
   examples: |
-    - l
+    - l. ismagilova
 
 - synonym: "38189"
   examples: |
-    - l
+    - l. massart
 
 - synonym: "57675"
   examples: |
-    - l
+    - l. wolfe gilbert
 
 - synonym: "39272"
   examples: |
-    - l
+    - l.c. castella
 
 - synonym: "595621"
   examples: |
@@ -23076,7 +23076,7 @@ nlu:
 
 - synonym: "1027649"
   examples: |
-    - leif a
+    - leif a. jansson
 
 - synonym: "34237"
   examples: |
@@ -23212,7 +23212,7 @@ nlu:
 
 - synonym: "47464"
   examples: |
-    - leonard b
+    - leonard b. smith
 
 - synonym: "53875"
   examples: |
@@ -23588,7 +23588,7 @@ nlu:
 
 - synonym: "50118"
   examples: |
-    - loris o
+    - loris o. chobanian
 
 - synonym: "54248"
   examples: |
@@ -23848,7 +23848,7 @@ nlu:
 
 - synonym: "52448"
   examples: |
-    - lowell e
+    - lowell e. shaw
 
 - synonym: "559080"
   examples: |
@@ -24260,35 +24260,35 @@ nlu:
 
 - synonym: "42782"
   examples: |
-    - m
+    - m. cadier
 
 - synonym: "35324"
   examples: |
-    - m
+    - m. koczar
 
 - synonym: "47300"
   examples: |
-    - m
+    - m. lechevalier
 
 - synonym: "56142"
   examples: |
-    - m
+    - m. radeck
 
 - synonym: "35667"
   examples: |
-    - m
+    - m. tajcevic
 
 - synonym: "41958"
   examples: |
-    - m
+    - m. vulpius
 
 - synonym: "59687"
   examples: |
-    - m
+    - m. watts
 
 - synonym: "1001130"
   examples: |
-    - m
+    - m. witmark
 
 - synonym: "49534"
   examples: |
@@ -25524,7 +25524,7 @@ nlu:
 
 - synonym: "46027"
   examples: |
-    - maurice c
+    - maurice c. whitney
 
 - synonym: "53947"
   examples: |
@@ -25560,7 +25560,7 @@ nlu:
 
 - synonym: "33268"
   examples: |
-    - maurice j
+    - maurice j. e. brown
 
 - synonym: "41783"
   examples: |
@@ -25668,7 +25668,7 @@ nlu:
 
 - synonym: "58975"
   examples: |
-    - max c
+    - max c. freedman
 
 - synonym: "37193"
   examples: |
@@ -25928,7 +25928,7 @@ nlu:
 
 - synonym: "48505"
   examples: |
-    - michael g
+    - michael g. cunningham
 
 - synonym: "40556"
   examples: |
@@ -25952,7 +25952,7 @@ nlu:
 
 - synonym: "54540"
   examples: |
-    - michael j
+    - michael j. burritt
 
 - synonym: "44908"
   examples: |
@@ -26296,7 +26296,7 @@ nlu:
 
 - synonym: "57055"
   examples: |
-    - michel p
+    - michel p. philippot
 
 - synonym: "41823"
   examples: |
@@ -26548,7 +26548,7 @@ nlu:
 
 - synonym: "56872"
   examples: |
-    - mihail g
+    - mihail g. andricu
 
 - synonym: "56801"
   examples: |
@@ -26648,7 +26648,7 @@ nlu:
 
 - synonym: "1074729"
   examples: |
-    - mildred j
+    - mildred j. hill
 
 - synonym: "56008"
   examples: |
@@ -26672,7 +26672,7 @@ nlu:
 
 - synonym: "463118"
   examples: |
-    - millstone publishing s
+    - millstone publishing s.c.
 
 - synonym: "42174"
   examples: |
@@ -26808,7 +26808,7 @@ nlu:
 
 - synonym: "448661"
   examples: |
-    - moeck verl
+    - moeck verl.
 
 - synonym: "1066542"
   examples: |
@@ -26928,7 +26928,7 @@ nlu:
 
 - synonym: "45394"
   examples: |
-    - mr
+    - mr. braun
 
 - synonym: "41128"
   examples: |
@@ -26972,7 +26972,7 @@ nlu:
 
 - synonym: "596500"
   examples: |
-    - musée central d'etat de culture musicale m
+    - musée central d'etat de culture musicale m. i. glinka
 
 - synonym: "634303"
   examples: |
@@ -27124,11 +27124,11 @@ nlu:
 
 - synonym: "38933"
   examples: |
-    - n
+    - n. baklanova
 
 - synonym: "59717"
   examples: |
-    - n
+    - n. sherman
 
 - synonym: "49278"
   examples: |
@@ -27480,7 +27480,7 @@ nlu:
 
 - synonym: "32537"
   examples: |
-    - nicolaus a
+    - nicolaus a. huber
 
 - synonym: "56122"
   examples: |
@@ -27576,7 +27576,7 @@ nlu:
 
 - synonym: "47442"
   examples: |
-    - nilo w
+    - nilo w. hovey
 
 - synonym: "35311"
   examples: |
@@ -27772,7 +27772,7 @@ nlu:
 
 - synonym: "1065010"
   examples: |
-    - northbridge music inc
+    - northbridge music inc.
 
 - synonym: "424731"
   examples: |
@@ -28224,7 +28224,7 @@ nlu:
 
 - synonym: "387875"
   examples: |
-    - oxford university press
+    - oxford university press. music departement
 
 - synonym: "49828"
   examples: |
@@ -28236,27 +28236,27 @@ nlu:
 
 - synonym: "60251"
   examples: |
-    - p
+    - p. nagel-truchet
 
 - synonym: "39280"
   examples: |
-    - p
+    - p. tamas balassa
 
 - synonym: "37286"
   examples: |
-    - p
+    - p. van netelbosch
 
 - synonym: "33648"
   examples: |
-    - p
+    - p.a. mortaro
 
 - synonym: "44801"
   examples: |
-    - p
+    - p.h. azais
 
 - synonym: "429537"
   examples: |
-    - p
+    - p.o.m.
 
 - synonym: "948069"
   examples: |
@@ -28332,7 +28332,7 @@ nlu:
 
 - synonym: "821222"
   examples: |
-    - pamela j
+    - pamela j. marshall
 
 - synonym: "58426"
   examples: |
@@ -28564,7 +28564,7 @@ nlu:
 
 - synonym: "826270"
   examples: |
-    - patricia b
+    - patricia b. brauner
 
 - synonym: "53140"
   examples: |
@@ -28736,7 +28736,7 @@ nlu:
 
 - synonym: "51871"
   examples: |
-    - paul c
+    - paul c. echols
 
 - synonym: "42667"
   examples: |
@@ -28944,7 +28944,7 @@ nlu:
 
 - synonym: "37657"
   examples: |
-    - paul p
+    - paul p. brazauskas
 
 - synonym: "52199"
   examples: |
@@ -29440,7 +29440,7 @@ nlu:
 
 - synonym: "798601"
   examples: |
-    - ph
+    - ph. meyer
 
 - synonym: "57866"
   examples: |
@@ -30280,7 +30280,7 @@ nlu:
 
 - synonym: "52886"
   examples: |
-    - pierre-a
+    - pierre-a. de pré
 
 - synonym: "58304"
   examples: |
@@ -30356,7 +30356,7 @@ nlu:
 
 - synonym: "61286"
   examples: |
-    - pierre-octave
+    - pierre-octave. ferroud
 
 - synonym: "47156"
   examples: |
@@ -30484,7 +30484,7 @@ nlu:
 
 - synonym: "999013"
   examples: |
-    - pink floyd music publishers ltd
+    - pink floyd music publishers ltd.
 
 - synonym: "39281"
   examples: |
@@ -30540,7 +30540,7 @@ nlu:
 
 - synonym: "595014"
   examples: |
-    - portland publ
+    - portland publ.
 
 - synonym: "59899"
   examples: |
@@ -30572,7 +30572,7 @@ nlu:
 
 - synonym: "906903"
   examples: |
-    - prentice-hall inc
+    - prentice-hall inc.
 
 - synonym: "438938"
   examples: |
@@ -30668,35 +30668,35 @@ nlu:
 
 - synonym: "46698"
   examples: |
-    - r
+    - r. bernier
 
 - synonym: "43444"
   examples: |
-    - r
+    - r. faber
 
 - synonym: "34661"
   examples: |
-    - r
+    - r. johnson
 
 - synonym: "59705"
   examples: |
-    - r
+    - r. miller
 
 - synonym: "49243"
   examples: |
-    - r
+    - r. tassello
 
 - synonym: "40570"
   examples: |
-    - r
+    - r.c. martin
 
 - synonym: "433259"
   examples: |
-    - r
+    - r.i.t.m.
 
 - synonym: "35825"
   examples: |
-    - r
+    - r.o. morris
 
 - synonym: "1034940"
   examples: |
@@ -30928,7 +30928,7 @@ nlu:
 
 - synonym: "45883"
   examples: |
-    - ray m
+    - ray m. endresen
 
 - synonym: "35447"
   examples: |
@@ -31380,7 +31380,7 @@ nlu:
 
 - synonym: "55001"
   examples: |
-    - richard a
+    - richard a. stephan
 
 - synonym: "38123"
   examples: |
@@ -31392,7 +31392,7 @@ nlu:
 
 - synonym: "43863"
   examples: |
-    - richard b
+    - richard b. hervig
 
 - synonym: "41081"
   examples: |
@@ -31472,11 +31472,11 @@ nlu:
 
 - synonym: "174646"
   examples: |
-    - richard l
+    - richard l. zettler
 
 - synonym: "53549"
   examples: |
-    - richard m
+    - richard m. sherman
 
 - synonym: "883202"
   examples: |
@@ -31588,7 +31588,7 @@ nlu:
 
 - synonym: "610708"
   examples: |
-    - ricordi
+    - ricordi. g.
 
 - synonym: "454689"
   examples: |
@@ -31640,7 +31640,7 @@ nlu:
 
 - synonym: "53555"
   examples: |
-    - robert b
+    - robert b. sherman
 
 - synonym: "42134"
   examples: |
@@ -31748,11 +31748,11 @@ nlu:
 
 - synonym: "49647"
   examples: |
-    - robert h
+    - robert h. klotman
 
 - synonym: "32504"
   examples: |
-    - robert h
+    - robert h.p. platz
 
 - synonym: "42785"
   examples: |
@@ -31816,7 +31816,7 @@ nlu:
 
 - synonym: "50657"
   examples: |
-    - robert l
+    - robert l. marsteller
 
 - synonym: "53977"
   examples: |
@@ -31908,7 +31908,7 @@ nlu:
 
 - synonym: "52524"
   examples: |
-    - robert s
+    - robert s. frost
 
 - synonym: "811704"
   examples: |
@@ -31980,15 +31980,15 @@ nlu:
 
 - synonym: "52206"
   examples: |
-    - robert w
+    - robert w. getchell
 
 - synonym: "50802"
   examples: |
-    - robert w
+    - robert w. jones
 
 - synonym: "896613"
   examples: |
-    - robert w
+    - robert w. smith
 
 - synonym: "40504"
   examples: |
@@ -32100,7 +32100,7 @@ nlu:
 
 - synonym: "786393"
   examples: |
-    - roger e
+    - roger e. davis
 
 - synonym: "52446"
   examples: |
@@ -32124,7 +32124,7 @@ nlu:
 
 - synonym: "51776"
   examples: |
-    - roger j
+    - roger j.v. cotte
 
 - synonym: "45501"
   examples: |
@@ -32324,7 +32324,7 @@ nlu:
 
 - synonym: "44546"
   examples: |
-    - ronald v
+    - ronald v. reaser
 
 - synonym: "438813"
   examples: |
@@ -32536,39 +32536,39 @@ nlu:
 
 - synonym: "45536"
   examples: |
-    - s
+    - s. baring-gould
 
 - synonym: "50697"
   examples: |
-    - s
+    - s. de boer
 
 - synonym: "44031"
   examples: |
-    - s
+    - s. de luca
 
 - synonym: "47254"
   examples: |
-    - s
+    - s. garci de parma
 
 - synonym: "52475"
   examples: |
-    - s
+    - s. lebert
 
 - synonym: "33997"
   examples: |
-    - s
+    - s. majkapar
 
 - synonym: "38822"
   examples: |
-    - s
+    - s. ranieri
 
 - synonym: "44394"
   examples: |
-    - s
+    - s. vasliev
 
 - synonym: "59681"
   examples: |
-    - s
+    - s. wyche
 
 - synonym: "37453"
   examples: |
@@ -32664,7 +32664,7 @@ nlu:
 
 - synonym: "906922"
   examples: |
-    - sam fox publishing company inc
+    - sam fox publishing company inc.
 
 - synonym: "812914"
   examples: |
@@ -33080,7 +33080,7 @@ nlu:
 
 - synonym: "39419"
   examples: |
-    - sheila m
+    - sheila m. nelson
 
 - synonym: "814580"
   examples: |
@@ -33532,7 +33532,7 @@ nlu:
 
 - synonym: "43610"
   examples: |
-    - stanley a
+    - stanley a. friedman
 
 - synonym: "38039"
   examples: |
@@ -33704,7 +33704,7 @@ nlu:
 
 - synonym: "40045"
   examples: |
-    - stephen a
+    - stephen a. berg
 
 - synonym: "43670"
   examples: |
@@ -33748,7 +33748,7 @@ nlu:
 
 - synonym: "826246"
   examples: |
-    - stephen j
+    - stephen j. wolff
 
 - synonym: "39375"
   examples: |
@@ -34148,11 +34148,11 @@ nlu:
 
 - synonym: "46968"
   examples: |
-    - t
+    - t. chiampan
 
 - synonym: "49518"
   examples: |
-    - t
+    - t. latour
 
 - synonym: "44076"
   examples: |
@@ -34320,7 +34320,7 @@ nlu:
 
 - synonym: "42120"
   examples: |
-    - terry e
+    - terry e. fleming
 
 - synonym: "54136"
   examples: |
@@ -34344,11 +34344,11 @@ nlu:
 
 - synonym: "54680"
   examples: |
-    - th
+    - th. laforge
 
 - synonym: "33749"
   examples: |
-    - th
+    - th. roseingrave
 
 - synonym: "44012"
   examples: |
@@ -34481,7 +34481,7 @@ nlu:
 
 - synonym: "42401"
   examples: |
-    - theodore c
+    - theodore c. frazeur
 
 - synonym: "53942"
   examples: |
@@ -34609,7 +34609,7 @@ nlu:
 
 - synonym: "38181"
   examples: |
-    - thomas a
+    - thomas a. brown
 
 - synonym: "55761"
   examples: |
@@ -34685,7 +34685,7 @@ nlu:
 
 - synonym: "41864"
   examples: |
-    - thomas j
+    - thomas j. wisnievski
 
 - synonym: "51198"
   examples: |
@@ -34697,7 +34697,7 @@ nlu:
 
 - synonym: "37693"
   examples: |
-    - thomas l
+    - thomas l. davis
 
 - synonym: "37876"
   examples: |
@@ -34749,7 +34749,7 @@ nlu:
 
 - synonym: "40563"
   examples: |
-    - thomas r
+    - thomas r. root
 
 - synonym: "39173"
   examples: |
@@ -34957,7 +34957,7 @@ nlu:
 
 - synonym: "38248"
   examples: |
-    - todd a
+    - todd a. ukena
 
 - synonym: "54100"
   examples: |
@@ -35165,7 +35165,7 @@ nlu:
 
 - synonym: "40306"
   examples: |
-    - trevor j
+    - trevor j. ford
 
 - synonym: "45716"
   examples: |
@@ -35357,7 +35357,7 @@ nlu:
 
 - synonym: "48588"
   examples: |
-    - urban f
+    - urban f. carvalho
 
 - synonym: "895119"
   examples: |
@@ -35393,19 +35393,19 @@ nlu:
 
 - synonym: "36939"
   examples: |
-    - v
+    - v. berdiev
 
 - synonym: "36176"
   examples: |
-    - v
+    - v. blancou
 
 - synonym: "934239"
   examples: |
-    - v
+    - v. gelli
 
 - synonym: "38585"
   examples: |
-    - v
+    - v.f. verrimst
 
 - synonym: "34841"
   examples: |
@@ -35641,7 +35641,7 @@ nlu:
 
 - synonym: "1108538"
   examples: |
-    - victor m
+    - victor m. barba
 
 - synonym: "36624"
   examples: |
@@ -35805,7 +35805,7 @@ nlu:
 
 - synonym: "427903"
   examples: |
-    - viola world publ
+    - viola world publ.
 
 - synonym: "39630"
   examples: |
@@ -35969,19 +35969,19 @@ nlu:
 
 - synonym: "46094"
   examples: |
-    - w
+    - w. e. keville
 
 - synonym: "461580"
   examples: |
-    - w
+    - w. halter
 
 - synonym: "49481"
   examples: |
-    - w
+    - w. herzog
 
 - synonym: "50454"
   examples: |
-    - w
+    - w. steffe
 
 - synonym: "37485"
   examples: |
@@ -36073,7 +36073,7 @@ nlu:
 
 - synonym: "41624"
   examples: |
-    - walter s
+    - walter s. hartley
 
 - synonym: "44964"
   examples: |
@@ -36133,7 +36133,7 @@ nlu:
 
 - synonym: "44726"
   examples: |
-    - warren a
+    - warren a. cytron
 
 - synonym: "56609"
   examples: |
@@ -36157,7 +36157,7 @@ nlu:
 
 - synonym: "47398"
   examples: |
-    - wayne m
+    - wayne m. reger
 
 - synonym: "54028"
   examples: |
@@ -36337,7 +36337,7 @@ nlu:
 
 - synonym: "50766"
   examples: |
-    - willem a
+    - willem a. de vries robbé
 
 - synonym: "36584"
   examples: |
@@ -36397,7 +36397,7 @@ nlu:
 
 - synonym: "52137"
   examples: |
-    - william c
+    - william c. robinson
 
 - synonym: "45424"
   examples: |
@@ -36437,7 +36437,7 @@ nlu:
 
 - synonym: "60575"
   examples: |
-    - william h
+    - william h. krell
 
 - synonym: "37709"
   examples: |
@@ -36457,11 +36457,11 @@ nlu:
 
 - synonym: "43987"
   examples: |
-    - william j
+    - william j. bell
 
 - synonym: "37997"
   examples: |
-    - william j
+    - william j. schinstine
 
 - synonym: "45548"
   examples: |
@@ -36505,7 +36505,7 @@ nlu:
 
 - synonym: "48672"
   examples: |
-    - william m
+    - william m. karlins
 
 - synonym: "52604"
   examples: |
@@ -36513,7 +36513,7 @@ nlu:
 
 - synonym: "43752"
   examples: |
-    - william p
+    - william p. latham
 
 - synonym: "55107"
   examples: |
@@ -36641,7 +36641,7 @@ nlu:
 
 - synonym: "41526"
   examples: |
-    - wim h
+    - wim h. thijsse
 
 - synonym: "441527"
   examples: |
@@ -36713,7 +36713,7 @@ nlu:
 
 - synonym: "813106"
   examples: |
-    - wolfgang g
+    - wolfgang g. haas
 
 - synonym: "61901"
   examples: |
@@ -36825,7 +36825,7 @@ nlu:
 
 - synonym: "819932"
   examples: |
-    - y
+    - y. uyttenhove
 
 - synonym: "460178"
   examples: |
@@ -37085,7 +37085,7 @@ nlu:
 
 - synonym: "36753"
   examples: |
-    - z
+    - z. levin
 
 - synonym: "293967"
   examples: |

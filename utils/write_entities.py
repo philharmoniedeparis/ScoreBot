@@ -10,6 +10,7 @@ def preprocess_entity(entity: str):
     # Strip punctuation
     exclude = string.punctuation.replace("-", "")
     exclude = exclude.replace("'", "")
+    exclude = exclude.replace(".", "")
     exclude += "«»"
     for ch in exclude:
         entity = entity.replace(ch, "_")
