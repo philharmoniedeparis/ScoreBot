@@ -59,7 +59,7 @@ where {{
     
 # ... et on veut récupérer tous les instruments du casting 
     ?casting mus:U23_has_casting_detail ?castingDetail .
-    ?castingDetail philhar:P1_foresees_use_of_medium_of_performance_instrument ?medium.
+    ?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?medium.
     ?medium skos:prefLabel ?mediumLabel.
     filter (lang(?mediumLabel)="fr")
     optional {{ ?castingDetail mus:U30_foresees_quantity_of_mop ?mediumQuantity.}}
@@ -69,6 +69,8 @@ where {{
     BIND(IRI(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", ?identifier)) AS ?scoreUrl1)
     BIND ( substr(str(?scoreUrl1), 1, 58) as ?scoreUrl)
 }}
+order by ?score
+limit 25
         """
         self.allowed_medias = list(medias.iaml.keys()) + list(medias.mimo.keys())
 
@@ -82,47 +84,52 @@ where {{
         entities = tracker.latest_message['entities']
         logging.info(entities)
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions. "
-        try:
-            inputted_medias = dict()
-            level, genre, agent = None, None, None
-            for i, ent in enumerate(entities):
-                key = ent.get('value')
-                if ent['entity'] == 'medium' and key not in inputted_medias:
-                    if i > 0 and entities[i-1]['entity'] == 'number':
-                        inputted_medias[key] = entities[i-1].get('value')
-                    else:
-                        inputted_medias[key] = 1
+        # try:
+        inputted_medias = dict()
+        level, genre, agent = None, None, None
+        for i, ent in enumerate(entities):
+            if ent['entity'] == 'medium':
+                medium = ent.get("value")
+                if medium not in self.allowed_medias:
+                    medium, medium_name = self.get_closest_event(medium, {**medias.iaml, **medias.mimo})
+                    logging.info(medium, medium_name)
+                    if medium is None:
+                        continue
+                if i > 0 and entities[i-1]['entity'] == 'number':
+                    inputted_medias[medium] = entities[i-1].get('value')
+                else:
+                    inputted_medias[medium] = 1
 
-                if ent['entity'] == 'level' and level is None:
-                    level = ent.get("value")
-                if ent['entity'] == 'genre' and genre is None:
-                    genre = ent.get("value")
-                if ent['entity'] == 'agent' and agent is None:
-                    agent = ent.get("value")
+            if ent['entity'] == 'level' and level is None:
+                level = ent.get("value")
+            if ent['entity'] == 'genre' and genre is None:
+                genre = ent.get("value")
+            if ent['entity'] == 'agent' and agent is None:
+                agent = ent.get("value")
 
-            # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
-            if inputted_medias and not set(inputted_medias.keys()).issubset(self.allowed_medias):
-                raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
+        # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
+        if inputted_medias and not set(inputted_medias.keys()).issubset(self.allowed_medias):
+            raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
 
-            logging.info(f"level: {level}, genre: {genre}, agent: {agent}")
-            if level is not None and level not in levels.all_levels:
-                level, level_name = self.get_closest_event(level, levels.all_levels)
-                logging.info(level)
-            if genre is not None and genre not in genres.genres:
-                genre, genre_name = self.get_closest_event(genre, genres.genres)
-                logging.info(genre)
-            if agent is not None and agent not in agents.agents:
-                agent, agent_name = self.get_closest_event(agent, agents.agents)
-                logging.info(agent)
+        logging.info(f"medium: {inputted_medias}, level: {level}, genre: {genre}, agent: {agent}")
+        if level is not None and level not in levels.all_levels:
+            level, level_name = self.get_closest_event(level, levels.all_levels)
+            logging.info(level)
+        if genre is not None and genre not in genres.genres:
+            genre, genre_name = self.get_closest_event(genre, genres.genres)
+            logging.info(genre)
+        if agent is not None and agent not in agents.agents:
+            agent, agent_name = self.get_closest_event(agent, agents.agents)
+            logging.info(agent)
 
-            results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent)
-            if not results:
-                raise Exception(f"No results found for medias: {inputted_medias}")
-            formatted_results = "\n".join(results)
-            answer += f" Voici les partitions avec {formatted_mediums}:\n"
-            answer += formatted_results
-        except Exception:
-            answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
+        results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent)
+        if not results:
+            raise Exception(f"No results found for medias: {inputted_medias}")
+        formatted_results = "\n".join(results)
+        answer += f" Voici les partitions avec {formatted_mediums}:\n"
+        answer += formatted_results
+        # except Exception:
+        #     answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
         dispatcher.utter_message(text=answer)
         return []
 
@@ -164,11 +171,11 @@ where {{
 values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {formatted_medium})}}
 ?input_medium_{i} skos:narrower* ?input_medium_{i}_list.
 ?casting mus:U23_has_casting_detail ?castingDetail_{i}.
-?castingDetail_{i} philhar:P1_foresees_use_of_medium_of_performance_instrument ?input_medium_{i}_list.
+?castingDetail_{i} philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?input_medium_{i}_list.
 ?castingDetail_{i} mus:U30_foresees_quantity_of_mop ?input_quantity_{i} .
             """
             
-        logging.info(f"level: {level}, genre: {genre}, agent: {agent}")
+        logging.info(f"medium: {medium}, level: {level}, genre: {genre}, agent: {agent}")
         # Level
         if level is not None:
             filters += f"""
