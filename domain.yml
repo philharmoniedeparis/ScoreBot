@@ -36,12 +36,10 @@ entities:
 - location
 slots:
   number:
-    type: any
+    type: rasa.shared.core.slots.UnfeaturizedSlot
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: number
 responses:
   utter_greet:
   - text: Bonjour! Comment allez-vous?
