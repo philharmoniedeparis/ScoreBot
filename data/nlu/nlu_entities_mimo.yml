@@ -2176,6 +2176,9 @@ nlu:
 - synonym: "3101"
   examples: |
     - instruments à cordes
+    - à cordes
+    - à corde
+    - a cordes
 
 - synonym: "3102"
   examples: |
@@ -3055,8 +3058,10 @@ nlu:
 
 - synonym: "3476"
   examples: |
+    - oud
     - ud
     - oudiste
+    - ouds
 
 - synonym: "3482"
   examples: |
@@ -3670,6 +3675,10 @@ nlu:
 - synonym: "3730"
   examples: |
     - instruments à vent
+    - à vents
+    - a vents
+    - à vent
+    - a vent
 
 - synonym: "3731"
   examples: |

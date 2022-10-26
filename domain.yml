@@ -32,6 +32,8 @@ entities:
 - level
 - genre
 - agent
+- period
+- location
 slots:
   number:
     type: any

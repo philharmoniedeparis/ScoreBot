@@ -2,6 +2,8 @@ from medias_synonyms import iaml, mimo
 from levels_synonyms import all_levels
 from genres_synonyms import genres
 from agents_synonyms import agents
+from periods_synonyms import periods
+from locations_synonyms import locations
 from formations_synonyms import formations
 import string
 
@@ -33,4 +35,6 @@ if __name__ == "__main__":
     print_synonyms(genres, "nlu_entities_genres")
     print_synonyms(agents, "nlu_entities_agents")
     print_synonyms(formations, "nlu_entities_formations")
+    print_synonyms(periods, "nlu_entities_periods")
+    print_synonyms(locations, "nlu_entities_locations")
     print_synonyms(all_levels, "nlu_entities_level")

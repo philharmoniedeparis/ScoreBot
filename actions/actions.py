@@ -19,6 +19,8 @@ from utils import medias_synonyms as medias
 from utils import levels_synonyms as levels
 from utils import genres_synonyms as genres
 from utils import agents_synonyms as agents
+from utils import periods_synonyms as periods
+from utils import locations_synonyms as locations
 from utils import formations_synonyms as formations
 
 
@@ -90,7 +92,7 @@ limit 25
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions. "
         try:
             inputted_medias = dict()
-            level, genre, agent, formation = None, None, None, None
+            level, genre, agent, formation, period, location = None, None, None, None, None, None
             for i, ent in enumerate(entities):
                 if ent['entity'] == 'medium':
                     medium = ent.get("value")
@@ -117,12 +119,16 @@ limit 25
                     agent = ent.get("value")
                 if ent['entity'] == 'formation' and formation is None:
                     formation = ent.get("value")
+                if ent['entity'] == 'period' and period is None:
+                    period = ent.get("value")
+                if ent['entity'] == 'location' and location is None:
+                    location = ent.get("value")
 
             # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
             if inputted_medias and not set(inputted_medias.keys()).issubset(self.allowed_medias):
                 raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
 
-            logging.info(f"medium: {inputted_medias}, level: {level}, genre: {genre}, agent: {agent}, formation: {formation}")
+            logging.info(f"medium: {inputted_medias}, level: {level}, genre: {genre}, agent: {agent}, formation: {formation}, period: {period}, location: {location}")
             if level is not None and level not in levels.all_levels:
                 level, level_name = self.get_closest_event(level, levels.all_levels)
                 logging.info(level)
@@ -135,7 +141,14 @@ limit 25
             if formation is not None and formation not in formations.formations:
                 formation, formation_name = self.get_closest_event(formation, formations.formations)
                 logging.info(formation)
-            results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent)
+            if period is not None and period not in periods.periods:
+                period, period_name = self.get_closest_event(period, periods.periods)
+                logging.info(period)
+            if location is not None and location not in locations.locations:
+                location, location_name = self.get_closest_event(location, locations.locations)
+                logging.info(period)
+
+            results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent, period, location)
             if not results:
                 raise NoResultsException(f"No results found for medias: {inputted_medias}")
             formatted_results = "\n".join(results)
@@ -150,8 +163,8 @@ limit 25
         dispatcher.utter_message(text=answer)
         return []
 
-    def get_query_results(self, inputted_medias: dict, level, genre, agent) -> List[str]:
-        formatted_query, formatted_mediums = self.format_sparql_query(inputted_medias, level, genre, agent)
+    def get_query_results(self, inputted_medias: dict, level, genre, agent, period, location) -> List[str]:
+        formatted_query, formatted_mediums = self.format_sparql_query(inputted_medias, level, genre, agent, period, location)
         route = ENDPOINT + formatted_query
         logging.info(f"Requesting {route}")
         results = requests.get(route, headers={'Accept': 'application/sparql-results+json'}).json()
@@ -162,7 +175,7 @@ limit 25
             texts.append(f"- [{title}]({url})")
         return texts, formatted_mediums
 
-    def format_sparql_query(self, inputted_medias: dict, level: str, genre: str, agent: str) -> str:
+    def format_sparql_query(self, inputted_medias: dict, level: str, genre: str, agent: str, period: str, location: str) -> str:
         filters = ""
         formatted_mediums = ""
 
@@ -218,6 +231,13 @@ values (?input_agent_role ?input_agent ) {{ (<http://data.bnf.fr/vocabulary/role
 ?input_agent_role skos:prefLabel ?roleLabel.
 filter (lang(?roleLabel)=\"fr\")
 ?input_agent rdfs:label ?agentLabel.
+"""
+
+        if period is not None:
+            filters += f"""
+values (?input_categorie ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/00{period}>)}}
+?score mus:U19_is_categorized_as ?input_categorie.
+?input_categorie skos:prefLabel ?categorieLabel.
 """
 
         parsed_query = urllib.parse.quote(self.route.format(filters=filters))

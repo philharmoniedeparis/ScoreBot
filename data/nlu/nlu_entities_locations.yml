@@ -1,0 +1,9759 @@
+version: "2.0"
+
+nlu:
+
+- synonym: "154021"
+  examples: |
+    - afrique
+    - africa
+    - africain
+
+- synonym: "144554"
+  examples: |
+    - albanie
+    - albania
+    - albanais
+
+- synonym: "154060"
+  examples: |
+    - algérie
+    - algeria
+    - algérien
+
+- synonym: "144397"
+  examples: |
+    - amérique
+    - america
+    - américain
+
+- synonym: "148822"
+  examples: |
+    - argentine
+    - argentina
+    - argentin
+
+- synonym: "154073"
+  examples: |
+    - asie
+    - asia
+    - asiatique
+
+- synonym: "145553"
+  examples: |
+    - australie
+    - australia
+    - australien
+
+- synonym: "155321"
+  examples: |
+    - autriche
+    - osterreich
+    - autrichien
+
+- synonym: "144484"
+  examples: |
+    - belgique
+    - belgium
+    - belge
+
+- synonym: "148787"
+  examples: |
+    - bolivie
+    - bolivia
+    - bolivien
+
+- synonym: "153988"
+  examples: |
+    - brésil
+    - brazil
+    - brésilien
+
+- synonym: "147504"
+  examples: |
+    - bretagne
+    - britanny
+    - breton
+
+- synonym: "141570"
+  examples: |
+    - bulgarie
+    - bulgaria
+    - bulgare
+
+- synonym: "137891"
+  examples: |
+    - bourgogne
+    - burgundy
+    - bourguignon
+
+- synonym: "150413"
+  examples: |
+    - cameroun
+    - cameroon
+    - camerounais
+
+- synonym: "153969"
+  examples: |
+    - antilles
+    - west indies
+    - caraibéen
+
+- synonym: "144847"
+  examples: |
+    - catalogne
+    - catalunya
+    - catalane
+
+- synonym: "153980"
+  examples: |
+    - chili
+    - chile
+    - chilien
+
+- synonym: "154133"
+  examples: |
+    - chine
+    - china
+    - chinois
+
+- synonym: "138494"
+  examples: |
+    - colombie
+    - colombia
+    - colombien
+
+- synonym: "154677"
+  examples: |
+    - croatie
+    - croatia
+    - croate
+
+- synonym: "143753"
+  examples: |
+    - danemark
+    - denmark
+    - danois
+
+- synonym: "144572"
+  examples: |
+    - allemagne
+    - germany
+    - allemand
+
+- synonym: "147622"
+  examples: |
+    - bohème
+    - eberland
+    - bohémien
+
+- synonym: "146639"
+  examples: |
+    - angleterre
+    - england
+    - anglais
+
+- synonym: "900710"
+  examples: |
+    - europe
+    - europa
+    - européen
+
+- synonym: "147872"
+  examples: |
+    - finlande
+    - finland
+    - finlandais
+
+- synonym: "154719"
+  examples: |
+    - florence
+    - firenze
+    - florentin
+
+- synonym: "155107"
+  examples: |
+    - grèce
+    - greece
+    - grec
+
+- synonym: "154648"
+  examples: |
+    - hongrie
+    - hungary
+    - hongrois
+
+- synonym: "137949"
+  examples: |
+    - islande
+    - iceland
+    - islandais
+
+- synonym: "148017"
+  examples: |
+    - inde
+    - india
+    - indou
+
+- synonym: "147343"
+  examples: |
+    - irlande
+    - ireland
+    - irelandais
+
+- synonym: "155360"
+  examples: |
+    - italie
+    - italy
+    - italien
+
+- synonym: "154137"
+  examples: |
+    - japon
+    - japan
+    - japonais
+
+- synonym: "142493"
+  examples: |
+    - lettonie
+    - latvia
+    - lettone
+
+- synonym: "142483"
+  examples: |
+    - lithuanie
+    - lituanie
+    - lithuanien
+
+- synonym: "146684"
+  examples: |
+    - londres
+    - london
+    - londonien
+
+- synonym: "155237"
+  examples: |
+    - macédoine
+    - macedonia
+    - macédonien
+
+- synonym: "153975"
+  examples: |
+    - mexique
+    - mexico
+    - mexicain
+
+- synonym: "154063"
+  examples: |
+    - maroc
+    - morocco
+    - marocaine
+
+- synonym: "147181"
+  examples: |
+    - naples
+    - napoli
+    - napolitaine
+
+- synonym: "145649"
+  examples: |
+    - norvège
+    - norway
+    - norvégien
+
+- synonym: "142476"
+  examples: |
+    - baltes
+    - pays baltes
+    - balte
+
+- synonym: "146823"
+  examples: |
+    - pays-bas
+    - the netherlands
+    - hollandais
+
+- synonym: "153982"
+  examples: |
+    - pérou
+    - peru
+    - péruvien
+
+- synonym: "154809"
+  examples: |
+    - pologne
+    - poland
+    - polonais
+
+- synonym: "136741"
+  examples: |
+    - porto-rico
+    - puerto rico
+    - porto ricain
+
+- synonym: "144751"
+  examples: |
+    - prusse
+    - preussen
+    - prusse
+
+- synonym: "154159"
+  examples: |
+    - moyen orient
+    - proche orient
+    - moyen oriental
+
+- synonym: "147331"
+  examples: |
+    - provence-alpes-côte-d'azur
+    - provence cote d'azur
+    - provencal
+
+- synonym: "148231"
+  examples: |
+    - rome
+    - roma
+    - romaine
+
+- synonym: "154658"
+  examples: |
+    - roumanie
+    - romania
+    - roumain
+
+- synonym: "147338"
+  examples: |
+    - russie
+    - russia
+    - russe
+
+- synonym: "144774"
+  examples: |
+    - silésie
+    - silesia
+    - silésien
+
+- synonym: "155174"
+  examples: |
+    - ecosse
+    - scotland
+    - écossais
+
+- synonym: "139602"
+  examples: |
+    - slovaquie
+    - slovakia
+    - slovaque
+
+- synonym: "137908"
+  examples: |
+    - slovénie
+    - slovenia
+    - slovéne
+
+- synonym: "153979"
+  examples: |
+    - amérique du sud
+    - south america
+    - sud américain
+
+- synonym: "144838"
+  examples: |
+    - espagne
+    - spain
+    - espagnol
+
+- synonym: "147980"
+  examples: |
+    - suède
+    - sweden
+    - suédois
+
+- synonym: "146912"
+  examples: |
+    - suisse
+    - switzerland
+    - suisse
+
+- synonym: "154169"
+  examples: |
+    - syrie
+    - syria
+    - syrien
+
+- synonym: "154652"
+  examples: |
+    - république tchèque
+    - tchéquie
+    - tchéque
+
+- synonym: "144561"
+  examples: |
+    - turquie
+    - turkey
+    - turc
+
+- synonym: "139940"
+  examples: |
+    - ukraine
+    - ukrainia
+    - ukrainien
+
+- synonym: "152575"
+  examples: |
+    - urss
+    - union soviétique
+    - russe
+
+- synonym: "147356"
+  examples: |
+    - etats-unis
+    - usa
+    - américain
+
+- synonym: "146425"
+  examples: |
+    - viet-nam
+    - vietnam
+    - vietnamien
+
+- synonym: "139475"
+  examples: |
+    - pays de galles
+    - wales
+    - galloise
+
+- synonym: "148236"
+  examples: |
+    - vienne
+    - wien
+    - viennois
+
+- synonym: "137896"
+  examples: |
+    - yougoslavie
+    - yugoslavia
+    - yougoslave
+
+- synonym: "146110"
+  examples: |
+    - alsacealsacien
+
+- synonym: "67214"
+  examples: |
+    - grande-bretagneanglais
+
+- synonym: "153689"
+  examples: |
+    - arméniearménien
+
+- synonym: "743927"
+  examples: |
+    - balkansbalkanique
+
+- synonym: "139020"
+  examples: |
+    - pays basquebasque
+
+- synonym: "154145"
+  examples: |
+    - bengalebengalais
+
+- synonym: "155089"
+  examples: |
+    - berryberrichone
+
+- synonym: "144410"
+  examples: |
+    - canadacanadien
+
+- synonym: "153154"
+  examples: |
+    - corsecorse
+
+- synonym: "136713"
+  examples: |
+    - cubacubain
+
+- synonym: "142487"
+  examples: |
+    - estonieestonien
+
+- synonym: "144503"
+  examples: |
+    - flandresflamand
+
+- synonym: "155340"
+  examples: |
+    - francefrançais
+
+- synonym: "874558"
+  examples: |
+    - gascognegascon
+
+- synonym: "148845"
+  examples: |
+    - guadeloupeguadeloupéen
+
+- synonym: "153981"
+  examples: |
+    - guyaneguyanaise
+
+- synonym: "146848"
+  examples: |
+    - hollandehollandais
+
+- synonym: "142918"
+  examples: |
+    - israëlisraélien
+
+- synonym: "136899"
+  examples: |
+    - jamaïquejamaïcain
+
+- synonym: "144557"
+  examples: |
+    - luxembourgluxembourgeois
+
+- synonym: "146456"
+  examples: |
+    - madagascarmalgache
+
+- synonym: "137879"
+  examples: |
+    - midi-pyénéesméridionale
+
+- synonym: "139599"
+  examples: |
+    - moraviemorave
+
+- synonym: "147320"
+  examples: |
+    - normandienormande
+
+- synonym: "144014"
+  examples: |
+    - paraguayparaguayien
+
+- synonym: "155352"
+  examples: |
+    - parisparisien
+
+- synonym: "845941"
+  examples: |
+    - périgordpérigourgin
+
+- synonym: "141665"
+  examples: |
+    - picardiepicarde
+
+- synonym: "154768"
+  examples: |
+    - portugalportuguas
+
+- synonym: "137387"
+  examples: |
+    - provenceprovencal
+
+- synonym: "153695"
+  examples: |
+    - québec
+
+- synonym: "153701"
+  examples: |
+    - québec
+
+- synonym: "139739"
+  examples: |
+    - savoiesavoyared
+
+- synonym: "152610"
+  examples: |
+    - strasbourgstrasbourgeois
+
+- synonym: "153520"
+  examples: |
+    - taïwantaïwanais
+
+- synonym: "144559"
+  examples: |
+    - tchécoslovaquietchéque
+
+- synonym: "153320"
+  examples: |
+    - venezuelavénézuélien
+
+- synonym: "149598"
+  examples: |
+    - versaillesversaillais
+
+- synonym: "144550"
+  examples: |
+    - walloniewallone
+
+- synonym: "143622"
+  examples: |
+    - aix-la-chapelle
+    - aachen
+
+- synonym: "1019265"
+  examples: |
+    - abruzzes
+    - abruzzi
+
+- synonym: "154049"
+  examples: |
+    - ethiopie
+    - ethiopia
+
+- synonym: "146102"
+  examples: |
+    - afrique orientale
+    - east africa
+
+- synonym: "154039"
+  examples: |
+    - afrique occidentale
+    - west africa
+
+- synonym: "154028"
+  examples: |
+    - afrique centrale
+    - central africa
+
+- synonym: "149078"
+  examples: |
+    - maghreb
+    - north africa
+
+- synonym: "148181"
+  examples: |
+    - agrigente
+    - agrigento
+
+- synonym: "902650"
+  examples: |
+    - himalaya-népal-tibet
+    - aire culturelle tibétaine
+
+- synonym: "146888"
+  examples: |
+    - aix-en-provence
+    - aix en provence
+
+- synonym: "154053"
+  examples: |
+    - alexandrie
+    - alexandria
+
+- synonym: "141627"
+  examples: |
+    - almaty
+    - alma-ata
+
+- synonym: "153303"
+  examples: |
+    - iles alor
+    - alor
+
+- synonym: "147332"
+  examples: |
+    - alpes-de-haute-provence
+    - alpes de haute provence
+
+- synonym: "146458"
+  examples: |
+    - alpes-maritimes
+    - alpes maritimes
+
+- synonym: "146531"
+  examples: |
+    - ambon
+    - ile ambon
+
+- synonym: "137950"
+  examples: |
+    - ancône
+    - ancona
+
+- synonym: "153295"
+  examples: |
+    - iles andaman
+    - andaman
+
+- synonym: "154129"
+  examples: |
+    - wegorzewo
+    - angerburg
+
+- synonym: "144488"
+  examples: |
+    - anvers
+    - antwerpen
+
+- synonym: "153948"
+  examples: |
+    - aoste
+    - aosta
+
+- synonym: "68535"
+  examples: |
+    - asie mineure
+    - asia minor
+
+- synonym: "147102"
+  examples: |
+    - asie centrale
+    - central asia
+
+- synonym: "153521"
+  examples: |
+    - extrême orient
+    - asie orientale
+
+- synonym: "138601"
+  examples: |
+    - assise
+    - assisi
+
+- synonym: "144843"
+  examples: |
+    - asturies
+    - asturias
+
+- synonym: "144580"
+  examples: |
+    - augsbourg
+    - augsburg
+
+- synonym: "155180"
+  examples: |
+    - azerbaïdjan
+    - azerbayjan
+
+- synonym: "1002312"
+  examples: |
+    - bachkirie
+    - respoublika bachkortostan
+
+- synonym: "141619"
+  examples: |
+    - bakou
+    - bacou
+
+- synonym: "144583"
+  examples: |
+    - bade-wurtemberg
+    - baden-wurtenberg
+
+- synonym: "145421"
+  examples: |
+    - bahrein
+    - bahrain
+
+- synonym: "151283"
+  examples: |
+    - varanasi
+    - veranasi
+
+- synonym: "152604"
+  examples: |
+    - bas-rhin
+    - bas rhin
+
+- synonym: "146917"
+  examples: |
+    - bâle
+    - basel
+
+- synonym: "141946"
+  examples: |
+    - pyrénées-atlantiques
+    - basses-pyrénées
+
+- synonym: "144587"
+  examples: |
+    - bavière
+    - bayern
+
+- synonym: "138069"
+  examples: |
+    - botswana
+    - bechuanaland
+
+- synonym: "148779"
+  examples: |
+    - pékin
+    - beijing
+
+- synonym: "142696"
+  examples: |
+    - berne
+    - berne
+
+- synonym: "146918"
+  examples: |
+    - berne
+    - berne
+
+- synonym: "146926"
+  examples: |
+    - burgdorf
+    - berthoud
+
+- synonym: "1017589"
+  examples: |
+    - bisignano
+    - besignano
+
+- synonym: "148774"
+  examples: |
+    - bhoutan
+    - bhutan
+
+- synonym: "146920"
+  examples: |
+    - bienne
+    - biel
+
+- synonym: "139762"
+  examples: |
+    - bombay
+    - mumbay
+
+- synonym: "147734"
+  examples: |
+    - bologne
+    - bologna
+
+- synonym: "144598"
+  examples: |
+    - breslau
+    - wroclaw
+
+- synonym: "149455"
+  examples: |
+    - bouches-du-rhône
+    - bouches du rhone
+
+- synonym: "897878"
+  examples: |
+    - boulogne-billancourt
+    - boulogne-sur-seine
+
+- synonym: "147004"
+  examples: |
+    - la couture-boussey
+    - la couture
+
+- synonym: "139316"
+  examples: |
+    - bolzano
+    - bozen
+
+- synonym: "144600"
+  examples: |
+    - brunswick
+    - braunschweig
+
+- synonym: "144597"
+  examples: |
+    - brême
+    - bremen
+
+- synonym: "816054"
+  examples: |
+    - colombie-britannique
+    - british columbia
+
+- synonym: "148209"
+  examples: |
+    - bressanone
+    - brixen
+
+- synonym: "144497"
+  examples: |
+    - bruxelles
+    - brussels
+
+- synonym: "154763"
+  examples: |
+    - buenos-aires
+    - buenos aires
+
+- synonym: "145549"
+  examples: |
+    - burkina-faso
+    - haute-volta
+
+- synonym: "154082"
+  examples: |
+    - birmanie
+    - myanmar
+
+- synonym: "1002311"
+  examples: |
+    - bouriatie
+    - buryat
+
+- synonym: "155231"
+  examples: |
+    - biélorussie
+    - byelorussia
+
+- synonym: "149085"
+  examples: |
+    - istanbul
+    - istambul
+
+- synonym: "860292"
+  examples: |
+    - cap lopez
+    - cabo lopez
+
+- synonym: "144844"
+  examples: |
+    - cadix
+    - cadiz
+
+- synonym: "139422"
+  examples: |
+    - calabre
+    - calabria
+
+- synonym: "147374"
+  examples: |
+    - californie
+    - california
+
+- synonym: "146437"
+  examples: |
+    - cambodge
+    - cambodia
+
+- synonym: "756695"
+  examples: |
+    - iles canaries
+    - canary islands
+
+- synonym: "154022"
+  examples: |
+    - iles du cap-vert
+    - cape verde
+
+- synonym: "150353"
+  examples: |
+    - le cap
+    - capetown
+
+- synonym: "973744"
+  examples: |
+    - karlovy vary
+    - karlsbad
+
+- synonym: "848224"
+  examples: |
+    - cartagena
+    - cartagene
+
+- synonym: "153112"
+  examples: |
+    - caucase
+    - caucasus
+
+- synonym: "154093"
+  examples: |
+    - célèbes
+    - sulawesi
+
+- synonym: "151511"
+  examples: |
+    - république centrafricaine
+    - rca
+
+- synonym: "150729"
+  examples: |
+    - amérique centrale
+    - central america
+
+- synonym: "141889"
+  examples: |
+    - centre-val de loire
+    - centre
+
+- synonym: "146527"
+  examples: |
+    - seran
+    - seran
+
+- synonym: "141494"
+  examples: |
+    - tchernivtsi
+    - tchernowitz
+
+- synonym: "856415"
+  examples: |
+    - cervione
+    - cervioni
+
+- synonym: "146111"
+  examples: |
+    - sri lanka
+    - ceylan
+
+- synonym: "153255"
+  examples: |
+    - tchad
+    - chad
+
+- synonym: "149637"
+  examples: |
+    - châlons-en-champagne
+    - chalons-sur-marne
+
+- synonym: "149372"
+  examples: |
+    - champagne-ardenne
+    - champagne ardenne
+
+- synonym: "141483"
+  examples: |
+    - kemerovo
+    - chtchelgovsk
+
+- synonym: "860262"
+  examples: |
+    - iles des comores
+    - comores
+
+- synonym: "140215"
+  examples: |
+    - saint-jacques de compostelle
+    - santiago de compostela
+
+- synonym: "137357"
+  examples: |
+    - république démocratique du congo
+    - zaïre
+
+- synonym: "154029"
+  examples: |
+    - république du congo
+    - république populaire du congo
+
+- synonym: "139537"
+  examples: |
+    - cordoue
+    - cordoba
+
+- synonym: "1060173"
+  examples: |
+    - république populaire démocratique de corée
+    - north korea
+
+- synonym: "1060175"
+  examples: |
+    - république de corée
+    - south korea
+
+- synonym: "146656"
+  examples: |
+    - cornouailles
+    - cornwall
+
+- synonym: "153158"
+  examples: |
+    - corse-du-sud
+    - corse du sud
+
+- synonym: "149686"
+  examples: |
+    - côte-d'or
+    - cote d'or
+
+- synonym: "139057"
+  examples: |
+    - la côte-saint-andré
+    - la cote saint andre
+
+- synonym: "141912"
+  examples: |
+    - côtes-d'armor
+    - cotes-du-nord
+
+- synonym: "144436"
+  examples: |
+    - crémone
+    - cremona
+
+- synonym: "147574"
+  examples: |
+    - iles des cyclades
+    - cyclades
+
+- synonym: "144555"
+  examples: |
+    - chypre
+    - cyprus
+
+- synonym: "139458"
+  examples: |
+    - bénin
+    - dahomey
+
+- synonym: "784540"
+  examples: |
+    - gdansk
+    - danzig
+
+- synonym: "136697"
+  examples: |
+    - devon
+    - devonshire
+
+- synonym: "143493"
+  examples: |
+    - saint sebastien
+    - san sebastian
+
+- synonym: "144621"
+  examples: |
+    - dresde
+    - dresden
+
+- synonym: "881807"
+  examples: |
+    - île de pâques
+    - pâques
+
+- synonym: "139471"
+  examples: |
+    - equateur
+    - equator
+
+- synonym: "139060"
+  examples: |
+    - edimbourg
+    - edinburgh
+
+- synonym: "154052"
+  examples: |
+    - egypte
+    - egypt
+
+- synonym: "141465"
+  examples: |
+    - iekaterinbourg
+    - ekaterinbourg
+
+- synonym: "153503"
+  examples: |
+    - salvador
+    - el salvador
+
+- synonym: "143845"
+  examples: |
+    - helsingor
+    - elseneur
+
+- synonym: "141612"
+  examples: |
+    - erevan
+    - erivan
+
+- synonym: "955279"
+  examples: |
+    - new york state
+    - etat de new york
+
+- synonym: "147713"
+  examples: |
+    - etobon
+    - etaubon
+
+- synonym: "144560"
+  examples: |
+    - scandinavie
+    - scandinavia
+
+- synonym: "153516"
+  examples: |
+    - fès
+    - fez
+
+- synonym: "144299"
+  examples: |
+    - iles fidji
+    - fiji
+
+- synonym: "1016490"
+  examples: |
+    - mékong
+    - fleuve mekong
+
+- synonym: "153299"
+  examples: |
+    - ile de flores
+    - flores
+
+- synonym: "147398"
+  examples: |
+    - floride
+    - florida
+
+- synonym: "139157"
+  examples: |
+    - fontevraud
+    - fontevrault
+
+- synonym: "137932"
+  examples: |
+    - libreville
+    - fort d'aumale
+
+- synonym: "138226"
+  examples: |
+    - francfort-sur-le-main
+    - frankfurt am main
+
+- synonym: "152623"
+  examples: |
+    - franche-comté
+    - franche comte
+
+- synonym: "149501"
+  examples: |
+    - verneuil d'avre et d'iton
+    - verneuil-sur-avre
+
+- synonym: "958451"
+  examples: |
+    - francfort-sur-l'oder
+    - frankfurt an der oder
+
+- synonym: "146943"
+  examples: |
+    - fribourg
+    - freiburg
+
+- synonym: "141174"
+  examples: |
+    - fribourg-en-brisgau
+    - freiburg im breisgau
+
+- synonym: "137720"
+  examples: |
+    - frise
+    - friesland
+
+- synonym: "141631"
+  examples: |
+    - bichkek
+    - pichpek
+
+- synonym: "144850"
+  examples: |
+    - galice
+    - galicia
+
+- synonym: "142312"
+  examples: |
+    - gambie
+    - gambia
+
+- synonym: "154846"
+  examples: |
+    - gênes
+    - genoa
+
+- synonym: "144507"
+  examples: |
+    - gand
+    - gent
+
+- synonym: "153111"
+  examples: |
+    - géorgie
+    - georgia
+
+- synonym: "1046636"
+  examples: |
+    - grammont
+    - geraardsbergen
+
+- synonym: "893629"
+  examples: |
+    - gujarat
+    - gujrat
+
+- synonym: "144852"
+  examples: |
+    - grenade
+    - granada
+
+- synonym: "154654"
+  examples: |
+    - kraslice
+    - graslitz
+
+- synonym: "146633"
+  examples: |
+    - royaume-uni
+    - united kingdom
+
+- synonym: "895189"
+  examples: |
+    - grandes antilles
+    - greater antilles
+
+- synonym: "144398"
+  examples: |
+    - groenland
+    - greenland
+
+- synonym: "155030"
+  examples: |
+    - groote eylandt
+    - ile de groote
+
+- synonym: "154041"
+  examples: |
+    - guinée
+    - guinea
+
+- synonym: "818371"
+  examples: |
+    - guyana
+    - republique de guyana
+
+- synonym: "153983"
+  examples: |
+    - surinam
+    - guyane néerlandaise
+
+- synonym: "144664"
+  examples: |
+    - hambourg
+    - hamburg
+
+- synonym: "144666"
+  examples: |
+    - hanovre
+    - hannover
+
+- synonym: "153153"
+  examples: |
+    - haute-corse
+    - haute corse
+
+- synonym: "149564"
+  examples: |
+    - haute-garonne
+    - haute garonne
+
+- synonym: "146905"
+  examples: |
+    - haute-marne
+    - haute marne
+
+- synonym: "153177"
+  examples: |
+    - haute-saône
+    - haute saone
+
+- synonym: "149554"
+  examples: |
+    - haute-savoie
+    - haute savoie
+
+- synonym: "153187"
+  examples: |
+    - haute-vienne
+    - haute vienne
+
+- synonym: "146254"
+  examples: |
+    - hautes-alpes
+    - hautes alpes
+
+- synonym: "153160"
+  examples: |
+    - hautes-pyrénées
+    - hautes pyrenees
+
+- synonym: "146852"
+  examples: |
+    - la haye
+    - haye
+
+- synonym: "812558"
+  examples: |
+    - iles hébrides
+    - western islands
+
+- synonym: "144678"
+  examples: |
+    - hesse
+    - hessen
+
+- synonym: "850920"
+  examples: |
+    - hildburghausen
+    - hildburghaussen
+
+- synonym: "146424"
+  examples: |
+    - saigon
+    - ho chi minh ville
+
+- synonym: "147795"
+  examples: |
+    - hong kong
+    - hong-kong
+
+- synonym: "1021625"
+  examples: |
+    - harman
+    - szászhermány
+
+- synonym: "141507"
+  examples: |
+    - dnipropetrovsk
+    - iekaterinoslav
+
+- synonym: "147308"
+  examples: |
+    - ile-de-france
+    - ile de france
+
+- synonym: "151342"
+  examples: |
+    - la réunion
+    - réunion
+
+- synonym: "956094"
+  examples: |
+    - luçon
+    - luzon
+
+- synonym: "154096"
+  examples: |
+    - nias
+    - nias
+
+- synonym: "1116020"
+  examples: |
+    - iles cocos
+    - iles keeling
+
+- synonym: "154141"
+  examples: |
+    - inde moghole
+    - inde mughal
+
+- synonym: "146528"
+  examples: |
+    - indonésie
+    - indonesia
+
+- synonym: "944123"
+  examples: |
+    - héliopolis
+    - ounu
+
+- synonym: "141510"
+  examples: |
+    - donetsk
+    - stalino
+
+- synonym: "154161"
+  examples: |
+    - irak
+    - iraq
+
+- synonym: "154175"
+  examples: |
+    - constantinople
+    - istambul
+
+- synonym: "154040"
+  examples: |
+    - côte d'ivoire
+    - ivory coast
+
+- synonym: "154105"
+  examples: |
+    - java
+    - java
+
+- synonym: "151894"
+  examples: |
+    - jordanie
+    - jordan
+
+- synonym: "149581"
+  examples: |
+    - jouy-en-josas
+    - jouy en josas
+
+- synonym: "772409"
+  examples: |
+    - kaboul
+    - kabul
+
+- synonym: "141441"
+  examples: |
+    - tver
+    - kalinine
+
+- synonym: "148016"
+  examples: |
+    - cachemire
+    - kashmir
+
+- synonym: "144609"
+  examples: |
+    - cassel
+    - kassel
+
+- synonym: "821258"
+  examples: |
+    - qatar
+    - katar
+
+- synonym: "151905"
+  examples: |
+    - kirghizistan
+    - kyrgyztan
+
+- synonym: "141169"
+  examples: |
+    - coblence
+    - koblenz
+
+- synonym: "870742"
+  examples: |
+    - ile kodiak
+    - kodiak
+
+- synonym: "144613"
+  examples: |
+    - cologne
+    - koln
+
+- synonym: "147339"
+  examples: |
+    - kaliningrad
+    - königsberg
+
+- synonym: "154132"
+  examples: |
+    - corée
+    - korea
+
+- synonym: "153970"
+  examples: |
+    - barbade
+    - la barbade
+
+- synonym: "137424"
+  examples: |
+    - la chaise-dieu
+    - la chaise dieu
+
+- synonym: "144854"
+  examples: |
+    - la coruna
+    - la corogne
+
+- synonym: "147413"
+  examples: |
+    - la nouvelle orléans
+    - nouvelle-orléans
+
+- synonym: "149601"
+  examples: |
+    - le puy
+    - le puy-en-velay
+
+- synonym: "148847"
+  examples: |
+    - liban
+    - lebanon
+
+- synonym: "141513"
+  examples: |
+    - lvov
+    - lwow
+
+- synonym: "147289"
+  examples: |
+    - saint-pétersbourg
+    - saint-petersburg
+
+- synonym: "895188"
+  examples: |
+    - petites antilles
+    - lesser antilles
+
+- synonym: "146854"
+  examples: |
+    - leiden
+    - leyde
+
+- synonym: "149079"
+  examples: |
+    - libye
+    - libya
+
+- synonym: "142480"
+  examples: |
+    - ligurie
+    - liguria
+
+- synonym: "154769"
+  examples: |
+    - lisbonne
+    - lisboa
+
+- synonym: "137157"
+  examples: |
+    - livourne
+    - livorno
+
+- synonym: "153165"
+  examples: |
+    - loire-atlantique
+    - loire atlantique
+
+- synonym: "155171"
+  examples: |
+    - lombardie
+    - lombardia
+
+- synonym: "150247"
+  examples: |
+    - lot-et-garonne
+    - lot et garonne
+
+- synonym: "141459"
+  examples: |
+    - louhansk
+    - vorochilovgrad
+
+- synonym: "147419"
+  examples: |
+    - louisiane
+    - louisiana
+
+- synonym: "147112"
+  examples: |
+    - lucques
+    - lucca
+
+- synonym: "146856"
+  examples: |
+    - maastricht
+    - maestricht
+
+- synonym: "139351"
+  examples: |
+    - magdebourg
+    - magdeburg
+
+- synonym: "140406"
+  examples: |
+    - magny-en-vexin
+    - magny en vexin
+
+- synonym: "152616"
+  examples: |
+    - maine-et-loire
+    - maine et loire
+
+- synonym: "144717"
+  examples: |
+    - mayence
+    - mainz
+
+- synonym: "154084"
+  examples: |
+    - malaisie
+    - malaysia
+
+- synonym: "142507"
+  examples: |
+    - iles maldives
+    - maldives
+
+- synonym: "144862"
+  examples: |
+    - majorque
+    - mallorca
+
+- synonym: "138090"
+  examples: |
+    - malte
+    - malta
+
+- synonym: "153297"
+  examples: |
+    - iles moluques
+    - moluques
+
+- synonym: "147018"
+  examples: |
+    - mantoue
+    - mantova
+
+- synonym: "878740"
+  examples: |
+    - mayotte
+    - maore
+
+- synonym: "154523"
+  examples: |
+    - marches
+    - marche
+
+- synonym: "148498"
+  examples: |
+    - iles marquises
+    - marquises
+
+- synonym: "138241"
+  examples: |
+    - ile maurice
+    - maurice
+
+- synonym: "149080"
+  examples: |
+    - mauritanie
+    - mauritania
+
+- synonym: "139081"
+  examples: |
+    - meran
+    - merano
+
+- synonym: "881802"
+  examples: |
+    - micronésie
+    - micronesia
+
+- synonym: "146877"
+  examples: |
+    - milan
+    - milano
+
+- synonym: "155196"
+  examples: |
+    - modène
+    - modena
+
+- synonym: "141635"
+  examples: |
+    - moldavie
+    - moldova
+
+- synonym: "150437"
+  examples: |
+    - mongolie
+    - mongolia
+
+- synonym: "152408"
+  examples: |
+    - le mont saint-michel
+    - mont-saint-michel
+
+- synonym: "144835"
+  examples: |
+    - moscou
+    - moscow
+
+- synonym: "144393"
+  examples: |
+    - munich
+    - münchen
+
+- synonym: "142779"
+  examples: |
+    - musikinstrumenten-museum - schloss kremsegg
+    - museum of music instruments
+
+- synonym: "138065"
+  examples: |
+    - namibie
+    - namibia
+
+- synonym: "144731"
+  examples: |
+    - naumbourg
+    - naumburg an der saale
+
+- synonym: "150191"
+  examples: |
+    - nouvelle-calédonie
+    - nouvelle caledonie
+
+- synonym: "821545"
+  examples: |
+    - nouvelle-angleterre
+    - new england
+
+- synonym: "154190"
+  examples: |
+    - nouvelle-guinée
+    - nouvelle guinee
+
+- synonym: "147846"
+  examples: |
+    - vanuatu
+    - nouvelles hebrides
+
+- synonym: "870810"
+  examples: |
+    - nouvelle-irlande
+    - new ireland
+
+- synonym: "147443"
+  examples: |
+    - nouveau-mexique
+    - new mexico
+
+- synonym: "147438"
+  examples: |
+    - new york
+    - new york city
+
+- synonym: "138503"
+  examples: |
+    - nouvelle-zélande
+    - nouvelle zelande
+
+- synonym: "146862"
+  examples: |
+    - nimègue
+    - nijmegen
+
+- synonym: "149345"
+  examples: |
+    - nord-pas-de-calais
+    - nord pas de calais
+
+- synonym: "144396"
+  examples: |
+    - amérique du nord
+    - north america
+
+- synonym: "147375"
+  examples: |
+    - caroline du nord
+    - north carolina
+
+- synonym: "154144"
+  examples: |
+    - inde du nord
+    - north india
+
+- synonym: "146634"
+  examples: |
+    - irlande du nord
+    - ulster
+
+- synonym: "733385"
+  examples: |
+    - nouvelle ecosse
+    - nova scotia
+
+- synonym: "141473"
+  examples: |
+    - novossibirsk
+    - novonikolaïevsk
+
+- synonym: "144741"
+  examples: |
+    - nuremberg
+    - nurnberg
+
+- synonym: "154184"
+  examples: |
+    - océanie
+    - oceania
+
+- synonym: "152130"
+  examples: |
+    - olomouc
+    - olmutz
+
+- synonym: "143191"
+  examples: |
+    - ombrie
+    - ombria
+
+- synonym: "815929"
+  examples: |
+    - uele
+    - ouelle
+
+- synonym: "1012480"
+  examples: |
+    - orense
+    - ourense
+
+- synonym: "147834"
+  examples: |
+    - padoue
+    - padova
+
+- synonym: "147199"
+  examples: |
+    - palerme
+    - palermo
+
+- synonym: "140343"
+  examples: |
+    - papouasie-nouvelle-guinée
+    - papua new guinea
+
+- synonym: "154971"
+  examples: |
+    - parme
+    - parma
+
+- synonym: "149351"
+  examples: |
+    - pas-de-calais
+    - pas de calais
+
+- synonym: "1116542"
+  examples: |
+    - pavia
+    - pavie
+
+- synonym: "147326"
+  examples: |
+    - pays-de-la-loire
+    - pays de loire
+
+- synonym: "834443"
+  examples: |
+    - iles de la sonde
+    - sunda
+
+- synonym: "893626"
+  examples: |
+    - panjab
+    - punjab
+
+- synonym: "139833"
+  examples: |
+    - pennsylvanie
+    - pennsylvania
+
+- synonym: "146069"
+  examples: |
+    - iran
+    - perse
+
+- synonym: "153417"
+  examples: |
+    - pérouse
+    - perugia
+
+- synonym: "154642"
+  examples: |
+    - pesaro urbino
+    - pesaro et urbino
+
+- synonym: "147450"
+  examples: |
+    - philadelphie
+    - philadelphia
+
+- synonym: "155263"
+  examples: |
+    - plaisance
+    - piacenza
+
+- synonym: "141278"
+  examples: |
+    - piémont
+    - piemonte
+
+- synonym: "139720"
+  examples: |
+    - pise
+    - pisa
+
+- synonym: "141651"
+  examples: |
+    - haut-poitou
+    - poitou
+
+- synonym: "141928"
+  examples: |
+    - poitou-charentes
+    - poitou charentes
+
+- synonym: "899899"
+  examples: |
+    - port-said
+    - port said
+
+- synonym: "833727"
+  examples: |
+    - poznan
+    - posen
+
+- synonym: "154755"
+  examples: |
+    - bratislava
+    - pressburg
+
+- synonym: "147309"
+  examples: |
+    - puy-de-dôme
+    - puy de dome
+
+- synonym: "152653"
+  examples: |
+    - pyrénées-orientales
+    - pyrenees orientales
+
+- synonym: "147101"
+  examples: |
+    - kazakhstan
+    - qazaqstan
+
+- synonym: "138399"
+  examples: |
+    - ravenne
+    - ravenna
+
+- synonym: "144753"
+  examples: |
+    - ratisbonne
+    - regensburg
+
+- synonym: "155911"
+  examples: |
+    - tallinn
+    - tallin
+
+- synonym: "144755"
+  examples: |
+    - rhénanie
+    - rheinland
+
+- synonym: "139040"
+  examples: |
+    - zimbabwe
+    - rhodésie
+
+- synonym: "141504"
+  examples: |
+    - rivne
+    - rovno
+
+- synonym: "144761"
+  examples: |
+    - sarre
+    - saarland
+
+- synonym: "151720"
+  examples: |
+    - saint-bauzille
+    - saint bauzille
+
+- synonym: "137685"
+  examples: |
+    - saint-brieuc
+    - saint brieuc
+
+- synonym: "144399"
+  examples: |
+    - saint-pierre-et-miquelon
+    - saint pierre and miquelon
+
+- synonym: "845499"
+  examples: |
+    - sant'andrea-di-bozio
+    - saint-andré di bozio
+
+- synonym: "1010772"
+  examples: |
+    - saint félix de lauragais
+    - saint-félix-lauragais
+
+- synonym: "141470"
+  examples: |
+    - sankt georgen
+    - saint-georges
+
+- synonym: "854755"
+  examples: |
+    - sankt ingbert
+    - saint-ingbert
+
+- synonym: "146988"
+  examples: |
+    - sainte-lucie
+    - sainte lucie
+
+- synonym: "139096"
+  examples: |
+    - salamanque
+    - salamanca
+
+- synonym: "153535"
+  examples: |
+    - iles salomon
+    - salomon
+
+- synonym: "155135"
+  examples: |
+    - saluces
+    - saluzzo
+
+- synonym: "155327"
+  examples: |
+    - salzbourg
+    - salzburg
+
+- synonym: "151922"
+  examples: |
+    - iles samoa
+    - samoa
+
+- synonym: "146782"
+  examples: |
+    - san francisco
+    - san-francisco
+
+- synonym: "149235"
+  examples: |
+    - saône-et-loire
+    - saone et loire
+
+- synonym: "144866"
+  examples: |
+    - saragosse
+    - zaragoza
+
+- synonym: "138592"
+  examples: |
+    - sardaigne
+    - sardinia
+
+- synonym: "153990"
+  examples: |
+    - sao paulo
+    - sau paulo
+
+- synonym: "154160"
+  examples: |
+    - arabie saoudite
+    - saudi arabia
+
+- synonym: "144763"
+  examples: |
+    - saxe
+    - saxen
+
+- synonym: "144776"
+  examples: |
+    - souabe
+    - schwaben
+
+- synonym: "1003289"
+  examples: |
+    - sées
+    - séez
+
+- synonym: "138953"
+  examples: |
+    - ségovie
+    - segovia
+
+- synonym: "139675"
+  examples: |
+    - seine-et-marne
+    - seine et marne
+
+- synonym: "144867"
+  examples: |
+    - séville
+    - sevilla
+
+- synonym: "862260"
+  examples: |
+    - iles des seychelles
+    - seychelles
+
+- synonym: "139344"
+  examples: |
+    - thaïlande
+    - thailand
+
+- synonym: "147340"
+  examples: |
+    - sibérie
+    - siberia
+
+- synonym: "153248"
+  examples: |
+    - sicile
+    - sicilia
+
+- synonym: "155221"
+  examples: |
+    - sienne
+    - sienna
+
+- synonym: "141449"
+  examples: |
+    - oulianovsk
+    - simbirsk
+
+- synonym: "150760"
+  examples: |
+    - singapour
+    - singapur
+
+- synonym: "783245"
+  examples: |
+    - xin-yang
+    - xinjiang
+
+- synonym: "811696"
+  examples: |
+    - shivpuri
+    - sipri
+
+- synonym: "870910"
+  examples: |
+    - iles de la société
+    - société
+
+- synonym: "152511"
+  examples: |
+    - surakarta
+    - solo
+
+- synonym: "137359"
+  examples: |
+    - sorrente
+    - sorrento
+
+- synonym: "150352"
+  examples: |
+    - afrique du sud
+    - south africa
+
+- synonym: "726328"
+  examples: |
+    - asie du sud
+    - south asia
+
+- synonym: "154081"
+  examples: |
+    - asie du sud-est
+    - south east asia
+
+- synonym: "148534"
+  examples: |
+    - inde du sud
+    - south india
+
+- synonym: "154025"
+  examples: |
+    - afrique australe
+    - southern africa
+
+- synonym: "851798"
+  examples: |
+    - saint-amand montrond
+    - st-amand montrond
+
+- synonym: "141452"
+  examples: |
+    - volgograd
+    - tsaritsyne
+
+- synonym: "153290"
+  examples: |
+    - soudan
+    - sudan
+
+- synonym: "154291"
+  examples: |
+    - tadjikistan
+    - tajikistan
+
+- synonym: "146455"
+  examples: |
+    - antananarivo
+    - tananarive
+
+- synonym: "146097"
+  examples: |
+    - tanzanie
+    - tanzania
+
+- synonym: "847647"
+  examples: |
+    - tchernigov
+    - tchernihiv
+
+- synonym: "811661"
+  examples: |
+    - baie de humboldt
+    - teluk yos sudarso
+
+- synonym: "146715"
+  examples: |
+    - tamise
+    - thames
+
+- synonym: "1006204"
+  examples: |
+    - thoune
+    - thun
+
+- synonym: "144793"
+  examples: |
+    - thuringe
+    - thüringen
+
+- synonym: "141623"
+  examples: |
+    - tbilissi
+    - tiflis
+
+- synonym: "137693"
+  examples: |
+    - tlemcen
+    - tilimsen
+
+- synonym: "151357"
+  examples: |
+    - tyrol
+    - tirol
+
+- synonym: "144871"
+  examples: |
+    - tolède
+    - toledo
+
+- synonym: "151918"
+  examples: |
+    - iles tonga
+    - tonga
+
+- synonym: "154687"
+  examples: |
+    - turin
+    - torino
+
+- synonym: "139380"
+  examples: |
+    - toscane
+    - toscana
+
+- synonym: "136711"
+  examples: |
+    - tournan-en-brie
+    - tournan en brie
+
+- synonym: "144796"
+  examples: |
+    - trèves
+    - trier
+
+- synonym: "146105"
+  examples: |
+    - trinidad et tobago
+    - trinité et tobago
+
+- synonym: "154069"
+  examples: |
+    - tunisie
+    - tunesia
+
+- synonym: "811683"
+  examples: |
+    - turkestan occidental
+    - turkestan russe
+
+- synonym: "151924"
+  examples: |
+    - ouganda
+    - uganda
+
+- synonym: "144585"
+  examples: |
+    - basse-franconie
+    - unterfranken
+
+- synonym: "1002495"
+  examples: |
+    - uttar pradesh
+    - uttard pradesh
+
+- synonym: "154287"
+  examples: |
+    - ouzbekistan
+    - uzbekistan
+
+- synonym: "141616"
+  examples: |
+    - etchmiadzine
+    - vagharchapat
+
+- synonym: "154873"
+  examples: |
+    - le val-d'ajol
+    - val d'ajol
+
+- synonym: "141832"
+  examples: |
+    - val-d'oise
+    - val d'oise
+
+- synonym: "145642"
+  examples: |
+    - val-de-marne
+    - val de marne
+
+- synonym: "144872"
+  examples: |
+    - valence
+    - valencia
+
+- synonym: "1012692"
+  examples: |
+    - venetie
+    - veneto
+
+- synonym: "155366"
+  examples: |
+    - venise
+    - venezia
+
+- synonym: "146615"
+  examples: |
+    - vérone
+    - verona
+
+- synonym: "137334"
+  examples: |
+    - le vésinet
+    - vesinet
+
+- synonym: "148216"
+  examples: |
+    - vicence
+    - vicenza
+
+- synonym: "155253"
+  examples: |
+    - vintimille
+    - vintimiglia
+
+- synonym: "147474"
+  examples: |
+    - virginie
+    - virginia
+
+- synonym: "149628"
+  examples: |
+    - viry-chatillon
+    - viry chatillon
+
+- synonym: "141557"
+  examples: |
+    - washington
+    - washington
+
+- synonym: "137644"
+  examples: |
+    - westphalie
+    - westfalen
+
+- synonym: "144824"
+  examples: |
+    - wurtemberg
+    - württemberg
+
+- synonym: "137100"
+  examples: |
+    - wurtzbourg
+    - würzburg
+
+- synonym: "847200"
+  examples: |
+    - zambèze
+    - zambezie
+
+- synonym: "150359"
+  examples: |
+    - zambie
+    - zambia
+
+- synonym: "961829"
+  examples: |
+    - zarautz
+    - zarauz
+
+- synonym: "144803"
+  examples: |
+    - klingenthal
+    - zwota
+
+- synonym: "1088544"
+  examples: |
+    - aire géographique
+
+- synonym: "773616"
+  examples: |
+    - méditerranée
+
+- synonym: "67374"
+  examples: |
+    - alpes
+
+- synonym: "144558"
+  examples: |
+    - monaco
+
+- synonym: "934898"
+  examples: |
+    - gaule
+
+- synonym: "153209"
+  examples: |
+    - amérique latine
+
+- synonym: "816016"
+  examples: |
+    - océan indien
+
+- synonym: "1044617"
+  examples: |
+    - sao tomé-et-principe
+
+- synonym: "142501"
+  examples: |
+    - polynésie
+
+- synonym: "144300"
+  examples: |
+    - mélanésie
+
+- synonym: "147405"
+  examples: |
+    - hawaï
+
+- synonym: "150206"
+  examples: |
+    - futuna
+
+- synonym: "150207"
+  examples: |
+    - tuamotou
+
+- synonym: "151919"
+  examples: |
+    - cook islands
+
+- synonym: "957506"
+  examples: |
+    - ile norfolk
+
+- synonym: "149607"
+  examples: |
+    - bourbonnais
+
+- synonym: "152663"
+  examples: |
+    - touraine
+
+- synonym: "67998"
+  examples: |
+    - occitanie
+
+- synonym: "136960"
+  examples: |
+    - martinique
+
+- synonym: "1046093"
+  examples: |
+    - languedoc-roussillon midi-pyrénées
+
+- synonym: "137349"
+  examples: |
+    - brie
+
+- synonym: "1046089"
+  examples: |
+    - auvergne rhône-alpes
+
+- synonym: "1046088"
+  examples: |
+    - aquitaine limousin poitou-charentes
+
+- synonym: "1046090"
+  examples: |
+    - bourgogne franche-comté
+
+- synonym: "1046094"
+  examples: |
+    - nord-pas-de-calais picardie
+
+- synonym: "155049"
+  examples: |
+    - pyrénées
+
+- synonym: "142152"
+  examples: |
+    - morvan
+
+- synonym: "1046087"
+  examples: |
+    - alsace champagne-ardenne lorraine
+
+- synonym: "151707"
+  examples: |
+    - cévennes
+
+- synonym: "152657"
+  examples: |
+    - nivernais
+
+- synonym: "153480"
+  examples: |
+    - anjou
+
+- synonym: "853580"
+  examples: |
+    - béarn
+
+- synonym: "68487"
+  examples: |
+    - milton-malbay
+
+- synonym: "147188"
+  examples: |
+    - dublin
+
+- synonym: "962828"
+  examples: |
+    - donegal
+
+- synonym: "141444"
+  examples: |
+    - novgorod
+
+- synonym: "141446"
+  examples: |
+    - saratov
+
+- synonym: "830283"
+  examples: |
+    - kalmoukie
+
+- synonym: "141461"
+  examples: |
+    - vorkouta
+
+- synonym: "141467"
+  examples: |
+    - tcheliabinsk
+
+- synonym: "141469"
+  examples: |
+    - omsk
+
+- synonym: "141476"
+  examples: |
+    - tomsk
+
+- synonym: "141479"
+  examples: |
+    - barnaoul
+
+- synonym: "141485"
+  examples: |
+    - krasnoïarsk
+
+- synonym: "141488"
+  examples: |
+    - irkoutsk
+
+- synonym: "147105"
+  examples: |
+    - carélie
+
+- synonym: "850661"
+  examples: |
+    - bu mockb
+
+- synonym: "875725"
+  examples: |
+    - nijni novgorod
+
+- synonym: "67837"
+  examples: |
+    - valachie
+
+- synonym: "139861"
+  examples: |
+    - bucarest
+
+- synonym: "145598"
+  examples: |
+    - iassy
+
+- synonym: "846306"
+  examples: |
+    - hunedoara
+
+- synonym: "997976"
+  examples: |
+    - transylvanie
+
+- synonym: "143752"
+  examples: |
+    - soro
+
+- synonym: "143756"
+  examples: |
+    - jaegersborg
+
+- synonym: "143760"
+  examples: |
+    - bagsvoerd
+
+- synonym: "143762"
+  examples: |
+    - randers
+
+- synonym: "143768"
+  examples: |
+    - holstebro
+
+- synonym: "143771"
+  examples: |
+    - rodovre
+
+- synonym: "143774"
+  examples: |
+    - horsens
+
+- synonym: "143776"
+  examples: |
+    - esbjerg
+
+- synonym: "143782"
+  examples: |
+    - skanderborg
+
+- synonym: "143785"
+  examples: |
+    - albertslund
+
+- synonym: "143788"
+  examples: |
+    - fredericia
+
+- synonym: "143792"
+  examples: |
+    - arhus
+
+- synonym: "143891"
+  examples: |
+    - roskilde
+
+- synonym: "147256"
+  examples: |
+    - copenhague
+
+- synonym: "147257"
+  examples: |
+    - ebeltoft
+
+- synonym: "933915"
+  examples: |
+    - fredericksborg
+
+- synonym: "140892"
+  examples: |
+    - bilbao
+
+- synonym: "137350"
+  examples: |
+    - caceres
+
+- synonym: "139425"
+  examples: |
+    - simancas
+
+- synonym: "142558"
+  examples: |
+    - andalousie
+
+- synonym: "144256"
+  examples: |
+    - baneres
+
+- synonym: "144428"
+  examples: |
+    - cuenca
+
+- synonym: "144841"
+  examples: |
+    - almeria
+
+- synonym: "144842"
+  examples: |
+    - aragon
+
+- synonym: "144846"
+  examples: |
+    - castille
+
+- synonym: "144851"
+  examples: |
+    - giron
+
+- synonym: "144855"
+  examples: |
+    - leon
+
+- synonym: "144856"
+  examples: |
+    - lerma
+
+- synonym: "144860"
+  examples: |
+    - luna
+
+- synonym: "144861"
+  examples: |
+    - madrid
+
+- synonym: "144863"
+  examples: |
+    - malaga
+
+- synonym: "144864"
+  examples: |
+    - mislata
+
+- synonym: "144865"
+  examples: |
+    - morella
+
+- synonym: "144868"
+  examples: |
+    - tarazona
+
+- synonym: "144873"
+  examples: |
+    - valladolid
+
+- synonym: "845505"
+  examples: |
+    - arratia
+
+- synonym: "846161"
+  examples: |
+    - oviedo
+
+- synonym: "1024769"
+  examples: |
+    - alicante
+
+- synonym: "1046092"
+  examples: |
+    - sigüenza
+
+- synonym: "136655"
+  examples: |
+    - roding
+
+- synonym: "136984"
+  examples: |
+    - münster
+
+- synonym: "137033"
+  examples: |
+    - krefeld-königshof
+
+- synonym: "137191"
+  examples: |
+    - landshut
+
+- synonym: "137209"
+  examples: |
+    - velburg
+
+- synonym: "137382"
+  examples: |
+    - rheda
+
+- synonym: "137485"
+  examples: |
+    - lich
+
+- synonym: "137496"
+  examples: |
+    - weimar
+
+- synonym: "137500"
+  examples: |
+    - mühlhausen
+
+- synonym: "137526"
+  examples: |
+    - glauchau
+
+- synonym: "138316"
+  examples: |
+    - deggendorf
+
+- synonym: "138450"
+  examples: |
+    - nordhausen
+
+- synonym: "138629"
+  examples: |
+    - bad sackingen
+
+- synonym: "139097"
+  examples: |
+    - freiberg
+
+- synonym: "139104"
+  examples: |
+    - neresheim
+
+- synonym: "139355"
+  examples: |
+    - blankenburg
+
+- synonym: "139710"
+  examples: |
+    - herne
+
+- synonym: "141055"
+  examples: |
+    - bonn
+
+- synonym: "141177"
+  examples: |
+    - karlsruhe
+
+- synonym: "141180"
+  examples: |
+    - baden-baden
+
+- synonym: "141767"
+  examples: |
+    - bamberg
+
+- synonym: "143102"
+  examples: |
+    - biberach
+
+- synonym: "143859"
+  examples: |
+    - gera
+
+- synonym: "144016"
+  examples: |
+    - klingental
+
+- synonym: "144477"
+  examples: |
+    - neuenrade
+
+- synonym: "144573"
+  examples: |
+    - adorf
+
+- synonym: "144574"
+  examples: |
+    - altenbruch
+
+- synonym: "144575"
+  examples: |
+    - altenburg
+
+- synonym: "144577"
+  examples: |
+    - ansbach
+
+- synonym: "144579"
+  examples: |
+    - arnstadt
+
+- synonym: "144582"
+  examples: |
+    - bad krozingen
+
+- synonym: "144586"
+  examples: |
+    - bautzen
+
+- synonym: "144588"
+  examples: |
+    - bayreuth
+
+- synonym: "144589"
+  examples: |
+    - beckum
+
+- synonym: "144591"
+  examples: |
+    - berchtesgaden
+
+- synonym: "144592"
+  examples: |
+    - berlin
+
+- synonym: "144594"
+  examples: |
+    - bochum
+
+- synonym: "144601"
+  examples: |
+    - bubenreuth
+
+- synonym: "144604"
+  examples: |
+    - burgau
+
+- synonym: "144606"
+  examples: |
+    - butzbach
+
+- synonym: "144616"
+  examples: |
+    - darmstadt
+
+- synonym: "144618"
+  examples: |
+    - donaueschingen
+
+- synonym: "144628"
+  examples: |
+    - ellingen
+
+- synonym: "144629"
+  examples: |
+    - ellwangen
+
+- synonym: "144632"
+  examples: |
+    - endingen
+
+- synonym: "144633"
+  examples: |
+    - engels
+
+- synonym: "144634"
+  examples: |
+    - erfurt
+
+- synonym: "144635"
+  examples: |
+    - erlangen
+
+- synonym: "144637"
+  examples: |
+    - erlenbach
+
+- synonym: "144638"
+  examples: |
+    - essen
+
+- synonym: "144641"
+  examples: |
+    - fischbeck
+
+- synonym: "144643"
+  examples: |
+    - frankenhardt
+
+- synonym: "144645"
+  examples: |
+    - fraustadt
+
+- synonym: "144646"
+  examples: |
+    - friedberg
+
+- synonym: "144648"
+  examples: |
+    - fussen
+
+- synonym: "144649"
+  examples: |
+    - gelsenkirchen
+
+- synonym: "144650"
+  examples: |
+    - geretsried
+
+- synonym: "144657"
+  examples: |
+    - göttingen
+
+- synonym: "144660"
+  examples: |
+    - gutenstetten
+
+- synonym: "144663"
+  examples: |
+    - halle
+
+- synonym: "144665"
+  examples: |
+    - hanau
+
+- synonym: "144669"
+  examples: |
+    - heidelberg
+
+- synonym: "144675"
+  examples: |
+    - hermsdorf
+
+- synonym: "144681"
+  examples: |
+    - ingolstadt
+
+- synonym: "144683"
+  examples: |
+    - kaiserslautern
+
+- synonym: "144690"
+  examples: |
+    - königsberg
+
+- synonym: "144692"
+  examples: |
+    - köthen
+
+- synonym: "144693"
+  examples: |
+    - landau
+
+- synonym: "144696"
+  examples: |
+    - lauterbach
+
+- synonym: "144699"
+  examples: |
+    - leipzig
+
+- synonym: "144705"
+  examples: |
+    - lobau
+
+- synonym: "144707"
+  examples: |
+    - lorch am rhein
+
+- synonym: "144709"
+  examples: |
+    - lübeck
+
+- synonym: "144710"
+  examples: |
+    - ludingworth
+
+- synonym: "144711"
+  examples: |
+    - ludwigsburg
+
+- synonym: "144713"
+  examples: |
+    - lutzenberg
+
+- synonym: "144714"
+  examples: |
+    - mannheim
+
+- synonym: "144716"
+  examples: |
+    - markneukirchen
+
+- synonym: "144718"
+  examples: |
+    - meissen
+
+- synonym: "144720"
+  examples: |
+    - memmingen
+
+- synonym: "144723"
+  examples: |
+    - michaelstein
+
+- synonym: "144725"
+  examples: |
+    - mittenwald
+
+- synonym: "144726"
+  examples: |
+    - moritzburg
+
+- synonym: "144730"
+  examples: |
+    - nauheim
+
+- synonym: "144736"
+  examples: |
+    - neukirchen
+
+- synonym: "144738"
+  examples: |
+    - neustadt an der aisch
+
+- synonym: "144745"
+  examples: |
+    - ottobeuren
+
+- synonym: "144747"
+  examples: |
+    - penzberg
+
+- synonym: "144750"
+  examples: |
+    - potsdam
+
+- synonym: "144754"
+  examples: |
+    - reifferscheid
+
+- synonym: "144756"
+  examples: |
+    - rothenbach
+
+- synonym: "144764"
+  examples: |
+    - schleswig-holstein
+
+- synonym: "144766"
+  examples: |
+    - schöneck
+
+- synonym: "144767"
+  examples: |
+    - schongau
+
+- synonym: "144772"
+  examples: |
+    - siegen
+
+- synonym: "144775"
+  examples: |
+    - sinsheim
+
+- synonym: "144780"
+  examples: |
+    - stade
+
+- synonym: "144783"
+  examples: |
+    - steinkirchen
+
+- synonym: "144785"
+  examples: |
+    - stettin
+
+- synonym: "144790"
+  examples: |
+    - stuttgart
+
+- synonym: "144795"
+  examples: |
+    - tolz
+
+- synonym: "144798"
+  examples: |
+    - tübingen
+
+- synonym: "144800"
+  examples: |
+    - ulm
+
+- synonym: "144806"
+  examples: |
+    - volkstedt
+
+- synonym: "144809"
+  examples: |
+    - waldshut-tiengen
+
+- synonym: "144811"
+  examples: |
+    - weikersheim
+
+- synonym: "144813"
+  examples: |
+    - weissenfels
+
+- synonym: "144818"
+  examples: |
+    - wiesbaden
+
+- synonym: "144821"
+  examples: |
+    - wohlhausen
+
+- synonym: "144826"
+  examples: |
+    - zeitz
+
+- synonym: "144828"
+  examples: |
+    - zwickau
+
+- synonym: "761952"
+  examples: |
+    - schwerin
+
+- synonym: "784967"
+  examples: |
+    - fulda
+
+- synonym: "811048"
+  examples: |
+    - gotha
+
+- synonym: "818793"
+  examples: |
+    - dachau
+
+- synonym: "818932"
+  examples: |
+    - harz
+
+- synonym: "823146"
+  examples: |
+    - trossingen
+
+- synonym: "833968"
+  examples: |
+    - zerbst
+
+- synonym: "851294"
+  examples: |
+    - stein
+
+- synonym: "857096"
+  examples: |
+    - waldkirch
+
+- synonym: "875714"
+  examples: |
+    - biebrich
+
+- synonym: "876079"
+  examples: |
+    - alfeld
+
+- synonym: "883401"
+  examples: |
+    - goslar
+
+- synonym: "899482"
+  examples: |
+    - wehen
+
+- synonym: "899489"
+  examples: |
+    - donauworth
+
+- synonym: "900399"
+  examples: |
+    - reichenberg
+
+- synonym: "936070"
+  examples: |
+    - dusseldorf
+
+- synonym: "976008"
+  examples: |
+    - randeck
+
+- synonym: "983792"
+  examples: |
+    - geringswalde
+
+- synonym: "983801"
+  examples: |
+    - grossbreitenbach
+
+- synonym: "1001908"
+  examples: |
+    - görlitz
+
+- synonym: "1010623"
+  examples: |
+    - schwetzingen
+
+- synonym: "1010711"
+  examples: |
+    - eisenach
+
+- synonym: "1046196"
+  examples: |
+    - bielefeld
+
+- synonym: "1060818"
+  examples: |
+    - ohrdruf
+
+- synonym: "1072622"
+  examples: |
+    - zittau
+
+- synonym: "1120169"
+  examples: |
+    - meiningen
+
+- synonym: "68416"
+  examples: |
+    - frioul
+
+- synonym: "136719"
+  examples: |
+    - trente
+
+- synonym: "137534"
+  examples: |
+    - urbino
+
+- synonym: "137828"
+  examples: |
+    - istrie
+
+- synonym: "137875"
+  examples: |
+    - emilie-romagne
+
+- synonym: "138236"
+  examples: |
+    - bazzano
+
+- synonym: "138272"
+  examples: |
+    - rimini
+
+- synonym: "139142"
+  examples: |
+    - saronno
+
+- synonym: "139772"
+  examples: |
+    - isola bella
+
+- synonym: "142403"
+  examples: |
+    - vatican
+
+- synonym: "142785"
+  examples: |
+    - trévise
+
+- synonym: "143115"
+  examples: |
+    - catajo
+
+- synonym: "143117"
+  examples: |
+    - mezzogiorno
+
+- synonym: "143245"
+  examples: |
+    - piasco
+
+- synonym: "143453"
+  examples: |
+    - modica
+
+- synonym: "143464"
+  examples: |
+    - oneglia
+
+- synonym: "146150"
+  examples: |
+    - varallo
+
+- synonym: "146289"
+  examples: |
+    - ascoli piceno
+
+- synonym: "147027"
+  examples: |
+    - molise
+
+- synonym: "147036"
+  examples: |
+    - brescia
+
+- synonym: "147193"
+  examples: |
+    - crema
+
+- synonym: "147520"
+  examples: |
+    - montagnana
+
+- synonym: "147554"
+  examples: |
+    - pistoia
+
+- synonym: "147562"
+  examples: |
+    - montiglio monferrato
+
+- synonym: "147857"
+  examples: |
+    - arzignano
+
+- synonym: "147859"
+  examples: |
+    - budrio
+
+- synonym: "147862"
+  examples: |
+    - sulmona
+
+- synonym: "148215"
+  examples: |
+    - udine
+
+- synonym: "148903"
+  examples: |
+    - ivrea
+
+- synonym: "149010"
+  examples: |
+    - gorizia
+
+- synonym: "149668"
+  examples: |
+    - trentin
+
+- synonym: "150515"
+  examples: |
+    - bergame
+
+- synonym: "150708"
+  examples: |
+    - caserta
+
+- synonym: "150883"
+  examples: |
+    - pompéi
+
+- synonym: "152321"
+  examples: |
+    - casina
+
+- synonym: "153416"
+  examples: |
+    - collescipoli
+
+- synonym: "153461"
+  examples: |
+    - bientina
+
+- synonym: "153508"
+  examples: |
+    - frascati
+
+- synonym: "153532"
+  examples: |
+    - castelbologne
+
+- synonym: "153624"
+  examples: |
+    - campi
+
+- synonym: "154525"
+  examples: |
+    - macerata
+
+- synonym: "154706"
+  examples: |
+    - novara
+
+- synonym: "154878"
+  examples: |
+    - castelfidardo
+
+- synonym: "154899"
+  examples: |
+    - chiaravalle
+
+- synonym: "155095"
+  examples: |
+    - isernia
+
+- synonym: "155208"
+  examples: |
+    - faenza
+
+- synonym: "155226"
+  examples: |
+    - reggio emilia
+
+- synonym: "155255"
+  examples: |
+    - san remo
+
+- synonym: "155260"
+  examples: |
+    - novi ligure
+
+- synonym: "155311"
+  examples: |
+    - bari
+
+- synonym: "155345"
+  examples: |
+    - trieste
+
+- synonym: "155362"
+  examples: |
+    - chieti
+
+- synonym: "155363"
+  examples: |
+    - ferrare
+
+- synonym: "155364"
+  examples: |
+    - messine
+
+- synonym: "155365"
+  examples: |
+    - pentema
+
+- synonym: "846210"
+  examples: |
+    - catanzaro
+
+- synonym: "846234"
+  examples: |
+    - latium
+
+- synonym: "846258"
+  examples: |
+    - maletto
+
+- synonym: "846666"
+  examples: |
+    - san giminiano
+
+- synonym: "847290"
+  examples: |
+    - stresa
+
+- synonym: "850987"
+  examples: |
+    - varèse
+
+- synonym: "852325"
+  examples: |
+    - vercelli
+
+- synonym: "852383"
+  examples: |
+    - stradella
+
+- synonym: "872403"
+  examples: |
+    - recanati
+
+- synonym: "922686"
+  examples: |
+    - salo
+
+- synonym: "923551"
+  examples: |
+    - cuneo
+
+- synonym: "938699"
+  examples: |
+    - savone
+
+- synonym: "1008853"
+  examples: |
+    - ruvo di puglia
+
+- synonym: "1049392"
+  examples: |
+    - castelli
+
+- synonym: "1055524"
+  examples: |
+    - campomorone
+
+- synonym: "147155"
+  examples: |
+    - linz
+
+- synonym: "147838"
+  examples: |
+    - absam
+
+- synonym: "147907"
+  examples: |
+    - molln
+
+- synonym: "152342"
+  examples: |
+    - krems
+
+- synonym: "153459"
+  examples: |
+    - klosterneuburg
+
+- synonym: "153473"
+  examples: |
+    - hellbrunn
+
+- synonym: "155322"
+  examples: |
+    - graz
+
+- synonym: "155323"
+  examples: |
+    - innsbruck
+
+- synonym: "155326"
+  examples: |
+    - kufstein im tirol
+
+- synonym: "155342"
+  examples: |
+    - noetsch im gailtal
+
+- synonym: "144510"
+  examples: |
+    - hainaut
+
+- synonym: "144525"
+  examples: |
+    - marche
+
+- synonym: "136774"
+  examples: |
+    - vise
+
+- synonym: "138301"
+  examples: |
+    - namur
+
+- synonym: "138307"
+  examples: |
+    - charleroi
+
+- synonym: "138317"
+  examples: |
+    - bruges
+
+- synonym: "138397"
+  examples: |
+    - fleron
+
+- synonym: "138428"
+  examples: |
+    - uccle
+
+- synonym: "138439"
+  examples: |
+    - thimister
+
+- synonym: "138449"
+  examples: |
+    - schaerbeek
+
+- synonym: "139555"
+  examples: |
+    - tellin
+
+- synonym: "142949"
+  examples: |
+    - frameries
+
+- synonym: "144101"
+  examples: |
+    - recht
+
+- synonym: "144486"
+  examples: |
+    - anderlecht
+
+- synonym: "144487"
+  examples: |
+    - anvaing
+
+- synonym: "144489"
+  examples: |
+    - arc-ainières
+
+- synonym: "144490"
+  examples: |
+    - ath
+
+- synonym: "144491"
+  examples: |
+    - autre-eglise
+
+- synonym: "144493"
+  examples: |
+    - banneux notre-dame
+
+- synonym: "144494"
+  examples: |
+    - bastogne
+
+- synonym: "144495"
+  examples: |
+    - beauraing
+
+- synonym: "144496"
+  examples: |
+    - brabant wallon
+
+- synonym: "144498"
+  examples: |
+    - diest
+
+- synonym: "144499"
+  examples: |
+    - dinant
+
+- synonym: "144501"
+  examples: |
+    - enines
+
+- synonym: "144502"
+  examples: |
+    - etterbeek
+
+- synonym: "144505"
+  examples: |
+    - fosses
+
+- synonym: "144508"
+  examples: |
+    - gesves
+
+- synonym: "144509"
+  examples: |
+    - grand-halleux
+
+- synonym: "144511"
+  examples: |
+    - horion-hozemont
+
+- synonym: "144512"
+  examples: |
+    - huy
+
+- synonym: "144513"
+  examples: |
+    - ixelles
+
+- synonym: "144514"
+  examples: |
+    - la roche-en-ardennes
+
+- synonym: "144516"
+  examples: |
+    - langdorp
+
+- synonym: "144517"
+  examples: |
+    - lens-saint-remy
+
+- synonym: "144519"
+  examples: |
+    - liège
+
+- synonym: "144520"
+  examples: |
+    - lierre
+
+- synonym: "144521"
+  examples: |
+    - longueville
+
+- synonym: "144522"
+  examples: |
+    - louvain
+
+- synonym: "144523"
+  examples: |
+    - malines
+
+- synonym: "144529"
+  examples: |
+    - mons
+
+- synonym: "144530"
+  examples: |
+    - murrange
+
+- synonym: "144531"
+  examples: |
+    - nivelles
+
+- synonym: "144533"
+  examples: |
+    - philippeville
+
+- synonym: "144534"
+  examples: |
+    - pietrain
+
+- synonym: "144535"
+  examples: |
+    - purnode
+
+- synonym: "144537"
+  examples: |
+    - saint-donat
+
+- synonym: "144539"
+  examples: |
+    - saint-josse-ten-noode
+
+- synonym: "144542"
+  examples: |
+    - spa
+
+- synonym: "144544"
+  examples: |
+    - tervuren
+
+- synonym: "144546"
+  examples: |
+    - tournai
+
+- synonym: "144548"
+  examples: |
+    - virton
+
+- synonym: "144549"
+  examples: |
+    - walhorn
+
+- synonym: "816730"
+  examples: |
+    - woluwe-saint-lambert
+
+- synonym: "892995"
+  examples: |
+    - namur
+
+- synonym: "893001"
+  examples: |
+    - corroy-le-grand
+
+- synonym: "937311"
+  examples: |
+    - lichtervelde
+
+- synonym: "139340"
+  examples: |
+    - oravska polhora
+
+- synonym: "139347"
+  examples: |
+    - ocova
+
+- synonym: "154644"
+  examples: |
+    - prague
+
+- synonym: "846561"
+  examples: |
+    - chodsko-domazlice
+
+- synonym: "138084"
+  examples: |
+    - serbie
+
+- synonym: "155250"
+  examples: |
+    - bosnie
+
+- synonym: "138311"
+  examples: |
+    - zakopane
+
+- synonym: "150893"
+  examples: |
+    - varsovie
+
+- synonym: "846567"
+  examples: |
+    - lubusk
+
+- synonym: "919206"
+  examples: |
+    - cracovie
+
+- synonym: "141431"
+  examples: |
+    - kiev
+
+- synonym: "141434"
+  examples: |
+    - odessa
+
+- synonym: "141497"
+  examples: |
+    - vinnytsia
+
+- synonym: "141501"
+  examples: |
+    - soumy
+
+- synonym: "151445"
+  examples: |
+    - mézine
+
+- synonym: "153542"
+  examples: |
+    - budaors
+
+- synonym: "154637"
+  examples: |
+    - budapest
+
+- synonym: "846330"
+  examples: |
+    - nograd
+
+- synonym: "925726"
+  examples: |
+    - gyor
+
+- synonym: "146446"
+  examples: |
+    - trebizonde
+
+- synonym: "154164"
+  examples: |
+    - kurdistan
+
+- synonym: "154174"
+  examples: |
+    - ankara
+
+- synonym: "154176"
+  examples: |
+    - smyrne
+
+- synonym: "884339"
+  examples: |
+    - anatolie
+
+- synonym: "137200"
+  examples: |
+    - olympie
+
+- synonym: "138087"
+  examples: |
+    - crète
+
+- synonym: "141252"
+  examples: |
+    - athènes
+
+- synonym: "153482"
+  examples: |
+    - corinthe
+
+- synonym: "154320"
+  examples: |
+    - péloponèse
+
+- synonym: "846282"
+  examples: |
+    - souffli
+
+- synonym: "140609"
+  examples: |
+    - evora
+
+- synonym: "154770"
+  examples: |
+    - porto
+
+- synonym: "952798"
+  examples: |
+    - açores
+
+- synonym: "1009460"
+  examples: |
+    - fatima
+
+- synonym: "1040461"
+  examples: |
+    - mafra
+
+- synonym: "151391"
+  examples: |
+    - arlon
+
+- synonym: "136975"
+  examples: |
+    - zwolle
+
+- synonym: "137029"
+  examples: |
+    - groningen
+
+- synonym: "139493"
+  examples: |
+    - alkmaar
+
+- synonym: "145482"
+  examples: |
+    - utrecht
+
+- synonym: "146827"
+  examples: |
+    - amsterdam
+
+- synonym: "146831"
+  examples: |
+    - cuijk
+
+- synonym: "146837"
+  examples: |
+    - enschede
+
+- synonym: "146840"
+  examples: |
+    - gorinchem
+
+- synonym: "146841"
+  examples: |
+    - gouda
+
+- synonym: "146849"
+  examples: |
+    - hoofstraat
+
+- synonym: "146851"
+  examples: |
+    - kampen
+
+- synonym: "146858"
+  examples: |
+    - midwolde
+
+- synonym: "146861"
+  examples: |
+    - nijkerk
+
+- synonym: "146864"
+  examples: |
+    - passau
+
+- synonym: "146865"
+  examples: |
+    - rotterdam
+
+- synonym: "146867"
+  examples: |
+    - schoonhoven
+
+- synonym: "146869"
+  examples: |
+    - tilburg
+
+- synonym: "146870"
+  examples: |
+    - uithuizen
+
+- synonym: "954164"
+  examples: |
+    - haarlem
+
+- synonym: "959181"
+  examples: |
+    - eelde
+
+- synonym: "1101259"
+  examples: |
+    - delft
+
+- synonym: "153250"
+  examples: |
+    - tirana
+
+- synonym: "846270"
+  examples: |
+    - korce
+
+- synonym: "146429"
+  examples: |
+    - sofia
+
+- synonym: "154131"
+  examples: |
+    - rousse
+
+- synonym: "136721"
+  examples: |
+    - les breuleux
+
+- synonym: "136726"
+  examples: |
+    - les bois
+
+- synonym: "136729"
+  examples: |
+    - le noirmont
+
+- synonym: "136731"
+  examples: |
+    - lajoux
+
+- synonym: "136736"
+  examples: |
+    - epauvillers
+
+- synonym: "136740"
+  examples: |
+    - saint-brais
+
+- synonym: "136743"
+  examples: |
+    - soubey
+
+- synonym: "136745"
+  examples: |
+    - montfaucon
+
+- synonym: "136749"
+  examples: |
+    - les pommerats
+
+- synonym: "136752"
+  examples: |
+    - saignelégier
+
+- synonym: "136754"
+  examples: |
+    - les genevez
+
+- synonym: "136759"
+  examples: |
+    - saulcy
+
+- synonym: "136763"
+  examples: |
+    - bellelay
+
+- synonym: "136883"
+  examples: |
+    - bassecourt
+
+- synonym: "136885"
+  examples: |
+    - boécourt
+
+- synonym: "136888"
+  examples: |
+    - bourrignon
+
+- synonym: "136893"
+  examples: |
+    - corban
+
+- synonym: "136896"
+  examples: |
+    - courchapoix
+
+- synonym: "136900"
+  examples: |
+    - courfaivre
+
+- synonym: "136903"
+  examples: |
+    - courrendlin
+
+- synonym: "136908"
+  examples: |
+    - courroux
+
+- synonym: "136910"
+  examples: |
+    - courtetelle
+
+- synonym: "136920"
+  examples: |
+    - delémont
+
+- synonym: "136923"
+  examples: |
+    - develier
+
+- synonym: "136926"
+  examples: |
+    - glovelier
+
+- synonym: "136930"
+  examples: |
+    - lucelle
+
+- synonym: "136933"
+  examples: |
+    - mervelier
+
+- synonym: "136935"
+  examples: |
+    - montsevelier
+
+- synonym: "136939"
+  examples: |
+    - movelier
+
+- synonym: "136942"
+  examples: |
+    - pleigne
+
+- synonym: "136944"
+  examples: |
+    - rebeuvelier
+
+- synonym: "136948"
+  examples: |
+    - soulce
+
+- synonym: "136951"
+  examples: |
+    - soyhières
+
+- synonym: "136954"
+  examples: |
+    - undervelier
+
+- synonym: "136956"
+  examples: |
+    - vermes
+
+- synonym: "136962"
+  examples: |
+    - vicques
+
+- synonym: "138233"
+  examples: |
+    - genève
+
+- synonym: "142112"
+  examples: |
+    - martigny
+
+- synonym: "143280"
+  examples: |
+    - sainte-croix
+
+- synonym: "143325"
+  examples: |
+    - teufenthal
+
+- synonym: "146405"
+  examples: |
+    - la chaux-de-fonds
+
+- synonym: "146457"
+  examples: |
+    - yverdon-les-bains
+
+- synonym: "146878"
+  examples: |
+    - brienz
+
+- synonym: "146913"
+  examples: |
+    - alle
+
+- synonym: "146914"
+  examples: |
+    - asuel
+
+- synonym: "146915"
+  examples: |
+    - augst
+
+- synonym: "146916"
+  examples: |
+    - avenches
+
+- synonym: "146919"
+  examples: |
+    - beurnevésin
+
+- synonym: "146922"
+  examples: |
+    - boncourt
+
+- synonym: "146923"
+  examples: |
+    - bonfol
+
+- synonym: "146924"
+  examples: |
+    - bresseaucourt
+
+- synonym: "146925"
+  examples: |
+    - buix
+
+- synonym: "146927"
+  examples: |
+    - bure
+
+- synonym: "146928"
+  examples: |
+    - charmey
+
+- synonym: "146929"
+  examples: |
+    - charmoille
+
+- synonym: "146930"
+  examples: |
+    - chevenez
+
+- synonym: "146931"
+  examples: |
+    - coeuve
+
+- synonym: "146932"
+  examples: |
+    - cornol
+
+- synonym: "146933"
+  examples: |
+    - cossonay
+
+- synonym: "146934"
+  examples: |
+    - courchavon
+
+- synonym: "146935"
+  examples: |
+    - courgenay
+
+- synonym: "146936"
+  examples: |
+    - courtedoux
+
+- synonym: "146937"
+  examples: |
+    - courtemaîche
+
+- synonym: "146938"
+  examples: |
+    - damphreux
+
+- synonym: "146939"
+  examples: |
+    - damvant
+
+- synonym: "146940"
+  examples: |
+    - einsiedeln
+
+- synonym: "146941"
+  examples: |
+    - fahy
+
+- synonym: "146942"
+  examples: |
+    - fontenais
+
+- synonym: "146944"
+  examples: |
+    - grandfontaine
+
+- synonym: "146946"
+  examples: |
+    - jura
+
+- synonym: "146950"
+  examples: |
+    - l'auberson
+
+- synonym: "146952"
+  examples: |
+    - lausanne
+
+- synonym: "146953"
+  examples: |
+    - liestal
+
+- synonym: "146954"
+  examples: |
+    - lucerne
+
+- synonym: "146955"
+  examples: |
+    - miécourt
+
+- synonym: "146956"
+  examples: |
+    - monthey
+
+- synonym: "146957"
+  examples: |
+    - montignez
+
+- synonym: "146959"
+  examples: |
+    - münster
+
+- synonym: "146960"
+  examples: |
+    - näfels
+
+- synonym: "146961"
+  examples: |
+    - neuchâtel
+
+- synonym: "146962"
+  examples: |
+    - ocourt
+
+- synonym: "146963"
+  examples: |
+    - payerne
+
+- synonym: "146964"
+  examples: |
+    - porrentruy
+
+- synonym: "146965"
+  examples: |
+    - reckingen
+
+- synonym: "146966"
+  examples: |
+    - réclère
+
+- synonym: "146967"
+  examples: |
+    - rocourt
+
+- synonym: "146968"
+  examples: |
+    - romainmôtier
+
+- synonym: "146970"
+  examples: |
+    - saint-ursanne
+
+- synonym: "146974"
+  examples: |
+    - seewen
+
+- synonym: "146975"
+  examples: |
+    - sion
+
+- synonym: "146977"
+  examples: |
+    - toggenburg
+
+- synonym: "146978"
+  examples: |
+    - valais
+
+- synonym: "146979"
+  examples: |
+    - vaud
+
+- synonym: "146980"
+  examples: |
+    - vendlincourt
+
+- synonym: "146981"
+  examples: |
+    - vevey
+
+- synonym: "146983"
+  examples: |
+    - winterthur
+
+- synonym: "146984"
+  examples: |
+    - zurich
+
+- synonym: "815008"
+  examples: |
+    - saint-gall-neudorf
+
+- synonym: "852166"
+  examples: |
+    - essert et champvent
+
+- synonym: "898365"
+  examples: |
+    - frauenfeld
+
+- synonym: "933871"
+  examples: |
+    - oberhofen
+
+- synonym: "938674"
+  examples: |
+    - pfäffikon
+
+- synonym: "1006025"
+  examples: |
+    - cavigliano
+
+- synonym: "1006077"
+  examples: |
+    - kriens
+
+- synonym: "1006117"
+  examples: |
+    - gruyères
+
+- synonym: "1006226"
+  examples: |
+    - val d'hérens
+
+- synonym: "1006449"
+  examples: |
+    - langnau
+
+- synonym: "1044218"
+  examples: |
+    - tessin
+
+- synonym: "152298"
+  examples: |
+    - dubrovnik
+
+- synonym: "154678"
+  examples: |
+    - dalmatie
+
+- synonym: "154679"
+  examples: |
+    - zagreb
+
+- synonym: "155238"
+  examples: |
+    - skopie
+
+- synonym: "144030"
+  examples: |
+    - jersey
+
+- synonym: "141437"
+  examples: |
+    - minsk
+
+- synonym: "141639"
+  examples: |
+    - chisinau
+
+- synonym: "153984"
+  examples: |
+    - uruguay
+
+- synonym: "136901"
+  examples: |
+    - burundi
+
+- synonym: "137360"
+  examples: |
+    - rwanda
+
+- synonym: "154033"
+  examples: |
+    - gabon
+
+- synonym: "149699"
+  examples: |
+    - angola
+
+- synonym: "137430"
+  examples: |
+    - sierra leone
+
+- synonym: "146443"
+  examples: |
+    - sénégal
+
+- synonym: "147845"
+  examples: |
+    - bissau
+
+- synonym: "150424"
+  examples: |
+    - liberia
+
+- synonym: "150722"
+  examples: |
+    - ghana
+
+- synonym: "150900"
+  examples: |
+    - mali
+
+- synonym: "151127"
+  examples: |
+    - nigeria
+
+- synonym: "151571"
+  examples: |
+    - togo
+
+- synonym: "153943"
+  examples: |
+    - niger
+
+- synonym: "789726"
+  examples: |
+    - guinée-bissau
+
+- synonym: "816260"
+  examples: |
+    - sénégambie
+
+- synonym: "147298"
+  examples: |
+    - mozambique
+
+- synonym: "147932"
+  examples: |
+    - malawi
+
+- synonym: "150354"
+  examples: |
+    - lesotho
+
+- synonym: "146101"
+  examples: |
+    - kenya
+
+- synonym: "146475"
+  examples: |
+    - djibouti
+
+- synonym: "805509"
+  examples: |
+    - zanzibar
+
+- synonym: "889828"
+  examples: |
+    - erythree
+
+- synonym: "991954"
+  examples: |
+    - somalie
+
+- synonym: "154054"
+  examples: |
+    - le caire
+
+- synonym: "874709"
+  examples: |
+    - antinoe
+
+- synonym: "1024918"
+  examples: |
+    - port-said
+
+- synonym: "138102"
+  examples: |
+    - mésopotamie
+
+- synonym: "139124"
+  examples: |
+    - assyrie
+
+- synonym: "147110"
+  examples: |
+    - oman
+
+- synonym: "153294"
+  examples: |
+    - palestine
+
+- synonym: "154162"
+  examples: |
+    - yémen
+
+- synonym: "143073"
+  examples: |
+    - philippines
+
+- synonym: "154083"
+  examples: |
+    - laos
+
+- synonym: "141739"
+  examples: |
+    - pakistan
+
+- synonym: "154074"
+  examples: |
+    - bangladesh
+
+- synonym: "154075"
+  examples: |
+    - afghanistan
+
+- synonym: "154076"
+  examples: |
+    - turkmenistan
+
+- synonym: "145552"
+  examples: |
+    - sydney
+
+- synonym: "145557"
+  examples: |
+    - melbourne
+
+- synonym: "148990"
+  examples: |
+    - milingimbi
+
+- synonym: "154739"
+  examples: |
+    - dubbo
+
+- synonym: "155029"
+  examples: |
+    - adélaïde
+
+- synonym: "816269"
+  examples: |
+    - terre d'arnhem
+
+- synonym: "953916"
+  examples: |
+    - darwin
+
+- synonym: "151926"
+  examples: |
+    - canterbury
+
+- synonym: "985535"
+  examples: |
+    - auckland
+
+- synonym: "147807"
+  examples: |
+    - tahiti
+
+- synonym: "153162"
+  examples: |
+    - morbihan
+
+- synonym: "141854"
+  examples: |
+    - finistère
+
+- synonym: "152639"
+  examples: |
+    - ille-et-vilaine
+
+- synonym: "149570"
+  examples: |
+    - yvelines
+
+- synonym: "149267"
+  examples: |
+    - seine-saint-denis
+
+- synonym: "149614"
+  examples: |
+    - essonne
+
+- synonym: "141768"
+  examples: |
+    - hauts-de-seine
+
+- synonym: "845516"
+  examples: |
+    - guipuzcoa
+
+- synonym: "149354"
+  examples: |
+    - var
+
+- synonym: "141382"
+  examples: |
+    - vaucluse
+
+- synonym: "149606"
+  examples: |
+    - allier
+
+- synonym: "141892"
+  examples: |
+    - indre
+
+- synonym: "154456"
+  examples: |
+    - cher
+
+- synonym: "147321"
+  examples: |
+    - basse-normandie
+
+- synonym: "147322"
+  examples: |
+    - haute-normandie
+
+- synonym: "152662"
+  examples: |
+    - indre-et-loire
+
+- synonym: "137193"
+  examples: |
+    - languedoc-roussillon
+
+- synonym: "147310"
+  examples: |
+    - auvergne
+
+- synonym: "137851"
+  examples: |
+    - rhône-alpes
+
+- synonym: "137861"
+  examples: |
+    - aquitaine
+
+- synonym: "139955"
+  examples: |
+    - limousin
+
+- synonym: "149542"
+  examples: |
+    - loiret
+
+- synonym: "152621"
+  examples: |
+    - loir-et-cher
+
+- synonym: "149529"
+  examples: |
+    - eure-et-loir
+
+- synonym: "846945"
+  examples: |
+    - sologne
+
+- synonym: "850849"
+  examples: |
+    - basse-navarre
+
+- synonym: "147122"
+  examples: |
+    - lorraine
+
+- synonym: "153190"
+  examples: |
+    - mayenne
+
+- synonym: "147325"
+  examples: |
+    - vendée
+
+- synonym: "147572"
+  examples: |
+    - sarthe
+
+- synonym: "152656"
+  examples: |
+    - nièvre
+
+- synonym: "141455"
+  examples: |
+    - astrakhan
+
+- synonym: "154702"
+  examples: |
+    - barcelone
+
+- synonym: "833263"
+  examples: |
+    - tenerife
+
+- synonym: "1036899"
+  examples: |
+    - marienmünster
+
+- synonym: "1036904"
+  examples: |
+    - marienmünster
+
+- synonym: "883192"
+  examples: |
+    - vogtland
+
+- synonym: "942851"
+  examples: |
+    - coni
+
+- synonym: "1012694"
+  examples: |
+    - fazioli
+
+- synonym: "915177"
+  examples: |
+    - malmedy
+
+- synonym: "1012337"
+  examples: |
+    - ostiches
+
+- synonym: "1015191"
+  examples: |
+    - thulin
+
+- synonym: "948010"
+  examples: |
+    - testelt
+
+- synonym: "151366"
+  examples: |
+    - schoenbach
+
+- synonym: "1006040"
+  examples: |
+    - crnomelj
+
+- synonym: "1044219"
+  examples: |
+    - lugano
+
+- synonym: "153634"
+  examples: |
+    - glasgow
+
+- synonym: "155175"
+  examples: |
+    - aberdeen
+
+- synonym: "137052"
+  examples: |
+    - westminster
+
+- synonym: "137355"
+  examples: |
+    - durham
+
+- synonym: "137386"
+  examples: |
+    - west dean
+
+- synonym: "137775"
+  examples: |
+    - salisbury
+
+- synonym: "138219"
+  examples: |
+    - torquay
+
+- synonym: "138598"
+  examples: |
+    - semley
+
+- synonym: "139093"
+  examples: |
+    - oxford
+
+- synonym: "139532"
+  examples: |
+    - wells
+
+- synonym: "142352"
+  examples: |
+    - birmingham
+
+- synonym: "142360"
+  examples: |
+    - taunton
+
+- synonym: "143934"
+  examples: |
+    - eton
+
+- synonym: "145515"
+  examples: |
+    - bethersden
+
+- synonym: "145743"
+  examples: |
+    - tiverton
+
+- synonym: "146141"
+  examples: |
+    - halifax
+
+- synonym: "146146"
+  examples: |
+    - oldham
+
+- synonym: "146231"
+  examples: |
+    - colchester
+
+- synonym: "146641"
+  examples: |
+    - axonia
+
+- synonym: "146642"
+  examples: |
+    - baildon
+
+- synonym: "146646"
+  examples: |
+    - blackburn
+
+- synonym: "146647"
+  examples: |
+    - bolton
+
+- synonym: "146649"
+  examples: |
+    - brighton
+
+- synonym: "146650"
+  examples: |
+    - bristol
+
+- synonym: "146653"
+  examples: |
+    - cambridge
+
+- synonym: "146654"
+  examples: |
+    - canterbury
+
+- synonym: "146660"
+  examples: |
+    - dorset
+
+- synonym: "146664"
+  examples: |
+    - ely
+
+- synonym: "146666"
+  examples: |
+    - exeter
+
+- synonym: "146668"
+  examples: |
+    - finchcocks
+
+- synonym: "146670"
+  examples: |
+    - gloucester
+
+- synonym: "146672"
+  examples: |
+    - greenwich
+
+- synonym: "146679"
+  examples: |
+    - huddersfield
+
+- synonym: "146683"
+  examples: |
+    - liverpool
+
+- synonym: "146685"
+  examples: |
+    - manchester
+
+- synonym: "146688"
+  examples: |
+    - marylebone
+
+- synonym: "146689"
+  examples: |
+    - milton keynes
+
+- synonym: "146692"
+  examples: |
+    - newark
+
+- synonym: "146693"
+  examples: |
+    - northampton
+
+- synonym: "146696"
+  examples: |
+    - northumberland
+
+- synonym: "146697"
+  examples: |
+    - nottingham
+
+- synonym: "146704"
+  examples: |
+    - salford
+
+- synonym: "146706"
+  examples: |
+    - sheffield
+
+- synonym: "146709"
+  examples: |
+    - southwark
+
+- synonym: "146711"
+  examples: |
+    - stamford
+
+- synonym: "146719"
+  examples: |
+    - wolverhampton
+
+- synonym: "847160"
+  examples: |
+    - bournemouth
+
+- synonym: "855590"
+  examples: |
+    - coventry
+
+- synonym: "884844"
+  examples: |
+    - glyndebourne
+
+- synonym: "934299"
+  examples: |
+    - llandaff
+
+- synonym: "934329"
+  examples: |
+    - peterborough
+
+- synonym: "1000344"
+  examples: |
+    - newcastle
+
+- synonym: "1006314"
+  examples: |
+    - twickenham
+
+- synonym: "1011851"
+  examples: |
+    - islington
+
+- synonym: "1040503"
+  examples: |
+    - ledbury
+
+- synonym: "1083606"
+  examples: |
+    - bath
+
+- synonym: "1007892"
+  examples: |
+    - gosports
+
+- synonym: "147843"
+  examples: |
+    - belfast
+
+- synonym: "145648"
+  examples: |
+    - trondheim
+
+- synonym: "147981"
+  examples: |
+    - bergen
+
+- synonym: "152762"
+  examples: |
+    - konsberg
+
+- synonym: "153483"
+  examples: |
+    - oslo
+
+- synonym: "1011983"
+  examples: |
+    - toten
+
+- synonym: "138435"
+  examples: |
+    - malmö
+
+- synonym: "138472"
+  examples: |
+    - halsingland
+
+- synonym: "138473"
+  examples: |
+    - stockholm
+
+- synonym: "139396"
+  examples: |
+    - uppsala
+
+- synonym: "143794"
+  examples: |
+    - skane
+
+- synonym: "143808"
+  examples: |
+    - landskrona
+
+- synonym: "143811"
+  examples: |
+    - torrlosa
+
+- synonym: "143814"
+  examples: |
+    - lund
+
+- synonym: "143817"
+  examples: |
+    - kristianstad
+
+- synonym: "143826"
+  examples: |
+    - fredriksborg
+
+- synonym: "143838"
+  examples: |
+    - overtonea
+
+- synonym: "143843"
+  examples: |
+    - balinge
+
+- synonym: "147982"
+  examples: |
+    - göteborg
+
+- synonym: "147984"
+  examples: |
+    - trono
+
+- synonym: "1010624"
+  examples: |
+    - drottningholm
+
+- synonym: "143839"
+  examples: |
+    - hietaniemi
+
+- synonym: "147871"
+  examples: |
+    - helsinki
+
+- synonym: "154741"
+  examples: |
+    - laponie
+
+- synonym: "937393"
+  examples: |
+    - kuopio
+
+- synonym: "1012272"
+  examples: |
+    - turku
+
+- synonym: "139777"
+  examples: |
+    - minas gerais
+
+- synonym: "67877"
+  examples: |
+    - amazonie
+
+- synonym: "68366"
+  examples: |
+    - nordeste
+
+- synonym: "139781"
+  examples: |
+    - salvador
+
+- synonym: "139789"
+  examples: |
+    - amazonas
+
+- synonym: "139791"
+  examples: |
+    - para
+
+- synonym: "139795"
+  examples: |
+    - maranhao
+
+- synonym: "139798"
+  examples: |
+    - piaui
+
+- synonym: "139800"
+  examples: |
+    - ceara
+
+- synonym: "139802"
+  examples: |
+    - roraima
+
+- synonym: "139806"
+  examples: |
+    - paraiba
+
+- synonym: "139808"
+  examples: |
+    - pernambuco
+
+- synonym: "139811"
+  examples: |
+    - amapa
+
+- synonym: "139814"
+  examples: |
+    - acre
+
+- synonym: "139817"
+  examples: |
+    - alagoas
+
+- synonym: "139820"
+  examples: |
+    - sergipe
+
+- synonym: "139823"
+  examples: |
+    - recife
+
+- synonym: "139826"
+  examples: |
+    - rio grande do norte
+
+- synonym: "151299"
+  examples: |
+    - rio de janeiro
+
+- synonym: "153989"
+  examples: |
+    - bahia
+
+- synonym: "899173"
+  examples: |
+    - mato grosso
+
+- synonym: "140690"
+  examples: |
+    - tarata
+
+- synonym: "140700"
+  examples: |
+    - conception
+
+- synonym: "944029"
+  examples: |
+    - sucre
+
+- synonym: "944030"
+  examples: |
+    - santa ana
+
+- synonym: "1106550"
+  examples: |
+    - la paz
+
+- synonym: "897886"
+  examples: |
+    - andahuaylillas
+
+- synonym: "919889"
+  examples: |
+    - rio cenepa
+
+- synonym: "930906"
+  examples: |
+    - lima
+
+- synonym: "143180"
+  examples: |
+    - quibor
+
+- synonym: "1047711"
+  examples: |
+    - lara
+
+- synonym: "998928"
+  examples: |
+    - santiago
+
+- synonym: "1123747"
+  examples: |
+    - asunción
+
+- synonym: "145713"
+  examples: |
+    - medellin
+
+- synonym: "150677"
+  examples: |
+    - bogota
+
+- synonym: "920424"
+  examples: |
+    - bucaramanga
+
+- synonym: "1001912"
+  examples: |
+    - cartagena
+
+- synonym: "153995"
+  examples: |
+    - montevideo
+
+- synonym: "153208"
+  examples: |
+    - république dominicaine
+
+- synonym: "153971"
+  examples: |
+    - curaçao
+
+- synonym: "153972"
+  examples: |
+    - haïti
+
+- synonym: "923520"
+  examples: |
+    - marie-galante
+
+- synonym: "1075062"
+  examples: |
+    - montserrat
+
+- synonym: "137231"
+  examples: |
+    - texas
+
+- synonym: "138587"
+  examples: |
+    - ann arbor
+
+- synonym: "139542"
+  examples: |
+    - vermillion
+
+- synonym: "139805"
+  examples: |
+    - maine
+
+- synonym: "139828"
+  examples: |
+    - york
+
+- synonym: "140228"
+  examples: |
+    - worcester
+
+- synonym: "140785"
+  examples: |
+    - atlanta
+
+- synonym: "140851"
+  examples: |
+    - watertown
+
+- synonym: "141314"
+  examples: |
+    - rhode island
+
+- synonym: "141317"
+  examples: |
+    - vermont
+
+- synonym: "142633"
+  examples: |
+    - salt lake city
+
+- synonym: "143261"
+  examples: |
+    - colorado
+
+- synonym: "145527"
+  examples: |
+    - new haven
+
+- synonym: "146178"
+  examples: |
+    - michigan
+
+- synonym: "147422"
+  examples: |
+    - massachusetts
+
+- synonym: "147358"
+  examples: |
+    - alaska
+
+- synonym: "147359"
+  examples: |
+    - albuquerque
+
+- synonym: "147362"
+  examples: |
+    - altoona
+
+- synonym: "147363"
+  examples: |
+    - alva
+
+- synonym: "147364"
+  examples: |
+    - appalaches
+
+- synonym: "147365"
+  examples: |
+    - asheville
+
+- synonym: "147366"
+  examples: |
+    - atlantic city
+
+- synonym: "147367"
+  examples: |
+    - baltimore
+
+- synonym: "147373"
+  examples: |
+    - buffalo
+
+- synonym: "147378"
+  examples: |
+    - chatham
+
+- synonym: "147379"
+  examples: |
+    - chestertown
+
+- synonym: "147380"
+  examples: |
+    - chicago
+
+- synonym: "147381"
+  examples: |
+    - cincinnati
+
+- synonym: "147382"
+  examples: |
+    - cleveland
+
+- synonym: "147383"
+  examples: |
+    - connecticut
+
+- synonym: "147384"
+  examples: |
+    - conway
+
+- synonym: "147385"
+  examples: |
+    - cornwall
+
+- synonym: "147387"
+  examples: |
+    - danville
+
+- synonym: "147388"
+  examples: |
+    - detroit
+
+- synonym: "147389"
+  examples: |
+    - dulwich
+
+- synonym: "147390"
+  examples: |
+    - durham
+
+- synonym: "147391"
+  examples: |
+    - edgeware
+
+- synonym: "147392"
+  examples: |
+    - el paso
+
+- synonym: "147400"
+  examples: |
+    - fullerton
+
+- synonym: "147402"
+  examples: |
+    - greensboro
+
+- synonym: "147403"
+  examples: |
+    - guilford
+
+- synonym: "147404"
+  examples: |
+    - hastings
+
+- synonym: "147406"
+  examples: |
+    - illinois
+
+- synonym: "147407"
+  examples: |
+    - indiana
+
+- synonym: "147408"
+  examples: |
+    - iowa
+
+- synonym: "147409"
+  examples: |
+    - kalamazoo
+
+- synonym: "147411"
+  examples: |
+    - kansas city
+
+- synonym: "147414"
+  examples: |
+    - lawton
+
+- synonym: "147417"
+  examples: |
+    - long island
+
+- synonym: "147421"
+  examples: |
+    - lynn
+
+- synonym: "147424"
+  examples: |
+    - memphis
+
+- synonym: "147425"
+  examples: |
+    - miami
+
+- synonym: "147427"
+  examples: |
+    - minneapolis
+
+- synonym: "147428"
+  examples: |
+    - minnesota
+
+- synonym: "147429"
+  examples: |
+    - montana
+
+- synonym: "147432"
+  examples: |
+    - nashville
+
+- synonym: "147433"
+  examples: |
+    - nazareth
+
+- synonym: "147434"
+  examples: |
+    - nevada
+
+- synonym: "147435"
+  examples: |
+    - new hampshire
+
+- synonym: "147437"
+  examples: |
+    - new jersey
+
+- synonym: "147442"
+  examples: |
+    - northville
+
+- synonym: "147444"
+  examples: |
+    - oakland
+
+- synonym: "147445"
+  examples: |
+    - oberlin
+
+- synonym: "147446"
+  examples: |
+    - ohio
+
+- synonym: "147447"
+  examples: |
+    - okemos
+
+- synonym: "147448"
+  examples: |
+    - oklahoma
+
+- synonym: "147449"
+  examples: |
+    - oregon
+
+- synonym: "147451"
+  examples: |
+    - pittsburg
+
+- synonym: "147452"
+  examples: |
+    - port townsend
+
+- synonym: "147454"
+  examples: |
+    - provo
+
+- synonym: "147455"
+  examples: |
+    - queens
+
+- synonym: "147458"
+  examples: |
+    - saint-louis
+
+- synonym: "147459"
+  examples: |
+    - saint-paul
+
+- synonym: "147460"
+  examples: |
+    - salem
+
+- synonym: "147462"
+  examples: |
+    - santa ana
+
+- synonym: "147463"
+  examples: |
+    - seattle
+
+- synonym: "147467"
+  examples: |
+    - springfield
+
+- synonym: "147468"
+  examples: |
+    - staunton
+
+- synonym: "147469"
+  examples: |
+    - tacoma
+
+- synonym: "147470"
+  examples: |
+    - tallahassee
+
+- synonym: "147471"
+  examples: |
+    - tampa
+
+- synonym: "147472"
+  examples: |
+    - tennessee
+
+- synonym: "147476"
+  examples: |
+    - washington d.c.
+
+- synonym: "147478"
+  examples: |
+    - weston
+
+- synonym: "147481"
+  examples: |
+    - winchester
+
+- synonym: "147482"
+  examples: |
+    - winston-salem
+
+- synonym: "147483"
+  examples: |
+    - wisconsin
+
+- synonym: "147484"
+  examples: |
+    - wooster
+
+- synonym: "147486"
+  examples: |
+    - yale
+
+- synonym: "726319"
+  examples: |
+    - mississippi
+
+- synonym: "902909"
+  examples: |
+    - orange
+
+- synonym: "931831"
+  examples: |
+    - omaha
+
+- synonym: "944332"
+  examples: |
+    - shenandoah
+
+- synonym: "967742"
+  examples: |
+    - marlboro
+
+- synonym: "973739"
+  examples: |
+    - utica
+
+- synonym: "985532"
+  examples: |
+    - portland
+
+- synonym: "991679"
+  examples: |
+    - arizona
+
+- synonym: "991680"
+  examples: |
+    - phoenix
+
+- synonym: "994787"
+  examples: |
+    - ithaca
+
+- synonym: "998726"
+  examples: |
+    - milwaukee
+
+- synonym: "999197"
+  examples: |
+    - lewiston
+
+- synonym: "1001629"
+  examples: |
+    - leicester
+
+- synonym: "1001656"
+  examples: |
+    - galax
+
+- synonym: "1002253"
+  examples: |
+    - redwood city
+
+- synonym: "1013982"
+  examples: |
+    - kentucky
+
+- synonym: "1016866"
+  examples: |
+    - alabama
+
+- synonym: "1016867"
+  examples: |
+    - claremont
+
+- synonym: "1020951"
+  examples: |
+    - georgia
+
+- synonym: "1029703"
+  examples: |
+    - missouri
+
+- synonym: "1031587"
+  examples: |
+    - maryland
+
+- synonym: "1034482"
+  examples: |
+    - newport
+
+- synonym: "139433"
+  examples: |
+    - mexico
+
+- synonym: "146047"
+  examples: |
+    - veracruz
+
+- synonym: "147706"
+  examples: |
+    - oaxaca
+
+- synonym: "834098"
+  examples: |
+    - paracho
+
+- synonym: "1092771"
+  examples: |
+    - jalisco
+
+- synonym: "68150"
+  examples: |
+    - honduras
+
+- synonym: "150728"
+  examples: |
+    - panama
+
+- synonym: "153470"
+  examples: |
+    - nicaragua
+
+- synonym: "153523"
+  examples: |
+    - guatemala
+
+- synonym: "153966"
+  examples: |
+    - belize
+
+- synonym: "153967"
+  examples: |
+    - costa rica
+
+- synonym: "140717"
+  examples: |
+    - vancouver
+
+- synonym: "144412"
+  examples: |
+    - ottawa
+
+- synonym: "144413"
+  examples: |
+    - toronto
+
+- synonym: "144414"
+  examples: |
+    - yellowknife
+
+- synonym: "878987"
+  examples: |
+    - manitoba
+
+- synonym: "1017737"
+  examples: |
+    - nunavut
+
+- synonym: "138282"
+  examples: |
+    - bafia
+
+- synonym: "150414"
+  examples: |
+    - yaoundé
+
+- synonym: "815624"
+  examples: |
+    - mbomou
+
+- synonym: "816035"
+  examples: |
+    - dibon
+
+- synonym: "816037"
+  examples: |
+    - monts mandara
+
+- synonym: "846971"
+  examples: |
+    - foumban
+
+- synonym: "908199"
+  examples: |
+    - nditam
+
+- synonym: "857938"
+  examples: |
+    - kasaï
+
+- synonym: "862789"
+  examples: |
+    - manyanga
+
+- synonym: "815932"
+  examples: |
+    - boulongo-boulangani
+
+- synonym: "815625"
+  examples: |
+    - gambo
+
+- synonym: "859537"
+  examples: |
+    - fort-lamy
+
+- synonym: "862731"
+  examples: |
+    - brazzaville
+
+- synonym: "143178"
+  examples: |
+    - porto novo
+
+- synonym: "146428"
+  examples: |
+    - abomey
+
+- synonym: "816156"
+  examples: |
+    - sainte-marie de bathurst
+
+- synonym: "145548"
+  examples: |
+    - moaga
+
+- synonym: "859465"
+  examples: |
+    - koudougou
+
+- synonym: "146442"
+  examples: |
+    - dakar
+
+- synonym: "858770"
+  examples: |
+    - casamance
+
+- synonym: "859343"
+  examples: |
+    - toukoufara
+
+- synonym: "871426"
+  examples: |
+    - carabane
+
+- synonym: "150721"
+  examples: |
+    - accra
+
+- synonym: "150899"
+  examples: |
+    - bamako
+
+- synonym: "873079"
+  examples: |
+    - sikasso
+
+- synonym: "919890"
+  examples: |
+    - duekoue
+
+- synonym: "1034485"
+  examples: |
+    - tombouctou
+
+- synonym: "859656"
+  examples: |
+    - lagos
+
+- synonym: "860425"
+  examples: |
+    - port-harcourt
+
+- synonym: "1013221"
+  examples: |
+    - conakry
+
+- synonym: "150355"
+  examples: |
+    - pretoria
+
+- synonym: "1034090"
+  examples: |
+    - johannesburg
+
+- synonym: "866415"
+  examples: |
+    - nossi comba
+
+- synonym: "67279"
+  examples: |
+    - haut-atlas
+
+- synonym: "141634"
+  examples: |
+    - ichebakenne
+
+- synonym: "149107"
+  examples: |
+    - atlas
+
+- synonym: "151250"
+  examples: |
+    - marrakech
+
+- synonym: "901351"
+  examples: |
+    - rabat
+
+- synonym: "138313"
+  examples: |
+    - kabylie
+
+- synonym: "140889"
+  examples: |
+    - alger
+
+- synonym: "146440"
+  examples: |
+    - oran
+
+- synonym: "146449"
+  examples: |
+    - bou saada
+
+- synonym: "149216"
+  examples: |
+    - bechar
+
+- synonym: "901344"
+  examples: |
+    - constantine
+
+- synonym: "846756"
+  examples: |
+    - sfax
+
+- synonym: "901348"
+  examples: |
+    - tunis
+
+- synonym: "142917"
+  examples: |
+    - jerusalem
+
+- synonym: "146893"
+  examples: |
+    - haïfa
+
+- synonym: "147828"
+  examples: |
+    - megiddo
+
+- synonym: "1000547"
+  examples: |
+    - tel-aviv
+
+- synonym: "1091424"
+  examples: |
+    - canaan
+
+- synonym: "138442"
+  examples: |
+    - ougarit
+
+- synonym: "154170"
+  examples: |
+    - damas
+
+- synonym: "927435"
+  examples: |
+    - alep
+
+- synonym: "153433"
+  examples: |
+    - ur
+
+- synonym: "154753"
+  examples: |
+    - babylone
+
+- synonym: "154754"
+  examples: |
+    - sumer
+
+- synonym: "155371"
+  examples: |
+    - mari
+
+- synonym: "146068"
+  examples: |
+    - meshhed
+
+- synonym: "149302"
+  examples: |
+    - teheran
+
+- synonym: "812279"
+  examples: |
+    - jeyhunabab
+
+- synonym: "873251"
+  examples: |
+    - louristan
+
+- synonym: "927514"
+  examples: |
+    - suse
+
+- synonym: "1036638"
+  examples: |
+    - tyr
+
+- synonym: "987746"
+  examples: |
+    - bagdad
+
+- synonym: "1017742"
+  examples: |
+    - sanaa
+
+- synonym: "154122"
+  examples: |
+    - hanoï
+
+- synonym: "154123"
+  examples: |
+    - tonkin
+
+- synonym: "870029"
+  examples: |
+    - cochinchine
+
+- synonym: "870841"
+  examples: |
+    - annam
+
+- synonym: "155691"
+  examples: |
+    - bangkok
+
+- synonym: "143072"
+  examples: |
+    - manille
+
+- synonym: "146436"
+  examples: |
+    - phnom penh
+
+- synonym: "956788"
+  examples: |
+    - angkor
+
+- synonym: "148511"
+  examples: |
+    - bornéo
+
+- synonym: "148984"
+  examples: |
+    - sumba
+
+- synonym: "151033"
+  examples: |
+    - bali
+
+- synonym: "153293"
+  examples: |
+    - timor
+
+- synonym: "154097"
+  examples: |
+    - sumatra
+
+- synonym: "1020945"
+  examples: |
+    - karen
+
+- synonym: "1066593"
+  examples: |
+    - maharashtra
+
+- synonym: "1066594"
+  examples: |
+    - konkan
+
+- synonym: "1101363"
+  examples: |
+    - tiruchirappall
+
+- synonym: "137271"
+  examples: |
+    - kandy
+
+- synonym: "141243"
+  examples: |
+    - karachi
+
+- synonym: "142117"
+  examples: |
+    - népal
+
+- synonym: "148791"
+  examples: |
+    - tibet
+
+- synonym: "155721"
+  examples: |
+    - comilla
+
+- synonym: "915793"
+  examples: |
+    - tipperah
+
+- synonym: "141642"
+  examples: |
+    - douchanbe
+
+- synonym: "141646"
+  examples: |
+    - tachkent
+
+- synonym: "151142"
+  examples: |
+    - samarkand
+
+- synonym: "151907"
+  examples: |
+    - karakalpalkstan
+
+- synonym: "764113"
+  examples: |
+    - badakhstan
+
+- synonym: "139101"
+  examples: |
+    - tokyo
+
+- synonym: "146452"
+  examples: |
+    - kyoto
+
+- synonym: "153408"
+  examples: |
+    - azuchi
+
+- synonym: "154138"
+  examples: |
+    - gifu
+
+- synonym: "154139"
+  examples: |
+    - yokohama
+
+- synonym: "1122929"
+  examples: |
+    - osaka
+
+- synonym: "138061"
+  examples: |
+    - henan
+
+- synonym: "144286"
+  examples: |
+    - canton
+
+- synonym: "147801"
+  examples: |
+    - mandchourie
+
+- synonym: "151310"
+  examples: |
+    - shenyang
+
+- synonym: "152131"
+  examples: |
+    - shanghaï
+
+- synonym: "919887"
+  examples: |
+    - ile de nuku hiva
+
+- synonym: "919888"
+  examples: |
+    - ile d'ambrym
+
+- synonym: "150190"
+  examples: |
+    - ouvéa
+
+- synonym: "154540"
+  examples: |
+    - guadalcanal
+
+- synonym: "154541"
+  examples: |
+    - malaita
+
+- synonym: "154542"
+  examples: |
+    - savo
+
+- synonym: "138988"
+  examples: |
+    - rieux
+
+- synonym: "148887"
+  examples: |
+    - vannes
+
+- synonym: "149683"
+  examples: |
+    - pont-scorff
+
+- synonym: "153163"
+  examples: |
+    - lorient
+
+- synonym: "1056711"
+  examples: |
+    - le faouët
+
+- synonym: "142096"
+  examples: |
+    - tréguier
+
+- synonym: "148142"
+  examples: |
+    - dinan
+
+- synonym: "150397"
+  examples: |
+    - saint-symphorien-en-paule
+
+- synonym: "150731"
+  examples: |
+    - corlay
+
+- synonym: "151555"
+  examples: |
+    - binic
+
+- synonym: "153360"
+  examples: |
+    - loudéac
+
+- synonym: "154919"
+  examples: |
+    - plurien
+
+- synonym: "811766"
+  examples: |
+    - lannion
+
+- synonym: "811767"
+  examples: |
+    - guingamp
+
+- synonym: "997836"
+  examples: |
+    - lamballe
+
+- synonym: "140311"
+  examples: |
+    - saint-pol-de-léon
+
+- synonym: "140708"
+  examples: |
+    - morlaix
+
+- synonym: "150662"
+  examples: |
+    - dineault
+
+- synonym: "150665"
+  examples: |
+    - trégarvan
+
+- synonym: "154955"
+  examples: |
+    - quimper
+
+- synonym: "846011"
+  examples: |
+    - scaër
+
+- synonym: "846041"
+  examples: |
+    - carhaix
+
+- synonym: "846745"
+  examples: |
+    - concarneau
+
+- synonym: "853048"
+  examples: |
+    - plouégat-guérand
+
+- synonym: "875146"
+  examples: |
+    - sizun
+
+- synonym: "875155"
+  examples: |
+    - plonéour-lanvern
+
+- synonym: "875171"
+  examples: |
+    - brest
+
+- synonym: "877959"
+  examples: |
+    - pouldreuzic
+
+- synonym: "1124873"
+  examples: |
+    - loc eguiner ploudiry
+
+- synonym: "152641"
+  examples: |
+    - rennes
+
+- synonym: "811770"
+  examples: |
+    - saint-malo
+
+- synonym: "951306"
+  examples: |
+    - lou-du-lac
+
+- synonym: "140778"
+  examples: |
+    - provins
+
+- synonym: "142392"
+  examples: |
+    - meaux
+
+- synonym: "143084"
+  examples: |
+    - mitry-mory
+
+- synonym: "143107"
+  examples: |
+    - lagny-sur-marne
+
+- synonym: "147272"
+  examples: |
+    - fontainebleau
+
+- synonym: "149329"
+  examples: |
+    - nemours
+
+- synonym: "150441"
+  examples: |
+    - larchant
+
+- synonym: "152052"
+  examples: |
+    - melun
+
+- synonym: "153428"
+  examples: |
+    - brou-sur-chantereine
+
+- synonym: "154821"
+  examples: |
+    - avon
+
+- synonym: "154823"
+  examples: |
+    - basseville
+
+- synonym: "154826"
+  examples: |
+    - bray-sur-seine
+
+- synonym: "154830"
+  examples: |
+    - brie-comte-robert
+
+- synonym: "154833"
+  examples: |
+    - chaumes-en-brie
+
+- synonym: "154848"
+  examples: |
+    - fontenailles
+
+- synonym: "154850"
+  examples: |
+    - juilly
+
+- synonym: "154853"
+  examples: |
+    - moret-sur-loing
+
+- synonym: "155045"
+  examples: |
+    - ferrières
+
+- synonym: "137441"
+  examples: |
+    - croissy-sur-seine
+
+- synonym: "142603"
+  examples: |
+    - saint-rémy-lès-chevreuse
+
+- synonym: "142745"
+  examples: |
+    - le chesnay
+
+- synonym: "147759"
+  examples: |
+    - chatou
+
+- synonym: "147945"
+  examples: |
+    - maisons-laffitte
+
+- synonym: "149315"
+  examples: |
+    - mantes-la-ville
+
+- synonym: "149571"
+  examples: |
+    - andresy
+
+- synonym: "149572"
+  examples: |
+    - bougival
+
+- synonym: "149573"
+  examples: |
+    - chambourcy
+
+- synonym: "149575"
+  examples: |
+    - clairefontaine
+
+- synonym: "149576"
+  examples: |
+    - conflans-sainte-honorine
+
+- synonym: "149577"
+  examples: |
+    - elancourt
+
+- synonym: "149578"
+  examples: |
+    - epône
+
+- synonym: "149579"
+  examples: |
+    - houdan
+
+- synonym: "149580"
+  examples: |
+    - houilles
+
+- synonym: "149582"
+  examples: |
+    - le pecq
+
+- synonym: "149583"
+  examples: |
+    - limay
+
+- synonym: "149584"
+  examples: |
+    - louveciennes
+
+- synonym: "149586"
+  examples: |
+    - marly-le-roi
+
+- synonym: "149587"
+  examples: |
+    - montesson
+
+- synonym: "149588"
+  examples: |
+    - montfort-l'amaury
+
+- synonym: "149589"
+  examples: |
+    - neauphle-le-château
+
+- synonym: "149590"
+  examples: |
+    - poissy
+
+- synonym: "149591"
+  examples: |
+    - port-marly
+
+- synonym: "149592"
+  examples: |
+    - rambouillet
+
+- synonym: "149593"
+  examples: |
+    - rosny-sur-seine
+
+- synonym: "149594"
+  examples: |
+    - saint-cyr
+
+- synonym: "149595"
+  examples: |
+    - saint-germain-en-laye
+
+- synonym: "149597"
+  examples: |
+    - trappes
+
+- synonym: "1010683"
+  examples: |
+    - châteaufort
+
+- synonym: "138429"
+  examples: |
+    - enghien
+
+- synonym: "139844"
+  examples: |
+    - saint-leu-la-forêt
+
+- synonym: "142615"
+  examples: |
+    - boissy-l'aillerie
+
+- synonym: "146185"
+  examples: |
+    - montmorency
+
+- synonym: "153238"
+  examples: |
+    - royaumont
+
+- synonym: "154777"
+  examples: |
+    - argenteuil
+
+- synonym: "154780"
+  examples: |
+    - asnières-sur-oise
+
+- synonym: "154784"
+  examples: |
+    - beaumont-sur-oise
+
+- synonym: "154785"
+  examples: |
+    - cergy-pontoise
+
+- synonym: "154788"
+  examples: |
+    - champagne-sur-oise
+
+- synonym: "154789"
+  examples: |
+    - ecouen
+
+- synonym: "154794"
+  examples: |
+    - ermont
+
+- synonym: "154798"
+  examples: |
+    - fontenay-en-parisis
+
+- synonym: "154801"
+  examples: |
+    - gonesse
+
+- synonym: "154802"
+  examples: |
+    - herblay
+
+- synonym: "154805"
+  examples: |
+    - louvres
+
+- synonym: "154815"
+  examples: |
+    - pontoise
+
+- synonym: "996354"
+  examples: |
+    - villiers-le-bel
+
+- synonym: "140224"
+  examples: |
+    - aubervilliers
+
+- synonym: "149269"
+  examples: |
+    - montreuil
+
+- synonym: "149271"
+  examples: |
+    - saint-denis
+
+- synonym: "856746"
+  examples: |
+    - villetaneuse
+
+- synonym: "1003449"
+  examples: |
+    - la courneuve
+
+- synonym: "140592"
+  examples: |
+    - evry
+
+- synonym: "148143"
+  examples: |
+    - dourdan
+
+- synonym: "149615"
+  examples: |
+    - angerville
+
+- synonym: "149616"
+  examples: |
+    - arpajon
+
+- synonym: "149617"
+  examples: |
+    - athis-mons
+
+- synonym: "149618"
+  examples: |
+    - corbeil-essonnes
+
+- synonym: "149619"
+  examples: |
+    - epinay-sur-orge
+
+- synonym: "149620"
+  examples: |
+    - etampes
+
+- synonym: "149621"
+  examples: |
+    - igny
+
+- synonym: "149622"
+  examples: |
+    - limours
+
+- synonym: "149623"
+  examples: |
+    - massy-verrières
+
+- synonym: "149624"
+  examples: |
+    - montlhery
+
+- synonym: "149625"
+  examples: |
+    - orsay
+
+- synonym: "149626"
+  examples: |
+    - palaiseau
+
+- synonym: "149627"
+  examples: |
+    - savigny-sur-orge
+
+- synonym: "845486"
+  examples: |
+    - morsang-sur-orge
+
+- synonym: "141735"
+  examples: |
+    - saint-cloud
+
+- synonym: "142517"
+  examples: |
+    - issy-les-moulineaux
+
+- synonym: "143981"
+  examples: |
+    - bagneux
+
+- synonym: "144027"
+  examples: |
+    - levallois-perret
+
+- synonym: "144061"
+  examples: |
+    - chatenay-malabry
+
+- synonym: "144064"
+  examples: |
+    - rueil-malmaison
+
+- synonym: "144068"
+  examples: |
+    - sceaux
+
+- synonym: "146994"
+  examples: |
+    - neuilly-sur-seine
+
+- synonym: "148120"
+  examples: |
+    - sèvres
+
+- synonym: "845570"
+  examples: |
+    - montrouge
+
+- synonym: "857433"
+  examples: |
+    - bois-colombes
+
+- synonym: "1009474"
+  examples: |
+    - meudon
+
+- synonym: "149533"
+  examples: |
+    - choisy-le-roi
+
+- synonym: "149536"
+  examples: |
+    - vincennes
+
+- synonym: "139569"
+  examples: |
+    - bastia
+
+- synonym: "153155"
+  examples: |
+    - calvi
+
+- synonym: "153157"
+  examples: |
+    - muro
+
+- synonym: "854552"
+  examples: |
+    - lento
+
+- synonym: "856407"
+  examples: |
+    - fiumorbu
+
+- synonym: "856411"
+  examples: |
+    - corte
+
+- synonym: "872757"
+  examples: |
+    - moltifao
+
+- synonym: "875044"
+  examples: |
+    - nocario
+
+- synonym: "872726"
+  examples: |
+    - ajaccio
+
+- synonym: "137748"
+  examples: |
+    - hyères
+
+- synonym: "139553"
+  examples: |
+    - barjols
+
+- synonym: "148246"
+  examples: |
+    - fréjus
+
+- synonym: "148486"
+  examples: |
+    - saint-maximin-la-sainte-baume
+
+- synonym: "148877"
+  examples: |
+    - tourves
+
+- synonym: "149357"
+  examples: |
+    - la ciotat
+
+- synonym: "149359"
+  examples: |
+    - lorgues
+
+- synonym: "149361"
+  examples: |
+    - pignans
+
+- synonym: "149362"
+  examples: |
+    - saint-maximin du var
+
+- synonym: "149363"
+  examples: |
+    - saint-maximin-de-provence
+
+- synonym: "149364"
+  examples: |
+    - saint-raphaël
+
+- synonym: "149365"
+  examples: |
+    - six-fours
+
+- synonym: "149367"
+  examples: |
+    - toulon
+
+- synonym: "851408"
+  examples: |
+    - bandol
+
+- synonym: "919891"
+  examples: |
+    - salernes
+
+- synonym: "138258"
+  examples: |
+    - arles
+
+- synonym: "146756"
+  examples: |
+    - marseille
+
+- synonym: "147900"
+  examples: |
+    - tarascon
+
+- synonym: "149456"
+  examples: |
+    - aubagne
+
+- synonym: "149457"
+  examples: |
+    - eyguières
+
+- synonym: "149458"
+  examples: |
+    - saintes-maries-de-la-mer
+
+- synonym: "149459"
+  examples: |
+    - saint-rémy-de-provence
+
+- synonym: "139543"
+  examples: |
+    - clans
+
+- synonym: "146459"
+  examples: |
+    - antibes
+
+- synonym: "146460"
+  examples: |
+    - breil
+
+- synonym: "146462"
+  examples: |
+    - escarène
+
+- synonym: "146463"
+  examples: |
+    - fontan
+
+- synonym: "146464"
+  examples: |
+    - grasse
+
+- synonym: "146465"
+  examples: |
+    - la brigue
+
+- synonym: "146467"
+  examples: |
+    - nice
+
+- synonym: "146469"
+  examples: |
+    - saorge
+
+- synonym: "146470"
+  examples: |
+    - solliès-ville
+
+- synonym: "146471"
+  examples: |
+    - sospel
+
+- synonym: "146472"
+  examples: |
+    - tende
+
+- synonym: "846782"
+  examples: |
+    - menton
+
+- synonym: "856170"
+  examples: |
+    - saint-cézaire
+
+- synonym: "984792"
+  examples: |
+    - vallauris
+
+- synonym: "1050256"
+  examples: |
+    - villefranche-sur-mer
+
+- synonym: "147128"
+  examples: |
+    - cavaillon
+
+- synonym: "147154"
+  examples: |
+    - avignon
+
+- synonym: "148210"
+  examples: |
+    - carpentras
+
+- synonym: "150294"
+  examples: |
+    - gordes
+
+- synonym: "150356"
+  examples: |
+    - bonnieux
+
+- synonym: "150362"
+  examples: |
+    - caromb
+
+- synonym: "150364"
+  examples: |
+    - cucuron
+
+- synonym: "150375"
+  examples: |
+    - pernes
+
+- synonym: "153285"
+  examples: |
+    - bollène
+
+- synonym: "154561"
+  examples: |
+    - malaucène
+
+- synonym: "154566"
+  examples: |
+    - l'isle-sur-la-sorgue
+
+- synonym: "872494"
+  examples: |
+    - pertuis
+
+- synonym: "1010072"
+  examples: |
+    - vaison-la-romaine
+
+- synonym: "146253"
+  examples: |
+    - embrun
+
+- synonym: "153168"
+  examples: |
+    - gap
+
+- synonym: "853089"
+  examples: |
+    - queyras
+
+- synonym: "153170"
+  examples: |
+    - digne
+
+- synonym: "153171"
+  examples: |
+    - entrevaux
+
+- synonym: "153172"
+  examples: |
+    - forcalquier
+
+- synonym: "153173"
+  examples: |
+    - manosque
+
+- synonym: "153174"
+  examples: |
+    - riez
+
+- synonym: "153175"
+  examples: |
+    - sisteron
+
+- synonym: "138289"
+  examples: |
+    - moulins
+
+- synonym: "138479"
+  examples: |
+    - charroux
+
+- synonym: "146789"
+  examples: |
+    - montluçon
+
+- synonym: "149608"
+  examples: |
+    - jenzat
+
+- synonym: "149610"
+  examples: |
+    - vichy
+
+- synonym: "845897"
+  examples: |
+    - commentry
+
+- synonym: "845906"
+  examples: |
+    - varennes sur allier
+
+- synonym: "850948"
+  examples: |
+    - le clos-bargeon-molles
+
+- synonym: "971493"
+  examples: |
+    - souvigny
+
+- synonym: "140724"
+  examples: |
+    - saint-chartier
+
+- synonym: "140733"
+  examples: |
+    - la châtre
+
+- synonym: "150563"
+  examples: |
+    - nohant
+
+- synonym: "852715"
+  examples: |
+    - ardentes
+
+- synonym: "1003391"
+  examples: |
+    - valençay
+
+- synonym: "1096467"
+  examples: |
+    - issoudun
+
+- synonym: "147728"
+  examples: |
+    - charenton-sur-cher
+
+- synonym: "154459"
+  examples: |
+    - bourges
+
+- synonym: "845959"
+  examples: |
+    - plainpied
+
+- synonym: "905184"
+  examples: |
+    - vierzon
+
+- synonym: "152405"
+  examples: |
+    - manche
+
+- synonym: "143993"
+  examples: |
+    - calvados
+
+- synonym: "152429"
+  examples: |
+    - orne
+
+- synonym: "152369"
+  examples: |
+    - seine-maritime
+
+- synonym: "145556"
+  examples: |
+    - eure
+
+- synonym: "152664"
+  examples: |
+    - amboise
+
+- synonym: "152665"
+  examples: |
+    - tours
+
+- synonym: "921368"
+  examples: |
+    - ligueil
+
+- synonym: "141877"
+  examples: |
+    - gard
+
+- synonym: "140408"
+  examples: |
+    - hérault
+
+- synonym: "149402"
+  examples: |
+    - aude
+
+- synonym: "153192"
+  examples: |
+    - lozère
+
+- synonym: "875317"
+  examples: |
+    - roussillon
+
+- synonym: "155037"
+  examples: |
+    - gers
+
+- synonym: "141923"
+  examples: |
+    - tarn
+
+- synonym: "141870"
+  examples: |
+    - tarn-et-garonne
+
+- synonym: "149280"
+  examples: |
+    - lot
+
+- synonym: "149382"
+  examples: |
+    - aveyron
+
+- synonym: "150451"
+  examples: |
+    - ariège
+
+- synonym: "153137"
+  examples: |
+    - cantal
+
+- synonym: "149600"
+  examples: |
+    - haute-loire
+
+- synonym: "141862"
+  examples: |
+    - isère
+
+- synonym: "149509"
+  examples: |
+    - drôme
+
+- synonym: "152632"
+  examples: |
+    - ain
+
+- synonym: "149399"
+  examples: |
+    - ardèche
+
+- synonym: "152634"
+  examples: |
+    - rhône
+
+- synonym: "152644"
+  examples: |
+    - loire
+
+- synonym: "141933"
+  examples: |
+    - charente-maritime
+
+- synonym: "153149"
+  examples: |
+    - vienne
+
+- synonym: "149253"
+  examples: |
+    - charente
+
+- synonym: "152647"
+  examples: |
+    - deux-sèvres
+
+- synonym: "149551"
+  examples: |
+    - dordogne
+
+- synonym: "150219"
+  examples: |
+    - gironde
+
+- synonym: "150257"
+  examples: |
+    - landes
+
+- synonym: "149261"
+  examples: |
+    - creuse
+
+- synonym: "153184"
+  examples: |
+    - corrèze
+
+- synonym: "152014"
+  examples: |
+    - yonne
+
+- synonym: "152625"
+  examples: |
+    - doubs
+
+- synonym: "140418"
+  examples: |
+    - territoire de belfort
+
+- synonym: "153181"
+  examples: |
+    - jura
+
+- synonym: "149392"
+  examples: |
+    - somme
+
+- synonym: "149629"
+  examples: |
+    - aisne
+
+- synonym: "149511"
+  examples: |
+    - oise
+
+- synonym: "149417"
+  examples: |
+    - nord
+
+- synonym: "147020"
+  examples: |
+    - orléans
+
+- synonym: "140095"
+  examples: |
+    - boismorand
+
+- synonym: "145694"
+  examples: |
+    - sully-sur-loire
+
+- synonym: "149543"
+  examples: |
+    - gien
+
+- synonym: "149544"
+  examples: |
+    - lorris
+
+- synonym: "806135"
+  examples: |
+    - neuvy-en-sullias
+
+- synonym: "874379"
+  examples: |
+    - nibelle
+
+- synonym: "140101"
+  examples: |
+    - azé
+
+- synonym: "140104"
+  examples: |
+    - chambon-sur-cisse
+
+- synonym: "140107"
+  examples: |
+    - chaumont-sur-loire
+
+- synonym: "140110"
+  examples: |
+    - lamotte-beuvron
+
+- synonym: "140114"
+  examples: |
+    - mer
+
+- synonym: "140117"
+  examples: |
+    - montoire-sur-loire
+
+- synonym: "140120"
+  examples: |
+    - montrichard
+
+- synonym: "140123"
+  examples: |
+    - nouan-le-fuzelier
+
+- synonym: "140126"
+  examples: |
+    - pontlevoy
+
+- synonym: "140129"
+  examples: |
+    - prunay-cassereau
+
+- synonym: "140133"
+  examples: |
+    - romorantin-lanthenay
+
+- synonym: "140136"
+  examples: |
+    - saint-aignan
+
+- synonym: "140139"
+  examples: |
+    - selommes
+
+- synonym: "140142"
+  examples: |
+    - vendôme
+
+- synonym: "152622"
+  examples: |
+    - blois
+
+- synonym: "140504"
+  examples: |
+    - châteaudun
+
+- synonym: "142590"
+  examples: |
+    - chartres
+
+- synonym: "142699"
+  examples: |
+    - arrou
+
+- synonym: "142704"
+  examples: |
+    - aunay-sous-auneau
+
+- synonym: "142718"
+  examples: |
+    - bonneval
+
+- synonym: "142722"
+  examples: |
+    - brou
+
+- synonym: "142726"
+  examples: |
+    - châteauneuf-en-thymerais
+
+- synonym: "142729"
+  examples: |
+    - cloyes
+
+- synonym: "142735"
+  examples: |
+    - courtalain
+
+- synonym: "142738"
+  examples: |
+    - epernon
+
+- synonym: "142742"
+  examples: |
+    - gallardon
+
+- synonym: "142746"
+  examples: |
+    - illiers-combray
+
+- synonym: "142751"
+  examples: |
+    - janville
+
+- synonym: "142754"
+  examples: |
+    - la ferté-vidame
+
+- synonym: "142758"
+  examples: |
+    - maintenon
+
+- synonym: "142764"
+  examples: |
+    - margon
+
+- synonym: "142768"
+  examples: |
+    - mignières
+
+- synonym: "142770"
+  examples: |
+    - nogent-le-phaye
+
+- synonym: "142775"
+  examples: |
+    - nogent-le-roi
+
+- synonym: "142781"
+  examples: |
+    - toury
+
+- synonym: "142782"
+  examples: |
+    - villemeux
+
+- synonym: "142787"
+  examples: |
+    - voves
+
+- synonym: "145957"
+  examples: |
+    - dreux
+
+- synonym: "147867"
+  examples: |
+    - anet
+
+- synonym: "149530"
+  examples: |
+    - nogent-le-rotrou
+
+- synonym: "139722"
+  examples: |
+    - lourdes
+
+- synonym: "140685"
+  examples: |
+    - saint-savin
+
+- synonym: "146260"
+  examples: |
+    - tarbes
+
+- synonym: "846821"
+  examples: |
+    - aventignan
+
+- synonym: "846832"
+  examples: |
+    - recurt
+
+- synonym: "846843"
+  examples: |
+    - laborde
+
+- synonym: "847039"
+  examples: |
+    - betpouey
+
+- synonym: "847072"
+  examples: |
+    - lecumberzy
+
+- synonym: "847894"
+  examples: |
+    - saint-lézer
+
+- synonym: "853519"
+  examples: |
+    - tardets
+
+- synonym: "856122"
+  examples: |
+    - vielle-aure
+
+- synonym: "856347"
+  examples: |
+    - bonnemazon
+
+- synonym: "856383"
+  examples: |
+    - ayzac-ost
+
+- synonym: "871712"
+  examples: |
+    - nestier
+
+- synonym: "871730"
+  examples: |
+    - esteres luz
+
+- synonym: "871765"
+  examples: |
+    - esterre
+
+- synonym: "871821"
+  examples: |
+    - esquièze-sère
+
+- synonym: "154762"
+  examples: |
+    - bayonne
+
+- synonym: "773973"
+  examples: |
+    - saint-jean-de-luz
+
+- synonym: "846916"
+  examples: |
+    - oloron-sainte-marie
+
+- synonym: "868666"
+  examples: |
+    - laruns
+
+- synonym: "875061"
+  examples: |
+    - soule
+
+- synonym: "917046"
+  examples: |
+    - gan
+
+- synonym: "142484"
+  examples: |
+    - saint-guillem-de-combert
+
+- synonym: "147224"
+  examples: |
+    - perpignan
+
+- synonym: "151373"
+  examples: |
+    - vinca
+
+- synonym: "151376"
+  examples: |
+    - arles-sur-tech
+
+- synonym: "151378"
+  examples: |
+    - ille-sur-têt
+
+- synonym: "832595"
+  examples: |
+    - céret
+
+- synonym: "854429"
+  examples: |
+    - planes
+
+- synonym: "153140"
+  examples: |
+    - haut-rhin
+
+- synonym: "141536"
+  examples: |
+    - meurthe-et-moselle
+
+- synonym: "138551"
+  examples: |
+    - vosges
+
+- synonym: "152598"
+  examples: |
+    - moselle
+
+- synonym: "147123"
+  examples: |
+    - meuse
+
+- synonym: "149636"
+  examples: |
+    - marne
+
+- synonym: "152649"
+  examples: |
+    - ardennes
+
+- synonym: "149376"
+  examples: |
+    - aube
+
+- synonym: "136905"
+  examples: |
+    - laval
+
+- synonym: "847687"
+  examples: |
+    - ambrières
+
+- synonym: "137707"
+  examples: |
+    - angers
+
+- synonym: "996102"
+  examples: |
+    - puy-notre-dame
+
+- synonym: "144045"
+  examples: |
+    - luçon
+
+- synonym: "771137"
+  examples: |
+    - challans
+
+- synonym: "832424"
+  examples: |
+    - lle d'yeu
+
+- synonym: "147571"
+  examples: |
+    - le mans
+
+- synonym: "152725"
+  examples: |
+    - la flèche
+
+- synonym: "153547"
+  examples: |
+    - la ferté-bernard
+
+- synonym: "147744"
+  examples: |
+    - nantes
+
+- synonym: "153166"
+  examples: |
+    - saint-nazaire
+
+- synonym: "844788"
+  examples: |
+    - la baule
+
+- synonym: "847497"
+  examples: |
+    - landieul
+
+- synonym: "871625"
+  examples: |
+    - herbignac
+
+- synonym: "920160"
+  examples: |
+    - mouzeil
+
+- synonym: "146801"
+  examples: |
+    - varzy
+
+- synonym: "152659"
+  examples: |
+    - nevers
+
+- synonym: "851733"
+  examples: |
+    - vandenesse
+
+- synonym: "900265"
+  examples: |
+    - brèves
+
+- synonym: "155339"
+  examples: |
+    - la havane
+
+- synonym: "1002853"
+  examples: |
+    - port of spain
+
+- synonym: "952572"
+  examples: |
+    - dallas
+
+- synonym: "883277"
+  examples: |
+    - olympia
+
+- synonym: "147352"
+  examples: |
+    - boston
+
+- synonym: "1011229"
+  examples: |
+    - lowell
+
+- synonym: "1122930"
+  examples: |
+    - newton
+
+- synonym: "147418"
+  examples: |
+    - los angeles
+
+- synonym: "1115852"
+  examples: |
+    - san jose
+
+- synonym: "1122867"
+  examples: |
+    - santa barbara
+
+- synonym: "151516"
+  examples: |
+    - berlin
+
+- synonym: "1031668"
+  examples: |
+    - jersey city
+
+- synonym: "153263"
+  examples: |
+    - harlem
+
+- synonym: "154011"
+  examples: |
+    - brooklyn
+
+- synonym: "147453"
+  examples: |
+    - portland
+
+- synonym: "1019559"
+  examples: |
+    - jamestown
+
+- synonym: "1023013"
+  examples: |
+    - williamsburg
+
+- synonym: "1012745"
+  examples: |
+    - clifton springs
+
+- synonym: "1021109"
+  examples: |
+    - woodstock
+
+- synonym: "1093354"
+  examples: |
+    - norwich
+
+- synonym: "1122934"
+  examples: |
+    - williamsville
+
+- synonym: "1123427"
+  examples: |
+    - newburgh
+
+- synonym: "1013983"
+  examples: |
+    - louisville
+
+- synonym: "1020952"
+  examples: |
+    - talbotton
+
+- synonym: "1021015"
+  examples: |
+    - decatur
+
+- synonym: "1047700"
+  examples: |
+    - chichicastenango
+
+- synonym: "152081"
+  examples: |
+    - montréal
+
+- synonym: "153703"
+  examples: |
+    - saint-hyacinthe
+
+- synonym: "1020853"
+  examples: |
+    - jonquières
+
+- synonym: "1020874"
+  examples: |
+    - laval
+
+- synonym: "816055"
+  examples: |
+    - iles de la reine charlotte
+
+- synonym: "878988"
+  examples: |
+    - winnipeg
+
+- synonym: "1017738"
+  examples: |
+    - ile de baffin
+
+- synonym: "815623"
+  examples: |
+    - lipia
+
+- synonym: "141111"
+  examples: |
+    - cirebon
+
+- synonym: "932906"
+  examples: |
+    - malang
+
+- synonym: "1022222"
+  examples: |
+    - bandung
+
+- synonym: "148512"
+  examples: |
+    - kalimantan
+
+- synonym: "1008006"
+  examples: |
+    - denpasar
+
+- synonym: "146536"
+  examples: |
+    - mithila
+
+- synonym: "151131"
+  examples: |
+    - miraj
+
+- synonym: "151145"
+  examples: |
+    - delhi
+
+- synonym: "151676"
+  examples: |
+    - bihar
+
+- synonym: "152304"
+  examples: |
+    - visnupur
+
+- synonym: "154140"
+  examples: |
+    - dhumka
+
+- synonym: "154146"
+  examples: |
+    - calcutta
+
+- synonym: "154147"
+  examples: |
+    - ladakh
+
+- synonym: "154148"
+  examples: |
+    - rajasthan
+
+- synonym: "811694"
+  examples: |
+    - madhya pradesh
+
+- synonym: "813318"
+  examples: |
+    - assam
+
+- synonym: "1066587"
+  examples: |
+    - kumaon
+
+- synonym: "1066588"
+  examples: |
+    - garhwal
+
+- synonym: "148533"
+  examples: |
+    - madras
+
+- synonym: "811707"
+  examples: |
+    - karnataka
+
+- synonym: "148978"
+  examples: |
+    - kérala
+
+- synonym: "154152"
+  examples: |
+    - mysore
+
+- synonym: "154613"
+  examples: |
+    - katmandou
+
+- synonym: "993918"
+  examples: |
+    - séoul
+
+- synonym: "811658"
+  examples: |
+    - madang
+
+- synonym: "811660"
+  examples: |
+    - sepik
+
+- synonym: "875432"
+  examples: |
+    - orokolo
+
+- synonym: "955597"
+  examples: |
+    - ile mercus
+
+- synonym: "1030748"
+  examples: |
+    - port moresby
+
+- synonym: "143091"
+  examples: |
+    - hambye
+
+- synonym: "147013"
+  examples: |
+    - cherbourg
+
+- synonym: "152406"
+  examples: |
+    - coutances
+
+- synonym: "152407"
+  examples: |
+    - hauteville
+
+- synonym: "152409"
+  examples: |
+    - saint-hilaire-du-harcouet
+
+- synonym: "152410"
+  examples: |
+    - villedieu-les-poêles
+
+- synonym: "847705"
+  examples: |
+    - nehou
+
+- synonym: "145979"
+  examples: |
+    - bayeux
+
+- synonym: "147127"
+  examples: |
+    - lisieux
+
+- synonym: "147752"
+  examples: |
+    - caen
+
+- synonym: "149523"
+  examples: |
+    - falaise
+
+- synonym: "149525"
+  examples: |
+    - pont-l'evêque
+
+- synonym: "149526"
+  examples: |
+    - trouville
+
+- synonym: "149527"
+  examples: |
+    - villers-sur-mer
+
+- synonym: "855617"
+  examples: |
+    - vieux
+
+- synonym: "872932"
+  examples: |
+    - grimbosq
+
+- synonym: "882936"
+  examples: |
+    - vire
+
+- synonym: "848761"
+  examples: |
+    - l'aigle
+
+- synonym: "855627"
+  examples: |
+    - planches
+
+- synonym: "136760"
+  examples: |
+    - ferrières-en-bray
+
+- synonym: "140127"
+  examples: |
+    - dieppe
+
+- synonym: "140181"
+  examples: |
+    - gournay-en-bray
+
+- synonym: "140185"
+  examples: |
+    - dampierre-en-bray
+
+- synonym: "140190"
+  examples: |
+    - forges-les-eaux
+
+- synonym: "147084"
+  examples: |
+    - sommery
+
+- synonym: "152363"
+  examples: |
+    - lammerville
+
+- synonym: "152366"
+  examples: |
+    - sassetot-le-mauconduit
+
+- synonym: "152370"
+  examples: |
+    - bacqueville-en-caux
+
+- synonym: "152371"
+  examples: |
+    - bolbec
+
+- synonym: "152372"
+  examples: |
+    - caudebec-en-caux
+
+- synonym: "152373"
+  examples: |
+    - criquetot-l'esneval
+
+- synonym: "152374"
+  examples: |
+    - elbeuf
+
+- synonym: "152375"
+  examples: |
+    - eu
+
+- synonym: "152376"
+  examples: |
+    - fécamp
+
+- synonym: "152377"
+  examples: |
+    - le havre
+
+- synonym: "152378"
+  examples: |
+    - lillebone
+
+- synonym: "152379"
+  examples: |
+    - montivilliers
+
+- synonym: "152380"
+  examples: |
+    - mont-saint-aignan
+
+- synonym: "152381"
+  examples: |
+    - neufchâtel
+
+- synonym: "152382"
+  examples: |
+    - ocqueville
+
+- synonym: "152383"
+  examples: |
+    - rouen
+
+- synonym: "152384"
+  examples: |
+    - saint-martin-de-boscherville
+
+- synonym: "152385"
+  examples: |
+    - saint-romain-de-colbosc
+
+- synonym: "847512"
+  examples: |
+    - martincamps
+
+- synonym: "145555"
+  examples: |
+    - andelys
+
+- synonym: "147088"
+  examples: |
+    - gisors
+
+- synonym: "147219"
+  examples: |
+    - ivry-la-bataille
+
+- synonym: "149493"
+  examples: |
+    - boscherville
+
+- synonym: "149494"
+  examples: |
+    - breteuil-sur-iton
+
+- synonym: "149495"
+  examples: |
+    - evreux
+
+- synonym: "149498"
+  examples: |
+    - gamaches-en-vexin
+
+- synonym: "149500"
+  examples: |
+    - louviers
+
+- synonym: "149502"
+  examples: |
+    - vernon
+
+- synonym: "855467"
+  examples: |
+    - garennes
+
+- synonym: "917708"
+  examples: |
+    - asnières
+
+- synonym: "136881"
+  examples: |
+    - nîmes
+
+- synonym: "138535"
+  examples: |
+    - alès
+
+- synonym: "150350"
+  examples: |
+    - beaucaire
+
+- synonym: "153471"
+  examples: |
+    - anduze
+
+- synonym: "153474"
+  examples: |
+    - chusclan
+
+- synonym: "154617"
+  examples: |
+    - uzès
+
+- synonym: "847416"
+  examples: |
+    - orange
+
+- synonym: "854714"
+  examples: |
+    - rogues
+
+- synonym: "138044"
+  examples: |
+    - saint-chinian
+
+- synonym: "141263"
+  examples: |
+    - béziers
+
+- synonym: "148185"
+  examples: |
+    - pézenas
+
+- synonym: "148285"
+  examples: |
+    - lodève
+
+- synonym: "155145"
+  examples: |
+    - montpellier
+
+- synonym: "1012898"
+  examples: |
+    - lunel
+
+- synonym: "1067059"
+  examples: |
+    - sète
+
+- synonym: "1109138"
+  examples: |
+    - saint-guilhem-le-désert
+
+- synonym: "148203"
+  examples: |
+    - narbonne
+
+- synonym: "149403"
+  examples: |
+    - carcassonne
+
+- synonym: "149404"
+  examples: |
+    - castelnaudary
+
+- synonym: "149405"
+  examples: |
+    - montréal
+
+- synonym: "149406"
+  examples: |
+    - puivert
+
+- synonym: "149407"
+  examples: |
+    - saint-martin-de-limoux
+
+- synonym: "149408"
+  examples: |
+    - saint-papoul
+
+- synonym: "1018534"
+  examples: |
+    - limoux
+
+- synonym: "929604"
+  examples: |
+    - mende
+
+- synonym: "997769"
+  examples: |
+    - prades
+
+- synonym: "68422"
+  examples: |
+    - marciac
+
+- synonym: "140243"
+  examples: |
+    - lombez
+
+- synonym: "154655"
+  examples: |
+    - condom
+
+- synonym: "155038"
+  examples: |
+    - auch
+
+- synonym: "942988"
+  examples: |
+    - terraube
+
+- synonym: "140683"
+  examples: |
+    - castres
+
+- synonym: "148080"
+  examples: |
+    - lavaur
+
+- synonym: "154766"
+  examples: |
+    - albi
+
+- synonym: "917702"
+  examples: |
+    - carmaux
+
+- synonym: "140877"
+  examples: |
+    - moissac
+
+- synonym: "148249"
+  examples: |
+    - montauban
+
+- synonym: "142907"
+  examples: |
+    - saint-gaudens
+
+- synonym: "143109"
+  examples: |
+    - cintegabelle
+
+- synonym: "148259"
+  examples: |
+    - toulouse
+
+- synonym: "149565"
+  examples: |
+    - gimont
+
+- synonym: "904096"
+  examples: |
+    - cox
+
+- synonym: "1011201"
+  examples: |
+    - revel
+
+- synonym: "146910"
+  examples: |
+    - souillac
+
+- synonym: "148278"
+  examples: |
+    - rodez
+
+- synonym: "149383"
+  examples: |
+    - foissac
+
+- synonym: "149385"
+  examples: |
+    - vabres-l'abbaye
+
+- synonym: "149386"
+  examples: |
+    - villefranche-de-rouergue
+
+- synonym: "847008"
+  examples: |
+    - saint-martin
+
+- synonym: "150452"
+  examples: |
+    - mirepoix
+
+- synonym: "150453"
+  examples: |
+    - pamiers
+
+- synonym: "150454"
+  examples: |
+    - saint-lizier
+
+- synonym: "139118"
+  examples: |
+    - aurillac
+
+- synonym: "146142"
+  examples: |
+    - marchal
+
+- synonym: "153138"
+  examples: |
+    - saint-flour
+
+- synonym: "845802"
+  examples: |
+    - fontanges
+
+- synonym: "856194"
+  examples: |
+    - planèze
+
+- synonym: "856453"
+  examples: |
+    - saint-urcize
+
+- synonym: "136812"
+  examples: |
+    - clermont-ferrand
+
+- synonym: "147311"
+  examples: |
+    - effiat
+
+- synonym: "845793"
+  examples: |
+    - pionsat
+
+- synonym: "851984"
+  examples: |
+    - verneugheol
+
+- synonym: "867683"
+  examples: |
+    - ambert
+
+- synonym: "1073171"
+  examples: |
+    - tonne
+
+- synonym: "845756"
+  examples: |
+    - craponne
+
+- synonym: "846428"
+  examples: |
+    - rosières
+
+- synonym: "140453"
+  examples: |
+    - chambéry
+
+- synonym: "146408"
+  examples: |
+    - aix-les-bains
+
+- synonym: "154551"
+  examples: |
+    - ugine
+
+- synonym: "855297"
+  examples: |
+    - peisey
+
+- synonym: "855314"
+  examples: |
+    - la chambre
+
+- synonym: "856202"
+  examples: |
+    - manigod
+
+- synonym: "140819"
+  examples: |
+    - charavines
+
+- synonym: "153464"
+  examples: |
+    - crolles
+
+- synonym: "155332"
+  examples: |
+    - grenoble
+
+- synonym: "847029"
+  examples: |
+    - theys
+
+- synonym: "880213"
+  examples: |
+    - saint-antoine l'abbaye
+
+- synonym: "1111457"
+  examples: |
+    - meylan
+
+- synonym: "142594"
+  examples: |
+    - montélimar
+
+- synonym: "149510"
+  examples: |
+    - valence
+
+- synonym: "846991"
+  examples: |
+    - nyons
+
+- synonym: "1061869"
+  examples: |
+    - romans-sur-isère
+
+- synonym: "144009"
+  examples: |
+    - bresse
+
+- synonym: "146892"
+  examples: |
+    - bourg-en-bresse
+
+- synonym: "152633"
+  examples: |
+    - belley
+
+- synonym: "846536"
+  examples: |
+    - saint-laurent
+
+- synonym: "847177"
+  examples: |
+    - pont-de-vaux
+
+- synonym: "851769"
+  examples: |
+    - chaveyriat
+
+- synonym: "867675"
+  examples: |
+    - beaupont
+
+- synonym: "1080583"
+  examples: |
+    - ambronay
+
+- synonym: "149400"
+  examples: |
+    - viviers
+
+- synonym: "149555"
+  examples: |
+    - annecy
+
+- synonym: "149556"
+  examples: |
+    - crolière
+
+- synonym: "149558"
+  examples: |
+    - morzine
+
+- synonym: "149560"
+  examples: |
+    - thonon-les-bains
+
+- synonym: "846676"
+  examples: |
+    - chamonix
+
+- synonym: "847019"
+  examples: |
+    - servoz
+
+- synonym: "1005880"
+  examples: |
+    - ville-la-grand
+
+- synonym: "1006030"
+  examples: |
+    - evires
+
+- synonym: "1006073"
+  examples: |
+    - chablais
+
+- synonym: "1006113"
+  examples: |
+    - vallée verte
+
+- synonym: "1006228"
+  examples: |
+    - saint-paul-en-chablais
+
+- synonym: "1015116"
+  examples: |
+    - sixt-fer-à-cheval
+
+- synonym: "152635"
+  examples: |
+    - beaujeu
+
+- synonym: "152636"
+  examples: |
+    - lyon
+
+- synonym: "152637"
+  examples: |
+    - villeurbanne
+
+- synonym: "1040533"
+  examples: |
+    - tarare
+
+- synonym: "152645"
+  examples: |
+    - saint-chamond
+
+- synonym: "152646"
+  examples: |
+    - saint-etienne
+
+- synonym: "949223"
+  examples: |
+    - montbrisson
+
+- synonym: "141656"
+  examples: |
+    - cherves
+
+- synonym: "140713"
+  examples: |
+    - saintes
+
+- synonym: "145770"
+  examples: |
+    - jonzac
+
+- synonym: "145772"
+  examples: |
+    - dolus
+
+- synonym: "145778"
+  examples: |
+    - moëze
+
+- synonym: "145845"
+  examples: |
+    - la rochelle
+
+- synonym: "145862"
+  examples: |
+    - pons
+
+- synonym: "145892"
+  examples: |
+    - saujon
+
+- synonym: "145895"
+  examples: |
+    - pontaillac
+
+- synonym: "145902"
+  examples: |
+    - royan
+
+- synonym: "153540"
+  examples: |
+    - saint-jean-de-liversay
+
+- synonym: "855233"
+  examples: |
+    - rochefort
+
+- synonym: "153150"
+  examples: |
+    - poitiers
+
+- synonym: "874919"
+  examples: |
+    - saint-jean-de-sauves
+
+- synonym: "142230"
+  examples: |
+    - saint-séverin
+
+- synonym: "146411"
+  examples: |
+    - angoulême
+
+- synonym: "148299"
+  examples: |
+    - niort
+
+- synonym: "853445"
+  examples: |
+    - saint-maixent
+
+- synonym: "1015130"
+  examples: |
+    - airvault
+
+- synonym: "855534"
+  examples: |
+    - comminges
+
+- synonym: "136805"
+  examples: |
+    - périgueux
+
+- synonym: "149553"
+  examples: |
+    - bars
+
+- synonym: "844552"
+  examples: |
+    - allemans
+
+- synonym: "984977"
+  examples: |
+    - lascaux
+
+- synonym: "147146"
+  examples: |
+    - bordeaux
+
+- synonym: "147767"
+  examples: |
+    - uzeste
+
+- synonym: "150224"
+  examples: |
+    - saint-emilion
+
+- synonym: "847061"
+  examples: |
+    - la teste
+
+- synonym: "871247"
+  examples: |
+    - saint-antoine
+
+- synonym: "872846"
+  examples: |
+    - marcamps
+
+- synonym: "150248"
+  examples: |
+    - agen
+
+- synonym: "846101"
+  examples: |
+    - sabres
+
+- synonym: "143096"
+  examples: |
+    - bellegarde-en-marche
+
+- synonym: "149262"
+  examples: |
+    - vallière
+
+- synonym: "151562"
+  examples: |
+    - brive-la-gaillarde
+
+- synonym: "153185"
+  examples: |
+    - tulle
+
+- synonym: "873391"
+  examples: |
+    - curemonte
+
+- synonym: "930629"
+  examples: |
+    - beaulieu-sur-dordogne
+
+- synonym: "153188"
+  examples: |
+    - limoges
+
+- synonym: "140341"
+  examples: |
+    - avallon
+
+- synonym: "141066"
+  examples: |
+    - vézelay
+
+- synonym: "151701"
+  examples: |
+    - sens
+
+- synonym: "152015"
+  examples: |
+    - arcy-sur-cure
+
+- synonym: "152016"
+  examples: |
+    - auxerre
+
+- synonym: "152017"
+  examples: |
+    - etigny
+
+- synonym: "847187"
+  examples: |
+    - pontaubert
+
+- synonym: "856158"
+  examples: |
+    - bassou
+
+- synonym: "997824"
+  examples: |
+    - saint-julien-du-sault
+
+- synonym: "997847"
+  examples: |
+    - toucy
+
+- synonym: "1076903"
+  examples: |
+    - naillyton
+
+- synonym: "140488"
+  examples: |
+    - châtillon-sur-seine
+
+- synonym: "146896"
+  examples: |
+    - dijon
+
+- synonym: "148103"
+  examples: |
+    - beaune
+
+- synonym: "149298"
+  examples: |
+    - fontenay
+
+- synonym: "149317"
+  examples: |
+    - dole
+
+- synonym: "149687"
+  examples: |
+    - auxonne
+
+- synonym: "149688"
+  examples: |
+    - genlis
+
+- synonym: "149689"
+  examples: |
+    - nuits-saint-georges
+
+- synonym: "149690"
+  examples: |
+    - saint-jean-de-losne
+
+- synonym: "149691"
+  examples: |
+    - saulieu
+
+- synonym: "149692"
+  examples: |
+    - semur-en-auxois
+
+- synonym: "149693"
+  examples: |
+    - seurre
+
+- synonym: "149694"
+  examples: |
+    - talant
+
+- synonym: "900266"
+  examples: |
+    - santenay
+
+- synonym: "1038264"
+  examples: |
+    - saint-julien-clénay
+
+- synonym: "144002"
+  examples: |
+    - le creusot
+
+- synonym: "148972"
+  examples: |
+    - autun
+
+- synonym: "149236"
+  examples: |
+    - mâcon
+
+- synonym: "149238"
+  examples: |
+    - tournus
+
+- synonym: "149638"
+  examples: |
+    - chalon-sur-saône
+
+- synonym: "856038"
+  examples: |
+    - laizy
+
+- synonym: "900377"
+  examples: |
+    - dracy saint-loup
+
+- synonym: "988612"
+  examples: |
+    - donzy-le-national
+
+- synonym: "998161"
+  examples: |
+    - bourbon-lancy
+
+- synonym: "1023118"
+  examples: |
+    - montceau-les-mines
+
+- synonym: "138516"
+  examples: |
+    - montbéliard
+
+- synonym: "152626"
+  examples: |
+    - besançon
+
+- synonym: "152628"
+  examples: |
+    - mouthe
+
+- synonym: "152629"
+  examples: |
+    - pontarlier
+
+- synonym: "856809"
+  examples: |
+    - sainte-suzanne
+
+- synonym: "868077"
+  examples: |
+    - mandeure
+
+- synonym: "139338"
+  examples: |
+    - vesoul
+
+- synonym: "153178"
+  examples: |
+    - luxeuil
+
+- synonym: "153179"
+  examples: |
+    - pesmes
+
+- synonym: "998169"
+  examples: |
+    - jussey
+
+- synonym: "998204"
+  examples: |
+    - héricourt
+
+- synonym: "140423"
+  examples: |
+    - belfort
+
+- synonym: "143094"
+  examples: |
+    - morez
+
+- synonym: "152424"
+  examples: |
+    - salins-les-bains
+
+- synonym: "153182"
+  examples: |
+    - arbois
+
+- synonym: "854741"
+  examples: |
+    - morteau
+
+- synonym: "998209"
+  examples: |
+    - poligny
+
+- synonym: "998214"
+  examples: |
+    - chaussin
+
+- synonym: "998217"
+  examples: |
+    - lons-le-saunier
+
+- synonym: "138280"
+  examples: |
+    - amiens
+
+- synonym: "149394"
+  examples: |
+    - péronne
+
+- synonym: "139547"
+  examples: |
+    - saint-quentin
+
+- synonym: "140985"
+  examples: |
+    - vermand
+
+- synonym: "142462"
+  examples: |
+    - laon
+
+- synonym: "149631"
+  examples: |
+    - soissons
+
+- synonym: "140402"
+  examples: |
+    - beauvais
+
+- synonym: "149512"
+  examples: |
+    - compiègne
+
+- synonym: "149513"
+  examples: |
+    - meru
+
+- synonym: "905149"
+  examples: |
+    - beauvaisis
+
+- synonym: "995755"
+  examples: |
+    - chambly
+
+- synonym: "996935"
+  examples: |
+    - chaumont-en-vexin
+
+- synonym: "1009596"
+  examples: |
+    - précy-sur-oise
+
+- synonym: "1013843"
+  examples: |
+    - chantilly
+
+- synonym: "138246"
+  examples: |
+    - douai
+
+- synonym: "139564"
+  examples: |
+    - esquelbecq
+
+- synonym: "148028"
+  examples: |
+    - hazebrouck
+
+- synonym: "148115"
+  examples: |
+    - marcq-en-baroeul
+
+- synonym: "149418"
+  examples: |
+    - cambrai
+
+- synonym: "149419"
+  examples: |
+    - dunkerque
+
+- synonym: "149420"
+  examples: |
+    - lille
+
+- synonym: "149422"
+  examples: |
+    - roubaix
+
+- synonym: "149423"
+  examples: |
+    - tourcoing
+
+- synonym: "149424"
+  examples: |
+    - valenciennes
+
+- synonym: "149425"
+  examples: |
+    - villeneuve d'ascq
+
+- synonym: "149426"
+  examples: |
+    - west-cappel
+
+- synonym: "816734"
+  examples: |
+    - halluin
+
+- synonym: "849128"
+  examples: |
+    - hondschoote
+
+- synonym: "148573"
+  examples: |
+    - calais
+
+- synonym: "149352"
+  examples: |
+    - boulogne-sur-mer
+
+- synonym: "149353"
+  examples: |
+    - saint-omer
+
+- synonym: "1010690"
+  examples: |
+    - arras
+
+- synonym: "1076567"
+  examples: |
+    - ourton
+
+- synonym: "138050"
+  examples: |
+    - guebwiller
+
+- synonym: "152119"
+  examples: |
+    - turckheim
+
+- synonym: "153141"
+  examples: |
+    - colmar
+
+- synonym: "153144"
+  examples: |
+    - niederentzen
+
+- synonym: "153145"
+  examples: |
+    - oberentzen
+
+- synonym: "153146"
+  examples: |
+    - ottmarsheim
+
+- synonym: "153147"
+  examples: |
+    - ribeauville
+
+- synonym: "855238"
+  examples: |
+    - thann
+
+- synonym: "934666"
+  examples: |
+    - wihr-au-val
+
+- synonym: "998190"
+  examples: |
+    - altenach
+
+- synonym: "139877"
+  examples: |
+    - sélestat
+
+- synonym: "141548"
+  examples: |
+    - sarre-union
+
+- synonym: "152605"
+  examples: |
+    - bernardville
+
+- synonym: "152606"
+  examples: |
+    - haguenau
+
+- synonym: "152607"
+  examples: |
+    - herbitzheim
+
+- synonym: "152608"
+  examples: |
+    - marmoutier
+
+- synonym: "854308"
+  examples: |
+    - bellenheim
+
+- synonym: "857636"
+  examples: |
+    - weinbourg
+
+- synonym: "873528"
+  examples: |
+    - soufflenheim
+
+- synonym: "998229"
+  examples: |
+    - semersheim
+
+- synonym: "137490"
+  examples: |
+    - pierre
+
+- synonym: "146530"
+  examples: |
+    - deneuvre
+
+- synonym: "147293"
+  examples: |
+    - nancy
+
+- synonym: "153973"
+  examples: |
+    - gerbéviller
+
+- synonym: "155341"
+  examples: |
+    - liverdun
+
+- synonym: "155503"
+  examples: |
+    - lunéville
+
+- synonym: "853302"
+  examples: |
+    - pierre-la-treiche
+
+- synonym: "137705"
+  examples: |
+    - mattaincourt
+
+- synonym: "139560"
+  examples: |
+    - remiremont
+
+- synonym: "139976"
+  examples: |
+    - damblain
+
+- synonym: "146880"
+  examples: |
+    - mirecourt
+
+- synonym: "153129"
+  examples: |
+    - robécourt
+
+- synonym: "153226"
+  examples: |
+    - la mothe
+
+- synonym: "153229"
+  examples: |
+    - outremécourt
+
+- synonym: "153994"
+  examples: |
+    - saint-dié
+
+- synonym: "155159"
+  examples: |
+    - neufchâteau
+
+- synonym: "849695"
+  examples: |
+    - rouvres-la-chétive
+
+- synonym: "850038"
+  examples: |
+    - fraize
+
+- synonym: "853424"
+  examples: |
+    - la feuillée-dorothée
+
+- synonym: "855048"
+  examples: |
+    - epinal
+
+- synonym: "857015"
+  examples: |
+    - châtenois
+
+- synonym: "917107"
+  examples: |
+    - baudricourt
+
+- synonym: "917108"
+  examples: |
+    - poussay
+
+- synonym: "974317"
+  examples: |
+    - houécourt
+
+- synonym: "139465"
+  examples: |
+    - thionville
+
+- synonym: "147741"
+  examples: |
+    - metz
+
+- synonym: "150668"
+  examples: |
+    - bouzonville
+
+- synonym: "152599"
+  examples: |
+    - ars-sur-moselle
+
+- synonym: "152600"
+  examples: |
+    - laning
+
+- synonym: "152601"
+  examples: |
+    - moussey
+
+- synonym: "152602"
+  examples: |
+    - saint-avold
+
+- synonym: "1013866"
+  examples: |
+    - bliesbruck-reinheim
+
+- synonym: "149736"
+  examples: |
+    - verdun
+
+- synonym: "150814"
+  examples: |
+    - saint-mihiel
+
+- synonym: "855337"
+  examples: |
+    - bar-le-duc
+
+- synonym: "136687"
+  examples: |
+    - avenay-val-d'or
+
+- synonym: "140282"
+  examples: |
+    - juvigny
+
+- synonym: "140755"
+  examples: |
+    - vertus
+
+- synonym: "147208"
+  examples: |
+    - reims
+
+- synonym: "149639"
+  examples: |
+    - epernay
+
+- synonym: "149640"
+  examples: |
+    - suippes
+
+- synonym: "851369"
+  examples: |
+    - sézanne
+
+- synonym: "852801"
+  examples: |
+    - l'epine
+
+- synonym: "855778"
+  examples: |
+    - maclaunay
+
+- synonym: "136786"
+  examples: |
+    - givet
+
+- synonym: "142288"
+  examples: |
+    - charleville-mézières
+
+- synonym: "152650"
+  examples: |
+    - braux
+
+- synonym: "851588"
+  examples: |
+    - sedan
+
+- synonym: "137039"
+  examples: |
+    - champignol-lez-mondeville
+
+- synonym: "149377"
+  examples: |
+    - troyes
+
+- synonym: "147766"
+  examples: |
+    - langres
+
+- synonym: "151168"
+  examples: |
+    - saint-dizier
+
+- synonym: "916549"
+  examples: |
+    - chaumont
+
+- synonym: "1045520"
+  examples: |
+    - allichamps
+
+- synonym: "68499"
+  examples: |
+    - hollywood
+
+- synonym: "811841"
+  examples: |
+    - bikaner
+
+- synonym: "896589"
+  examples: |
+    - jaipur
+
+- synonym: "896603"
+  examples: |
+    - barmer
+
+- synonym: "896605"
+  examples: |
+    - kota
+
+- synonym: "896606"
+  examples: |
+    - jodhpur
+
+- synonym: "896607"
+  examples: |
+    - jaisalmer
+
+- synonym: "896609"
+  examples: |
+    - sekhawati
+
+- synonym: "897059"
+  examples: |
+    - chinakalwal
+
+- synonym: "811695"
+  examples: |
+    - gwalior
+
+- synonym: "1066585"
+  examples: |
+    - saurashtra
+
+- synonym: "1019082"
+  examples: |
+    - lucknow
