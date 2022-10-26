@@ -5,6 +5,7 @@ from medias_synonyms import iaml, mimo
 from levels_synonyms import level_sentences, level_timing, level_worded
 from genres_synonyms import genres
 from agents_synonyms import agents
+from formations_synonyms import formations
 from write_entities import preprocess_entity
 
 
@@ -20,10 +21,9 @@ raw_sentences = {
             "Pour un _MEDIUM, un _MEDIUM, et quatre _MEDIUM, quelles partitions?",
             "Je recherche une partition pour _MEDIUM et _MEDIUM ",
             "Avez-vous un morceau simple à me conseiller pour _MEDIUM et _MEDIUM ? ",
-            "Je recherche une oeuvre baroque que l’on pourrait jouer avec un _MEDIUM, une _MEDIUM et un _MEDIUM",
             "Je cherche des partitions de grands classiques, en version simplifiée, à jouer au _MEDIUM.",
             "Pourrais-je voir la liste de toutes vos partitions pour _MEDIUM ?",
-            "Sonate pour _MEDIUM",
+            "_GENRE pour _MEDIUM",
             "Je voudrais trouver des arrangements de musique traditionnelle pour _MEDIUM",
             "Je voudrais des jigs pour _MEDIUM ",
             "_MEDIUM tab",
@@ -42,12 +42,12 @@ raw_sentences = {
             "Quels sont les morceaux jouables par un groupe de 2 _MEDIUM ayant un niveau _LEVEL_WORDED?"
             "Je cherche des partitions pour musiciens jouant du _MEDIUM et du _MEDIUM depuis _LEVEL_TIMING.",
             "Je suis _MEDIUM et je cherche des partitions pour _MEDIUM pour élèves pratiquant depuis _LEVEL_TIMING. ",
-            "Je cherche des duos avec une _MEDIUM _LEVEL_SENTENCE.",
+            "Je cherche des _FORMATION avec une _MEDIUM _LEVEL_SENTENCE.",
             "Avez-vous une idée de morceau pour _MEDIUM et _MEDIUM  _LEVEL_SENTENCE? ",
-            "Avez-vous des duos à jouer au _MEDIUM et au _MEDIUM _LEVEL_SENTENCE ?  ",
-            "Un morceau pour un trio de _MEDIUM ayant _LEVEL_TIMING d'expérience",
-            "Je recherche des quatuors pour _MEDIUM de niveau _LEVEL_WORDED",
-            "Je recherche des duos _MEDIUM _MEDIUM _LEVEL_SENTENCE.",
+            "Avez-vous des _FORMATION à jouer au _MEDIUM et au _MEDIUM _LEVEL_SENTENCE ?  ",
+            "Un morceau pour un _FORMATION de _MEDIUM ayant _LEVEL_TIMING d'expérience",
+            "Je recherche des _FORMATION pour _MEDIUM de niveau _LEVEL_WORDED",
+            "Je recherche des _FORMATION _MEDIUM _MEDIUM _LEVEL_SENTENCE.",
             "Partition graphique pour _MEDIUM pour niveau _LEVEL_WORDED",
             "Je voudrais trouver des partitions pour 3 _MEDIUM, 2 _MEDIUM, 1 _MEDIUM et une _MEDIUM _LEVEL_SENTENCE",
             "Je cherche des partitions pour _MEDIUM pour des musiciens avec un niveau _LEVEL_WORDED",
@@ -56,6 +56,11 @@ raw_sentences = {
 
             # GENRES
             "Je recherche une oeuvre _GENRE que l’on pourrait jouer avec un _MEDIUM, une _MEDIUM et un _MEDIUM",
+            "Je veux une oeuvre _GENRE jouable par un _MEDIUM",
+            "Donne moi des oeuvres _GENRE écrites pour _MEDIUM!",
+            "Quelle oeuvre _GENRE pour _MEDIUM?",
+            "Je cherche oeuvre _GENRE destinée à un _MEDIUM?",
+            "Quelles sont les oeuvres _GENRE jouables par une _MEDIUM, une _MEDIUM et un _MEDIUM",
             "[Sonate]{\"entity\": \"genre\"} pour _MEDIUM",
             "je suis cheffe d'un ensemble vocal de 12 _MEDIUM et je cherche des transcriptions pour chœur de répertoire _GENRE.",
             "Je dirige un _MEDIUM et je cherche des partitions de _GENRE.",
@@ -76,7 +81,7 @@ raw_sentences = {
             "Je cherche des _MEDIUM du 19e siècle",
             "Je recherche des pièces pour _MEDIUM seule en _GENRE",
             "Nous sommes deux _MEDIUM et nous cherchons un _GENRE à jouer.",
-            "je cherche des partitions de _GENRE pour trio à corde 2 _MEDIUM et _MEDIUM",
+            "je cherche des partitions de _GENRE pour _FORMATION à corde 2 _MEDIUM et _MEDIUM",
             "Je cherche des partitions de _GENRE pour _MEDIUM et _MEDIUM",
             "Je cherche des _GENRE",
             "Je cherche des scores pour groupe de _GENRE",
@@ -89,7 +94,7 @@ raw_sentences = {
 
             # AGENTS
             "Donne moi les partitions pour une _MEDIUM et un _MEDIUM de _AGENT _LEVEL_SENTENCE.",
-            "Je cherche la partition d'une oeuvre de _AGENT",
+            "Je cherche la partition d'une oeuvre _GENRE de _AGENT",
             "Je cherche la partition d'une oeuvre de _AGENT _LEVEL_SENTENCE",
             "Est-ce que vous avez les sonates de _AGENT d’après-guerre ?",
             "Une collection intégrale des oeuvres d'_AGENT",
@@ -100,10 +105,10 @@ raw_sentences = {
             "Avez-vous des partitions _MEDIUM écrites par _AGENT _LEVEL_SENTENCE?",
             "Je cherche les parties de _MEDIUM  pratiquant depuis _LEVEL_TIMING de _AGENT",
             "Où sont rangées les partitions pour _MEDIUM de _AGENT de niveau _LEVEL_WORDED ?",
-            "Est-ce que _AGENT a composé des duos pour _MEDIUM et _MEDIUM ?",
+            "Est-ce que _AGENT a composé des _FORMATION pour _MEDIUM et _MEDIUM ?",
             "J'aimerais savoir si vous avez des recueils de _GENRE dans lesquels je pourrais trouver du _AGENT ?",
-            "Je cherche une sonate pour _MEDIUM et _MEDIUM de niveau _LEVEL_WORDE de _AGENT.",
-            "Je cherche une sonate pour _MEDIUM et _MEDIUM de _AGENT.",
+            "Je cherche une _GENRE pour _MEDIUM et _MEDIUM de niveau _LEVEL_WORDE de _AGENT.",
+            "Je cherche une _GENRE pour _MEDIUM et _MEDIUM de _AGENT.",
             "Je cherche une pièce de _AGENT pour _MEDIUM  et _MEDIUM _LEVEL_SENTENCE",
             "Je cherche une pièce de _AGENT pour _MEDIUM et _MEDIUM  pratiquant depuis _LEVEL_TIMING ",
             "Un songbook des _AGENT pour _MEDIUM et _MEDIUM _LEVEL_SENTENCE",
@@ -130,8 +135,12 @@ raw_sentences = {
 
             # Formations
             "Je cherche des _FORMATION avec une _MEDIUM.",
-            "Avez-vous des _FORMATION faciles à jouer au _MEDIUM et au _MEDIUM ?   ",
+            "Avez-vous des _FORMATION _LEVEL_SENTENCE au _MEDIUM et au _MEDIUM ?   ",
+            "Je cherche des _FORMATION _LEVEL_SENTENCE au _MEDIUM",
             "Un morceau pour un _FORMATION de _MEDIUM ",
+            "Je cherche une partition pour un _FORMATION de _MEDIUM",
+            "Partitions pour _FORMATION de _MEDIUM et _MEDIUM.",
+            "Quelles sont les partitions en stock pour _FORMATION de musiciens?",
             "Je recherche des _FORMATION pour _MEDIUM",
             "Je recherche des _FORMATION _MEDIUM _MEDIUM.",
             "Je voudrais trouver des arrangements de _GENRE pour _FORMATION à _MEDIUM",
@@ -144,6 +153,7 @@ raw_sentences = {
             ([preprocess_entity(i) for sublist in list(level_sentences.values()) for i in sublist], "_LEVEL_SENTENCE"),
             ([preprocess_entity(i) for sublist in list(level_worded.values()) for i in sublist], "_LEVEL_WORDED"),
             ([preprocess_entity(i) for sublist in list(level_timing.values()) for i in sublist], "_LEVEL_TIMING"),
+            ([preprocess_entity(i) for sublist in list(formations.values()) for i in sublist], "_FORMATION"),
             (GENRES, "_GENRE"),
             (AGENTS, "_AGENT"),
         ],
@@ -156,7 +166,8 @@ keyword_to_ent_type = {
     "_LEVEL_WORDED": "level",
     "_LEVEL_TIMING": "level",
     "_GENRE": "genre",
-    "_AGENT": "agent"
+    "_AGENT": "agent",
+    "_FORMATION": "formation",
 }
 
 def entities_round_robin(entities):

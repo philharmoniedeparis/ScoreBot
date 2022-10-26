@@ -19,10 +19,14 @@ from utils import medias_synonyms as medias
 from utils import levels_synonyms as levels
 from utils import genres_synonyms as genres
 from utils import agents_synonyms as agents
+from utils import formations_synonyms as formations
 
 
 ENDPOINT = "http://graphdb.sparna.fr/repositories/philharmonie-chatbot?query="
 VOICE_CHANNELS = ["google_assistant", "alexa"]
+
+class NoResultsException(Exception):
+    pass
 
 class NoEntityFoundException(Exception):
     pass
@@ -84,52 +88,65 @@ limit 25
         entities = tracker.latest_message['entities']
         logging.info(entities)
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions. "
-        # try:
-        inputted_medias = dict()
-        level, genre, agent = None, None, None
-        for i, ent in enumerate(entities):
-            if ent['entity'] == 'medium':
-                medium = ent.get("value")
-                if medium not in self.allowed_medias:
-                    medium, medium_name = self.get_closest_event(medium, {**medias.iaml, **medias.mimo})
-                    logging.info(medium, medium_name)
-                    if medium is None:
-                        continue
-                if i > 0 and entities[i-1]['entity'] == 'number':
-                    inputted_medias[medium] = entities[i-1].get('value')
-                else:
-                    inputted_medias[medium] = 1
+        try:
+            inputted_medias = dict()
+            level, genre, agent, formation = None, None, None, None
+            for i, ent in enumerate(entities):
+                if ent['entity'] == 'medium':
+                    medium = ent.get("value")
+                    if medium not in self.allowed_medias:
+                        medium, medium_name = self.get_closest_event(medium, {**medias.iaml, **medias.mimo})
+                        logging.info(medium, str(medium_name))
+                        if medium is None:
+                            continue
+                    # Check if the medium has been entered after a number or formation
+                    if i > 0 and entities[i-1]['entity'] in ['number', 'formation']:
+                        entity = entities[i-1]['entity']
+                        volume = entities[i-1]['value']
+                        if entity == 'formation' and not entity.isdigit():
+                            volume, _ = self.get_closest_event(volume, formations.formations)
+                        inputted_medias[medium] = volume
+                    else:
+                        inputted_medias[medium] = 1
 
-            if ent['entity'] == 'level' and level is None:
-                level = ent.get("value")
-            if ent['entity'] == 'genre' and genre is None:
-                genre = ent.get("value")
-            if ent['entity'] == 'agent' and agent is None:
-                agent = ent.get("value")
+                if ent['entity'] == 'level' and level is None:
+                    level = ent.get("value")
+                if ent['entity'] == 'genre' and genre is None:
+                    genre = ent.get("value")
+                if ent['entity'] == 'agent' and agent is None:
+                    agent = ent.get("value")
+                if ent['entity'] == 'formation' and formation is None:
+                    formation = ent.get("value")
 
-        # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
-        if inputted_medias and not set(inputted_medias.keys()).issubset(self.allowed_medias):
-            raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
+            # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
+            if inputted_medias and not set(inputted_medias.keys()).issubset(self.allowed_medias):
+                raise NoEntityFoundException(f"Problem with entities: {inputted_medias}")
 
-        logging.info(f"medium: {inputted_medias}, level: {level}, genre: {genre}, agent: {agent}")
-        if level is not None and level not in levels.all_levels:
-            level, level_name = self.get_closest_event(level, levels.all_levels)
-            logging.info(level)
-        if genre is not None and genre not in genres.genres:
-            genre, genre_name = self.get_closest_event(genre, genres.genres)
-            logging.info(genre)
-        if agent is not None and agent not in agents.agents:
-            agent, agent_name = self.get_closest_event(agent, agents.agents)
-            logging.info(agent)
-
-        results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent)
-        if not results:
-            raise Exception(f"No results found for medias: {inputted_medias}")
-        formatted_results = "\n".join(results)
-        answer += f" Voici les partitions avec {formatted_mediums}:\n"
-        answer += formatted_results
-        # except Exception:
-        #     answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
+            logging.info(f"medium: {inputted_medias}, level: {level}, genre: {genre}, agent: {agent}, formation: {formation}")
+            if level is not None and level not in levels.all_levels:
+                level, level_name = self.get_closest_event(level, levels.all_levels)
+                logging.info(level)
+            if genre is not None and genre not in genres.genres:
+                genre, genre_name = self.get_closest_event(genre, genres.genres)
+                logging.info(genre)
+            if agent is not None and agent not in agents.agents:
+                agent, agent_name = self.get_closest_event(agent, agents.agents)
+                logging.info(agent)
+            if formation is not None and formation not in formations.formations:
+                formation, formation_name = self.get_closest_event(formation, formations.formations)
+                logging.info(formation)
+            results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent)
+            if not results:
+                raise NoResultsException(f"No results found for medias: {inputted_medias}")
+            formatted_results = "\n".join(results)
+            if formatted_mediums:
+                answer += f" Voici les partitions avec {formatted_mediums}:\n"
+            answer += formatted_results
+        except NoResultsException as e:
+            logging.info(str(e))
+            answer += "Mais je n'ai pas trouvé de résultats pour votre recherche dans la base données de la Philharmonie."
+        except Exception:
+            answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
         dispatcher.utter_message(text=answer)
         return []
 
@@ -175,7 +192,6 @@ values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {for
 ?castingDetail_{i} mus:U30_foresees_quantity_of_mop ?input_quantity_{i} .
             """
             
-        logging.info(f"medium: {medium}, level: {level}, genre: {genre}, agent: {agent}")
         # Level
         if level is not None:
             filters += f"""
