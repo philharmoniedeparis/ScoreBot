@@ -3278,10 +3278,6 @@ nlu:
   examples: |
     - violaline
 
-- synonym: "3564"
-  examples: |
-    - violons
-
 - synonym: "3565"
   examples: |
     - basse de violon
@@ -3315,6 +3311,7 @@ nlu:
   examples: |
     - violon
     - violoniste
+    - violons
 
 - synonym: "3574"
   examples: |

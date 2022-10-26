@@ -2,6 +2,7 @@ from collections import defaultdict
 
 level_sentences = {
     "cycle-1": [
+        "faciles à jouer",
         "accessibles aux débutants",
         "pour les débutants",
         "débutants",
