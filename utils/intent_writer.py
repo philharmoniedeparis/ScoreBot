@@ -170,6 +170,7 @@ raw_sentences = {
             "Je souhaite accéder à des partitions pour _MEDIUM composées en _LOCATION au _PERIOD",
             "Des partitions de musique _PERIOD pour _MEDIUM",
             "Des partitions pour choeurs de musique de la _PERIOD",
+            "Des partitions pour choeurs du _PERIOD",
             "Des partitions de musique du _PERIOD pour _MEDIUM",
             "Je veux des partitions du _PERIOD",
             "Quelles partitions de la fin du _PERIOD pour trois _MEDIUM?",
