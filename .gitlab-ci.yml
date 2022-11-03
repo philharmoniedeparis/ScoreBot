@@ -54,7 +54,7 @@ AutoBuildImage:uate:
     action: prepare
     name: uat
   rules:
-    - if: '$CI_COMMIT_BRANCH== "develop"'
+    - if: '$CI_COMMIT_BRANCH == "develop"'
       changes:
         - actions/**/*
   image: docker:20.10.20
@@ -67,7 +67,7 @@ AutoBuildImage:uape:
     action: prepare
     name: prd
   rules:
-    - if: '$CI_COMMIT_BRANCH== "main"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
       changes:
         - actions/**/*
   image: docker:20.10.20
@@ -84,7 +84,7 @@ AutoDeploy:helmChart:uate:
   variables:
     IMAGE_ENV: '-uate'
   rules:
-    - if: '$CI_COMMIT_BRANCH== "develop"'
+    - if: '$CI_COMMIT_BRANCH == "develop"'
       changes:
         - actions/**/*
   extends: .deploy_to_kubernetes
@@ -94,11 +94,11 @@ AutoDeploy:helmChart:uape:
   stage: deploy
   needs: ['AutoBuildImage:uape']
   environment:
-    name: uprdat
+    name: prd
   variables:
     IMAGE_ENV: ''
   rules:
-    - if: '$CI_COMMIT_BRANCH== "main"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
       changes:
         - actions/**/*
   extends: .deploy_to_kubernetes
