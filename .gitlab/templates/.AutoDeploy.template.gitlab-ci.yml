@@ -34,6 +34,7 @@
     - sed -i "s|@CD_RASAX_PV_RASAX_CAPACITY@|$CD_RASAX_PV_RASAX_CAPACITY|" DevOps/helm/configs/pvc.yaml
     - sed -i "s|@CD_RASAX_PV_RASAX_PATH@|$CD_RASAX_PV_RASAX_PATH|" DevOps/helm/configs/pv.yaml
     - kubectl config use-context $CD_KUBE_CONTEXT
+    - kubectl create namespace $CD_KUBE_NAMESPACE || true
     - helm repo add rasa-x https://rasahq.github.io/rasa-x-helm
     - helm repo update
     - kubectl apply -f DevOps/helm/configs/storageClass.yaml
