@@ -242,6 +242,7 @@ nlu:
   examples: |
     - choeur mixte
     - chœur mixte
+    - choeur d'adultes
 
 - synonym: "cre"
   examples: |
@@ -414,16 +415,13 @@ nlu:
 
 - synonym: "kpf"
   examples: |
-    - piano
     - luthéal
-    - piano
     - piano cycloide
-    - piano
     - piano droit
-    - piano
     - piano elliptique
-    - piano
     - piano-luthéal
+    - piano luthéal
+    - piano lutheal
 
 - synonym: "kpf__r"
   examples: |
@@ -602,6 +600,10 @@ nlu:
 - synonym: "mwd"
   examples: |
     - instrument à vent
+    - à vents
+    - a vent
+    - à vent
+    - a vents
 
 - synonym: "mwh"
   examples: |
@@ -644,6 +646,7 @@ nlu:
 - synonym: "oiv"
   examples: |
     - ensemble vocal et instrumental
+    - ensemble varié
 
 - synonym: "oja"
   examples: |
@@ -1229,9 +1232,8 @@ nlu:
   examples: |
     - alto
     - haute-contre de violon
-    - alto
+    - altos
     - quinte de violon
-    - alto
     - taille de violon
 
 - synonym: "svc"

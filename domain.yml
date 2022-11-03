@@ -21,8 +21,19 @@ intents:
     use_entities: true
 - get_sheet_music_by_casting:
     use_entities: true
+- out_of_scope:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
 entities:
 - number
+- medium
+- formation
+- level
+- genre
+- agent
+- period
+- location
 slots:
   number:
     type: rasa.shared.core.slots.UnfeaturizedSlot

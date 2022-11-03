@@ -1,0 +1,78 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: postgres
+  namespace: @CD_KUBE_NAMESPACE@
+  labels:
+    app: postgres
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: @CD_RASAX_STORAGE_CLASS_NAME@
+  resources:
+    requests:
+      storage: @CD_RASAX_PV_POSTGRES_CAPACITY@
+
+---
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: rabbitmq
+  namespace: @CD_KUBE_NAMESPACE@
+  labels:
+    app: rabbitmq
+spec:
+  selector:
+    matchLabels:
+      app: rabbitmq
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: @CD_RASAX_STORAGE_CLASS_NAME@
+  resources:
+    requests:
+      storage: @CD_RASAX_PV_RABBITMQ_CAPACITY@
+
+---
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: rasax
+  namespace: @CD_KUBE_NAMESPACE@
+  labels:
+    app: rasax
+spec:
+  selector:
+    matchLabels:
+      app: rasax
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: @CD_RASAX_STORAGE_CLASS_NAME@
+  resources:
+    requests:
+      storage: @CD_RASAX_PV_RASAX_CAPACITY@
+
+---
+
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: redis
+  namespace: @CD_KUBE_NAMESPACE@
+  labels:
+    app: redis
+spec:
+  selector:
+    matchLabels:
+      app: redis
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: @CD_RASAX_STORAGE_CLASS_NAME@
+  resources:
+    requests:
+      storage: @CD_RASAX_PV_REDIS_CAPACITY@
+

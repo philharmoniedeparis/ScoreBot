@@ -1,0 +1,43 @@
+.deploy_to_kubernetes:
+  stage: deploy
+  image: alpine/k8s:1.25.3
+  before_script:
+    - TIMESTAMP=$(date +%s)
+    - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
+    - sed -i "s|@CD_TIMESTAMP@|$TIMESTAMP|" DevOps/helm/values.yaml
+    - sed -i "s/@CD_KUBE_NAMESPACE@/$CD_KUBE_NAMESPACE/" DevOps/helm/values.yaml
+    - sed -i "s~@CD_RASAX_MY_PASSWORD_SALT@~${CD_RASAX_MY_PASSWORD_SALT//&/\\&}~" DevOps/helm/values.yaml
+    - sed -i "s|@CD_RASAX_MY_TOKEN@|$CD_RASAX_MY_TOKEN|" DevOps/helm/values.yaml
+    - sed -i "s|@CD_RASAX_MY_JWT_SECRET@|$CD_RASAX_MY_JWT_SECRET|" DevOps/helm/values.yaml
+    - sed -i "s/@CD_RASAX_INITUSER_PASSWORD@/$CD_RASAX_INITUSER_PASSWORD/" DevOps/helm/values.yaml
+    - sed -i "s|@CD_RASAX_APP_IMAGE_NAME@|$CD_RASAX_APP_IMAGE_NAME|" DevOps/helm/values.yaml
+    - sed -i "s|@CD_RASAX_APP_IMAGE_VERSION@|$APP_VERSION$IMAGE_ENV|" DevOps/helm/values.yaml
+    - sed -i "s|@CD_RASAX_RABBITMQ_AUTH_PASSWORD@|$CD_RASAX_RABBITMQ_AUTH_PASSWORD|" DevOps/helm/values.yaml
+    - sed -i "s/@CD_RASAX_RABBITMQ_AUTH_ERLANGCOOKIE@/$CD_RASAX_RABBITMQ_AUTH_ERLANGCOOKIE-uate/" DevOps/helm/values.yaml
+    - sed -i "s/@CD_RASAX_INGRESS_DOMAIN@/$CD_RASAX_INGRESS_DOMAIN/" DevOps/helm/values.yaml
+    - sed -i "s/@CD_RASAX_POSTGRES_PASSWORD@/$CD_RASAX_POSTGRES_PASSWORD/" DevOps/helm/values.yaml
+    - sed -i "s/@CD_RASAX_REDIS_PASSWORD@/$CD_RASAX_REDIS_PASSWORD/" DevOps/helm/values.yaml
+    - sed -i "s/@CD_RASAX_STORAGE_CLASS_NAME@/$CD_RASAX_STORAGE_CLASS_NAME/" DevOps/helm/configs/storageClass.yaml
+    - sed -i "s|@CD_RASAX_STORAGE_CLASS_NAME@|$CD_RASAX_STORAGE_CLASS_NAME|" DevOps/helm/configs/pv.yaml
+    - sed -i "s|@CD_RASAX_STORAGE_CLASS_NAME@|$CD_RASAX_STORAGE_CLASS_NAME|" DevOps/helm/configs/pvc.yaml
+    - sed -i "s|@CD_KUBE_NAMESPACE@|$CD_KUBE_NAMESPACE|" DevOps/helm/configs/pvc.yaml
+    - sed -i "s|@CD_RASAX_PV_POSTGRES_CAPACITY@|$CD_RASAX_PV_POSTGRES_CAPACITY|" DevOps/helm/configs/pv.yaml
+    - sed -i "s|@CD_RASAX_PV_POSTGRES_CAPACITY@|$CD_RASAX_PV_POSTGRES_CAPACITY|" DevOps/helm/configs/pvc.yaml
+    - sed -i "s|@CD_RASAX_PV_POSTGRES_PATH@|$CD_RASAX_PV_POSTGRES_PATH|" DevOps/helm/configs/pv.yaml
+    - sed -i "s|@CD_RASAX_PV_RABBITMQ_CAPACITY@|$CD_RASAX_PV_RABBITMQ_CAPACITY|" DevOps/helm/configs/pv.yaml
+    - sed -i "s|@CD_RASAX_PV_RABBITMQ_CAPACITY@|$CD_RASAX_PV_RABBITMQ_CAPACITY|" DevOps/helm/configs/pvc.yaml
+    - sed -i "s|@CD_RASAX_PV_RABBITMQ_PATH@|$CD_RASAX_PV_RABBITMQ_PATH|" DevOps/helm/configs/pv.yaml
+    - sed -i "s|@CD_RASAX_PV_REDIS_CAPACITY@|$CD_RASAX_PV_REDIS_CAPACITY|" DevOps/helm/configs/pv.yaml
+    - sed -i "s|@CD_RASAX_PV_REDIS_CAPACITY@|$CD_RASAX_PV_REDIS_CAPACITY|" DevOps/helm/configs/pvc.yaml
+    - sed -i "s|@CD_RASAX_PV_REDIS_PATH@|$CD_RASAX_PV_REDIS_PATH|" DevOps/helm/configs/pv.yaml
+    - sed -i "s|@CD_RASAX_PV_RASAX_CAPACITY@|$CD_RASAX_PV_RASAX_CAPACITY|" DevOps/helm/configs/pv.yaml
+    - sed -i "s|@CD_RASAX_PV_RASAX_CAPACITY@|$CD_RASAX_PV_RASAX_CAPACITY|" DevOps/helm/configs/pvc.yaml
+    - sed -i "s|@CD_RASAX_PV_RASAX_PATH@|$CD_RASAX_PV_RASAX_PATH|" DevOps/helm/configs/pv.yaml
+    - kubectl config use-context $CD_KUBE_CONTEXT
+    - helm repo add rasa-x https://rasahq.github.io/rasa-x-helm
+    - helm repo update
+    - kubectl apply -f DevOps/helm/configs/storageClass.yaml
+    - kubectl apply -f DevOps/helm/configs/pv.yaml
+    - kubectl apply -f DevOps/helm/configs/pvc.yaml
+  script:
+    - helm upgrade --namespace $CD_KUBE_NAMESPACE --create-namespace --install --values=./DevOps/helm/values.yaml rasax rasa-x/rasa-x

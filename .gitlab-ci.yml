@@ -1,0 +1,117 @@
+include:
+  - .gitlab/templates/.AutoBuildImage.template.gitlab-ci.yml
+  - .gitlab/templates/.AutoDeploy.template.gitlab-ci.yml
+  - .gitlab/templates/.AutoTrain.template.gitlab-ci.yml
+
+stages:
+  - merge:capabilities
+  - build:environment
+  - deploy
+  - train
+  - release
+
+before_script:
+  - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
+
+AutoCheck:gitPullRequired:
+  image: docker:20.10.20-git
+  stage: merge:capabilities
+  before_script:
+    - git fetch origin $CI_MERGE_REQUEST_TARGET_BRANCH_NAME
+    - chmod +x DevOps/workflow/merge-capabilities.sh
+  script:
+    - ./DevOps/workflow/merge-capabilities.sh origin/$CI_MERGE_REQUEST_TARGET_BRANCH_NAME
+  only:
+    refs:
+      - merge_requests
+    variables:
+      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "develop" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME != "main" && $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME != "main"
+
+AutoCheck:ok:
+  image: docker:20.10.20-git
+  stage: merge:capabilities
+  script:
+    - echo "ok"
+  only:
+    refs:
+      - merge_requests
+    variables:
+      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"
+
+
+AutoTrain:uate:
+  environment:
+    action: prepare
+    name: uat
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+      changes:
+        - data/**/*
+  extends: .rasa_train
+
+AutoBuildImage:uate:
+  environment:
+    action: prepare
+    name: uat
+  rules:
+    - if: '$CI_COMMIT_BRANCH== "develop"'
+      changes:
+        - actions/**/*
+  image: docker:20.10.20
+  variables:
+    IMAGE_ENV: '-uate'
+  extends: .build-docker-image
+
+AutoBuildImage:uape:
+  environment:
+    action: prepare
+    name: prd
+  rules:
+    - if: '$CI_COMMIT_BRANCH== "main"'
+      changes:
+        - actions/**/*
+  image: docker:20.10.20
+  variables:
+    IMAGE_ENV: ''
+  extends: .build-docker-image
+
+
+AutoDeploy:helmChart:uate:
+  stage: deploy
+  needs: ['AutoBuildImage:uate']
+  environment:
+    name: uat
+  variables:
+    IMAGE_ENV: '-uate'
+  rules:
+    - if: '$CI_COMMIT_BRANCH== "develop"'
+      changes:
+        - actions/**/*
+  extends: .deploy_to_kubernetes
+
+
+AutoDeploy:helmChart:uape:
+  stage: deploy
+  needs: ['AutoBuildImage:uape']
+  environment:
+    name: uprdat
+  variables:
+    IMAGE_ENV: ''
+  rules:
+    - if: '$CI_COMMIT_BRANCH== "main"'
+      changes:
+        - actions/**/*
+  extends: .deploy_to_kubernetes
+
+AutoTag:uape:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  environment:
+    name: prd
+    action: prepare
+  cache: {}
+  script:
+    - release-cli create --name "Philarmonie v$APP_VERSION" --description "Version $APP_VERSION of Philarmonie" --tag-name "v$APP_VERSION" --milestone "1.0"
+  only:
+    - main
+  when: on_success

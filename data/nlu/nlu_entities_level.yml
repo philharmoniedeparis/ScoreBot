@@ -1,0 +1,103 @@
+version: "2.0"
+
+nlu:
+
+- synonym: "cycle-1"
+  examples: |
+    - faciles à jouer
+    - accessibles aux débutants
+    - pour les débutants
+    - débutants
+    - débutant
+    - pour apprendre le
+    - pour petit niveau
+    - pour débuter en
+    - pour débuter
+    - pour s'initier à
+    - élèves inscrits en
+    - 1 an
+    - un an
+    - 2 ans
+    - deux ans
+    - 3 ans
+    - trois ans
+    - 4 ans
+    - quatre ans
+    - débutants
+    - débutant
+    - en 1er cycle
+    - de premier cycle
+    - de 1e année
+    - en 1ère année
+    - de première annéeen 2e année
+    - 2ème année
+    - de deuxième année
+    - qui sont en 3e année
+    - élèves en 3ème année
+    - troisième année
+    - 4e année
+    - de 4ème année
+
+- synonym: "cycle-2"
+  examples: |
+    - accessibles aux confirmés
+    - destinés aux musiciens confirmés
+    - destinés aux musiciens de niveau intermédiaire en
+    - pour les confirmés
+    - pour les intermédiaires
+    - confirmés
+    - confirmé
+    - intermédiaires
+    - intermédiaire
+    - pour élèves de niveau confirmé en
+    - pour se perfectionner en
+    - pour continuer le
+    - 5 ans
+    - 5 ans
+    - 6 ans
+    - six ans
+    - 7 ans
+    - sept ans
+    - confirmés
+    - confirmé
+    - intermédiaires
+    - intermédiaire
+    - en 2nd cycle
+    - de second cycle
+    - de 5e année
+    - en 5ème année
+    - de cinquième annéeen 6e année
+    - 6ème année
+    - de sixième année
+    - qui sont en 7e année
+    - élèves en 7ème année
+    - septième année
+
+- synonym: "cycle-3"
+  examples: |
+    - de niveau expert
+    - expert
+    - experts
+    - destinés aux musiciens chevronnés
+    - destinés aux musiciens experts en
+    - pour les musiciens très expérimentés dans la pratique du
+    - pour élèves de niveau expert en
+    - pour les très bons joueurs de
+    - 8 ans
+    - huit ans
+    - 9 ans
+    - neuf ans
+    - 10 ans
+    - dix ans
+    - expert
+    - experts
+    - en 3e cycle
+    - de troisième cycle
+    - de 8e année
+    - en 8ème année
+    - de huitième annéeen 9e année
+    - 9ème année
+    - de neuvième année
+    - qui sont en 10e année
+    - élèves en 10ème année
+    - dixième année

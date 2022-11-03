@@ -1,0 +1,75 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: postgres
+  labels:
+    app: postgres
+    type: local
+spec:
+  storageClassName: @CD_RASAX_STORAGE_CLASS_NAME@
+  capacity:
+    storage: @CD_RASAX_PV_POSTGRES_CAPACITY@
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "@CD_RASAX_PV_POSTGRES_PATH@"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: rabbitmq
+  labels:
+    app: rabbitmq
+    type: local
+spec:
+  storageClassName: @CD_RASAX_STORAGE_CLASS_NAME@
+  capacity:
+    storage: @CD_RASAX_PV_RABBITMQ_CAPACITY@
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "@CD_RASAX_PV_RABBITMQ_PATH@"
+
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis
+  labels:
+    app: redis
+    type: local
+spec:
+  storageClassName: @CD_RASAX_STORAGE_CLASS_NAME@
+  capacity:
+    storage: @CD_RASAX_PV_REDIS_CAPACITY@
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "@CD_RASAX_PV_REDIS_PATH@"
+
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: rasax
+  labels:
+    app: rasax
+    type: local
+spec:
+  storageClassName: @CD_RASAX_STORAGE_CLASS_NAME@
+  capacity:
+    storage: @CD_RASAX_PV_RASAX_CAPACITY@
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "@CD_RASAX_PV_RASAX_PATH@"
