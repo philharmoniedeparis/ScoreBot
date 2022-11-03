@@ -97,10 +97,8 @@ AutoDeploy:helmChart:uape:
     name: prd
   variables:
     IMAGE_ENV: ''
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
-      changes:
-        - actions/**/*
+  only:
+    - main
   extends: .deploy_to_kubernetes
 
 AutoTag:uape:
