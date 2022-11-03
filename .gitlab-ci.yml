@@ -33,7 +33,7 @@ AutoTrain:uate:
     action: prepare
     name: uat
   rules:
-    - if: '$CI_COMMIT_REF_NAME== "develop"'
+    - if: '$CI_COMMIT_BRANCH == "develop"'
       changes:
         - data/**/*
   extends: .rasa_train
@@ -43,7 +43,7 @@ AutoBuildImage:uate:
     action: prepare
     name: uat
   rules:
-    - if: '$CI_COMMIT_REF_NAME== "develop"'
+    - if: '$CI_COMMIT_BRANCH== "develop"'
       changes:
         - actions/**/*
   image: docker:20.10.20
@@ -56,7 +56,7 @@ AutoBuildImage:uape:
     action: prepare
     name: prd
   rules:
-    - if: '$CI_COMMIT_REF_NAME== "main"'
+    - if: '$CI_COMMIT_BRANCH== "main"'
       changes:
         - actions/**/*
   image: docker:20.10.20
@@ -73,7 +73,7 @@ AutoDeploy:helmChart:uate:
   variables:
     IMAGE_ENV: '-uate'
   rules:
-    - if: '$CI_COMMIT_REF_NAME== "develop"'
+    - if: '$CI_COMMIT_BRANCH== "develop"'
       changes:
         - actions/**/*
   extends: .deploy_to_kubernetes
@@ -87,7 +87,7 @@ AutoDeploy:helmChart:uape:
   variables:
     IMAGE_ENV: ''
   rules:
-    - if: '$CI_COMMIT_REF_NAME== "main"'
+    - if: '$CI_COMMIT_BRANCH== "main"'
       changes:
         - actions/**/*
   extends: .deploy_to_kubernetes
