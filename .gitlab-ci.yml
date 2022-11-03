@@ -31,7 +31,7 @@ AutoCheck:ok:
   image: docker:20.10.20-git
   stage: merge:capabilities
   script:
-    - .echo "ok"
+    - echo "ok"
   only:
     refs:
       - merge_requests
