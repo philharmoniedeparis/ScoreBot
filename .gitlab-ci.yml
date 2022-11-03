@@ -36,7 +36,7 @@ AutoCheck:ok:
     refs:
       - merge_requests
     variables:
-      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME === "main"
+      - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"
 
 
 AutoTrain:uate:
