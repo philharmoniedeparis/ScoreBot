@@ -5,8 +5,6 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-from collections import defaultdict
-from wsgiref.validate import InputWrapper
 import requests
 import urllib
 import logging
