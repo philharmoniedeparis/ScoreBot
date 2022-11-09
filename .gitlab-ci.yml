@@ -96,6 +96,7 @@ AutoDeploy:helmChart:uate:
 
 AutoDeploy:helmChart:uape:
   stage: deploy
+  needs: ['AutoBuildImage:uape']
   environment:
     name: prd
   variables:
