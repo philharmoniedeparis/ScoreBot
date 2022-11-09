@@ -92,12 +92,15 @@ AutoDeploy:helmChart:uate:
 
 AutoDeploy:helmChart:uape:
   stage: deploy
+  needs: ['AutoBuildImage:uape']
   environment:
     name: prd
   variables:
     IMAGE_ENV: ''
-  only:
-    - main
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      changes:
+        - actions/**/*
   extends: .deploy_to_kubernetes
 
 AutoTag:uape:
