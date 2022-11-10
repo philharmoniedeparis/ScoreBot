@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: graphdb
+  labels:
+    kubernetes.io/metadata.name: graphdb
+    name: graphdb
+spec:
+  finalizers:
+    - kubernetes
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: graphdb-external-ip
+  namespace: graphdb
+spec:
+  ports:
+  - name: app
+    port: 7201
+    protocol: TCP
+    targetPort: 7200
+  clusterIP: None
+  type: ClusterIP
+
+---
+
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: graphdb-external-ip
+  namespace: graphdb
+subsets:
+- addresses:
+  - ip: @CD_GRAPHDB_IP@
+  ports:
+  - name: app
+    port: 7200
+    protocol: TCP
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: graphdb-external-service
+  namespace: graphdb
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    ingress.kubernetes.io/force-ssl-redirect: 'true'
+    ingress.kubernetes.io/ssl-redirect: 'true'
+    kubernetes.io/tls-acme: 'true'
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - @CD_GRAPHDB_INGRESS_DOMAIN@
+      secretName: external-service
+  rules:
+    - host: @CD_GRAPHDB_INGRESS_DOMAIN@
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: graphdb-external-ip
+                port:
+                  number: 7201
