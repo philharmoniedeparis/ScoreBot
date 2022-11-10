@@ -64,7 +64,7 @@ nlu:
 - synonym: "149790"
   examples: |
     - antiquité grecque
-    - grèce ancienne
+    - grèce antique
 
 - synonym: "139127"
   examples: |
@@ -79,7 +79,7 @@ nlu:
 - synonym: "144381"
   examples: |
     - antiquité romaine
-    - rome ancienne
+    - rome antique
 
 - synonym: "145866"
   examples: |

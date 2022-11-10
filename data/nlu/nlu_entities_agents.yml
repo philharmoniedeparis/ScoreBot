@@ -2,17 +2,53 @@ version: "2.0"
 
 nlu:
 
-- synonym: "424752"
+- synonym: "38954"
   examples: |
-    - 
+    - beethoven
+    - ludwig van beethoven
 
-- synonym: "450571"
+- synonym: "43689"
   examples: |
-    - 
+    - rossini
+
+- synonym: "748111"
+  examples: |
+    - boulez
+    - pierre boulez
+
+- synonym: "41675"
+  examples: |
+    - piazzolla
+    - astor piazzolla
+
+- synonym: "41804"
+  examples: |
+    - chopin
+    - frédéric chopin
+
+- synonym: "54273"
+  examples: |
+    - tchaikovski
+    - alexander tchaikovski
+
+- synonym: "35239"
+  examples: |
+    - moussorgski
+    - modeste moussorgski
 
 - synonym: "429689"
   examples: |
-    - 
+    - joaquin rodrigo
+
+- synonym: "38240"
+  examples: |
+    - bach
+    - johann sebastian bach
+
+- synonym: "55853"
+  examples: |
+    - mozart
+    - wolfgang amadeus mozart
 
 - synonym: "453091"
   examples: |
@@ -40,70 +76,87 @@ nlu:
 
 - synonym: "48438"
   examples: |
+    - barette
     - a. barette
 
 - synonym: "46546"
   examples: |
+    - beaufils
     - a. beaufils
 
 - synonym: "39867"
   examples: |
+    - chelard
     - a. chelard
 
 - synonym: "52891"
   examples: |
+    - chevillard
     - a. chevillard
 
 - synonym: "811173"
   examples: |
+    - corret
     - a. corret
 
 - synonym: "47459"
   examples: |
+    - croisez
     - a. croisez
 
 - synonym: "33673"
   examples: |
+    - de
     - a. de cousu
 
 - synonym: "47359"
   examples: |
+    - donnadieu
     - a. donnadieu
 
 - synonym: "34157"
   examples: |
+    - filipenko
     - a. filipenko
 
 - synonym: "46963"
   examples: |
+    - friez
     - a. friez
 
 - synonym: "41554"
   examples: |
+    - gebauer
     - a. gebauer
 
 - synonym: "47268"
   examples: |
+    - guidike
     - a. guidike
 
 - synonym: "54860"
   examples: |
+    - hayes
     - a. hayes
 
 - synonym: "36121"
   examples: |
+    - magnani
     - a. magnani
 
 - synonym: "47085"
   examples: |
+    - marz
     - a. marz
 
 - synonym: "56186"
   examples: |
+    - neunhaber
     - a. neunhaber
 
 - synonym: "1000933"
   examples: |
+    - seymour brown
     - a. seymour brown
 
 - synonym: "39480"
@@ -200,22 +253,27 @@ nlu:
 
 - synonym: "33266"
   examples: |
+    - falckenhagen
     - adam falckenhagen
 
 - synonym: "38161"
   examples: |
+    - khoudoyan
     - adam khoudoyan
 
 - synonym: "595045"
   examples: |
+    - landes
     - adam landes
 
 - synonym: "42046"
   examples: |
+    - polachowski
     - adam polachowski
 
 - synonym: "32477"
   examples: |
+    - rener
     - adam rener
 
 - synonym: "53331"
@@ -248,110 +306,137 @@ nlu:
 
 - synonym: "45145"
   examples: |
+    - bergt
     - adolf bergt
 
 - synonym: "32454"
   examples: |
+    - busch
     - adolf busch
 
 - synonym: "54673"
   examples: |
+    - hoffmann
     - adolf hoffmann
 
 - synonym: "36710"
   examples: |
+    - lotter
     - adolf lotter
 
 - synonym: "55306"
   examples: |
+    - misek
     - adolf misek
 
 - synonym: "61230"
   examples: |
+    - conrado
     - adolfo conrado
 
 - synonym: "48226"
   examples: |
+    - mindlin
     - adolfo mindlin
 
 - synonym: "49698"
   examples: |
+    - hesse
     - adolph friedrich hesse
 
 - synonym: "765123"
   examples: |
+    - green
     - adolph green
 
 - synonym: "33104"
   examples: |
+    - adam
     - adolphe adam
 
 - synonym: "36072"
   examples: |
+    - borchard
     - adolphe borchard
 
 - synonym: "49840"
   examples: |
+    - danhauser
     - adolphe léopold danhauser
 
 - synonym: "44234"
   examples: |
+    - piriou
     - adolphe piriou
 
 - synonym: "59490"
   examples: |
+    - bonsel
     - adriaan bonsel
 
 - synonym: "41563"
   examples: |
+    - valk
     - adriaan valk
 
 - synonym: "236985"
   examples: |
+    - willaert
     - adriaan willaert
 
 - synonym: "57117"
   examples: |
+    - iorgulescu
     - adrian iorgulescu
 
 - synonym: "60312"
   examples: |
+    - le
     - adrian le roy
 
 - synonym: "56815"
   examples: |
+    - ratiu
     - adrian ratiu
 
 - synonym: "34670"
   examples: |
+    - williams
     - adrian williams
 
 - synonym: "41590"
   examples: |
+    - hölszky
     - adriana hölszky
 
 - synonym: "42194"
   examples: |
+    - banchieri
     - adriano banchieri
 
 - synonym: "37651"
   examples: |
+    - canavesio
     - adrien canavesio
 
 - synonym: "45634"
   examples: |
+    - servais
     - adrien françois servais
 
 - synonym: "47616"
   examples: |
+    - moreau
     - adrien moreau
 
 - synonym: "47274"
   examples: |
+    - valerius
     - adrien valerius
 
 - synonym: "38018"
   examples: |
+    - clostre
     - adrienne clostre
 
 - synonym: "433580"
@@ -460,274 +545,342 @@ nlu:
 
 - synonym: "58262"
   examples: |
+    - miyoshi
     - akira miyoshi
 
 - synonym: "43151"
   examples: |
+    - nishimura
     - akira nishimura
 
 - synonym: "41203"
   examples: |
+    - tamba
     - akira tamba
 
 - synonym: "61887"
   examples: |
+    - tanaka
     - akira tanaka
 
 - synonym: "48485"
   examples: |
+    - yuyama
     - akira yuyama
 
 - synonym: "57388"
   examples: |
+    - meola
     - al di meola
 
 - synonym: "40877"
   examples: |
+    - dubin
     - al dubin
 
 - synonym: "908190"
   examples: |
+    - hoffman
     - al hoffman
 
 - synonym: "38236"
   examples: |
+    - payson
     - al payson
 
 - synonym: "52327"
   examples: |
+    - stillman
     - al stillman
 
 - synonym: "33561"
   examples: |
+    - zalanfy
     - aladar zalanfy
 
 - synonym: "33946"
   examples: |
+    - abbott
     - alain abbott
 
 - synonym: "38405"
   examples: |
+    - bancquart
     - alain bancquart
 
 - synonym: "55842"
   examples: |
+    - bashung
     - alain bashung
 
 - synonym: "41974"
   examples: |
+    - beghin
     - alain beghin
 
 - synonym: "39891"
   examples: |
+    - beney
     - alain beney
 
 - synonym: "58525"
   examples: |
+    - berlaud
     - alain berlaud
 
 - synonym: "43902"
   examples: |
+    - bernaud
     - alain bernaud
 
 - synonym: "58406"
   examples: |
+    - berros
     - alain berros
 
 - synonym: "45425"
   examples: |
+    - besson
     - alain besson
 
 - synonym: "41300"
   examples: |
+    - bodenes
     - alain bodenes
 
 - synonym: "54423"
   examples: |
+    - bonnard
     - alain bonnard
 
 - synonym: "37426"
   examples: |
+    - bourdier
     - alain bourdier
 
 - synonym: "55688"
   examples: |
+    - buchholz
     - alain buchholz
 
 - synonym: "798939"
   examples: |
+    - caron
     - alain caron
 
 - synonym: "61682"
   examples: |
+    - charlonnai
     - alain charlonnai
 
 - synonym: "1034871"
   examples: |
+    - chennevière
     - alain chennevière
 
 - synonym: "53248"
   examples: |
+    - crépin
     - alain crépin
 
 - synonym: "52879"
   examples: |
+    - cugnot
     - alain cugnot
 
 - synonym: "44042"
   examples: |
+    - daniel
     - alain daniel
 
 - synonym: "45261"
   examples: |
+    - devemy
     - alain devemy
 
 - synonym: "33058"
   examples: |
+    - féron
     - alain féron
 
 - synonym: "58342"
   examples: |
+    - fourchotte
     - alain fourchotte
 
 - synonym: "48394"
   examples: |
+    - gagnon
     - alain gagnon
 
 - synonym: "37199"
   examples: |
+    - gibert
     - alain gibert
 
 - synonym: "37710"
   examples: |
+    - giroux
     - alain giroux
 
 - synonym: "780012"
   examples: |
+    - goraguer
     - alain goraguer
 
 - synonym: "60263"
   examples: |
+    - gozzo
     - alain gozzo
 
 - synonym: "53591"
   examples: |
+    - grimoin
     - alain grimoin
 
 - synonym: "38757"
   examples: |
+    - henry
     - alain henry
 
 - synonym: "38598"
   examples: |
+    - huteau
     - alain huteau
 
 - synonym: "46414"
   examples: |
+    - keruzore
     - alain keruzore
 
 - synonym: "39367"
   examples: |
+    - labarsouque
     - alain labarsouque
 
 - synonym: "45250"
   examples: |
+    - ladrière
     - alain ladrière
 
 - synonym: "50172"
   examples: |
+    - langrée
     - alain langrée
 
 - synonym: "43615"
   examples: |
+    - lanty
     - alain lanty
 
 - synonym: "47605"
   examples: |
+    - le tribroche
     - alain le tribroche
 
 - synonym: "51586"
   examples: |
+    - lecomte
     - alain lecomte
 
 - synonym: "39526"
   examples: |
+    - londeix
     - alain londeix
 
 - synonym: "55860"
   examples: |
+    - louvier
     - alain louvier
 
 - synonym: "33572"
   examples: |
+    - mabit
     - alain mabit
 
 - synonym: "40689"
   examples: |
+    - margoni
     - alain margoni
 
 - synonym: "59184"
   examples: |
+    - mariotte
     - alain mariotte
 
 - synonym: "49570"
   examples: |
+    - miteran
     - alain miteran
 
 - synonym: "52193"
   examples: |
+    - moene
     - alain moene
 
 - synonym: "60241"
   examples: |
+    - parent
     - alain parent
 
 - synonym: "60599"
   examples: |
+    - pernette
     - alain pernette
 
 - synonym: "50566"
   examples: |
+    - pistre
     - alain pistre
 
 - synonym: "38521"
   examples: |
+    - pucci
     - alain pucci
 
 - synonym: "39205"
   examples: |
+    - riou
     - alain riou
 
 - synonym: "40858"
   examples: |
+    - roizenblat
     - alain roizenblat
 
 - synonym: "51385"
   examples: |
+    - savouret
     - alain savouret
 
 - synonym: "890912"
   examples: |
+    - sève
     - alain sève
 
 - synonym: "44318"
   examples: |
+    - souchon
     - alain souchon
 
 - synonym: "39944"
   examples: |
+    - truchot
     - alain truchot
 
 - synonym: "61342"
   examples: |
+    - vérité
     - alain vérité
 
 - synonym: "39940"
   examples: |
+    - voirpy
     - alain voirpy
 
 - synonym: "41305"
   examples: |
+    - weber
     - alain weber
 
 - synonym: "57462"
@@ -748,66 +901,82 @@ nlu:
 
 - synonym: "62195"
   examples: |
+    - abel
     - alan abel
 
 - synonym: "42843"
   examples: |
+    - brett
     - alan brett
 
 - synonym: "50516"
   examples: |
+    - bullard
     - alan bullard
 
 - synonym: "61694"
   examples: |
+    - davis
     - alan davis
 
 - synonym: "692964"
   examples: |
+    - dudley
     - alan dudley bush
 
 - synonym: "46254"
   examples: |
+    - garner
     - alan garner
 
 - synonym: "40076"
   examples: |
+    - gout
     - alan gout
 
 - synonym: "38814"
   examples: |
+    - haughton
     - alan haughton
 
 - synonym: "39095"
   examples: |
+    - hovhaness
     - alan hovhaness
 
 - synonym: "46107"
   examples: |
+    - lawrence
     - alan lawrence
 
 - synonym: "52509"
   examples: |
+    - menken
     - alan menken
 
 - synonym: "44923"
   examples: |
+    - ralph
     - alan ralph
 
 - synonym: "49325"
   examples: |
+    - ridout
     - alan ridout
 
 - synonym: "54687"
   examples: |
+    - stout
     - alan stout
 
 - synonym: "43371"
   examples: |
+    - berg
     - alban berg
 
 - synonym: "49071"
   examples: |
+    - lapeyre
     - alban lapeyre
 
 - synonym: "32753"
@@ -840,18 +1009,22 @@ nlu:
 
 - synonym: "48316"
   examples: |
+    - debondue
     - albert debondue
 
 - synonym: "49361"
   examples: |
+    - delvaux
     - albert delvaux
 
 - synonym: "41837"
   examples: |
+    - ellmenreich
     - albert ellmenreich
 
 - synonym: "43995"
   examples: |
+    - fasce
     - albert fasce
 
 - synonym: "781764"
@@ -860,94 +1033,117 @@ nlu:
 
 - synonym: "40356"
   examples: |
+    - häberling
     - albert häberling
 
 - synonym: "35315"
   examples: |
+    - henneberg
     - albert henneberg
 
 - synonym: "36306"
   examples: |
+    - jeanneret
     - albert jeanneret
 
 - synonym: "37960"
   examples: |
+    - kerjouan
     - albert kerjouan-hamann
 
 - synonym: "33936"
   examples: |
+    - kunz
     - albert kunz
 
 - synonym: "48004"
   examples: |
+    - kunzelmann
     - albert kunzelmann
 
 - synonym: "49845"
   examples: |
+    - lavignac
     - albert lavignac
 
 - synonym: "56159"
   examples: |
+    - lorenz
     - albert lorenz
 
 - synonym: "33339"
   examples: |
+    - lorincz
     - albert lorincz
 
 - synonym: "35022"
   examples: |
+    - lortzing
     - albert lortzing
 
 - synonym: "41312"
   examples: |
+    - mangelsdorff
     - albert mangelsdorff
 
 - synonym: "43782"
   examples: |
+    - manouvrier
     - albert manouvrier
 
 - synonym: "50317"
   examples: |
+    - moeschinger
     - albert moeschinger
 
 - synonym: "37476"
   examples: |
+    - périlhou
     - albert périlhou
 
 - synonym: "42788"
   examples: |
+    - reiter
     - albert reiter
 
 - synonym: "47236"
   examples: |
+    - reyerman
     - albert reyerman
 
 - synonym: "44284"
   examples: |
+    - roussel
     - albert roussel
 
 - synonym: "46929"
   examples: |
+    - samain
     - albert samain
 
 - synonym: "52311"
   examples: |
+    - stoutamire
     - albert stoutamire
 
 - synonym: "45848"
   examples: |
+    - vaulet
     - albert vaulet
 
 - synonym: "40545"
   examples: |
+    - von
     - albert von tilzer
 
 - synonym: "50263"
   examples: |
+    - willemetz
     - albert willemetz
 
 - synonym: "48160"
   examples: |
+    - zabel
     - albert zabel
 
 - synonym: "424574"
@@ -956,78 +1152,97 @@ nlu:
 
 - synonym: "40432"
   examples: |
+    - bachmann
     - alberto bachmann
 
 - synonym: "42641"
   examples: |
+    - domínguez
     - alberto domínguez
 
 - synonym: "38613"
   examples: |
+    - ginastera
     - alberto ginastera
 
 - synonym: "558674"
   examples: |
+    - gronemann
     - alberto gronemann
 
 - synonym: "54741"
   examples: |
+    - orefici
     - alberto orefici
 
 - synonym: "50286"
   examples: |
+    - vicari
     - alberto vicari
 
 - synonym: "50292"
   examples: |
+    - zedda
     - alberto zedda
 
 - synonym: "950529"
   examples: |
+    - dercksen
     - albertus dercksen
 
 - synonym: "43251"
   examples: |
+    - perosa
     - albino perosa
 
 - synonym: "46846"
   examples: |
+    - blumenstengel
     - albrecht blumenstengel
 
 - synonym: "34610"
   examples: |
+    - gürsching
     - albrecht gürsching
 
 - synonym: "34582"
   examples: |
+    - werl
     - albrecht werl
 
 - synonym: "48695"
   examples: |
+    - guatelli
     - alceo guatelli
 
 - synonym: "34264"
   examples: |
+    - buonomo
     - aldo buonomo
 
 - synonym: "39969"
   examples: |
+    - clementi
     - aldo clementi
 
 - synonym: "61739"
   examples: |
+    - rossi
     - aldo rossi
 
 - synonym: "60652"
   examples: |
+    - romley
     - alec romley
 
 - synonym: "56932"
   examples: |
+    - rowley
     - alec rowley
 
 - synonym: "39583"
   examples: |
+    - wilder
     - alec wilder
 
 - synonym: "1065977"
@@ -1044,58 +1259,72 @@ nlu:
 
 - synonym: "56726"
   examples: |
+    - besozzi
     - alessandro besozzi
 
 - synonym: "40795"
   examples: |
+    - coppini
     - alessandro coppini
 
 - synonym: "57089"
   examples: |
+    - grandi
     - alessandro grandi
 
 - synonym: "61283"
   examples: |
+    - longo
     - alessandro longo
 
 - synonym: "41170"
   examples: |
+    - marcello
     - alessandro marcello
 
 - synonym: "39224"
   examples: |
+    - melani
     - alessandro melani
 
 - synonym: "53493"
   examples: |
+    - orologio
     - alessandro orologio
 
 - synonym: "55061"
   examples: |
+    - rolla
     - alessandro rolla
 
 - synonym: "50228"
   examples: |
+    - sbordoni
     - alessandro sbordoni
 
 - synonym: "48498"
   examples: |
+    - scarlatti
     - alessandro scarlatti
 
 - synonym: "54675"
   examples: |
+    - solbiati
     - alessandro solbiati
 
 - synonym: "44317"
   examples: |
+    - stradella
     - alessandro stradella
 
 - synonym: "55397"
   examples: |
+    - striggio
     - alessandro striggio
 
 - synonym: "752025"
   examples: |
+    - striggio
     - alessandro striggio
 
 - synonym: "453804"
@@ -1112,22 +1341,27 @@ nlu:
 
 - synonym: "41191"
   examples: |
+    - agricola
     - alexander agricola
 
 - synonym: "51288"
   examples: |
+    - borodin
     - alexander borodin
 
 - synonym: "34448"
   examples: |
+    - cholminow
     - alexander cholminow
 
 - synonym: "44278"
   examples: |
+    - goedicke
     - alexander goedicke
 
 - synonym: "60287"
   examples: |
+    - goehr
     - alexander goehr
 
 - synonym: "49180"
@@ -1136,54 +1370,62 @@ nlu:
 
 - synonym: "54691"
   examples: |
+    - ilyinsky
     - alexander ilyinsky
 
 - synonym: "34140"
   examples: |
+    - nagajew
     - alexander nagajew
 
 - synonym: "764164"
   examples: |
+    - prejs
     - alexander prejs
-
-- synonym: "54273"
-  examples: |
-    - alexander tchaikovski
 
 - synonym: "43570"
   examples: |
+    - kreisler
     - alexander von kreisler
 
 - synonym: "55674"
   examples: |
+    - vustin
     - alexander vustin
 
 - synonym: "41782"
   examples: |
+    - wustin
     - alexander wustin
 
 - synonym: "35722"
   examples: |
+    - zemlinsky
     - alexander zemlinsky
 
 - synonym: "40266"
   examples: |
+    - zinowski
     - alexander zinowski
 
 - synonym: "49963"
   examples: |
+    - benois
     - alexandre benois
 
 - synonym: "57605"
   examples: |
+    - carlin
     - alexandre carlin
 
 - synonym: "33582"
   examples: |
+    - villeneuve
     - alexandre de villeneuve
 
 - synonym: "768830"
   examples: |
+    - gasparov
     - alexandre gasparov
 
 - synonym: "708964"
@@ -1200,26 +1442,32 @@ nlu:
 
 - synonym: "58113"
   examples: |
+    - kraskiewicz
     - alexandre kraskiewicz
 
 - synonym: "38978"
   examples: |
+    - lagoya
     - alexandre lagoya
 
 - synonym: "52434"
   examples: |
+    - luigini
     - alexandre luigini
 
 - synonym: "47773"
   examples: |
+    - metratone
     - alexandre metratone
 
 - synonym: "57080"
   examples: |
+    - mossolov
     - alexandre mossolov
 
 - synonym: "34976"
   examples: |
+    - mottu
     - alexandre mottu
 
 - synonym: "39849"
@@ -3189,10 +3437,6 @@ nlu:
 - synonym: "64155"
   examples: |
     - astonvilla
-
-- synonym: "41675"
-  examples: |
-    - astor piazzolla
 
 - synonym: "38794"
   examples: |
@@ -12046,10 +12290,6 @@ nlu:
   examples: |
     - frédéric boulard
 
-- synonym: "41804"
-  examples: |
-    - frédéric chopin
-
 - synonym: "55142"
   examples: |
     - frédéric devreese
@@ -13761,10 +14001,6 @@ nlu:
 - synonym: "937572"
   examples: |
     - gino samyn
-
-- synonym: "43689"
-  examples: |
-    - gioacchino rossini
 
 - synonym: "45649"
   examples: |
@@ -20466,10 +20702,6 @@ nlu:
   examples: |
     - johann schop
 
-- synonym: "38240"
-  examples: |
-    - johann sebastian bach
-
 - synonym: "908358"
   examples: |
     - johann sebastiani
@@ -24070,10 +24302,6 @@ nlu:
   examples: |
     - ludwig streicher
 
-- synonym: "38954"
-  examples: |
-    - ludwig van beethoven
-
 - synonym: "558665"
   examples: |
     - ludwig vogel
@@ -26797,10 +27025,6 @@ nlu:
 - synonym: "37427"
   examples: |
     - modest illich tchaikovski
-
-- synonym: "35239"
-  examples: |
-    - modeste moussorgski
 
 - synonym: "454333"
   examples: |
@@ -29857,10 +30081,6 @@ nlu:
 - synonym: "786532"
   examples: |
     - pierre bloch
-
-- synonym: "748111"
-  examples: |
-    - pierre boulez
 
 - synonym: "61004"
   examples: |
@@ -36702,10 +36922,6 @@ nlu:
 - synonym: "38238"
   examples: |
     - wolf jakob lauffensteiner
-
-- synonym: "55853"
-  examples: |
-    - wolfgang amadeus mozart
 
 - synonym: "41214"
   examples: |

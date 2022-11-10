@@ -7,6 +7,9 @@ nlu:
     - faciles à jouer
     - accessibles aux débutants
     - pour les débutants
+    - pour enfants
+    - pour les enfants
+    - de petit niveau
     - débutants
     - débutant
     - pour apprendre le
@@ -23,8 +26,6 @@ nlu:
     - trois ans
     - 4 ans
     - quatre ans
-    - débutants
-    - débutant
     - en 1er cycle
     - de premier cycle
     - de 1e année
@@ -58,10 +59,6 @@ nlu:
     - six ans
     - 7 ans
     - sept ans
-    - confirmés
-    - confirmé
-    - intermédiaires
-    - intermédiaire
     - en 2nd cycle
     - de second cycle
     - de 5e année
@@ -89,8 +86,6 @@ nlu:
     - neuf ans
     - 10 ans
     - dix ans
-    - expert
-    - experts
     - en 3e cycle
     - de troisième cycle
     - de 8e année

@@ -7,9 +7,10 @@ from locations_synonyms import locations
 from formations_synonyms import formations
 import string
 
-def preprocess_entity(entity: str):
+def preprocess_entity(entity: str, lower=True):
     # Lower
-    entity = entity.lower()
+    if lower:
+        entity = entity.lower()
     # Strip punctuation
     exclude = string.punctuation.replace("-", "")
     exclude = exclude.replace("'", "")
