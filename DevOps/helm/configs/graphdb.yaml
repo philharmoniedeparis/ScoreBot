@@ -25,20 +25,18 @@ spec:
   clusterIP: None
   type: ClusterIP
 
----
-
-apiVersion: v1
-kind: Endpoints
-metadata:
-  name: graphdb-external-ip
-  namespace: graphdb
-subsets:
-- addresses:
-  - ip: @CD_GRAPHDB_IP@
-  ports:
-  - name: app
-    port: 7200
-    protocol: TCP
+#apiVersion: v1
+#kind: Endpoints
+#metadata:
+#  name: graphdb-external-ip
+#  namespace: graphdb
+#subsets:
+#- addresses:
+#  - ip: @CD_GRAPHDB_IP@
+#  ports:
+#  - name: app
+#    port: 7200
+#    protocol: TCP
 
 ---
 
