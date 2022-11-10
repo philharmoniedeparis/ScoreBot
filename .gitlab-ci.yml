@@ -103,6 +103,17 @@ AutoDeploy:helmChart:uape:
         - actions/**/*
   extends: .deploy_to_kubernetes
 
+
+AutoDeploy:kubeConfig:uape:
+  stage: deploy
+  environment:
+    name: prd
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      changes:
+        - DevOps/helm/configs/graphdb.yaml
+  extends: .deploy_to_kubernetes_graphdb_config
+
 AutoTag:uape:
   stage: release
   image: registry.gitlab.com/gitlab-org/release-cli:latest

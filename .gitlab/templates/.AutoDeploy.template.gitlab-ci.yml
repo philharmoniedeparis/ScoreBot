@@ -42,3 +42,13 @@
     - kubectl apply -f DevOps/helm/configs/pvc.yaml
   script:
     - helm upgrade --namespace $CD_KUBE_NAMESPACE --create-namespace --install --values=./DevOps/helm/values.yaml rasax rasa-x/rasa-x
+
+.deploy_to_kubernetes_graphdb_config:
+  stage: deploy
+  image: alpine/k8s:1.25.3
+  before_script:
+    - sed -i "s/@CD_GRAPHDB_IP@/$CD_GRAPHDB_IP/" DevOps/helm/configs/graphdb.yaml
+    - sed -i "s/@CD_GRAPHDB_INGRESS_DOMAIN@/$CD_GRAPHDB_INGRESS_DOMAIN/" DevOps/helm/configs/graphdb.yaml
+    - kubectl config use-context $CD_KUBE_CONTEXT
+  script:
+    - kubectl apply -f DevOps/helm/configs/graphdb.yaml
