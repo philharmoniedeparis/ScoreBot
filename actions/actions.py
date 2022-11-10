@@ -70,8 +70,7 @@ where {{
 
 # construction de l'URL dans le site de la philharmonie
     bind (strafter(str(?score),"ark:49250/")as ?identifier)
-    BIND(IRI(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", ?identifier)) AS ?scoreUrl1)
-    BIND ( substr(str(?scoreUrl1), 1, 58) as ?scoreUrl)
+    BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
 }}
 order by ?score
 limit 25
@@ -96,14 +95,13 @@ limit 25
                     medium = ent.get("value")
                     if medium not in self.allowed_medias:
                         medium, medium_name = self.get_closest_event(medium, {**medias.iaml, **medias.mimo})
-                        logging.info(medium, str(medium_name))
                         if medium is None:
                             continue
                     # Check if the medium has been entered after a number or formation
                     if i > 0 and entities[i-1]['entity'] in ['number', 'formation']:
                         entity = entities[i-1]['entity']
                         volume = entities[i-1]['value']
-                        if entity == 'formation' and not entity.isdigit():
+                        if entity == 'formation' and not volume.isdigit():
                             volume, _ = self.get_closest_event(volume, formations.formations)
                         inputted_medias[medium] = volume
                     else:
@@ -129,22 +127,22 @@ limit 25
             logging.info(f"medium: {inputted_medias}, level: {level}, genre: {genre}, agent: {agent}, formation: {formation}, period: {period}, location: {location}")
             if level is not None and level not in levels.all_levels:
                 level, level_name = self.get_closest_event(level, levels.all_levels)
-                logging.info(level)
+                logging.info(f"Parsed level: {level}")
             if genre is not None and genre not in genres.genres:
                 genre, genre_name = self.get_closest_event(genre, genres.genres)
-                logging.info(genre)
+                logging.info(f"Parsed genre: {genre}")
             if agent is not None and agent not in agents.agents:
                 agent, agent_name = self.get_closest_event(agent, agents.agents)
-                logging.info(agent)
+                logging.info(f"Parsed agent: {agent}")
             if formation is not None and formation not in formations.formations:
                 formation, formation_name = self.get_closest_event(formation, formations.formations)
-                logging.info(formation)
+                logging.info(f"Parsed formation: {formation}")
             if period is not None and period not in periods.periods:
                 period, period_name = self.get_closest_event(period, periods.periods)
-                logging.info(period)
+                logging.info(f"Parsed period: {period}")
             if location is not None and location not in locations.locations:
                 location, location_name = self.get_closest_event(location, locations.locations)
-                logging.info(period)
+                logging.info(f"Parsed location: {location}")
 
             results, formatted_mediums = self.get_query_results(inputted_medias, level, genre, agent, period, location)
             if not results:
@@ -212,16 +210,20 @@ values (?input_educational_level) {{ (<https://data.philharmoniedeparis.fr/vocab
             """
         # Genre
         if genre is not None:
+            while len(genre) < 7:
+                genre = "0" + genre
             filters += f"""
-values (?input_genre ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/00{genre}>)}}
+values (?input_genre ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{genre}>)}}
 ?score mus:U12_has_genre ?input_genre.
 ?input_genre skos:prefLabel ?genrelabel.
             """
         
         # Agent
         if agent is not None:
+            while len(agent) < 7:
+                agent = "0" + agent
             filters += f"""
-values (?input_agent_role ?input_agent ) {{ (<http://data.bnf.fr/vocabulary/roles/r220/> <https://ark.philharmoniedeparis.fr/ark:49250/00{agent}>) }}
+values (?input_agent_role ?input_agent ) {{ (<http://data.bnf.fr/vocabulary/roles/r220/> <https://ark.philharmoniedeparis.fr/ark:49250/{agent}>) }}
 ?creation  mus:R24_created ?score .
 ?creation ecrm:P9_consists_of ?task.
 ?task ecrm:P14_carried_out_by ?input_agent.
@@ -232,8 +234,10 @@ filter (lang(?roleLabel)=\"fr\")
 """
 
         if period is not None:
+            while len(period) < 7:
+                period = "0" + period
             filters += f"""
-values (?input_categorie ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/00{period}>)}}
+values (?input_categorie ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{period}>)}}
 ?score mus:U19_is_categorized_as ?input_categorie.
 ?input_categorie skos:prefLabel ?categorieLabel.
 """
@@ -255,3 +259,11 @@ values (?input_categorie ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/00{
         if closest_match is None:
             return None, None
         return closest_match, candidates[closest_match][0]
+
+"""
+    def reassign_entity_type(self, entity, expected_authorized_values, value):
+        authorized_values = [genres.genres, agents.agents, periods.periods, locations.locations]
+        if entity.isdigit() and entity not in expected_authorized_values:
+            for values in authorized_values:
+                if entity in values:
+"""
