@@ -8,6 +8,7 @@ from agents_synonyms import agents
 from formations_synonyms import formations
 from periods_synonyms import periods
 from locations_synonyms import locations
+from work_names_synonyms import work_names
 from write_entities import preprocess_entity
 
 
@@ -23,7 +24,6 @@ for ix, sublist in enumerate(list(agents.values())):
         val = val.split(" ")[-1] if not ix % 2 else val
         AGENTS.append(preprocess_entity(val, lower=False))
 AGENTS = np.random.choice(AGENTS, len(GENRES))
-print(AGENTS)
 
 raw_sentences = {
     "get_sheet_music_by_casting": {
@@ -267,6 +267,26 @@ raw_sentences = {
             "Partitions de musique _LOCATION_ADJECTIVE",
             "Liste partitions de musique _LOCATION_ADJECTIVE",
             "musique _LOCATION_ADJECTIVE ?",
+
+            # WORK_NAME
+            "Je cherche la partition de _WORK_NAME de _AGENT",
+            "Vous avez les partitions de _WORK_NAME ?",
+            "Différentes versions de _WORK_NAME de _AGENT",
+            "Une transcription du _WORK_NAME de _AGENT pour _MEDIUM",
+            "Une transcription de _WORK_NAME pour _MEDIUM",
+            "Donne moi une transcription de _WORK_NAME pour _MEDIUM",
+            "Une partition de _WORK_NAME pour _MEDIUM",
+            "Je veux une transcription de _WORK_NAME pour _MEDIUM",
+            "Partition de _WORK_NAME pour _MEDIUM",
+            "Différentes versions de la _WORK_NAME de _AGENT",
+            "Je suis institutrice et souhaiterais faire apprendre à mes élèves une chanson traditionnelle : _WORK_NAME.",
+            "Je cherche les paroles d’une chanson pour _LEVEL_SENTENCES qui est connue sous plusieurs noms : '_WORK_NAME', '_WORK_NAME' ou '_WORK_NAME'.",
+            "Je cherche la partition gratuite du _WORK_NAME",
+            "Je veux une partition de la réduction pour _MEDIUM de l'ouverture _WORK_NAME.",
+            "Je cherche une partition de la réduction pour _MEDIUM de _WORK_NAME.",
+            "Donne moi une partition de la réduction pour _MEDIUM de l'ouverture _WORK_NAME.",
+            "Je cherche la partition de la musique de _WORK_NAME",
+            "Où trouver le conducteur de la _WORK_NAME de _AGENT ?",
         ],
         "entities": [
             ([preprocess_entity(i) for sublist in list(iaml.values()) + list(mimo.values()) for i in sublist], "_MEDIUM"),
@@ -275,7 +295,8 @@ raw_sentences = {
             ([preprocess_entity(i) for sublist in list(level_timing.values()) for i in sublist], "_LEVEL_TIMING"),
             ([preprocess_entity(i) for sublist in list(formations.values()) for i in sublist], "_FORMATION"),
             ([preprocess_entity(i) for sublist in list(periods.values()) for i in sublist], "_PERIOD"),
-            ([preprocess_entity(i) for sublist in list(locations.values()) for i in sublist], "_LOCATION"),
+            ([preprocess_entity(i, lower=False) for sublist in list(locations.values()) for i in sublist], "_LOCATION"),
+            ([preprocess_entity(i, lower=False) for sublist in list(work_names.values()) for i in sublist], "_WORK_NAME"),
             ([preprocess_entity(sublist[2]) for sublist in list(locations.values())[:20]], "_LOCATION_ADJECTIVE"),
             (GENRES, "_GENRE"),
             (AGENTS, "_AGENT"),
@@ -290,6 +311,7 @@ keyword_to_ent_type = {
     "_LEVEL_TIMING": "level",
     "_GENRE": "genre",
     "_AGENT": "agent",
+    "_WORK_NAME": "work_name",
     "_FORMATION": "formation",
     "_PERIOD": "period",
     "_LOCATION": "location",

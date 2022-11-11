@@ -250,7 +250,6 @@ iaml = {
         "vielle à roue",
         "clavecin-vielle",
         "vielle à roue",
-        "symphonie",
         "vielle à roue",
         "vielle organisée",
     ],
