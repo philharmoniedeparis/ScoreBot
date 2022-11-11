@@ -13673,7 +13673,6 @@ nlu:
 
 - synonym: "793913"
   examples: |
-    - rossini
     - fondazione rossini
 
 - synonym: "596683"
@@ -44787,11 +44786,6 @@ nlu:
   examples: |
     - music
     - virgo music
-
-- synonym: "425549"
-  examples: |
-    - musique
-    - visible musique
 
 - synonym: "52800"
   examples: |

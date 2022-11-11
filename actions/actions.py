@@ -113,11 +113,11 @@ limit 25
                         inputted_medias[medium] = 1
 
                 if ent['entity'] == 'level' and entity_dict["level"] is None:
-                    level = ent.get("level")
+                    level = ent.get("value")
                     if level not in levels.all_levels:
                         level, level_name = self.get_closest_event(level, levels.all_levels)
                         logging.info(f"Parsed level: {level}")
-                    entity_dict["level"] = ent.get("value")
+                    entity_dict["level"] = level
 
                 if ent['entity'] == 'formation' and entity_dict["formation"] is None:
                     formation = ent.get("value")
