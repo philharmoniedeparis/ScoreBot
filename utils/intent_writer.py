@@ -235,6 +235,8 @@ raw_sentences = {
             "Je cherche des scores pour groupe de _GENRE",
             "Partitions de musique du _LOCATION",
             "Partitions de musique de la _LOCATION",
+            "Vous avez des partitions de musique de la _LOCATION ?",
+            "Vous avez des partitions de musique de l'_LOCATION",
             "Partitions de musique d'_LOCATION",
             "Partitions de musique de _LOCATION",
             "Partitions de musique _LOCATION svp",
@@ -267,6 +269,12 @@ raw_sentences = {
             "Partitions de musique _LOCATION_ADJECTIVE",
             "Liste partitions de musique _LOCATION_ADJECTIVE",
             "musique _LOCATION_ADJECTIVE ?",
+            "Partitions de musique _LOCATION_ADJECTIVE",
+            "Partitions de musique _LOCATION_ADJECTIVE svp",
+            "Quelles partitions de musique _LOCATION_ADJECTIVE",
+            "Je veux des partitions de musique _LOCATION_ADJECTIVE svp",
+            "Vous avez des partitions de musique _LOCATION_ADJECTIVE ?",
+            "Vous avez des partitions de musique _LOCATION_ADJECTIVE",
 
             # WORK_NAME
             "Je cherche la partition de _WORK_NAME de _AGENT",

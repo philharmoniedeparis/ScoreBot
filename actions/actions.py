@@ -292,6 +292,15 @@ values (?classes ) {{ (efrbroo:F24_Publication_Expression)(mus:M167_Publication_
     luc:snippetText ?snippetText .
 """
 
+        if entity_dict["location"] is not None:
+            while len(entity_dict["location"]) < 7:
+                entity_dict["location"] = "0" + entity_dict["location"]
+            filters += f"""
+values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["location"]}>) }}
+?score ecrm:P2_has_type ?localisation.
+?localisation skos:prefLabel ?localisationLabel.
+"""
+
         parsed_query = urllib.parse.quote_plus(self.route.format(filters=filters), safe='/')
         return parsed_query, formatted_mediums
 
