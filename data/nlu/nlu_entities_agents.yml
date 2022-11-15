@@ -7923,7 +7923,6 @@ nlu:
 
 - synonym: "596804"
   examples: |
-    - musique
     - cité de la musique
 
 - synonym: "54565"
@@ -10988,7 +10987,6 @@ nlu:
 
 - synonym: "429163"
   examples: |
-    - musique
     - edition russe de musique
 
 - synonym: "1068888"
@@ -11073,7 +11071,6 @@ nlu:
 
 - synonym: "427356"
   examples: |
-    - musique
     - editions françaises de musique
 
 - synonym: "815841"
@@ -11188,7 +11185,6 @@ nlu:
 
 - synonym: "599291"
   examples: |
-    - musique
     - editions université - conservatoire de musique
 
 - synonym: "434197"
@@ -12058,7 +12054,6 @@ nlu:
 
 - synonym: "63614"
   examples: |
-    - musique
     - enfance et musique
 
 - synonym: "48334"
@@ -13163,7 +13158,6 @@ nlu:
 
 - synonym: "461457"
   examples: |
-    - musique
     - feeling musique
 
 - synonym: "42230"
@@ -32235,7 +32229,6 @@ nlu:
 
 - synonym: "830146"
   examples: |
-    - musique
     - media musique
 
 - synonym: "53960"
@@ -33655,7 +33648,6 @@ nlu:
 
 - synonym: "455009"
   examples: |
-    - musique
     - mt musique
 
 - synonym: "47234"
@@ -44769,7 +44761,6 @@ nlu:
 
 - synonym: "429172"
   examples: |
-    - musique
     - virgin musique
 
 - synonym: "41762"
