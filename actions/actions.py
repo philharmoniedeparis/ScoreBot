@@ -91,7 +91,7 @@ limit 25
 
         entities = tracker.latest_message['entities']
         logging.info(entities)
-        answer =    f"Il me semble que vous voulez obtenir une liste des partitions. "
+        answer =    f"Il me semble que vous voulez obtenir une liste des partitions.\n"
         try:
             inputted_medias = dict()
             entity_dict = {"level": None, "genre": None, "agent": None, "formation": None, "period": None, "location": None, "work_name": None} 
@@ -184,7 +184,7 @@ limit 25
                 raise NoResultsException(f"No results found for medias: {inputted_medias}")
             formatted_results = "\n".join(results)
             if formatted_mediums:
-                answer += f" Voici les partitions avec {formatted_mediums}:\n"
+                answer += f"Voici les partitions avec {formatted_mediums}:\n"
             answer += formatted_results
         except NoResultsException as e:
             logging.info(str(e))
