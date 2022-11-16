@@ -29,6 +29,24 @@ raw_sentences = {
     "get_sheet_music_by_casting": {
         "sentences": [
             # MEDIUM
+            "_MEDIUM",
+            "un _MEDIUM",
+            "_MEDIUM _MEDIUM",
+            "_MEDIUM _MEDIUM",
+            "_MEDIUM _MEDIUM",
+            "_MEDIUM _MEDIUM",
+            "_MEDIUM, _MEDIUM",
+            "_MEDIUM et _MEDIUM",
+            "_MEDIUM _MEDIUM _MEDIUM",
+            "_MEDIUM, _MEDIUM et _MEDIUM",
+            "_MEDIUM, _MEDIUM _MEDIUM _MEDIUM",
+            "deux _MEDIUM",
+            "3 _MEDIUM",
+            "un _MEDIUM et un _MEDIUM",
+            "deux _MEDIUM plus trois _MEDIUM",
+            "Je cherche une partition pour un _MEDIUM",
+            "Je cherche une partition pour _MEDIUM",
+            "Je cherche une partition pour deux _MEDIUM ou plus",
             "Quelles partitions avez-vous pour trois _MEDIUM et un _MEDIUM ?",
             "Je suis _MEDIUM et je cherche des partitions pour _MEDIUM et d'autres _MEDIUM.",
             "Pour un _MEDIUM, un _MEDIUM, et quatre _MEDIUM, quelles partitions?",
@@ -156,8 +174,18 @@ raw_sentences = {
             "Nous sommes 4 musiciens (_MEDIUM, _MEDIUM, _MEDIUM, et _MEDIUM). Vous auriez des partitions de _AGENT que l'on pourrait jouer",
             "œuvres de _AGENT",
             "Avez-vous des œuvres d'_AGENT ?",
+            "je cherche des _GENRE de _AGENT",
+            "Je cherche un _GENRE de _AGENT",
+            "Je cherche un _GENRE d' _AGENT",
+            "donne moi des _GENRE d'_AGENT",
+            "je veux les _GENRE écrits par _AGENT",
 
             # FORMATIONS
+            "Je cherche un _FORMATION _MEDIUM _MEDIUM",
+            "Je cherche une _FORMATION _MEDIUM _MEDIUM",
+            "Je cherche une _FORMATION 2 _MEDIUM 1 _MEDIUM",
+            "Je cherche un _FORMATION avec _MEDIUM et _MEDIUM",
+            "Je cherche un _FORMATION pour un _MEDIUM et deux _MEDIUM",
             "Je cherche des _FORMATION avec une _MEDIUM.",
             "Avez-vous des _FORMATION _LEVEL_SENTENCE au _MEDIUM et au _MEDIUM ?   ",
             "Je cherche des _FORMATION _LEVEL_SENTENCE au _MEDIUM",
@@ -275,6 +303,10 @@ raw_sentences = {
             "Je veux des partitions de musique _LOCATION_ADJECTIVE svp",
             "Vous avez des partitions de musique _LOCATION_ADJECTIVE ?",
             "Vous avez des partitions de musique _LOCATION_ADJECTIVE",
+            "Donne moi une partition d'une oeuvre _LOCATION_ADJECTIVE avec un _MEDIUM",
+            "Donne moi une partition _LOCATION_ADJECTIVE avec _MEDIUM",
+            "Je veux une oeuvre _LOCATION_ADJECTIVE pour _MEDIUM",
+
 
             # WORK_NAME
             "Je cherche la partition de _WORK_NAME de _AGENT",

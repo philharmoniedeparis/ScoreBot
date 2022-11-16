@@ -792,6 +792,9 @@ iaml = {
 }
 
 mimo_old = {
+    "3573": ["Violon", "Violons"],
+    "3237": ["Guitare", "Guitares"],
+    "2299": ["Piano"],
     "5639": ["Zang", "Zang (cymbale)"],
     "2419": ["Washint", "Washint (cloche)"],
     "3305": ["Vielle à roue", "Vielle à clavier"],
@@ -839,9 +842,6 @@ mimo_old = {
     "3305": ["Vielle à roue", "Chifonie"],
     "2993": ["Tube à percussion", "Bâton-pilon"],
     "4093": ["Flûte traversière"],
-    "3237": ["Guitare", "Guitares"],
-    "2299": ["Piano"],
-    "3573": ["Violon", "Violons"],
     "3226": ["Banjo", "Banjos", "banjo", "banjos"],
     "4164": ["Hautbois"],
     "3836": ["Clarinette", "Clarinettes"],
