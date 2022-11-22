@@ -9,6 +9,7 @@ import requests
 import urllib
 import logging
 import traceback
+import os
 
 from fuzzywuzzy import fuzz
 from typing import Any, Text, Dict, List
@@ -23,7 +24,13 @@ from utils import locations_synonyms as locations
 from utils import formations_synonyms as formations
 
 
-ENDPOINT = "http://graphdb.sparna.fr/repositories/philharmonie-chatbot?query="
+USERNAME = os.environ.get("GRAPHDB_USERNAME_PROD")
+PASSWORD = os.environ.get("GRAPHDB_PASSWORD_PROD")
+GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN")
+logging.info("YO THIS IS THE DOMAIN", GRAPHDB_DOMAIN)
+AUTH_REQUEST = requests.post(f'{GRAPHDB_DOMAIN}/rest/login', headers={"Content-type": "application/json"}, json={"username":USERNAME, "password": PASSWORD})
+TOKEN = AUTH_REQUEST.headers["Authorization"]
+ENDPOINT = f"{GRAPHDB_DOMAIN}/repositories/philharmonie-chatbot?query="
 VOICE_CHANNELS = ["google_assistant", "alexa"]
 
 class NoResultsException(Exception):
@@ -199,7 +206,7 @@ limit 25
         formatted_query, formatted_mediums = self.format_sparql_query(inputted_medias, entity_dict)
         route = ENDPOINT + formatted_query
         logging.info(f"Requesting {route}")
-        results = requests.get(route, headers={'Accept': 'application/sparql-results+json'}).json()
+        results = requests.get(route, headers={'Accept': 'application/sparql-results+json', 'Authorization': TOKEN}).json()
         texts = []
         for res in results["results"]["bindings"][:20]:
             url = res["scoreUrl"]["value"]
