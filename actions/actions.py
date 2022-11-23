@@ -26,11 +26,15 @@ from utils import formations_synonyms as formations
 # Get Gitlab variables
 USERNAME = os.environ.get("GRAPHDB_USERNAME")
 PASSWORD = os.environ.get("GRAPHDB_PASSWORD")
-GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN")
+GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN", "http://graphdb.sparna.fr")
 
 # Get GraphDB auth
-AUTH_REQUEST = requests.post(f"{GRAPHDB_DOMAIN}/rest/login", headers={"Content-type": "application/json"}, json={"username":USERNAME, "password": PASSWORD})
-TOKEN = AUTH_REQUEST.headers.get("Authorization")
+try:
+    AUTH_REQUEST = requests.post(f"{GRAPHDB_DOMAIN}/rest/login", headers={"Content-type": "application/json"}, json={"username":USERNAME, "password": PASSWORD}, timeout=10)
+    TOKEN = AUTH_REQUEST.headers.get("Authorization")
+except requests.exceptions.ConnectTimeout:
+    TOKEN = ""
+    logging.warning("Could not reach the GraphDB login endpoint. If this is the prod environment, the succeeding requests may fail.")
 
 ENDPOINT = f"{GRAPHDB_DOMAIN}/repositories/philharmonie-chatbot?query="
 VOICE_CHANNELS = ["google_assistant", "alexa"]
@@ -292,7 +296,7 @@ values (?input_categorie ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{en
             filters += f"""
 values (?classes ) {{ (efrbroo:F24_Publication_Expression)(mus:M167_Publication_Expression_Fragment)}} 
 ?search a luc-index:TitleIndex ;
-    luc:query "\\"{entity_dict["work_name"]}\\"" ;  
+    luc:query "{entity_dict["work_name"]}" ;  
     luc:entities ?score .
     ?score a ?classes.
     ?score luc:score ?scoreResearch .
