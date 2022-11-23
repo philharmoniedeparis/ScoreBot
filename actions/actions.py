@@ -23,12 +23,15 @@ from utils import periods_synonyms as periods
 from utils import locations_synonyms as locations
 from utils import formations_synonyms as formations
 
+# Get Gitlab variables
 USERNAME = os.environ.get("GRAPHDB_USERNAME")
 PASSWORD = os.environ.get("GRAPHDB_PASSWORD")
 GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN")
-logging.info("YO THIS IS THE DOMAIN", GRAPHDB_DOMAIN)
+
+# Get GraphDB auth
 AUTH_REQUEST = requests.post(f"{GRAPHDB_DOMAIN}/rest/login", headers={"Content-type": "application/json"}, json={"username":USERNAME, "password": PASSWORD})
-TOKEN = AUTH_REQUEST.headers["Authorization"]
+TOKEN = AUTH_REQUEST.headers.get("Authorization")
+
 ENDPOINT = f"{GRAPHDB_DOMAIN}/repositories/philharmonie-chatbot?query="
 VOICE_CHANNELS = ["google_assistant", "alexa"]
 
