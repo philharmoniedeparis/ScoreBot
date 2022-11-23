@@ -27,7 +27,7 @@ USERNAME = os.environ.get("GRAPHDB_USERNAME")
 PASSWORD = os.environ.get("GRAPHDB_PASSWORD")
 GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN")
 logging.info("YO THIS IS THE DOMAIN", GRAPHDB_DOMAIN)
-AUTH_REQUEST = requests.post(f’{GRAPHDB_DOMAIN}/rest/login’, headers={"Content-type": "application/json"}, json={"username":USERNAME, "password": PASSWORD})
+AUTH_REQUEST = requests.post(f"{GRAPHDB_DOMAIN}/rest/login", headers={"Content-type": "application/json"}, json={"username":USERNAME, "password": PASSWORD})
 TOKEN = AUTH_REQUEST.headers["Authorization"]
 ENDPOINT = f"{GRAPHDB_DOMAIN}/repositories/philharmonie-chatbot?query="
 VOICE_CHANNELS = ["google_assistant", "alexa"]
@@ -341,4 +341,4 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
     #     authorized_values = [genres.genres, agents.agents, periods.periods, locations.locations]
     #     if entity.isdigit() and entity not in expected_authorized_values:
     #         for values in authorized_values:
-    #             if entity in values:
+    #             if entity in values: 
