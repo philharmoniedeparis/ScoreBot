@@ -336,4 +336,4 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
     #     authorized_values = [genres.genres, agents.agents, periods.periods, locations.locations]
     #     if entity.isdigit() and entity not in expected_authorized_values:
     #         for values in authorized_values:
-    #             if entity in values:
+    #             if entity in values: 
