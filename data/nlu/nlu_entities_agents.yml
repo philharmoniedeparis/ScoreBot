@@ -41788,6 +41788,7 @@ nlu:
 
 - synonym: "34216"
   examples: |
+    - stravinski
     - soulima stravinski
 
 - synonym: "887013"

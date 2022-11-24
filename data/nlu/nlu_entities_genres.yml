@@ -530,6 +530,7 @@ nlu:
 - synonym: "885405"
   examples: |
     - chanson française
+    - chansons populaires françaises
 
 - synonym: "67162"
   examples: |
