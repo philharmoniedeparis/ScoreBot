@@ -2,6 +2,7 @@
   stage: deploy
   image: alpine/k8s:1.25.3
   before_script:
+    - echo $CD_GRAPHDB_PASSWORD
     - TIMESTAMP=$(date +%s)
     - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
     - sed -i "s|@CD_TIMESTAMP@|$TIMESTAMP|" DevOps/helm/values.yaml
