@@ -9,8 +9,8 @@ stages:
   - deploy
   - train
 
-#before_script:
-#  - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
+before_script:
+  - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
 
 AutoCheck:gitPullRequired:
   image: docker:20.10.20-git
@@ -56,6 +56,7 @@ AutoBuildImage:uate:
     - if: '$CI_COMMIT_BRANCH == "develop"'
       changes:
         - actions/**/*
+        - Dockerfile
   image: docker:20.10.20
   variables:
     IMAGE_ENV: '-uate'
@@ -69,6 +70,7 @@ AutoBuildImage:uape:
     - if: '$CI_COMMIT_BRANCH == "main"'
       changes:
         - actions/**/*
+        - Dockerfile
   image: docker:20.10.20
   variables:
     IMAGE_ENV: ''
@@ -86,6 +88,7 @@ AutoDeploy:helmChart:uate:
     - if: '$CI_COMMIT_BRANCH == "develop"'
       changes:
         - actions/**/*
+        - Dockerfile
   extends: .deploy_to_kubernetes
 
 
@@ -100,6 +103,7 @@ AutoDeploy:helmChart:uape:
     - if: '$CI_COMMIT_BRANCH == "main"'
       changes:
         - actions/**/*
+        - Dockerfile
   extends: .deploy_to_kubernetes
 
 
