@@ -2,6 +2,7 @@
   stage: deploy
   image: alpine/k8s:1.25.3
   before_script:
+    - echo $CD_GRAPHDB_PASSWORD
     - TIMESTAMP=$(date +%s)
     - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
     - sed -i "s|@CD_TIMESTAMP@|$TIMESTAMP|" DevOps/helm/values.yaml
@@ -17,8 +18,8 @@
     - sed -i "s/@CD_RASAX_INGRESS_DOMAIN@/$CD_RASAX_INGRESS_DOMAIN/" DevOps/helm/values.yaml
     - sed -i "s/@CD_RASAX_POSTGRES_PASSWORD@/$CD_RASAX_POSTGRES_PASSWORD/" DevOps/helm/values.yaml
     - sed -i "s/@CD_RASAX_REDIS_PASSWORD@/$CD_RASAX_REDIS_PASSWORD/" DevOps/helm/values.yaml
-    - sed -i "s~@CD_GRAPHDB_PASSWORD@~${CD_GRAPHDB_PASSWORD//&/\\&}~" DevOps/helm/values.yaml
-    - sed -i "s~@CD_GRAPHDB_USERNAME@~${CD_GRAPHDB_USERNAME//&/\\&}~" DevOps/helm/values.yaml
+    - sed -i "s|@CD_GRAPHDB_PASSWORD@|${CD_GRAPHDB_PASSWORD}|" DevOps/helm/values.yaml
+    - sed -i "s|@CD_GRAPHDB_USERNAME@|${CD_GRAPHDB_USERNAME}|" DevOps/helm/values.yaml
     - sed -i "s|@CD_GRAPHDB_DOMAIN@|$CD_GRAPHDB_DOMAIN|" DevOps/helm/values.yaml
     - sed -i "s/@CD_RASAX_STORAGE_CLASS_NAME@/$CD_RASAX_STORAGE_CLASS_NAME/" DevOps/helm/configs/storageClass.yaml
     - sed -i "s|@CD_RASAX_STORAGE_CLASS_NAME@|$CD_RASAX_STORAGE_CLASS_NAME|" DevOps/helm/configs/pv.yaml

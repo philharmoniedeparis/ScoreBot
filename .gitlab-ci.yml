@@ -79,7 +79,6 @@ AutoBuildImage:uape:
 
 AutoDeploy:helmChart:uate:
   stage: deploy
-  needs: ['AutoBuildImage:uate']
   environment:
     name: uat
   variables:
@@ -89,12 +88,14 @@ AutoDeploy:helmChart:uate:
       changes:
         - actions/**/*
         - Dockerfile
+        - .gitlab-ci.yml
+        - DevOps/**/*`
+        - .gitlab/**/*
   extends: .deploy_to_kubernetes
 
 
 AutoDeploy:helmChart:uape:
   stage: deploy
-  needs: ['AutoBuildImage:uape']
   environment:
     name: prd
   variables:
@@ -104,6 +105,9 @@ AutoDeploy:helmChart:uape:
       changes:
         - actions/**/*
         - Dockerfile
+        - .gitlab-ci.yml
+        - DevOps/**/*`
+        - .gitlab/**/*
   extends: .deploy_to_kubernetes
 
 
