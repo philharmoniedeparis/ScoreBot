@@ -1795,6 +1795,9 @@ mimo_old = {
 }
 
 mimo = {
+    "2299": ["Piano","pianiste"],
+    "3573": ["Violon","violoniste","Violons"],
+    "3237": ["Guitare","guitariste"],
     "2205": ["Eléments d'instruments de musique",],
     "2206": ["Archets",],
     "2207": ["Archet",],
@@ -1850,7 +1853,7 @@ mimo = {
     "2270": ["Autres",],
     "2271": ["Archiquier",],
     "2272": ["Lyricorde",],
-    "2273": ["Pianos","Pianofortes",],
+    "2273": ["Pianofortes",],
     "2274": ["Piano automatique",],
     "2275": ["Piano cabinet",],
     "2276": ["Claviharpe",],
@@ -1872,7 +1875,6 @@ mimo = {
     "2296": ["Piano éolien",],
     "2297": ["Piano organisé",],
     "2298": ["Piano table",],
-    "2299": ["Piano","pianiste"],
     "2301": ["Piano-guitare",],
     "2302": ["Pianoharpe","Piano harpe",],
     "2306": ["Piano pyramidal",],
@@ -2412,7 +2414,6 @@ mimo = {
     "3234": ["Dobro",],
     "3235": ["Basse électrique","bassiste"],
     "3236": ["Guitare électrique",],
-    "3237": ["Guitare","guitariste"],
     "3238": ["Guitarron",],
     "3239": ["Guitare-harpe",],
     "3241": ["Harpe-lyre",],
@@ -2618,7 +2619,6 @@ mimo = {
     "3570": ["Violon irrégulier",],
     "3571": ["Pochette",],
     "3572": ["Viola arpa",],
-    "3573": ["Violon","violoniste","Violons"],
     "3574": ["Violon d'amour",],
     "3575": ["Violoncelles",],
     "3576": ["Arpeggione",],

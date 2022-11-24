@@ -2,6 +2,22 @@ version: "2.0"
 
 nlu:
 
+- synonym: "2299"
+  examples: |
+    - piano
+    - pianiste
+
+- synonym: "3573"
+  examples: |
+    - violon
+    - violoniste
+    - violons
+
+- synonym: "3237"
+  examples: |
+    - guitare
+    - guitariste
+
 - synonym: "2205"
   examples: |
     - eléments d'instruments de musique
@@ -231,7 +247,6 @@ nlu:
 
 - synonym: "2273"
   examples: |
-    - pianos
     - pianofortes
 
 - synonym: "2274"
@@ -317,11 +332,6 @@ nlu:
 - synonym: "2298"
   examples: |
     - piano table
-
-- synonym: "2299"
-  examples: |
-    - piano
-    - pianiste
 
 - synonym: "2301"
   examples: |
@@ -2494,11 +2504,6 @@ nlu:
   examples: |
     - guitare électrique
 
-- synonym: "3237"
-  examples: |
-    - guitare
-    - guitariste
-
 - synonym: "3238"
   examples: |
     - guitarron
@@ -3311,12 +3316,6 @@ nlu:
 - synonym: "3572"
   examples: |
     - viola arpa
-
-- synonym: "3573"
-  examples: |
-    - violon
-    - violoniste
-    - violons
 
 - synonym: "3574"
   examples: |

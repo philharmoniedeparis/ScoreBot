@@ -111,12 +111,14 @@ limit 25
             for i, ent in enumerate(entities):
                 if ent['entity'] == 'medium':
                     medium = ent.get("value")
-                    if medium not in self.allowed_medias:
+                    if medium.isdigit() and medium not in self.allowed_medias:
+                        entity_dict = self.reassign_type(medium, entity_dict)
+                    elif medium not in self.allowed_medias:
                         medium, medium_name = self.get_closest_event(medium, {**medias.iaml, **medias.mimo})
                         if medium is None:
                             continue
                     # Check if the medium has been entered after a number or formation
-                    if i > 0 and entities[i-1]['entity'] in ['number', 'formation']:
+                    elif i > 0 and entities[i-1]['entity'] in ['number', 'formation']:
                         entity = entities[i-1]['entity']
                         volume = entities[i-1]['value']
                         if entity == 'formation' and not volume.isdigit():
