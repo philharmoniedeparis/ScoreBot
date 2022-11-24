@@ -7,7 +7,6 @@ LABEL MAINTAINER="Dany Rafina <dany.rafina@gmail.com>"
 LABEL DESCRIPTION="Custom Rasa Open Source Image"
 LABEL APP_VERSION=1.0.1
 
-
 # Use subdirectory as working directory
 WORKDIR /app
 

@@ -88,6 +88,7 @@ AutoDeploy:helmChart:uate:
     - if: '$CI_COMMIT_BRANCH == "develop"'
       changes:
         - actions/**/*
+        - Dockerfile
   extends: .deploy_to_kubernetes
 
 
@@ -102,6 +103,7 @@ AutoDeploy:helmChart:uape:
     - if: '$CI_COMMIT_BRANCH == "main"'
       changes:
         - actions/**/*
+        - Dockerfile
   extends: .deploy_to_kubernetes
 
 
