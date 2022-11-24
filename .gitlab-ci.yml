@@ -8,10 +8,9 @@ stages:
   - build:environment
   - deploy
   - train
-  - release
 
-before_script:
-  - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
+#before_script:
+#  - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
 
 AutoCheck:gitPullRequired:
   image: docker:20.10.20-git
@@ -114,16 +113,16 @@ AutoDeploy:kubeConfig:uape:
         - DevOps/helm/configs/graphdb.yaml
   extends: .deploy_to_kubernetes_graphdb_config
 
-AutoTag:uape:
-  stage: release
-  image: registry.gitlab.com/gitlab-org/release-cli:latest
-  needs: ['AutoDeploy:helmChart:uape']
-  environment:
-    name: prd
-    action: prepare
-  cache: {}
-  script:
-    - release-cli create --name "Philarmonie v$APP_VERSION" --description "Version $APP_VERSION of Philarmonie" --tag-name "v$APP_VERSION" --milestone "1.0"
-  only:
-    - main
-  when: on_success
+#AutoTag:uape:
+#  stage: release
+#  image: registry.gitlab.com/gitlab-org/release-cli:latest
+#  needs: ['AutoDeploy:helmChart:uape']
+#  environment:
+#    name: prd
+#    action: prepare
+#  cache: {}
+#  script:
+#    - release-cli create --name "Philarmonie v$APP_VERSION" --description "Version $APP_VERSION of Philarmonie" --tag-name "v$APP_VERSION" --milestone "1.0"
+#  only:
+#    - main
+#  when: on_success
