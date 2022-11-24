@@ -9,8 +9,8 @@ stages:
   - deploy
   - train
 
-#before_script:
-#  - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
+before_script:
+  - APP_VERSION=$(grep 'APP_VERSION' Dockerfile | cut -d '=' -f 2 | head -n 1) || true
 
 AutoCheck:gitPullRequired:
   image: docker:20.10.20-git
