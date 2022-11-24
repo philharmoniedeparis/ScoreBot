@@ -89,8 +89,9 @@ AutoDeploy:helmChart:uate:
       changes:
         - actions/**/*
         - Dockerfile
-        - .gitlab.ci.yml
-        - DevOps/**/*
+        - .gitlab-ci.yml
+        - DevOps/**/*`
+        - .gitlab/**/*
   extends: .deploy_to_kubernetes
 
 
@@ -106,8 +107,9 @@ AutoDeploy:helmChart:uape:
       changes:
         - actions/**/*
         - Dockerfile
-        - .gitlab.ci.yml
-        - DevOps/**/*
+        - .gitlab-ci.yml
+        - DevOps/**/*`
+        - .gitlab/**/*
   extends: .deploy_to_kubernetes
 
 
