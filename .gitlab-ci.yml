@@ -117,6 +117,7 @@ AutoDeploy:kubeConfig:uape:
 AutoTag:uape:
   stage: release
   image: registry.gitlab.com/gitlab-org/release-cli:latest
+  needs: ['AutoDeploy:helmChart:uape']
   environment:
     name: prd
     action: prepare

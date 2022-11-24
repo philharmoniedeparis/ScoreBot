@@ -198,7 +198,7 @@ nlu:
   examples: |
     - irlande
     - ireland
-    - irelandais
+    - irlandais
 
 - synonym: "155360"
   examples: |
@@ -390,7 +390,7 @@ nlu:
   examples: |
     - turquie
     - turkey
-    - turc
+    - turque
 
 - synonym: "139940"
   examples: |
