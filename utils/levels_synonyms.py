@@ -5,6 +5,9 @@ level_sentences = {
         "faciles à jouer",
         "accessibles aux débutants",
         "pour les débutants",
+        "pour enfants",
+        "pour les enfants",
+        "de petit niveau",
         "débutants",
         "débutant",
         "pour apprendre le ",
@@ -42,8 +45,6 @@ level_sentences = {
 
 level_worded = {
     "cycle-1": [
-        "débutants",
-        "débutant",
         "en 1er cycle",
         "de premier cycle",
         "de 1e année",
@@ -59,10 +60,6 @@ level_worded = {
         "de 4ème année",
     ],
     "cycle-2": [
-        "confirmés",
-        "confirmé",
-        "intermédiaires",
-        "intermédiaire",
         "en 2nd cycle",
         "de second cycle",
         "de 5e année",
@@ -76,8 +73,6 @@ level_worded = {
         "septième année",
     ],
     "cycle-3": [
-        "expert",
-        "experts",
         "en 3e cycle",
         "de troisième cycle",
         "de 8e année",

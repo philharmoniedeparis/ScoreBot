@@ -25,20 +25,29 @@ spec:
   clusterIP: None
   type: ClusterIP
 
+#apiVersion: v1
+#kind: Endpoints
+#metadata:
+#  name: graphdb-external-ip
+#  namespace: graphdb
+#subsets:
+#- addresses:
+#  - ip: @CD_GRAPHDB_IP@
+#  ports:
+#  - name: app
+#    port: 7200
+#    protocol: TCP
+
 ---
 
 apiVersion: v1
-kind: Endpoints
+kind: Secret
+type: Opaque
 metadata:
-  name: graphdb-external-ip
+  name: graphdb-protected
   namespace: graphdb
-subsets:
-- addresses:
-  - ip: @CD_GRAPHDB_IP@
-  ports:
-  - name: app
-    port: 7200
-    protocol: TCP
+data:
+  auth: @CD_GRAPHDB_BASIC_AUTH@
 
 ---
 
@@ -52,6 +61,9 @@ metadata:
     ingress.kubernetes.io/force-ssl-redirect: 'true'
     ingress.kubernetes.io/ssl-redirect: 'true'
     kubernetes.io/tls-acme: 'true'
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: graphdb-protected
+    nginx.ingress.kubernetes.io/auth-realm: "Enter your credentials"
 spec:
   ingressClassName: nginx
   tls:

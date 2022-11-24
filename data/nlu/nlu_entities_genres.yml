@@ -79,7 +79,7 @@ nlu:
 
 - synonym: "67453"
   examples: |
-    - musique de film
+    - film
 
 - synonym: "67455"
   examples: |
@@ -720,6 +720,7 @@ nlu:
 - synonym: "885405"
   examples: |
     - chanson française
+    - chansons populaires françaises
 
 - synonym: "891794"
   examples: |

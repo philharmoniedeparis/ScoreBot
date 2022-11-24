@@ -17,6 +17,9 @@
     - sed -i "s/@CD_RASAX_INGRESS_DOMAIN@/$CD_RASAX_INGRESS_DOMAIN/" DevOps/helm/values.yaml
     - sed -i "s/@CD_RASAX_POSTGRES_PASSWORD@/$CD_RASAX_POSTGRES_PASSWORD/" DevOps/helm/values.yaml
     - sed -i "s/@CD_RASAX_REDIS_PASSWORD@/$CD_RASAX_REDIS_PASSWORD/" DevOps/helm/values.yaml
+    - sed -i "s|@CD_GRAPHDB_USERNAME@|$CD_GRAPHDB_USERNAME|" DevOps/helm/values.yaml
+    - sed -i "s|@CD_GRAPHDB_PASSWORD@|$CD_GRAPHDB_PASSWORD|" DevOps/helm/values.yaml
+    - sed -i "s|@CD_GRAPHDB_DOMAIN@|$CD_GRAPHDB_DOMAIN|" DevOps/helm/values.yaml
     - sed -i "s/@CD_RASAX_STORAGE_CLASS_NAME@/$CD_RASAX_STORAGE_CLASS_NAME/" DevOps/helm/configs/storageClass.yaml
     - sed -i "s|@CD_RASAX_STORAGE_CLASS_NAME@|$CD_RASAX_STORAGE_CLASS_NAME|" DevOps/helm/configs/pv.yaml
     - sed -i "s|@CD_RASAX_STORAGE_CLASS_NAME@|$CD_RASAX_STORAGE_CLASS_NAME|" DevOps/helm/configs/pvc.yaml
@@ -33,6 +36,7 @@
     - sed -i "s|@CD_RASAX_PV_RASAX_CAPACITY@|$CD_RASAX_PV_RASAX_CAPACITY|" DevOps/helm/configs/pv.yaml
     - sed -i "s|@CD_RASAX_PV_RASAX_CAPACITY@|$CD_RASAX_PV_RASAX_CAPACITY|" DevOps/helm/configs/pvc.yaml
     - sed -i "s|@CD_RASAX_PV_RASAX_PATH@|$CD_RASAX_PV_RASAX_PATH|" DevOps/helm/configs/pv.yaml
+
     - kubectl config use-context $CD_KUBE_CONTEXT
     - kubectl create namespace $CD_KUBE_NAMESPACE || true
     - helm repo add rasa-x https://rasahq.github.io/rasa-x-helm
@@ -49,6 +53,7 @@
   before_script:
     - sed -i "s/@CD_GRAPHDB_IP@/$CD_GRAPHDB_IP/" DevOps/helm/configs/graphdb.yaml
     - sed -i "s/@CD_GRAPHDB_INGRESS_DOMAIN@/$CD_GRAPHDB_INGRESS_DOMAIN/" DevOps/helm/configs/graphdb.yaml
+    - sed -i "s/@CD_GRAPHDB_BASIC_AUTH@/$CD_GRAPHDB_BASIC_AUTH/" DevOps/helm/configs/graphdb.yaml
     - kubectl config use-context $CD_KUBE_CONTEXT
   script:
     - kubectl apply -f DevOps/helm/configs/graphdb.yaml

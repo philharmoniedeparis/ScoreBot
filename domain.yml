@@ -32,6 +32,7 @@ entities:
 - level
 - genre
 - agent
+- work_name
 - period
 - location
 slots:
