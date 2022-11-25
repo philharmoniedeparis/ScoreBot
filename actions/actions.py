@@ -102,7 +102,7 @@ limit 25
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        entities = tracker.latest_message['entities']
+        entities = sorted(tracker.latest_message['entities'], key= lambda d: d['start'])
         logging.info(entities)
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions.\n"
         try:
@@ -113,19 +113,20 @@ limit 25
                     medium = ent.get("value")
                     if medium.isdigit() and medium not in self.allowed_medias:
                         entity_dict = self.reassign_type(medium, entity_dict)
-                    elif medium not in self.allowed_medias:
-                        medium, medium_name = self.get_closest_event(medium, {**medias.iaml, **medias.mimo})
-                        if medium is None:
-                            continue
-                    # Check if the medium has been entered after a number or formation
-                    elif i > 0 and entities[i-1]['entity'] in ['number', 'formation']:
-                        entity = entities[i-1]['entity']
-                        volume = entities[i-1]['value']
-                        if entity == 'formation' and not volume.isdigit():
-                            volume, _ = self.get_closest_event(volume, formations.formations)
-                        inputted_medias[medium] = volume
                     else:
-                        inputted_medias[medium] = 1
+                        if medium not in self.allowed_medias:
+                            medium, medium_name = self.get_closest_event(medium, {**medias.iaml, **medias.mimo})
+                            if medium is None:
+                                continue
+                        # Check if the medium has been entered after a number or formation
+                        if i > 0 and entities[i-1]['entity'] in ['number', 'formation']:
+                            entity = entities[i-1]['entity']
+                            volume = entities[i-1]['value']
+                            if entity == 'formation' and not volume.isdigit():
+                                volume, _ = self.get_closest_event(volume, formations.formations)
+                            inputted_medias[medium] = volume
+                        else:
+                            inputted_medias[medium] = 1
 
                 if ent['entity'] == 'level' and entity_dict["level"] is None:
                     level = ent.get("value")
@@ -196,22 +197,26 @@ limit 25
 
             results, formatted_mediums = self.get_query_results(inputted_medias, entity_dict)
             if not results:
-                raise NoResultsException(f"No results found for medias: {inputted_medias}")
+                results, formatted_mediums = self.get_query_results(inputted_medias, entity_dict, exclusive=False)
+                if results:
+                    answer += "Je n'ai pas trouvé de résultats comportant uniquement le casting que vous avez spécifié, j'ai donc élargi la recherche aux partitions comportant également d'autres instruments.\n"
+                else:
+                    raise NoResultsException(f"No results found for medias: {inputted_medias}")
             formatted_results = "\n".join(results)
             if formatted_mediums:
                 answer += f"Voici les partitions avec {formatted_mediums}:\n"
             answer += formatted_results
         except NoResultsException as e:
             logging.info(str(e))
-            answer += "Mais je n'ai pas trouvé de résultats pour votre recherche dans la base données de la Philharmonie."
+            answer += "Mais je n'ai pas trouvé de résultats pour votre recherche dans la base de données de la Philharmonie."
         except Exception:
             logging.info(traceback.print_exc())
             answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
         dispatcher.utter_message(text=answer)
         return []
 
-    def get_query_results(self, inputted_medias: dict, entity_dict: dict) -> List[str]:
-        formatted_query, formatted_mediums = self.format_sparql_query(inputted_medias, entity_dict)
+    def get_query_results(self, inputted_medias: dict, entity_dict: dict, exclusive=True) -> List[str]:
+        formatted_query, formatted_mediums = self.format_sparql_query(inputted_medias, entity_dict, exclusive)
         route = ENDPOINT + formatted_query
         logging.info(f"Requesting {route}")
         results = requests.get(route, headers={'Accept': 'application/sparql-results+json', 'Authorization': TOKEN}).json()
@@ -222,9 +227,10 @@ limit 25
             texts.append(f"- [{title}]({url})")
         return texts, formatted_mediums
 
-    def format_sparql_query(self, inputted_medias: dict, entity_dict: dict) -> str:
+    def format_sparql_query(self, inputted_medias: dict, entity_dict: dict, exclusive: bool) -> str:
         filters = ""
         formatted_mediums = ""
+        total_quantity = []
 
         for i, medium in enumerate(inputted_medias.keys()):
             # Check if mimo or iaml
@@ -251,7 +257,15 @@ values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {for
 ?castingDetail_{i} philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?input_medium_{i}_list.
 ?castingDetail_{i} mus:U30_foresees_quantity_of_mop ?input_quantity_{i} .
             """
+            total_quantity.append(f"?input_quantity_{i}")
             
+        #calculer la quantité totale d'instruments
+        if total_quantity and exclusive:
+            filters += f"""
+BIND(({"+".join(total_quantity)}) AS ?input_quantity_total)
+?casting mus:U48_foresees_quantity_of_actors ?input_quantity_total.
+            """
+
         # Level
         if entity_dict["level"] is not None:
             filters += f"""
@@ -326,8 +340,10 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
         closest_match_ratio = 71
         for key in candidates:
             for cand in candidates[key]:
+                cand = cand.lower()
                 ratio = fuzz.ratio(value, cand)
                 if ratio > closest_match_ratio:
+                    print(value, cand)
                     closest_match = key
                     closest_match_ratio = ratio
         if closest_match is None:
