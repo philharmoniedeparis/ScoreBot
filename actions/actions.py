@@ -125,7 +125,7 @@ limit {limit}
                             volume = entities[i-1]['value']
                             if entity == 'formation' and not volume.isdigit():
                                 volume, _ = self.get_closest_event(volume, formations.formations)
-                            inputted_medias[medium] = volume
+                            inputted_medias[medium] = int(volume)
                         else:
                             inputted_medias[medium] = 1
 
@@ -141,7 +141,21 @@ limit {limit}
                     if formation not in formations.formations:
                         formation, formation_name = self.get_closest_event(formation, formations.formations)
                         logging.info(f"Parsed formation: {formation}")
-                    entity_dict["formation"] = formation
+                    # Is the formation the total number of instruments OR a specific medium count?
+                    j = i
+                    while j < len(entities) - 1:
+                        # If there is a number between formation and the next medium, then formation is the total
+                        if entities[j]['entity'] == 'number':
+                            entity_dict["formation"] = formation
+                            break
+                        # Else if there's a medium directly after, then formation is just this medium's count 
+                        elif entities[j]['entity'] == 'medium':
+                            break
+                        j += 1
+                    else:
+                        if not inputted_medias:
+                        # If there's neither, and not medias before as well, formation is also the total instrumentation count
+                            entity_dict["formation"] = formation
 
                 if ent['entity'] == 'genre' and entity_dict["genre"] is None:
                     genre = ent.get("value")
@@ -196,9 +210,9 @@ limit {limit}
 
             logging.info(f"medium: {inputted_medias}, entity_dict: {entity_dict}")
 
-            results, worded_mediums = self.get_query_results(inputted_medias, entity_dict)
+            results, worded_mediums = self.get_query_results(inputted_medias, entity_dict, exclusive=True)
             if not results:
-                results, worded_mediums = self.get_query_results(inputted_medias, entity_dict, exclusive=True)
+                results, worded_mediums = self.get_query_results(inputted_medias, entity_dict)
                 if results:
                     answer += "Je n'ai pas trouvé de résultats comportant uniquement l'instrumentation que vous avez spécifié, j'ai donc élargi la recherche aux partitions comportant également d'autres instruments.\n"
                 else:
@@ -213,7 +227,7 @@ limit {limit}
                 answer += f" avec {worded_mediums}"
             answer += f":\n{formatted_results}"
         except NoResultsException as e:
-            logging.info(str(e))
+            logging.info(traceback.print_exc())
             answer += "Mais je n'ai pas trouvé de résultats pour votre recherche dans la base de données de la Philharmonie."
         except Exception:
             logging.info(traceback.print_exc())
@@ -221,7 +235,7 @@ limit {limit}
         dispatcher.utter_message(text=answer)
         return []
 
-    def get_query_results(self, inputted_medias: dict, entity_dict: dict, exclusive=True) -> List[str]:
+    def get_query_results(self, inputted_medias: dict, entity_dict: dict, exclusive=False) -> List[str]:
         formatted_query, worded_mediums = self.format_sparql_query(inputted_medias, entity_dict, exclusive)
         route = ENDPOINT + formatted_query
         logging.info(f"Requesting {route}")
@@ -236,7 +250,6 @@ limit {limit}
     def format_sparql_query(self, inputted_medias: dict, entity_dict: dict, exclusive: bool) -> str:
         filters = ""
         worded_mediums = ""
-        total_quantity = []
 
         for i, medium in enumerate(inputted_medias.keys()):
             # Check if mimo or iaml
@@ -265,12 +278,15 @@ values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {for
 ?castingDetail_{i} philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?input_medium_{i}_list.
 ?castingDetail_{i} mus:U30_foresees_quantity_of_mop ?input_quantity_{i} .
             """
-            total_quantity.append(f"?input_quantity_{i}")
             
         #calculer la quantité totale d'instruments
-        if total_quantity and exclusive:
+        if exclusive and inputted_medias:
+            if entity_dict["formation"] is not None:
+                total = entity_dict["formation"]
+            else:
+                total = sum(inputted_medias.values())
             filters += f"""
-BIND(({"+".join(total_quantity)}) AS ?input_quantity_total)
+values (?input_quantity_total) {{(\"{total}\"^^xsd:integer)}}
 ?casting mus:U48_foresees_quantity_of_actors ?input_quantity_total.
             """
 
@@ -345,7 +361,7 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
         # Use fuzz ratio to compare value to the candidates in the dictionary
         # Return highest match
         closest_match = None
-        closest_match_ratio = 71
+        closest_match_ratio = 81
         for key in candidates:
             for cand in candidates[key]:
                 cand = cand.lower()
