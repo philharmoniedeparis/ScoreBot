@@ -10183,6 +10183,7 @@ nlu:
 - synonym: "41439"
   examples: |
     - chostakovitch
+    - shostakovitch
     - dmitri chostakovitch
 
 - synonym: "901151"
@@ -41787,7 +41788,6 @@ nlu:
 
 - synonym: "34216"
   examples: |
-    - stravinski
     - soulima stravinski
 
 - synonym: "887013"

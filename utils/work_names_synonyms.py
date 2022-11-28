@@ -1,8 +1,15 @@
 work_names = {
     "_": [
         "Starmania",
+        "sacre du Printemps",
+        "Sacre du printemps",
+        "14e quatuor",
         "l’ouverture de Don Giovanni",
+        "flûte enchantée",
+        "flute enchantée",
         "Symphonie fantastique",
+        "traviata",
+        "Traviata",
         "5e Symphonie",
         "la 5eme symphonie",
         "5eme symphonie",
