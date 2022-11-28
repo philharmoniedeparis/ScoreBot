@@ -27,6 +27,7 @@ from utils import formations_synonyms as formations
 USERNAME = os.environ.get("GRAPHDB_USERNAME")
 PASSWORD = os.environ.get("GRAPHDB_PASSWORD")
 GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN", "http://graphdb.sparna.fr")
+MAX_RESULTS_TOTAL = 25
 
 # Get GraphDB auth
 try:
@@ -91,7 +92,7 @@ where {{
     BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
 }}
 order by desc (?scoreResearch)
-limit 25
+limit {limit}
         """
         self.allowed_medias = list(medias.iaml.keys()) + list(medias.mimo.keys())
 
@@ -195,17 +196,22 @@ limit 25
 
             logging.info(f"medium: {inputted_medias}, entity_dict: {entity_dict}")
 
-            results, formatted_mediums = self.get_query_results(inputted_medias, entity_dict)
+            results, worded_mediums = self.get_query_results(inputted_medias, entity_dict)
             if not results:
-                results, formatted_mediums = self.get_query_results(inputted_medias, entity_dict, exclusive=False)
+                results, worded_mediums = self.get_query_results(inputted_medias, entity_dict, exclusive=True)
                 if results:
-                    answer += "Je n'ai pas trouvé de résultats comportant uniquement le casting que vous avez spécifié, j'ai donc élargi la recherche aux partitions comportant également d'autres instruments.\n"
+                    answer += "Je n'ai pas trouvé de résultats comportant uniquement l'instrumentation que vous avez spécifié, j'ai donc élargi la recherche aux partitions comportant également d'autres instruments.\n"
                 else:
                     raise NoResultsException(f"No results found for medias: {inputted_medias}")
             formatted_results = "\n".join(results)
-            if formatted_mediums:
-                answer += f"Voici les partitions avec {formatted_mediums}:\n"
-            answer += formatted_results
+            logging.info(len(results))
+            answer += f"Voici les "
+            if len(results) >= MAX_RESULTS_TOTAL:
+                answer += f"{len(results)} premières "
+            answer += "partitions que j'ai trouvées"
+            if worded_mediums:
+                answer += f" avec {worded_mediums}"
+            answer += f":\n{formatted_results}"
         except NoResultsException as e:
             logging.info(str(e))
             answer += "Mais je n'ai pas trouvé de résultats pour votre recherche dans la base de données de la Philharmonie."
@@ -216,20 +222,20 @@ limit 25
         return []
 
     def get_query_results(self, inputted_medias: dict, entity_dict: dict, exclusive=True) -> List[str]:
-        formatted_query, formatted_mediums = self.format_sparql_query(inputted_medias, entity_dict, exclusive)
+        formatted_query, worded_mediums = self.format_sparql_query(inputted_medias, entity_dict, exclusive)
         route = ENDPOINT + formatted_query
         logging.info(f"Requesting {route}")
         results = requests.get(route, headers={'Accept': 'application/sparql-results+json', 'Authorization': TOKEN}).json()
         texts = []
-        for res in results["results"]["bindings"][:20]:
+        for res in results["results"]["bindings"][:MAX_RESULTS_TOTAL]:
             url = res["scoreUrl"]["value"]
             title = res["scoreTitleLabel"]["value"]
             texts.append(f"- [{title}]({url})")
-        return texts, formatted_mediums
+        return texts, worded_mediums
 
     def format_sparql_query(self, inputted_medias: dict, entity_dict: dict, exclusive: bool) -> str:
         filters = ""
-        formatted_mediums = ""
+        worded_mediums = ""
         total_quantity = []
 
         for i, medium in enumerate(inputted_medias.keys()):
@@ -237,15 +243,17 @@ limit 25
 
             if medium.isdigit():
                 formatted_medium = f"<http://www.mimo-db.eu/InstrumentsKeywords/{medium}>"
-                formatted_mediums += f"{inputted_medias[medium]} {medias.mimo[medium][0]}"
+                worded_mediums += f"{inputted_medias[medium]} {medias.mimo[medium][0]}"
             else:
                 formatted_medium = f"<http://data.doremus.org/vocabulary/iaml/mop/{medium}>"
-                formatted_mediums += f"{inputted_medias[medium]} {medias.iaml[medium][0]}"
+                worded_mediums += f"{inputted_medias[medium]} {medias.iaml[medium][0]}"
 
-            if i == len(inputted_medias) - 2:
-                formatted_mediums += " et "
-            elif i < len(inputted_medias) - 2:
-                formatted_mediums += ", "
+            if exclusive and i == len(inputted_medias) - 2:
+                worded_mediums += " et "
+            elif not exclusive and i == len(inputted_medias) - 1:
+                worded_mediums += " et d'autres instruments"
+            elif i < len(inputted_medias) - 1:
+                worded_mediums += ", "
 
             count = inputted_medias[medium]
 
@@ -330,8 +338,8 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
 ?localisation skos:prefLabel ?localisationLabel.
 """
 
-        parsed_query = urllib.parse.quote_plus(self.route.format(filters=filters), safe='/')
-        return parsed_query, formatted_mediums
+        parsed_query = urllib.parse.quote_plus(self.route.format(filters=filters, limit=MAX_RESULTS_TOTAL), safe='/')
+        return parsed_query, worded_mediums
 
     def get_closest_event(self, value: str, candidates: Dict = None):
         # Use fuzz ratio to compare value to the candidates in the dictionary
