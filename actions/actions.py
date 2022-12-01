@@ -27,6 +27,7 @@ from utils import formations_synonyms as formations
 USERNAME = os.environ.get("GRAPHDB_USERNAME")
 PASSWORD = os.environ.get("GRAPHDB_PASSWORD")
 GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN", "http://graphdb.sparna.fr")
+DEBUG = True if GRAPHDB_DOMAIN == "http://graphdb.sparna.fr" else False
 MAX_RESULTS_TOTAL = 25
 
 # Get GraphDB auth
@@ -67,7 +68,7 @@ PREFIX philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#>
 PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
 
 
-select distinct ?score ?scoreResearch ?snippetField ?snippetText ?identifier ?scoreUrl  ?scoreTitleLabel ?genrelabel ?responsibilityLabel ?educationLevelLabel ?agent ?agentLabel ?roleLabel ?input_quantity_total 
+select distinct ?score ?scoreResearch ?snippetField ?snippetText ?identifier ?scoreUrl  ?scoreTitleLabel ?genrelabel ?responsibilityLabel ?educationLevelLabel ?agent ?agentLabel ?roleLabel ?input_quantity_total ?compositeurLabel
 
 where {{
     {filters}
@@ -244,7 +245,13 @@ limit {limit}
         for res in results["results"]["bindings"][:MAX_RESULTS_TOTAL]:
             url = res["scoreUrl"]["value"]
             title = res["scoreTitleLabel"]["value"]
-            texts.append(f"- [{title}]({url})")
+            compositeur = res["compositeurLabel"]["value"]
+            if DEBUG:
+                score = res.get("scoreResearch", {}).get("value", "")
+                score = str(round(float(score), 2))
+            else:
+                score = ""
+            texts.append(f"- {f'[Score recherche: {score}] '} {compositeur}: [{title}]({url})")
         return texts, worded_mediums
 
     def format_sparql_query(self, inputted_medias: dict, entity_dict: dict, exclusive: bool) -> str:
@@ -352,6 +359,16 @@ values (?classes ) {{ (efrbroo:F24_Publication_Expression)(mus:M167_Publication_
 values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["location"]}>) }}
 ?score ecrm:P2_has_type ?localisation.
 ?localisation skos:prefLabel ?localisationLabel.
+"""
+
+        # Display compositeurLabel for easier reading of the results
+        filters += f"""
+        #avoir le compositeur de l’oeuvre
+?creation  mus:R24_created   ?score .
+?creation ecrm:P9_consists_of ?task.
+?task ecrm:P14_carried_out_by ?compositeur.
+?task mus:U31_had_function <http://data.bnf.fr/vocabulary/roles/r220/>.
+?compositeur rdfs:label ?compositeurLabel.
 """
 
         parsed_query = urllib.parse.quote_plus(self.route.format(filters=filters, limit=MAX_RESULTS_TOTAL), safe='/')
