@@ -20,6 +20,11 @@ nlu:
     - kyrie
     - messes
 
+- synonym: "67453"
+  examples: |
+    - musiques de films
+    - musique de film
+
 - synonym: "67551"
   examples: |
     - berceuse
@@ -110,6 +115,7 @@ nlu:
 
 - synonym: "67803"
   examples: |
+    - musiques sacrées
     - musique sacrée
     - litanies
     - musique religieuse
@@ -299,6 +305,7 @@ nlu:
 
 - synonym: "68585"
   examples: |
+    - musiques scéniques
     - musique scénique
     - musique de scene
 
@@ -779,10 +786,6 @@ nlu:
 - synonym: "68161"
   examples: |
     - musique de circonstance
-
-- synonym: "67453"
-  examples: |
-    - musique de film
 
 - synonym: "68149"
   examples: |

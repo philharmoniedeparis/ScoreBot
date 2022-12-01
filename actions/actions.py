@@ -12,6 +12,7 @@ import traceback
 import os
 
 from fuzzywuzzy import fuzz
+from collections import defaultdict
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -109,7 +110,7 @@ limit {limit}
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions.\n"
         try:
             inputted_medias = dict()
-            entity_dict = {"level": None, "genre": None, "agent": None, "formation": None, "period": None, "location": None, "work_name": None} 
+            entity_dict = defaultdict(lambda: defaultdict(lambda: None))
             for i, ent in enumerate(entities):
                 if ent['entity'] == 'medium':
                     medium = ent.get("value")
@@ -130,14 +131,14 @@ limit {limit}
                         else:
                             inputted_medias[medium] = 1
 
-                if ent['entity'] == 'level' and entity_dict["level"] is None:
+                if ent['entity'] == 'level' and entity_dict["level"]["code"] is None:
                     level = ent.get("value")
                     if level not in levels.all_levels:
                         level, level_name = self.get_closest_event(level, levels.all_levels)
                         logging.info(f"Parsed level: {level}")
-                    entity_dict["level"] = level
+                    entity_dict["level"] = {'code': level, 'name': levels.all_levels.get(level, [""])[0]}
 
-                if ent['entity'] == 'formation' and entity_dict["formation"] is None:
+                if ent['entity'] == 'formation' and entity_dict["formation"]["code"] is None:
                     formation = ent.get("value")
                     if formation not in formations.formations:
                         formation, formation_name = self.get_closest_event(formation, formations.formations)
@@ -147,63 +148,61 @@ limit {limit}
                     while j < len(entities) - 1:
                         # If there is a number between formation and the next medium, then formation is the total
                         if entities[j]['entity'] == 'number':
-                            entity_dict["formation"] = formation
                             break
                         # Else if there's a medium directly after, then formation is just this medium's count 
                         elif entities[j]['entity'] == 'medium':
+                            formation = None
                             break
                         j += 1
-                    else:
-                        if not inputted_medias:
-                        # If there's neither, and not medias before as well, formation is also the total instrumentation count
-                            entity_dict["formation"] = formation
+                    entity_dict["formation"] = {'code': formation, 'name': formations.formations.get(formation, ["",""])[1]}
 
-                if ent['entity'] == 'genre' and entity_dict["genre"] is None:
+
+                if ent['entity'] == 'genre' and entity_dict["genre"]["code"] is None:
                     genre = ent.get("value")
-                    if genre.isdigit():
+                    if genre.isdigit() and genre not in genres.genres:
                         entity_dict = self.reassign_type(genre, entity_dict)
                     else:
                         if genre not in genres.genres:
                             genre, genre_name = self.get_closest_event(genre, genres.genres)
                             logging.info(f"Parsed genre: {genre}")
-                        entity_dict["genre"] = genre
+                        entity_dict["genre"] = {'code': genre, 'name': genres.genres.get(genre, [""])[0]}
 
-                if ent['entity'] == 'agent' and entity_dict["agent"] is None:
+                if ent['entity'] == 'agent' and entity_dict["agent"]["code"] is None:
                     agent = ent.get("value")
-                    if agent.isdigit():
+                    if agent.isdigit() and agent not in agents.agents:
                         entity_dict = self.reassign_type(agent, entity_dict)
                     else:
                         if agent not in agents.agents:
                             agent, agent_name = self.get_closest_event(agent, agents.agents)
                             logging.info(f"Parsed agent: {agent}")
-                        entity_dict["agent"] = agent
+                        entity_dict["agent"] = {'code': agent, 'name': agents.agents.get(agent,[""])[0]}
 
-                if ent['entity'] == 'period' and entity_dict["period"] is None:
+                if ent['entity'] == 'period' and entity_dict["period"]["code"] is None:
                     period = ent.get("value")
-                    if period.isdigit():
+                    if period.isdigit() and period not in periods.periods:
                         entity_dict = self.reassign_type(period, entity_dict)
                     else:
                         if period not in periods.periods:
                             period, period_name = self.get_closest_event(period, periods.periods)
                             logging.info(f"Parsed period: {period}")
-                        entity_dict["period"] = period
+                        entity_dict["period"] = {'code': period, 'name': periods.periods.get(period,[""])[0]}
                         
-                if ent['entity'] == 'location' and entity_dict["location"] is None:
+                if ent['entity'] == 'location' and entity_dict["location"]["code"] is None:
                     location = ent.get("value")
-                    if location.isdigit():
+                    if location.isdigit() and location not in locations.locations:
                         entity_dict = self.reassign_type(location, entity_dict)
                     else:
                         if location not in locations.locations:
                             location, location_name = self.get_closest_event(location, locations.locations)
                             logging.info(f"Parsed location: {location}")
-                        entity_dict["location"] = location
+                        entity_dict["location"] = {'code': location, 'name': locations.locations.get(location, [""])[0]}
     
-                if ent['entity'] == 'work_name' and entity_dict["work_name"] is None:
+                if ent['entity'] == 'work_name' and entity_dict["work_name"]["code"] is None:
                     work_name = ent.get("value")
                     if work_name.isdigit():
                         entity_dict = self.reassign_type(work_name, entity_dict)
                     else:
-                        entity_dict["work_name"] = work_name
+                        entity_dict["work_name"] = {'code': work_name, 'name': work_name}
 
             # if inputted_medias is None, empty, or contains no key of medias.medias, throw error
             if inputted_medias and not set(inputted_medias.keys()).issubset(self.allowed_medias):
@@ -218,15 +217,9 @@ limit {limit}
                     answer += "Je n'ai pas trouvé de résultats comportant uniquement l'instrumentation que vous avez spécifié, j'ai donc élargi la recherche aux partitions comportant également d'autres instruments.\n"
                 else:
                     raise NoResultsException(f"No results found for medias: {inputted_medias}")
+
             formatted_results = "\n".join(results)
-            logging.info(len(results))
-            answer += f"Voici les "
-            if len(results) >= MAX_RESULTS_TOTAL:
-                answer += f"{len(results)} premières "
-            answer += "partitions que j'ai trouvées"
-            if worded_mediums:
-                answer += f" avec {worded_mediums}"
-            answer += f":\n{formatted_results}"
+            answer = self.format_answer(answer, results, entity_dict, worded_mediums, formatted_results=formatted_results)
         except NoResultsException as e:
             logging.info(traceback.print_exc())
             answer += "Mais je n'ai pas trouvé de résultats pour votre recherche dans la base de données de la Philharmonie."
@@ -246,12 +239,15 @@ limit {limit}
             url = res["scoreUrl"]["value"]
             title = res["scoreTitleLabel"]["value"]
             compositeur = res["compositeurLabel"]["value"]
-            if DEBUG:
+            if DEBUG and entity_dict["work_name"]["code"] is not None:
                 score = res.get("scoreResearch", {}).get("value", "")
-                score = str(round(float(score), 2))
+                try:
+                    score = str(round(float(score), 2))
+                except:
+                    score = ""
+                texts.append(f"- {f'[Score recherche: {score}] '} {compositeur}: [{title}]({url})")
             else:
-                score = ""
-            texts.append(f"- {f'[Score recherche: {score}] '} {compositeur}: [{title}]({url})")
+                texts.append(f"- {compositeur}: [{title}]({url})")
         return texts, worded_mediums
 
     def format_sparql_query(self, inputted_medias: dict, entity_dict: dict, exclusive: bool) -> str:
@@ -288,8 +284,8 @@ values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {for
             
         #calculer la quantité totale d'instruments
         if exclusive and inputted_medias:
-            if entity_dict["formation"] is not None:
-                total = entity_dict["formation"]
+            if entity_dict["formation"]["code"] is not None:
+                total = entity_dict["formation"]["code"]
             else:
                 total = sum(inputted_medias.values())
             filters += f"""
@@ -298,28 +294,28 @@ values (?input_quantity_total) {{(\"{total}\"^^xsd:integer)}}
             """
 
         # Level
-        if entity_dict["level"] is not None:
+        if entity_dict["level"]["code"] is not None:
             filters += f"""
-values (?input_educational_level) {{ (<https://data.philharmoniedeparis.fr/vocabulary/edudational-level/{entity_dict["level"]}>)}}
+values (?input_educational_level) {{ (<https://data.philharmoniedeparis.fr/vocabulary/edudational-level/{entity_dict["level"]["code"]}>)}}
 ?castingDetail ecrm:P103_was_intended_for ?input_educational_level.
 ?input_educational_level skos:prefLabel ?educationLevelLabel.
             """
         # Genre
-        if entity_dict["genre"] is not None:
-            while len(entity_dict["genre"]) < 7:
-                entity_dict["genre"] = "0" + entity_dict["genre"]
+        if entity_dict["genre"]["code"] is not None:
+            while len(entity_dict["genre"]["code"]) < 7:
+                entity_dict["genre"]["code"] = "0" + entity_dict["genre"]["code"]
             filters += f"""
-values (?input_genre ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["genre"]}>)}}
+values (?input_genre ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["genre"]["code"]}>)}}
 ?score mus:U12_has_genre ?input_genre.
 ?input_genre skos:prefLabel ?genrelabel.
             """
         
         # Agent
-        if entity_dict["agent"] is not None:
-            while len(entity_dict["agent"]) < 7:
-                entity_dict["agent"] = "0" + entity_dict["agent"]
+        if entity_dict["agent"]["code"] is not None:
+            while len(entity_dict["agent"]["code"]) < 7:
+                entity_dict["agent"]["code"] = "0" + entity_dict["agent"]["code"]
             filters += f"""
-values (?input_agent_role ?input_agent ) {{ (<http://data.bnf.fr/vocabulary/roles/r220/> <https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["agent"]}>) }}
+values (?input_agent_role ?input_agent ) {{ (<http://data.bnf.fr/vocabulary/roles/r220/> <https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["agent"]["code"]}>) }}
 ?creation  mus:R24_created ?score .
 ?creation ecrm:P9_consists_of ?task.
 ?task ecrm:P14_carried_out_by ?input_agent.
@@ -329,21 +325,22 @@ filter (lang(?roleLabel)=\"fr\")
 ?input_agent rdfs:label ?agentLabel.
 """
 
-        if entity_dict["period"] is not None:
-            while len(entity_dict["period"]) < 7:
-                entity_dict["period"] = "0" + entity_dict["period"]
+        if entity_dict["period"]["code"] is not None:
+            while len(entity_dict["period"]["code"]) < 7:
+                entity_dict["period"]["code"] = "0" + entity_dict["period"]["code"]
             filters += f"""
-values (?input_categorie ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["period"]}>)}}
+values (?input_categorie ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["period"]["code"]}>)}}
 ?score mus:U19_is_categorized_as ?input_categorie.
 ?input_categorie skos:prefLabel ?categorieLabel.
 """
 
 
-        if entity_dict["work_name"] is not None:
+        if entity_dict["work_name"]["code"] is not None:
+            logging.info(entity_dict["work_name"]["code"])
             filters += f"""
 values (?classes ) {{ (efrbroo:F24_Publication_Expression)(mus:M167_Publication_Expression_Fragment)}} 
 ?search a luc-index:TitleIndex ;
-    luc:query "{entity_dict["work_name"]}" ;  
+    luc:query "{entity_dict["work_name"]["code"]}" ;  
     luc:entities ?score .
     ?score a ?classes.
     ?score luc:score ?scoreResearch .
@@ -352,11 +349,11 @@ values (?classes ) {{ (efrbroo:F24_Publication_Expression)(mus:M167_Publication_
     luc:snippetText ?snippetText .
 """
 
-        if entity_dict["location"] is not None:
-            while len(entity_dict["location"]) < 7:
-                entity_dict["location"] = "0" + entity_dict["location"]
+        if entity_dict["location"]["code"] is not None:
+            while len(entity_dict["location"]["code"]) < 7:
+                entity_dict["location"]["code"] = "0" + entity_dict["location"]["code"]
             filters += f"""
-values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["location"]}>) }}
+values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["location"]["code"]}>) }}
 ?score ecrm:P2_has_type ?localisation.
 ?localisation skos:prefLabel ?localisationLabel.
 """
@@ -379,6 +376,7 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
         # Return highest match
         closest_match = None
         closest_match_ratio = 81
+        logging.info(f"MDRRR {value}")
         for key in candidates:
             for cand in candidates[key]:
                 cand = cand.lower()
@@ -391,7 +389,7 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
             return None, None
         return closest_match, candidates[closest_match][0]
 
-    def reassign_type(self, entity, entity_dict):
+    def reassign_type(self, entity_code, entity_dict):
         authorized_values = {
             "genre": genres.genres, 
             "agent": agents.agents,
@@ -399,12 +397,27 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
             "location": locations.locations
         }
         for entity_type, authorized in authorized_values.items():
-            if entity in authorized:
-                entity_dict[entity_type] = entity
+            if entity_code in authorized:
+                entity_dict[entity_type]["code"] = entity_code
+                entity_dict[entity_type]["name"] = authorized[entity_code][0]
                 return entity_dict
         return entity_dict
-    # def reassign_type(self, entity, expected_authorized_values, value):
-    #     authorized_values = [genres.genres, agents.agents, periods.periods, locations.locations]
-    #     if entity.isdigit() and entity not in expected_authorized_values:
-    #         for values in authorized_values:
-    #             if entity in values: 
+
+    def format_answer(self, answer, results, entity_dict, worded_mediums, formatted_results):
+        answer += f"Voici les "
+        if len(results) >= MAX_RESULTS_TOTAL:
+            answer += f"{len(results)} premières "
+        answer += "partitions que j'ai trouvées"
+        criterias = [val["name"] for val in entity_dict.values() if val["name"] is not None]
+        if worded_mediums: 
+            criterias += [worded_mediums]
+        if criterias:
+            answer += f" pour les critères" if len(criterias) > 1 else f" pour le critère"
+            for i, entity_name in enumerate(criterias):
+                answer += f" {entity_name}"
+                if i < len(criterias) - 2:
+                    answer += ","
+                elif i == len(criterias) - 2:
+                    answer += " et"
+        answer += f":\n{formatted_results}"
+        return answer
