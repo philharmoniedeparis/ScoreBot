@@ -136,7 +136,7 @@ limit {limit}
                     if level not in levels.all_levels:
                         level, level_name = self.get_closest_event(level, levels.all_levels)
                         logging.info(f"Parsed level: {level}")
-                    entity_dict["level"] = {'code': level, 'name': levels.all_levels.get(level, [""])[0]}
+                    entity_dict["level"] = {'code': level, 'name': levels.all_levels.get(level, [None])[0]}
 
                 if ent['entity'] == 'formation' and entity_dict["formation"]["code"] is None:
                     formation = ent.get("value")
@@ -154,7 +154,7 @@ limit {limit}
                             formation = None
                             break
                         j += 1
-                    entity_dict["formation"] = {'code': formation, 'name': formations.formations.get(formation, ["",""])[1]}
+                    entity_dict["formation"] = {'code': formation, 'name': formations.formations.get(formation, [None, None])[1]}
 
 
                 if ent['entity'] == 'genre' and entity_dict["genre"]["code"] is None:
@@ -165,7 +165,7 @@ limit {limit}
                         if genre not in genres.genres:
                             genre, genre_name = self.get_closest_event(genre, genres.genres)
                             logging.info(f"Parsed genre: {genre}")
-                        entity_dict["genre"] = {'code': genre, 'name': genres.genres.get(genre, [""])[0]}
+                        entity_dict["genre"] = {'code': genre, 'name': genres.genres.get(genre, [None])[0]}
 
                 if ent['entity'] == 'agent' and entity_dict["agent"]["code"] is None:
                     agent = ent.get("value")
@@ -175,7 +175,7 @@ limit {limit}
                         if agent not in agents.agents:
                             agent, agent_name = self.get_closest_event(agent, agents.agents)
                             logging.info(f"Parsed agent: {agent}")
-                        entity_dict["agent"] = {'code': agent, 'name': agents.agents.get(agent,[""])[0]}
+                        entity_dict["agent"] = {'code': agent, 'name': agents.agents.get(agent,[None])[0]}
 
                 if ent['entity'] == 'period' and entity_dict["period"]["code"] is None:
                     period = ent.get("value")
@@ -185,7 +185,7 @@ limit {limit}
                         if period not in periods.periods:
                             period, period_name = self.get_closest_event(period, periods.periods)
                             logging.info(f"Parsed period: {period}")
-                        entity_dict["period"] = {'code': period, 'name': periods.periods.get(period,[""])[0]}
+                        entity_dict["period"] = {'code': period, 'name': periods.periods.get(period,[None])[0]}
                         
                 if ent['entity'] == 'location' and entity_dict["location"]["code"] is None:
                     location = ent.get("value")
@@ -195,7 +195,7 @@ limit {limit}
                         if location not in locations.locations:
                             location, location_name = self.get_closest_event(location, locations.locations)
                             logging.info(f"Parsed location: {location}")
-                        entity_dict["location"] = {'code': location, 'name': locations.locations.get(location, [""])[0]}
+                        entity_dict["location"] = {'code': location, 'name': locations.locations.get(location, [None])[0]}
     
                 if ent['entity'] == 'work_name' and entity_dict["work_name"]["code"] is None:
                     work_name = ent.get("value")
@@ -376,10 +376,8 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
         # Return highest match
         closest_match = None
         closest_match_ratio = 81
-        logging.info(f"MDRRR {value}")
         for key in candidates:
             for cand in candidates[key]:
-                cand = cand.lower()
                 ratio = fuzz.ratio(value, cand)
                 if ratio > closest_match_ratio:
                     print(value, cand)

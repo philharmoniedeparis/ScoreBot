@@ -10,6 +10,8 @@ work_names = {
         "Symphonie fantastique",
         "traviata",
         "Traviata",
+        "gymnopédie",
+        "Gymnopedies",
         "5e Symphonie",
         "la 5eme symphonie",
         "5eme symphonie",
