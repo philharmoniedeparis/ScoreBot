@@ -150,6 +150,11 @@ raw_sentences = {
             "je cherche des _GENRE",
 
             # AGENTS
+            "_FORMATION de _MEDIUM de _AGENT",
+            "_FORMATION avec _MEDIUM de _AGENT",
+            "Je veux un _FORMATION avec _MEDIUM de _AGENT",
+            "Je cherche un _FORMATION avec _MEDIUM de _AGENT",
+            "_FORMATION pour _MEDIUM écrite par _AGENT",
             "Donne moi les partitions pour une _MEDIUM et un _MEDIUM de _AGENT _LEVEL_SENTENCE.",
             "Je cherche la partition d'une oeuvre _GENRE de _AGENT",
             "Je cherche la partition d'une oeuvre de _AGENT _LEVEL_SENTENCE",
@@ -198,6 +203,9 @@ raw_sentences = {
             "je veux les _GENRE écrits par _AGENT",
 
             # FORMATIONS
+            "_FORMATION de _MEDIUM",
+            "_FORMATION avec _MEDIUM",
+            "_FORMATION pour _MEDIUM",
             "Je cherche un _FORMATION _MEDIUM _MEDIUM",
             "Je cherche une _FORMATION _MEDIUM _MEDIUM",
             "Je cherche une _FORMATION 2 _MEDIUM 1 _MEDIUM",
