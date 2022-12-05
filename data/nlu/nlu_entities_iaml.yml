@@ -584,10 +584,6 @@ nlu:
     - flûte à coulisse
     - jazz flûte
 
-- synonym: "mui"
-  examples: |
-    - instrument
-
 - synonym: "mui__y"
   examples: |
     - instrument - ethnique
@@ -607,11 +603,6 @@ nlu:
 - synonym: "mwh"
   examples: |
     - sifflet
-
-- synonym: "mzz"
-  examples: |
-    - autre
-    - divers
 
 - synonym: "oba"
   examples: |
