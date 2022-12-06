@@ -6,10 +6,14 @@ nlu:
   examples: |
     - Renaissance
 
+- synonym: "145878"
+  examples: |
+    - Moyen âge
+    - médiéval
+    - medieval
+
 - synonym: "144431"
   examples: |
-    - contemporain
-    - contemporaine
     - 20 ème siècle
     - 20e siècle
     - XXème siècle
@@ -32,15 +36,10 @@ nlu:
     - IIe siècle
     - Deuxième siècle
 
-- synonym: "825416"
+- synonym: "149786"
   examples: |
-    - Antiquité chinoise
-    - Chine ancienne
-
-- synonym: "137714"
-  examples: |
-    - Antiquité égyptienne
-    - Egypte ancienne
+    - Antiquité
+    - antiquite
 
 - synonym: "145874"
   examples: |
@@ -66,30 +65,18 @@ nlu:
     - VIIIe siècle
     - Huitième siècle
 
-- synonym: "149789"
+- synonym: "145877"
   examples: |
-    - Antiquité gauloise
-    - Gaule antique
+    - Empire ottoman
 
-- synonym: "149790"
+- synonym: "892163"
   examples: |
-    - Antiquité grecque
-    - Grèce antique
+    - Révolution russe
 
-- synonym: "139127"
+- synonym: "1023735"
   examples: |
-    - Antiquité hébraïque
-    - Hébreu
-
-- synonym: "149808"
-  examples: |
-    - Protohistoire
-    - Protohistory
-
-- synonym: "144381"
-  examples: |
-    - Antiquité romaine
-    - Rome antique
+    - Risorgimento
+    - Risorgimento
 
 - synonym: "145866"
   examples: |
@@ -202,7 +189,6 @@ nlu:
     - XVII ème siècle
     - XVIIe siècle
     - Dix-septième siècle
-    - baroque
 
 - synonym: "145870"
   examples: |
@@ -211,7 +197,6 @@ nlu:
     - XVIII ème siècle
     - XVIIIe siècle
     - Dix-huitième siècle
-    - classique
 
 - synonym: "67731"
   examples: |
@@ -225,6 +210,16 @@ nlu:
     - 20 ème siècle - 1 ère moitié
     - 20e siècle première moitié
 
+- synonym: "825416"
+  examples: |
+    - Antiquité chinoise
+    - Chine ancienne
+
+- synonym: "137714"
+  examples: |
+    - Antiquité égyptienne
+    - Egypte ancienne
+
 - synonym: "67954"
   examples: |
     - Révolution de 1848
@@ -232,18 +227,32 @@ nlu:
 - synonym: "67990"
   examples: |
     - IIIE Reich
+    - IIIE Reich
 
-- synonym: "145877"
+- synonym: "149789"
   examples: |
-    - Empire ottoman
+    - Antiquité gauloise
+    - Gaule antique
 
-- synonym: "892163"
+- synonym: "149790"
   examples: |
-    - Révolution russe
+    - Antiquité grecque
+    - Grèce antique
 
-- synonym: "1023735"
+- synonym: "139127"
   examples: |
-    - Risorgimento
+    - Antiquité hébraïque
+    - Hébreu
+
+- synonym: "149808"
+  examples: |
+    - Protohistoire
+    - Protohistory
+
+- synonym: "144381"
+  examples: |
+    - Antiquité romaine
+    - Rome antique
 
 - synonym: "137679"
   examples: |
