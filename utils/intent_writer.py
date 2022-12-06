@@ -151,6 +151,10 @@ raw_sentences = {
 
             # AGENTS
             "_FORMATION de _MEDIUM de _AGENT",
+            "_FORMATION d'_MEDIUM d'_AGENT",
+            "_FORMATION de _MEDIUM d'_AGENT",
+            "_FORMATION de _MEDIUM _AGENT",
+            "_FORMATION pour _MEDIUM d'_AGENT",
             "_FORMATION avec _MEDIUM de _AGENT",
             "Je veux un _FORMATION avec _MEDIUM de _AGENT",
             "Je cherche un _FORMATION avec _MEDIUM de _AGENT",
@@ -204,6 +208,9 @@ raw_sentences = {
 
             # FORMATIONS
             "_FORMATION de _MEDIUM",
+            "_FORMATION de _MEDIUM.",
+            "_FORMATION de _MEDIUM?",
+            "_FORMATION d'_MEDIUM",
             "_FORMATION avec _MEDIUM",
             "_FORMATION pour _MEDIUM",
             "Je cherche un _FORMATION _MEDIUM _MEDIUM",
