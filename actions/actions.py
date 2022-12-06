@@ -219,13 +219,11 @@ limit {limit}
                     raise NoResultsException(f"No results found for medias: {inputted_medias}")
 
             formatted_results = "\n".join(results)
-            answer = self.format_answer(answer, results, entity_dict, worded_mediums, formatted_results=formatted_results)
-        except NoResultsException as e:
-            logging.info(traceback.print_exc())
-            answer += "Mais je n'ai pas trouvé de résultats pour votre recherche dans la base de données de la Philharmonie."
+            answer += self.add_results_and_criterias(results, entity_dict, worded_mediums, formatted_results=formatted_results)
         except Exception:
             logging.info(traceback.print_exc())
-            answer += "Mais je n'ai pas trouvé de résultats pour votre recherche. Veuillez reformuler votre question svp."
+            answer += "Mais je n'ai pas trouvé de résultats"
+            answer += self.add_results_and_criterias(results, entity_dict, worded_mediums)
         dispatcher.utter_message(text=answer)
         return []
 
@@ -245,9 +243,9 @@ limit {limit}
                     score = str(round(float(score), 2))
                 except:
                     score = ""
-                texts.append(f"- {f'[Score recherche: {score}] '} {compositeur}: [{title}]({url})")
+                texts.append(f"- {f'[{score}]'} [{title}]({url}), {compositeur}")
             else:
-                texts.append(f"- {compositeur}: [{title}]({url})")
+                texts.append(f"- [{title}]({url}), {compositeur}")
         return texts, worded_mediums
 
     def format_sparql_query(self, inputted_medias: dict, entity_dict: dict, exclusive: bool) -> str:
@@ -401,21 +399,32 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
                 return entity_dict
         return entity_dict
 
-    def format_answer(self, answer, results, entity_dict, worded_mediums, formatted_results):
-        answer += f"Voici les "
-        if len(results) >= MAX_RESULTS_TOTAL:
-            answer += f"{len(results)} premières "
-        answer += "partitions que j'ai trouvées"
-        criterias = [val["name"] for val in entity_dict.values() if val["name"] is not None]
-        if worded_mediums: 
-            criterias += [worded_mediums]
-        if criterias:
-            answer += f" pour les critères" if len(criterias) > 1 else f" pour le critère"
-            for i, entity_name in enumerate(criterias):
-                answer += f" {entity_name}"
-                if i < len(criterias) - 2:
-                    answer += ","
-                elif i == len(criterias) - 2:
-                    answer += " et"
-        answer += f":\n{formatted_results}"
-        return answer
+    def add_results_and_criterias(self, results, entity_dict, worded_mediums, formatted_results=None):
+        def add_criterias(entity_dict):
+            res = ""
+            criterias = [val["name"] for val in entity_dict.values() if val["name"] is not None]
+            if worded_mediums: 
+                criterias += [worded_mediums]
+            if criterias:
+                res += f" pour les critères" if len(criterias) > 1 else f" pour le critère"
+                for i, entity_name in enumerate(criterias):
+                    res += f" {entity_name}"
+                    if i < len(criterias) - 2:
+                        res += ","
+                    elif i == len(criterias) - 2:
+                        res += " et"
+            return res
+        worded_criterias = add_criterias(entity_dict)
+
+        worded_results = ""
+        if formatted_results:
+            worded_results += f"Voici les "
+            if len(results) >= MAX_RESULTS_TOTAL:
+                worded_results += f"{len(results)} premières "
+            worded_results += "partitions que j'ai trouvées"
+            worded_results += worded_criterias
+            worded_results += f":\n{formatted_results}"
+        else:
+            worded_results += f"{worded_criterias}."
+
+        return worded_results
