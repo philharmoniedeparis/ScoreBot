@@ -108,6 +108,8 @@ limit {limit}
         entities = sorted(tracker.latest_message['entities'], key= lambda d: d['start'])
         logging.info(entities)
         answer =    f"Il me semble que vous voulez obtenir une liste des partitions.\n"
+        worded_mediums = ""
+        results = []
         try:
             inputted_medias = dict()
             entity_dict = defaultdict(lambda: defaultdict(lambda: None))
@@ -223,7 +225,7 @@ limit {limit}
         except Exception:
             logging.info(traceback.print_exc())
             answer += "Mais je n'ai pas trouvé de résultats"
-            answer += self.add_results_and_criterias(results, entity_dict, worded_mediums)
+            answer += self.add_results_and_criterias(None, entity_dict, worded_mediums)
         dispatcher.utter_message(text=answer)
         return []
 
@@ -334,11 +336,12 @@ values (?input_categorie ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{en
 
 
         if entity_dict["work_name"]["code"] is not None:
-            logging.info(entity_dict["work_name"]["code"])
+            lucene_query = " AND ".join([word + "~0.6" for word in entity_dict["work_name"]["code"].split(" ")])
+            logging.info(lucene_query)
             filters += f"""
 values (?classes ) {{ (efrbroo:F24_Publication_Expression)(mus:M167_Publication_Expression_Fragment)}} 
 ?search a luc-index:TitleIndex ;
-    luc:query "{entity_dict["work_name"]["code"]}" ;  
+    luc:query "{lucene_query}" ;  
     luc:entities ?score .
     ?score a ?classes.
     ?score luc:score ?scoreResearch .
