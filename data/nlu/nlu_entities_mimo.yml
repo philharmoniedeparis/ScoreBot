@@ -3948,7 +3948,7 @@ nlu:
 - synonym: "3828"
   examples: |
     - clarinette alto
-    - clarinettiste
+    - clarinettiste alto
 
 - synonym: "3829"
   examples: |
@@ -3957,7 +3957,7 @@ nlu:
 - synonym: "3832"
   examples: |
     - clarinette basse
-    - clarinettiste
+    - clarinettiste basse
 
 - synonym: "3833"
   examples: |
@@ -3987,7 +3987,7 @@ nlu:
 - synonym: "3839"
   examples: |
     - clarinette contrebasse
-    - clarinettiste
+    - clarinettiste contrebasse
 
 - synonym: "3841"
   examples: |
@@ -4024,7 +4024,7 @@ nlu:
 - synonym: "3859"
   examples: |
     - cornets à pistons
-    - cornettiste
+    - cornettiste à pistons
 
 - synonym: "3860"
   examples: |
@@ -4054,7 +4054,7 @@ nlu:
 - synonym: "3868"
   examples: |
     - cornet à bouquin
-    - cornettiste
+    - cornettiste à bouquin
 
 - synonym: "3869"
   examples: |

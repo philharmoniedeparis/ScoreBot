@@ -27,6 +27,7 @@ pipeline:
     url: "http://localhost:8000"
     # dimensions to extract
     dimensions: ["number"]
+    locale: "fr_FR"
     # if not set the default timezone of Duckling is going to be used
     # needed to calculate dates from relative expressions like "tomorrow"
     timezone: "Europe/Paris"

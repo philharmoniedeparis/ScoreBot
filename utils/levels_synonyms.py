@@ -46,6 +46,7 @@ level_sentences = {
 level_worded = {
     "cycle-1": [
         "en 1er cycle",
+        "en 1e cycle",
         "de premier cycle",
         "de 1e année",
         "en 1ère année",
@@ -61,6 +62,8 @@ level_worded = {
     ],
     "cycle-2": [
         "en 2nd cycle",
+        "en 2e cycle",
+        "en 2eme cycle",
         "de second cycle",
         "de 5e année",
         "en 5ème année",
@@ -74,6 +77,7 @@ level_worded = {
     ],
     "cycle-3": [
         "en 3e cycle",
+        "en 3eme cycle",
         "de troisième cycle",
         "de 8e année",
         "en 8ème année",
