@@ -324,11 +324,6 @@ nlu:
     - oratorio
     - oratorios
 
-- synonym: "67197"
-  examples: |
-    - ouverture
-    - ouvertures
-
 - synonym: "68854"
   examples: |
     - passe-pied
@@ -530,7 +525,6 @@ nlu:
 - synonym: "885405"
   examples: |
     - chanson française
-    - chansons populaires françaises
 
 - synonym: "67162"
   examples: |
