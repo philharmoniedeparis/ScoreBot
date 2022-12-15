@@ -102,6 +102,12 @@ raw_sentences = {
             "Je voudrais trouver des partitions pour 3 _MEDIUM, 2 _MEDIUM, 1 _MEDIUM et une _MEDIUM _LEVEL_SENTENCE",
             "Je cherche des partitions pour _MEDIUM pour des musiciens avec un niveau _LEVEL_WORDED",
             "Je souhaite trouver des œuvres pour _MEDIUM _LEVEL_SENTENCE",
+            "Je cherche des partitions pour _MEDIUM _LEVEL_SENTENCE",
+            "Une partition pour _MEDIUM _LEVEL_SENTENCE",
+            "Une partition pour _MEDIUM _LEVEL_SENTENCE ?",
+            "partition pour _MEDIUM _LEVEL_SENTENCE",
+            "Une partition pour _MEDIUM _LEVEL_WORDED",
+            "partition _MEDIUM _LEVEL_SENTENCE",
 
             # GENRES
             "Je recherche une oeuvre _GENRE que l’on pourrait jouer avec un _MEDIUM, une _MEDIUM et un _MEDIUM",
@@ -427,35 +433,35 @@ raw_sentences = {
             "Je suis institutrice et souhaiterais faire apprendre à mes élèves une chanson traditionnelle : _WORK_NAME.",
             "Je cherche les paroles d’une chanson pour _LEVEL_SENTENCES qui est connue sous plusieurs noms : '_WORK_NAME', '_WORK_NAME' ou '_WORK_NAME'.",
             "Je cherche la partition gratuite du _WORK_NAME",
-            "Je veux une partition de la réduction pour _MEDIUM de la _WORK_NAME.",
-            "Je veux une partition de la réduction pour [piano]{\"entity\": \"medium\"} de _WORK_NAME.",
-            "Je veux une partition de la réduction pour _MEDIUM de la _WORK_NAME.",
+            "Je veux une partition de la réduction pour _MEDIUM de l'ouverture de _WORK_NAME.",
+            "Je cherche une partition de la réduction pour [piano]{\"entity\": \"medium\"} de l'ouverture de  _WORK_NAME.",
+            "Je veux une partition de la réduction pour _MEDIUM d'ouverture de _WORK_NAME.",
             "Je cherche une partition de la réduction pour [piano]{\"entity\": \"medium\"} de _WORK_NAME.",
-            "partition de réduction pour _MEDIUM de la _WORK_NAME.",
+            "partition de réduction pour _MEDIUM de l'ouverture de  _WORK_NAME.",
             "Je veux la partition de la réduction pour _MEDIUM de la _WORK_NAME.",
             "Je veux la partition pour _MEDIUM du _WORK_NAME.",
             "Partition pour _MEDIUM de _WORK_NAME.",
             "Je cherche une partition de la réduction pour _MEDIUM du _WORK_NAME.",
-            "Donne moi une partition de la réduction pour _MEDIUM de _WORK_NAME.",
+            "Donne moi une partition de la réduction pour _MEDIUM de l'ouverture du _WORK_NAME.",
             "Je cherche la partition de la musique de la _WORK_NAME",
             "Où trouver le conducteur de _WORK_NAME de _AGENT ?",
             "je cherche la partition de la version pour _MEDIUM des _WORK_NAME de _AGENT",
             "je veux la version pour _MEDIUM de la _WORK_NAME de _AGENT",
             "la partition des _WORK_NAME d'_AGENT",
         ],
-        "entities": [
-            ([preprocess_entity(i) for sublist in list(iaml.values()) + list(mimo.values()) for i in sublist], "_MEDIUM"),
-            ([preprocess_entity(i) for sublist in list(level_sentences.values()) for i in sublist], "_LEVEL_SENTENCE"),
-            ([preprocess_entity(i) for sublist in list(level_worded.values()) for i in sublist], "_LEVEL_WORDED"),
-            ([preprocess_entity(i) for sublist in list(level_timing.values()) for i in sublist], "_LEVEL_TIMING"),
-            ([preprocess_entity(i) for sublist in list(formations.values()) for i in sublist], "_FORMATION"),
-            ([preprocess_entity(i) for sublist in list(periods.values()) for i in sublist], "_PERIOD"),
-            ([preprocess_entity(i, lower=False) for sublist in list(locations.values()) for i in sublist], "_LOCATION_NOUN"),
-            ([preprocess_entity(i, lower=False) for sublist in list(work_names.values()) for i in sublist], "_WORK_NAME"),
-            ([preprocess_entity(sublist[2]) for sublist in list(locations.values())[:50]], "_LOCATION_ADJECTIVE"),
-            (GENRES, "_GENRE"),
-            (AGENTS, "_AGENT"),
-        ],
+        "entities": {
+            "_MEDIUM": [preprocess_entity(i) for sublist in list(iaml.values()) + list(mimo.values()) for i in sublist],
+            "_LEVEL_SENTENCE": [preprocess_entity(i) for sublist in list(level_sentences.values()) for i in sublist],
+            "_LEVEL_WORDED": [preprocess_entity(i) for sublist in list(level_worded.values()) for i in sublist],
+            "_LEVEL_TIMING": [preprocess_entity(i) for sublist in list(level_timing.values()) for i in sublist],
+            "_FORMATION": [preprocess_entity(i) for sublist in list(formations.values()) for i in sublist],
+            "_PERIOD": [preprocess_entity(i) for sublist in list(periods.values()) for i in sublist],
+            "_LOCATION_NOUN": [preprocess_entity(i, lower=False) for sublist in list(locations.values()) for i in sublist],
+            "_WORK_NAME": [preprocess_entity(i, lower=False) for sublist in list(work_names.values())[:100] for i in sublist],
+            "_LOCATION_ADJECTIVE": [preprocess_entity(sublist[2]) for sublist in list(locations.values())[:50]],
+            "_GENRE": GENRES,
+            "_AGENT": AGENTS,
+        },
     },
 }
 
@@ -503,12 +509,12 @@ if __name__ == "__main__":
                 for sent in data["sentences"]:
                     f.write(f"    - {sent}\n")
                 continue
-            entity_generator, entity_keywords = entities_round_robin(data["entities"])
-            cycle_sentences = itertools.cycle(data['sentences'])
-            for entity_tuples in entity_generator:
-                # Replace the keyword with the entity 
-                sent = next(cycle_sentences)
-                for i, entity in enumerate(entity_tuples):
-                    sent = sent.replace(entity_keywords[i], f"[{entity}]{{\"entity\": \"{keyword_to_ent_type[entity_keywords[i]]}\"}}")
-                f.write(f"    - {sent}\n")
+            entities = {entity_type: itertools.cycle(entity_list) for entity_type, entity_list in data["entities"].items()}
+            for i in range(15):
+                for sent in data["sentences"]:
+                    for entity_keyword in entities.keys():
+                        if entity_keyword in sent:
+                            ent = next(entities[entity_keyword])
+                            sent = sent.replace(entity_keyword, f"[{ent}]{{\"entity\": \"{keyword_to_ent_type[entity_keyword]}\"}}")
+                    f.write(f"    - {sent}\n")
             
