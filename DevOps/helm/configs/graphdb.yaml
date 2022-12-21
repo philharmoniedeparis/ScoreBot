@@ -61,6 +61,7 @@ metadata:
     ingress.kubernetes.io/force-ssl-redirect: 'true'
     ingress.kubernetes.io/ssl-redirect: 'true'
     kubernetes.io/tls-acme: 'true'
+    nginx.ingress.kubernetes.io/proxy-body-size: "100M"
     #nginx.ingress.kubernetes.io/auth-type: basic 
     #nginx.ingress.kubernetes.io/auth-secret: graphdb-protected
     #nginx.ingress.kubernetes.io/auth-realm: "Enter your credentials"
