@@ -245,7 +245,7 @@ genres = {
     "68905": ["Nocturne","nocturnes"],
     "151413": ["Opera bouffe","opera buffa"],
     "67732": ["Oratorio","oratorios"],
-    "67197": ["Ouverture","ouvertures"],
+    #"67197": ["Ouverture","ouvertures"], no results
     "68854": ["Passe-pied","Passepied"],
     "68792": ["Pastorale","pastourelle"],
     "67352": ["Morceau de concours","Pièce de concours"],

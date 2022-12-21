@@ -984,7 +984,6 @@ nlu:
 
 - synonym: "61694"
   examples: |
-    - davis
     - alan davis
 
 - synonym: "692964"
@@ -6199,7 +6198,6 @@ nlu:
 
 - synonym: "772094"
   examples: |
-    - davis
     - carl davis
 
 - synonym: "37855"
@@ -24079,7 +24077,6 @@ nlu:
 
 - synonym: "54559"
   examples: |
-    - davis
     - jean-michel davis
 
 - synonym: "38543"
@@ -34008,7 +34005,6 @@ nlu:
 
 - synonym: "896747"
   examples: |
-    - ayer
     - nathaniel davis ayer
 
 - synonym: "37866"
@@ -40098,7 +40094,6 @@ nlu:
 
 - synonym: "786393"
   examples: |
-    - davis
     - roger e. davis
 
 - synonym: "52446"
@@ -41788,7 +41783,6 @@ nlu:
 
 - synonym: "34216"
   examples: |
-    - stravinski
     - soulima stravinski
 
 - synonym: "887013"
@@ -43343,7 +43337,6 @@ nlu:
 
 - synonym: "37693"
   examples: |
-    - davis
     - thomas l. davis
 
 - synonym: "37876"
@@ -45485,7 +45478,6 @@ nlu:
 
 - synonym: "50401"
   examples: |
-    - davis
     - william davis
 
 - synonym: "46935"

@@ -1,4 +1,5 @@
 models
+results
 env.yml
 action.json
 endpoints.yml
@@ -137,3 +138,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.history/
