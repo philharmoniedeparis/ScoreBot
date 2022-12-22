@@ -1160,7 +1160,6 @@ nlu:
 - synonym: "sfi"
   examples: |
     - vièle
-    - vièle
 
 - synonym: "sob"
   examples: |
@@ -1473,7 +1472,6 @@ nlu:
 - synonym: "vte"
   examples: |
     - ténor
-    - taille
     - ténor
     - ténorino
 

@@ -1378,7 +1378,7 @@ agents = {
 	"759240":	['musicale', "Chambre syndicale de l'édition musicale"],
 	"421925":	['(Honoré)', 'Champion (Honoré)'],
 	"435072":	['Chandos', 'Chandos'],
-	"454389":	['(Le)', 'Chant du monde (Le)'],
+	"454389":	['Chant du monde'],
 	"34376":	['Auber', 'Chantal Auber'],
 	"49884":	['Boulay', 'Chantal Boulay'],
 	"462891":	['Chanterelle', 'Chanterelle'],

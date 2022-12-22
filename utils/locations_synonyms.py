@@ -41,7 +41,7 @@ locations = {
     "142483": ["Lithuanie","LITUANIE","lithuanien"],
     "146684": ["Londres","LONDON","londonien"],
     "155237": ["Macédoine","Macedonia","macédonien"],
-    "153975": ["Mexique","MEXICO (COUNTRY)","mexicain"],
+    "153975": ["Mexique","MEXICO", "mexicain"],
     "154063": ["Maroc","Morocco","marocaine"],
     "147181": ["Naples","Napoli","napolitaine"],
     "145649": ["Norvège","NORWAY","norvégien"],
