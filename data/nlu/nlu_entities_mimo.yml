@@ -4102,11 +4102,6 @@ nlu:
   examples: |
     - petit bugle
 
-- synonym: "3883"
-  examples: |
-    - flûtes
-    - flûtiste
-
 - synonym: "3884"
   examples: |
     - algoja
@@ -4242,10 +4237,6 @@ nlu:
 - synonym: "3947"
   examples: |
     - fluier
-
-- synonym: "3955"
-  examples: |
-    - flûte
 
 - synonym: "3956"
   examples: |
@@ -4602,6 +4593,8 @@ nlu:
 
 - synonym: "4093"
   examples: |
+    - flûte
+    - flûtes
     - flûte traversière
 
 - synonym: "4096"

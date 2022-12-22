@@ -1595,11 +1595,8 @@ nlu:
   examples: |
     - flûte
     - flûte allemande
-    - flûte
     - flûte d'allemagne
-    - flûte
     - flûte traversière
-    - flûte
     - traversière
 
 - synonym: "wflf"
