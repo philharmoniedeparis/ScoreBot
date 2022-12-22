@@ -34713,7 +34713,6 @@ nlu:
 
 - synonym: "421066"
   examples: |
-    - contemporaines
     - nouvelles éditions contemporaines
 
 - synonym: "440181"
@@ -44100,7 +44099,6 @@ nlu:
 
 - synonym: "451966"
   examples: |
-    - jazz
     - union des musiciens de jazz
 
 - synonym: "63869"
