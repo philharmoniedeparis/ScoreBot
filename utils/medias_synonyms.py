@@ -1328,7 +1328,7 @@ mimo = {
     "3092": ["Valimba",],
     "3099": ["Xylophone","xylophoniste"],
     "3100": ["Zanga",],
-    "3101": ["Instruments à cordes","à cordes", "à corde", "a cordes"],
+    "3101": ["Instruments à cordes","à cordes", "à corde", "a cordes", "cordes"],
     "3102": ["Cistres",],
     "3103": ["Harpe-luth arquée",],
     "3104": ["Archicistre",],

@@ -239,6 +239,7 @@ raw_sentences = {
             "Je voudrais trouver des arrangements de _GENRE pour _FORMATION à _MEDIUM",
             "Je cherche des partitions pour _FORMATION à _MEDIUM",
             "Je cherche des partitions de _GENRE pour _FORMATION à _MEDIUM",
+            "Je voudrais trouver des arrangements de musique _GENRE pour _FORMATION _MEDIUM",
 
             # LOCATIONS / PERIOD
             "musique d'_LOCATION_NOUN",
