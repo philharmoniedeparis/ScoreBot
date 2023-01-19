@@ -52,7 +52,7 @@ class NoEntityFoundException(Exception):
 class ActionGetSheetMusicByCasting(Action):
     def __init__(self):
         super(ActionGetSheetMusicByCasting, self).__init__()
-        self.route = """ 
+        self.route = """
 PREFIX luc: <http://www.ontotext.com/connectors/lucene#>
 PREFIX luc-index: <http://www.ontotext.com/connectors/lucene/instance#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -335,9 +335,9 @@ filter (lang(?roleLabel)=\"fr\")
             while len(entity_dict["period"]["code"]) < 7:
                 entity_dict["period"]["code"] = "0" + entity_dict["period"]["code"]
             filters += f"""
-values (?input_categorie ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["period"]["code"]}>)}}
-?score mus:U19_is_categorized_as ?input_categorie.
-?input_categorie skos:prefLabel ?categorieLabel.
+values (?input_period ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["period"]["code"]}>)}}
+?score mus:U52_has_context ?input_period.
+?input_period skos:prefLabel ?categorieLabel.
 """
 
 
@@ -361,7 +361,7 @@ values (?classes ) {{ (efrbroo:F24_Publication_Expression)(mus:M167_Publication_
                 entity_dict["location"]["code"] = "0" + entity_dict["location"]["code"]
             filters += f"""
 values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["location"]["code"]}>) }}
-?score ecrm:P2_has_type ?localisation.
+?score mus:U65_has_geographical_context ?localisation.
 ?localisation skos:prefLabel ?localisationLabel.
 """
 
