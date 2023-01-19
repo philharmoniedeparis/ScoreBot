@@ -27,7 +27,7 @@ from utils import formations_synonyms as formations
 # Get Gitlab variables
 USERNAME = os.environ.get("GRAPHDB_USERNAME")
 PASSWORD = os.environ.get("GRAPHDB_PASSWORD")
-GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN", "http://graphdb.sparna.fr")
+GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN", "https://graphdb.prd.iumio.fr")
 DEBUG = True if GRAPHDB_DOMAIN == "http://graphdb.sparna.fr" else False
 MAX_RESULTS_TOTAL = 25
 
@@ -35,6 +35,7 @@ MAX_RESULTS_TOTAL = 25
 try:
     AUTH_REQUEST = requests.post(f"{GRAPHDB_DOMAIN}/rest/login", headers={"Content-type": "application/json"}, json={"username":USERNAME, "password": PASSWORD}, timeout=10)
     TOKEN = AUTH_REQUEST.headers.get("Authorization")
+    logging.info("Connected to the GraphDB login endpoint.")
 except requests.exceptions.ConnectTimeout:
     TOKEN = ""
     logging.warning("Could not reach the GraphDB login endpoint. If this is the prod environment, the succeeding requests may fail.")
@@ -320,8 +321,9 @@ values (?input_genre ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
         if entity_dict["agent"]["code"] is not None:
             while len(entity_dict["agent"]["code"]) < 7:
                 entity_dict["agent"]["code"] = "0" + entity_dict["agent"]["code"]
+# values (?input_agent_role ) {{ (<http://data.bnf.fr/vocabulary/roles/r220/>) }}
             filters += f"""
-values (?input_agent_role ?input_agent ) {{ (<http://data.bnf.fr/vocabulary/roles/r220/> <https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["agent"]["code"]}>) }}
+values (?input_agent ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["agent"]["code"]}>) }}
 ?creation  mus:R24_created ?score .
 ?creation ecrm:P9_consists_of ?task.
 ?task ecrm:P14_carried_out_by ?input_agent.
@@ -371,9 +373,10 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
 ?creation  mus:R24_created   ?score .
 ?creation ecrm:P9_consists_of ?task.
 ?task ecrm:P14_carried_out_by ?compositeur.
-?task mus:U31_had_function <http://data.bnf.fr/vocabulary/roles/r220/>.
+?task mus:U31_had_function ?role.
 ?compositeur rdfs:label ?compositeurLabel.
 """
+# ?task mus:U31_had_function <http://data.bnf.fr/vocabulary/roles/r220/>.
 
         parsed_query = urllib.parse.quote_plus(self.route.format(filters=filters, limit=MAX_RESULTS_TOTAL), safe='/')
         return parsed_query, worded_mediums
