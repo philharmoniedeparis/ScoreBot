@@ -1208,7 +1208,8 @@ genres = {
         "pop music"
     ],
     "67958": [
-        "Musique romantique"
+        "Musique romantique",
+        "romantique",
     ],
     "68116": [
         "Musique de cirque"
@@ -1266,7 +1267,11 @@ genres = {
     ],
     "68290": [
         "Chanson traditionnelle",
+        "chansons populaires",
+        "Chansons traditionnelles",
         "chanson populaire",
+        "chanson populaires",
+        "chansons populaire",
         "chant populaire",
         "mélodie populaire"
     ],

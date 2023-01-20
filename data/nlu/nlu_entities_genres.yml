@@ -1068,6 +1068,7 @@ nlu:
 - synonym: "67958"
   examples: |
     - musique romantique
+    - romantique
 
 - synonym: "68116"
   examples: |
@@ -1142,7 +1143,11 @@ nlu:
 - synonym: "68290"
   examples: |
     - chanson traditionnelle
+    - chansons populaires
+    - chansons traditionnelles
     - chanson populaire
+    - chanson populaires
+    - chansons populaire
     - chant populaire
     - mélodie populaire
 

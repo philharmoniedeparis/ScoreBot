@@ -1,5 +1,6 @@
 locations = {
     "154021": ["Afrique","Africa","africain"],
+    "155340": ["France", "français", "française"],
     "144554": ["Albanie","ALBANIA","albanais"],
     "154060": ["Algérie","Algeria","algérien"],
     "144397": ["Amérique","America","américain"],
@@ -94,7 +95,6 @@ locations = {
     "136713": ["Cuba""cubain"],
     "142487": ["Estonie""estonien"],
     "144503": ["Flandres""flamand"],
-    "155340": ["France""français"],
     "874558": ["Gascogne""gascon"],
     "148845": ["Guadeloupe""guadeloupéen"],
     "153981": ["Guyane""guyanaise"],
