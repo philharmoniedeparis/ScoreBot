@@ -1161,6 +1161,10 @@ nlu:
   examples: |
     - vièle
 
+- synonym: "singer"
+  examples: |
+    - chanteur
+
 - synonym: "sob"
   examples: |
     - octobasse

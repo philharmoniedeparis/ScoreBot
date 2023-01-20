@@ -554,6 +554,7 @@ iaml = {
     ],
     "sdf": ["contrebasse à cinq cordes"],
     "sfi": ["vièle"],
+    "singer": ["chanteur"],
     "sob": ["octobasse", "basse gigantesque"],
     "spo": ["pochette", "poche", "pochette", "sourdine"],
     "spv": ["pardessus de viole", "quinton"],
