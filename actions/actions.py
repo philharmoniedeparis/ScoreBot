@@ -73,9 +73,10 @@ PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
 select distinct ?score ?scoreResearch ?snippetField ?snippetText ?identifier ?scoreUrl  ?scoreTitleLabel ?genrelabel ?responsibilityLabel ?educationLevelLabel ?agent ?agentLabel ?roleLabel ?input_quantity_total ?compositeurLabel
 
 where {{
-    {filters}
     ?score a <http://erlangen-crm.org/efrbroo/F24_Publication_Expression>.
     ?score mus:U13_has_casting ?casting .
+    ?casting mus:U23_has_casting_detail ?castingDetail .
+    {filters}
 
 # les partitions avec leur titre et statement of responsibility ...
     ?score  mus:U170_has_title_statement ?scoreTitle.
@@ -84,7 +85,6 @@ where {{
     ?U172_has_statement_of_responsibility_relating_to_title rdfs:label ?responsibilityLabel}}
     
 # ... et on veut récupérer tous les instruments du casting 
-    ?casting mus:U23_has_casting_detail ?castingDetail .
     ?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?medium.
     ?medium skos:prefLabel ?mediumLabel.
     filter (lang(?mediumLabel)="fr")
@@ -277,18 +277,25 @@ limit {limit}
             # Medium
             filters += f"""
 values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {formatted_medium})}}
-?input_medium_{i} skos:narrower* ?input_medium_{i}_list.
-?casting mus:U23_has_casting_detail ?castingDetail_{i}.
-?castingDetail_{i} mus:U30_foresees_quantity_of_mop ?input_quantity_{i} .
-# If we have a parent instrument (skos:narrower*), check that some children are contained by the score's casting
-FILTER EXISTS {{
-    # Get all the instruments of the score's casting
-    ?castingDetail_{i} philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?casting_instrument.
-    # Check that some casting_instruments are in score's casting
-    ?input_medium_{i}  skos:narrower* ?casting_instrument.
-}}
+
+# la partition doit pouvoir être jouée avec le medium i
+	?input_medium_{i} skos:narrower* ?input_medium_{i}_list.
+	?input_medium_{i} skos:prefLabel ?medium_{i}_label.
+	filter (lang(?medium_{i}_label)="fr")
+	?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?input_medium_{i}_list .
+	?castingDetail mus:U30_foresees_quantity_of_mop ?input_quantity_{i}.
             """
-            
+
+        """
+        ?castingDetail mus:U30_foresees_quantity_of_mop ?input_quantity_{i} .
+        # If we have a parent instrument (skos:narrower*), check that some children are contained by the score's casting
+        FILTER EXISTS {{
+            # Get all the instruments of the score's casting
+            ?castingDetail_{i} philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?casting_instrument_{i}.
+            # Check that some casting_instruments are in score's casting
+            ?input_medium_{i}  skos:narrower* ?casting_instrument_{i}.
+        }}
+        """
         #calculer la quantité totale d'instruments
         if exclusive and inputted_medias:
             if entity_dict["formation"]["code"] is not None:
