@@ -285,17 +285,6 @@ values (?input_quantity_{i} ?input_medium_{i}) {{ (\"{count}\"^^xsd:integer {for
 	?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?input_medium_{i}_list .
 	?castingDetail mus:U30_foresees_quantity_of_mop ?input_quantity_{i}.
             """
-
-        """
-        ?castingDetail mus:U30_foresees_quantity_of_mop ?input_quantity_{i} .
-        # If we have a parent instrument (skos:narrower*), check that some children are contained by the score's casting
-        FILTER EXISTS {{
-            # Get all the instruments of the score's casting
-            ?castingDetail_{i} philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?casting_instrument_{i}.
-            # Check that some casting_instruments are in score's casting
-            ?input_medium_{i}  skos:narrower* ?casting_instrument_{i}.
-        }}
-        """
         #calculer la quantité totale d'instruments
         if exclusive and inputted_medias:
             if entity_dict["formation"]["code"] is not None:
