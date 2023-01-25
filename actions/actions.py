@@ -166,7 +166,7 @@ limit {limit}
                         entity_dict = self.reassign_type(genre, entity_dict)
                     else:
                         if genre not in genres.genres:
-                            genre, genre_name = self.get_closest_event(genre, genres.genres)
+                            genre, _ = self.get_closest_event(genre, genres.genres)
                             logging.info(f"Parsed genre: {genre}")
                         entity_dict["genre"] = {'code': genre, 'name': genres.genres.get(genre, [None])[0]}
 
@@ -176,7 +176,7 @@ limit {limit}
                         entity_dict = self.reassign_type(agent, entity_dict)
                     else:
                         if agent not in agents.agents:
-                            agent, agent_name = self.get_closest_event(agent, agents.agents)
+                            agent, _ = self.get_closest_event(agent, agents.agents)
                             logging.info(f"Parsed agent: {agent}")
                         entity_dict["agent"] = {'code': agent, 'name': agents.agents.get(agent,[None])[0]}
 
@@ -186,7 +186,7 @@ limit {limit}
                         entity_dict = self.reassign_type(period, entity_dict)
                     else:
                         if period not in periods.periods:
-                            period, period_name = self.get_closest_event(period, periods.periods)
+                            period, _ = self.get_closest_event(period, periods.periods)
                             logging.info(f"Parsed period: {period}")
                         entity_dict["period"] = {'code': period, 'name': periods.periods.get(period,[None])[0]}
                         
@@ -196,7 +196,7 @@ limit {limit}
                         entity_dict = self.reassign_type(location, entity_dict)
                     else:
                         if location not in locations.locations:
-                            location, location_name = self.get_closest_event(location, locations.locations)
+                            location, _ = self.get_closest_event(location, locations.locations)
                             logging.info(f"Parsed location: {location}")
                         entity_dict["location"] = {'code': location, 'name': locations.locations.get(location, [None])[0]}
     
