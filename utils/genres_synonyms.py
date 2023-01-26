@@ -1086,7 +1086,7 @@ genres = {
         "Rap"
     ],
     "68016": [
-        "Reel"
+        "Reel", "Reels", "Reels celtiques", "Reel celtique"
     ],
     "68198": [
         "Reggae"

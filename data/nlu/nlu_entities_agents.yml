@@ -11123,22 +11123,18 @@ nlu:
 
 - synonym: "428388"
   examples: |
-    - marais
     - editions musicales du marais
 
 - synonym: "451817"
   examples: |
-    - européennes
     - editions musicales européennes
 
 - synonym: "597053"
   examples: |
-    - françaises
     - editions musicales françaises
 
 - synonym: "428789"
   examples: |
-    - salvador
     - editions musicales henri salvador
 
 - synonym: "811510"
@@ -11168,7 +11164,6 @@ nlu:
 
 - synonym: "459676"
   examples: |
-    - l'atelier
     - editions ouvrières - editions de l'atelier
 
 - synonym: "906987"

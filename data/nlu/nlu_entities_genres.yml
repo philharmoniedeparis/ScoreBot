@@ -909,6 +909,9 @@ nlu:
 - synonym: "68016"
   examples: |
     - reel
+    - reels
+    - reels celtiques
+    - reel celtique
 
 - synonym: "68198"
   examples: |

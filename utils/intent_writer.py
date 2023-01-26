@@ -155,7 +155,9 @@ raw_sentences = {
             "Des fac-similés de partitions de _GENRE",
             "Vous avez des partitions de _GENRE ?",
             "Qu'est-ce qui existe pour _MEDIUM en _GENRE _LOCATION_ADJECTIVE ?",
-            "Je souhaite accéder à des partitions pour _MEDIUM composées en France entre 1792 et 1830",
+            "Je souhaite accéder à des partitions pour _MEDIUM composées en _LOCATION_NOUN entre 1792 et 1830",
+            "Donne moi des oeuvres pour _MEDIUM composées en _LOCATION_NOUN au _PERIOD",
+            "Partitions de _MEDIUM écrites au _LOCATION_NOUN pendant _PERIOD",
             "Des partitions de _GENRE",
             "Des partitions de _GENRE pour _MEDIUM",
             "Des partitions pour _MEDIUM de _GENRE",
@@ -308,7 +310,6 @@ raw_sentences = {
             "Qu'est-ce que vous avez en musique d' _LOCATION_NOUN ?",
             "Qu'est-ce qui existe pour _FORMATION en musique de la _PERIOD ?",
             "Avez-vous des partitions pour _FORMATION en musique _PERIOD ?",
-            "Je souhaite accéder à des partitions pour _MEDIUM composées en _LOCATION_NOUN au _PERIOD",
             "Des partitions de musique _PERIOD pour _MEDIUM",
             "Des partitions pour _MEDIUM a capella de musique de la _PERIOD",
             "Des partitions pour _MEDIUM de la _PERIOD",
@@ -343,6 +344,8 @@ raw_sentences = {
             "je veux des _GENRE du _PERIOD",
             "_GENRE de la _PERIOD",
             "Je recherche des arrangements/transcriptions de musiques de _GENRE (en tout genre)",
+            "Je cherche des partitions de _MEDIUM du _PERIOD",
+            "Donne moi des oeuvres pour _MEDIUM datant du _PERIOD",
 
             # LOCATION ADJECTIVE
             "musique _LOCATION_ADJECTIVE",

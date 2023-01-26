@@ -343,11 +343,9 @@ values (?input_period ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entit
             lucene_query = " AND ".join([word + "~0.6" for word in entity_dict["work_name"]["code"].split(" ")])
             logging.info(lucene_query)
             filters += f"""
-values (?classes ) {{ (efrbroo:F24_Publication_Expression)(mus:M167_Publication_Expression_Fragment)}} 
 ?search a luc-index:TitleIndex ;
     luc:query "{lucene_query}" ;  
     luc:entities ?score .
-    ?score a ?classes.
     ?score luc:score ?scoreResearch .
     ?score luc:snippets ?snippet .
     ?snippet luc:snippetField ?snippetField ;
