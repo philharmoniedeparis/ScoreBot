@@ -27,7 +27,7 @@ from utils import formations_synonyms as formations
 # Get Gitlab variables
 USERNAME = os.environ.get("GRAPHDB_USERNAME")
 PASSWORD = os.environ.get("GRAPHDB_PASSWORD")
-GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN", "https://graphdb.prd.iumio.fr")
+GRAPHDB_DOMAIN = os.environ.get("GRAPHDB_DOMAIN", "http://graphdb.sparna.fr")
 DEBUG = True if GRAPHDB_DOMAIN == "http://graphdb.sparna.fr" else False
 MAX_RESULTS_TOTAL = 25
 
@@ -396,7 +396,8 @@ values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity
             "genre": genres.genres, 
             "agent": agents.agents,
             "period": periods.periods,
-            "location": locations.locations
+            "location": locations.locations,
+            "medium": {**medias.iaml, **medias.mimo}
         }
         for entity_type, authorized in authorized_values.items():
             if entity_code in authorized:
