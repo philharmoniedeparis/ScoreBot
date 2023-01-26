@@ -46,7 +46,7 @@ genres_first_export = {
     "67908": ["Théâtre musical","hörspiel scénique"],
     "68676": ["Intermezzo","intermède"],
     "67685": ["Entrée","intrada"],
-    "67564": ["Lied","lieder"],
+    "67564": ["Lied","lieder","lieder romantique","lieder romantiques"],
     "68684": ["Madrigal","madrigaux"],
     "68175": ["Marche","marche nuptiale"],
     "68625": ["Pot-pourri","medley"],
