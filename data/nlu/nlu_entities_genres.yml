@@ -272,6 +272,8 @@ nlu:
   examples: |
     - lied
     - lieder
+    - lieder romantique
+    - lieder romantiques
 
 - synonym: "68684"
   examples: |
