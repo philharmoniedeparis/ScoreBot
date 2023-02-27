@@ -505,7 +505,6 @@ nlu:
 - synonym: "2396"
   examples: |
     - dibu dimbwa
-    - dibu dimbwa
 
 - synonym: "2397"
   examples: |
@@ -574,7 +573,7 @@ nlu:
 - synonym: "2419"
   examples: |
     - washint
-    - washint
+    - cloche washint
 
 - synonym: "2420"
   examples: |
@@ -611,7 +610,7 @@ nlu:
 - synonym: "2429"
   examples: |
     - khartal
-    - kartal
+    - claquettes kartal
 
 - synonym: "2430"
   examples: |
@@ -677,7 +676,7 @@ nlu:
 - synonym: "2462"
   examples: |
     - ching
-    - ching
+    - cymbale ching
 
 - synonym: "2467"
   examples: |
@@ -707,7 +706,7 @@ nlu:
 - synonym: "2475"
   examples: |
     - kartal
-    - kartal
+    - cymbales kartal
 
 - synonym: "2476"
   examples: |
@@ -1324,7 +1323,7 @@ nlu:
 - synonym: "2760"
   examples: |
     - tar
-    - tar
+    - tambour tar
 
 - synonym: "2762"
   examples: |
@@ -1650,7 +1649,7 @@ nlu:
 - synonym: "2886"
   examples: |
     - kara
-    - kara
+    - timbale kara
 
 - synonym: "2887"
   examples: |
@@ -1770,7 +1769,7 @@ nlu:
 - synonym: "2937"
   examples: |
     - marimba
-    - marimba
+    - lamellaphone marimba
     - marimbiste
 
 - synonym: "2938"
@@ -1994,7 +1993,7 @@ nlu:
 - synonym: "3020"
   examples: |
     - dibu dimbwa
-    - dibu dimbwa
+    - hochet dibu dimbwa
 
 - synonym: "3021"
   examples: |
@@ -2152,7 +2151,7 @@ nlu:
 - synonym: "3079"
   examples: |
     - marimba
-    - marimba
+    - xylophone marimba
 
 - synonym: "3080"
   examples: |
@@ -2189,6 +2188,7 @@ nlu:
     - à cordes
     - à corde
     - a cordes
+    - cordes
 
 - synonym: "3102"
   examples: |
@@ -2398,8 +2398,7 @@ nlu:
 
 - synonym: "3198"
   examples: |
-    - rabab
-    - rabab
+    - vièle rabab
 
 - synonym: "3200"
   examples: |
@@ -2862,7 +2861,7 @@ nlu:
 - synonym: "3379"
   examples: |
     - kara
-    - kara
+    - luth kara
 
 - synonym: "3380"
   examples: |
@@ -2968,7 +2967,7 @@ nlu:
 - synonym: "3429"
   examples: |
     - rabab
-    - rabab
+    - luth rabab
 
 - synonym: "3433"
   examples: |
@@ -3050,7 +3049,7 @@ nlu:
 - synonym: "3471"
   examples: |
     - tar
-    - tar
+    - luth tar
 
 - synonym: "3473"
   examples: |
@@ -3277,7 +3276,7 @@ nlu:
 
 - synonym: "3559"
   examples: |
-    - ténor
+    - violon ténor
 
 - synonym: "3561"
   examples: |
@@ -3521,7 +3520,7 @@ nlu:
 - synonym: "3658"
   examples: |
     - kacapi
-    - kacapi
+    - cithare kacapi
 
 - synonym: "3659"
   examples: |
@@ -4102,11 +4101,6 @@ nlu:
   examples: |
     - petit bugle
 
-- synonym: "3883"
-  examples: |
-    - flûtes
-    - flûtiste
-
 - synonym: "3884"
   examples: |
     - algoja
@@ -4204,7 +4198,7 @@ nlu:
 - synonym: "3933"
   examples: |
     - duduk
-    - duduk
+    - flute duduk
 
 - synonym: "3936"
   examples: |
@@ -4242,10 +4236,6 @@ nlu:
 - synonym: "3947"
   examples: |
     - fluier
-
-- synonym: "3955"
-  examples: |
-    - flûte
 
 - synonym: "3956"
   examples: |
@@ -4602,6 +4592,8 @@ nlu:
 
 - synonym: "4093"
   examples: |
+    - flûte
+    - flûtes
     - flûte traversière
 
 - synonym: "4096"
@@ -5039,7 +5031,7 @@ nlu:
 - synonym: "4285"
   examples: |
     - tenora
-    - ténor
+    - hautbois ténor
 
 - synonym: "4287"
   examples: |
@@ -5048,7 +5040,7 @@ nlu:
 - synonym: "4289"
   examples: |
     - zamr
-    - zamr
+    - hautbois zamr
 
 - synonym: "4291"
   examples: |
@@ -5939,7 +5931,7 @@ nlu:
 - synonym: "4672"
   examples: |
     - xeremia
-    - xeremia
+    - clarinette xeremia
 
 - synonym: "4675"
   examples: |
@@ -6413,7 +6405,7 @@ nlu:
 - synonym: "4851"
   examples: |
     - cimta
-    - cimta
+    - claquettes cimta
 
 - synonym: "4853"
   examples: |
@@ -8182,7 +8174,7 @@ nlu:
 - synonym: "5639"
   examples: |
     - zang
-    - zang
+    - cymbale zang
 
 - synonym: "5640"
   examples: |
@@ -8378,17 +8370,17 @@ nlu:
 - synonym: "6035"
   examples: |
     - zamr
-    - zamr
+    - clarinette zamr
 
 - synonym: "6036"
   examples: |
     - kacapi
-    - kacapi
+    - luth kacapi
 
 - synonym: "6037"
   examples: |
     - kartal
-    - kartal
+    - hochet kartal
 
 - synonym: "6055"
   examples: |
@@ -9425,12 +9417,11 @@ nlu:
 
 - synonym: "6807"
   examples: |
-    - kin
+    - harpe kin
 
 - synonym: "6809"
   examples: |
-    - washint
-    - washint
+    - flûte washint
 
 - synonym: "6815"
   examples: |

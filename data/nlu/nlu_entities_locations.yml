@@ -8,6 +8,12 @@ nlu:
     - africa
     - africain
 
+- synonym: "155340"
+  examples: |
+    - france
+    - français
+    - française
+
 - synonym: "144554"
   examples: |
     - albanie
@@ -481,10 +487,6 @@ nlu:
 - synonym: "144503"
   examples: |
     - flandresflamand
-
-- synonym: "155340"
-  examples: |
-    - francefrançais
 
 - synonym: "874558"
   examples: |

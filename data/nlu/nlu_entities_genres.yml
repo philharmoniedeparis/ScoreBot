@@ -272,6 +272,8 @@ nlu:
   examples: |
     - lied
     - lieder
+    - lieder romantique
+    - lieder romantiques
 
 - synonym: "68684"
   examples: |
@@ -909,6 +911,9 @@ nlu:
 - synonym: "68016"
   examples: |
     - reel
+    - reels
+    - reels celtiques
+    - reel celtique
 
 - synonym: "68198"
   examples: |
@@ -1017,3 +1022,525 @@ nlu:
 - synonym: "68574"
   examples: |
     - voluntary
+
+- synonym: "67983"
+  examples: |
+    - musique de salon
+
+- synonym: "67227"
+  examples: |
+    - musique traditionnelle
+    - folklore
+    - musiques traditionnelles
+    - musique folklorique
+    - musique ethnique
+    - musiques du monde
+    - musique du monde
+
+- synonym: "67139"
+  examples: |
+    - musique contemporaine
+    - musique d'aujourd'hui
+
+- synonym: "67509"
+  examples: |
+    - musique baroque
+
+- synonym: "67996"
+  examples: |
+    - jazz
+
+- synonym: "67907"
+  examples: |
+    - musique de variétés
+    - variété
+
+- synonym: "68687"
+  examples: |
+    - musique ancienne
+
+- synonym: "68522"
+  examples: |
+    - musique classique
+
+- synonym: "68062"
+  examples: |
+    - musique pop
+    - pop
+    - pop musique
+    - pop music
+
+- synonym: "67958"
+  examples: |
+    - musique romantique
+    - romantique
+
+- synonym: "68116"
+  examples: |
+    - musique de cirque
+
+- synonym: "154220"
+  examples: |
+    - musique militaire
+
+- synonym: "67876"
+  examples: |
+    - musiques actuelles
+    - musiques amplifiées
+    - maa
+
+- synonym: "68292"
+  examples: |
+    - vérisme
+
+- synonym: "67921"
+  examples: |
+    - musique cajun
+    - cajun
+
+- synonym: "154221"
+  examples: |
+    - musique populaire
+
+- synonym: "146743"
+  examples: |
+    - musique mécanique
+
+- synonym: "67601"
+  examples: |
+    - music hall
+
+- synonym: "154217"
+  examples: |
+    - musique de chasse
+
+- synonym: "67931"
+  examples: |
+    - musique néoclassique
+
+- synonym: "154214"
+  examples: |
+    - musique afro-américaine
+    - musique noire américaine
+
+- synonym: "142496"
+  examples: |
+    - ecomusique
+    - eco-musique
+
+- synonym: "154215"
+  examples: |
+    - musique artificielle
+
+- synonym: "154222"
+  examples: |
+    - musique primitive
+
+- synonym: "782144"
+  examples: |
+    - entartete musik
+    - musique dégénérée
+
+- synonym: "794636"
+  examples: |
+    - musique d'ambiance
+
+- synonym: "68290"
+  examples: |
+    - chanson traditionnelle
+    - chansons populaires
+    - chansons traditionnelles
+    - chanson populaire
+    - chanson populaires
+    - chansons populaire
+    - chant populaire
+    - mélodie populaire
+
+- synonym: "67848"
+  examples: |
+    - musique juive
+
+- synonym: "68080"
+  examples: |
+    - bluegrass
+
+- synonym: "67922"
+  examples: |
+    - musique créole
+
+- synonym: "67146"
+  examples: |
+    - musique orientale
+    - musique arabe
+
+- synonym: "68517"
+  examples: |
+    - musique celtique
+
+- synonym: "67434"
+  examples: |
+    - musique arabo-andalouse
+
+- synonym: "67874"
+  examples: |
+    - musique slave
+
+- synonym: "143176"
+  examples: |
+    - ka
+    - gwo ka
+    - gwoka
+    - groka
+
+- synonym: "67474"
+  examples: |
+    - musique indienne
+
+- synonym: "67423"
+  examples: |
+    - musique tsigane
+    - musique rom
+    - musique tzigane
+
+- synonym: "68141"
+  examples: |
+    - musique bretonne
+
+- synonym: "68208"
+  examples: |
+    - calypso
+
+- synonym: "68863"
+  examples: |
+    - musique africaine
+
+- synonym: "799141"
+  examples: |
+    - musique occitane
+    - musique de langue d'oc
+    - musique provençale
+
+- synonym: "68597"
+  examples: |
+    - musique sérielle
+    - sérialisme
+    - serialism
+
+- synonym: "68350"
+  examples: |
+    - musique électroacoustique
+    - musique acousmatique
+    - musique électro-acoustique
+    - musique expérimentale
+
+- synonym: "67887"
+  examples: |
+    - musique minimaliste
+    - minimalisme
+
+- synonym: "67606"
+  examples: |
+    - musique aléatoire
+    - combinatoire
+
+- synonym: "67867"
+  examples: |
+    - musique répétitive
+
+- synonym: "68744"
+  examples: |
+    - musique dodécaphonique
+    - dodécaphonisme
+
+- synonym: "68917"
+  examples: |
+    - musique informatique
+    - informatique musicale
+    - musique par ordinateur
+    - musique et informatique
+
+- synonym: "68714"
+  examples: |
+    - musique concrète
+
+- synonym: "68114"
+  examples: |
+    - jazz standard
+
+- synonym: "67247"
+  examples: |
+    - blues
+
+- synonym: "67452"
+  examples: |
+    - boogie-woogie
+    - boogie
+    - boogie woogie
+
+- synonym: "68117"
+  examples: |
+    - jazz vocal
+
+- synonym: "68533"
+  examples: |
+    - be-bop
+    - be bop
+
+- synonym: "67424"
+  examples: |
+    - jazz manouche
+    - jazz tsigane
+    - jazz gitan
+
+- synonym: "67766"
+  examples: |
+    - jazz-rock
+
+- synonym: "67784"
+  examples: |
+    - latin jazz
+
+- synonym: "68423"
+  examples: |
+    - jazz cubain
+
+- synonym: "154229"
+  examples: |
+    - new orleans
+    - jazz new orleans
+
+- synonym: "67807"
+  examples: |
+    - musique médiévale
+    - cantiga
+    - chanson de laisse
+    - musique du moyen age
+
+- synonym: "67997"
+  examples: |
+    - musique de la renaissance
+
+- synonym: "68867"
+  examples: |
+    - chant grégorien
+    - grégorien
+    - clausule
+    - gregorian chant
+
+- synonym: "67648"
+  examples: |
+    - ars nova
+
+- synonym: "146806"
+  examples: |
+    - ars antiqua
+
+- synonym: "67847"
+  examples: |
+    - musique électronique
+
+- synonym: "137234"
+  examples: |
+    - zydeco
+
+- synonym: "139098"
+  examples: |
+    - desi music
+
+- synonym: "143566"
+  examples: |
+    - world music
+
+- synonym: "150718"
+  examples: |
+    - musiques urbaines
+
+- synonym: "892028"
+  examples: |
+    - dancehall
+
+- synonym: "897194"
+  examples: |
+    - champeta
+
+- synonym: "902805"
+  examples: |
+    - kwaito
+
+- synonym: "965977"
+  examples: |
+    - afrobeat
+
+- synonym: "1074940"
+  examples: |
+    - rocksteady
+    - rock steady
+
+- synonym: "1074941"
+  examples: |
+    - ska
+    - musique ska
+
+- synonym: "68271"
+  examples: |
+    - musette
+
+- synonym: "153637"
+  examples: |
+    - musique verte
+
+- synonym: "67968"
+  examples: |
+    - fado
+
+- synonym: "891794"
+  examples: |
+    - rebetiko
+
+- synonym: "148991"
+  examples: |
+    - maqam
+
+- synonym: "799134"
+  examples: |
+    - azawan
+
+- synonym: "992000"
+  examples: |
+    - chaabi
+
+- synonym: "67435"
+  examples: |
+    - nouba
+
+- synonym: "143148"
+  examples: |
+    - malouf
+
+- synonym: "146061"
+  examples: |
+    - tala
+
+- synonym: "154212"
+  examples: |
+    - dhrupad
+
+- synonym: "799140"
+  examples: |
+    - khyal
+
+- synonym: "904608"
+  examples: |
+    - qawwali
+
+- synonym: "925786"
+  examples: |
+    - thumri
+
+- synonym: "67141"
+  examples: |
+    - temps réel
+
+- synonym: "67191"
+  examples: |
+    - logiciel de création
+
+- synonym: "67726"
+  examples: |
+    - echantillonneur
+
+- synonym: "68105"
+  examples: |
+    - morphoscope
+
+- synonym: "68111"
+  examples: |
+    - musique assistée par ordinateur
+
+- synonym: "68882"
+  examples: |
+    - séquenceur
+
+- synonym: "68893"
+  examples: |
+    - cao
+    - composition assistée par ordinateur
+
+- synonym: "950125"
+  examples: |
+    - cmao
+    - composition musicale assistée par ordinateur
+
+- synonym: "1053038"
+  examples: |
+    - experimental
+
+- synonym: "145513"
+  examples: |
+    - trip-hop
+
+- synonym: "145525"
+  examples: |
+    - drum'n'bass
+
+- synonym: "145528"
+  examples: |
+    - big beat
+
+- synonym: "145531"
+  examples: |
+    - electro
+
+- synonym: "1053034"
+  examples: |
+    - ambient
+
+- synonym: "1053037"
+  examples: |
+    - downtempo
+
+- synonym: "68588"
+  examples: |
+    - folk rock
+    - folk
+
+- synonym: "68590"
+  examples: |
+    - disco
+
+- synonym: "145748"
+  examples: |
+    - gothique
+    - rock gothique
+
+- synonym: "153056"
+  examples: |
+    - punk rock
+
+- synonym: "154284"
+  examples: |
+    - punta rock
+
+- synonym: "824623"
+  examples: |
+    - opéra-rock
+
+- synonym: "1053042"
+  examples: |
+    - krautrock
+
+- synonym: "67271"
+  examples: |
+    - logiciel de composition
+
+- synonym: "1053039"
+  examples: |
+    - acid techno
+
+- synonym: "1053040"
+  examples: |
+    - minimal techno
+
+- synonym: "1053041"
+  examples: |
+    - dub techno

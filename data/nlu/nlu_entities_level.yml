@@ -5,15 +5,19 @@ nlu:
 - synonym: "cycle-1"
   examples: |
     - faciles à jouer
+    - facile à jouer
     - accessibles aux débutants
+    - accessible à un débutant
     - pour les débutants
     - pour enfants
     - pour les enfants
     - de petit niveau
+    - de petits niveaux
     - débutants
     - débutant
     - pour apprendre le
     - pour petit niveau
+    - pour petits niveaux
     - pour débuter en
     - pour débuter
     - pour s'initier à
@@ -35,7 +39,9 @@ nlu:
     - 2ème année
     - de deuxième année
     - qui sont en 3e année
+    - qui est en 3e année
     - élèves en 3ème année
+    - élève en 3ème année
     - troisième année
     - 4e année
     - de 4ème année
@@ -43,15 +49,21 @@ nlu:
 - synonym: "cycle-2"
   examples: |
     - accessibles aux confirmés
+    - accessible au confirmé
     - destinés aux musiciens confirmés
+    - destiné à un musicien confirmé
     - destinés aux musiciens de niveau intermédiaire en
+    - destiné à un musicien de niveau intermédiaire en
     - pour les confirmés
+    - pour un confirmé
     - pour les intermédiaires
+    - pour un intermédiaire
     - confirmés
     - confirmé
     - intermédiaires
     - intermédiaire
     - pour élèves de niveau confirmé en
+    - pour un élève de niveaux confirmé en
     - pour se perfectionner en
     - pour continuer le
     - 5 ans
@@ -70,19 +82,26 @@ nlu:
     - 6ème année
     - de sixième année
     - qui sont en 7e année
+    - qui est en 7e année
     - élèves en 7ème année
+    - élève en 7ème année
     - septième année
 
 - synonym: "cycle-3"
   examples: |
     - de niveau expert
+    - de niveaux experts
     - expert
     - experts
     - destinés aux musiciens chevronnés
+    - destiné à un musicien chevronné
     - destinés aux musiciens experts en
+    - destiné à un musicien expert en
     - pour les musiciens très expérimentés dans la pratique du
+    - pour un musicien très expérimenté dans la pratique du
     - pour élèves de niveau expert en
     - pour les très bons joueurs de
+    - pour un très bon joueur de
     - 8 ans
     - huit ans
     - 9 ans
@@ -98,5 +117,7 @@ nlu:
     - 9ème année
     - de neuvième année
     - qui sont en 10e année
+    - qui est en 10e année
     - élèves en 10ème année
+    - élève en 10ème année
     - dixième année

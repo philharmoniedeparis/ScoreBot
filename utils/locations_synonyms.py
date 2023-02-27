@@ -1,5 +1,6 @@
 locations = {
     "154021": ["Afrique","Africa","africain"],
+    "155340": ["France", "français", "française"],
     "144554": ["Albanie","ALBANIA","albanais"],
     "154060": ["Algérie","Algeria","algérien"],
     "144397": ["Amérique","America","américain"],
@@ -41,7 +42,7 @@ locations = {
     "142483": ["Lithuanie","LITUANIE","lithuanien"],
     "146684": ["Londres","LONDON","londonien"],
     "155237": ["Macédoine","Macedonia","macédonien"],
-    "153975": ["Mexique","MEXICO (COUNTRY)","mexicain"],
+    "153975": ["Mexique","MEXICO", "mexicain"],
     "154063": ["Maroc","Morocco","marocaine"],
     "147181": ["Naples","Napoli","napolitaine"],
     "145649": ["Norvège","NORWAY","norvégien"],
@@ -94,7 +95,6 @@ locations = {
     "136713": ["Cuba""cubain"],
     "142487": ["Estonie""estonien"],
     "144503": ["Flandres""flamand"],
-    "155340": ["France""français"],
     "874558": ["Gascogne""gascon"],
     "148845": ["Guadeloupe""guadeloupéen"],
     "153981": ["Guyane""guyanaise"],
