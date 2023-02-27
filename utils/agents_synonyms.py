@@ -3100,7 +3100,6 @@ agents = {
 	"455894":	['Furore', 'Furore'],
 	"453293":	['Fürstner', 'Fürstner'],
 	"422025":	['(J.M.)', 'Fuzeau (J.M.)'],
-	"452857":	['L', 'G & L'],
 	"39872":	['Carulli', 'G. Carulli'],
 	"34878":	['Coulpied-Sevestre', 'G. Coulpied-Sevestre'],
 	"47097":	['Ridley', 'G. Ridley'],

@@ -3254,7 +3254,6 @@ agents = {
     "455894": 	["Furore",],
     "453293": 	["Fürstner",],
     "422025": 	["Fuzeau (J.M.)",],
-    "452857": 	["G & L",],
     "39872": 	["G. Carulli",],
     "34878": 	["G. Coulpied-Sevestre",],
     "47097": 	["G. Ridley",],
