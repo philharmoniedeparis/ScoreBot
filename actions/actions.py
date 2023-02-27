@@ -451,13 +451,18 @@ values (?input_period ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entit
             )
             logging.info(lucene_query)
             filters += f"""
-?search a luc-index:TitleIndex ;
-    luc:query "{lucene_query}" ;  
-    luc:entities ?score .
-    ?score luc:score ?scoreResearch .
-    ?score luc:snippets ?snippet .
-    ?snippet luc:snippetField ?snippetField ;
-    luc:snippetText ?snippetText .
+{{
+    SELECT ?score ?casting ?snippetText ?snippetField ?scoreResearch 
+    WHERE {{
+    ?search a luc-index:TitleIndex ;
+        luc:query "{lucene_query}" ;  
+        luc:entities ?score .
+        ?score luc:score ?scoreResearch .
+        ?score luc:snippets ?snippet .
+        ?snippet luc:snippetField ?snippetField ;
+        luc:snippetText ?snippetText .
+    }}
+}}
 """
 
         if entity_dict["location"]["code"] is not None:
