@@ -396,6 +396,18 @@ limit {limit}
 }}
             """
 
+        # calculer la quantité totale d'instruments
+        if exclusive and inputted_medias:
+            if entity_dict["formation"]["code"] is not None:
+                total = entity_dict["formation"]["code"]
+            else:
+                total = sum(inputted_medias.values())
+            logging.info(f"Using strict instrument total: {total}")
+            filters += f"""
+values (?input_quantity_total) {{(\"{total}\"^^xsd:integer)}}
+?casting mus:U48_foresees_quantity_of_actors ?input_quantity_total.
+            """
+
         # Level
         if entity_dict["level"]["code"] is not None:
             filters += f"""
