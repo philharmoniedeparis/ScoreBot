@@ -15491,11 +15491,6 @@ nlu:
     - 
     - fuzeau
 
-- synonym: "452857"
-  examples: |
-    - l
-    - g
-
 - synonym: "39872"
   examples: |
     - carulli
