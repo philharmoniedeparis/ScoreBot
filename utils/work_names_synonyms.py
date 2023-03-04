@@ -16,6 +16,9 @@ work_names = {
         "ouverture de la marche des Valkyries",
         "9e quatuor",
         "flûte enchantée",
+        "flauto magico",
+        "zauberflöte",
+        "flauto magico",
         "flute enchantée",
         "Symphonie fantastique",
         "traviata",
@@ -36,9 +39,7 @@ work_names = {
         "Je t'aime, moi non plus",
         "la Lettre à Élise",
         "Lettre à Élise",
-        "Parsifal"
-        "le Parsifal"
-        "à la cime d’un grand arbre",
+        "Parsifal" "le Parsifal" "à la cime d’un grand arbre",
         "les Nocturnes",
         "Hey Jude",
         "la pub CN",
