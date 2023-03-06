@@ -4,6 +4,7 @@ level_sentences = {
     "cycle-1": [
         "faciles à jouer",
         "facile à jouer",
+        "débutant",
         "accessibles aux débutants",
         "accessible à un débutant",
         "pour les débutants",
@@ -12,7 +13,6 @@ level_sentences = {
         "de petit niveau",
         "de petits niveaux",
         "débutants",
-        "débutant",
         "pour apprendre le ",
         "pour petit niveau",
         "pour petits niveaux",
@@ -55,20 +55,25 @@ level_sentences = {
         "pour élèves de niveau expert en ",
         "pour les très bons joueurs de ",
         "pour un très bon joueur de ",
-    ]
+    ],
 }
 
 level_worded = {
     "cycle-1": [
         "en 1er cycle",
+        "1er cycle",
         "en 1e cycle",
         "de premier cycle",
+        "premier cycle",
         "de 1e année",
+        "1e année",
         "en 1ère année",
-        "de première année"
+        "de première année",
         "en 2e année",
+        "2e année",
         "2ème année",
         "de deuxième année",
+        "deuxième année",
         "qui sont en 3e année",
         "qui est en 3e année",
         "élèves en 3ème année",
@@ -84,8 +89,7 @@ level_worded = {
         "de second cycle",
         "de 5e année",
         "en 5ème année",
-        "de cinquième année"
-        "en 6e année",
+        "de cinquième année" "en 6e année",
         "6ème année",
         "de sixième année",
         "qui sont en 7e année",
@@ -100,8 +104,7 @@ level_worded = {
         "de troisième cycle",
         "de 8e année",
         "en 8ème année",
-        "de huitième année"
-        "en 9e année",
+        "de huitième année" "en 9e année",
         "9ème année",
         "de neuvième année",
         "qui sont en 10e année",
@@ -109,7 +112,7 @@ level_worded = {
         "élèves en 10ème année",
         "élève en 10ème année",
         "dixième année",
-    ]
+    ],
 }
 
 level_timing = {
@@ -138,7 +141,7 @@ level_timing = {
         "neuf ans",
         "10 ans",
         "dix ans",
-    ]
+    ],
 }
 
 all_levels = defaultdict(list)

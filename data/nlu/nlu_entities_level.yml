@@ -6,6 +6,7 @@ nlu:
   examples: |
     - faciles à jouer
     - facile à jouer
+    - débutant
     - accessibles aux débutants
     - accessible à un débutant
     - pour les débutants
@@ -14,7 +15,6 @@ nlu:
     - de petit niveau
     - de petits niveaux
     - débutants
-    - débutant
     - pour apprendre le
     - pour petit niveau
     - pour petits niveaux
@@ -31,13 +31,19 @@ nlu:
     - 4 ans
     - quatre ans
     - en 1er cycle
+    - 1er cycle
     - en 1e cycle
     - de premier cycle
+    - premier cycle
     - de 1e année
+    - 1e année
     - en 1ère année
-    - de première annéeen 2e année
+    - de première année
+    - en 2e année
+    - 2e année
     - 2ème année
     - de deuxième année
+    - deuxième année
     - qui sont en 3e année
     - qui est en 3e année
     - élèves en 3ème année
