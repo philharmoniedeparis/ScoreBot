@@ -44,7 +44,17 @@ nlu:
     - 2ème année
     - de 1e-2ème année
     - de 1e-2e année
+    - de 1e-2e années
+    - de 1e ou 2e année
+    - de 1e ou 2ème année
+    - de 1ère ou 2e année
+    - de 1ère ou 2ème année
     - de 2 ou 3e année
+    - de 2e ou 3e année
+    - de 2e ou 3ème année
+    - de 2-3e année
+    - de 2-3ème année
+    - de 2e-3e année
     - de deuxième année
     - de deuxième ou troisième année
     - deuxième année
@@ -92,11 +102,22 @@ nlu:
     - de second cycle
     - de 5e année
     - en 5ème année
-    - de cinquième annéeen 6e année
+    - de cinquième année
+    - en 6e année
     - 6ème année
     - de sixième année
     - de cinq ou sixième année
     - de 5-6e année
+    - de 5e-6e années
+    - de 5e-6e année
+    - de 4eme ou 5e année
+    - de 4e-5e année
+    - de 4e-5e années
+    - de 4e ou 5e année
+    - de 3e ou 4e année
+    - de 3e-4e année
+    - de 3e-4e années
+    - de 3e ou 4e années
     - qui sont en 7e année
     - qui est en 7e année
     - élèves en 7ème année
@@ -130,9 +151,17 @@ nlu:
     - en 3eme cycle
     - de troisième cycle
     - de 8e année
+    - de 6e-7e année
+    - de 6e-7e années
     - de 6-7e année
-    - de 7e ou 8e année
     - de six ou septième année
+    - de sixième ou septième année
+    - de sixième-septième année
+    - de 7e ou 8e année
+    - de 7-8e année
+    - de 7e-8e années
+    - de septième ou huitième années
+    - de septième-huitième année
     - en 8ème année
     - de huitième annéeen 9e année
     - 9ème année
