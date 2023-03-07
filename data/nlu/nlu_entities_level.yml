@@ -42,7 +42,11 @@ nlu:
     - en 2e année
     - 2e année
     - 2ème année
+    - de 1e-2ème année
+    - de 1e-2e année
+    - de 2 ou 3e année
     - de deuxième année
+    - de deuxième ou troisième année
     - deuxième année
     - qui sont en 3e année
     - qui est en 3e année
@@ -61,6 +65,8 @@ nlu:
     - destinés aux musiciens de niveau intermédiaire en
     - destiné à un musicien de niveau intermédiaire en
     - pour les confirmés
+    - avancé
+    - avancés
     - pour un confirmé
     - pour les intermédiaires
     - pour un intermédiaire
@@ -79,7 +85,9 @@ nlu:
     - 7 ans
     - sept ans
     - en 2nd cycle
+    - 2nd cycle
     - en 2e cycle
+    - 2e cycle
     - en 2eme cycle
     - de second cycle
     - de 5e année
@@ -87,6 +95,8 @@ nlu:
     - de cinquième annéeen 6e année
     - 6ème année
     - de sixième année
+    - de cinq ou sixième année
+    - de 5-6e année
     - qui sont en 7e année
     - qui est en 7e année
     - élèves en 7ème année
@@ -115,9 +125,14 @@ nlu:
     - 10 ans
     - dix ans
     - en 3e cycle
+    - 3e cycle
+    - 3eme cycle
     - en 3eme cycle
     - de troisième cycle
     - de 8e année
+    - de 6-7e année
+    - de 7e ou 8e année
+    - de six ou septième année
     - en 8ème année
     - de huitième annéeen 9e année
     - 9ème année
