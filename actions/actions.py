@@ -453,7 +453,7 @@ filter (lang(?roleLabel)=\"fr\")
                 entity_dict["period"]["code"] = "0" + entity_dict["period"]["code"]
             filters += f"""
 values (?input_period ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{entity_dict["period"]["code"]}>)}}
-?score mus:U52_has_context ?input_period.
+?score mus:U66_has_historical_context ?input_period.
 ?input_period skos:prefLabel ?periodLabel.
 """
 

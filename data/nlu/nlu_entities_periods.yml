@@ -89,6 +89,7 @@ nlu:
 - synonym: "141830"
   examples: |
     - 3 ème siècle
+    - 3 eme siècle
     - 3e siècle
     - III ème siècle
     - IIIe siècle
@@ -97,6 +98,7 @@ nlu:
 - synonym: "141087"
   examples: |
     - 4 ème siècle
+    - 4 eme siècle
     - 4e siècle
     - IV ème siècle
     - IVe siècle
@@ -105,6 +107,7 @@ nlu:
 - synonym: "145873"
   examples: |
     - 5 ème siècle
+    - 5 eme siècle
     - 5e siècle
     - V ème siècle
     - Ve siècle
@@ -113,6 +116,7 @@ nlu:
 - synonym: "139365"
   examples: |
     - 9 ème siècle
+    - 9 eme siècle
     - 9e siècle
     - IX ème siècle
     - IXe siècle
@@ -121,6 +125,7 @@ nlu:
 - synonym: "139363"
   examples: |
     - 10 ème siècle
+    - 10 eme siècle
     - 10e siècle
     - X ème siècle
     - Xe siècle
@@ -129,6 +134,7 @@ nlu:
 - synonym: "139360"
   examples: |
     - 11 ème siècle
+    - 11 eme siècle
     - 11e siècle
     - XI ème siècle
     - XIe siècle
@@ -137,6 +143,7 @@ nlu:
 - synonym: "139357"
   examples: |
     - 12 ème siècle
+    - 12 eme siècle
     - 12e siècle
     - XII ème siècle
     - XIIe siècle
@@ -145,6 +152,7 @@ nlu:
 - synonym: "137750"
   examples: |
     - 13 ème siècle
+    - 13 eme siècle
     - 13e siècle
     - XIII ème siècle
     - XIIIe siècle
@@ -153,6 +161,7 @@ nlu:
 - synonym: "137755"
   examples: |
     - 14 ème siècle
+    - 14 eme siècle
     - 14e siècle
     - XIV ème siècle
     - XIVe siècle
@@ -161,6 +170,7 @@ nlu:
 - synonym: "144424"
   examples: |
     - 19 ème siècle
+    - 19 eme siècle
     - 19e siècle
     - XIX ème siècle
     - XIXe siècle
@@ -169,6 +179,7 @@ nlu:
 - synonym: "145867"
   examples: |
     - 15 ème siècle
+    - 15 eme siècle
     - 15e siècle
     - XV ème siècle
     - XVe siècle
@@ -177,6 +188,7 @@ nlu:
 - synonym: "145868"
   examples: |
     - 16 ème siècle
+    - 16 eme siècle
     - 16e siècle
     - XVI ème siècle
     - XVIe siècle
@@ -185,6 +197,7 @@ nlu:
 - synonym: "145869"
   examples: |
     - 17 ème siècle
+    - 17 eme siècle
     - 17e siècle
     - XVII ème siècle
     - XVIIe siècle
@@ -193,6 +206,7 @@ nlu:
 - synonym: "145870"
   examples: |
     - 18 ème siècle
+    - 18 eme siècle
     - 18e siècle
     - XVIII ème siècle
     - XVIIIe siècle
