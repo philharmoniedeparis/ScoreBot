@@ -170,7 +170,7 @@ rasa:
       user_message_evt: user_uttered
       bot_message_evt: bot_uttered
       session_persistence: true
-    alexa_connector.AlexaConnector:
+    #alexa_connector.AlexaConnector:
     # rest:
     # facebook:
     #   verify: "rasa-bot"
