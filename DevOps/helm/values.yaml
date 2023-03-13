@@ -163,7 +163,14 @@ rasa:
   additionalRabbitQueues: []
   # additionalChannelCredentials which should be used by Rasa to connect to various
   # input channels
-  additionalChannelCredentials: {}
+  #additionalChannelCredentials: {}
+  additionalChannelCredentials:
+    # ga_connector.GoogleConnector:
+    socketio:
+      user_message_evt: user_uttered
+      bot_message_evt: bot_uttered
+      session_persistence: true
+    alexa_connector.AlexaConnector:
     # rest:
     # facebook:
     #   verify: "rasa-bot"
