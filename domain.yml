@@ -1,30 +1,18 @@
 version: '2.0'
-config:
-  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- get_sheet_music_by_casting:
-    use_entities: true
-- out_of_scope:
-    use_entities: true
-- nlu_fallback:
-    use_entities: true
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- get_sheet_music_by_casting
+- out_of_scope
+- nlu_fallback
 entities:
 - number
 - medium
@@ -36,9 +24,7 @@ entities:
 - location
 slots:
   number:
-    type: rasa.shared.core.slots.UnfeaturizedSlot
-    initial_value: null
-    auto_fill: true
+    type: unfeaturized
     influence_conversation: false
 responses:
   utter_greet:
@@ -55,5 +41,3 @@ responses:
   - text: Je suis désolé, je n'ai pas bien compris votre message. Pouvez-vous reformuler s'il-vous-plaît ?
 actions:
 - action_get_sheet_music_by_casting
-forms: {}
-e2e_actions: []

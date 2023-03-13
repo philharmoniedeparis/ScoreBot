@@ -1,60 +1,50 @@
 version: "2.0"
-
 nlu:
-
-- synonym: "2"
+- synonym: '2'
   examples: |
     - duos
     - duo
     - duet
-
-- synonym: "3"
+- synonym: '3'
   examples: |
     - trios
     - trio
-
-- synonym: "4"
+- synonym: '4'
   examples: |
     - quatuors
     - quatuor
     - quartet
     - quartette
-
-- synonym: "5"
+- synonym: '5'
   examples: |
     - quintettes
     - quintette
     - quintet
     - quintuor
-
-- synonym: "6"
+- synonym: '6'
   examples: |
     - sextuors
     - sextuor
     - sextet
     - sextette
-
-- synonym: "7"
+- synonym: '7'
   examples: |
     - septuors
     - septuor
     - septet
     - septette
-
-- synonym: "8"
+- synonym: '8'
   examples: |
     - octuors
     - octuor
     - octet
     - octette
-
-- synonym: "9"
+- synonym: '9'
   examples: |
     - nonettes
     - nonette
     - nonet
-
-- synonym: "10"
+- synonym: '10'
   examples: |
     - dixtuors
     - dixtuor

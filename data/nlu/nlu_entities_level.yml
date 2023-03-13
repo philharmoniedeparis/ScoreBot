@@ -1,8 +1,6 @@
 version: "2.0"
-
 nlu:
-
-- synonym: "cycle-1"
+- synonym: cycle-1
   examples: |
     - faciles à jouer
     - accessibles aux débutants
@@ -23,8 +21,6 @@ nlu:
     - trois ans
     - 4 ans
     - quatre ans
-    - débutants
-    - débutant
     - en 1er cycle
     - de premier cycle
     - de 1e année
@@ -37,8 +33,7 @@ nlu:
     - troisième année
     - 4e année
     - de 4ème année
-
-- synonym: "cycle-2"
+- synonym: cycle-2
   examples: |
     - accessibles aux confirmés
     - destinés aux musiciens confirmés
@@ -53,15 +48,10 @@ nlu:
     - pour se perfectionner en
     - pour continuer le
     - 5 ans
-    - 5 ans
     - 6 ans
     - six ans
     - 7 ans
     - sept ans
-    - confirmés
-    - confirmé
-    - intermédiaires
-    - intermédiaire
     - en 2nd cycle
     - de second cycle
     - de 5e année
@@ -72,8 +62,7 @@ nlu:
     - qui sont en 7e année
     - élèves en 7ème année
     - septième année
-
-- synonym: "cycle-3"
+- synonym: cycle-3
   examples: |
     - de niveau expert
     - expert
@@ -89,8 +78,6 @@ nlu:
     - neuf ans
     - 10 ans
     - dix ans
-    - expert
-    - experts
     - en 3e cycle
     - de troisième cycle
     - de 8e année

@@ -1,192 +1,161 @@
 version: "2.0"
-
 nlu:
-
-- synonym: "145879"
+- synonym: '145879'
   examples: |
     - renaissance
-
-- synonym: "67731"
+- synonym: '67731'
   examples: |
     - 20 ème siècle - 2 ème moitié
     - 20e siècle deuxième moitié
-
-- synonym: "145872"
+- synonym: '145872'
   examples: |
     - 21 ème siècle
     - 21e siècle
     - xxi ème siècle
     - vingt et unième siècle
-
-- synonym: "145871"
+- synonym: '145871'
   examples: |
     - 2 ème siècle
     - 2e siècle
     - ii ème siècle
     - deuxième siècle
-
-- synonym: "825416"
+- synonym: '825416'
   examples: |
     - antiquité chinoise
     - chine ancienne
-
-- synonym: "137714"
+- synonym: '137714'
   examples: |
     - antiquité égyptienne
     - egypte ancienne
-
-- synonym: "145874"
+- synonym: '145874'
   examples: |
     - 6 ème siècle
     - 6e siècle
     - vi ème siècle
     - sixième siècle
-
-- synonym: "145875"
+- synonym: '145875'
   examples: |
     - 7 ème siècle
     - 7e siècle
     - vii ème siècle
     - septième siècle
-
-- synonym: "145876"
+- synonym: '145876'
   examples: |
     - 8 ème siècle
     - 8e siècle
     - viii ème siècle
     - huitième siècle
-
-- synonym: "149789"
+- synonym: '149789'
   examples: |
     - antiquité gauloise
     - gaule antique
-
-- synonym: "149790"
+- synonym: '149790'
   examples: |
     - antiquité grecque
     - grèce ancienne
-
-- synonym: "139127"
+- synonym: '139127'
   examples: |
     - antiquité hébraïque
     - hébreu
-
-- synonym: "149808"
+- synonym: '149808'
   examples: |
     - protohistoire
     - protohistory
-
-- synonym: "144381"
+- synonym: '144381'
   examples: |
     - antiquité romaine
     - rome ancienne
-
-- synonym: "145866"
+- synonym: '145866'
   examples: |
     - 1 er siècle
     - 1e siècle
     - premier siècle
     - i er siècle
-
-- synonym: "141830"
+- synonym: '141830'
   examples: |
     - 3 ème siècle
     - 3e siècle
     - troisième siècle
     - iii ème siècle
-
-- synonym: "141087"
+- synonym: '141087'
   examples: |
     - 4 ème siècle
     - 4e siècle
     - quatrième siècle
     - iv ème siècle
-
-- synonym: "145873"
+- synonym: '145873'
   examples: |
     - 5 ème siècle
     - 5e siècle
     - v ème siècle
     - cinquième siècle
-
-- synonym: "139365"
+- synonym: '139365'
   examples: |
     - 9 ème siècle
     - 9e siècle
     - ix ème siècle
     - neuvième siècle
-
-- synonym: "139363"
+- synonym: '139363'
   examples: |
     - 10 ème siècle
     - 10e siècle
     - x ème siècle
     - dixième siècle
-
-- synonym: "139360"
+- synonym: '139360'
   examples: |
     - 11 ème siècle
     - 11e siècle
     - xi ème siècle
     - onzième siècle
-
-- synonym: "139357"
+- synonym: '139357'
   examples: |
     - 12 ème siècle
     - 12e siècle
     - xii ème siècle
     - douzième siècle
-
-- synonym: "137750"
+- synonym: '137750'
   examples: |
     - 13 ème siècle
     - 13e siècle
     - xiii ème siècle
     - treizième siècle
-
-- synonym: "137755"
+- synonym: '137755'
   examples: |
     - 14 ème siècle
     - 14e siècle
     - xiv ème siècle
     - quatorzième siècle
-
-- synonym: "144424"
+- synonym: '144424'
   examples: |
     - 19 ème siècle
     - 19e siècle
     - xix ème siècle
     - dix-neuvième siècle
-
-- synonym: "145867"
+- synonym: '145867'
   examples: |
     - 15 ème siècle
     - 15e siècle
     - xv ème siècle
     - quinzième siècle
-
-- synonym: "145868"
+- synonym: '145868'
   examples: |
     - 16 ème siècle
     - 16e siècle
     - xvi ème siècle
     - seizième siècle
-
-- synonym: "145869"
+- synonym: '145869'
   examples: |
     - 17 ème siècle
     - 17e siècle
     - xvii ème siècle
     - dix-septième siècle
-
-- synonym: "145870"
+- synonym: '145870'
   examples: |
     - 18 ème siècle
     - 18e siècle
     - xviii ème siècle
     - dix-huitième siècle
-
-- synonym: "144431"
+- synonym: '144431'
   examples: |
     - contemporain
     - contemporaine
@@ -194,60 +163,46 @@ nlu:
     - 20e siècle
     - xx ème siècle
     - vingtième siècle
-
-- synonym: "67730"
+- synonym: '67730'
   examples: |
     - 20 ème siècle - 1 ère moitié
     - 20e siècle première moitié
-
-- synonym: "67954"
+- synonym: '67954'
   examples: |
     - révolution de 1848
-
-- synonym: "67990"
+- synonym: '67990'
   examples: |
     - iiie reich
-
-- synonym: "145877"
+- synonym: '145877'
   examples: |
     - empire ottoman
-
-- synonym: "892163"
+- synonym: '892163'
   examples: |
     - révolution russe
-
-- synonym: "1023735"
+- synonym: '1023735'
   examples: |
     - risorgimento
-
-- synonym: "137679"
+- synonym: '137679'
   examples: |
     - antiquité orientale
-
-- synonym: "144380"
+- synonym: '144380'
   examples: |
     - empire byzantin
-
-- synonym: "149787"
+- synonym: '149787'
   examples: |
     - age du bronze
-
-- synonym: "149788"
+- synonym: '149788'
   examples: |
     - age du fer
-
-- synonym: "149791"
+- synonym: '149791'
   examples: |
     - civilisation précolombienne
-
-- synonym: "143448"
+- synonym: '143448'
   examples: |
     - mésolithique
-
-- synonym: "149806"
+- synonym: '149806'
   examples: |
     - néolithique
-
-- synonym: "149807"
+- synonym: '149807'
   examples: |
     - paléolithique
