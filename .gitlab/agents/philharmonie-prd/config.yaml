@@ -2,10 +2,13 @@ gitops:
   manifest_projects:
     - id: "team_chatbot/chatbot_philharmonie"
       default_namespace: philharmonie-production
+      paths:
         # If 'paths' is not specified or is an empty list, the configuration below is used
       - glob: '/**/*.{yaml,yml,json}'
-
 
 ci_access:
   projects:
     - id: team_chatbot/chatbot_philharmonie
+
+
+
