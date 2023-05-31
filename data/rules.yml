@@ -1,11 +1,11 @@
-version: "2.0"
+version: "3.1"
 
 rules:
-
-- rule: Say hello anytime the user says hello
+- rule: welcome user
+  conversation_start: true  # this rule only applies at the beginning of a conversation
   steps:
-  - intent: greet
-  - action: utter_greet
+    - intent: greet
+    - action: utter_ask_filter_criteria
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
@@ -36,3 +36,18 @@ rules:
   steps:
   - intent: get_sheet_music_by_casting
   - action: action_get_sheet_music_by_casting
+
+- rule: Composer selected
+  steps:
+  - intent: composer_is_selected
+  - action: action_get_sheet_music_by_casting
+
+- rule: Genre selected
+  steps:
+  - intent: genre_is_selected
+  - action: action_get_sheet_music_by_casting
+
+- rule: Display results
+  steps:
+  - intent: display_results
+  - action: action_display_results

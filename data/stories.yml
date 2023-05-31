@@ -1,28 +1,60 @@
-version: "2.0"
+version: "3.1"
 
 stories:
 
-- story: happy path
+- story: Composer selection
   steps:
   - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - action: utter_ask_filter_criteria
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: formation_choice
+  - action: action_formation_choice
+  - intent: formation_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
 
-- story: sad path 1
+- story: Genre selection
   steps:
   - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - intent: affirm
-  - action: utter_happy
+  - action: utter_ask_filter_criteria
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
 
-- story: sad path 2
+- story: Formation selection
   steps:
   - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - intent: deny
-  - action: utter_goodbye
+  - action: utter_ask_filter_criteria
+  - intent: formation_choice
+  - action: action_formation_choice
+  - intent: formation_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
