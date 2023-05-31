@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3.1'
 config:
   store_entities_as_slots: true
 session_config:
@@ -21,6 +21,22 @@ intents:
     use_entities: true
 - get_sheet_music_by_casting:
     use_entities: true
+- ask_filter_criteria:
+    use_entities: false
+- composer_choice:
+    use_entities: false
+- composer_is_selected:
+    use_entities: true
+- genre_choice:
+    use_entities: false
+- genre_is_selected:
+    use_entities: true
+- formation_choice:
+    use_entities: false
+- formation_is_selected:
+    use_entities: true
+- display_results:
+    use_entities: true
 - out_of_scope:
     use_entities: true
 - nlu_fallback:
@@ -35,12 +51,43 @@ entities:
 - work_name
 - period
 - location
+- current_results
 slots:
   number:
-    type: rasa.shared.core.slots.UnfeaturizedSlot
+    type: any
     initial_value: null
-    auto_fill: true
     influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: number
+  agent:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: agent
+  genre:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: genre
+  formation:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: formation
+  current_results:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: current_results
 responses:
   utter_greet:
   - text: Bonjour! Comment allez-vous?
@@ -54,7 +101,23 @@ responses:
   - text: Je suis un chatbot, ou assistant conversationnel, là pour vous aider à naviguer dans les textes juridiques du Luxembourg.
   utter_please_rephrase:
   - text: Je suis désolé, je n'ai pas bien compris votre message. Pouvez-vous reformuler s'il-vous-plaît ?
+  utter_ask_filter_criteria:
+    - text: "Je vais vous aider à trouver des partitions. Voulez-vous ajouter un filtre à votre recherche?"
+      buttons:
+        - title: "Compositeur"
+          payload: "/composer_choice"
+        - title: "Genre"
+          payload: "/genre_choice"
+        - title: "Instrumentation"
+          payload: "/formation_choice"
+        - title: "Directly type my query"
+          payload: "/direct_query"
+
 actions:
 - action_get_sheet_music_by_casting
+- action_composer_choice
+- action_genre_choice
+- action_display_results
+- action_formation_choice
 forms: {}
 e2e_actions: []

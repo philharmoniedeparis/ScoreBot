@@ -706,7 +706,7 @@ def entities_round_robin(entities):
 
 if __name__ == "__main__":
     with open("data/nlu/nlu_intents.yml", "w") as f:
-        f.write('version: "2.0"\n\nnlu:')
+        f.write('version: "3.1"\n\nnlu:')
         for intent, data in raw_sentences.items():
             f.write(f"\n- intent: {intent}\n  examples: |\n")
             if len(data["entities"]) == 0:
