@@ -646,15 +646,182 @@ optional {{?creation  mus:R24_created   ?score .
         # Format the results
         formatted_results = "\n".join(results)
 
-        worded_results = ""
-        if formatted_results:
-            worded_results += f"Voici les "
-            if len(results) >= MAX_RESULTS_TOTAL:
-                worded_results += f"{len(results)} premières "
-            worded_results += "partitions que j'ai trouvées"
-            worded_results += worded_criterias
-            worded_results += f":\n{formatted_results}"
-        else:
-            worded_results += f"{worded_criterias}."
+        # Format the bot answer
+        buttons = []
+        worded_results = f"Voici les "
+        if len(results) >= MAX_RESULTS_TOTAL:
+            worded_results += f"{len(results)} premières "
+        worded_results += "partitions que j'ai trouvées"
+        worded_results += f":\n{formatted_results}"
 
-        return worded_results
+        events = []
+
+        return worded_results, buttons, events
+
+    @staticmethod
+    def format_answer_without_results(
+        tracker,
+        results,
+    ):
+
+        # Format the bot answer
+        buttons = []
+        worded_results = f"J'ai trouvé {len(results)} partitions correspondant à votre recherche. Voulez-vous que je les affiche ?"
+        formatted_results = worded_results + "\n".join(results)
+        encoded = urllib.parse.quote_plus(formatted_results, safe="/")
+        buttons.append(
+            {
+                "title": "Afficher les résultats",
+                "payload": f"/display_results{{\"current_results\": \"{encoded}\"}}",
+            }
+        )
+        criteria_buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(tracker)
+        buttons.extend(criteria_buttons)
+        logging.info(f"buttons: {buttons}")
+
+        return worded_results, buttons
+
+    @staticmethod
+    def get_criteria_buttons(tracker):
+        buttons = []
+
+        agent = tracker.get_slot("agent")
+        if not agent:
+            buttons.append(
+                {
+                    "title": f"Compositeur",
+                    "payload": f"/composer_choice",
+                }
+            )
+
+        formation = tracker.get_slot("formation")
+        if not formation:
+            buttons.append(
+                {
+                    "title": f"Formation",
+                    "payload": f"/formation_choice",
+                }
+            )
+
+        genre = tracker.get_slot("genre")
+        if not genre:
+            buttons.append(
+                {
+                    "title": f"Genre",
+                    "payload": f"/genre_choice",
+                }
+            )
+
+        logging.info(f"agent: {agent}, formation: {formation}, genre: {genre}")
+        return buttons
+
+
+class ActionComposerChoice(Action):
+    def __init__(self):
+        self.query = """
+PREFIX luc: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc-index: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mus: <http://data.doremus.org/ontology#>
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX phil: <https://data.philharmoniedeparis.fr/>
+PREFIX philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
+
+
+select distinct ?compositeur ?compositeurLabel (count(distinct ?score) as ?scoreCount)
+where {{
+    ?score a <http://erlangen-crm.org/efrbroo/F24_Publication_Expression>.
+    ?score mus:U13_has_casting ?casting .
+    ?casting mus:U23_has_casting_detail ?castingDetail .
+
+    # AGENT
+    optional {{?creation  mus:R24_created   ?score .
+    ?creation ecrm:P9_consists_of ?task.
+    ?task ecrm:P14_carried_out_by ?compositeur.
+    ?task mus:U31_had_function <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/230>.
+    ?compositeur rdfs:label ?compositeurLabel.}}
+
+    # les partitions avec leur titre et statement of responsibility ...
+    ?score  mus:U170_has_title_statement ?scoreTitle.
+    ?scoreTitle rdfs:label ?scoreTitleLabel.
+    optional {{?score mus:U172_has_statement_of_responsibility_relating_to_title ?U172_has_statement_of_responsibility_relating_to_title. 
+    ?U172_has_statement_of_responsibility_relating_to_title rdfs:label ?responsibilityLabel}}
+    
+    # on veut récupérer tous les instruments du casting
+    #on ne tient pas compte des instruments ajoutés lors de la surindexation
+    graph <http://data.philharmoniedeparis.fr/graph/scores> 
+    {{
+    ?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?medium.
+    }}
+	optional {{?medium skos:prefLabel ?mediumLabel.
+	filter (lang(?mediumLabel)="fr")}}
+    optional {{ ?castingDetail mus:U30_foresees_quantity_of_mop ?mediumQuantity.}}
+
+# construction de l'URL dans le site de la philharmonie
+    bind (strafter(str(?score),"ark:49250/")as ?identifier)
+    BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
+}}
+GROUP BY ?compositeur ?compositeurLabel
+        """
+
+    def name(self):
+        return "action_composer_choice"
+
+    def run(self, dispatcher, tracker, domain):
+        # Query the graph DB to get composers
+        composers = self.get_top_composers()
+
+        buttons = []
+        for composer in composers:
+            buttons.append(
+                {
+                    "title": composer["compositeurLabel"]["value"],
+                    "payload": f'/composer_is_selected{{"agent":"{composer["compositeur"]["value"]}"}}',
+                }
+            )
+
+        # Display the buttons
+        dispatcher.utter_message(
+            text="Voilà quelques compositeurs principaux pour filtrer les résultats:",
+            buttons=buttons,
+        )
+
+        # Set the composers slot
+        return []
+
+    def get_top_composers(self):
+        # Query the graph DB to get the results
+        parsed_query = urllib.parse.quote_plus(self.query, safe="/")
+        logging.info(f"Requesting {self.query}")
+        results = requests.get(
+            ENDPOINT + parsed_query,
+            headers={
+                "Accept": "application/sparql-results+json",
+                "Authorization": TOKEN if TOKEN else "",
+            },
+        ).json()
+        res = []
+        for r in results["results"]["bindings"][:3]:
+            r["compositeur"]["value"] = str(
+                int(r["compositeur"]["value"].split("/")[-1])
+            )
+            res.append(r)
+        return res
+
+
+class ActionGenreChoice(Action):
+    def __init__(self):
+        self.query = ""
+
+    def name(self):
+        return "action_genre_choice"
+
+    def run(self, dispatcher, tracker, domain):
+        pass
