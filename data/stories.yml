@@ -12,6 +12,18 @@ stories:
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: formation_choice
+  - action: action_formation_choice
+  - intent: formation_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
 
 - story: Genre selection
   steps:
@@ -23,6 +35,12 @@ stories:
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
 
 - story: Formation selection
   steps:
@@ -31,6 +49,12 @@ stories:
   - intent: formation_choice
   - action: action_formation_choice
   - intent: formation_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
