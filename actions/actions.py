@@ -5,6 +5,7 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
+import ast
 import requests
 import urllib
 import logging
@@ -13,7 +14,7 @@ import os
 
 from fuzzywuzzy import fuzz
 from collections import defaultdict
-from typing import Any, Text, Dict, List
+from typing import Any, Text, Dict, List, Tuple
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
@@ -63,6 +64,7 @@ class NoResultsException(Exception):
 class NoEntityFoundException(Exception):
     pass
 
+
 class ActionDisplayResults(Action):
     def __init__(self):
         super(ActionDisplayResults, self).__init__()
@@ -89,16 +91,14 @@ class ActionDisplayResults(Action):
         buttons.append(
             {
                 "title": "Nouvelle recherche",
-                "payload": "/utter_ask_filter_criteria",
+                "payload": "/greet",
             }
         )
 
         # Display message
-        dispatcher.utter_message(
-            text=current_results, 
-            buttons=buttons
-        )
+        dispatcher.utter_message(text=current_results, buttons=buttons)
         return []
+
 
 class ActionGetSheetMusicByCasting(Action):
     def __init__(self):
@@ -319,6 +319,66 @@ limit {limit}
 
         return inputted_medias, entity_dict
 
+    def get_name_from_code(self, slot_name, code):
+        """Get the name from the code."""
+        if slot_name == "genre":
+            return genres.genres.get(code, [None])[0]
+        elif slot_name == "agent":
+            return agents.agents.get(code, [None])[0]
+        elif slot_name == "period":
+            return periods.periods.get(code, [None])[0]
+        elif slot_name == "location":
+            return locations.locations.get(code, [None])[0]
+        elif slot_name == "level":
+            return levels.all_levels.get(code, [None])[0]
+        else:
+            raise ValueError(f"Unknown slot name: {slot_name}")
+
+    def clear_slots(self, existing_slots, entity_dict, inputted_medias):
+        # We clear every slot which is not in the entities
+        slots = []
+        to_pop = []
+        for slot_name, slot_value in existing_slots.items():
+            # Instrumentation
+            if slot_name == "instrumentation" and inputted_medias:
+                slots.append(SlotSet("instrumentation", str(inputted_medias)))
+                to_pop.append("instrumentation")
+            # Rest of the slots
+            elif slot_name not in entity_dict and slot_value is not None:
+                slots.append(SlotSet(slot_name, None))
+                to_pop.append(slot_name)
+
+        # This below is necessary because we can't pop while iterating
+        for slot_name in to_pop:
+            existing_slots.pop(slot_name)
+
+        return slots, existing_slots
+
+    def slots_to_entities(self, slots, entity_dict, inputted_medias):
+        """Patch the entity_dict with the slots."""
+        for slot_name, slot_value in slots.items():
+            if (
+                entity_dict[slot_name]["code"] is not None
+                or slot_value is None
+                or slot_name == "work_name"
+            ):
+                continue
+            if slot_name != "instrumentation":
+                entity_dict[slot_name]["code"] = slot_value
+                entity_dict[slot_name]["name"] = self.get_name_from_code(
+                    slot_name, slot_value
+                )
+            if slot_name == "instrumentation":
+                instru_dict = ast.literal_eval(slot_value)
+                for media_code, media_count in instru_dict.items():
+                    if media_code not in inputted_medias:
+                        inputted_medias[media_code] = media_count
+        logging.info(
+            f"PATCHED ENTITY dict: {entity_dict};\n inputted_medias: {inputted_medias}"
+        )
+
+        return entity_dict, inputted_medias
+
     def run(
         self,
         dispatcher: CollectingDispatcher,
@@ -329,18 +389,14 @@ limit {limit}
         entities = sorted(tracker.latest_message["entities"], key=lambda d: d["start"])
         logging.info(entities)
 
-        # Get current_results; if it exists, display it and exit!
-        current_results = tracker.get_slot("current_results")
-        logging.info(f"current_results: {current_results}")
-        if current_results:
-            dispatcher.utter_message(text=current_results)
-            return []
+        existing_slots = get_slots(tracker)
+        logging.info(f"Existing_slots: {existing_slots}")
 
         # Initialize output variables
-        answer = "Vous recherchez des partitions"
         worded_mediums = ""
         results = []
         buttons = []
+        slots = []
         try:
             # Set entities
             inputted_medias, entity_dict = self.set_entities(
@@ -355,11 +411,28 @@ limit {limit}
                     f"Problem with entities: {inputted_medias}"
                 )
 
-            logging.info(f"medium: {inputted_medias}, entity_dict: {entity_dict}")
+            # If there's more than one entity, it means that the previous intent was direct_query
+            # and we thus need to reset the slots
+            # Clear slots only if there's more than one entity passed
+            if len(entities) > 1:
+                slots_to_clear, existing_slots = self.clear_slots(
+                    existing_slots, entity_dict, inputted_medias
+                )
+                slots.extend(slots_to_clear)
+            else:
+                slots.append(SlotSet("instrumentation", str(inputted_medias)))
+                logging.info(f"medium: {inputted_medias}, entity_dict: {entity_dict}")
+                entity_dict, inputted_medias = self.slots_to_entities(
+                    existing_slots, entity_dict, inputted_medias
+                )
 
             results, worded_mediums = self.get_query_results(
                 inputted_medias, entity_dict, exclusive=True
             )
+
+            # Add the user-inputted criterias to the answer
+            answer = self.add_criterias(entity_dict, worded_mediums)
+
             if not results:
                 results, worded_mediums = self.get_query_results(
                     inputted_medias, entity_dict
@@ -371,25 +444,23 @@ limit {limit}
                         f"No results found for medias: {inputted_medias}"
                     )
 
-            # Add the user-inputted criterias to the answer
-            answer += self.add_criterias(entity_dict, worded_mediums)
-
             # User wants to see the results (action called natively, from outside the "button flow")
             new_answer, buttons = self.format_answer_without_results(
                 tracker,
                 results,
             )
+
             answer += new_answer
         except Exception:
             logging.info(traceback.print_exc())
-            answer += "Mais je n'ai pas trouvé de résultats"
-            answer += self.add_criterias(entity_dict, worded_mediums)
+            answer = "Vous recherchez des partitions, mais je n'ai pas trouvé de résultats correspondant à votre recherche. Veuillez reformuler votre demande."
+            # answer += self.add_criterias(entity_dict, worded_mediums)
         dispatcher.utter_message(text=answer, buttons=buttons)
-        return []
+        return slots
 
     def get_query_results(
         self, inputted_medias: dict, entity_dict: dict, exclusive=False
-    ) -> List[str]:
+    ) -> Tuple[List[dict], str]:
         formatted_query, worded_mediums = self.format_sparql_query(
             inputted_medias, entity_dict, exclusive
         )
@@ -622,14 +693,18 @@ optional {{?creation  mus:R24_created   ?score .
             val["name"] for val in entity_dict.values() if val["name"] is not None
         ]
 
-        res = ""
-        if criterias:
-            # Add the worded mediums, i.e. the instruments in human-readable form
-            if worded_mediums:
-                criterias += [worded_mediums]
+        res = "Vous recherchez des partitions"
+        logging.info(f"XYZ {criterias}")
 
+        # Add the worded mediums, i.e. the instruments in human-readable form
+        if worded_mediums:
+            criterias += [worded_mediums]
+
+        if criterias:
             # Format the string differently depending on the number of criterias
-            res += f" avec les critères " if len(criterias) > 1 else f" avec le critère "
+            res += (
+                f" avec les critères " if len(criterias) > 1 else f" avec le critère "
+            )
             for i, entity_name in enumerate(criterias):
                 res += f" {entity_name}"
                 if i < len(criterias) - 2:
@@ -663,16 +738,15 @@ optional {{?creation  mus:R24_created   ?score .
         tracker,
         results,
     ):
-
         # Format the bot answer
         buttons = []
-        worded_results = f"J'ai trouvé {len(results)} partitions correspondant à votre recherche. Voulez-vous que je les affiche ?"
-        formatted_results = worded_results + "\n".join(results)
-        encoded = urllib.parse.quote_plus(formatted_results, safe="/")
+        worded_results = f"J'ai trouvé {len(results)} partitions correspondant à votre recherche. Voulez-vous que je les affiche ?\n"
+        formatted_results = "\n".join(results)
+        encoded = urllib.parse.quote_plus(formatted_results.strip("\n"), safe="/")
         buttons.append(
             {
                 "title": "Afficher les résultats",
-                "payload": f"/display_results{{\"current_results\": \"{encoded}\"}}",
+                "payload": f'/display_results{{"current_results": "{encoded}"}}',
             }
         )
         criteria_buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(tracker)
@@ -694,12 +768,12 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        formation = tracker.get_slot("formation")
-        if not formation:
+        instrumentation = tracker.get_slot("instrumentation")
+        if not instrumentation:
             buttons.append(
                 {
-                    "title": f"Formation",
-                    "payload": f"/formation_choice",
+                    "title": f"Instrumentation",
+                    "payload": f"/instrumentation_choice",
                 }
             )
 
@@ -712,8 +786,68 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        logging.info(f"agent: {agent}, formation: {formation}, genre: {genre}")
+        location = tracker.get_slot("location")
+        if not location:
+            buttons.append(
+                {
+                    "title": f"Localisation",
+                    "payload": f"/location_choice",
+                }
+            )
+
+        period = tracker.get_slot("period")
+        if not period:
+            buttons.append(
+                {
+                    "title": f"Période",
+                    "payload": f"/period_choice",
+                }
+            )
+
+        level = tracker.get_slot("level")
+        if not level:
+            buttons.append(
+                {
+                    "title": f"Niveau",
+                    "payload": f"/level_choice",
+                }
+            )
         return buttons
+
+
+def get_slots(tracker):
+    return {
+        "agent": tracker.get_slot("agent"),
+        "instrumentation": tracker.get_slot("instrumentation"),
+        "genre": tracker.get_slot("genre"),
+        "location": tracker.get_slot("location"),
+        "period": tracker.get_slot("period"),
+        "level": tracker.get_slot("level"),
+        "work_name": tracker.get_slot("work_name"),
+    }
+
+
+def get_choice_filters(tracker):
+    slots = get_slots(tracker)
+    logging.info(f"slots: {slots}")
+    filters = ""
+    if slots["agent"]:
+        filters += ActionComposerChoice.get_agent_filter(slots["agent"])
+    if slots["instrumentation"]:
+        filters += ActionInstrumentationChoice.get_instrumentation_filter(
+            slots["instrumentation"]
+        )
+    if slots["genre"]:
+        filters += ActionGenreChoice.get_genre_filter(slots["genre"])
+    if slots["location"]:
+        filters += ActionLocationChoice.get_location_filter(slots["location"])
+    if slots["period"]:
+        filters += ActionPeriodChoice.get_period_filter(slots["period"])
+    if slots["level"]:
+        filters += ActionLevelChoice.get_level_filter(slots["level"])
+    if slots["work_name"]:
+        filters += ActionWorkNameChoice.get_work_name_filter(slots["work_name"])
+    return filters
 
 
 class ActionComposerChoice(Action):
@@ -740,6 +874,8 @@ where {{
     ?score a <http://erlangen-crm.org/efrbroo/F24_Publication_Expression>.
     ?score mus:U13_has_casting ?casting .
     ?casting mus:U23_has_casting_detail ?castingDetail .
+
+    {filters}
 
     # AGENT
     optional {{?creation  mus:R24_created   ?score .
@@ -769,14 +905,19 @@ where {{
     BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
 }}
 GROUP BY ?compositeur ?compositeurLabel
+ORDER BY DESC(?scoreCount)
         """
 
     def name(self):
         return "action_composer_choice"
 
     def run(self, dispatcher, tracker, domain):
+        # Get the filters
+        filters = get_choice_filters(tracker)
+        logging.debug(f"Filters: {filters}")
+
         # Query the graph DB to get composers
-        composers = self.get_top_composers()
+        composers = self.get_top_composers(filters)
 
         buttons = []
         for composer in composers:
@@ -787,6 +928,14 @@ GROUP BY ?compositeur ?compositeurLabel
                 }
             )
 
+        # Append manual entry button
+        buttons.append(
+            {
+                "title": "Autre compositeur",
+                "payload": "/composer_manual_entry",
+            }
+        )
+
         # Display the buttons
         dispatcher.utter_message(
             text="Voilà quelques compositeurs principaux pour filtrer les résultats:",
@@ -796,10 +945,12 @@ GROUP BY ?compositeur ?compositeurLabel
         # Set the composers slot
         return []
 
-    def get_top_composers(self):
-        # Query the graph DB to get the results
-        parsed_query = urllib.parse.quote_plus(self.query, safe="/")
-        logging.info(f"Requesting {self.query}")
+    def get_top_composers(self, filters: str):
+        # Format the query string
+        query = self.query.format(filters=filters)
+
+        parsed_query = urllib.parse.quote_plus(query, safe="/")
+        logging.info(f"Requesting {query}")
         results = requests.get(
             ENDPOINT + parsed_query,
             headers={
@@ -808,6 +959,11 @@ GROUP BY ?compositeur ?compositeurLabel
             },
         ).json()
         res = []
+
+        # pop any empty first element
+        if "compositeur" not in results["results"]["bindings"][0]:
+            results["results"]["bindings"].pop(0)
+
         for r in results["results"]["bindings"][:3]:
             r["compositeur"]["value"] = str(
                 int(r["compositeur"]["value"].split("/")[-1])
@@ -815,13 +971,745 @@ GROUP BY ?compositeur ?compositeurLabel
             res.append(r)
         return res
 
+    @staticmethod
+    def get_agent_filter(agent: str):
+        while len(agent) < 7:
+            agent = "0" + agent
+        return f"""
+?creation  mus:R24_created   ?score .
+?creation ecrm:P9_consists_of ?task.
+?task ecrm:P14_carried_out_by <https://ark.philharmoniedeparis.fr/ark:49250/{agent}>.
+?task mus:U31_had_function <https://ark.philharmoniedeparis.fr/ark/49250/vocabulary/roles/230>.
+"""
+
+
+class ActionInstrumentationChoice(Action):
+    def __init__(self):
+        self.query = """
+PREFIX luc: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc-index: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mus: <http://data.doremus.org/ontology#>
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX phil: <https://data.philharmoniedeparis.fr/>
+PREFIX philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
+
+
+select distinct ?medium ?mediumLabel (count(distinct ?score) as ?scoreCount)
+
+where {{
+    ?score a <http://erlangen-crm.org/efrbroo/F24_Publication_Expression>.
+    ?score mus:U13_has_casting ?casting .
+    ?casting mus:U23_has_casting_detail ?castingDetail .
+
+    {filters}
+
+# les partitions avec leur titre et statement of responsibility ...
+    ?score  mus:U170_has_title_statement ?scoreTitle.
+    ?scoreTitle rdfs:label ?scoreTitleLabel.
+    optional {{?score mus:U172_has_statement_of_responsibility_relating_to_title ?U172_has_statement_of_responsibility_relating_to_title. 
+    ?U172_has_statement_of_responsibility_relating_to_title rdfs:label ?responsibilityLabel}}
+    
+# on veut récupérer tous les instruments du casting
+    #on ne tient pas compte des instruments ajoutés lors de la surindexation
+    graph <http://data.philharmoniedeparis.fr/graph/scores> 
+    {{
+    ?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?medium.
+    }}
+	optional {{?medium skos:prefLabel ?mediumLabel.
+	filter (lang(?mediumLabel)="fr")}}
+    optional {{ ?castingDetail mus:U30_foresees_quantity_of_mop ?mediumQuantity.}}
+
+# construction de l'URL dans le site de la philharmonie
+    bind (strafter(str(?score),"ark:49250/")as ?identifier)
+    BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
+}}
+GROUP BY ?medium ?mediumLabel
+ORDER BY DESC(?scoreCount)
+        """
+
+    def name(self):
+        return "action_instrumentation_choice"
+
+    def run(self, dispatcher, tracker, domain):
+        # Get the current slot values
+        filters = get_choice_filters(tracker)
+        logging.debug(f"Filters: {filters}")
+
+        # Query the graph DB to get formations
+        formations = self.get_top_instrumentations(filters)
+
+        buttons = []
+        for formation in formations:
+            buttons.append(
+                {
+                    "title": formation["mediumLabel"]["value"],
+                    "payload": f'/instrumentation_is_selected{{"medium":"{formation["medium"]["value"]}"}}',
+                }
+            )
+
+        # Append manual entry button
+        buttons.append(
+            {
+                "title": "Autre formation",
+                "payload": "/instrumentation_manual_entry",
+            }
+        )
+
+        # Display the buttons
+        dispatcher.utter_message(
+            text="Voilà quelques formations principales pour filtrer les résultats:",
+            buttons=buttons,
+        )
+
+        # Set the formations slot
+        return []
+
+    def get_top_instrumentations(self, filters):
+        # Format the query string
+        query = self.query.format(filters=filters)
+
+        parsed_query = urllib.parse.quote_plus(query, safe="/")
+        logging.info(f"Requesting {query}")
+
+        # Launch the query
+        results = requests.get(
+            ENDPOINT + parsed_query,
+            headers={
+                "Accept": "application/sparql-results+json",
+                "Authorization": TOKEN if TOKEN else "",
+            },
+        ).json()
+        res = []
+
+        # pop any empty first element
+        if not results["results"]["bindings"][0]:
+            results["results"]["bindings"].pop(0)
+
+        for r in results["results"]["bindings"][:3]:
+            r["medium"]["value"] = r["medium"]["value"].split("/")[-1]
+            res.append(r)
+        return res
+
+    @staticmethod
+    def get_instrumentation_filter(instrumentation: str):
+        filters = ""
+        solo_medium_filters = ""
+        medium_sums = []
+
+        # Parse the str repr of the instrumentation dict to a dict using
+        instru_dict = ast.literal_eval(instrumentation)
+        if not instru_dict:
+            return ""
+
+        for i, medium in enumerate(instru_dict.keys()):
+            # Check if mimo or iaml
+
+            if medium.isdigit():
+                formatted_medium = (
+                    f"<http://www.mimo-db.eu/InstrumentsKeywords/{medium}>"
+                )
+            else:
+                formatted_medium = (
+                    f"<http://data.doremus.org/vocabulary/iaml/mop/{medium}>"
+                )
+
+            count = instru_dict[medium]
+            medium_sums.append(f"SUM(?mediumQuantity_{i}) >= {count}")
+
+            # Medium
+            solo_medium_filters += f"""
+#selection instrument {i}          
+?casting mus:U23_has_casting_detail ?castingDetail_{i}.
+?castingDetail_{i}
+    philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal {formatted_medium} ;
+    mus:U30_foresees_quantity_of_mop ?mediumQuantity_{i}. 
+            """
+
+        filters += f"""
+# FILTRAGE SUR L'INSTRUMENTATION    
+{{
+SELECT ?score ?casting 
+WHERE {{
+    ?score a ?classes.
+    values (?classes ) {{ (efrbroo:F24_Publication_Expression)(mus:M167_Publication_Expression_Fragment)}}
+    ?score mus:U13_has_casting ?casting .
+    {solo_medium_filters}
+}}
+GROUP BY ?score ?casting
+# filtre sur les quantités d'instruments (à supprimer si pas de contrainte sur les quantités de chaque instrument)        
+HAVING({' && '.join(medium_sums)})
+}}
+        """
+        # DEPRECATED: The below filter selects exact quantities of instruments, will break
+        # on chorals or ensembles which we don't care about anyway when finding the top
+        # genres or composers etc. using the instrumentation
+        #
+        # total = sum(instru_dict.values())
+        # filters += f"""
+        # values (?input_quantity_total) {{(\"{total}\"^^xsd:integer)}}
+        # ?casting mus:U48_foresees_quantity_of_actors ?input_quantity_total.
+        # """
+        return filters
+
 
 class ActionGenreChoice(Action):
     def __init__(self):
-        self.query = ""
+        self.query = """
+PREFIX luc: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc-index: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mus: <http://data.doremus.org/ontology#>
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX phil: <https://data.philharmoniedeparis.fr/>
+PREFIX philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
+
+
+select distinct ?genre ?genreLabel (count(distinct ?score) as ?scoreCount)
+
+where {{
+    ?score a <http://erlangen-crm.org/efrbroo/F24_Publication_Expression>.
+    ?score mus:U13_has_casting ?casting .
+    ?casting mus:U23_has_casting_detail ?castingDetail .
+        
+    ?score mus:U12_has_genre ?genre.
+    ?genre skos:prefLabel ?genreLabel.
+
+    {filters}
+
+    # les partitions avec leur titre et statement of responsibility ...
+    ?score  mus:U170_has_title_statement ?scoreTitle.
+    ?scoreTitle rdfs:label ?scoreTitleLabel.
+    optional {{?score mus:U172_has_statement_of_responsibility_relating_to_title ?U172_has_statement_of_responsibility_relating_to_title. 
+    ?U172_has_statement_of_responsibility_relating_to_title rdfs:label ?responsibilityLabel}}
+    
+    # on veut récupérer tous les instruments du casting
+    #on ne tient pas compte des instruments ajoutés lors de la surindexation
+    graph <http://data.philharmoniedeparis.fr/graph/scores> 
+    {{
+    ?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?medium.
+    }}
+	optional {{?medium skos:prefLabel ?mediumLabel.
+	filter (lang(?mediumLabel)="fr")}}
+    optional {{ ?castingDetail mus:U30_foresees_quantity_of_mop ?mediumQuantity.}}
+
+# construction de l'URL dans le site de la philharmonie
+    bind (strafter(str(?score),"ark:49250/")as ?identifier)
+    BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
+}}
+GROUP BY ?genre ?genreLabel
+ORDER BY DESC(?scoreCount)
+"""
 
     def name(self):
         return "action_genre_choice"
 
     def run(self, dispatcher, tracker, domain):
+        # Get filters
+        filters = get_choice_filters(tracker)
+        logging.debug(f"Filters: {filters}")
+
+        # Query the graph DB to get formations
+        genres = self.get_top_genres(filters)
+
+        buttons = []
+        for genre in genres:
+            buttons.append(
+                {
+                    "title": genre["genreLabel"]["value"],
+                    "payload": f'/genre_is_selected{{"genre":"{genre["genre"]["value"]}"}}',
+                }
+            )
+
+        # Append manual entry button
+        buttons.append(
+            {
+                "title": "Autre genre",
+                "payload": "/genre_manual_entry",
+            }
+        )
+
+        # Display the buttons
+        dispatcher.utter_message(
+            text="Voilà quelques genres principaux pour filtrer les résultats:",
+            buttons=buttons,
+        )
+
+        # Set the formations slot
+        return []
+
+    def get_top_genres(self, filters: str):
+        # Format the query string
+        query = self.query.format(filters=filters)
+
+        parsed_query = urllib.parse.quote_plus(query, safe="/")
+        logging.info(f"Requesting {query}")
+
+        # Launch the query
+        results = requests.get(
+            ENDPOINT + parsed_query,
+            headers={
+                "Accept": "application/sparql-results+json",
+                "Authorization": TOKEN if TOKEN else "",
+            },
+        ).json()
+        res = []
+
+        # pop any empty first element
+        if not results["results"]["bindings"][0]:
+            results["results"]["bindings"].pop(0)
+
+        for r in results["results"]["bindings"][:3]:
+            r["genre"]["value"] = str(int(r["genre"]["value"].split("/")[-1]))
+            res.append(r)
+        return res
+
+    @staticmethod
+    def get_genre_filter(genre: str):
+        while len(genre) < 7:
+            genre = "0" + genre
+        return f"""
+values (?genre ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{genre}>)}}
+?score mus:U12_has_genre ?genre.
+        """
+
+
+class ActionLocationChoice(Action):
+    def __init__(self):
+        self.query = """
+PREFIX luc: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc-index: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mus: <http://data.doremus.org/ontology#>
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX phil: <https://data.philharmoniedeparis.fr/>
+PREFIX philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
+
+
+select distinct ?localisation ?localisationLabel (count(distinct ?score) as ?scoreCount)
+
+where {{
+    ?score a <http://erlangen-crm.org/efrbroo/F24_Publication_Expression>.
+    ?score mus:U13_has_casting ?casting .
+    ?casting mus:U23_has_casting_detail ?castingDetail .
+        
+
+?score mus:U65_has_geographical_context ?localisation.
+?localisation skos:prefLabel ?localisationLabel.
+
+
+# les partitions avec leur titre et statement of responsibility ...
+    ?score  mus:U170_has_title_statement ?scoreTitle.
+    ?scoreTitle rdfs:label ?scoreTitleLabel.
+    optional {{?score mus:U172_has_statement_of_responsibility_relating_to_title ?U172_has_statement_of_responsibility_relating_to_title. 
+    ?U172_has_statement_of_responsibility_relating_to_title rdfs:label ?responsibilityLabel}}
+    
+
+    # les partitions avec leur titre et statement of responsibility ...
+    ?score  mus:U170_has_title_statement ?scoreTitle.
+    ?scoreTitle rdfs:label ?scoreTitleLabel.
+    optional {{?score mus:U172_has_statement_of_responsibility_relating_to_title ?U172_has_statement_of_responsibility_relating_to_title. 
+    ?U172_has_statement_of_responsibility_relating_to_title rdfs:label ?responsibilityLabel}}
+    
+    # on veut récupérer tous les instruments du casting
+    #on ne tient pas compte des instruments ajoutés lors de la surindexation
+    graph <http://data.philharmoniedeparis.fr/graph/scores> 
+    {{
+    ?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?medium.
+    }}
+	optional {{?medium skos:prefLabel ?mediumLabel.
+	filter (lang(?mediumLabel)="fr")}}
+    optional {{ ?castingDetail mus:U30_foresees_quantity_of_mop ?mediumQuantity.}}
+
+# construction de l'URL dans le site de la philharmonie
+    bind (strafter(str(?score),"ark:49250/")as ?identifier)
+    BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
+}}
+GROUP BY ?localisation ?localisationLabel
+ORDER BY DESC(?scoreCount)
+"""
+
+    def name(self):
+        return "action_location_choice"
+
+    def run(self, dispatcher, tracker, domain):
+        # Get filters
+        filters = get_choice_filters(tracker)
+        logging.debug(f"Filters: {filters}")
+
+        # Query the graph DB to get formations
+        locations = self.get_top_locations(filters)
+
+        buttons = []
+        for location in locations:
+            buttons.append(
+                {
+                    "title": location["localisationLabel"]["value"],
+                    "payload": f'/location_is_selected{{"location":"{location["localisation"]["value"]}"}}',
+                }
+            )
+
+        # Append manual entry button
+        buttons.append(
+            {
+                "title": "Autre lieu",
+                "payload": "/location_manual_entry",
+            }
+        )
+
+        # Display the buttons
+        dispatcher.utter_message(
+            text="Voilà quelques lieux principaux pour filtrer les résultats:",
+            buttons=buttons,
+        )
+
+        # Set the formations slot
+        return []
+
+    def get_top_locations(self, filters: str):
+        # Format the query string
+        query = self.query.format(filters=filters)
+
+        parsed_query = urllib.parse.quote_plus(query, safe="/")
+        logging.info(f"Requesting {query}")
+
+        # Launch the query
+        results = requests.get(
+            ENDPOINT + parsed_query,
+            headers={
+                "Accept": "application/sparql-results+json",
+                "Authorization": TOKEN if TOKEN else "",
+            },
+        ).json()
+        res = []
+
+        # pop any empty first element
+        if not results["results"]["bindings"][0]:
+            results["results"]["bindings"].pop(0)
+
+        for r in results["results"]["bindings"][:3]:
+            r["localisation"]["value"] = str(
+                int(r["localisation"]["value"].split("/")[-1])
+            )
+            res.append(r)
+        return res
+
+    @staticmethod
+    def get_location_filter(location: str):
+        return f"""
+values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{location}>) }}
+?score mus:U65_has_geographical_context ?localisation.
+?localisation skos:prefLabel ?localisationLabel.
+"""
+
+
+class ActionPeriodChoice(Action):
+    def __init__(self):
+        self.query = """
+PREFIX luc: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc-index: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mus: <http://data.doremus.org/ontology#>
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX phil: <https://data.philharmoniedeparis.fr/>
+PREFIX philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
+
+
+select distinct ?period ?periodLabel (count(distinct ?score) as ?scoreCount)
+
+where {{
+    ?score a <http://erlangen-crm.org/efrbroo/F24_Publication_Expression>.
+    ?score mus:U13_has_casting ?casting .
+    ?casting mus:U23_has_casting_detail ?castingDetail .
+        
+
+?score mus:U66_has_historical_context ?period.
+?period skos:prefLabel ?periodLabel.
+
+    # les partitions avec leur titre et statement of responsibility ...
+    ?score  mus:U170_has_title_statement ?scoreTitle.
+    ?scoreTitle rdfs:label ?scoreTitleLabel.
+    optional {{?score mus:U172_has_statement_of_responsibility_relating_to_title ?U172_has_statement_of_responsibility_relating_to_title. 
+    ?U172_has_statement_of_responsibility_relating_to_title rdfs:label ?responsibilityLabel}}
+    
+    # on veut récupérer tous les instruments du casting
+    #on ne tient pas compte des instruments ajoutés lors de la surindexation
+    graph <http://data.philharmoniedeparis.fr/graph/scores> 
+    {{
+    ?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?medium.
+    }}
+	optional {{?medium skos:prefLabel ?mediumLabel.
+	filter (lang(?mediumLabel)="fr")}}
+    optional {{ ?castingDetail mus:U30_foresees_quantity_of_mop ?mediumQuantity.}}
+
+# construction de l'URL dans le site de la philharmonie
+    bind (strafter(str(?score),"ark:49250/")as ?identifier)
+    BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
+}}
+GROUP BY ?period ?periodLabel
+ORDER BY DESC(?scoreCount)
+"""
+
+    def name(self):
+        return "action_period_choice"
+
+    def run(self, dispatcher, tracker, domain):
+        # Get filters
+        filters = get_choice_filters(tracker)
+        logging.debug(f"Filters: {filters}")
+
+        # Query the graph DB to get formations
+        periods = self.get_top_periods(filters)
+
+        buttons = []
+        for period in periods:
+            buttons.append(
+                {
+                    "title": period["periodLabel"]["value"],
+                    "payload": f'/period_is_selected{{"period":"{period["period"]["value"]}"}}',
+                }
+            )
+
+        # Append manual entry button
+        buttons.append(
+            {
+                "title": "Autre période",
+                "payload": "/period_manual_entry",
+            }
+        )
+
+        # Display the buttons
+        dispatcher.utter_message(
+            text="Voilà quelques périodes principales pour filtrer les résultats:",
+            buttons=buttons,
+        )
+
+        # Set the formations slot
+        return []
+
+    def get_top_periods(self, filters: str):
+        # Format the query string
+        query = self.query.format(filters=filters)
+
+        parsed_query = urllib.parse.quote_plus(query, safe="/")
+        logging.info(f"Requesting {query}")
+
+        # Launch the query
+        results = requests.get(
+            ENDPOINT + parsed_query,
+            headers={
+                "Accept": "application/sparql-results+json",
+                "Authorization": TOKEN if TOKEN else "",
+            },
+        ).json()
+        res = []
+
+        # pop any empty first element
+        if not results["results"]["bindings"][0]:
+            results["results"]["bindings"].pop(0)
+
+        for r in results["results"]["bindings"][:3]:
+            r["period"]["value"] = str(int(r["period"]["value"].split("/")[-1]))
+            res.append(r)
+        return res
+
+    @staticmethod
+    def get_period_filter(period: str):
+        return f"""
+values (?input_period ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{period}>)}}
+?score mus:U66_has_historical_context ?input_period.
+?input_period skos:prefLabel ?periodLabel.
+"""
+
+
+class ActionLevelChoice(Action):
+    def __init__(self):
+        self.query = """
+PREFIX luc: <http://www.ontotext.com/connectors/lucene#>
+PREFIX luc-index: <http://www.ontotext.com/connectors/lucene/instance#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX mus: <http://data.doremus.org/ontology#>
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX phil: <https://data.philharmoniedeparis.fr/>
+PREFIX philhar: <http://data.philharmoniedeparis.fr/ontology/partitions#>
+PREFIX efrbroo: <http://erlangen-crm.org/efrbroo/>
+
+
+select distinct ?level ?levelLabel (count(distinct ?score) as ?scoreCount)
+
+where {{
+    ?score a <http://erlangen-crm.org/efrbroo/F24_Publication_Expression>.
+    ?score mus:U13_has_casting ?casting .
+    ?casting mus:U23_has_casting_detail ?castingDetail .
+        
+?casting mus:U23_has_casting_detail ?castingDetailNiveauEducatif.
+?castingDetailNiveauEducatif ecrm:P103_was_intended_for ?level.
+?level skos:prefLabel ?levelLabel.
+graph <http://data.philharmoniedeparis.fr/graph/scores> 
+{{ ?castingDetailNiveauEducatif
+    philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?mediumNiveauEducatif.}}
+?mediumNiveauEducatif skos:prefLabel ?mediumNiveauEducatifLabel.
+filter (lang(?mediumNiveauEducatifLabel)="fr")
+
+        
+    # les partitions avec leur titre et statement of responsibility ...
+    ?score  mus:U170_has_title_statement ?scoreTitle.
+    ?scoreTitle rdfs:label ?scoreTitleLabel.
+    optional {{?score mus:U172_has_statement_of_responsibility_relating_to_title ?U172_has_statement_of_responsibility_relating_to_title. 
+    ?U172_has_statement_of_responsibility_relating_to_title rdfs:label ?responsibilityLabel}}
+    
+    # on veut récupérer tous les instruments du casting
+    #on ne tient pas compte des instruments ajoutés lors de la surindexation
+    graph <http://data.philharmoniedeparis.fr/graph/scores> 
+    {{
+    ?castingDetail philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?medium.
+    }}
+	optional {{?medium skos:prefLabel ?mediumLabel.
+	filter (lang(?mediumLabel)="fr")}}
+    optional {{ ?castingDetail mus:U30_foresees_quantity_of_mop ?mediumQuantity.}}
+
+# construction de l'URL dans le site de la philharmonie
+    bind (strafter(str(?score),"ark:49250/")as ?identifier)
+    BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
+}}
+GROUP BY ?level ?levelLabel
+ORDER BY DESC(?scoreCount)
+"""
+
+    def name(self):
+        return "action_level_choice"
+
+    def run(self, dispatcher, tracker, domain):
+        # Get filters
+        filters = get_choice_filters(tracker)
+        logging.debug(f"Filters: {filters}")
+
+        # Query the graph DB to get formations
+        levels = self.get_top_levels(filters)
+
+        buttons = []
+        for level in levels:
+            buttons.append(
+                {
+                    "title": level["levelLabel"]["value"],
+                    "payload": f'/level_is_selected{{"level":"{level["level"]["value"]}"}}',
+                }
+            )
+
+        # Append manual entry button
+        buttons.append(
+            {
+                "title": "Autre niveau",
+                "payload": "/level_manual_entry",
+            }
+        )
+
+        # Display the buttons
+        dispatcher.utter_message(
+            text="Voilà quelques niveaux principaux pour filtrer les résultats:",
+            buttons=buttons,
+        )
+
+        # Set the formations slot
+        return []
+
+    def get_top_levels(self, filters: str):
+        # Format the query string
+        query = self.query.format(filters=filters)
+
+        parsed_query = urllib.parse.quote_plus(query, safe="/")
+        logging.info(f"Requesting {query}")
+
+        # Launch the query
+        results = requests.get(
+            ENDPOINT + parsed_query,
+            headers={
+                "Accept": "application/sparql-results+json",
+                "Authorization": TOKEN if TOKEN else "",
+            },
+        ).json()
+        res = []
+
+        # pop any empty first element
+        if not results["results"]["bindings"][0]:
+            results["results"]["bindings"].pop(0)
+
+        for r in results["results"]["bindings"][:3]:
+            r["level"]["value"] = r["level"]["value"].split("/")[-1]
+            res.append(r)
+        return res
+
+    @staticmethod
+    def get_level_filter(level: str):
+        return f"""
+values (?input_educational_level) {{ (<https://data.philharmoniedeparis.fr/vocabulary/edudational-level/{level}>)}}
+?casting mus:U23_has_casting_detail ?castingDetailNiveauEducatif.
+?castingDetailNiveauEducatif ecrm:P103_was_intended_for ?input_educational_level.
+?input_educational_level skos:prefLabel ?educationLevelLabel.
+graph <http://data.philharmoniedeparis.fr/graph/scores> 
+{{ ?castingDetailNiveauEducatif
+    philhar:S1_foresees_use_of_medium_of_performance_instrument | philhar:S2_foresees_use_of_medium_of_performance_vocal ?mediumNiveauEducatif.}}
+?mediumNiveauEducatif skos:prefLabel ?mediumNiveauEducatifLabel.
+filter (lang(?mediumNiveauEducatifLabel)="fr")
+            """
+
+
+class ActionWorkNameChoice(Action):
+    def __init__(self):
         pass
+
+    def name(self):
+        return "action_work_name_choice"
+
+    @staticmethod
+    def get_work_name_filter(work_name: str):
+        lucene_query = " AND ".join([word + "~0.6" for word in work_name.split(" ")])
+        logging.info(lucene_query)
+        return f"""
+{{
+SELECT ?score ?casting ?snippetText ?snippetField ?scoreResearch 
+WHERE {{
+?search a luc-index:TitleIndex ;
+    luc:query "{lucene_query}" ;  
+    luc:entities ?score .
+    ?score luc:score ?scoreResearch .
+    ?score luc:snippets ?snippet .
+    ?snippet luc:snippetField ?snippetField ;
+    luc:snippetText ?snippetText .
+}}
+}}
+"""

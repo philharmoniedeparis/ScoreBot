@@ -13,6 +13,22 @@ nlu:
     - yo
     - coucou
     - bonsoir
+    - nouvelle recherche
+    - je veux faire une nouvelle recherche
+    - oublie cette recherche, je veux en faire une nouvelle
+    - résultats nuls nouvelle recherche
+    - lance une nouvelle recherche
+    - recommence
+    - recommencer
+    - je veux recommencer
+    - je veux recommencer ma recherche
+    - je veux recommencer à zéro
+    - je veux recommencer ma recherche à zéro
+    - je veux recommencer ma recherche à partir de zéro
+    - nouvelle recherche critères différents
+    - changer de critères
+    - je veux changer de critères
+
 
 - intent: goodbye
   examples: |

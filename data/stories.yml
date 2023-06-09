@@ -9,18 +9,99 @@ stories:
   - intent: composer_choice
   - action: action_composer_choice
   - intent: composer_is_selected
+    entities:
+    - agent: "38240"
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
   - intent: genre_choice
   - action: action_genre_choice
   - intent: genre_is_selected
+    entities:
+    - agent: "67139"
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
-  - intent: formation_choice
-  - action: action_formation_choice
-  - intent: formation_is_selected
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "3237"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Composer selection 2
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+    entities:
+    - agent: "55853"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "2299"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+    entities:
+    - agent: "68568"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Composer selection 3
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_manual_entry
+  - action: utter_composer_manual_entry
+  - intent: composer_is_selected
+    entities:
+    - agent: "38599"
+  - action: action_get_sheet_music_by_casting
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+    entities:
+    - agent: "68838"
+  - action: action_get_sheet_music_by_casting
+  - intent: direct_query
+  - action: utter_direct_query
+  - intent: get_sheet_music_by_casting
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: level_choice
+  - action: action_level_choice
+  - intent: level_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Composer manual entry
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_manual_entry
+  - action: utter_composer_manual_entry
+  - intent: composer_is_selected
+    entities:
+    - agent: "51606"
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
@@ -32,29 +113,472 @@ stories:
   - intent: genre_choice
   - action: action_genre_choice
   - intent: genre_is_selected
+    entities:
+    - agent: "64628"
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
   - intent: composer_choice
   - action: action_composer_choice
   - intent: composer_is_selected
+    entities:
+    - agent: "41804"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_manual_entry
+  - action: utter_instrumentation_manual_entry
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "3573"
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
 
-- story: Formation selection
+- story: Genre selection 2
   steps:
   - intent: greet
   - action: utter_ask_filter_criteria
-  - intent: formation_choice
-  - action: action_formation_choice
-  - intent: formation_is_selected
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+    entities:
+    - agent: "67487"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "3582"
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
   - intent: composer_choice
   - action: action_composer_choice
   - intent: composer_is_selected
+    entities:
+    - agent: "38954"
   - action: action_get_sheet_music_by_casting
   - intent: display_results
   - action: action_display_results
+
+- story: Genre selection 2 - composer manual entry
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_manual_entry
+  - action: utter_genre_manual_entry
+  - intent: genre_is_selected
+    entities:
+    - agent: "67509"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_manual_entry
+  - action: utter_composer_manual_entry
+  - intent: composer_is_selected
+    entities:
+    - agent: "748111"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Genre manual entry
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_manual_entry
+  - action: utter_genre_manual_entry
+  - intent: genre_is_selected
+    entities:
+    - agent: "67509"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Instrumentation selection 1
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "3561"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+    entities:
+    - agent: "43689"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+    entities:
+    - agent: "67803"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Instrumentation selection 1 - composer manual entry
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "3836"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_manual_entry
+  - action: utter_composer_manual_entry
+  - intent: composer_is_selected
+    entities:
+    - agent: "35239"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+    entities:
+    - agent: "68610"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Instrumentation selection 2
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "4093"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+    entities:
+    - agent: "68720"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+    entities:
+    - agent: "55842"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Instrumentation manual entry
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_manual_entry
+  - action: utter_instrumentation_manual_entry
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "cmi"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: location_choice
+  - action: action_location_choice
+  - intent: location_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+    entities:
+    - agent: "38705"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Location selection
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: location_choice
+  - action: action_location_choice
+  - intent: location_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+    entities:
+    - agent: "38400"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Location selection - composer manual entry
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: location_choice
+  - action: action_location_choice
+  - intent: location_manual_entry
+  - action: utter_location_manual_entry
+  - intent: location_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_manual_entry
+  - action: utter_composer_manual_entry
+  - intent: composer_is_selected
+    entities:
+    - agent: "38265"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Location manual entry
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: location_choice
+  - action: action_location_choice
+  - intent: location_manual_entry
+  - action: utter_location_manual_entry
+  - intent: location_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "oun"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: direct_query
+  - action: utter_direct_query
+  - intent: get_sheet_music_by_casting
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+
+- story: Level selection 1
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: level_choice
+  - action: action_level_choice
+  - intent: level_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "vte"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: period_choice
+  - action: action_period_choice
+  - intent: period_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: period_choice
+  - action: action_period_choice
+  - intent: period_manual_entry
+  - action: utter_period_manual_entry
+  - intent: period_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Level selection 1 - manual entry
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: level_choice
+  - action: action_level_choice
+  - intent: level_manual_entry
+  - action: utter_level_manual_entry
+  - intent: level_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+    entities:
+    - agent: "43710"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_manual_entry
+  - action: utter_genre_manual_entry
+  - intent: genre_is_selected
+    entities:
+    - genre: "68720"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Work Name selection 1
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: work_name_choice
+  - action: action_work_name_choice
+  - intent: work_name_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_manual_entry
+  - action: utter_instrumentation_manual_entry
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "ost"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: period_choice
+  - action: action_period_choice
+  - intent: period_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Work Name selection 1 - manual entry
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: work_name_choice
+  - action: action_work_name_choice
+  - intent: work_name_manual_entry
+  - action: utter_work_name_manual_entry
+  - intent: work_name_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: period_choice
+  - action: action_period_choice
+  - intent: period_manual_entry
+  - action: utter_period_manual_entry
+  - intent: period_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "3285"
+  - action: action_get_sheet_music_by_casting
+
+- story: Work Name selection 2
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: work_name_choice
+  - action: action_work_name_choice
+  - intent: work_name_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: level_choice
+  - action: action_level_choice
+  - intent: level_manual_entry
+  - action: utter_level_manual_entry
+  - intent: level_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: location_choice
+  - action: action_location_choice
+  - intent: level_manual_entry
+  - action: utter_location_manual_entry
+  - intent: location_is_selected
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: New search
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: composer_choice
+  - action: action_composer_choice
+  - intent: composer_is_selected
+    entities:
+    - agent: "51614"
+  - action: action_get_sheet_music_by_casting
+  - intent: instrumentation_choice
+  - action: action_instrumentation_choice
+  - intent: instrumentation_is_selected
+    entities:
+    - medium: "vun"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: genre_choice
+  - action: action_genre_choice
+  - intent: genre_is_selected
+    entities:
+    - genre: "67352"
+  - action: action_get_sheet_music_by_casting
+  - intent: display_results
+  - action: action_display_results
+
+- story: Direct query
+  steps:
+  - intent: greet
+  - action: utter_ask_filter_criteria
+  - intent: direct_query
+  - action: utter_direct_query
+  - intent: get_sheet_music_by_casting
+  - action: action_get_sheet_music_by_casting

@@ -31,12 +31,44 @@ intents:
     use_entities: false
 - genre_is_selected:
     use_entities: true
-- formation_choice:
+- level_choice:
     use_entities: false
-- formation_is_selected:
+- level_is_selected:
+    use_entities: true
+- period_choice:
+    use_entities: false
+- period_is_selected:
+    use_entities: true
+- work_name_choice:
+    use_entities: false
+- work_name_is_selected:
+    use_entities: true
+- location_choice:
+    use_entities: false
+- location_is_selected:
+    use_entities: true
+- instrumentation_choice:
+    use_entities: false
+- instrumentation_is_selected:
     use_entities: true
 - display_results:
     use_entities: true
+- composer_manual_entry:
+    use_entities: true
+- genre_manual_entry:
+    use_entities: true
+- instrumentation_manual_entry:
+    use_entities: true
+- level_manual_entry:
+    use_entities: true
+- period_manual_entry:
+    use_entities: true
+- work_name_manual_entry:
+    use_entities: true
+- location_manual_entry:
+    use_entities: true
+- direct_query:
+    use_entities: false
 - out_of_scope:
     use_entities: true
 - nlu_fallback:
@@ -63,24 +95,51 @@ slots:
   agent:
     type: text
     initial_value: null
-    influence_conversation: true
+    influence_conversation: false
     mappings:
     - type: from_entity
       entity: agent
   genre:
     type: text
     initial_value: null
-    influence_conversation: true
+    influence_conversation: false
     mappings:
     - type: from_entity
       entity: genre
-  formation:
+  instrumentation:
     type: text
     initial_value: null
-    influence_conversation: true
+    influence_conversation: false
+    mappings:
+    - type: custom
+  level:
+    type: text
+    initial_value: null
+    influence_conversation: false
     mappings:
     - type: from_entity
-      entity: formation
+      entity: level
+  work_name:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: work_name
+  period:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: period
+  location:
+    type: text
+    initial_value: null
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: location
   current_results:
     type: text
     initial_value: null
@@ -109,15 +168,40 @@ responses:
         - title: "Genre"
           payload: "/genre_choice"
         - title: "Instrumentation"
-          payload: "/formation_choice"
-        - title: "Directly type my query"
+          payload: "/instrumentation_choice"
+        - title: "Niveau"
+          payload: "/level_choice"
+        - title: "Période"
+          payload: "/period_choice"
+        - title: "Nom de l'oeuvre"
+          payload: "/work_name_choice"
+        - title: "Taper ma recherche à la main"
           payload: "/direct_query"
-
+  utter_composer_manual_entry:
+    - text: "Veuillez entrer le nom du compositeur que vous recherchez"
+  utter_genre_manual_entry:
+    - text: "Veuillez entrer le genre que vous recherchez"
+  utter_instrumentation_manual_entry:
+    - text: "Veuillez entrer l'instrumentation que vous recherchez"
+  utter_level_manual_entry:
+    - text: "Veuillez entrer le niveau que vous recherchez"
+  utter_period_manual_entry:
+    - text: "Veuillez entrer la période que vous recherchez"
+  utter_work_name_manual_entry:
+    - text: "Veuillez entrer le nom de l'oeuvre que vous recherchez"
+  utter_location_manual_entry:  
+    - text: "Veuillez entrer le lieu que vous recherchez"
+  utter_direct_query:
+    - text: "Vous pouvez taper votre recherche à la main et je vais essayer de trouver des partitions qui y correspondent."
 actions:
 - action_get_sheet_music_by_casting
 - action_composer_choice
 - action_genre_choice
 - action_display_results
-- action_formation_choice
+- action_instrumentation_choice
+- action_level_choice
+- action_period_choice
+- action_location_choice
+- action_work_name_choice
 forms: {}
 e2e_actions: []

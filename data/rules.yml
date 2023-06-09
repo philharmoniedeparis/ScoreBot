@@ -2,7 +2,6 @@ version: "3.1"
 
 rules:
 - rule: welcome user
-  conversation_start: true  # this rule only applies at the beginning of a conversation
   steps:
     - intent: greet
     - action: utter_ask_filter_criteria
@@ -37,6 +36,21 @@ rules:
   - intent: get_sheet_music_by_casting
   - action: action_get_sheet_music_by_casting
 
+# - rule: Composer choice
+#   steps:
+#   - intent: composer_choice
+#   - action: action_composer_choice
+
+# - rule: Genre choice
+#   steps:
+#   - intent: genre_choice
+#   - action: action_genre_choice
+
+# - rule: Formation choice
+#   steps:
+#   - intent: instrumentation_choice
+#   - action: action_instrumentation_choice
+
 - rule: Composer selected
   steps:
   - intent: composer_is_selected
@@ -47,7 +61,32 @@ rules:
   - intent: genre_is_selected
   - action: action_get_sheet_music_by_casting
 
+- rule: Formation selected
+  steps:
+  - intent: instrumentation_is_selected
+  - action: action_get_sheet_music_by_casting
+
 - rule: Display results
   steps:
   - intent: display_results
   - action: action_display_results
+
+- rule: Direct query
+  steps:
+  - intent: direct_query
+  - action: utter_direct_query
+
+# - rule: Genre manual entry
+#   steps:
+#   - intent: genre_manual_entry
+#   - action: utter_genre_manual_entry
+
+# - rule: Composer manual entry
+#   steps:
+#   - intent: composer_manual_entry
+#   - action: utter_composer_manual_entry
+
+# - rule: Formation manual entry
+#   steps:
+#   - intent: instrumentation_manual_entry
+#   - action: utter_instrumentation_manual_entry

@@ -17,7 +17,13 @@ GENRES = np.repeat(
 )
 
 # AGENTS: Repeat the 10 first agents 5 times because they are VIPs
-# AGENTS_VIP = np.repeat([preprocess_entity(sublist[0], lower=False) for sublist in list(agents.values())[:10]], 10)
+AGENTS_VIP = np.repeat(
+    [
+        preprocess_entity(sublist[0], lower=False)
+        for sublist in list(agents.values())[:10]
+    ],
+    10,
+)
 # AGENTS_FILLING = np.random.choice([preprocess_entity(i, lower=False) for sublist in list(agents.values()) for i in sublist], len(GENRES) - len(AGENTS_VIP))
 # AGENTS = AGENTS_VIP.tolist() + AGENTS_FILLING.tolist()
 AGENTS = []
@@ -28,6 +34,227 @@ for ix, sublist in enumerate(list(agents.values())):
 AGENTS = np.random.choice(AGENTS, len(GENRES))
 
 raw_sentences = {
+    "genre_is_selected": {
+        "sentences": [
+            "_GENRE",
+            "genre _GENRE",
+            "partitions _GENRE",
+            "_GENRE",
+            "_GENRE",
+            "_GENRE",
+            "_GENRE",
+        ],
+        "entities": {
+            "_GENRE": GENRES,
+        },
+    },
+    "location_is_selected": {
+        "sentences": [
+            "partition écrite à _LOCATION_NOUN",
+            "partition écrite en _LOCATION_NOUN",
+            "_LOCATION_ADJECTIVE",
+            "_LOCATION_NOUN",
+            "_LOCATION_NOUN",
+            "_LOCATION_ADJECTIVE",
+            "_LOCATION_ADJECTIVE",
+            "_LOCATION_ADJECTIVE",
+        ],
+        "entities": {
+            "_LOCATION_NOUN": [
+                preprocess_entity(i, lower=False)
+                for sublist in list(locations.values())
+                for i in sublist
+            ],
+            "_LOCATION_ADJECTIVE": [
+                preprocess_entity(sublist[2])
+                for sublist in list(locations.values())[:50]
+            ],
+        },
+    },
+    "period_is_selected": {
+        "sentences": [
+            "Je cherche une partition écrite à l'époque _PERIOD",
+            "date _PERIOD",
+            "_PERIOD",
+            "_PERIOD",
+            "_PERIOD",
+            "_PERIOD",
+            "partition du _PERIOD",
+            "_PERIOD",
+            "_PERIOD",
+        ],
+        "entities": {
+            "_PERIOD": [
+                preprocess_entity(i)
+                for sublist in list(periods.values())
+                for i in sublist
+            ],
+        },
+    },
+    "work_name_is_selected": {
+        "sentences": [
+            "_WORK_NAME",
+            "_WORK_NAME",
+            "_WORK_NAME",
+            "partition _WORK_NAME",
+            "le _WORK_NAME",
+            "la _WORK_NAME",
+        ],
+        "entities": {
+            "_WORK_NAME": [
+                preprocess_entity(i, lower=False)
+                for sublist in list(work_names.values())[:100]
+                for i in sublist
+            ],
+        },
+    },
+    "composer_is_selected": {
+        "sentences": [
+            "partition de _AGENT",
+            "partition écrite par _AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "écrit par _AGENT",
+            "par _AGENT",
+            "de _AGENT",
+            "_AGENT",
+        ],
+        "entities": {
+            "_AGENT": AGENTS_VIP.tolist() + AGENTS.tolist(),
+        },
+    },
+    "level_is_selected": {
+        "sentences": [
+            "_LEVEL_WORDED",
+            "_LEVEL_SENTENCE",
+            "_LEVEL_TIMING",
+            "partitions _LEVEL_WORDED",
+            "partitions _LEVEL_SENTENCE",
+            "partitions _LEVEL_TIMING",
+        ],
+        "entities": {
+            "_LEVEL_SENTENCE": [
+                preprocess_entity(i)
+                for sublist in list(level_sentences.values())
+                for i in sublist
+            ],
+            "_LEVEL_WORDED": [
+                preprocess_entity(i)
+                for sublist in list(level_worded.values())
+                for i in sublist
+            ],
+            "_LEVEL_TIMING": [
+                preprocess_entity(i)
+                for sublist in list(level_timing.values())
+                for i in sublist
+            ],
+        },
+    },
+    "instrumentation_is_selected": {
+        "sentences": [
+            "_MEDIUM",
+            "un _MEDIUM",
+            "un _MEDIUM soliste",
+            "_MEDIUM _MEDIUM",
+            "_MEDIUM deux _MEDIUM",
+            "_MEDIUM deux _MEDIUM en tout",
+            "_MEDIUM _MEDIUM",
+            "_MEDIUM 2 _MEDIUM",
+            "_MEDIUM 2 _MEDIUM au moins",
+            "_MEDIUM trois _MEDIUM",
+            "quatre _MEDIUM, _MEDIUM",
+            "_MEDIUM et _MEDIUM",
+            "_MEDIUM _MEDIUM _MEDIUM",
+            "_MEDIUM, _MEDIUM et _MEDIUM",
+            "_MEDIUM, _MEDIUM _MEDIUM _MEDIUM",
+            "deux _MEDIUM",
+            "deux _MEDIUM solistes",
+            "deux _MEDIUM seulement",
+            "deux _MEDIUM uniquement",
+            "2 _MEDIUM",
+            "trois _MEDIUM",
+            "trois _MEDIUM seulement",
+            "trois _MEDIUM _LEVEL_WORDED",
+            "quatre _MEDIUM",
+            "quatre _MEDIUM _GENRE",
+            "cinq _MEDIUM",
+            "cinq _MEDIUM au total",
+            "cinq _MEDIUM _GENRE",
+            "six _MEDIUM",
+            "six _MEDIUM uniquement",
+            "sept _MEDIUM",
+            "huit _MEDIUM",
+            "huit _MEDIUM seulement",
+            "neuf _MEDIUM",
+            "dix _MEDIUM",
+            "onze _MEDIUM",
+            "douze _MEDIUM",
+            "treize _MEDIUM",
+            "quatorze _MEDIUM",
+            "quinze _MEDIUM",
+            "seize _MEDIUM",
+            "dix-sept _MEDIUM",
+            "vingt _MEDIUM",
+            "ving et un _MEDIUM",
+            "2 _MEDIUM",
+            "2 _MEDIUM en tout",
+            "2 _MEDIUM au moins",
+            "3 _MEDIUM",
+            "un _MEDIUM et un _MEDIUM",
+            "un _MEDIUM et un soliste _MEDIUM",
+            "deux _MEDIUM plus trois _MEDIUM",
+            "_FORMATION de _MEDIUM",
+            "une _FORMATION de deux _MEDIUM.",
+            "_FORMATION de _MEDIUM?",
+            "_FORMATION d'_MEDIUM",
+            "un _FORMATION avec un _MEDIUM seulement",
+            "un _FORMATION avec un _MEDIUM uniquement",
+            "un _FORMATION avec un _MEDIUM",
+            "_FORMATION avec _MEDIUM",
+            "_FORMATION pour _MEDIUM",
+            "un _FORMATION pour deux _MEDIUM",
+            "_FORMATION pour trois _MEDIUM",
+            "partition pour un _FORMATION de _MEDIUM et _MEDIUM",
+            "_FORMATION  _MEDIUM et _MEDIUM",
+            "_FORMATION de un _MEDIUM et _MEDIUM",
+            "_FORMATION de trois _MEDIUM et deux _MEDIUM",
+            "_FORMATION _MEDIUM _MEDIUM",
+            "_FORMATION _MEDIUM _MEDIUM",
+            "_FORMATION 2 _MEDIUM 1 _MEDIUM",
+            "_FORMATION avec _MEDIUM et _MEDIUM",
+            "_FORMATION pour un _MEDIUM et deux _MEDIUM",
+            "_FORMATION pour trois _MEDIUM et deux _MEDIUM",
+            "_FORMATION avec une _MEDIUM.",
+            "_FORMATION au _MEDIUM et au _MEDIUM ?   ",
+            "_FORMATION au _MEDIUM",
+            "_FORMATION de _MEDIUM ",
+            "un _FORMATION de _MEDIUM",
+            "_FORMATION de _MEDIUM et _MEDIUM.",
+            "_FORMATION de musiciens",
+            "_FORMATION pour _MEDIUM",
+            "_FORMATION _MEDIUM _MEDIUM.",
+        ],
+        "entities": {
+            "_MEDIUM": [
+                preprocess_entity(i)
+                for sublist in list(iaml.values()) + list(mimo.values())
+                for i in sublist
+            ],
+            "_FORMATION": [
+                preprocess_entity(i)
+                for sublist in list(formations.values())
+                for i in sublist
+            ],
+        },
+    },
     "get_sheet_music_by_casting": {
         "sentences": [
             # MEDIUM
@@ -532,6 +759,7 @@ raw_sentences = {
             "Donne moi une partition _LOCATION_ADJECTIVE avec _MEDIUM",
             "Je veux une oeuvre _LOCATION_ADJECTIVE pour _MEDIUM",
             "Je veux une partition de musique _LOCATION_ADJECTIVE pour _MEDIUM",
+            "Je veux une partition pour 2 _MEDIUM écrite par _AGENT",
             "Je veux une partition de musique _LOCATION_ADJECTIVE",
             "partition de musique _LOCATION_ADJECTIVE",
             "musique _LOCATION_ADJECTIVE",
@@ -648,14 +876,14 @@ raw_sentences = {
                 for sublist in list(periods.values())
                 for i in sublist
             ],
-            "_LOCATION_NOUN": [
-                preprocess_entity(i, lower=False)
-                for sublist in list(locations.values())
-                for i in sublist
-            ],
             "_WORK_NAME": [
                 preprocess_entity(i, lower=False)
                 for sublist in list(work_names.values())[:100]
+                for i in sublist
+            ],
+            "_LOCATION_NOUN": [
+                preprocess_entity(i, lower=False)
+                for sublist in list(locations.values())
                 for i in sublist
             ],
             "_LOCATION_ADJECTIVE": [
@@ -706,7 +934,7 @@ def entities_round_robin(entities):
 
 if __name__ == "__main__":
     with open("data/nlu/nlu_intents.yml", "w") as f:
-        f.write('version: "3.1"\n\nnlu:')
+        f.write('version: "2.0"\n\nnlu:')
         for intent, data in raw_sentences.items():
             f.write(f"\n- intent: {intent}\n  examples: |\n")
             if len(data["entities"]) == 0:
