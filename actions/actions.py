@@ -341,6 +341,7 @@ limit {limit}
         for slot_name, slot_value in existing_slots.items():
             # Instrumentation
             if slot_name == "instrumentation" and inputted_medias:
+                logging.info(f"CLEARING INSTRUMENTATION {inputted_medias}")
                 slots.append(SlotSet("instrumentation", str(inputted_medias)))
                 to_pop.append("instrumentation")
             # Rest of the slots
@@ -694,7 +695,6 @@ optional {{?creation  mus:R24_created   ?score .
         ]
 
         res = "Vous recherchez des partitions"
-        logging.info(f"XYZ {criterias}")
 
         # Add the worded mediums, i.e. the instruments in human-readable form
         if worded_mediums:
@@ -964,7 +964,9 @@ ORDER BY DESC(?scoreCount)
         if "compositeur" not in results["results"]["bindings"][0]:
             results["results"]["bindings"].pop(0)
 
-        for r in results["results"]["bindings"][:3]:
+        results_nb = min(len(results["results"]["bindings"]), 3)
+
+        for r in results["results"]["bindings"][:results_nb]:
             r["compositeur"]["value"] = str(
                 int(r["compositeur"]["value"].split("/")[-1])
             )
@@ -1093,7 +1095,9 @@ ORDER BY DESC(?scoreCount)
         if not results["results"]["bindings"][0]:
             results["results"]["bindings"].pop(0)
 
-        for r in results["results"]["bindings"][:3]:
+        results_nb = min(len(results["results"]["bindings"]), 3)
+
+        for r in results["results"]["bindings"][:results_nb]:
             r["medium"]["value"] = r["medium"]["value"].split("/")[-1]
             res.append(r)
         return res
@@ -1273,7 +1277,9 @@ ORDER BY DESC(?scoreCount)
         if not results["results"]["bindings"][0]:
             results["results"]["bindings"].pop(0)
 
-        for r in results["results"]["bindings"][:3]:
+        results_nb = min(len(results["results"]["bindings"]), 3)
+
+        for r in results["results"]["bindings"][:results_nb]:
             r["genre"]["value"] = str(int(r["genre"]["value"].split("/")[-1]))
             res.append(r)
         return res
@@ -1314,6 +1320,7 @@ where {{
     ?score mus:U13_has_casting ?casting .
     ?casting mus:U23_has_casting_detail ?castingDetail .
         
+    {filters}
 
 ?score mus:U65_has_geographical_context ?localisation.
 ?localisation skos:prefLabel ?localisationLabel.
@@ -1408,7 +1415,9 @@ ORDER BY DESC(?scoreCount)
         if not results["results"]["bindings"][0]:
             results["results"]["bindings"].pop(0)
 
-        for r in results["results"]["bindings"][:3]:
+        results_nb = min(len(results["results"]["bindings"]), 3)
+
+        for r in results["results"]["bindings"][:results_nb]:
             r["localisation"]["value"] = str(
                 int(r["localisation"]["value"].split("/")[-1])
             )
@@ -1417,6 +1426,8 @@ ORDER BY DESC(?scoreCount)
 
     @staticmethod
     def get_location_filter(location: str):
+        while len(location) < 7:
+            location = "0" + location
         return f"""
 values (?localisation) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{location}>) }}
 ?score mus:U65_has_geographical_context ?localisation.
@@ -1450,7 +1461,8 @@ where {{
     ?score mus:U13_has_casting ?casting .
     ?casting mus:U23_has_casting_detail ?castingDetail .
         
-
+    {filters}
+    
 ?score mus:U66_has_historical_context ?period.
 ?period skos:prefLabel ?periodLabel.
 
@@ -1536,13 +1548,17 @@ ORDER BY DESC(?scoreCount)
         if not results["results"]["bindings"][0]:
             results["results"]["bindings"].pop(0)
 
-        for r in results["results"]["bindings"][:3]:
+        results_nb = min(len(results["results"]["bindings"]), 3)
+
+        for r in results["results"]["bindings"][:results_nb]:
             r["period"]["value"] = str(int(r["period"]["value"].split("/")[-1]))
             res.append(r)
         return res
 
     @staticmethod
     def get_period_filter(period: str):
+        while len(period) < 7:
+            period = "0" + period
         return f"""
 values (?input_period ) {{ (<https://ark.philharmoniedeparis.fr/ark:49250/{period}>)}}
 ?score mus:U66_has_historical_context ?input_period.
@@ -1575,6 +1591,8 @@ where {{
     ?score a <http://erlangen-crm.org/efrbroo/F24_Publication_Expression>.
     ?score mus:U13_has_casting ?casting .
     ?casting mus:U23_has_casting_detail ?castingDetail .
+
+    {filters}
         
 ?casting mus:U23_has_casting_detail ?castingDetailNiveauEducatif.
 ?castingDetailNiveauEducatif ecrm:P103_was_intended_for ?level.
@@ -1668,7 +1686,9 @@ ORDER BY DESC(?scoreCount)
         if not results["results"]["bindings"][0]:
             results["results"]["bindings"].pop(0)
 
-        for r in results["results"]["bindings"][:3]:
+        results_nb = min(len(results["results"]["bindings"]), 3)
+
+        for r in results["results"]["bindings"][:results_nb]:
             r["level"]["value"] = r["level"]["value"].split("/")[-1]
             res.append(r)
         return res
