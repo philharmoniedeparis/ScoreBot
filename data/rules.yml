@@ -78,15 +78,42 @@ rules:
 
 # - rule: Genre manual entry
 #   steps:
-#   - intent: genre_manual_entry
 #   - action: utter_genre_manual_entry
+#   - intent: genre_is_selected
+#   - action: action_get_sheet_music_by_casting
 
 # - rule: Composer manual entry
 #   steps:
-#   - intent: composer_manual_entry
 #   - action: utter_composer_manual_entry
+#   - intent: composer_is_selected
+#   - action: action_get_sheet_music_by_casting
 
 # - rule: Formation manual entry
 #   steps:
-#   - intent: instrumentation_manual_entry
 #   - action: utter_instrumentation_manual_entry
+#   - intent: instrumentation_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Level manual entry
+#   steps:
+#   - action: utter_level_manual_entry
+#   - intent: level_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Period manual entry 
+#   steps:
+#   - action: utter_period_manual_entry
+#   - intent: period_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Work name manual entry
+#   steps:
+#   - action: utter_work_name_manual_entry
+#   - intent: work_name_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Location manual entry
+#   steps:
+#   - action: utter_location_manual_entry
+#   - intent: location_is_selected
+#   - action: action_get_sheet_music_by_casting

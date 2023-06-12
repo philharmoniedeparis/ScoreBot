@@ -39,8 +39,6 @@ intents:
     use_entities: false
 - period_is_selected:
     use_entities: true
-- work_name_choice:
-    use_entities: false
 - work_name_is_selected:
     use_entities: true
 - location_choice:
@@ -174,8 +172,6 @@ responses:
     - text: "Veuillez entrer le nom de l'oeuvre que vous recherchez"
   utter_location_manual_entry:  
     - text: "Veuillez entrer le lieu que vous recherchez"
-  utter_direct_query:
-    - text: "Vous pouvez taper votre recherche à la main et je vais essayer de trouver des partitions qui y correspondent."
 actions:
 - action_get_sheet_music_by_casting
 - action_composer_choice
@@ -186,5 +182,6 @@ actions:
 - action_period_choice
 - action_location_choice
 - action_work_name_choice
+- action_direct_query
 forms: {}
 e2e_actions: []

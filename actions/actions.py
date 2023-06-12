@@ -65,6 +65,40 @@ class NoEntityFoundException(Exception):
     pass
 
 
+class ActionDirectQuery(Action):
+    def __init__(self):
+        super(ActionDirectQuery, self).__init__()
+
+    def name(self) -> Text:
+        return "action_direct_query"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ):
+        # Get slots
+        existing_slots = get_slots(tracker)
+        logging.info(f"Existing_slots: {existing_slots}")
+
+        slots_to_clear = self.clear_slots(existing_slots)
+
+        # Display message
+        msg = "Vous pouvez taper votre recherche à la main et je vais essayer de trouver des partitions qui y correspondent."
+        dispatcher.utter_message(text=msg)
+
+        return slots_to_clear
+
+    def clear_slots(self, existing_slots):
+        # We clear every slot which is not in the entities
+        slots = []
+        for slot_name in existing_slots:
+            slots.append(SlotSet(slot_name, None))
+
+        return slots
+
+
 class ActionDisplayResults(Action):
     def __init__(self):
         super(ActionDisplayResults, self).__init__()
@@ -91,7 +125,7 @@ class ActionDisplayResults(Action):
         buttons.append(
             {
                 "title": "Nouvelle recherche",
-                "payload": "/greet",
+                "payload": "/direct_query",
             }
         )
 
@@ -415,17 +449,18 @@ limit {limit}
             # If there's more than one entity, it means that the previous intent was direct_query
             # and we thus need to reset the slots
             # Clear slots only if there's more than one entity passed
-            if len(entities) > 1:
-                slots_to_clear, existing_slots = self.clear_slots(
-                    existing_slots, entity_dict, inputted_medias
-                )
-                slots.extend(slots_to_clear)
-            else:
+            # if len(entities) > 1:
+            #     slots_to_clear, existing_slots = self.clear_slots(
+            #         existing_slots, entity_dict, inputted_medias
+            #     )
+            #     slots.extend(slots_to_clear)
+            # else:
+            if inputted_medias:
                 slots.append(SlotSet("instrumentation", str(inputted_medias)))
-                logging.info(f"medium: {inputted_medias}, entity_dict: {entity_dict}")
-                entity_dict, inputted_medias = self.slots_to_entities(
-                    existing_slots, entity_dict, inputted_medias
-                )
+            logging.info(f"medium: {inputted_medias}, entity_dict: {entity_dict}")
+            entity_dict, inputted_medias = self.slots_to_entities(
+                existing_slots, entity_dict, inputted_medias
+            )
 
             results, worded_mediums = self.get_query_results(
                 inputted_medias, entity_dict, exclusive=True
@@ -812,6 +847,15 @@ optional {{?creation  mus:R24_created   ?score .
                     "payload": f"/level_choice",
                 }
             )
+
+        work_name = tracker.get_slot("work_name")
+        if not work_name:
+            buttons.append(
+                {
+                    "title": f"Nom de l'oeuvre",
+                    "payload": f"/work_name_manual_entry",
+                }
+            )
         return buttons
 
 
@@ -917,30 +961,36 @@ ORDER BY DESC(?scoreCount)
         logging.debug(f"Filters: {filters}")
 
         # Query the graph DB to get composers
-        composers = self.get_top_composers(filters)
+        try:
+            composers = self.get_top_composers(filters)
 
-        buttons = []
-        for composer in composers:
+            buttons = []
+            for composer in composers:
+                buttons.append(
+                    {
+                        "title": composer["compositeurLabel"]["value"],
+                        "payload": f'/composer_is_selected{{"agent":"{composer["compositeur"]["value"]}"}}',
+                    }
+                )
+
+            # Append manual entry button
             buttons.append(
                 {
-                    "title": composer["compositeurLabel"]["value"],
-                    "payload": f'/composer_is_selected{{"agent":"{composer["compositeur"]["value"]}"}}',
+                    "title": "Autre compositeur",
+                    "payload": "/composer_manual_entry",
                 }
             )
 
-        # Append manual entry button
-        buttons.append(
-            {
-                "title": "Autre compositeur",
-                "payload": "/composer_manual_entry",
-            }
-        )
-
-        # Display the buttons
-        dispatcher.utter_message(
-            text="Voilà quelques compositeurs principaux pour filtrer les résultats:",
-            buttons=buttons,
-        )
+            # Display the buttons
+            dispatcher.utter_message(
+                text="Voilà quelques compositeurs principaux pour filtrer les résultats:",
+                buttons=buttons,
+            )
+        except Exception as e:
+            logging.error(e)
+            dispatcher.utter_message(
+                text="Désolé, je n'ai pas réussi à récupérer les compositeurs relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+            )
 
         # Set the composers slot
         return []
@@ -1046,30 +1096,36 @@ ORDER BY DESC(?scoreCount)
         logging.debug(f"Filters: {filters}")
 
         # Query the graph DB to get formations
-        formations = self.get_top_instrumentations(filters)
+        try:
+            formations = self.get_top_instrumentations(filters)
 
-        buttons = []
-        for formation in formations:
+            buttons = []
+            for formation in formations:
+                buttons.append(
+                    {
+                        "title": formation["mediumLabel"]["value"],
+                        "payload": f'/instrumentation_is_selected{{"medium":"{formation["medium"]["value"]}"}}',
+                    }
+                )
+
+            # Append manual entry button
             buttons.append(
                 {
-                    "title": formation["mediumLabel"]["value"],
-                    "payload": f'/instrumentation_is_selected{{"medium":"{formation["medium"]["value"]}"}}',
+                    "title": "Autre instrumentation",
+                    "payload": "/instrumentation_manual_entry",
                 }
             )
 
-        # Append manual entry button
-        buttons.append(
-            {
-                "title": "Autre formation",
-                "payload": "/instrumentation_manual_entry",
-            }
-        )
-
-        # Display the buttons
-        dispatcher.utter_message(
-            text="Voilà quelques formations principales pour filtrer les résultats:",
-            buttons=buttons,
-        )
+            # Display the buttons
+            dispatcher.utter_message(
+                text="Voilà quelques instrumentations principales pour filtrer les résultats:",
+                buttons=buttons,
+            )
+        except Exception as e:
+            logging.error(e)
+            dispatcher.utter_message(
+                text="Désolé, je n'ai pas réussi à récupérer les instrumentations relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+            )
 
         # Set the formations slot
         return []
@@ -1228,30 +1284,36 @@ ORDER BY DESC(?scoreCount)
         logging.debug(f"Filters: {filters}")
 
         # Query the graph DB to get formations
-        genres = self.get_top_genres(filters)
+        try:
+            genres = self.get_top_genres(filters)
 
-        buttons = []
-        for genre in genres:
+            buttons = []
+            for genre in genres:
+                buttons.append(
+                    {
+                        "title": genre["genreLabel"]["value"],
+                        "payload": f'/genre_is_selected{{"genre":"{genre["genre"]["value"]}"}}',
+                    }
+                )
+
+            # Append manual entry button
             buttons.append(
                 {
-                    "title": genre["genreLabel"]["value"],
-                    "payload": f'/genre_is_selected{{"genre":"{genre["genre"]["value"]}"}}',
+                    "title": "Autre genre",
+                    "payload": "/genre_manual_entry",
                 }
             )
 
-        # Append manual entry button
-        buttons.append(
-            {
-                "title": "Autre genre",
-                "payload": "/genre_manual_entry",
-            }
-        )
-
-        # Display the buttons
-        dispatcher.utter_message(
-            text="Voilà quelques genres principaux pour filtrer les résultats:",
-            buttons=buttons,
-        )
+            # Display the buttons
+            dispatcher.utter_message(
+                text="Voilà quelques genres principaux pour filtrer les résultats:",
+                buttons=buttons,
+            )
+        except Exception as e:
+            logging.error(e)
+            dispatcher.utter_message(
+                text="Désolé, je n'ai pas réussi à récupérer les genres relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+            )
 
         # Set the formations slot
         return []
@@ -1366,30 +1428,35 @@ ORDER BY DESC(?scoreCount)
         logging.debug(f"Filters: {filters}")
 
         # Query the graph DB to get formations
-        locations = self.get_top_locations(filters)
+        try:
+            locations = self.get_top_locations(filters)
 
-        buttons = []
-        for location in locations:
+            buttons = []
+            for location in locations:
+                buttons.append(
+                    {
+                        "title": location["localisationLabel"]["value"],
+                        "payload": f'/location_is_selected{{"location":"{location["localisation"]["value"]}"}}',
+                    }
+                )
+
+            # Append manual entry button
             buttons.append(
                 {
-                    "title": location["localisationLabel"]["value"],
-                    "payload": f'/location_is_selected{{"location":"{location["localisation"]["value"]}"}}',
+                    "title": "Autre lieu",
+                    "payload": "/location_manual_entry",
                 }
             )
-
-        # Append manual entry button
-        buttons.append(
-            {
-                "title": "Autre lieu",
-                "payload": "/location_manual_entry",
-            }
-        )
-
-        # Display the buttons
-        dispatcher.utter_message(
-            text="Voilà quelques lieux principaux pour filtrer les résultats:",
-            buttons=buttons,
-        )
+            # Display the buttons
+            dispatcher.utter_message(
+                text="Voilà quelques lieux principaux pour filtrer les résultats:",
+                buttons=buttons,
+            )
+        except Exception as e:
+            logging.error(e)
+            dispatcher.utter_message(
+                text="Désolé, je n'ai pas réussi à récupérer les lieux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+            )
 
         # Set the formations slot
         return []
@@ -1499,30 +1566,36 @@ ORDER BY DESC(?scoreCount)
         logging.debug(f"Filters: {filters}")
 
         # Query the graph DB to get formations
-        periods = self.get_top_periods(filters)
+        try:
+            periods = self.get_top_periods(filters)
 
-        buttons = []
-        for period in periods:
+            buttons = []
+            for period in periods:
+                buttons.append(
+                    {
+                        "title": period["periodLabel"]["value"],
+                        "payload": f'/period_is_selected{{"period":"{period["period"]["value"]}"}}',
+                    }
+                )
+
+            # Append manual entry button
             buttons.append(
                 {
-                    "title": period["periodLabel"]["value"],
-                    "payload": f'/period_is_selected{{"period":"{period["period"]["value"]}"}}',
+                    "title": "Autre période",
+                    "payload": "/period_manual_entry",
                 }
             )
 
-        # Append manual entry button
-        buttons.append(
-            {
-                "title": "Autre période",
-                "payload": "/period_manual_entry",
-            }
-        )
-
-        # Display the buttons
-        dispatcher.utter_message(
-            text="Voilà quelques périodes principales pour filtrer les résultats:",
-            buttons=buttons,
-        )
+            # Display the buttons
+            dispatcher.utter_message(
+                text="Voilà quelques périodes principales pour filtrer les résultats:",
+                buttons=buttons,
+            )
+        except Exception as e:
+            logging.error(e)
+            dispatcher.utter_message(
+                text="Désolé, je n'ai pas réussi à récupérer les périodes relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+            )
 
         # Set the formations slot
         return []
@@ -1637,30 +1710,36 @@ ORDER BY DESC(?scoreCount)
         logging.debug(f"Filters: {filters}")
 
         # Query the graph DB to get formations
-        levels = self.get_top_levels(filters)
+        try:
+            levels = self.get_top_levels(filters)
 
-        buttons = []
-        for level in levels:
+            buttons = []
+            for level in levels:
+                buttons.append(
+                    {
+                        "title": level["levelLabel"]["value"],
+                        "payload": f'/level_is_selected{{"level":"{level["level"]["value"]}"}}',
+                    }
+                )
+
+            # Append manual entry button
             buttons.append(
                 {
-                    "title": level["levelLabel"]["value"],
-                    "payload": f'/level_is_selected{{"level":"{level["level"]["value"]}"}}',
+                    "title": "Autre niveau",
+                    "payload": "/level_manual_entry",
                 }
             )
 
-        # Append manual entry button
-        buttons.append(
-            {
-                "title": "Autre niveau",
-                "payload": "/level_manual_entry",
-            }
-        )
-
-        # Display the buttons
-        dispatcher.utter_message(
-            text="Voilà quelques niveaux principaux pour filtrer les résultats:",
-            buttons=buttons,
-        )
+            # Display the buttons
+            dispatcher.utter_message(
+                text="Voilà quelques niveaux principaux pour filtrer les résultats:",
+                buttons=buttons,
+            )
+        except Exception as e:
+            logging.error(e)
+            dispatcher.utter_message(
+                text="Désolé, je n'ai pas réussi à récupérer les niveaux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+            )
 
         # Set the formations slot
         return []
