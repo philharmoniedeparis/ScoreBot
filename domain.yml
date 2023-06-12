@@ -1,4 +1,4 @@
-version: '3.1'
+version: '2.0'
 config:
   store_entities_as_slots: true
 session_config:
@@ -86,67 +86,50 @@ entities:
 - current_results
 slots:
   number:
-    type: any
+    type: rasa.shared.core.slots.UnfeaturizedSlot
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: number
   agent:
     type: text
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: agent
   genre:
     type: text
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: genre
   instrumentation:
     type: text
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: custom
   level:
     type: text
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: level
   work_name:
     type: text
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: work_name
   period:
     type: text
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: period
   location:
     type: text
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: location
   current_results:
     type: text
     initial_value: null
+    auto_fill: true
     influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: current_results
 responses:
   utter_greet:
   - text: Bonjour! Comment allez-vous?
