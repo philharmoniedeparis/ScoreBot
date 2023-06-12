@@ -6,11 +6,14 @@ nlu:
     - hey
     - hello toi
     - hello
+    - hello !
     - salut
     - bonjour
     - comment ça va ?
     - ça va bien ?
     - yo
+    - bonjour
+    - bonjour toi
     - coucou
     - bonsoir
     - nouvelle recherche
@@ -36,6 +39,8 @@ nlu:
     - à plus
     - salut
     - adieu
+    - merci salut
+    - allé salut
     - à la revoyure
     - à plus tard
     - bonne soirée
@@ -53,6 +58,11 @@ nlu:
     - tout à fait
     - c'est juste
     - c'est exact
+    - tout juste
+    - c'est tout juste
+    - c'est tout à fait ça
+    - exact
+    - c'est exact
 
 - intent: deny
   examples: |
@@ -64,6 +74,7 @@ nlu:
     - pas du tout
     - pas trop
     - je ne crois pas
+    - non merci
 
 - intent: mood_great
   examples: |
