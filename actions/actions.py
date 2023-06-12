@@ -987,7 +987,7 @@ ORDER BY DESC(?scoreCount)
                 buttons=buttons,
             )
         except Exception as e:
-            logging.error(e)
+            logging.error(traceback.format_exc())
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les compositeurs relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
             )
@@ -1122,7 +1122,7 @@ ORDER BY DESC(?scoreCount)
                 buttons=buttons,
             )
         except Exception as e:
-            logging.error(e)
+            logging.error(traceback.format_exc())
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les instrumentations relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
             )
@@ -1310,7 +1310,7 @@ ORDER BY DESC(?scoreCount)
                 buttons=buttons,
             )
         except Exception as e:
-            logging.error(e)
+            logging.error(traceback.format_exc())
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les genres relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
             )
@@ -1453,7 +1453,7 @@ ORDER BY DESC(?scoreCount)
                 buttons=buttons,
             )
         except Exception as e:
-            logging.error(e)
+            logging.error(traceback.format_exc())
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les lieux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
             )
@@ -1592,7 +1592,7 @@ ORDER BY DESC(?scoreCount)
                 buttons=buttons,
             )
         except Exception as e:
-            logging.error(e)
+            logging.error(traceback.format_exc())
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les périodes relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
             )
@@ -1736,7 +1736,7 @@ ORDER BY DESC(?scoreCount)
                 buttons=buttons,
             )
         except Exception as e:
-            logging.error(e)
+            logging.error(traceback.format_exc())
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les niveaux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
             )
