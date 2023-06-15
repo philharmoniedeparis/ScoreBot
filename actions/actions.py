@@ -775,7 +775,7 @@ optional {{?creation  mus:R24_created   ?score .
     ):
         # Format the bot answer
         buttons = []
-        worded_results = f"J'ai trouvé {len(results)} partitions correspondant à votre recherche. Voulez-vous que je les affiche ?\n"
+        worded_results = f"J'ai trouvé {len(results)} partitions correspondant à votre recherche. Faites votre choix.\n"
         formatted_results = "\n".join(results)
         encoded = urllib.parse.quote_plus(formatted_results.strip("\n"), safe="/")
         buttons.append(
