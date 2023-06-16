@@ -453,8 +453,9 @@ limit {limit}
                     existing_slots, entity_dict, inputted_medias
                 )
                 slots.extend(slots_to_clear)
-            elif inputted_medias:
-                slots.append(SlotSet("instrumentation", str(inputted_medias)))
+            else:
+                if inputted_medias:
+                    slots.append(SlotSet("instrumentation", str(inputted_medias)))
                 logging.info(f"medium: {inputted_medias}, entity_dict: {entity_dict}")
                 entity_dict, inputted_medias = self.slots_to_entities(
                     existing_slots, entity_dict, inputted_medias
