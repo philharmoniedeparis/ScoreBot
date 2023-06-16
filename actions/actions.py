@@ -83,6 +83,7 @@ class ActionDirectQuery(Action):
         logging.info(f"Existing_slots: {existing_slots}")
 
         slots_to_clear = self.clear_slots(existing_slots)
+        logging.info(f"Slots_to_clear: {slots_to_clear}")
 
         # Display message
         msg = "Vous pouvez taper votre recherche à la main et je vais essayer de trouver des partitions qui y correspondent."
@@ -375,7 +376,6 @@ limit {limit}
         for slot_name, slot_value in existing_slots.items():
             # Instrumentation
             if slot_name == "instrumentation" and inputted_medias:
-                logging.info(f"CLEARING INSTRUMENTATION {inputted_medias}")
                 slots.append(SlotSet("instrumentation", str(inputted_medias)))
                 to_pop.append("instrumentation")
             # Rest of the slots
@@ -446,21 +446,19 @@ limit {limit}
                     f"Problem with entities: {inputted_medias}"
                 )
 
-            # If there's more than one entity, it means that the previous intent was direct_query
-            # and we thus need to reset the slots
-            # Clear slots only if there's more than one entity passed
-            # if len(entities) > 1:
-            #     slots_to_clear, existing_slots = self.clear_slots(
-            #         existing_slots, entity_dict, inputted_medias
-            #     )
-            #     slots.extend(slots_to_clear)
-            # else:
-            if inputted_medias:
+            # Check if previous intent is get_sheet_music_by_casting. If yes, then clear slots
+            if tracker.latest_message['intent'].get('name')  == "get_sheet_music_by_casting":
+                logging.info("Clearing slots")
+                slots_to_clear, existing_slots = self.clear_slots(
+                    existing_slots, entity_dict, inputted_medias
+                )
+                slots.extend(slots_to_clear)
+            elif inputted_medias:
                 slots.append(SlotSet("instrumentation", str(inputted_medias)))
-            logging.info(f"medium: {inputted_medias}, entity_dict: {entity_dict}")
-            entity_dict, inputted_medias = self.slots_to_entities(
-                existing_slots, entity_dict, inputted_medias
-            )
+                logging.info(f"medium: {inputted_medias}, entity_dict: {entity_dict}")
+                entity_dict, inputted_medias = self.slots_to_entities(
+                    existing_slots, entity_dict, inputted_medias
+                )
 
             results, worded_mediums = self.get_query_results(
                 inputted_medias, entity_dict, exclusive=True
