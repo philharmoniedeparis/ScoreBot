@@ -366,6 +366,8 @@ limit {limit}
             return locations.locations.get(code, [None])[0]
         elif slot_name == "level":
             return levels.all_levels.get(code, [None])[0]
+        elif slot_name == "work_name":
+            return code
         else:
             raise ValueError(f"Unknown slot name: {slot_name}")
 
@@ -395,7 +397,6 @@ limit {limit}
             if (
                 entity_dict[slot_name]["code"] is not None
                 or slot_value is None
-                or slot_name == "work_name"
             ):
                 continue
             if slot_name != "instrumentation":
