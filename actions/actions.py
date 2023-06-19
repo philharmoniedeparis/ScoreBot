@@ -448,7 +448,10 @@ limit {limit}
                 )
 
             # Check if previous intent is get_sheet_music_by_casting. If yes, then clear slots
-            if tracker.latest_message['intent'].get('name')  == "get_sheet_music_by_casting":
+            if (
+                tracker.latest_message["intent"].get("name")
+                == "get_sheet_music_by_casting"
+            ):
                 logging.info("Clearing slots")
                 slots_to_clear, existing_slots = self.clear_slots(
                     existing_slots, entity_dict, inputted_medias
@@ -1793,6 +1796,12 @@ class ActionWorkNameChoice(Action):
 
     def name(self):
         return "action_work_name_choice"
+
+    def run(self, dispatcher, tracker, domain):
+        # Display the buttons
+        dispatcher.utter_message(text="Tappez le nom de l'oeuvre que vous recherchez")
+        # Set the formations slot
+        return []
 
     @staticmethod
     def get_work_name_filter(work_name: str):

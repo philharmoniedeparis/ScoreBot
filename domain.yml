@@ -155,7 +155,7 @@ responses:
         - title: "Période"
           payload: "/period_choice"
         - title: "Nom de l'oeuvre"
-          payload: "/work_name_choice"
+          payload: "/work_name_manual_entry"
         - title: "Taper ma recherche à la main"
           payload: "/direct_query"
   utter_composer_manual_entry:

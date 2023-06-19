@@ -32,6 +32,9 @@ nlu:
     - nouvelle recherche critères différents
     - changer de critères
     - je veux changer de critères
+    - efface tout
+    - efface tout et recommence
+    - oublie tout
 
 
 - intent: goodbye
