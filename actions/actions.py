@@ -491,7 +491,7 @@ limit {limit}
 
             # User wants to see the results (action called natively, from outside the "button flow")
             new_answer, buttons = self.format_answer_without_results(
-                tracker,
+                entity_dict,
                 results,
             )
 
@@ -779,7 +779,7 @@ optional {{?creation  mus:R24_created   ?score .
 
     @staticmethod
     def format_answer_without_results(
-        tracker,
+        entity_dict,
         results,
     ):
         # Format the bot answer
@@ -793,17 +793,17 @@ optional {{?creation  mus:R24_created   ?score .
                 "payload": f'/display_results{{"current_results": "{encoded}"}}',
             }
         )
-        criteria_buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(tracker)
+        criteria_buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(entity_dict)
         buttons.extend(criteria_buttons)
         logging.info(f"buttons: {buttons}")
 
         return worded_results, buttons
 
     @staticmethod
-    def get_criteria_buttons(tracker):
+    def get_criteria_buttons(entity_dict):
         buttons = []
 
-        agent = tracker.get_slot("agent")
+        agent = entity_dict["agent"]["code"]
         if not agent:
             buttons.append(
                 {
@@ -812,7 +812,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        instrumentation = tracker.get_slot("instrumentation")
+        instrumentation = entity_dict["instrumentation"]["code"]
         if not instrumentation:
             buttons.append(
                 {
@@ -821,7 +821,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        genre = tracker.get_slot("genre")
+        genre = entity_dict["genre"]["code"]
         if not genre:
             buttons.append(
                 {
@@ -830,7 +830,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        location = tracker.get_slot("location")
+        location = entity_dict["location"]["code"]
         if not location:
             buttons.append(
                 {
@@ -839,7 +839,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        period = tracker.get_slot("period")
+        period = entity_dict["period"]["code"]
         if not period:
             buttons.append(
                 {
@@ -848,7 +848,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        level = tracker.get_slot("level")
+        level = entity_dict["level"]["code"]
         if not level:
             buttons.append(
                 {
@@ -857,7 +857,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        work_name = tracker.get_slot("work_name")
+        work_name = entity_dict["work_name"]["code"]
         if not work_name:
             buttons.append(
                 {
