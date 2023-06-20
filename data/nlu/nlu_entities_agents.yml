@@ -46,6 +46,7 @@ nlu:
   examples: |
     - bach
     - johann sebastian bach
+    - jean-sébastien bach
 
 - synonym: "55853"
   examples: |
@@ -7954,7 +7955,7 @@ nlu:
 
 - synonym: "32575"
   examples: |
-    - schumann
+    - schumann clara
     - clara schumann
 
 - synonym: "56267"
@@ -16798,7 +16799,7 @@ nlu:
 
 - synonym: "48827"
   examples: |
-    - schumann
+    - schumann gerhard
     - gerhard schumann
 
 - synonym: "34562"
@@ -21066,7 +21067,7 @@ nlu:
 
 - synonym: "1085629"
   examples: |
-    - vivaldi
+    - istituto vivaldi
     - istituto italiano antonio vivaldi
 
 - synonym: "40918"
@@ -27357,7 +27358,7 @@ nlu:
 
 - synonym: "777003"
   examples: |
-    - joubert
+    - joubert julien
     - julien joubert
 
 - synonym: "60138"

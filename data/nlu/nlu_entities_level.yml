@@ -4,6 +4,8 @@ nlu:
 
 - synonym: "cycle-1"
   examples: |
+    - facile
+    - faciles
     - faciles à jouer
     - facile à jouer
     - débutant
@@ -126,6 +128,8 @@ nlu:
 
 - synonym: "cycle-3"
   examples: |
+    - difficile
+    - difficiles
     - de niveau expert
     - de niveaux experts
     - expert

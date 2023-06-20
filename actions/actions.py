@@ -234,6 +234,10 @@ limit {limit}
                 if level not in levels.all_levels:
                     level, level_name = self.get_closest_event(level, levels.all_levels)
                     logging.info(f"Parsed level: {level}")
+                if level is None:
+                    raise NoEntityFoundException(
+                        f"Level entity with no value: {entities}"
+                    )
                 entity_dict["level"] = {  # type: ignore
                     "code": level,
                     "name": levels.all_levels.get(level, [None])[0],
