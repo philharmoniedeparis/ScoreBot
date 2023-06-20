@@ -388,6 +388,8 @@ limit {limit}
             elif slot_name not in entity_dict and slot_value is not None:
                 slots.append(SlotSet(slot_name, None))
                 to_pop.append(slot_name)
+            else:
+                slots.append(SlotSet(slot_name, entity_dict[slot_name]["code"]))
 
         # This below is necessary because we can't pop while iterating
         for slot_name in to_pop:
