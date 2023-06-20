@@ -86,7 +86,7 @@ class ActionDirectQuery(Action):
         logging.info(f"Slots_to_clear: {slots_to_clear}")
 
         # Display message
-        msg = "Vous pouvez taper votre recherche à la main et je vais essayer de trouver des partitions qui y correspondent."
+        msg = "Dites moi ce que vous cherchez, et je vais essayer de trouver des partitions qui y correspondent."
         dispatcher.utter_message(text=msg)
 
         return slots_to_clear
@@ -492,6 +492,7 @@ order by desc (?scoreResearch)
             new_answer, buttons = self.format_answer_without_results(
                 entity_dict,
                 results,
+                inputted_medias,
             )
 
             answer += new_answer
@@ -782,6 +783,7 @@ optional {{?creation  mus:R24_created   ?score .
     def format_answer_without_results(
         entity_dict,
         results,
+        inputted_medias,
     ):
         # Format the bot answer
         buttons = []
@@ -794,22 +796,24 @@ optional {{?creation  mus:R24_created   ?score .
                 "payload": f'/display_results{{"current_results": "{encoded}"}}',
             }
         )
-        criteria_buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(entity_dict)
+        criteria_buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(entity_dict, inputted_medias)
         buttons.extend(criteria_buttons)
         logging.info(f"buttons: {buttons}")
 
         return worded_results, buttons
 
     @staticmethod
-    def get_criteria_buttons(source):
+    def get_criteria_buttons(source, inputted_medias):
         buttons = []
 
         if isinstance(source, dict):
             # In this case the source is a dict and we need to get the value like so:
             getter = lambda value_name: source[value_name]["code"]
+            instrumentation = inputted_medias
         else:
             # In this case the source is a tracker and we need to get the value like so:
             getter = lambda value_name: source.get_slot(value_name)
+            instrumentation = getter("instrumentation")
         
         agent = getter("agent")
         if not agent:
@@ -820,7 +824,6 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        instrumentation = getter("instrumentation")
         if not instrumentation:
             buttons.append(
                 {
