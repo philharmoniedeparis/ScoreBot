@@ -184,7 +184,6 @@ where {{
     BIND(CONCAT("https://catalogue.philharmoniedeparis.fr/doc/ALOES/", SUBSTR(?identifier, 1,8)) AS ?scoreUrl)
 }}
 order by desc (?scoreResearch)
-limit {limit}
         """
         self.allowed_medias = list(medias.iaml.keys()) + list(medias.mimo.keys())
 
@@ -510,7 +509,6 @@ limit {limit}
             inputted_medias, entity_dict, exclusive
         )
         route = ENDPOINT + formatted_query
-        logging.info(f"Requesting {route}")
         results = requests.get(
             route,
             headers={
@@ -519,7 +517,7 @@ limit {limit}
             },
         ).json()
         texts = []
-        for res in results["results"]["bindings"][:MAX_RESULTS_TOTAL]:
+        for res in results["results"]["bindings"]:
             url = res["scoreUrl"]["value"]
             title = res["scoreTitleLabel"]["value"]
             compositeur = res.get("compositeurLabel", {"value": ""})["value"]
@@ -564,7 +562,7 @@ limit {limit}
                 worded_mediums += ", "
 
             count = inputted_medias[medium]
-            medium_sums.append(f"SUM(?mediumQuantity_{i}) = {count}")
+            medium_sums.append(f"SUM(?mediumQuantity_{i}) >= {count}")
 
             # Medium
             solo_medium_filters += f"""
@@ -692,8 +690,11 @@ optional {{?creation  mus:R24_created   ?score .
 ?compositeur rdfs:label ?compositeurLabel.}}
 """
 
+        query = self.route.format(filters=filters)
+        logging.info(f"Requesting {query}")
+
         parsed_query = urllib.parse.quote_plus(
-            self.route.format(filters=filters, limit=MAX_RESULTS_TOTAL), safe="/"
+            query, safe="/"
         )
         return parsed_query, worded_mediums
 
@@ -769,7 +770,7 @@ optional {{?creation  mus:R24_created   ?score .
         buttons = []
         worded_results = f"Voici les "
         if len(results) >= MAX_RESULTS_TOTAL:
-            worded_results += f"{len(results)} premières "
+            worded_results += f"{MAX_RESULTS_TOTAL} premières "
         worded_results += "partitions que j'ai trouvées"
         worded_results += f":\n{formatted_results}"
 
@@ -785,11 +786,11 @@ optional {{?creation  mus:R24_created   ?score .
         # Format the bot answer
         buttons = []
         worded_results = f"J'ai trouvé {len(results)} partitions correspondant à votre recherche. Faites votre choix.\n"
-        formatted_results = "\n".join(results)
+        formatted_results = "\n".join(results[:MAX_RESULTS_TOTAL])
         encoded = urllib.parse.quote_plus(formatted_results.strip("\n"), safe="/")
         buttons.append(
             {
-                "title": "Afficher les résultats",
+                "title": "Afficher les 25 premiers résultats" if len(results) > 25 else f"Afficher les résultats",
                 "payload": f'/display_results{{"current_results": "{encoded}"}}',
             }
         )
@@ -800,10 +801,17 @@ optional {{?creation  mus:R24_created   ?score .
         return worded_results, buttons
 
     @staticmethod
-    def get_criteria_buttons(entity_dict):
+    def get_criteria_buttons(source):
         buttons = []
 
-        agent = entity_dict["agent"]["code"]
+        if isinstance(source, dict):
+            # In this case the source is a dict and we need to get the value like so:
+            getter = lambda value_name: source[value_name]["code"]
+        else:
+            # In this case the source is a tracker and we need to get the value like so:
+            getter = lambda value_name: source.get_slot(value_name)
+        
+        agent = getter("agent")
         if not agent:
             buttons.append(
                 {
@@ -812,7 +820,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        instrumentation = entity_dict["instrumentation"]["code"]
+        instrumentation = getter("instrumentation")
         if not instrumentation:
             buttons.append(
                 {
@@ -821,7 +829,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        genre = entity_dict["genre"]["code"]
+        genre = getter("genre")
         if not genre:
             buttons.append(
                 {
@@ -830,7 +838,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        location = entity_dict["location"]["code"]
+        location = getter("location")
         if not location:
             buttons.append(
                 {
@@ -839,7 +847,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        period = entity_dict["period"]["code"]
+        period = getter("period")
         if not period:
             buttons.append(
                 {
@@ -848,7 +856,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        level = entity_dict["level"]["code"]
+        level = getter("level")
         if not level:
             buttons.append(
                 {
@@ -857,7 +865,7 @@ optional {{?creation  mus:R24_created   ?score .
                 }
             )
 
-        work_name = entity_dict["work_name"]["code"]
+        work_name = getter("work_name")
         if not work_name:
             buttons.append(
                 {
