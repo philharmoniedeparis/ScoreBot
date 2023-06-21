@@ -121,7 +121,7 @@ class ActionDisplayResults(Action):
         logging.info(entities)
 
         # Criterias button
-        buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(tracker)
+        buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(tracker, None)
         # Start new search button
         buttons.append(
             {
@@ -399,10 +399,7 @@ order by desc (?scoreResearch)
     def slots_to_entities(self, slots, entity_dict, inputted_medias):
         """Patch the entity_dict with the slots."""
         for slot_name, slot_value in slots.items():
-            if (
-                entity_dict[slot_name]["code"] is not None
-                or slot_value is None
-            ):
+            if entity_dict[slot_name]["code"] is not None or slot_value is None:
                 continue
             if slot_name != "instrumentation":
                 entity_dict[slot_name]["code"] = slot_value
@@ -694,9 +691,7 @@ optional {{?creation  mus:R24_created   ?score .
         query = self.route.format(filters=filters)
         logging.info(f"Requesting {query}")
 
-        parsed_query = urllib.parse.quote_plus(
-            query, safe="/"
-        )
+        parsed_query = urllib.parse.quote_plus(query, safe="/")
         return parsed_query, worded_mediums
 
     def get_closest_event(self, value: str, candidates: Dict = None):
@@ -792,11 +787,15 @@ optional {{?creation  mus:R24_created   ?score .
         encoded = urllib.parse.quote_plus(formatted_results.strip("\n"), safe="/")
         buttons.append(
             {
-                "title": "Afficher les 25 premiers résultats" if len(results) > 25 else f"Afficher les résultats",
+                "title": "Afficher les 25 premiers résultats"
+                if len(results) > 25
+                else f"Afficher les résultats",
                 "payload": f'/display_results{{"current_results": "{encoded}"}}',
             }
         )
-        criteria_buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(entity_dict, inputted_medias)
+        criteria_buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(
+            entity_dict, inputted_medias
+        )
         buttons.extend(criteria_buttons)
         logging.info(f"buttons: {buttons}")
 
@@ -814,7 +813,7 @@ optional {{?creation  mus:R24_created   ?score .
             # In this case the source is a tracker and we need to get the value like so:
             getter = lambda value_name: source.get_slot(value_name)
             instrumentation = getter("instrumentation")
-        
+
         agent = getter("agent")
         if not agent:
             buttons.append(
