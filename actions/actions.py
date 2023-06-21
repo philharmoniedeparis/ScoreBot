@@ -799,7 +799,7 @@ optional {{?creation  mus:R24_created   ?score .
         formatted_results = "\n".join(results[:MAX_RESULTS_TOTAL])
 
         # Add the url containing the ids to the results
-        ids_count = max(100, len(ids))
+        ids_count = min(100, len(ids))
         formatted_results += f"\n\nVous pouvez aussi consulter [la liste des {ids_count} résultats sur le catalogue de la Philharmonie]({ActionGetSheetMusicByCasting.format_results_url(ids[:ids_count])})."
 
         logging.info(f"formatted_results: {formatted_results}")
