@@ -142,7 +142,7 @@ responses:
   utter_please_rephrase:
   - text: Je suis désolé, je n'ai pas bien compris votre message. Pouvez-vous reformuler s'il-vous-plaît ?
   utter_ask_filter_criteria:
-    - text: "Je vais vous aider à trouver des partitions. Voulez-vous ajouter un filtre à votre recherche?"
+    - text: "Cherchons une partition ensemble. Posez-moi votre question directement (par exemple : je cherche une partition pour 2 flûtes et un piano du 19ème siècle) ou choisissez un critère."
       buttons:
         - title: "Compositeur"
           payload: "/composer_choice"

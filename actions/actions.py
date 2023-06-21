@@ -467,7 +467,7 @@ order by desc (?scoreResearch)
                     existing_slots, entity_dict, inputted_medias
                 )
 
-            results, worded_mediums = self.get_query_results(
+            results, worded_mediums, ids = self.get_query_results(
                 inputted_medias, entity_dict, exclusive=True
             )
 
@@ -475,7 +475,7 @@ order by desc (?scoreResearch)
             answer = self.add_criterias(entity_dict, worded_mediums)
 
             if not results:
-                results, worded_mediums = self.get_query_results(
+                results, worded_mediums, ids = self.get_query_results(
                     inputted_medias, entity_dict
                 )
                 if results:
@@ -490,6 +490,7 @@ order by desc (?scoreResearch)
                 entity_dict,
                 results,
                 inputted_medias,
+                ids,
             )
 
             answer += new_answer
@@ -502,7 +503,7 @@ order by desc (?scoreResearch)
 
     def get_query_results(
         self, inputted_medias: dict, entity_dict: dict, exclusive=False
-    ) -> Tuple[List[dict], str]:
+    ) -> Tuple[List[dict], str, List[str]]:
         formatted_query, worded_mediums = self.format_sparql_query(
             inputted_medias, entity_dict, exclusive
         )
@@ -515,7 +516,12 @@ order by desc (?scoreResearch)
             },
         ).json()
         texts = []
+        ids = []
         for res in results["results"]["bindings"]:
+            try:
+                ids.append(res["score"]["value"].split("/")[-1])
+            except:
+                logging.info(f"No score found, could not add {res} to results")
             url = res["scoreUrl"]["value"]
             title = res["scoreTitleLabel"]["value"]
             compositeur = res.get("compositeurLabel", {"value": ""})["value"]
@@ -528,7 +534,7 @@ order by desc (?scoreResearch)
                 texts.append(f"- {f'[{score}]'} [{title}]({url}), {compositeur}")
             else:
                 texts.append(f"- [{title}]({url}), {compositeur}")
-        return texts, worded_mediums
+        return texts, worded_mediums, ids
 
     def format_sparql_query(
         self, inputted_medias: dict, entity_dict: dict, exclusive: bool
@@ -775,16 +781,33 @@ optional {{?creation  mus:R24_created   ?score .
         return worded_results, buttons, events
 
     @staticmethod
-    def format_answer_without_results(
-        entity_dict,
-        results,
-        inputted_medias,
-    ):
+    def format_results_url(ids):
+        base_url = "https://catalogue.philharmoniedeparis.fr/search.aspx?SC=CATALOGUE&QUERY=Identifier_idx%3A({})+#/Search/(query:(InitialSearch:!t,Page:0,PageRange:3,QueryString:'Identifier_idx:({})%20',ResultSize:-1,ScenarioCode:CATALOGUE,SearchContext:0,SearchLabel:''))"
+
+        id_string = " OR ".join(ids)
+        id_string_encoded = urllib.parse.quote(id_string)
+
+        return base_url.format(id_string_encoded, id_string_encoded)
+
+    @staticmethod
+    def format_answer_without_results(entity_dict, results, inputted_medias, ids):
         # Format the bot answer
         buttons = []
         worded_results = f"J'ai trouvé {len(results)} partitions correspondant à votre recherche. Faites votre choix.\n"
+
+        # String of results, passed as entity to the next action
         formatted_results = "\n".join(results[:MAX_RESULTS_TOTAL])
+
+        # Add the url containing the ids to the results
+        # formatted_results += f"\n\nVous pouvez aussi consulter [la liste complète des résultats sur le catalogue de la Philharmonie]({ActionGetSheetMusicByCasting.format_results_url(ids[:10])})"
+        # Same as above, but only the top 100 results or the total number of results if less than 100
+        formatted_results += f"\n\nVous pouvez aussi consulter [la liste complète des résultats sur le catalogue de la Philharmonie]({ActionGetSheetMusicByCasting.format_results_url(ids[:100 if len(ids) > 100 else len(ids)])})."
+
+        logging.info(f"formatted_results: {formatted_results}")
+
+        # Encode the full results
         encoded = urllib.parse.quote_plus(formatted_results.strip("\n"), safe="/")
+
         buttons.append(
             {
                 "title": "Afficher les 25 premiers résultats"
