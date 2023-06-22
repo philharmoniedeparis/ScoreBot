@@ -539,6 +539,11 @@ raw_sentences = {
             "Je recherche des arrangements/transcriptions de _GENRE (en tout genre)",
             "je cherche des _GENRE _LOCATION_ADJECTIVE",
             # AGENTS
+            "Je cherche une partition de _AGENT pour _MEDIUM",
+            "partition de _AGENT pour _MEDIUM",
+            "Une partition de _AGENT pour _MEDIUM",
+            "Donne moi les partitions de _AGENT pour _MEDIUM",
+            "partitions de _AGENT pour _MEDIUM",
             "_FORMATION de _MEDIUM de _AGENT",
             "Partition de _MEDIUM de _AGENT",
             "Je cherche une partition de _MEDIUM de _AGENT",
