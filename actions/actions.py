@@ -800,7 +800,13 @@ optional {{?creation  mus:R24_created   ?score .
 
         # Add the url containing the ids to the results
         ids_count = min(100, len(ids))
-        formatted_results += f"\n\nVous pouvez aussi consulter [la liste des {ids_count} résultats sur le catalogue de la Philharmonie]({ActionGetSheetMusicByCasting.format_results_url(ids[:ids_count])})."
+        if ids_count > MAX_RESULTS_TOTAL:
+            results_wording = f"la liste des {ids_count} premiers résultats"
+        elif ids_count > 1:
+            results_wording = f"les {ids_count} résultats"
+        else:
+            results_wording = f"le résultat"
+        formatted_results += f"\n\nVous pouvez aussi consulter [{results_wording} sur le catalogue de la Philharmonie]({ActionGetSheetMusicByCasting.format_results_url(ids[:ids_count])})."
 
         logging.info(f"formatted_results: {formatted_results}")
 
@@ -1030,7 +1036,10 @@ ORDER BY DESC(?scoreCount)
         except Exception as e:
             logging.error(traceback.format_exc())
             dispatcher.utter_message(
-                text="Désolé, je n'ai pas réussi à récupérer les compositeurs relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+                text="Désolé, je n'ai pas réussi à récupérer les compositeurs relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
+                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
+                    tracker, None
+                ),
             )
 
         # Set the composers slot
@@ -1165,7 +1174,10 @@ ORDER BY DESC(?scoreCount)
         except Exception as e:
             logging.error(traceback.format_exc())
             dispatcher.utter_message(
-                text="Désolé, je n'ai pas réussi à récupérer les instrumentations relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+                text="Désolé, je n'ai pas réussi à récupérer les instrumentations relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
+                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
+                    tracker, None
+                ),
             )
 
         # Set the formations slot
@@ -1353,7 +1365,10 @@ ORDER BY DESC(?scoreCount)
         except Exception as e:
             logging.error(traceback.format_exc())
             dispatcher.utter_message(
-                text="Désolé, je n'ai pas réussi à récupérer les genres relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+                text="Désolé, je n'ai pas réussi à récupérer les genres relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
+                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
+                    tracker, None
+                ),
             )
 
         # Set the formations slot
@@ -1496,7 +1511,10 @@ ORDER BY DESC(?scoreCount)
         except Exception as e:
             logging.error(traceback.format_exc())
             dispatcher.utter_message(
-                text="Désolé, je n'ai pas réussi à récupérer les lieux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+                text="Désolé, je n'ai pas réussi à récupérer les lieux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
+                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
+                    tracker, None
+                ),
             )
 
         # Set the formations slot
@@ -1635,7 +1653,10 @@ ORDER BY DESC(?scoreCount)
         except Exception as e:
             logging.error(traceback.format_exc())
             dispatcher.utter_message(
-                text="Désolé, je n'ai pas réussi à récupérer les périodes relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+                text="Désolé, je n'ai pas réussi à récupérer les périodes relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
+                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
+                    tracker, None
+                ),
             )
 
         # Set the formations slot
@@ -1779,7 +1800,10 @@ ORDER BY DESC(?scoreCount)
         except Exception as e:
             logging.error(traceback.format_exc())
             dispatcher.utter_message(
-                text="Désolé, je n'ai pas réussi à récupérer les niveaux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats."
+                text="Désolé, je n'ai pas réussi à récupérer les niveaux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
+                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
+                    tracker, None
+                ),
             )
 
         # Set the formations slot

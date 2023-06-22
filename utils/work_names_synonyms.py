@@ -41,6 +41,8 @@ work_names = {
         "symphonie n°9",
         "symphonie n9",
         "symphonie n°5",
+        "David Bowie Anthology : Piano, vocal, guitar",
+        "Space Oddity",
         "1ere symphonie",
         "1ere symphonie",
         "la ballade des gens heureux",
