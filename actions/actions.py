@@ -782,7 +782,7 @@ optional {{?creation  mus:R24_created   ?score .
 
     @staticmethod
     def format_results_url(ids):
-        base_url = "https://catalogue.philharmoniedeparis.fr/search.aspx?SC=CATALOGUE&QUERY=Identifier_idx%3A({})+#/Search/(query:(InitialSearch:!t,Page:0,PageRange:3,QueryString:'Identifier_idx:({})%20',ResultSize:-1,ScenarioCode:CATALOGUE,SearchContext:0,SearchLabel:''))"
+        base_url = "https://catalogue.philharmoniedeparis.fr/search.aspx?SC=CATALOGUE&QUERY=Identifier_idx%3A({})+#/Search/(query:(InitialSearch:!t,Page:0,PageRange:3,QueryString:'Identifier_idx:({})%20',ResultSize:-1,ScenarioCode:CATALOGUE,SearchContext:0,SearchLabel:'Recherche%20depuis%20le%20chatbot'))"
 
         id_string = " OR ".join(ids)
         id_string_encoded = urllib.parse.quote(id_string)
