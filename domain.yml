@@ -66,7 +66,7 @@ intents:
 - location_manual_entry:
     use_entities: true
 - direct_query:
-    use_entities: false
+    use_entities: true
 - out_of_scope:
     use_entities: true
 - nlu_fallback:
@@ -82,6 +82,7 @@ entities:
 - period
 - location
 - current_results
+- display_buttons
 slots:
   number:
     type: rasa.shared.core.slots.UnfeaturizedSlot
@@ -124,6 +125,11 @@ slots:
     auto_fill: true
     influence_conversation: false
   current_results:
+    type: text
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  display_buttons:
     type: text
     initial_value: null
     auto_fill: true

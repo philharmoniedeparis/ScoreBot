@@ -82,12 +82,29 @@ class ActionDirectQuery(Action):
         existing_slots = get_slots(tracker)
         logging.info(f"Existing_slots: {existing_slots}")
 
+        buttons = []
+
+        entities = tracker.latest_message["entities"]
+        logging.info(f"Entities: {entities}")
+
+        # Normally, we should receive either empty entities list or only one: {"display_buttons": "True"}
+        if len(entities) > 1:
+            raise ValueError(f"Too many entities: {entities}")
+
+        if entities:
+            # Check that with have the display_buttons entity
+            if entities[0]["entity"] != "display_buttons":
+                raise ValueError(f"Unknown entity: {entities[0]}")
+
+            # Get buttons
+            buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(tracker, None)
+
         slots_to_clear = self.clear_slots(existing_slots)
         logging.info(f"Slots_to_clear: {slots_to_clear}")
 
         # Display message
         msg = "Dites moi ce que vous cherchez, et je vais essayer de trouver des partitions qui y correspondent."
-        dispatcher.utter_message(text=msg)
+        dispatcher.utter_message(text=msg, buttons=buttons)
 
         return slots_to_clear
 
@@ -126,7 +143,7 @@ class ActionDisplayResults(Action):
         buttons.append(
             {
                 "title": "Nouvelle recherche",
-                "payload": "/direct_query",
+                "payload": f'/direct_query{{"display_buttons": "True"}}',
             }
         )
 
@@ -791,33 +808,77 @@ optional {{?creation  mus:R24_created   ?score .
 
     @staticmethod
     def format_answer_without_results(entity_dict, results, inputted_medias, ids):
-        # Format the bot answer
+        # Get the full formatted results
         buttons = []
-        worded_results = f"J'ai trouvé {len(results)} partitions correspondant à votre recherche. Faites votre choix.\n"
-
-        # String of results, passed as entity to the next action
-        formatted_results = "\n".join(results[:MAX_RESULTS_TOTAL])
-
-        # Add the url containing the ids to the results
-        ids_count = min(100, len(ids))
-        if ids_count > MAX_RESULTS_TOTAL:
-            results_wording = f"la liste des {ids_count} premiers résultats"
-        elif ids_count > 1:
-            results_wording = f"les {ids_count} résultats"
-        else:
-            results_wording = f"le résultat"
-        formatted_results += f"\n\nVous pouvez aussi consulter [{results_wording} sur le catalogue de la Philharmonie]({ActionGetSheetMusicByCasting.format_results_url(ids[:ids_count])})."
-
+        formatted_results = ActionGetSheetMusicByCasting.get_formatted_results(
+            results, ids
+        )
         logging.info(f"formatted_results: {formatted_results}")
 
         # Encode the full results
         encoded = urllib.parse.quote_plus(formatted_results.strip("\n"), safe="/")
 
+        # If we have less than 15 results, we directly display them
+        if len(results) <= 15:
+            buttons = [
+                {
+                    "title": "Nouvelle recherche",
+                    "payload": f'/direct_query{{"display_buttons": "True"}}',
+                }
+            ]
+            return formatted_results, buttons
+
+        (
+            worded_results,
+            buttons,
+        ) = ActionGetSheetMusicByCasting.create_result_display_CTA(
+            results, encoded, entity_dict, inputted_medias
+        )
+        return worded_results, buttons
+
+    @staticmethod
+    def get_formatted_results(results: List[str], ids: List[str]):
+        """
+        This method returns a string created from the list of results.
+        It passes it as a payload hidden in the display_results button.
+        """
+        # Get the results as a string
+        formatted_results = "\n" + "\n".join(results[:MAX_RESULTS_TOTAL])
+
+        # Add the number of results and a link to the catalogue
+        ids_count = min(100, len(ids))
+        if ids_count > MAX_RESULTS_TOTAL:
+            formatted_count = f"la liste des {ids_count} premiers résultats"
+        elif ids_count > 1:
+            formatted_count = f"les {ids_count} résultats"
+        else:
+            formatted_count = f"le résultat"
+        formatted_results += f"\n\nVous pouvez aussi consulter [{formatted_count} sur le catalogue de la Philharmonie]({ActionGetSheetMusicByCasting.format_results_url(ids[:ids_count])})."
+
+        return formatted_results
+
+    @staticmethod
+    def create_result_display_CTA(
+        results: List[str], encoded: str, entity_dict: dict, inputted_medias: dict
+    ):
+        """
+        This method creates a button that will display the full results;
+        the goal is to avoid cluttering the chat with too many results if the user
+        is still in the process of refining their search.
+        """
+
+        # Create the result displaying button's title content
+        result_display_CTA = ""
+        if len(results) > 25:
+            result_display_CTA = "Afficher les 25 premiers résultats"
+        elif len(results) > 15:
+            result_display_CTA = f"Afficher les {len(results)} résultats"
+
+        # Create the result displaying button
+        buttons = []
         buttons.append(
             {
-                "title": "Afficher les 25 premiers résultats"
-                if len(results) > 25
-                else f"Afficher les résultats",
+                "title": result_display_CTA,
                 "payload": f'/display_results{{"current_results": "{encoded}"}}',
             }
         )
@@ -827,6 +888,7 @@ optional {{?creation  mus:R24_created   ?score .
         buttons.extend(criteria_buttons)
         logging.info(f"buttons: {buttons}")
 
+        worded_results = f"J'ai trouvé {len(results)} partitions correspondant à votre recherche. Faites votre choix.\n"
         return worded_results, buttons
 
     @staticmethod
