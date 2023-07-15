@@ -35,6 +35,7 @@ nlu:
     - efface tout
     - efface tout et recommence
     - oublie tout
+    - oublie et recommence
 
 
 - intent: goodbye
