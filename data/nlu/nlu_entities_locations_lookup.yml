@@ -1,0 +1,2841 @@
+version: "2.0"
+
+nlu:
+
+- lookup: "location"
+  examples: |
+    - afrique
+    - africa
+    - africain
+    - france
+    - français
+    - française
+    - albanie
+    - albania
+    - albanais
+    - algérie
+    - algeria
+    - algérien
+    - amérique
+    - america
+    - américain
+    - argentine
+    - argentina
+    - argentin
+    - asie
+    - asia
+    - asiatique
+    - australie
+    - australia
+    - australien
+    - autriche
+    - osterreich
+    - autrichien
+    - belgique
+    - belgium
+    - belge
+    - bolivie
+    - bolivia
+    - bolivien
+    - brésil
+    - brazil
+    - brésilien
+    - bretagne
+    - britanny
+    - breton
+    - bulgarie
+    - bulgaria
+    - bulgare
+    - bourgogne
+    - burgundy
+    - bourguignon
+    - cameroun
+    - cameroon
+    - camerounais
+    - antilles
+    - west indies
+    - caraibéen
+    - catalogne
+    - catalunya
+    - catalane
+    - chili
+    - chile
+    - chilien
+    - chine
+    - china
+    - chinois
+    - colombie
+    - colombia
+    - colombien
+    - croatie
+    - croatia
+    - croate
+    - danemark
+    - denmark
+    - danois
+    - allemagne
+    - germany
+    - allemand
+    - bohème
+    - eberland
+    - bohémien
+    - angleterre
+    - england
+    - anglais
+    - europe
+    - europa
+    - européen
+    - finlande
+    - finland
+    - finlandais
+    - florence
+    - firenze
+    - florentin
+    - grèce
+    - greece
+    - grec
+    - hongrie
+    - hungary
+    - hongrois
+    - islande
+    - iceland
+    - islandais
+    - inde
+    - india
+    - indou
+    - irlande
+    - ireland
+    - irlandais
+    - italie
+    - italy
+    - italien
+    - japon
+    - japan
+    - japonais
+    - lettonie
+    - latvia
+    - lettone
+    - lithuanie
+    - lituanie
+    - lithuanien
+    - londres
+    - london
+    - londonien
+    - macédoine
+    - macedonia
+    - macédonien
+    - mexique
+    - mexico
+    - mexicain
+    - maroc
+    - morocco
+    - marocaine
+    - naples
+    - napoli
+    - napolitaine
+    - norvège
+    - norway
+    - norvégien
+    - baltes
+    - pays baltes
+    - balte
+    - pays-bas
+    - the netherlands
+    - hollandais
+    - pérou
+    - peru
+    - péruvien
+    - pologne
+    - poland
+    - polonais
+    - porto-rico
+    - puerto rico
+    - porto ricain
+    - prusse
+    - preussen
+    - prusse
+    - moyen orient
+    - proche orient
+    - moyen oriental
+    - provence-alpes-côte-d'azur
+    - provence cote d'azur
+    - provencal
+    - rome
+    - roma
+    - romaine
+    - roumanie
+    - romania
+    - roumain
+    - russie
+    - russia
+    - russe
+    - silésie
+    - silesia
+    - silésien
+    - ecosse
+    - scotland
+    - écossais
+    - slovaquie
+    - slovakia
+    - slovaque
+    - slovénie
+    - slovenia
+    - slovéne
+    - amérique du sud
+    - south america
+    - sud américain
+    - espagne
+    - spain
+    - espagnol
+    - suède
+    - sweden
+    - suédois
+    - suisse
+    - switzerland
+    - suisse
+    - syrie
+    - syria
+    - syrien
+    - république tchèque
+    - tchéquie
+    - tchéque
+    - turquie
+    - turkey
+    - turque
+    - ukraine
+    - ukrainia
+    - ukrainien
+    - urss
+    - union soviétique
+    - russe
+    - etats-unis
+    - usa
+    - américain
+    - viet-nam
+    - vietnam
+    - vietnamien
+    - pays de galles
+    - wales
+    - galloise
+    - vienne
+    - wien
+    - viennois
+    - yougoslavie
+    - yugoslavia
+    - yougoslave
+    - alsacealsacien
+    - grande-bretagneanglais
+    - arméniearménien
+    - balkansbalkanique
+    - pays basquebasque
+    - bengalebengalais
+    - berryberrichone
+    - canadacanadien
+    - corsecorse
+    - cubacubain
+    - estonieestonien
+    - flandresflamand
+    - gascognegascon
+    - guadeloupeguadeloupéen
+    - guyaneguyanaise
+    - hollandehollandais
+    - israëlisraélien
+    - jamaïquejamaïcain
+    - luxembourgluxembourgeois
+    - madagascarmalgache
+    - midi-pyénéesméridionale
+    - moraviemorave
+    - normandienormande
+    - paraguayparaguayien
+    - parisparisien
+    - périgordpérigourgin
+    - picardiepicarde
+    - portugalportuguas
+    - provenceprovencal
+    - québec
+    - québec
+    - savoiesavoyared
+    - strasbourgstrasbourgeois
+    - taïwantaïwanais
+    - tchécoslovaquietchéque
+    - venezuelavénézuélien
+    - versaillesversaillais
+    - walloniewallone
+    - aix-la-chapelle
+    - aachen
+    - abruzzes
+    - abruzzi
+    - ethiopie
+    - ethiopia
+    - afrique orientale
+    - east africa
+    - afrique occidentale
+    - west africa
+    - afrique centrale
+    - central africa
+    - maghreb
+    - north africa
+    - agrigente
+    - agrigento
+    - himalaya-népal-tibet
+    - aire culturelle tibétaine
+    - aix-en-provence
+    - aix en provence
+    - alexandrie
+    - alexandria
+    - almaty
+    - alma-ata
+    - iles alor
+    - alor
+    - alpes-de-haute-provence
+    - alpes de haute provence
+    - alpes-maritimes
+    - alpes maritimes
+    - ambon
+    - ile ambon
+    - ancône
+    - ancona
+    - iles andaman
+    - andaman
+    - wegorzewo
+    - angerburg
+    - anvers
+    - antwerpen
+    - aoste
+    - aosta
+    - asie mineure
+    - asia minor
+    - asie centrale
+    - central asia
+    - extrême orient
+    - asie orientale
+    - assise
+    - assisi
+    - asturies
+    - asturias
+    - augsbourg
+    - augsburg
+    - azerbaïdjan
+    - azerbayjan
+    - bachkirie
+    - respoublika bachkortostan
+    - bakou
+    - bacou
+    - bade-wurtemberg
+    - baden-wurtenberg
+    - bahrein
+    - bahrain
+    - varanasi
+    - veranasi
+    - bas-rhin
+    - bas rhin
+    - bâle
+    - basel
+    - pyrénées-atlantiques
+    - basses-pyrénées
+    - bavière
+    - bayern
+    - botswana
+    - bechuanaland
+    - pékin
+    - beijing
+    - berne
+    - berne
+    - berne
+    - berne
+    - burgdorf
+    - berthoud
+    - bisignano
+    - besignano
+    - bhoutan
+    - bhutan
+    - bienne
+    - biel
+    - bombay
+    - mumbay
+    - bologne
+    - bologna
+    - breslau
+    - wroclaw
+    - bouches-du-rhône
+    - bouches du rhone
+    - boulogne-billancourt
+    - boulogne-sur-seine
+    - la couture-boussey
+    - la couture
+    - bolzano
+    - bozen
+    - brunswick
+    - braunschweig
+    - brême
+    - bremen
+    - colombie-britannique
+    - british columbia
+    - bressanone
+    - brixen
+    - bruxelles
+    - brussels
+    - buenos-aires
+    - buenos aires
+    - burkina-faso
+    - haute-volta
+    - birmanie
+    - myanmar
+    - bouriatie
+    - buryat
+    - biélorussie
+    - byelorussia
+    - istanbul
+    - istambul
+    - cap lopez
+    - cabo lopez
+    - cadix
+    - cadiz
+    - calabre
+    - calabria
+    - californie
+    - california
+    - cambodge
+    - cambodia
+    - iles canaries
+    - canary islands
+    - iles du cap-vert
+    - cape verde
+    - le cap
+    - capetown
+    - karlovy vary
+    - karlsbad
+    - cartagena
+    - cartagene
+    - caucase
+    - caucasus
+    - célèbes
+    - sulawesi
+    - république centrafricaine
+    - rca
+    - amérique centrale
+    - central america
+    - centre-val de loire
+    - centre
+    - seran
+    - seran
+    - tchernivtsi
+    - tchernowitz
+    - cervione
+    - cervioni
+    - sri lanka
+    - ceylan
+    - tchad
+    - chad
+    - châlons-en-champagne
+    - chalons-sur-marne
+    - champagne-ardenne
+    - champagne ardenne
+    - kemerovo
+    - chtchelgovsk
+    - iles des comores
+    - comores
+    - saint-jacques de compostelle
+    - santiago de compostela
+    - république démocratique du congo
+    - zaïre
+    - république du congo
+    - république populaire du congo
+    - cordoue
+    - cordoba
+    - république populaire démocratique de corée
+    - north korea
+    - république de corée
+    - south korea
+    - cornouailles
+    - cornwall
+    - corse-du-sud
+    - corse du sud
+    - côte-d'or
+    - cote d'or
+    - la côte-saint-andré
+    - la cote saint andre
+    - côtes-d'armor
+    - cotes-du-nord
+    - crémone
+    - cremona
+    - iles des cyclades
+    - cyclades
+    - chypre
+    - cyprus
+    - bénin
+    - dahomey
+    - gdansk
+    - danzig
+    - devon
+    - devonshire
+    - saint sebastien
+    - san sebastian
+    - dresde
+    - dresden
+    - île de pâques
+    - pâques
+    - equateur
+    - equator
+    - edimbourg
+    - edinburgh
+    - egypte
+    - egypt
+    - iekaterinbourg
+    - ekaterinbourg
+    - salvador
+    - el salvador
+    - helsingor
+    - elseneur
+    - erevan
+    - erivan
+    - new york state
+    - etat de new york
+    - etobon
+    - etaubon
+    - scandinavie
+    - scandinavia
+    - fès
+    - fez
+    - iles fidji
+    - fiji
+    - mékong
+    - fleuve mekong
+    - ile de flores
+    - flores
+    - floride
+    - florida
+    - fontevraud
+    - fontevrault
+    - libreville
+    - fort d'aumale
+    - francfort-sur-le-main
+    - frankfurt am main
+    - franche-comté
+    - franche comte
+    - verneuil d'avre et d'iton
+    - verneuil-sur-avre
+    - francfort-sur-l'oder
+    - frankfurt an der oder
+    - fribourg
+    - freiburg
+    - fribourg-en-brisgau
+    - freiburg im breisgau
+    - frise
+    - friesland
+    - bichkek
+    - pichpek
+    - galice
+    - galicia
+    - gambie
+    - gambia
+    - gênes
+    - genoa
+    - gand
+    - gent
+    - géorgie
+    - georgia
+    - grammont
+    - geraardsbergen
+    - gujarat
+    - gujrat
+    - grenade
+    - granada
+    - kraslice
+    - graslitz
+    - royaume-uni
+    - united kingdom
+    - grandes antilles
+    - greater antilles
+    - groenland
+    - greenland
+    - groote eylandt
+    - ile de groote
+    - guinée
+    - guinea
+    - guyana
+    - republique de guyana
+    - surinam
+    - guyane néerlandaise
+    - hambourg
+    - hamburg
+    - hanovre
+    - hannover
+    - haute-corse
+    - haute corse
+    - haute-garonne
+    - haute garonne
+    - haute-marne
+    - haute marne
+    - haute-saône
+    - haute saone
+    - haute-savoie
+    - haute savoie
+    - haute-vienne
+    - haute vienne
+    - hautes-alpes
+    - hautes alpes
+    - hautes-pyrénées
+    - hautes pyrenees
+    - la haye
+    - haye
+    - iles hébrides
+    - western islands
+    - hesse
+    - hessen
+    - hildburghausen
+    - hildburghaussen
+    - saigon
+    - ho chi minh ville
+    - hong kong
+    - hong-kong
+    - harman
+    - szászhermány
+    - dnipropetrovsk
+    - iekaterinoslav
+    - ile-de-france
+    - ile de france
+    - la réunion
+    - réunion
+    - luçon
+    - luzon
+    - nias
+    - nias
+    - iles cocos
+    - iles keeling
+    - inde moghole
+    - inde mughal
+    - indonésie
+    - indonesia
+    - héliopolis
+    - ounu
+    - donetsk
+    - stalino
+    - irak
+    - iraq
+    - constantinople
+    - istambul
+    - côte d'ivoire
+    - ivory coast
+    - java
+    - java
+    - jordanie
+    - jordan
+    - jouy-en-josas
+    - jouy en josas
+    - kaboul
+    - kabul
+    - tver
+    - kalinine
+    - cachemire
+    - kashmir
+    - cassel
+    - kassel
+    - qatar
+    - katar
+    - kirghizistan
+    - kyrgyztan
+    - coblence
+    - koblenz
+    - ile kodiak
+    - kodiak
+    - cologne
+    - koln
+    - kaliningrad
+    - königsberg
+    - corée
+    - korea
+    - barbade
+    - la barbade
+    - la chaise-dieu
+    - la chaise dieu
+    - la coruna
+    - la corogne
+    - la nouvelle orléans
+    - nouvelle-orléans
+    - le puy
+    - le puy-en-velay
+    - liban
+    - lebanon
+    - lvov
+    - lwow
+    - saint-pétersbourg
+    - saint-petersburg
+    - petites antilles
+    - lesser antilles
+    - leiden
+    - leyde
+    - libye
+    - libya
+    - ligurie
+    - liguria
+    - lisbonne
+    - lisboa
+    - livourne
+    - livorno
+    - loire-atlantique
+    - loire atlantique
+    - lombardie
+    - lombardia
+    - lot-et-garonne
+    - lot et garonne
+    - louhansk
+    - vorochilovgrad
+    - louisiane
+    - louisiana
+    - lucques
+    - lucca
+    - maastricht
+    - maestricht
+    - magdebourg
+    - magdeburg
+    - magny-en-vexin
+    - magny en vexin
+    - maine-et-loire
+    - maine et loire
+    - mayence
+    - mainz
+    - malaisie
+    - malaysia
+    - iles maldives
+    - maldives
+    - majorque
+    - mallorca
+    - malte
+    - malta
+    - iles moluques
+    - moluques
+    - mantoue
+    - mantova
+    - mayotte
+    - maore
+    - marches
+    - marche
+    - iles marquises
+    - marquises
+    - ile maurice
+    - maurice
+    - mauritanie
+    - mauritania
+    - meran
+    - merano
+    - micronésie
+    - micronesia
+    - milan
+    - milano
+    - modène
+    - modena
+    - moldavie
+    - moldova
+    - mongolie
+    - mongolia
+    - le mont saint-michel
+    - mont-saint-michel
+    - moscou
+    - moscow
+    - munich
+    - münchen
+    - musikinstrumenten-museum - schloss kremsegg
+    - museum of music instruments
+    - namibie
+    - namibia
+    - naumbourg
+    - naumburg an der saale
+    - nouvelle-calédonie
+    - nouvelle caledonie
+    - nouvelle-angleterre
+    - new england
+    - nouvelle-guinée
+    - nouvelle guinee
+    - vanuatu
+    - nouvelles hebrides
+    - nouvelle-irlande
+    - new ireland
+    - nouveau-mexique
+    - new mexico
+    - new york
+    - new york city
+    - nouvelle-zélande
+    - nouvelle zelande
+    - nimègue
+    - nijmegen
+    - nord-pas-de-calais
+    - nord pas de calais
+    - amérique du nord
+    - north america
+    - caroline du nord
+    - north carolina
+    - inde du nord
+    - north india
+    - irlande du nord
+    - ulster
+    - nouvelle ecosse
+    - nova scotia
+    - novossibirsk
+    - novonikolaïevsk
+    - nuremberg
+    - nurnberg
+    - océanie
+    - oceania
+    - olomouc
+    - olmutz
+    - ombrie
+    - ombria
+    - uele
+    - ouelle
+    - orense
+    - ourense
+    - padoue
+    - padova
+    - palerme
+    - palermo
+    - papouasie-nouvelle-guinée
+    - papua new guinea
+    - parme
+    - parma
+    - pas-de-calais
+    - pas de calais
+    - pavia
+    - pavie
+    - pays-de-la-loire
+    - pays de loire
+    - iles de la sonde
+    - sunda
+    - panjab
+    - punjab
+    - pennsylvanie
+    - pennsylvania
+    - iran
+    - perse
+    - pérouse
+    - perugia
+    - pesaro urbino
+    - pesaro et urbino
+    - philadelphie
+    - philadelphia
+    - plaisance
+    - piacenza
+    - piémont
+    - piemonte
+    - pise
+    - pisa
+    - haut-poitou
+    - poitou
+    - poitou-charentes
+    - poitou charentes
+    - port-said
+    - port said
+    - poznan
+    - posen
+    - bratislava
+    - pressburg
+    - puy-de-dôme
+    - puy de dome
+    - pyrénées-orientales
+    - pyrenees orientales
+    - kazakhstan
+    - qazaqstan
+    - ravenne
+    - ravenna
+    - ratisbonne
+    - regensburg
+    - tallinn
+    - tallin
+    - rhénanie
+    - rheinland
+    - zimbabwe
+    - rhodésie
+    - rivne
+    - rovno
+    - sarre
+    - saarland
+    - saint-bauzille
+    - saint bauzille
+    - saint-brieuc
+    - saint brieuc
+    - saint-pierre-et-miquelon
+    - saint pierre and miquelon
+    - sant'andrea-di-bozio
+    - saint-andré di bozio
+    - saint félix de lauragais
+    - saint-félix-lauragais
+    - sankt georgen
+    - saint-georges
+    - sankt ingbert
+    - saint-ingbert
+    - sainte-lucie
+    - sainte lucie
+    - salamanque
+    - salamanca
+    - iles salomon
+    - salomon
+    - saluces
+    - saluzzo
+    - salzbourg
+    - salzburg
+    - iles samoa
+    - samoa
+    - san francisco
+    - san-francisco
+    - saône-et-loire
+    - saone et loire
+    - saragosse
+    - zaragoza
+    - sardaigne
+    - sardinia
+    - sao paulo
+    - sau paulo
+    - arabie saoudite
+    - saudi arabia
+    - saxe
+    - saxen
+    - souabe
+    - schwaben
+    - sées
+    - séez
+    - ségovie
+    - segovia
+    - seine-et-marne
+    - seine et marne
+    - séville
+    - sevilla
+    - iles des seychelles
+    - seychelles
+    - thaïlande
+    - thailand
+    - sibérie
+    - siberia
+    - sicile
+    - sicilia
+    - sienne
+    - sienna
+    - oulianovsk
+    - simbirsk
+    - singapour
+    - singapur
+    - xin-yang
+    - xinjiang
+    - shivpuri
+    - sipri
+    - iles de la société
+    - société
+    - surakarta
+    - solo
+    - sorrente
+    - sorrento
+    - afrique du sud
+    - south africa
+    - asie du sud
+    - south asia
+    - asie du sud-est
+    - south east asia
+    - inde du sud
+    - south india
+    - afrique australe
+    - southern africa
+    - saint-amand montrond
+    - st-amand montrond
+    - volgograd
+    - tsaritsyne
+    - soudan
+    - sudan
+    - tadjikistan
+    - tajikistan
+    - antananarivo
+    - tananarive
+    - tanzanie
+    - tanzania
+    - tchernigov
+    - tchernihiv
+    - baie de humboldt
+    - teluk yos sudarso
+    - tamise
+    - thames
+    - thoune
+    - thun
+    - thuringe
+    - thüringen
+    - tbilissi
+    - tiflis
+    - tlemcen
+    - tilimsen
+    - tyrol
+    - tirol
+    - tolède
+    - toledo
+    - iles tonga
+    - tonga
+    - turin
+    - torino
+    - toscane
+    - toscana
+    - tournan-en-brie
+    - tournan en brie
+    - trèves
+    - trier
+    - trinidad et tobago
+    - trinité et tobago
+    - tunisie
+    - tunesia
+    - turkestan occidental
+    - turkestan russe
+    - ouganda
+    - uganda
+    - basse-franconie
+    - unterfranken
+    - uttar pradesh
+    - uttard pradesh
+    - ouzbekistan
+    - uzbekistan
+    - etchmiadzine
+    - vagharchapat
+    - le val-d'ajol
+    - val d'ajol
+    - val-d'oise
+    - val d'oise
+    - val-de-marne
+    - val de marne
+    - valence
+    - valencia
+    - venetie
+    - veneto
+    - venise
+    - venezia
+    - vérone
+    - verona
+    - le vésinet
+    - vesinet
+    - vicence
+    - vicenza
+    - vintimille
+    - vintimiglia
+    - virginie
+    - virginia
+    - viry-chatillon
+    - viry chatillon
+    - washington
+    - washington
+    - westphalie
+    - westfalen
+    - wurtemberg
+    - württemberg
+    - wurtzbourg
+    - würzburg
+    - zambèze
+    - zambezie
+    - zambie
+    - zambia
+    - zarautz
+    - zarauz
+    - klingenthal
+    - zwota
+    - aire géographique
+    - méditerranée
+    - alpes
+    - monaco
+    - gaule
+    - amérique latine
+    - océan indien
+    - sao tomé-et-principe
+    - polynésie
+    - mélanésie
+    - hawaï
+    - futuna
+    - tuamotou
+    - cook islands
+    - ile norfolk
+    - bourbonnais
+    - touraine
+    - occitanie
+    - martinique
+    - languedoc-roussillon midi-pyrénées
+    - brie
+    - auvergne rhône-alpes
+    - aquitaine limousin poitou-charentes
+    - bourgogne franche-comté
+    - nord-pas-de-calais picardie
+    - pyrénées
+    - morvan
+    - alsace champagne-ardenne lorraine
+    - cévennes
+    - nivernais
+    - anjou
+    - béarn
+    - milton-malbay
+    - dublin
+    - donegal
+    - novgorod
+    - saratov
+    - kalmoukie
+    - vorkouta
+    - tcheliabinsk
+    - omsk
+    - tomsk
+    - barnaoul
+    - krasnoïarsk
+    - irkoutsk
+    - carélie
+    - bu mockb
+    - nijni novgorod
+    - valachie
+    - bucarest
+    - iassy
+    - hunedoara
+    - transylvanie
+    - soro
+    - jaegersborg
+    - bagsvoerd
+    - randers
+    - holstebro
+    - rodovre
+    - horsens
+    - esbjerg
+    - skanderborg
+    - albertslund
+    - fredericia
+    - arhus
+    - roskilde
+    - copenhague
+    - ebeltoft
+    - fredericksborg
+    - bilbao
+    - caceres
+    - simancas
+    - andalousie
+    - baneres
+    - cuenca
+    - almeria
+    - aragon
+    - castille
+    - giron
+    - leon
+    - lerma
+    - luna
+    - madrid
+    - malaga
+    - mislata
+    - morella
+    - tarazona
+    - valladolid
+    - arratia
+    - oviedo
+    - alicante
+    - sigüenza
+    - roding
+    - münster
+    - krefeld-königshof
+    - landshut
+    - velburg
+    - rheda
+    - lich
+    - weimar
+    - mühlhausen
+    - glauchau
+    - deggendorf
+    - nordhausen
+    - bad sackingen
+    - freiberg
+    - neresheim
+    - blankenburg
+    - herne
+    - bonn
+    - karlsruhe
+    - baden-baden
+    - bamberg
+    - biberach
+    - gera
+    - klingental
+    - neuenrade
+    - adorf
+    - altenbruch
+    - altenburg
+    - ansbach
+    - arnstadt
+    - bad krozingen
+    - bautzen
+    - bayreuth
+    - beckum
+    - berchtesgaden
+    - berlin
+    - bochum
+    - bubenreuth
+    - burgau
+    - butzbach
+    - darmstadt
+    - donaueschingen
+    - ellingen
+    - ellwangen
+    - endingen
+    - engels
+    - erfurt
+    - erlangen
+    - erlenbach
+    - essen
+    - fischbeck
+    - frankenhardt
+    - fraustadt
+    - friedberg
+    - fussen
+    - gelsenkirchen
+    - geretsried
+    - göttingen
+    - gutenstetten
+    - halle
+    - hanau
+    - heidelberg
+    - hermsdorf
+    - ingolstadt
+    - kaiserslautern
+    - königsberg
+    - köthen
+    - landau
+    - lauterbach
+    - leipzig
+    - lobau
+    - lorch am rhein
+    - lübeck
+    - ludingworth
+    - ludwigsburg
+    - lutzenberg
+    - mannheim
+    - markneukirchen
+    - meissen
+    - memmingen
+    - michaelstein
+    - mittenwald
+    - moritzburg
+    - nauheim
+    - neukirchen
+    - neustadt an der aisch
+    - ottobeuren
+    - penzberg
+    - potsdam
+    - reifferscheid
+    - rothenbach
+    - schleswig-holstein
+    - schöneck
+    - schongau
+    - siegen
+    - sinsheim
+    - stade
+    - steinkirchen
+    - stettin
+    - stuttgart
+    - tolz
+    - tübingen
+    - ulm
+    - volkstedt
+    - waldshut-tiengen
+    - weikersheim
+    - weissenfels
+    - wiesbaden
+    - wohlhausen
+    - zeitz
+    - zwickau
+    - schwerin
+    - fulda
+    - gotha
+    - dachau
+    - harz
+    - trossingen
+    - zerbst
+    - stein
+    - waldkirch
+    - biebrich
+    - alfeld
+    - goslar
+    - wehen
+    - donauworth
+    - reichenberg
+    - dusseldorf
+    - randeck
+    - geringswalde
+    - grossbreitenbach
+    - görlitz
+    - schwetzingen
+    - eisenach
+    - bielefeld
+    - ohrdruf
+    - zittau
+    - meiningen
+    - frioul
+    - trente
+    - urbino
+    - istrie
+    - emilie-romagne
+    - bazzano
+    - rimini
+    - saronno
+    - isola bella
+    - vatican
+    - trévise
+    - catajo
+    - mezzogiorno
+    - piasco
+    - modica
+    - oneglia
+    - varallo
+    - ascoli piceno
+    - molise
+    - brescia
+    - crema
+    - montagnana
+    - pistoia
+    - montiglio monferrato
+    - arzignano
+    - budrio
+    - sulmona
+    - udine
+    - ivrea
+    - gorizia
+    - trentin
+    - bergame
+    - caserta
+    - pompéi
+    - casina
+    - collescipoli
+    - bientina
+    - frascati
+    - castelbologne
+    - campi
+    - macerata
+    - novara
+    - castelfidardo
+    - chiaravalle
+    - isernia
+    - faenza
+    - reggio emilia
+    - san remo
+    - novi ligure
+    - bari
+    - trieste
+    - chieti
+    - ferrare
+    - messine
+    - pentema
+    - catanzaro
+    - latium
+    - maletto
+    - san giminiano
+    - stresa
+    - varèse
+    - vercelli
+    - stradella
+    - recanati
+    - salo
+    - cuneo
+    - savone
+    - ruvo di puglia
+    - castelli
+    - campomorone
+    - linz
+    - absam
+    - molln
+    - krems
+    - klosterneuburg
+    - hellbrunn
+    - graz
+    - innsbruck
+    - kufstein im tirol
+    - noetsch im gailtal
+    - hainaut
+    - marche
+    - vise
+    - namur
+    - charleroi
+    - bruges
+    - fleron
+    - uccle
+    - thimister
+    - schaerbeek
+    - tellin
+    - frameries
+    - recht
+    - anderlecht
+    - anvaing
+    - arc-ainières
+    - ath
+    - autre-eglise
+    - banneux notre-dame
+    - bastogne
+    - beauraing
+    - brabant wallon
+    - diest
+    - dinant
+    - enines
+    - etterbeek
+    - fosses
+    - gesves
+    - grand-halleux
+    - horion-hozemont
+    - huy
+    - ixelles
+    - la roche-en-ardennes
+    - langdorp
+    - lens-saint-remy
+    - liège
+    - lierre
+    - longueville
+    - louvain
+    - malines
+    - mons
+    - murrange
+    - nivelles
+    - philippeville
+    - pietrain
+    - purnode
+    - saint-donat
+    - saint-josse-ten-noode
+    - spa
+    - tervuren
+    - tournai
+    - virton
+    - walhorn
+    - woluwe-saint-lambert
+    - namur
+    - corroy-le-grand
+    - lichtervelde
+    - oravska polhora
+    - ocova
+    - prague
+    - chodsko-domazlice
+    - serbie
+    - bosnie
+    - zakopane
+    - varsovie
+    - lubusk
+    - cracovie
+    - kiev
+    - odessa
+    - vinnytsia
+    - soumy
+    - mézine
+    - budaors
+    - budapest
+    - nograd
+    - gyor
+    - trebizonde
+    - kurdistan
+    - ankara
+    - smyrne
+    - anatolie
+    - olympie
+    - crète
+    - athènes
+    - corinthe
+    - péloponèse
+    - souffli
+    - evora
+    - porto
+    - açores
+    - fatima
+    - mafra
+    - arlon
+    - zwolle
+    - groningen
+    - alkmaar
+    - utrecht
+    - amsterdam
+    - cuijk
+    - enschede
+    - gorinchem
+    - gouda
+    - hoofstraat
+    - kampen
+    - midwolde
+    - nijkerk
+    - passau
+    - rotterdam
+    - schoonhoven
+    - tilburg
+    - uithuizen
+    - haarlem
+    - eelde
+    - delft
+    - tirana
+    - korce
+    - sofia
+    - rousse
+    - les breuleux
+    - les bois
+    - le noirmont
+    - lajoux
+    - epauvillers
+    - saint-brais
+    - soubey
+    - montfaucon
+    - les pommerats
+    - saignelégier
+    - les genevez
+    - saulcy
+    - bellelay
+    - bassecourt
+    - boécourt
+    - bourrignon
+    - corban
+    - courchapoix
+    - courfaivre
+    - courrendlin
+    - courroux
+    - courtetelle
+    - delémont
+    - develier
+    - glovelier
+    - lucelle
+    - mervelier
+    - montsevelier
+    - movelier
+    - pleigne
+    - rebeuvelier
+    - soulce
+    - soyhières
+    - undervelier
+    - vermes
+    - vicques
+    - genève
+    - martigny
+    - sainte-croix
+    - teufenthal
+    - la chaux-de-fonds
+    - yverdon-les-bains
+    - brienz
+    - alle
+    - asuel
+    - augst
+    - avenches
+    - beurnevésin
+    - boncourt
+    - bonfol
+    - bresseaucourt
+    - buix
+    - bure
+    - charmey
+    - charmoille
+    - chevenez
+    - coeuve
+    - cornol
+    - cossonay
+    - courchavon
+    - courgenay
+    - courtedoux
+    - courtemaîche
+    - damphreux
+    - damvant
+    - einsiedeln
+    - fahy
+    - fontenais
+    - grandfontaine
+    - jura
+    - l'auberson
+    - lausanne
+    - liestal
+    - lucerne
+    - miécourt
+    - monthey
+    - montignez
+    - münster
+    - näfels
+    - neuchâtel
+    - ocourt
+    - payerne
+    - porrentruy
+    - reckingen
+    - réclère
+    - rocourt
+    - romainmôtier
+    - saint-ursanne
+    - seewen
+    - sion
+    - toggenburg
+    - valais
+    - vaud
+    - vendlincourt
+    - vevey
+    - winterthur
+    - zurich
+    - saint-gall-neudorf
+    - essert et champvent
+    - frauenfeld
+    - oberhofen
+    - pfäffikon
+    - cavigliano
+    - kriens
+    - gruyères
+    - val d'hérens
+    - langnau
+    - tessin
+    - dubrovnik
+    - dalmatie
+    - zagreb
+    - skopie
+    - jersey
+    - minsk
+    - chisinau
+    - uruguay
+    - burundi
+    - rwanda
+    - gabon
+    - angola
+    - sierra leone
+    - sénégal
+    - bissau
+    - liberia
+    - ghana
+    - mali
+    - nigeria
+    - togo
+    - niger
+    - guinée-bissau
+    - sénégambie
+    - mozambique
+    - malawi
+    - lesotho
+    - kenya
+    - djibouti
+    - zanzibar
+    - erythree
+    - somalie
+    - le caire
+    - antinoe
+    - port-said
+    - mésopotamie
+    - assyrie
+    - oman
+    - palestine
+    - yémen
+    - philippines
+    - laos
+    - pakistan
+    - bangladesh
+    - afghanistan
+    - turkmenistan
+    - sydney
+    - melbourne
+    - milingimbi
+    - dubbo
+    - adélaïde
+    - terre d'arnhem
+    - darwin
+    - canterbury
+    - auckland
+    - tahiti
+    - morbihan
+    - finistère
+    - ille-et-vilaine
+    - yvelines
+    - seine-saint-denis
+    - essonne
+    - hauts-de-seine
+    - guipuzcoa
+    - var
+    - vaucluse
+    - allier
+    - indre
+    - cher
+    - basse-normandie
+    - haute-normandie
+    - indre-et-loire
+    - languedoc-roussillon
+    - auvergne
+    - rhône-alpes
+    - aquitaine
+    - limousin
+    - loiret
+    - loir-et-cher
+    - eure-et-loir
+    - sologne
+    - basse-navarre
+    - lorraine
+    - mayenne
+    - vendée
+    - sarthe
+    - nièvre
+    - astrakhan
+    - barcelone
+    - tenerife
+    - marienmünster
+    - marienmünster
+    - vogtland
+    - coni
+    - fazioli
+    - malmedy
+    - ostiches
+    - thulin
+    - testelt
+    - schoenbach
+    - crnomelj
+    - lugano
+    - glasgow
+    - aberdeen
+    - westminster
+    - durham
+    - west dean
+    - salisbury
+    - torquay
+    - semley
+    - oxford
+    - wells
+    - birmingham
+    - taunton
+    - eton
+    - bethersden
+    - tiverton
+    - halifax
+    - oldham
+    - colchester
+    - axonia
+    - baildon
+    - blackburn
+    - bolton
+    - brighton
+    - bristol
+    - cambridge
+    - canterbury
+    - dorset
+    - ely
+    - exeter
+    - finchcocks
+    - gloucester
+    - greenwich
+    - huddersfield
+    - liverpool
+    - manchester
+    - marylebone
+    - milton keynes
+    - newark
+    - northampton
+    - northumberland
+    - nottingham
+    - salford
+    - sheffield
+    - southwark
+    - stamford
+    - wolverhampton
+    - bournemouth
+    - coventry
+    - glyndebourne
+    - llandaff
+    - peterborough
+    - newcastle
+    - twickenham
+    - islington
+    - ledbury
+    - bath
+    - gosports
+    - belfast
+    - trondheim
+    - bergen
+    - konsberg
+    - oslo
+    - toten
+    - malmö
+    - halsingland
+    - stockholm
+    - uppsala
+    - skane
+    - landskrona
+    - torrlosa
+    - lund
+    - kristianstad
+    - fredriksborg
+    - overtonea
+    - balinge
+    - göteborg
+    - trono
+    - drottningholm
+    - hietaniemi
+    - helsinki
+    - laponie
+    - kuopio
+    - turku
+    - minas gerais
+    - amazonie
+    - nordeste
+    - salvador
+    - amazonas
+    - para
+    - maranhao
+    - piaui
+    - ceara
+    - roraima
+    - paraiba
+    - pernambuco
+    - amapa
+    - acre
+    - alagoas
+    - sergipe
+    - recife
+    - rio grande do norte
+    - rio de janeiro
+    - bahia
+    - mato grosso
+    - tarata
+    - conception
+    - sucre
+    - santa ana
+    - la paz
+    - andahuaylillas
+    - rio cenepa
+    - lima
+    - quibor
+    - lara
+    - santiago
+    - asunción
+    - medellin
+    - bogota
+    - bucaramanga
+    - cartagena
+    - montevideo
+    - république dominicaine
+    - curaçao
+    - haïti
+    - marie-galante
+    - montserrat
+    - texas
+    - ann arbor
+    - vermillion
+    - maine
+    - york
+    - worcester
+    - atlanta
+    - watertown
+    - rhode island
+    - vermont
+    - salt lake city
+    - colorado
+    - new haven
+    - michigan
+    - massachusetts
+    - alaska
+    - albuquerque
+    - altoona
+    - alva
+    - appalaches
+    - asheville
+    - atlantic city
+    - baltimore
+    - buffalo
+    - chatham
+    - chestertown
+    - chicago
+    - cincinnati
+    - cleveland
+    - connecticut
+    - conway
+    - cornwall
+    - danville
+    - detroit
+    - dulwich
+    - durham
+    - edgeware
+    - el paso
+    - fullerton
+    - greensboro
+    - guilford
+    - hastings
+    - illinois
+    - indiana
+    - iowa
+    - kalamazoo
+    - kansas city
+    - lawton
+    - long island
+    - lynn
+    - memphis
+    - miami
+    - minneapolis
+    - minnesota
+    - montana
+    - nashville
+    - nazareth
+    - nevada
+    - new hampshire
+    - new jersey
+    - northville
+    - oakland
+    - oberlin
+    - ohio
+    - okemos
+    - oklahoma
+    - oregon
+    - pittsburg
+    - port townsend
+    - provo
+    - queens
+    - saint-louis
+    - saint-paul
+    - salem
+    - santa ana
+    - seattle
+    - springfield
+    - staunton
+    - tacoma
+    - tallahassee
+    - tampa
+    - tennessee
+    - washington d.c.
+    - weston
+    - winchester
+    - winston-salem
+    - wisconsin
+    - wooster
+    - yale
+    - mississippi
+    - orange
+    - omaha
+    - shenandoah
+    - marlboro
+    - utica
+    - portland
+    - arizona
+    - phoenix
+    - ithaca
+    - milwaukee
+    - lewiston
+    - leicester
+    - galax
+    - redwood city
+    - kentucky
+    - alabama
+    - claremont
+    - georgia
+    - missouri
+    - maryland
+    - newport
+    - mexico
+    - veracruz
+    - oaxaca
+    - paracho
+    - jalisco
+    - honduras
+    - panama
+    - nicaragua
+    - guatemala
+    - belize
+    - costa rica
+    - vancouver
+    - ottawa
+    - toronto
+    - yellowknife
+    - manitoba
+    - nunavut
+    - bafia
+    - yaoundé
+    - mbomou
+    - dibon
+    - monts mandara
+    - foumban
+    - nditam
+    - kasaï
+    - manyanga
+    - boulongo-boulangani
+    - gambo
+    - fort-lamy
+    - brazzaville
+    - porto novo
+    - abomey
+    - sainte-marie de bathurst
+    - moaga
+    - koudougou
+    - dakar
+    - casamance
+    - toukoufara
+    - carabane
+    - accra
+    - bamako
+    - sikasso
+    - duekoue
+    - tombouctou
+    - lagos
+    - port-harcourt
+    - conakry
+    - pretoria
+    - johannesburg
+    - nossi comba
+    - haut-atlas
+    - ichebakenne
+    - atlas
+    - marrakech
+    - rabat
+    - kabylie
+    - alger
+    - oran
+    - bou saada
+    - bechar
+    - constantine
+    - sfax
+    - tunis
+    - jerusalem
+    - haïfa
+    - megiddo
+    - tel-aviv
+    - canaan
+    - ougarit
+    - damas
+    - alep
+    - babylone
+    - sumer
+    - mari
+    - meshhed
+    - teheran
+    - jeyhunabab
+    - louristan
+    - suse
+    - tyr
+    - bagdad
+    - sanaa
+    - hanoï
+    - tonkin
+    - cochinchine
+    - annam
+    - bangkok
+    - manille
+    - phnom penh
+    - angkor
+    - bornéo
+    - sumba
+    - bali
+    - timor
+    - sumatra
+    - karen
+    - maharashtra
+    - konkan
+    - tiruchirappall
+    - kandy
+    - karachi
+    - népal
+    - tibet
+    - comilla
+    - tipperah
+    - douchanbe
+    - tachkent
+    - samarkand
+    - karakalpalkstan
+    - badakhstan
+    - tokyo
+    - kyoto
+    - azuchi
+    - gifu
+    - yokohama
+    - osaka
+    - henan
+    - canton
+    - mandchourie
+    - shenyang
+    - shanghaï
+    - ile de nuku hiva
+    - ile d'ambrym
+    - ouvéa
+    - guadalcanal
+    - malaita
+    - savo
+    - rieux
+    - vannes
+    - pont-scorff
+    - lorient
+    - le faouët
+    - tréguier
+    - dinan
+    - saint-symphorien-en-paule
+    - corlay
+    - binic
+    - loudéac
+    - plurien
+    - lannion
+    - guingamp
+    - lamballe
+    - saint-pol-de-léon
+    - morlaix
+    - dineault
+    - trégarvan
+    - quimper
+    - scaër
+    - carhaix
+    - concarneau
+    - plouégat-guérand
+    - sizun
+    - plonéour-lanvern
+    - brest
+    - pouldreuzic
+    - loc eguiner ploudiry
+    - rennes
+    - saint-malo
+    - lou-du-lac
+    - provins
+    - meaux
+    - mitry-mory
+    - lagny-sur-marne
+    - fontainebleau
+    - nemours
+    - larchant
+    - melun
+    - brou-sur-chantereine
+    - avon
+    - basseville
+    - bray-sur-seine
+    - brie-comte-robert
+    - chaumes-en-brie
+    - fontenailles
+    - juilly
+    - moret-sur-loing
+    - ferrières
+    - croissy-sur-seine
+    - saint-rémy-lès-chevreuse
+    - le chesnay
+    - chatou
+    - maisons-laffitte
+    - mantes-la-ville
+    - andresy
+    - bougival
+    - chambourcy
+    - clairefontaine
+    - conflans-sainte-honorine
+    - elancourt
+    - epône
+    - houdan
+    - houilles
+    - le pecq
+    - limay
+    - louveciennes
+    - marly-le-roi
+    - montesson
+    - montfort-l'amaury
+    - neauphle-le-château
+    - poissy
+    - port-marly
+    - rambouillet
+    - rosny-sur-seine
+    - saint-cyr
+    - saint-germain-en-laye
+    - trappes
+    - châteaufort
+    - enghien
+    - saint-leu-la-forêt
+    - boissy-l'aillerie
+    - montmorency
+    - royaumont
+    - argenteuil
+    - asnières-sur-oise
+    - beaumont-sur-oise
+    - cergy-pontoise
+    - champagne-sur-oise
+    - ecouen
+    - ermont
+    - fontenay-en-parisis
+    - gonesse
+    - herblay
+    - louvres
+    - pontoise
+    - villiers-le-bel
+    - aubervilliers
+    - montreuil
+    - saint-denis
+    - villetaneuse
+    - la courneuve
+    - evry
+    - dourdan
+    - angerville
+    - arpajon
+    - athis-mons
+    - corbeil-essonnes
+    - epinay-sur-orge
+    - etampes
+    - igny
+    - limours
+    - massy-verrières
+    - montlhery
+    - orsay
+    - palaiseau
+    - savigny-sur-orge
+    - morsang-sur-orge
+    - saint-cloud
+    - issy-les-moulineaux
+    - bagneux
+    - levallois-perret
+    - chatenay-malabry
+    - rueil-malmaison
+    - sceaux
+    - neuilly-sur-seine
+    - sèvres
+    - montrouge
+    - bois-colombes
+    - meudon
+    - choisy-le-roi
+    - vincennes
+    - bastia
+    - calvi
+    - muro
+    - lento
+    - fiumorbu
+    - corte
+    - moltifao
+    - nocario
+    - ajaccio
+    - hyères
+    - barjols
+    - fréjus
+    - saint-maximin-la-sainte-baume
+    - tourves
+    - la ciotat
+    - lorgues
+    - pignans
+    - saint-maximin du var
+    - saint-maximin-de-provence
+    - saint-raphaël
+    - six-fours
+    - toulon
+    - bandol
+    - salernes
+    - arles
+    - marseille
+    - tarascon
+    - aubagne
+    - eyguières
+    - saintes-maries-de-la-mer
+    - saint-rémy-de-provence
+    - clans
+    - antibes
+    - breil
+    - escarène
+    - fontan
+    - grasse
+    - la brigue
+    - nice
+    - saorge
+    - solliès-ville
+    - sospel
+    - tende
+    - menton
+    - saint-cézaire
+    - vallauris
+    - villefranche-sur-mer
+    - cavaillon
+    - avignon
+    - carpentras
+    - gordes
+    - bonnieux
+    - caromb
+    - cucuron
+    - pernes
+    - bollène
+    - malaucène
+    - l'isle-sur-la-sorgue
+    - pertuis
+    - vaison-la-romaine
+    - embrun
+    - gap
+    - queyras
+    - digne
+    - entrevaux
+    - forcalquier
+    - manosque
+    - riez
+    - sisteron
+    - moulins
+    - charroux
+    - montluçon
+    - jenzat
+    - vichy
+    - commentry
+    - varennes sur allier
+    - le clos-bargeon-molles
+    - souvigny
+    - saint-chartier
+    - la châtre
+    - nohant
+    - ardentes
+    - valençay
+    - issoudun
+    - charenton-sur-cher
+    - bourges
+    - plainpied
+    - vierzon
+    - manche
+    - calvados
+    - orne
+    - seine-maritime
+    - eure
+    - amboise
+    - tours
+    - ligueil
+    - gard
+    - hérault
+    - aude
+    - lozère
+    - roussillon
+    - gers
+    - tarn
+    - tarn-et-garonne
+    - lot
+    - aveyron
+    - ariège
+    - cantal
+    - haute-loire
+    - isère
+    - drôme
+    - ain
+    - ardèche
+    - rhône
+    - loire
+    - charente-maritime
+    - vienne
+    - charente
+    - deux-sèvres
+    - dordogne
+    - gironde
+    - landes
+    - creuse
+    - corrèze
+    - yonne
+    - doubs
+    - territoire de belfort
+    - jura
+    - somme
+    - aisne
+    - oise
+    - nord
+    - orléans
+    - boismorand
+    - sully-sur-loire
+    - gien
+    - lorris
+    - neuvy-en-sullias
+    - nibelle
+    - azé
+    - chambon-sur-cisse
+    - chaumont-sur-loire
+    - lamotte-beuvron
+    - mer
+    - montoire-sur-loire
+    - montrichard
+    - nouan-le-fuzelier
+    - pontlevoy
+    - prunay-cassereau
+    - romorantin-lanthenay
+    - saint-aignan
+    - selommes
+    - vendôme
+    - blois
+    - châteaudun
+    - chartres
+    - arrou
+    - aunay-sous-auneau
+    - bonneval
+    - brou
+    - châteauneuf-en-thymerais
+    - cloyes
+    - courtalain
+    - epernon
+    - gallardon
+    - illiers-combray
+    - janville
+    - la ferté-vidame
+    - maintenon
+    - margon
+    - mignières
+    - nogent-le-phaye
+    - nogent-le-roi
+    - toury
+    - villemeux
+    - voves
+    - dreux
+    - anet
+    - nogent-le-rotrou
+    - lourdes
+    - saint-savin
+    - tarbes
+    - aventignan
+    - recurt
+    - laborde
+    - betpouey
+    - lecumberzy
+    - saint-lézer
+    - tardets
+    - vielle-aure
+    - bonnemazon
+    - ayzac-ost
+    - nestier
+    - esteres luz
+    - esterre
+    - esquièze-sère
+    - bayonne
+    - saint-jean-de-luz
+    - oloron-sainte-marie
+    - laruns
+    - soule
+    - gan
+    - saint-guillem-de-combert
+    - perpignan
+    - vinca
+    - arles-sur-tech
+    - ille-sur-têt
+    - céret
+    - planes
+    - haut-rhin
+    - meurthe-et-moselle
+    - vosges
+    - moselle
+    - meuse
+    - marne
+    - ardennes
+    - aube
+    - laval
+    - ambrières
+    - angers
+    - puy-notre-dame
+    - luçon
+    - challans
+    - lle d'yeu
+    - le mans
+    - la flèche
+    - la ferté-bernard
+    - nantes
+    - saint-nazaire
+    - la baule
+    - landieul
+    - herbignac
+    - mouzeil
+    - varzy
+    - nevers
+    - vandenesse
+    - brèves
+    - la havane
+    - port of spain
+    - dallas
+    - olympia
+    - boston
+    - lowell
+    - newton
+    - los angeles
+    - san jose
+    - santa barbara
+    - berlin
+    - jersey city
+    - harlem
+    - brooklyn
+    - portland
+    - jamestown
+    - williamsburg
+    - clifton springs
+    - woodstock
+    - norwich
+    - williamsville
+    - newburgh
+    - louisville
+    - talbotton
+    - decatur
+    - chichicastenango
+    - montréal
+    - saint-hyacinthe
+    - jonquières
+    - laval
+    - iles de la reine charlotte
+    - winnipeg
+    - ile de baffin
+    - lipia
+    - cirebon
+    - malang
+    - bandung
+    - kalimantan
+    - denpasar
+    - mithila
+    - miraj
+    - delhi
+    - bihar
+    - visnupur
+    - dhumka
+    - calcutta
+    - ladakh
+    - rajasthan
+    - madhya pradesh
+    - assam
+    - kumaon
+    - garhwal
+    - madras
+    - karnataka
+    - kérala
+    - mysore
+    - katmandou
+    - séoul
+    - madang
+    - sepik
+    - orokolo
+    - ile mercus
+    - port moresby
+    - hambye
+    - cherbourg
+    - coutances
+    - hauteville
+    - saint-hilaire-du-harcouet
+    - villedieu-les-poêles
+    - nehou
+    - bayeux
+    - lisieux
+    - caen
+    - falaise
+    - pont-l'evêque
+    - trouville
+    - villers-sur-mer
+    - vieux
+    - grimbosq
+    - vire
+    - l'aigle
+    - planches
+    - ferrières-en-bray
+    - dieppe
+    - gournay-en-bray
+    - dampierre-en-bray
+    - forges-les-eaux
+    - sommery
+    - lammerville
+    - sassetot-le-mauconduit
+    - bacqueville-en-caux
+    - bolbec
+    - caudebec-en-caux
+    - criquetot-l'esneval
+    - elbeuf
+    - fécamp
+    - le havre
+    - lillebone
+    - montivilliers
+    - mont-saint-aignan
+    - neufchâtel
+    - ocqueville
+    - rouen
+    - saint-martin-de-boscherville
+    - saint-romain-de-colbosc
+    - martincamps
+    - andelys
+    - gisors
+    - ivry-la-bataille
+    - boscherville
+    - breteuil-sur-iton
+    - evreux
+    - gamaches-en-vexin
+    - louviers
+    - vernon
+    - garennes
+    - asnières
+    - nîmes
+    - alès
+    - beaucaire
+    - anduze
+    - chusclan
+    - uzès
+    - orange
+    - rogues
+    - saint-chinian
+    - béziers
+    - pézenas
+    - lodève
+    - montpellier
+    - lunel
+    - sète
+    - saint-guilhem-le-désert
+    - narbonne
+    - carcassonne
+    - castelnaudary
+    - montréal
+    - puivert
+    - saint-martin-de-limoux
+    - saint-papoul
+    - limoux
+    - mende
+    - prades
+    - marciac
+    - lombez
+    - condom
+    - auch
+    - terraube
+    - castres
+    - lavaur
+    - albi
+    - carmaux
+    - moissac
+    - montauban
+    - saint-gaudens
+    - cintegabelle
+    - toulouse
+    - gimont
+    - cox
+    - revel
+    - souillac
+    - rodez
+    - foissac
+    - vabres-l'abbaye
+    - villefranche-de-rouergue
+    - saint-martin
+    - mirepoix
+    - pamiers
+    - saint-lizier
+    - aurillac
+    - marchal
+    - saint-flour
+    - fontanges
+    - planèze
+    - saint-urcize
+    - clermont-ferrand
+    - effiat
+    - pionsat
+    - verneugheol
+    - ambert
+    - tonne
+    - craponne
+    - rosières
+    - chambéry
+    - aix-les-bains
+    - ugine
+    - peisey
+    - la chambre
+    - manigod
+    - charavines
+    - crolles
+    - grenoble
+    - theys
+    - saint-antoine l'abbaye
+    - meylan
+    - montélimar
+    - valence
+    - nyons
+    - romans-sur-isère
+    - bresse
+    - bourg-en-bresse
+    - belley
+    - saint-laurent
+    - pont-de-vaux
+    - chaveyriat
+    - beaupont
+    - ambronay
+    - viviers
+    - annecy
+    - crolière
+    - morzine
+    - thonon-les-bains
+    - chamonix
+    - servoz
+    - ville-la-grand
+    - evires
+    - chablais
+    - vallée verte
+    - saint-paul-en-chablais
+    - sixt-fer-à-cheval
+    - beaujeu
+    - lyon
+    - villeurbanne
+    - tarare
+    - saint-chamond
+    - saint-etienne
+    - montbrisson
+    - cherves
+    - saintes
+    - jonzac
+    - dolus
+    - moëze
+    - la rochelle
+    - pons
+    - saujon
+    - pontaillac
+    - royan
+    - saint-jean-de-liversay
+    - rochefort
+    - poitiers
+    - saint-jean-de-sauves
+    - saint-séverin
+    - angoulême
+    - niort
+    - saint-maixent
+    - airvault
+    - comminges
+    - périgueux
+    - bars
+    - allemans
+    - lascaux
+    - bordeaux
+    - uzeste
+    - saint-emilion
+    - la teste
+    - saint-antoine
+    - marcamps
+    - agen
+    - sabres
+    - bellegarde-en-marche
+    - vallière
+    - brive-la-gaillarde
+    - tulle
+    - curemonte
+    - beaulieu-sur-dordogne
+    - limoges
+    - avallon
+    - vézelay
+    - sens
+    - arcy-sur-cure
+    - auxerre
+    - etigny
+    - pontaubert
+    - bassou
+    - saint-julien-du-sault
+    - toucy
+    - naillyton
+    - châtillon-sur-seine
+    - dijon
+    - beaune
+    - fontenay
+    - dole
+    - auxonne
+    - genlis
+    - nuits-saint-georges
+    - saint-jean-de-losne
+    - saulieu
+    - semur-en-auxois
+    - seurre
+    - talant
+    - santenay
+    - saint-julien-clénay
+    - le creusot
+    - autun
+    - mâcon
+    - tournus
+    - chalon-sur-saône
+    - laizy
+    - dracy saint-loup
+    - donzy-le-national
+    - bourbon-lancy
+    - montceau-les-mines
+    - montbéliard
+    - besançon
+    - mouthe
+    - pontarlier
+    - sainte-suzanne
+    - mandeure
+    - vesoul
+    - luxeuil
+    - pesmes
+    - jussey
+    - héricourt
+    - belfort
+    - morez
+    - salins-les-bains
+    - arbois
+    - morteau
+    - poligny
+    - chaussin
+    - lons-le-saunier
+    - amiens
+    - péronne
+    - saint-quentin
+    - vermand
+    - laon
+    - soissons
+    - beauvais
+    - compiègne
+    - meru
+    - beauvaisis
+    - chambly
+    - chaumont-en-vexin
+    - précy-sur-oise
+    - chantilly
+    - douai
+    - esquelbecq
+    - hazebrouck
+    - marcq-en-baroeul
+    - cambrai
+    - dunkerque
+    - lille
+    - roubaix
+    - tourcoing
+    - valenciennes
+    - villeneuve d'ascq
+    - west-cappel
+    - halluin
+    - hondschoote
+    - calais
+    - boulogne-sur-mer
+    - saint-omer
+    - arras
+    - ourton
+    - guebwiller
+    - turckheim
+    - colmar
+    - niederentzen
+    - oberentzen
+    - ottmarsheim
+    - ribeauville
+    - thann
+    - wihr-au-val
+    - altenach
+    - sélestat
+    - sarre-union
+    - bernardville
+    - haguenau
+    - herbitzheim
+    - marmoutier
+    - bellenheim
+    - weinbourg
+    - soufflenheim
+    - semersheim
+    - pierre
+    - deneuvre
+    - nancy
+    - gerbéviller
+    - liverdun
+    - lunéville
+    - pierre-la-treiche
+    - mattaincourt
+    - remiremont
+    - damblain
+    - mirecourt
+    - robécourt
+    - la mothe
+    - outremécourt
+    - saint-dié
+    - neufchâteau
+    - rouvres-la-chétive
+    - fraize
+    - la feuillée-dorothée
+    - epinal
+    - châtenois
+    - baudricourt
+    - poussay
+    - houécourt
+    - thionville
+    - metz
+    - bouzonville
+    - ars-sur-moselle
+    - laning
+    - moussey
+    - saint-avold
+    - bliesbruck-reinheim
+    - verdun
+    - saint-mihiel
+    - bar-le-duc
+    - avenay-val-d'or
+    - juvigny
+    - vertus
+    - reims
+    - epernay
+    - suippes
+    - sézanne
+    - l'epine
+    - maclaunay
+    - givet
+    - charleville-mézières
+    - braux
+    - sedan
+    - champignol-lez-mondeville
+    - troyes
+    - langres
+    - saint-dizier
+    - chaumont
+    - allichamps
+    - hollywood
+    - bikaner
+    - jaipur
+    - barmer
+    - kota
+    - jodhpur
+    - jaisalmer
+    - sekhawati
+    - chinakalwal
+    - gwalior
+    - saurashtra
+    - lucknow

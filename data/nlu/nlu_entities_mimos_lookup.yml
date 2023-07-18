@@ -1,0 +1,2614 @@
+version: "2.0"
+
+nlu:
+
+- lookup: "mimo"
+  examples: |
+    - piano
+    - pianiste
+    - violon
+    - violoniste
+    - violons
+    - guitare
+    - guitariste
+    - eléments d'instruments de musique
+    - archets
+    - archet
+    - instruments électroniques
+    - electroniques
+    - boite à rythmes
+    - clavioline
+    - gmebaphone
+    - gmebogosse
+    - heliophon
+    - mellotron
+    - instrument midi
+    - ondes martenot
+    - ondiste
+    - ondioline
+    - pianoline
+    - sackbut
+    - sampler
+    - solovox
+    - telharmonium
+    - theremin
+    - trautonium
+    - upic
+    - unité polyagogique informatique du cemamu
+    - violon midi
+    - instruments à clavier
+    - clavicordes
+    - clavicorde
+    - harmoniums
+    - harmonicorde
+    - harmonium
+    - harmoniumiste
+    - poikilorgue
+    - régale
+    - clavecins
+    - arpicordo
+    - clavecin brisé
+    - clavecin oculaire
+    - clavicythérium
+    - clavecin vertical
+    - clavecin organisé
+    - clavecin numérique
+    - clavecin électrique
+    - clavecin
+    - claveciniste
+    - clavecin à maillets
+    - clavecin-luth
+    - muselaar
+    - epinette
+    - virginale
+    - virginaliste
+    - piano mécanique
+    - orgues
+    - orgue éolien
+    - orgue
+    - organiste
+    - orgue portatif
+    - orgue positif
+    - pyrophone
+    - autres
+    - archiquier
+    - lyricorde
+    - pianofortes
+    - piano automatique
+    - piano cabinet
+    - claviharpe
+    - clavi-lame
+    - piano console
+    - piano numérique
+    - piano électrique
+    - euphonicon
+    - piano girafe
+    - piano à queue
+    - lutheal
+    - piano lyre
+    - melopiano
+    - piano orgue
+    - orphica
+    - pianet
+    - pianino
+    - piano à pédalier
+    - piano éolien
+    - piano organisé
+    - piano table
+    - piano-guitare
+    - pianoharpe
+    - piano harpe
+    - piano pyramidal
+    - piano carré
+    - piano à tangentes
+    - piano droit
+    - synthétiseurs
+    - claviériste
+    - buchla
+    - orgue électrique
+    - orgue électronique
+    - synclavier
+    - synthétiseur
+    - mirlitons
+    - mirlitons
+    - flûte eunuque
+    - kazoo
+    - mirliton
+    - nyastaranga
+    - autres instruments
+    - autres
+    - cristal baschet
+    - glace-chord
+    - jaltarang
+    - mattauphone
+    - glass harmonica
+    - scie musicale
+    - violon de fer
+    - instruments à percussion
+    - percussioniste
+    - cloches
+    - abanangbweli
+    - agogo
+    - ambassa
+    - aporo
+    - banka
+    - cloche
+    - pien-chung
+    - bozhong
+    - carillon
+    - carilloneuse
+    - cencerro
+    - sonnaille
+    - sonnailles
+    - dibu
+    - dibu dimbwa
+    - dibu dinganga
+    - dotaku
+    - dril-bu
+    - ekiro
+    - ghanta
+    - clochette
+    - hansho
+    - kili
+    - kin
+    - lawle
+    - mbombu
+    - nzoro
+    - p'yonjong
+    - clochette de traîneau
+    - cloche tubulaire
+    - t'ukchong
+    - washint
+    - cloche washint
+    - castagnettes
+    - cap ke
+    - castagnettes
+    - claquettes
+    - bones
+    - claquettes
+    - claquoir
+    - gandi
+    - khartal
+    - claquettes kartal
+    - paiban
+    - pak
+    - scabellum
+    - shakubyoshi
+    - shkashek
+    - sinh tien
+    - cliquette à sapèques
+    - toka
+    - walet-hkok
+    - fouet
+    - yotsudake
+    - zhong
+    - cymbales
+    - chabara
+    - chap
+    - ching
+    - cymbale ching
+    - cymbale choke
+    - chum choe
+    - cymbale crash
+    - crotales
+    - crotale
+    - cymbales
+    - dobatsu
+    - kartal
+    - cymbales kartal
+    - kasat
+    - manjira
+    - rol-mo
+    - sajat
+    - sanj
+    - sbub-chal
+    - sil-snyan
+    - cymbale sizzle
+    - cymbale sock
+    - ting-ting-shags
+    - zil
+    - tambours
+    - adufe
+    - agual
+    - bajiao gu
+    - ban
+    - bangu
+    - tambour tonneau
+    - tambour en tonnelet
+    - grosse caisse
+    - bata
+    - bendir
+    - bodhran
+    - bongos
+    - bonko
+    - tambour de bronze
+    - buhai
+    - burczybas
+    - cajon
+    - cenda
+    - changgo
+    - chingo
+    - cholgo
+    - chunggo
+    - chwago
+    - conga
+    - congas
+    - tambour conique
+    - tambour cylindrique
+    - daf
+    - dagu
+    - daire
+    - damaru
+    - dap
+    - daph
+    - darabukka
+    - davul
+    - def
+    - dhak
+    - dhimay
+    - dhol
+    - dholak
+    - djembe
+    - djembéiste
+    - djoungdjoung
+    - donno
+    - tambour
+    - tambour d'orchestre
+    - duff
+    - duma
+    - dumbelek
+    - ekole
+    - engalabi
+    - fodrahi
+    - tambour sur cadre
+    - tambour à friction
+    - furitsuzumi
+    - gakudaiko
+    - ganga
+    - garawung
+    - gata-bere
+    - gaza
+    - gendang
+    - ghata
+    - glaw ng yao
+    - tambour en gobelet
+    - tambour gobelet
+    - herrazi
+    - tambour en sablier
+    - tambour sablier
+    - huagu
+    - huaigu
+    - huangnigu
+    - hudko
+    - huolang gu
+    - huruk
+    - idakka
+    - kabaro
+    - kakko
+    - kalangu
+    - kalgo
+    - kamango
+    - kanjira
+    - kelei
+    - kendang
+    - khanjari
+    - khol
+    - kidi
+    - kiringi
+    - kong
+    - kon'go
+    - kotsuzumi
+    - kwelli
+    - kyobanggo
+    - kyondo
+    - luogu
+    - mazhar
+    - mbejn
+    - milavu
+    - mokita
+    - mokugyo
+    - mokusho
+    - mrdanga
+    - mukupiela
+    - muyu
+    - nangara
+    - ngoma
+    - ngonge
+    - nkoko
+    - nkumvi
+    - nogo
+    - nonga
+    - odaiko
+    - otsuzumi
+    - o-zi
+    - pakhavaj
+    - pambai
+    - pandeiro
+    - puk
+    - pu-ti-pu
+    - rammana
+    - redap
+    - riqq
+    - rnga
+    - sabaro
+    - sakara
+    - sakko
+    - sambhor
+    - sgar dham
+    - shagu
+    - caisse claire
+    - tambour à fente
+    - tambour de bois
+    - sogo
+    - tambourin à cordes
+    - tambourin de gascogne
+    - tabl
+    - taiko
+    - tama
+    - tambora
+    - tambourin de provence
+    - tambourin
+    - tamburu
+    - tambour sur fût
+    - tanggu
+    - taogu
+    - tapan
+    - tar
+    - tambour tar
+    - tarol
+    - tbel
+    - tebashul
+    - temple block
+    - caisse roulante
+    - terbang
+    - thon
+    - timila
+    - tomba
+    - trong chau
+    - trong com
+    - tambour de riz
+    - tsuridaiko
+    - tumba
+    - tumbadora
+    - tuntui
+    - tyepondo-pinge
+    - uchiwadaiko
+    - udukku
+    - uganda drum
+    - unggo
+    - tambour d'aisselle
+    - wankara
+    - yaogu
+    - yondo
+    - yonggo
+    - zarb
+    - zhangu
+    - gamelan
+    - gamelan
+    - gongs
+    - bonang
+    - canh
+    - cong
+    - daluo
+    - dan cong chien
+    - dora
+    - gan dham
+    - gan tuc
+    - gong
+    - gong ageng
+    - jengglong
+    - kasar
+    - kempul
+    - kenong
+    - ketuk
+    - khar-rnga
+    - khong mong
+    - kkwaenggwari
+    - kyi-waing
+    - kyi-zi
+    - luo
+    - matsumushi
+    - nyo
+    - shoko
+    - soban
+    - talempong
+    - tam am la
+    - thanh la
+    - waniguchi
+    - yaoling
+    - yunluo
+    - zhengluo
+    - guimbardes
+    - dan moi
+    - genggong
+    - guimbarde
+    - murcang
+    - tong
+    - grelots
+    - chimta
+    - grelots hit-hat
+    - grelot
+    - nupur
+    - suzu
+    - châpeau chinois
+    - timbales
+    - baya
+    - baz
+    - damaha
+    - damau
+    - kara
+    - timbale kara
+    - timbale
+    - tambour sur cuvette
+    - timbalière
+    - khurdak
+    - nagara
+    - nacaires
+    - naqqara
+    - tabla
+    - tablak
+    - tammatta
+    - tasa
+    - tikara
+    - tobol
+    - tubilattes
+    - lamellophones
+    - bantyu
+    - dikembe
+    - ikembe
+    - ilimba
+    - insimbi
+    - kadimba
+    - kakolondondo
+    - kalimba
+    - kankobela
+    - kisaanj
+    - kyanya
+    - lamellaphone
+    - languettophone
+    - likembe
+    - madaku
+    - madiumba
+    - marimba
+    - lamellaphone marimba
+    - marimbiste
+    - marimbula
+    - mbira
+    - modeku
+    - myonga
+    - sanza
+    - timbrh
+    - tsimbi
+    - lithophones
+    - bianqing
+    - lithophone
+    - pierre sonore
+    - p'yon'gyong
+    - qing
+    - t'ukkyong
+    - métallophones
+    - bar-chime
+    - glockenspiel de verre
+    - glockenspiel
+    - kane
+    - lyra glockenspiel
+    - metallophone
+    - panghyang
+    - saron barung
+    - saron demung
+    - saron panerus
+    - slentem
+    - slento
+    - tambour métallique
+    - tambour d'acier
+    - thali
+    - tubaphone
+    - vibraphone
+    - vibraphoniste
+    - autres
+    - claves
+    - flexatone
+    - bâton à percussion
+    - tube à percussion
+    - bâton-pilon
+    - pi phat
+    - pinpeat
+    - machine à pluie
+    - semantron
+    - simandre
+    - shantu
+    - tavoletta
+    - triangle
+    - txalaparta
+    - aeoliphone
+    - éoliphone
+    - zhu
+    - crécelles
+    - crécelle
+    - hochets
+    - angklung
+    - anzona
+    - assa muta chati
+    - atamo
+    - azibwazi
+    - dibu dimbwa
+    - hochet dibu dimbwa
+    - ifambu
+    - kauaha
+    - kayambi
+    - legwegwe
+    - maracas
+    - maruga
+    - muswai
+    - qachel
+    - hochet
+    - sanasel
+    - sekere
+    - sesheh
+    - sistre
+    - swanga
+    - taga
+    - wasamba
+    - râcloirs
+    - dikwakasa
+    - guachara
+    - guiro
+    - kenyen
+    - pandola
+    - bâton raclé
+    - récipient râclé
+    - râcloir
+    - washboard
+    - xylophones
+    - balafon
+    - balafoniste
+    - bolange
+    - claquebois
+    - dan krong-put
+    - dan t'rung
+    - gambang
+    - kilangay
+    - madimba
+    - manza
+    - marimba
+    - xylophone marimba
+    - mbila
+    - mendzan
+    - mokkin
+    - ranat
+    - valimba
+    - xylophone
+    - xylophoniste
+    - zanga
+    - instruments à cordes
+    - à cordes
+    - à corde
+    - a cordes
+    - cordes
+    - cistres
+    - harpe-luth arquée
+    - archicistre
+    - cisteron
+    - cistre
+    - guitare anglaise
+    - contrebasses
+    - new violin basse
+    - contrebasse
+    - contrebassiste
+    - octobasse
+    - vièles
+    - banam
+    - banhu
+    - basetlya
+    - cithare à archet
+    - broanca
+    - izeze
+    - cikara
+    - dan co
+    - dan gao
+    - dan nhi
+    - dilruba
+    - dra
+    - endingidi
+    - erhu
+    - erxian
+    - esraj
+    - vièle
+    - gadulka
+    - ghichak
+    - ghugha
+    - gigue
+    - gusle
+    - violon de hardanger
+    - huqin
+    - imzad
+    - jinghu
+    - kamaica
+    - kamanche
+    - kementses
+    - kiiki
+    - kokyu
+    - kundye
+    - lira da braccio
+    - lirone
+    - lokanga
+    - lyra
+    - masenqo
+    - nyckelharpa
+    - vièle monocorde
+    - vièle à une corde
+    - qobuz
+    - vièle rabab
+    - ravanhattha
+    - rebec
+    - ruudga
+    - sarangi
+    - sarinda
+    - sihu
+    - so duang
+    - so sam sai
+    - so u
+    - träskofiol
+    - umkiki
+    - yehu
+    - zhonghu
+    - guitares
+    - arpi-guitare
+    - banjo
+    - banjoïste
+    - banjo-mandoline
+    - banjulele
+    - guitare basse
+    - bissex
+    - cavaquinho
+    - guitare battente
+    - guitare en bateau
+    - dobro
+    - basse électrique
+    - bassiste
+    - guitare électrique
+    - guitarron
+    - guitare-harpe
+    - harpe-lyre
+    - guitare hawaïenne
+    - jarana
+    - luth-guitare
+    - guitare-luth
+    - lyre guitare
+    - machete
+    - guitare portugaise
+    - ukulele
+    - vihuela
+    - harpes-luths
+    - harpe-luth
+    - kasso
+    - kora
+    - koraïste
+    - kori
+    - soron
+    - donsonkoni
+    - harpes
+    - harpe arquée
+    - ardin
+    - bolo bogo
+    - bolon
+    - chang
+    - harpe chromatique
+    - clarsach
+    - harpe diatonique
+    - harpe ditale
+    - domo
+    - ennanga
+    - arc en terre
+    - harpe
+    - harpiste
+    - harpe celtique
+    - kinde
+    - kundi
+    - kwarnda
+    - nedomu
+    - ngombi
+    - ombi
+    - para
+    - sarong
+    - saung-gauk
+    - simbing
+    - vielles à roue
+    - vielle à roue
+    - vielle à clavier
+    - vielliste
+    - vielle organisée
+    - organistrum
+    - orpheon
+    - sanfona
+    - luths
+    - angélique
+    - archiluth
+    - baglama
+    - balalaïka
+    - pandore
+    - bandore
+    - bandurria
+    - bengala
+    - biwa
+    - bouzouki
+    - buzuq
+    - capi
+    - chapei
+    - charango
+    - chogur
+    - citole
+    - cobza
+    - colachon
+    - cumbus
+    - dan day
+    - dan nguyet
+    - dan tam
+    - dan tinh
+    - dan ty ba
+    - dan xen
+    - dombra
+    - dotara
+    - dutar
+    - ekonting
+    - ektara
+    - gambus
+    - gekkin
+    - guiterne
+    - gottuvadyam
+    - guinbri
+    - hajhuj
+    - hoddu
+    - kaburu
+    - kambre
+    - kara
+    - luth kara
+    - kacchapi vina
+    - keleli
+    - guitare des mandingues
+    - komuz
+    - konting
+    - kopuz
+    - krajappi
+    - lutar
+    - luth
+    - luthiste
+    - lyre-bandurria
+    - mamokhorong
+    - mandole
+    - mandolone
+    - mandora
+    - molo
+    - nanduni
+    - nkoni
+    - orpharion
+    - pandoura
+    - panduri
+    - penorcon
+    - pi-bang
+    - pipa
+    - qanbus
+    - quwaytara
+    - rabab
+    - luth rabab
+    - rabel
+    - ruan
+    - sanshin
+    - sanxian
+    - saradiya vina
+    - sarasvati vina
+    - sarod
+    - saz
+    - setar
+    - sgra-snyan
+    - shamisen
+    - shuangqing
+    - sitar
+    - sitariste
+    - sitari
+    - sixian
+    - surbahar
+    - tambura
+    - tanbur
+    - tandura
+    - tar
+    - luth tar
+    - théorbe
+    - théorbiste
+    - tidinit
+    - oud
+    - oudiste
+    - ouds
+    - yueqin
+    - lyres
+    - barbiton
+    - beganna
+    - lyre sphérique
+    - lyre sur cuvette
+    - chirawatta
+    - crwth
+    - crouth
+    - kissar
+    - krar
+    - kudu
+    - lyre
+    - ndongo
+    - phorminx
+    - rababa
+    - mandolines
+    - mandoline
+    - mandoliniste
+    - mandoloncelle
+    - mandore
+    - mandoline milanaise
+    - mandoline napolitaine
+    - monocordes
+    - gopiyantra
+    - monocorde
+    - trompette marine
+    - arcs musicaux
+    - adungu
+    - bagili
+    - bazombe
+    - berimbau
+    - chipendani
+    - chitende
+    - gora
+    - guru
+    - kalumbu
+    - lukombe
+    - lusuba
+    - arc en bouche
+    - arc musical
+    - ndaludali
+    - ndjembo
+    - nsambi
+    - pinak
+    - pluriarc
+    - ugubhu
+    - umakhweyana
+    - wambee
+    - xizambi
+    - autres
+    - fonic
+    - khuur
+    - altos
+    - violon ténor
+    - alto
+    - altiste
+    - violaline
+    - basse de violon
+    - violon-canne
+    - canne violon
+    - violon électrique
+    - violon expérimental
+    - violon irrégulier
+    - pochette
+    - viola arpa
+    - violon d'amour
+    - violoncelles
+    - arpeggione
+    - gardon
+    - new violin ténor
+    - viola pomposa
+    - violoncelle
+    - violoncelliste
+    - violes
+    - baryton
+    - pardessus de viole
+    - pardessus de viole de gambe
+    - quinton
+    - sultana
+    - ténor de viole
+    - dessus de viole
+    - viole
+    - gambiste
+    - contrebasse de viole
+    - viola alta
+    - viola bastarda
+    - basse de viole
+    - viole d'amour
+    - violone
+    - cithares
+    - harpe éolienne
+    - dulcimer des appalaches
+    - armandine
+    - arpanetta
+    - autoharpe
+    - bandura
+    - bangwe
+    - bell harp
+    - bin
+    - cithare sur table
+    - cithare sur planche
+    - bokongo
+    - bûche des flandres
+    - basse des flandres
+    - cymbalum
+    - cymbaliste
+    - dan bau
+    - dan tranh
+    - psaltérion double
+    - cithare double
+    - dulcimer
+    - dunde
+    - ekatantri vina
+    - enanga
+    - epinette des vosges
+    - fenghuangqin
+    - hommel
+    - ikidi
+    - inanga
+    - kacapi
+    - cithare kacapi
+    - kani
+    - kantele
+    - kayagum
+    - kesle
+    - kisla
+    - kinanda
+    - kinnari vina
+    - kisfejes citera
+    - komun'go
+    - koto
+    - ligombo
+    - mi-gyaung
+    - mvet
+    - psaltérion
+    - qanun
+    - qin
+    - cithare en radeau
+    - santur
+    - santour
+    - santouriste
+    - shichigen-kin
+    - siter
+    - surmandal
+    - takhe
+    - tonkori
+    - cithare tubulaire
+    - tuntun
+    - tympanon
+    - valiha
+    - vina
+    - wagon
+    - yanggum
+    - yangqin
+    - yaqin
+    - yomkwo
+    - zeze
+    - zheng
+    - cithare
+    - cithariste
+    - instruments à vent
+    - à vents
+    - a vents
+    - à vent
+    - a vent
+    - accordéons
+    - accordéon
+    - accordéoniste
+    - bandoneon
+    - bandonéoniste
+    - cecilium
+    - concertina
+    - accordéon diatonique
+    - harmoni-cor
+    - hautbois-jaulin
+    - harmonieflûte
+    - melodeon
+    - cornemuses
+    - cornemuse
+    - biniou
+    - veze
+    - bouhe
+    - cabrette
+    - chiboni
+    - dudy
+    - gaita
+    - gajde
+    - masak
+    - musette
+    - ney-e anban
+    - northumbrian pipe
+    - phagotum
+    - phagotus
+    - piva
+    - small-pipe
+    - tulum
+    - touloum
+    - txistu
+    - union pipe
+    - veuze
+    - xirularru
+    - zampogna
+    - zukra
+    - bassons
+    - dulcian alto
+    - alto fagotto
+    - bajon
+    - dulcian basse
+    - sordun basse
+    - sourdine basse
+    - basson d'amour
+    - bassonore
+    - basson
+    - bassoniste
+    - caledonica
+    - sordun contrebasse
+    - sourdine contrebasse
+    - contrebasse à anche
+    - courtaut
+    - contrebasson
+    - dulcian
+    - cervelas
+    - sarrusophone
+    - sarrussophone
+    - sordun
+    - sourdine
+    - dulcian ténor
+    - fagottino
+    - tritonikon
+    - clairons
+    - cor à clefs alto
+    - clairon basse
+    - bersag horn
+    - clairon
+    - cor à clefs
+    - sonorophone
+    - rhombes
+    - rhombe
+    - clarinettes
+    - clarinette alto
+    - clarinettiste alto
+    - arghul
+    - clarinette basse
+    - clarinettiste basse
+    - clarinette de basset
+    - cor de basset
+    - bilil
+    - clarinette
+    - clarinettiste
+    - clarinette d'amour
+    - clarinette double
+    - clarinette contrebasse
+    - clarinettiste contrebasse
+    - ken doi
+    - ken mot
+    - launeddas
+    - lira
+    - mijwiz
+    - qoshnai
+    - clarinette triple
+    - zummara
+    - cornets à pistons
+    - cornettiste à pistons
+    - cornet à pistons
+    - cornopean
+    - cornet echo
+    - mellophone
+    - cor alto
+    - cornets à bouquin
+    - cornet à bouquin basse
+    - cornet à bouquin
+    - cornettiste à bouquin
+    - cornettino
+    - cornet à bouquin sopranino
+    - cornet muet
+    - cornet droit
+    - cornet à bouquin ténor
+    - cornet à bouquin soprano
+    - bugles
+    - bugliste
+    - bugle alto
+    - bugle ténor
+    - bugle basse
+    - bugle
+    - petit bugle
+    - algoja
+    - flûte traversière alto
+    - flûte traversière ténor
+    - anata
+    - flûte de bambou
+    - basi
+    - flûte traversière basse
+    - flûte à bec basse
+    - flûte à bec basset
+    - basuri
+    - boatswains' call
+    - flûte-canne
+    - canne flûte
+    - chi
+    - ciritma
+    - cuckoo
+    - denena
+    - flûte à bec soprano
+    - djaouak
+    - djouak
+    - dongxiao
+    - flageolet double
+    - flûte double
+    - flûte à conduit
+    - duduk
+    - flute duduk
+    - dulali
+    - dvojnice
+    - ekinimba
+    - embilta
+    - flûte à embouchure terminale
+    - flûte oblique
+    - enkwanzi
+    - fifre
+    - flageolet
+    - fluier
+    - flûte à bec colonne
+    - flûte colonne
+    - flûte d'accord
+    - flûte d'amour
+    - flûte harmonique
+    - flûte vermeulen
+    - flûtet
+    - frula
+    - fue
+    - fujara
+    - furulya
+    - galoubet
+    - gasba
+    - geling
+    - gemshorn
+    - gibeemba
+    - giorgi flute
+    - flûte à bec contrebasse
+    - hityogiri
+    - kagurabue
+    - kaval
+    - kena
+    - khlui
+    - khluy
+    - kiangl
+    - komabue
+    - kooauau
+    - kwan
+    - longdi
+    - ludaya
+    - luma
+    - masul
+    - mbelen gwara
+    - mishiba
+    - mobeke
+    - murali
+    - mwanzi
+    - nar
+    - ndere
+    - nguru
+    - nokan
+    - flûte nasale
+    - flûte à encoche
+    - nyamulere
+    - ocarina
+    - omubanda
+    - paixiao
+    - flûte de pan
+    - penny wistle
+    - picco pipe
+    - flûte piccolo
+    - pitu
+    - puutoorino
+    - qasaba
+    - flûte à bec
+    - pipeau
+    - rondador
+    - ryuteki
+    - saluang
+    - sao
+    - satara
+    - seljefloyte
+    - serdam
+    - shabbaba
+    - shakuhachi
+    - shilla-shilla
+    - shinobue
+    - shuiniao
+    - sigu nihu
+    - sioulet cristedou
+    - siyotanka
+    - flûte à coulisse
+    - sodina
+    - sopilka
+    - flûte à bec sopranino
+    - suffara
+    - sukwadi
+    - suling
+    - surune
+    - svirel
+    - sifflet à coulisse
+    - syrinx
+    - taegum
+    - flûte à bec ténor
+    - flûte traversière tierce
+    - tibia
+    - tilinca
+    - tirio
+    - flûte
+    - flûtes
+    - flûte traversière
+    - flûte à bec alto
+    - txanbela
+    - txirula
+    - vamsa
+    - sifflet
+    - xiao
+    - xun
+    - zuffolo
+    - harmonicas
+    - harmonica
+    - harmoniciste
+    - mélodica
+    - cors
+    - cor double
+    - cor
+    - corniste
+    - huchet
+    - cor d'invention
+    - cornet naturel
+    - cor naturel
+    - olifant
+    - cor omnitonique
+    - cor de poste
+    - shofar
+    - cor à pistons
+    - trompes de chasse
+    - coach horn
+    - trompe de chasse
+    - corne de chasse
+    - reed horn
+    - trompe de lorraine
+    - orgues à bouche
+    - bawu
+    - dinh nam
+    - ken be
+    - ken meo
+    - khaen
+    - lu sheng
+    - orgue à bouche
+    - saenghwang
+    - sheng
+    - sho
+    - sumpotan
+    - hautbois
+    - alboka
+    - algaita
+    - cromorne alto
+    - rothophone alto
+    - bombarde alto
+    - hautbois alto
+    - aulos
+    - rothophone baryton
+    - cromorne basse
+    - rothophone basse
+    - bombarde basse
+    - basse de hautbois
+    - basse de musette
+    - bombarde
+    - hautbois-canne
+    - canne hautbois
+    - chalumeau
+    - chalumeau double
+    - chirimia
+    - clari
+    - cornamusa
+    - cromorne
+    - dessus de musette
+    - diple
+    - dolzaina
+    - doppioni
+    - cor anglais
+    - eraqyeh
+    - ghayta
+    - gheteh
+    - gralla
+    - bombarde contrebasse
+    - guan
+    - hautbois de poitou
+    - hautbois du poitou
+    - heckelphone
+    - hichiriki
+    - chalemie sopranino
+    - hnè
+    - ken
+    - ken bau
+    - mukhavina
+    - nagasvaram
+    - nai
+    - nay
+    - hautbois
+    - hautboïste
+    - hautbois de chasse
+    - hautbois d'amour
+    - piffaro
+    - p'iri
+    - rgya-gling
+    - rothophone
+    - sahnai
+    - sarunai
+    - schreyerpfeife
+    - selompret
+    - chalemie
+    - cromorne soprano
+    - sralai
+    - still shawm
+    - suona
+    - surnay
+    - tarogato
+    - tarompet
+    - cromorne ténor
+    - hautbois ténor
+    - rothophone ténor
+    - bombarde ténor
+    - tenora
+    - hautbois ténor
+    - chalemie soprano
+    - zamr
+    - hautbois zamr
+    - zurna
+    - ophicléides
+    - ophicléide alto
+    - ophicléide basse
+    - ophicléide contrebasse
+    - ophicléide monstre
+    - ophicléide
+    - quinticlave
+    - serpentcleide
+    - tuba-dupré
+    - autres
+    - aérophone
+    - bilangdao
+    - melophone
+    - mizmar
+    - pi so
+    - popgun
+    - sruti-box
+    - saxhorns
+    - althorn
+    - clairon alto
+    - alto horn
+    - saxhorn alto
+    - antoniophone
+    - ballad horn
+    - clairon baryton
+    - saxhorn baryton
+    - saxhorn basse
+    - saxhorn contrebasse
+    - saxhorn contralto
+    - cornophone
+    - flicorno
+    - neocor
+    - saxhorn
+    - saxotromba
+    - clairon soprano
+    - saxhorn soprano
+    - sudrophone
+    - clairon ténor
+    - cor alto
+    - saxophones
+    - saxophoniste
+    - saxophone alto
+    - saxophone baryton
+    - saxophone basse
+    - octavin
+    - saxophone
+    - saxophone soprano
+    - swanee-sax
+    - saxophone ténor
+    - serpents
+    - cor grave
+    - cimbasso
+    - ophimonocleide
+    - basson russe
+    - serpent
+    - serpent forveille
+    - serpent droit
+    - trombones
+    - tromboniste
+    - trombone alto
+    - trombone basse
+    - bimbonifono
+    - sacqueboute
+    - saqueboute
+    - trombone soprano
+    - trombone ténor
+    - trombone
+    - trompettes
+    - agwara
+    - cor des alpes
+    - amakondere
+    - bak
+    - bargumi
+    - trompette basse
+    - buccin
+    - buccina
+    - bucium
+    - buruw
+    - carnyx
+    - chalmei
+    - clavicor
+    - conque marine
+    - conque
+    - cornu
+    - didjeridu
+    - dung-chen
+    - dung-dkar
+    - duplex
+    - embuchi
+    - faluo
+    - trompette de parade
+    - horagai
+    - kahala
+    - kakaki
+    - karna
+    - trompette à clefs
+    - laba
+    - lituus
+    - lur
+    - malakat
+    - nafir
+    - narsiga
+    - trompette naturelle
+    - nembongo
+    - pangi
+    - rkang-gling
+    - rozhok
+    - salpinx
+    - sankh
+    - sheypur
+    - trompette à coulisse
+    - trombita
+    - trompette
+    - trompettiste
+    - tuba curva
+    - tuohitorvi
+    - tori
+    - turi
+    - trompette à pistons
+    - tubas
+    - saxotromba alto
+    - sudrophone baryton
+    - tuba basse
+    - bombardon
+    - clairon contrebasse
+    - tuba contrebasse
+    - euphonium
+    - helicon
+    - sousaphone
+    - tuba
+    - tubiste
+    - tuba wagner
+    - instruments mécaniques
+    - mécaniques
+    - mécaniques
+    - antiphonel
+    - automate
+    - autopanphone
+    - orgue de barbarie
+    - serinette
+    - componium
+    - orgue de foire
+    - limonaire
+    - tympanon mécanique
+    - clavecin mécanique
+    - orgue mécanique
+    - orgue à rouleaux
+    - boite à musique
+    - orchestrion
+    - panharmonicon
+    - pianola
+    - polyphon
+    - triola
+    - pendule mécanique
+    - horloge mécanique
+    - enclume
+    - bil
+    - plantation trumpet
+    - practice chanter
+    - sereu
+    - tuum
+    - antara
+    - ayotl
+    - bandola
+    - bombo
+    - caja
+    - cana de millo
+    - cascabel
+    - matraca
+    - erkencho
+    - kultrun
+    - llamador
+    - lppumin
+    - pandereta
+    - tambor mayor
+    - teponaztli
+    - tlalpanhuetlhuetl
+    - charka
+    - gaita
+    - lichiwayu
+    - mohoceno
+    - one goot
+    - pfalawita
+    - pincullo
+    - siku
+    - silbador
+    - silbato
+    - requinto
+    - iguana
+    - tiple
+    - sk'a'na
+    - gurra
+    - kanyahte'ka'nowa
+    - katana
+    - sonaja
+    - wada
+    - omichicahuaztli
+    - quiquiztli
+    - trutruka
+    - zampona
+    - basse-aux-pieds
+    - garmoshka
+    - heligonka
+    - askomandoura
+    - bodega
+    - chekwa
+    - cimpoi
+    - duda
+    - dzhura gayda
+    - kaba ghayda
+    - muchosa
+    - parkapzuk
+    - piob mhor
+    - säckpipa
+    - shabr
+    - shüvir
+    - tsambouna
+    - hor
+    - apertintaille
+    - capra
+    - hanske knap
+    - knaptand
+    - troccola
+    - birbyne
+    - bryolka
+    - olym shüvir
+    - pibgorn
+    - skalmeye
+    - xeremia
+    - clarinette xeremia
+    - zhaleyka
+    - gorduna
+    - bubanj
+    - diplipito
+    - duba
+    - fanfrnoch
+    - partrijzenlokker
+    - pignata
+    - rommelpot
+    - bourdon
+    - tamboril
+    - tambourin florentin
+    - tümïr
+    - tymbalon
+    - wawa
+    - zambomba
+    - huibe
+    - kemençe
+    - caval
+    - curlika
+    - cwène
+    - dvodentssivka
+    - dvoyanka
+    - fieould
+    - firlinfeu
+    - flaviol
+    - floyara
+    - fobiol
+    - friscalettu
+    - fuchsreize
+    - kakukkolo
+    - kurai
+    - kwakkelbeen
+    - piculina
+    - pist'ala
+    - shvi
+    - sipovka
+    - siringa
+    - skuduciai
+    - souravli
+    - stabule
+    - svirala
+    - svirka
+    - svistulka
+    - trstenke
+    - valaska dvojka
+    - valaska pistela
+    - braguinho
+    - cavaco
+    - tekerö
+    - drimba
+    - drymba
+    - kovïzh
+    - marranzanu
+    - lozhky
+    - bugarija
+    - dala-fandir
+    - kabak
+    - karaduzen
+    - sargija
+    - bandolim
+    - graile
+    - reh-fiep
+    - salamuri
+    - whithorn
+    - crystallophone
+    - bordon as ones
+    - reque reque
+    - bion
+    - bockhorn
+    - midwinterhoorn
+    - surem-puch
+    - trimbita
+    - tulnic
+    - strohfiedel
+    - akkordolia
+    - citera
+    - cithare sur bâton
+    - guitare-cithare
+    - harpe-cithare
+    - higheghe
+    - hümmelke
+    - kanklès
+    - küsle
+    - langeleg
+    - langeleik
+    - langspil
+    - mandoline-cithare
+    - psalmodikon
+    - tambal
+    - türharfe
+    - violon-cithare
+    - violon à pavillon
+    - gayda
+    - tamtam
+    - claquoir à marteau
+    - matraqueta
+    - guslica
+    - flûte d'écorce
+    - darvyra
+    - pistalka
+    - quail lure
+    - sifflet chanteur
+    - siurell
+    - telenka
+    - flûte globulaire
+    - viola d'arame
+    - distinette
+    - marteau
+    - idiophone pincé
+    - aerophone libre
+    - idiophone frotté
+    - idiophone à friction
+    - agbomboya
+    - anandalahari
+    - ananta vijaya
+    - barataka
+    - bin sitar
+    - cimta
+    - claquettes cimta
+    - dagara
+    - damama
+    - davandai
+    - dhanki
+    - dindimi
+    - timbale double
+    - duggi
+    - dukkar
+    - ghari
+    - ghungru
+    - go-mukha
+    - gummati
+    - halgi
+    - hudukka
+    - jagajhampa
+    - jharidap
+    - jhinka
+    - joraghai
+    - kairata vina
+    - kalama
+    - kashtha tarang
+    - lezim
+    - madar
+    - mahati vina
+    - mandira
+    - moska
+    - nadecvara-vina
+    - ottu
+    - panaba
+    - phal
+    - pirai
+    - semakkalam
+    - su ghosha
+    - sur-sanga
+    - sursrngar
+    - ta'us
+    - tirucinnam
+    - tuila
+    - vipanci vina
+    - epinette mécanique
+    - organette
+    - rabaga
+    - gender
+    - t'aep'yongso
+    - tanso
+    - alamoru
+    - atumpan
+    - bedug
+    - calung
+    - ch'ajch'as
+    - chocalho
+    - chlefeli
+    - cifteli
+    - cithrinchen
+    - cricri
+    - cuatro
+    - cununo
+    - daya
+    - dobachi
+    - dogdog
+    - dulcitone
+    - gabbus
+    - goge
+    - gubgubi
+    - harpe à crochets
+    - igil
+    - jula jula
+    - karinding
+    - kithara
+    - kohorn
+    - kolitong
+    - kucapi
+    - lahute
+    - madal
+    - makuti
+    - naka ya lehlaka
+    - nama
+    - ntenga
+    - phach
+    - phin
+    - pifülka
+    - pochette d'amour
+    - quitiplas
+    - rauschpfeife
+    - sandouri
+    - sharki
+    - tamburica
+    - alto ténor
+    - supeljka
+    - terpodion
+    - thod-rnga
+    - togo
+    - toa
+    - towa
+    - vibra-slap
+    - waldteufel
+    - tunda
+    - vocoder
+    - zurla
+    - bangdi
+    - yazheng
+    - bo-cioski
+    - chaozhou-biangu
+    - dscheng
+    - genkwan
+    - go-kin
+    - haotong
+    - hau-tung
+    - henggelege
+    - hsiau
+    - ichigen-kin
+    - kakugnoto
+    - kao tari
+    - nigenkin
+    - san gen kin
+    - nisen
+    - shakujo
+    - san-no-tsuzumi
+    - shimedaiko
+    - shugu
+    - tai ping gu
+    - tsuma-koto
+    - tongjiao
+    - adedemma
+    - agongon
+    - ajaeng
+    - alto malta
+    - apentemma
+    - arbab
+    - arbajo
+    - atamo
+    - audh
+    - axatse
+    - babatoni
+    - balingbing
+    - bangibang
+    - bansari
+    - bantula
+    - belobat pendek
+    - benebene
+    - bhujanga
+    - bikong
+    - bommaa
+    - borazan
+    - brekete
+    - büchel
+    - bülbül
+    - caixa
+    - c'angi
+    - caracol
+    - carrizo
+    - cati
+    - caxixi
+    - celempung
+    - chakhe
+    - cheng
+    - chiba
+    - ch'ili
+    - chinkuyo
+    - chinzumana
+    - ciblon
+    - chunggum
+    - cor à embouchure terminale
+    - cinna vina
+    - c'onguri
+    - cura
+    - contra surdo
+    - dabadaba
+    - daluka
+    - dawuro
+    - debakan
+    - dhah
+    - dohol
+    - fontomfrom
+    - dhimayca
+    - dhavalashanka
+    - dibhinda
+    - dilli-kaval
+    - dozale
+    - dung
+    - dvojicka
+    - dvojkinje
+    - embra
+    - engkuk
+    - emong
+    - ese
+    - gab
+    - gabbang
+    - garantung
+    - gandang
+    - geduk
+    - gangsa
+    - ganza
+    - genderang
+    - gendingan
+    - ghangli
+    - gondang buluh
+    - ghaval
+    - gimbal
+    - gondang
+    - ghol
+    - ghongad
+    - gimbar
+    - gongand
+    - goong
+    - gosha naghara
+    - grantang
+    - grap saypha
+    - gumanak
+    - gya ling
+    - haegum
+    - hasapi
+    - hsaing-waing
+    - huajras
+    - husapi
+    - hyang-pip'a
+    - hyang p'iri
+    - innenspaltflöte
+    - jatun tukana
+    - jakdak-ulul
+    - jedinka
+    - julajula
+    - jegogan
+    - jhalica
+    - kangsi
+    - kalenang
+    - kagan
+    - kang ling
+    - kantilan
+    - kenyir
+    - karatali
+    - kasuk
+    - kelenang
+    - kempur
+    - kempyang
+    - khong
+    - kelmas
+    - kenang
+    - kete
+    - ketipung
+    - khaijari
+    - keteng-keteng
+    - kita
+    - klengkleng
+    - kondi
+    - kubing
+    - koncovka
+    - lakita
+    - kubangu
+    - kuding
+    - kulanter
+    - kulingtang
+    - kulliteng
+    - kulpaci
+    - kvakhi
+    - kvakhica
+    - lalakhi
+    - lesiba
+    - llg'ase
+    - lunko
+    - libbit
+    - malamala
+    - mala
+    - maliche
+    - mama
+    - maung
+    - medium
+    - mgba
+    - mini-caña
+    - nabal
+    - nag-beli-baja
+    - nambongo
+    - mugu
+    - ndingo
+    - nodo
+    - nyamalwa
+    - napiri
+    - nengnong
+    - ntja'ntuba
+    - orgo
+    - pava
+    - pachima
+    - pat
+    - pat mah
+    - pat waing
+    - pati
+    - pat-tala
+    - pattung
+    - penyacah
+    - palipal
+    - penten
+    - perng mang khok
+    - pagan
+    - piyapi
+    - pi mon
+    - pito
+    - pututu
+    - pong
+    - pujamahali
+    - p'ulu
+    - quatro
+    - qurma
+    - reco-reco
+    - rincik
+    - repinique
+    - ruisenor
+    - salamuri
+    - sangad
+    - sanje
+    - sanqioban
+    - sanka
+    - sapeh
+    - saron
+    - saron peking
+    - saron ricik
+    - saron slentem
+    - semsemiya
+    - seperewa
+    - sichyah
+    - sikuri
+    - sitolotolo
+    - skrabalas
+    - slowli
+    - sogum
+    - suli
+    - sulim
+    - soge
+    - sulibao
+    - surdo
+    - surmanjali
+    - tah
+    - tahca
+    - tajeraste
+    - tajeraste
+    - tambor
+    - tamborim
+    - tamale
+    - talam
+    - tambi
+    - tanggetong
+    - tamva
+    - tambuyuk
+    - tapattai
+    - tapon mon
+    - ukom
+    - zambola
+    - yinqing
+    - trompong
+    - than lvin
+    - tintinca
+    - va let kyot
+    - tribu
+    - tarawangsa
+    - tro u
+    - viola de cocho
+    - wolgum
+    - waji
+    - wa-konghu
+    - viola de cabaca
+    - tarba
+    - togus
+    - tongali
+    - tarpa
+    - tormay
+    - touloum
+    - tourterelle
+    - toyos
+    - tititala
+    - vilvile
+    - bülkül
+    - khawng
+    - taphon
+    - atsimewu
+    - dvojanka
+    - bofu
+    - setinkane
+    - au'taka'iori
+    - babendil
+    - bhusyah
+    - kantamdabadaba
+    - kudlung
+    - kudyapik
+    - kusyapik
+    - larchemi
+    - maung-zaing
+    - naykhim
+    - pusi p'iya
+    - salamiyya
+    - segbureh
+    - sluday
+    - takumbo
+    - thod dam
+    - tutek
+    - vicitra vina
+    - baju malta
+    - gulu
+    - hun
+    - kundu
+    - bukhsa
+    - conka
+    - gentorak
+    - jing
+    - kajar
+    - kemong
+    - kroboto
+    - krobotzi
+    - lavta
+    - sarki
+    - setar e rebab
+    - silnen
+    - suwukan
+    - ushinarashi
+    - tabla tarang
+    - muhali
+    - cloche double
+    - breng
+    - wadjira
+    - slentem
+    - selokkat
+    - kecer
+    - kao-kao
+    - klentong
+    - gordang
+    - mokko
+    - tawak
+    - canang
+    - kemanak
+    - lotong
+    - sasando
+    - flûte à bandeau
+    - keledi
+    - gangsingang
+    - gulung-gulung
+    - zaogu
+    - flûte traversière à membrane
+    - hautbois musette
+    - cithare sur caisse
+    - mbonda
+    - zang
+    - cymbale zang
+    - sangen
+    - sirène
+    - vase à percussion
+    - vase acoustique
+    - nzunzun
+    - ngonfi
+    - calon
+    - plaque sonore
+    - appeau
+    - cithare en bouclier
+    - cithare idiochorde
+    - clarinette idioglotte
+    - cloche simple
+    - hochet de cheville
+    - hochet en radeau
+    - tambour biconique
+    - tambour cylindro-conique
+    - tambour d'eau
+    - tambour en vase
+    - toupie à musique
+    - tambour de bois
+    - batterie
+    - batterie
+    - batteuse
+    - cura kaval
+    - baritone
+    - english flageolet
+    - violette
+    - tambour à tension variable
+    - canne trompette
+    - sostenente piano
+    - guitare à la tierce
+    - windbell
+    - ditumba
+    - sigu bawa
+    - morin khuur
+    - flageolet français
+    - celesta
+    - orgue expressif
+    - orgue de chambre
+    - orgue de salon
+    - orgue hydraulique
+    - andzolo
+    - récipient percuté
+    - prasarani vina
+    - harpe à pointe
+    - vuvuzela
+    - lengwow
+    - croix sonore
+    - controviolino
+    - zamr
+    - clarinette zamr
+    - kacapi
+    - luth kacapi
+    - kartal
+    - hochet kartal
+    - tambour hochet
+    - symphonium
+    - decacorde
+    - embouchures
+    - baguettes
+    - plectres
+    - baguette
+    - embouchure
+    - plectre
+    - aérophone à implosion
+    - guitare alto
+    - guitare mandoline
+    - guitare midi
+    - ardanuchi
+    - atwereba
+    - jevetya
+    - klakacki
+    - laiyant
+    - ngoma za muheme
+    - woka
+    - cetirnice
+    - dul-ming
+    - ere-mugu
+    - fa'aili'ofe
+    - flutophone
+    - ko ling
+    - lopotökduda
+    - sijaltys
+    - trojnice
+    - xiflos
+    - hwang-teih
+    - klong put
+    - accordéon mécanique
+    - cithare mécanique
+    - piano quatuor
+    - rangle
+    - tombagl
+    - masonquo
+    - orgue-clavicorde
+    - harmonium-piano
+    - cithare d'accord
+    - dan tam thac luc
+    - bharata vina
+    - dambura
+    - arbu
+    - batte d'arlequin
+    - ceinture à grelots
+    - bibliku
+    - bonang barung
+    - bonang panembung
+    - bonang panerus
+    - ching
+    - ching gong
+    - cai tiu
+    - cimta
+    - duri dana
+    - balum
+    - accordéon chromatique
+    - accordéon électrique
+    - ciaramella
+    - fangufangu
+    - feku
+    - duduk
+    - dudy zywieckie
+    - garamut
+    - hai loa
+    - hwang-lapa
+    - kaca vina
+    - kachva sitar
+    - kaur
+    - kodokan
+    - komuz
+    - kulu
+    - lali
+    - launut
+    - madoura
+    - accordéon à bouche
+    - ong dich
+    - organetto
+    - pagolo
+    - peer boor egah
+    - bol musical
+    - anche à ruban
+    - rin-no-tama
+    - sanh
+    - susap
+    - tien-kou
+    - trong
+    - trong boc
+    - trong cai
+    - trong chien
+    - trong manh
+    - trong va
+    - tunkul
+    - tuvung
+    - shosh
+    - saxhorn sopranino
+    - tapae
+    - tu hoa
+    - trombone à pistons
+    - shuvir
+    - sruti vina
+    - torbane
+    - sousounou
+    - ta'khay
+    - tambol
+    - t'ongso
+    - svirchitsa
+    - tulak
+    - zang
+    - zirbaghali
+    - pan-kou
+    - bher
+    - hautbois basse
+    - trombone contrebasse
+    - cor à embouchure latérale
+    - carapace de tortue
+    - effet du galop de cheval
+    - effet klaxon
+    - megaphone
+    - raspberry
+    - flûte pigeon
+    - czakan
+    - tiet-tiet
+    - qinqin
+    - accordéon hybride
+    - concertina chemnitzer
+    - concertina anglais
+    - grande cornemuse écossaise
+    - svrljiske gajde
+    - vlaske gajde
+    - cor russe
+    - hornpipe
+    - guitare double
+    - mandoline double
+    - violoncelle piccolo
+    - scheitholt
+    - tom-tom
+    - virginal double
+    - physharmonica
+    - klavizilinder
+    - glockenspiel à clavier
+    - klaxon
+    - melodion
+    - hautbois double
+    - flûte triple
+    - trompe à embouchure terminale
+    - trompe à embouchure latérale
+    - tambour pincé
+    - piano reproducteur
+    - kundi
+    - accord guitar
+    - accordéon-synthetiseur
+    - assemblage de modules électroniques
+    - carillon électrique
+    - percussion électronique
+    - accordéon électronique
+    - flûte à bec alto
+    - amorette
+    - ariosa
+    - ariston
+    - autopiano
+    - autopleyela
+    - tambour automatique
+    - vièle à vessie
+    - cabaca
+    - orgue de cabinet
+    - cai ban nhac
+    - cartonium
+    - claviola
+    - claviphone
+    - cwane
+    - epinette à cylindre
+    - instrument à anche libre
+    - fusu de nuxi
+    - gshang
+    - harmoniphone
+    - harmonium-orgue
+    - harmonista
+    - herophon
+    - humanola
+    - kalliope
+    - kalliston
+    - harpeal
+    - hoep
+    - kamay
+    - flejguta
+    - komet
+    - ling
+    - manopan
+    - harmonium mécanique
+    - meifluitje
+    - melotrope
+    - mezon
+    - mira
+    - harmonium à bouche
+    - mukkuri
+    - nhac
+    - ocleal
+    - vièle à pique
+    - organina
+    - orpheal
+    - penzhong
+    - phonola
+    - piano pneumatique
+    - roto-toms
+    - scramia betu
+    - idiophone frappé
+    - sunnaya
+    - symphonion
+    - flûte à une main
+    - tingel-tangel
+    - tonoscope-harmonium
+    - trompet van halle
+    - tuiter
+    - hochet globulaire
+    - sifflet à eau
+    - braci
+    - bracsa
+    - violon-sabot
+    - idiophone râclé
+    - râcloir tube
+    - pianino
+    - gusli
+    - bock
+    - cembalet
+    - nähtischklavier
+    - piano oblique
+    - domra
+    - panôtar
+    - streichklavier
+    - fox horn
+    - jagdzink
+    - cor de berger
+    - katjapi
+    - violino piccolo
+    - martinstrompete
+    - parforce horn
+    - wildruf
+    - raffele
+    - kisir
+    - pungi
+    - ch'uk
+    - kasik
+    - cuillères
+    - afiw
+    - kinaban
+    - bayan
+    - chung
+    - dadabuan
+    - hochet sur bâton
+    - tagutok
+    - tanggunggu
+    - jungga
+    - kutet
+    - serongagandi
+    - sahunay
+    - mimby
+    - harpe kin
+    - flûte washint
+    - lokanga voatavo
+    - cimboa
+    - buzio
+    - ferrinho
+    - bangsi
+    - kaleleng
+    - paldong
+    - palendag
+    - parundag
+    - wot
+    - bâton de pluie
+    - choor
+    - akanyembe
+    - zlobcoki
+    - zeze
+    - wandidi
+    - tautirut
+    - tarhu
+    - taratibu
+    - speles
+    - soussi ribab
+    - so i
+    - segankuru
+    - arababu
+    - bambir
+    - biola
+    - byzaanchy
+    - chuniri
+    - dayuray
+    - dra khmer
+    - dra u
+    - duruga
+    - enserunai
+    - finini
+    - garadap
+    - gesok-gesok
+    - godié
+    - gondze
+    - gudok
+    - guslice
+    - huluhu
+    - hun tayàw
+    - huobusi
+    - hushtar
+    - husla
+    - idonongo
+    - iklig
+    - joza
+    - k'aman
+    - kalembete
+    - kaligo
+    - kalyakalya
+    - khuuchir
+    - kikir
+    - kízh kízh díhí
+    - kokin
+    - kowodigo
+    - kucho
+    - kukuma
+    - litlit
+    - maguhu
+    - mbeveve
+    - mbike
+    - mugole
+    - murdap
+    - niujiaoqin
+    - niutuiqin
+    - njarka
+    - nyanyeru
+    - orutu
+    - pena
+    - pi-wang
+    - pulluvan vina
+    - pusline
+    - rabeca
+    - remba
+    - riti
+    - robeka
+    - aki
+    - akilwa
+    - baoorgo
+    - bendré
+    - bérenté
+    - biô
+    - dangossènè
+    - dendene-sa
+    - djolon
+    - dontoumon
+    - eguan
+    - gangango
+    - gangari
+    - gangât
+    - goilbi
+    - gongon
+    - gouagnon
+    - guagulu
+    - gubié
+    - gudolo
+    - gufalo
+    - gussiné bié
+    - youba
+    - tourou
+    - tondôrou
+    - téhindé
+    - rabingo
+    - palandan
+    - lonlonga
+    - lunga
+    - minigé
+    - ndo
+    - zan
+    - chakolao
+    - hir
+    - juanhuru
+    - kaa-woubié
+    - koko
+    - netelewua
+    - wiiga
+    - wossir
+    - woua-parforô
+    - woubié
+    - woukon
+    - wujan
+    - wunagele
+    - yagapi
+    - ya-woubié
+    - yèrè
+    - cerelu
+    - duuliyaaru
+    - yéléga
+    - bumpan
+    - fawinin
+    - kolondjo
+    - n'goni
+    - tokô
+    - ninurunu
+    - gurmi
+    - jurukélé
+    - kone
+    - kundé
+    - tahardant
+    - tahardjan
+    - dienguela
+    - lonlon
+    - sissaka
+    - kone
+    - djanou
+    - djil
+    - golagni
+    - hélé
+    - tregnon
+    - xèma
+    - koni
+    - salangoun
+    - tianhoun

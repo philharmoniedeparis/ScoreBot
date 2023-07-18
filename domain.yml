@@ -148,7 +148,7 @@ responses:
   utter_please_rephrase:
   - text: Je suis désolé, je n'ai pas bien compris votre message. Pouvez-vous reformuler s'il-vous-plaît ?
   utter_ask_filter_criteria:
-    - text: "Cherchons une partition ensemble. Posez-moi votre question directement (par exemple : je cherche une partition pour 2 flûtes et un piano du 19ème siècle) ou choisissez un critère."
+    - text: "Cherchons une partition ensemble. Choisissez un critère ou posez-moi directement votre question (par exemple : je cherche une partition facile de musique contemporaine pour pianiste)"
       buttons:
         - title: "Compositeur"
           payload: "/composer_choice"
@@ -162,8 +162,6 @@ responses:
           payload: "/period_choice"
         - title: "Nom de l'oeuvre"
           payload: "/work_name_manual_entry"
-        - title: "Taper ma recherche à la main"
-          payload: "/direct_query"
   utter_composer_manual_entry:
     - text: "Veuillez entrer le nom du compositeur que vous recherchez"
   utter_genre_manual_entry:

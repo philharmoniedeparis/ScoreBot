@@ -20,9 +20,9 @@ GENRES = np.repeat(
 AGENTS_VIP = np.repeat(
     [
         preprocess_entity(sublist[0], lower=False)
-        for sublist in list(agents.values())[:10]
+        for sublist in list(agents.values())[:15]
     ],
-    10,
+    5,
 )
 # AGENTS_FILLING = np.random.choice([preprocess_entity(i, lower=False) for sublist in list(agents.values()) for i in sublist], len(GENRES) - len(AGENTS_VIP))
 # AGENTS = AGENTS_VIP.tolist() + AGENTS_FILLING.tolist()
@@ -138,6 +138,15 @@ raw_sentences = {
         "sentences": [
             "partition de _AGENT",
             "partition écrite par _AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
+            "_AGENT",
             "_AGENT",
             "_AGENT",
             "_AGENT",

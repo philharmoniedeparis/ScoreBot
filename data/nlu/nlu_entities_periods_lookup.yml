@@ -1,0 +1,166 @@
+version: "2.0"
+
+nlu:
+
+- lookup: "period"
+  examples: |
+    - Renaissance
+    - Moyen âge
+    - médiéval
+    - medieval
+    - 20 ème siècle
+    - 20e siècle
+    - XXème siècle
+    - XXe siècle
+    - Vingtième siècle
+    - 21 ème siècle
+    - 21e siècle
+    - XXIème siècle
+    - XXIe siècle
+    - Vingt et unième siècle
+    - 2 ème siècle
+    - 2e siècle
+    - IIème siècle
+    - IIe siècle
+    - Deuxième siècle
+    - Antiquité
+    - antiquite
+    - 6 ème siècle
+    - 6e siècle
+    - VIème siècle
+    - VIe siècle
+    - Sixième siècle
+    - 7 ème siècle
+    - 7e siècle
+    - VIIème siècle
+    - VIIe siècle
+    - Septième siècle
+    - 8 ème siècle
+    - 8e siècle
+    - VIIIème siècle
+    - VIIIe siècle
+    - Huitième siècle
+    - Empire ottoman
+    - Révolution russe
+    - Risorgimento
+    - Risorgimento
+    - 1 er siècle
+    - 1e siècle
+    - I er siècle
+    - Ie siècle
+    - Premier siècle
+    - 3 ème siècle
+    - 3 eme siècle
+    - 3e siècle
+    - III ème siècle
+    - IIIe siècle
+    - Troisième siècle
+    - 4 ème siècle
+    - 4 eme siècle
+    - 4e siècle
+    - IV ème siècle
+    - IVe siècle
+    - Quatrième siècle
+    - 5 ème siècle
+    - 5 eme siècle
+    - 5e siècle
+    - V ème siècle
+    - Ve siècle
+    - Cinquième siècle
+    - 9 ème siècle
+    - 9 eme siècle
+    - 9e siècle
+    - IX ème siècle
+    - IXe siècle
+    - Neuvième siècle
+    - 10 ème siècle
+    - 10 eme siècle
+    - 10e siècle
+    - X ème siècle
+    - Xe siècle
+    - Dixième siècle
+    - 11 ème siècle
+    - 11 eme siècle
+    - 11e siècle
+    - XI ème siècle
+    - XIe siècle
+    - Onzième siècle
+    - 12 ème siècle
+    - 12 eme siècle
+    - 12e siècle
+    - XII ème siècle
+    - XIIe siècle
+    - Douzième siècle
+    - 13 ème siècle
+    - 13 eme siècle
+    - 13e siècle
+    - XIII ème siècle
+    - XIIIe siècle
+    - Treizième siècle
+    - 14 ème siècle
+    - 14 eme siècle
+    - 14e siècle
+    - XIV ème siècle
+    - XIVe siècle
+    - Quatorzième siècle
+    - 19 ème siècle
+    - 19 eme siècle
+    - 19e siècle
+    - XIX ème siècle
+    - XIXe siècle
+    - Dix-neuvième siècle
+    - 15 ème siècle
+    - 15 eme siècle
+    - 15e siècle
+    - XV ème siècle
+    - XVe siècle
+    - Quinzième siècle
+    - 16 ème siècle
+    - 16 eme siècle
+    - 16e siècle
+    - XVI ème siècle
+    - XVIe siècle
+    - Seizième siècle
+    - 17 ème siècle
+    - 17 eme siècle
+    - 17e siècle
+    - XVII ème siècle
+    - XVIIe siècle
+    - Dix-septième siècle
+    - 18 ème siècle
+    - 18 eme siècle
+    - 18e siècle
+    - XVIII ème siècle
+    - XVIIIe siècle
+    - Dix-huitième siècle
+    - deuxième moitié du 20e siècle
+    - 20 ème siècle - 2 ème moitié
+    - 20e siècle deuxième moitié
+    - première moitié du 20e siècle
+    - 20 ème siècle - 1 ère moitié
+    - 20e siècle première moitié
+    - Antiquité chinoise
+    - Chine ancienne
+    - Antiquité égyptienne
+    - Egypte ancienne
+    - Révolution de 1848
+    - IIIE Reich
+    - IIIE Reich
+    - Antiquité gauloise
+    - Gaule antique
+    - Antiquité grecque
+    - Grèce antique
+    - Antiquité hébraïque
+    - Hébreu
+    - Protohistoire
+    - Protohistory
+    - Antiquité romaine
+    - Rome antique
+    - Antiquité orientale
+    - Empire byzantin
+    - Age du bronze
+    - Age du fer
+    - Civilisation précolombienne
+    - Mésolithique
+    - Néolithique
+    - Paléolithique

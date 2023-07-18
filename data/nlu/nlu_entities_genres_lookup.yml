@@ -1,0 +1,522 @@
+version: "2.0"
+
+nlu:
+
+- lookup: "genre"
+  examples: |
+    - chanson
+    - cantilène
+    - canzona
+    - chant de travail
+    - song
+    - vaudeville
+    - complainte
+    - messe
+    - credo
+    - gloria
+    - kyrie
+    - messes
+    - musiques de films
+    - musique de film
+    - berceuse
+    - cancion de cuna
+    - lullaby
+    - nana flamenca
+    - wiegenlied
+    - contredanse
+    - contra-dance
+    - counterdance
+    - kontretänze
+    - rhythm and blues
+    - motown sound
+    - r'n'b'
+    - soul music
+    - variations
+    - diferencia
+    - division
+    - thème et variations
+    - air
+    - air populaire
+    - brunette
+    - musique liturgique
+    - canticle
+    - cantique
+    - fugue
+    - fugues
+    - fuguette
+    - hard rock
+    - black metal
+    - heavy metal
+    - hora lunga
+    - hora
+    - hymne
+    - anthem
+    - hymn
+    - hymne religieuse
+    - antienne
+    - hymne religieux
+    - mélodie
+    - mélodies
+    - melody
+    - requiem
+    - messe de requiem
+    - messe des morts
+    - mouvement perpétuel
+    - moto perpetuo
+    - motum perpetuum
+    - musiques sacrées
+    - musique sacrée
+    - litanies
+    - musique religieuse
+    - psaume
+    - psalm
+    - psaumes
+    - techno
+    - musique techno
+    - rave
+    - valse
+    - valses
+    - walz
+    - basse danse
+    - basse-danse
+    - branle
+    - bransle
+    - canon
+    - caccia
+    - cantate
+    - cantata
+    - cantate profane
+    - cantates profanes
+    - caprice
+    - capriccio
+    - cavatine
+    - cavatina
+    - chanson enfantine
+    - chanson pour enfants
+    - comédie musicale
+    - comedies musicales
+    - concerto
+    - concertos
+    - musique country
+    - country music
+    - czardas
+    - csardas
+    - divertissement
+    - divertimento
+    - etude
+    - etudes
+    - fantaisie
+    - fantaisies
+    - genre musical
+    - forme musicale
+    - fox-trot
+    - foxtrot
+    - cancan
+    - french cancan
+    - frottola
+    - frottole
+    - funk
+    - funky music
+    - rock
+    - glam rock
+    - hard-bop
+    - hard bop
+    - hip-hop
+    - hip hop
+    - théâtre musical
+    - hörspiel scénique
+    - intermezzo
+    - intermède
+    - entrée
+    - intrada
+    - lied
+    - lieder
+    - lieder romantique
+    - lieder romantiques
+    - madrigal
+    - madrigaux
+    - marche
+    - marche nuptiale
+    - pot-pourri
+    - medley
+    - opéra
+    - melodramma
+    - te deum
+    - messe de te deum
+    - motet
+    - motets
+    - musiques scéniques
+    - musique scénique
+    - musique de scene
+    - nocturne
+    - nocturnes
+    - opera bouffe
+    - opera buffa
+    - oratorio
+    - oratorios
+    - passe-pied
+    - passepied
+    - pastorale
+    - pastourelle
+    - morceau de concours
+    - pièce de concours
+    - prélude
+    - préludes
+    - rhapsodie
+    - rapsodie
+    - récitatif
+    - recitativo
+    - ricercare
+    - ricercar
+    - rock'n roll
+    - rock and roll
+    - rondeau
+    - rondeaux
+    - sérénade
+    - sérénades
+    - sonate
+    - sonata
+    - suite de pièces
+    - suite symphonique
+    - suite
+    - suites
+    - poème symphonique
+    - symphonic poem
+    - symphonie
+    - symphonies
+    - tragédie lyrique
+    - tragédie en musique
+    - landler
+    - tyrolienne
+    - chanson polyphonique
+    - villanelle
+    - air d'opéra
+    - air de concert
+    - air de cour
+    - allemande
+    - anglaise
+    - aria
+    - ariette
+    - arioso
+    - aubade
+    - badinerie
+    - bagatelle
+    - ballade
+    - ballet
+    - barcarolle
+    - bergamasque
+    - bicinium
+    - boléro
+    - bossa nova
+    - bourrée
+    - bourrée anglaise
+    - burlesque
+    - cabaret
+    - canarie
+    - cassation
+    - cha cha cha
+    - chaconne
+    - chanson à boire
+    - chanson française
+    - chanson politique
+    - chant de marins
+    - chant sacré
+    - charleston
+    - chasse
+    - chjama e rispondi
+    - choral
+    - comédie-ballet
+    - comptine
+    - concerto grosso
+    - conte musical
+    - courante
+    - cycle de lieder
+    - cycle de mélodies
+    - drame musical
+    - ecossaise
+    - elégie
+    - estampie
+    - etude de concert
+    - etude symphonique
+    - exercice
+    - fandango
+    - flamenco
+    - forlane
+    - free jazz
+    - fusion
+    - gaillarde
+    - garage
+    - gavotte
+    - gigue
+    - gospel
+    - grand motet
+    - ground
+    - guajira
+    - habanera
+    - hoquet
+    - hornpipe
+    - house music
+    - impromptu
+    - improvisation
+    - invention
+    - jacara
+    - java
+    - jota
+    - lachrimae
+    - lai
+    - leçon de ténèbres
+    - loure
+    - magnificat
+    - malaguena
+    - mambo
+    - marche funèbre
+    - marche militaire
+    - masque
+    - mazurka
+    - mélodie française
+    - mélodrame
+    - menuet
+    - merengue
+    - milonga
+    - miserere
+    - musette
+    - musique à programme
+    - musique de circonstance
+    - musique klezmer
+    - musique spectrale
+    - negro spiritual
+    - noël
+    - ode
+    - opéra pour enfants
+    - opera seria
+    - opéra-ballet
+    - opéra-comique
+    - opérette
+    - padoana
+    - pantomime
+    - paraphrase
+    - parodie
+    - partita
+    - paso doble
+    - passacaille
+    - passamezzo
+    - passion
+    - pavane
+    - petit motet
+    - pièce concertante
+    - plain-chant
+    - poème musical
+    - polka
+    - polonaise
+    - quadrille
+    - raga
+    - ragtime
+    - raï
+    - rap
+    - reel
+    - reels
+    - reels celtiques
+    - reel celtique
+    - reggae
+    - rigaudon
+    - romance
+    - rondo
+    - rumba
+    - salsa
+    - saltarelle
+    - samba
+    - sarabande
+    - sardane
+    - scherzo
+    - sinfonia
+    - singspiel
+    - slow
+    - swing
+    - tambourin
+    - tango
+    - tarentelle
+    - tiento
+    - toccata
+    - tombeau
+    - tourdion
+    - valse musette
+    - villancico
+    - virelai
+    - vocalise
+    - voluntary
+    - musique de salon
+    - musique traditionnelle
+    - folklore
+    - musiques traditionnelles
+    - musique folklorique
+    - musique ethnique
+    - musiques du monde
+    - musique du monde
+    - musique contemporaine
+    - musique d'aujourd'hui
+    - musique baroque
+    - jazz
+    - musique de variétés
+    - variété
+    - musique ancienne
+    - musique classique
+    - musique pop
+    - pop
+    - pop musique
+    - pop music
+    - musique romantique
+    - romantique
+    - musique de cirque
+    - musique militaire
+    - musiques actuelles
+    - musiques amplifiées
+    - maa
+    - vérisme
+    - musique cajun
+    - cajun
+    - musique populaire
+    - musique mécanique
+    - music hall
+    - musique de chasse
+    - musique néoclassique
+    - musique afro-américaine
+    - musique noire américaine
+    - ecomusique
+    - eco-musique
+    - musique artificielle
+    - musique primitive
+    - entartete musik
+    - musique dégénérée
+    - musique d'ambiance
+    - chanson traditionnelle
+    - chansons populaires
+    - chansons traditionnelles
+    - chanson populaire
+    - chanson populaires
+    - chansons populaire
+    - chant populaire
+    - mélodie populaire
+    - musique juive
+    - bluegrass
+    - musique créole
+    - musique orientale
+    - musique arabe
+    - musique celtique
+    - musique arabo-andalouse
+    - musique slave
+    - gwo ka
+    - gwoka
+    - groka
+    - musique indienne
+    - musique tsigane
+    - musique rom
+    - musique tzigane
+    - musique bretonne
+    - calypso
+    - musique africaine
+    - musique occitane
+    - musique de langue d'oc
+    - musique provençale
+    - musique sérielle
+    - sérialisme
+    - serialism
+    - musique électroacoustique
+    - musique acousmatique
+    - musique électro-acoustique
+    - musique expérimentale
+    - musique minimaliste
+    - minimalisme
+    - musique aléatoire
+    - combinatoire
+    - musique répétitive
+    - musique dodécaphonique
+    - dodécaphonisme
+    - musique informatique
+    - informatique musicale
+    - musique par ordinateur
+    - musique et informatique
+    - musique concrète
+    - jazz standard
+    - blues
+    - boogie-woogie
+    - boogie
+    - boogie woogie
+    - jazz vocal
+    - be-bop
+    - be bop
+    - jazz manouche
+    - jazz tsigane
+    - jazz gitan
+    - jazz-rock
+    - latin jazz
+    - jazz cubain
+    - new orleans
+    - jazz new orleans
+    - musique médiévale
+    - cantiga
+    - chanson de laisse
+    - musique du moyen age
+    - musique de la renaissance
+    - chant grégorien
+    - grégorien
+    - clausule
+    - gregorian chant
+    - ars nova
+    - ars antiqua
+    - musique électronique
+    - zydeco
+    - desi music
+    - world music
+    - musiques urbaines
+    - dancehall
+    - champeta
+    - kwaito
+    - afrobeat
+    - rocksteady
+    - rock steady
+    - ska
+    - musique ska
+    - musette
+    - musique verte
+    - fado
+    - rebetiko
+    - maqam
+    - azawan
+    - chaabi
+    - nouba
+    - malouf
+    - tala
+    - dhrupad
+    - khyal
+    - qawwali
+    - thumri
+    - temps réel
+    - logiciel de création
+    - echantillonneur
+    - morphoscope
+    - musique assistée par ordinateur
+    - séquenceur
+    - cao
+    - composition assistée par ordinateur
+    - cmao
+    - composition musicale assistée par ordinateur
+    - experimental
+    - trip-hop
+    - drum'n'bass
+    - big beat
+    - electro
+    - ambient
+    - downtempo
+    - folk rock
+    - folk
+    - disco
+    - gothique
+    - rock gothique
+    - punk rock
+    - punta rock
+    - opéra-rock
+    - krautrock
+    - logiciel de composition
+    - acid techno
+    - minimal techno
+    - dub techno
