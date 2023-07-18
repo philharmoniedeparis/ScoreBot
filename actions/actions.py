@@ -91,6 +91,12 @@ class ActionDirectQuery(Action):
         if len(entities) > 1:
             raise ValueError(f"Too many entities: {entities}")
 
+        slots_to_clear = self.clear_slots(existing_slots)
+        tracker.slots = (
+            []
+        )  # This is necessary for all the criteria buttons to be displayed
+        logging.info(f"Slots_to_clear: {slots_to_clear}")
+
         if entities:
             # Check that with have the display_buttons entity
             if entities[0]["entity"] != "display_buttons":
@@ -99,11 +105,8 @@ class ActionDirectQuery(Action):
             # Get buttons
             buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(tracker, None)
 
-        slots_to_clear = self.clear_slots(existing_slots)
-        logging.info(f"Slots_to_clear: {slots_to_clear}")
-
         # Display message
-        msg = "Dites moi ce que vous cherchez, et je vais essayer de trouver des partitions qui y correspondent."
+        msg = "Dites moi ce que vous cherchez, et je vais essayer de trouver des partitions qui y correspondent. Choisissez un critère ou posez directement votre question."
         dispatcher.utter_message(text=msg, buttons=buttons)
 
         return slots_to_clear
@@ -280,10 +283,6 @@ order by desc (?scoreResearch)
                         formation = None
                         break
                     j += 1
-                if formation is None:
-                    raise NoEntityFoundException(
-                        f"Formation entity with no value: {entities}"
-                    )
                 entity_dict["formation"] = {  # type: ignore
                     "code": formation,
                     "name": formations.formations.get(formation, [None, None])[1],
@@ -883,7 +882,7 @@ optional {{?creation  mus:R24_created   ?score .
             }
         )
         criteria_buttons = ActionGetSheetMusicByCasting.get_criteria_buttons(
-            entity_dict, inputted_medias
+            entity_dict, inputted_medias, encoded
         )
         buttons.extend(criteria_buttons)
         logging.info(f"buttons: {buttons}")
@@ -892,7 +891,7 @@ optional {{?creation  mus:R24_created   ?score .
         return worded_results, buttons
 
     @staticmethod
-    def get_criteria_buttons(source, inputted_medias):
+    def get_criteria_buttons(source, inputted_medias, encoded_results=None):
         buttons = []
 
         if isinstance(source, dict):
@@ -909,7 +908,9 @@ optional {{?creation  mus:R24_created   ?score .
             buttons.append(
                 {
                     "title": f"Compositeur",
-                    "payload": f"/composer_choice",
+                    "payload": f'/composer_choice{{"current_results": "{encoded_results}"}}'
+                    if encoded_results
+                    else f"/composer_choice",
                 }
             )
 
@@ -917,7 +918,9 @@ optional {{?creation  mus:R24_created   ?score .
             buttons.append(
                 {
                     "title": f"Instrumentation",
-                    "payload": f"/instrumentation_choice",
+                    "payload": f'/instrumentation_choice{{"current_results": "{encoded_results}"}}'
+                    if encoded_results
+                    else f"/instrumentation_choice",
                 }
             )
 
@@ -926,7 +929,9 @@ optional {{?creation  mus:R24_created   ?score .
             buttons.append(
                 {
                     "title": f"Genre",
-                    "payload": f"/genre_choice",
+                    "payload": f'/genre_choice{{"current_results": "{encoded_results}"}}'
+                    if encoded_results
+                    else f"/genre_choice",
                 }
             )
 
@@ -935,7 +940,9 @@ optional {{?creation  mus:R24_created   ?score .
             buttons.append(
                 {
                     "title": f"Localisation",
-                    "payload": f"/location_choice",
+                    "payload": f'/location_choice{{"current_results": "{encoded_results}"}}'
+                    if encoded_results
+                    else f"/location_choice",
                 }
             )
 
@@ -944,16 +951,21 @@ optional {{?creation  mus:R24_created   ?score .
             buttons.append(
                 {
                     "title": f"Période",
-                    "payload": f"/period_choice",
+                    "payload": f'/period_choice{{"current_results": "{encoded_results}"}}'
+                    if encoded_results
+                    else f"/period_choice",
                 }
             )
 
         level = getter("level")
         if not level:
+            logging.info(f"Adding level button {encoded_results}")
             buttons.append(
                 {
                     "title": f"Niveau",
-                    "payload": f"/level_choice",
+                    "payload": f'/level_choice{{"current_results": "{encoded_results}"}}'
+                    if encoded_results
+                    else f"/level_choice",
                 }
             )
 
@@ -962,7 +974,9 @@ optional {{?creation  mus:R24_created   ?score .
             buttons.append(
                 {
                     "title": f"Nom de l'oeuvre",
-                    "payload": f"/work_name_manual_entry",
+                    "payload": f'/work_name_manual_entry{{"current_results": "{encoded_results}"}}'
+                    if encoded_results
+                    else f"/work_name_manual_entry",
                 }
             )
         return buttons
@@ -1097,11 +1111,25 @@ ORDER BY DESC(?scoreCount)
             )
         except Exception as e:
             logging.error(traceback.format_exc())
+            buttons = []
+
+            # Add the display results button
+            current_results = tracker.get_slot("current_results")
+            buttons.append(
+                {
+                    "title": "Consultez les résultats",
+                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                }
+            )
+
+            # Add an agent slot so that the button will not be displayed again
+            tracker.slots["agent"] = True
+            buttons.extend(
+                ActionGetSheetMusicByCasting.get_criteria_buttons(tracker, None)
+            )
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les compositeurs relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
-                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
-                    tracker, None
-                ),
+                buttons=buttons,
             )
 
         # Set the composers slot
@@ -1129,6 +1157,8 @@ ORDER BY DESC(?scoreCount)
         results_nb = min(len(results["results"]["bindings"]), 3)
 
         for r in results["results"]["bindings"][:results_nb]:
+            if not r["compositeur"]["value"]:
+                continue
             r["compositeur"]["value"] = str(
                 int(r["compositeur"]["value"].split("/")[-1])
             )
@@ -1235,11 +1265,25 @@ ORDER BY DESC(?scoreCount)
             )
         except Exception as e:
             logging.error(traceback.format_exc())
+            buttons = []
+
+            # Add the display results button
+            current_results = tracker.get_slot("current_results")
+            buttons.append(
+                {
+                    "title": "Consultez les résultats",
+                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                }
+            )
+
+            # Add an instrumentation slot so that the button will not be displayed again
+            tracker.slots["instrumentation"] = True
+            buttons.extend(
+                ActionGetSheetMusicByCasting.get_criteria_buttons(tracker, None)
+            )
             dispatcher.utter_message(
-                text="Désolé, je n'ai pas réussi à récupérer les instrumentations relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
-                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
-                    tracker, None
-                ),
+                text="Désolé, je n'ai pas réussi à récupérer les instruments relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
+                buttons=buttons,
             )
 
         # Set the formations slot
@@ -1426,11 +1470,25 @@ ORDER BY DESC(?scoreCount)
             )
         except Exception as e:
             logging.error(traceback.format_exc())
+            buttons = []
+
+            # Add the display results button
+            current_results = tracker.get_slot("current_results")
+            buttons.append(
+                {
+                    "title": "Consultez les résultats",
+                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                }
+            )
+
+            # Add a genre slot so that the button will not be displayed again
+            tracker.slots["genre"] = True
+            buttons.extend(
+                ActionGetSheetMusicByCasting.get_criteria_buttons(tracker, None)
+            )
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les genres relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
-                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
-                    tracker, None
-                ),
+                buttons=buttons,
             )
 
         # Set the formations slot
@@ -1572,11 +1630,25 @@ ORDER BY DESC(?scoreCount)
             )
         except Exception as e:
             logging.error(traceback.format_exc())
+            buttons = []
+
+            # Add the display results button
+            current_results = tracker.get_slot("current_results")
+            buttons.append(
+                {
+                    "title": "Consultez les résultats",
+                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                }
+            )
+
+            # Add a location slot so that the button will not be displayed again
+            tracker.slots["location"] = True
+            buttons.extend(
+                ActionGetSheetMusicByCasting.get_criteria_buttons(tracker, None)
+            )
             dispatcher.utter_message(
-                text="Désolé, je n'ai pas réussi à récupérer les lieux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
-                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
-                    tracker, None
-                ),
+                text="Désolé, je n'ai pas réussi à récupérer les localisations relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
+                buttons=buttons,
             )
 
         # Set the formations slot
@@ -1714,11 +1786,25 @@ ORDER BY DESC(?scoreCount)
             )
         except Exception as e:
             logging.error(traceback.format_exc())
+            buttons = []
+
+            # Add display results button
+            current_results = tracker.get_slot("current_results")
+            buttons.append(
+                {
+                    "title": "Consultez les résultats",
+                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                }
+            )
+
+            # Add a period slot so that the button will not be displayed again
+            tracker.slots["period"] = True
+            buttons.extend(
+                ActionGetSheetMusicByCasting.get_criteria_buttons(tracker, None)
+            )
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les périodes relatives à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
-                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
-                    tracker, None
-                ),
+                buttons=buttons,
             )
 
         # Set the formations slot
@@ -1861,11 +1947,25 @@ ORDER BY DESC(?scoreCount)
             )
         except Exception as e:
             logging.error(traceback.format_exc())
+            buttons = []
+
+            # Add the current results button
+            current_results = tracker.get_slot("current_results")
+            buttons.append(
+                {
+                    "title": "Consultez les résultats",
+                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                }
+            )
+
+            # Add a level slot so that the button will not be displayed again
+            tracker.slots["level"] = True
+            buttons.extend(
+                ActionGetSheetMusicByCasting.get_criteria_buttons(tracker, None)
+            )
             dispatcher.utter_message(
                 text="Désolé, je n'ai pas réussi à récupérer les niveaux relatifs à votre recherche. Essayez un autre critère, ou inspectez directement les résultats.",
-                buttons=ActionGetSheetMusicByCasting.get_criteria_buttons(
-                    tracker, None
-                ),
+                buttons=buttons,
             )
 
         # Set the formations slot
