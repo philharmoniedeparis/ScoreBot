@@ -25,16 +25,10 @@ nlu:
     - jean-sébastien bach
     - mozart
     - wolfgang amadeus mozart
-    - croches-noire
-    - 2 croches-noire
-    - productions
-    - 21st century music productions
-    - joie
-    - a coeur joie
-    - armonico
-    - a l'estro armonico
-    - inc.
-    - a-r editions
+    - demillac
+    - francis-paul demillac
+    - demillac
+    - yvon demillac
     - idiartborde
     - a. b. idiartborde
     - barette
@@ -75,20 +69,12 @@ nlu:
     - a.j. cavaillé
     - benoy
     - a.w. benoy
-    - autorskiej
-    - aa - wydawnictwo muzyczne agencji autorskiej
     - copland
     - aaron copland
-    - musikförlaget
-    - ab nordiska musikförlaget
-    - solesmes
-    - abbaye saint-pierre de solesmes
     - gravier
     - abbé gravier
     - hardouin
     - abbé henri hardouin
-    - abc
-    - abc
     - ouardi
     - abdelhak ouardi
     - carlevaro
@@ -129,8 +115,6 @@ nlu:
     - adam vaclav michna
     - eggebrecht
     - addi eggebrecht
-    - agent
-    - adef
     - roidinger
     - adelhard roidinger
     - wette
@@ -5541,8 +5525,6 @@ nlu:
     - francis schwartz
     - thomé
     - francis thomé
-    - demillac
-    - francis-paul demillac
     - hunter
     - francis
     - aliaga
@@ -18343,8 +18325,6 @@ nlu:
     - yvette voirpy
     - bourrel
     - yvon bourrel
-    - demillac
-    - yvon demillac
     - prev
     - yvon le prev
     - méron
@@ -18412,3 +18392,21 @@ nlu:
     - zurfluh
     - krauze
     - zygmunt krauze
+    - croches-noire
+    - 2 croches-noire
+    - productions
+    - 21st century music productions
+    - joie
+    - a coeur joie
+    - armonico
+    - a l'estro armonico
+    - inc.
+    - a-r editions
+    - autorskiej
+    - aa - wydawnictwo muzyczne agencji autorskiej
+    - musikförlaget
+    - ab nordiska musikförlaget
+    - solesmes
+    - abbaye saint-pierre de solesmes
+    - abc
+    - abc

@@ -53,30 +53,15 @@ nlu:
     - mozart
     - wolfgang amadeus mozart
 
-- synonym: "453091"
+- synonym: "32795"
   examples: |
-    - croches-noire
-    - 2 croches-noire
+    - demillac
+    - francis-paul demillac
 
-- synonym: "452735"
+- synonym: "37978"
   examples: |
-    - productions
-    - 21st century music productions
-
-- synonym: "463677"
-  examples: |
-    - joie
-    - a coeur joie
-
-- synonym: "429014"
-  examples: |
-    - armonico
-    - a l'estro armonico
-
-- synonym: "816278"
-  examples: |
-    - inc.
-    - a-r editions
+    - demillac
+    - yvon demillac
 
 - synonym: "47278"
   examples: |
@@ -178,25 +163,10 @@ nlu:
     - benoy
     - a.w. benoy
 
-- synonym: "443424"
-  examples: |
-    - autorskiej
-    - aa - wydawnictwo muzyczne agencji autorskiej
-
 - synonym: "40241"
   examples: |
     - copland
     - aaron copland
-
-- synonym: "427407"
-  examples: |
-    - musikförlaget
-    - ab nordiska musikförlaget
-
-- synonym: "450484"
-  examples: |
-    - solesmes
-    - abbaye saint-pierre de solesmes
 
 - synonym: "33580"
   examples: |
@@ -207,11 +177,6 @@ nlu:
   examples: |
     - hardouin
     - abbé henri hardouin
-
-- synonym: "459546"
-  examples: |
-    - abc
-    - abc
 
 - synonym: "911247"
   examples: |
@@ -317,11 +282,6 @@ nlu:
   examples: |
     - eggebrecht
     - addi eggebrecht
-
-- synonym: "422132"
-  examples: |
-    - agent
-    - adef
 
 - synonym: "56329"
   examples: |
@@ -14027,11 +13987,6 @@ nlu:
   examples: |
     - thomé
     - francis thomé
-
-- synonym: "32795"
-  examples: |
-    - demillac
-    - francis-paul demillac
 
 - synonym: "628474"
   examples: |
@@ -46263,11 +46218,6 @@ nlu:
     - bourrel
     - yvon bourrel
 
-- synonym: "37978"
-  examples: |
-    - demillac
-    - yvon demillac
-
 - synonym: "45451"
   examples: |
     - prev
@@ -46437,3 +46387,48 @@ nlu:
   examples: |
     - krauze
     - zygmunt krauze
+
+- synonym: "453091"
+  examples: |
+    - croches-noire
+    - 2 croches-noire
+
+- synonym: "452735"
+  examples: |
+    - productions
+    - 21st century music productions
+
+- synonym: "463677"
+  examples: |
+    - joie
+    - a coeur joie
+
+- synonym: "429014"
+  examples: |
+    - armonico
+    - a l'estro armonico
+
+- synonym: "816278"
+  examples: |
+    - inc.
+    - a-r editions
+
+- synonym: "443424"
+  examples: |
+    - autorskiej
+    - aa - wydawnictwo muzyczne agencji autorskiej
+
+- synonym: "427407"
+  examples: |
+    - musikförlaget
+    - ab nordiska musikförlaget
+
+- synonym: "450484"
+  examples: |
+    - solesmes
+    - abbaye saint-pierre de solesmes
+
+- synonym: "459546"
+  examples: |
+    - abc
+    - abc

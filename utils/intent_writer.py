@@ -20,7 +20,7 @@ GENRES = np.repeat(
 AGENTS_VIP = np.repeat(
     [
         preprocess_entity(sublist[0], lower=False)
-        for sublist in list(agents.values())[:15]
+        for sublist in list(agents.values())[:50]
     ],
     5,
 )
