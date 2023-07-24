@@ -510,10 +510,20 @@ order by desc (?scoreResearch)
             )
 
             answer += new_answer
-        except Exception:
+
+        # General catch-all exception
+        except Exception as e:
             logging.info(traceback.print_exc())
             answer = "Vous recherchez des partitions, mais je n'ai pas trouvé de résultats correspondant à votre recherche. Veuillez reformuler votre demande."
-            # answer += self.add_criterias(entity_dict, worded_mediums)
+
+            # In the case where there are no results, we clear the slots to reinitialize the search
+            if isinstance(e, NoResultsException):
+                logging.info("Clearing slots")
+                slots_to_clear, existing_slots = self.clear_slots(
+                    existing_slots, entity_dict, inputted_medias
+                )
+                slots.extend(slots_to_clear)
+
         dispatcher.utter_message(text=answer, buttons=buttons)
         return slots
 
@@ -1115,11 +1125,17 @@ ORDER BY DESC(?scoreCount)
 
             # Add the display results button
             current_results = tracker.get_slot("current_results")
-            buttons.append(
-                {
-                    "title": "Consultez les résultats",
-                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
-                }
+            buttons.extend(
+                [
+                    {
+                        "title": "Consultez les résultats",
+                        "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                    },
+                    {
+                        "title": "Nouvelle recherche",
+                        "payload": f'/direct_query{{"display_buttons": "True"}}',
+                    },
+                ]
             )
 
             # Add an agent slot so that the button will not be displayed again
@@ -1269,11 +1285,17 @@ ORDER BY DESC(?scoreCount)
 
             # Add the display results button
             current_results = tracker.get_slot("current_results")
-            buttons.append(
-                {
-                    "title": "Consultez les résultats",
-                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
-                }
+            buttons.extend(
+                [
+                    {
+                        "title": "Consultez les résultats",
+                        "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                    },
+                    {
+                        "title": "Nouvelle recherche",
+                        "payload": f'/direct_query{{"display_buttons": "True"}}',
+                    },
+                ]
             )
 
             # Add an instrumentation slot so that the button will not be displayed again
@@ -1474,11 +1496,17 @@ ORDER BY DESC(?scoreCount)
 
             # Add the display results button
             current_results = tracker.get_slot("current_results")
-            buttons.append(
-                {
-                    "title": "Consultez les résultats",
-                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
-                }
+            buttons.extend(
+                [
+                    {
+                        "title": "Consultez les résultats",
+                        "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                    },
+                    {
+                        "title": "Nouvelle recherche",
+                        "payload": f'/direct_query{{"display_buttons": "True"}}',
+                    },
+                ]
             )
 
             # Add a genre slot so that the button will not be displayed again
@@ -1634,11 +1662,17 @@ ORDER BY DESC(?scoreCount)
 
             # Add the display results button
             current_results = tracker.get_slot("current_results")
-            buttons.append(
-                {
-                    "title": "Consultez les résultats",
-                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
-                }
+            buttons.extend(
+                [
+                    {
+                        "title": "Consultez les résultats",
+                        "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                    },
+                    {
+                        "title": "Nouvelle recherche",
+                        "payload": f'/direct_query{{"display_buttons": "True"}}',
+                    },
+                ]
             )
 
             # Add a location slot so that the button will not be displayed again
@@ -1790,11 +1824,17 @@ ORDER BY DESC(?scoreCount)
 
             # Add display results button
             current_results = tracker.get_slot("current_results")
-            buttons.append(
-                {
-                    "title": "Consultez les résultats",
-                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
-                }
+            buttons.extend(
+                [
+                    {
+                        "title": "Consultez les résultats",
+                        "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                    },
+                    {
+                        "title": "Nouvelle recherche",
+                        "payload": f'/direct_query{{"display_buttons": "True"}}',
+                    },
+                ]
             )
 
             # Add a period slot so that the button will not be displayed again
@@ -1951,11 +1991,17 @@ ORDER BY DESC(?scoreCount)
 
             # Add the current results button
             current_results = tracker.get_slot("current_results")
-            buttons.append(
-                {
-                    "title": "Consultez les résultats",
-                    "payload": f'/display_results{{"current_results": "{current_results}"}}',
-                }
+            buttons.extend(
+                [
+                    {
+                        "title": "Consultez les résultats",
+                        "payload": f'/display_results{{"current_results": "{current_results}"}}',
+                    },
+                    {
+                        "title": "Nouvelle recherche",
+                        "payload": f'/direct_query{{"display_buttons": "True"}}',
+                    },
+                ]
             )
 
             # Add a level slot so that the button will not be displayed again
