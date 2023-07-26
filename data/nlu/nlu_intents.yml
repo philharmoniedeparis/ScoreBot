@@ -7972,5 +7972,54 @@ nlu:
     - je cherche la partition de la version pour [voix parlée femme](medium) des [Summertime.](work_name) de [Iskender](agent)
     - je veux la version pour [récitant femme](medium) de la [Sur le fleuve](work_name) de [Schelb](agent)
     - la partition des [Sur le même accord](work_name) d'[Cultura](agent)
-    - cherche partitions pour 4 instruments : [piano]{"entity": "medium", "value": "2299"} [violon](medium) [alto](medium) [violoncelle]{"entity": "medium", "value": "3582"}
+    - cherche partitions pour [4](formation) instruments : [piano]{"entity": "medium", "value": "2299"} [violon](medium) [alto](medium) [violoncelle]{"entity": "medium", "value": "3582"}
     - 4 [flûte]{"entity": "medium", "value": "4093"}
+    - cherche des partitions pour [piano]{"entity": "medium", "value": "2299"} [violon](medium) [alto](medium) [violoncelle]{"entity": "medium", "value": "3582"} du [19e siècle]{"entity": "period", "value": "144424"}
+    - [piano](medium) [violon](medium) [alto](medium) [violoncelle]{"entity": "medium", "value": "3582"}
+    - [clarinette](medium) [violon](medium) [alto](medium) [piano]{"entity": "medium", "value": "2299"}
+    - [basson](medium) [violoncelle](medium) [piano](medium)
+    - [basson](medium) [piano](medium)
+    - [violon](medium) [basson](medium) [piano](medium)
+    - [basson]{"entity": "medium", "value": "3795"} [clarinette](medium) [piano](medium)
+    - [guitare]{"entity": "medium", "value": "3237"} [clarinette](medium) [violoncelle](medium)
+    - [violon]{"entity": "medium", "value": "3573"} [piano](medium) [basson](medium)
+    - [hautbois]{"entity": "medium", "value": "4232"} [clarinette](medium) [basson](medium)
+    - [accordéon](medium) [violon](medium) [guitare](medium)
+    - [flûte](medium) [basson](medium) [piano](medium)
+    - [Piano](medium) [violon]{"entity": "medium", "value": "3573"} [violoncelle]{"entity": "medium", "value": "3582"}
+    - [Violon](medium) [violoncelle](medium) [piano]{"entity": "medium", "value": "2299"}
+    - [Violoncelle](medium) [violon]{"entity": "medium", "value": "3573"} [piano]{"entity": "medium", "value": "2299"}
+    - [Accordéon](medium) [violon](medium) [piano](medium)
+    - [Violon](medium) [alto]{"entity": "medium", "value": "3561"} [piano]{"entity": "medium", "value": "2299"}
+    - [Violon]{"entity": "medium", "value": "3573"} [alto]{"entity": "medium", "value": "3561"} [violoncelle]{"entity": "medium", "value": "3582"}
+    - [Violon](medium) [clarinette](medium) [guitare](medium)
+    - Je cherche des [duos]{"entity": "formation", "value": "2"} [violon]{"entity": "medium", "value": "3573"} [alto](medium) [faciles](level)
+    - Une partition pour un [duo]{"entity": "formation", "value": "2"} [guitare](medium) [violon](medium)
+    - [Clarinette](medium) [piano](medium) [basson]{"entity": "medium", "value": "3795"}
+    - [Basson]{"entity": "medium", "value": "3795"} [clarinette]{"entity": "medium", "value": "3836"} [piano]{"entity": "medium", "value": "2299"}
+    - [Piano](medium) [clarinette]{"entity": "medium", "value": "3836"} [basson]{"entity": "medium", "value": "3795"}
+    - [Clarinette](medium) [basson](medium) [piano](medium)
+    - [Violon](medium) [alto]{"entity": "medium", "value": "3561"} [violoncelle]{"entity": "medium", "value": "3582"} [piano]{"entity": "medium", "value": "2299"}
+    - Je cherche des idée d'œuvre [faciles](level) à jouer pour [violon]{"entity": "medium", "value": "3573"} et [alto]{"entity": "medium", "value": "3561"}
+    - une partition pour 2 [violons]{"entity": "medium", "value": "3573"} [alto]{"entity": "medium", "value": "3561"} et [violoncelle](medium) de [mozart](agent)
+    - une partition pour [2](formation) [violons]{"entity": "medium", "value": "3573"} [alto]{"entity": "medium", "value": "3561"} et [violoncelle](medium) de [beethoven](agent)
+    - je cherche une partition de [clarinette](medium) [jazz](genre)
+    - je cherche une partition de [trompette](medium) [jazz](genre)
+    - je cherche une partition de [piano](medium) [jazz](genre)
+    - je cherche une partition de [violon](medium) [jazz](genre)
+    - partition de [jazz]{"entity": "genre", "value": "67996"} au [violon]{"entity": "medium", "value": "3573"}
+    - je cherche la [symphonie inachevée](work_name) de [schubert]{"entity": "agent", "value": "37882"}
+    - cherche la partition de [ma mère l'oye ](work_name)de [ravel]{"entity": "genre", "value": "41014"}
+    - cherche la partition de ma [mère](work_name) l'[oye](work_name)
+    - la partition du [concerto pour piano opus 13](work_name) de [britten]{"entity": "agent", "value": "41319"}
+    - la partition de la [9e symphonie](work_name) de [beethoven]{"entity": "agent", "value": "38954"}
+    - une partition pour 2 [violons]{"entity": "medium", "value": "3573"} [alto]{"entity": "medium", "value": "3561"} et [violoncelle]{"entity": "medium", "value": "3582"} de [ligeti]{"entity": "agent", "value": "44103"}
+    - une partition pour [2](formation) [violons]{"entity": "medium", "value": "3573"} [alto]{"entity": "medium", "value": "3561"} et [violoncelle]{"entity": "medium", "value": "3582"} de [dufourt]{"entity": "agent", "value": "40868"}
+    - une partition pour [2](formation) [violons]{"entity": "medium", "value": "3573"} [alto]{"entity": "medium", "value": "3561"} et [violoncelle de](medium) [mantovani]{"entity": "agent", "value": "34638"}
+    - une partition pour[ 2](formation) [violons]{"entity": "medium", "value": "3573"} [alto]{"entity": "medium", "value": "3561"} et [violoncelle](medium) de [schubert]{"entity": "agent", "value": "37882"}
+    - je cherche des partitions pour [violon]{"entity": "medium", "value": "3573"} et [piano]{"entity": "medium", "value": "2299"}
+    - je cherche des partitions de musique contemporaine pour [pianiste](medium) [débutant](level)
+    - partition de [buxtehude](agent) pour [violon]{"entity": "medium", "value": "3573"}
+    - Je cherche une partition de [violon]{"entity": "medium", "value": "3573"} pour [débutant]{"entity": "level", "value": "cycle-1"}
+    - partition de [buxtehude]{"entity": "agent", "value": "55947"}
+    - je cherche une partition pour choeur facile
