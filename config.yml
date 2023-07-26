@@ -14,7 +14,10 @@ pipeline:
   analyzer: char_wb
   min_ngram: 1
   max_ngram: 4
+- name: CRFEntityExtractor
 - name: DIETClassifier
+# Disable entity extraction in DIETClassifier as we're using CRFEntityExtractor
+  entity_recognition: False
   epochs: 12
 - name: EntitySynonymMapper
 - name: ResponseSelector

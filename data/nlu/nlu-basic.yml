@@ -17,6 +17,9 @@ nlu:
     - bonjour toi
     - coucou
     - bonsoir
+
+- intent: direct_query
+  examples: |
     - nouvelle recherche
     - je veux faire une nouvelle recherche
     - oublie cette recherche, je veux en faire une nouvelle

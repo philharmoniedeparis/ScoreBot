@@ -306,10 +306,10 @@ raw_sentences = {
     "get_sheet_music_by_casting": {
         "sentences": [
             # MEDIUM
-            "Je cherche une partition _LEVEL de _GENRE pour _MEDIUM."
-            "Je cherche une partition _LEVEL de _GENRE pour un _MEDIUM."
-            "Donne moi une partition _LEVEL de _GENRE pour un _MEDIUM."
-            "partition _LEVEL de _GENRE pour un _MEDIUM."
+            "Je cherche une partition _LEVEL_SENTENCE de _GENRE pour _MEDIUM."
+            "Je cherche une partition _LEVEL_SENTENCE de _GENRE pour un _MEDIUM."
+            "Donne moi une partition _LEVEL_SENTENCE de _GENRE pour un _MEDIUM."
+            "partition _LEVEL_SENTENCE de _GENRE pour un _MEDIUM."
             "_MEDIUM",
             "un _MEDIUM",
             "un _MEDIUM soliste",
