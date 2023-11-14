@@ -15,6 +15,7 @@ nlu:
     - trios
     - trio
     - trios de
+    - trio de
 
 - synonym: "4"
   examples: |
