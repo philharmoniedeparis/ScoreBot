@@ -1,6 +1,4 @@
 version: '2.0'
-config:
-  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
@@ -85,9 +83,7 @@ entities:
 - display_buttons
 slots:
   number:
-    type: rasa.shared.core.slots.UnfeaturizedSlot
-    initial_value: null
-    auto_fill: true
+    type: unfeaturized
     influence_conversation: false
   agent:
     type: text

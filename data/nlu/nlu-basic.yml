@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -55,7 +54,6 @@ nlu:
     - bonne nuit
     - bonne journée
     - ciao
-
 - intent: affirm
   examples: |
     - oui
@@ -97,7 +95,6 @@ nlu:
     - comme sur des roulettes
     - merci
     - Merci beaucoup!
-
 - intent: mood_unhappy
   examples: |
     - ma journée était horrible
@@ -109,7 +106,6 @@ nlu:
     - pas bien
     - pas très bien
     - je suis abattu
-
 - intent: bot_challenge
   examples: |
     - es-tu un robot?
@@ -118,7 +114,6 @@ nlu:
     - est-ce que je parle à un robot?
     - tu as l'air de ne pas être une vraie personne
     - je crois que tu es un bot
-
 - intent: out_of_scope
   examples: |
     - Le seigneur des anneaux de Tolkien
@@ -131,3 +126,6 @@ nlu:
     - Putain de merde
     - Ta gueule
     - Ca marche pas
+- intent: nlu_fallback
+  examples: |
+    - rfjkzdsnzekldfc

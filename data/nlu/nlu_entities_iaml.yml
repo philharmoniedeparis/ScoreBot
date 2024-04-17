@@ -1,85 +1,55 @@
 version: "2.0"
-
 nlu:
-
-- synonym: "vso"
+- synonym: vso
   examples: |
     - soprano
     - soprano lyrique
     - soprano colorature
     - soprano triplum dans la partition
     - soprano triplum et motetus
-
-- synonym: "gestique"
-  examples: |
-    - gestique
-
-- synonym: "vunk"
+- synonym: vunk
   examples: |
     - voix
     - voix moyenne
-    - voix moyenne
-
-- synonym: "mml"
+- synonym: mml
   examples: |
     - instrument mélodique
-    - instrument mélodique
-
-- synonym: "vte"
+- synonym: vte
   examples: |
     - ténor
     - taille
     - ténorino
-    - ténor
-    - taille
-
-- synonym: "oie"
+- synonym: oie
   examples: |
     - ensemble instrumental
-    - ensemble instrumental
-
-- synonym: "cve"
+- synonym: cve
   examples: |
     - ensemble vocal
-    - ensemble vocal
-
-- synonym: "vunl"
+- synonym: vunl
   examples: |
     - voix grave
-    - voix grave
-
-- synonym: "cmi"
+- synonym: cmi
   examples: |
     - choeur mixte
     - chœur mixte
-
-- synonym: "zda"
+- synonym: zda
   examples: |
     - danseur
     - danseuse
     - danseurs
-
-- synonym: "zab"
+- synonym: zab
   examples: |
     - acrobate
-    - acrobate
-
-- synonym: "zmi"
+- synonym: zmi
   examples: |
     - mime
-    - mime
-
-- synonym: "zju"
+- synonym: zju
   examples: |
     - jongleur
-    - jongleur
-
-- synonym: "och"
+- synonym: och
   examples: |
     - orchestre de chambre
-    - orchestre de chambre
-
-- synonym: "cun"
+- synonym: cun
   examples: |
     - choeur
     - chœur
@@ -87,155 +57,117 @@ nlu:
     - chœur d'adulte
     - choeur a capella
     - choeur unisson
-    - choeur a capella
-
-- synonym: "vhc"
+- synonym: vct
   examples: |
     - haute-contre
+    - contre-ténor
+- synonym: vhc
+  examples: |
     - haute contre
-
-- synonym: "zas"
+- synonym: zas
   examples: |
     - acteur muet
-
-- synonym: "zat"
+- synonym: zat
   examples: |
     - acteur
     - comédien
     - acteur homme
-
-- synonym: "ost"
+- synonym: ost
   examples: |
     - orchestre à cordes
     - orchestre a corde
-
-- synonym: "oun"
+- synonym: oun
   examples: |
     - orchestre d'élèves
-
-- synonym: "ofu"
+- synonym: ofu
   examples: |
     - orchestre symphonique
     - grand orchestre
-
-- synonym: "vct"
-  examples: |
-    - contre-ténor
-    - haute-contre
-    - contre-ténor
-
-- synonym: "o"
+- synonym: o
   examples: |
     - ensemble
     - ensemble varié
     - ensemble autre
-
-- synonym: "cch"
+- synonym: cch
   examples: |
     - choeur d'enfants
     - chœur d'enfants
     - choeur enfants
-
-- synonym: "cme"
+- synonym: cme
   examples: |
     - choeur d'hommes
     - chœur d'hommes
     - choeur hommes
-
-- synonym: "cre"
+- synonym: cre
   examples: |
     - choeur parlé
     - chœur parlé
-    - choeur parlé
-
-- synonym: "cwo"
+- synonym: cwo
   examples: |
     - choeur de femmes
     - chœur de femmes
     - choeur femmes
-
-- synonym: "oba"
+- synonym: oba
   examples: |
     - harmonie
     - orchestre d'harmonie
-
-- synonym: "ope"
+- synonym: ope
   examples: |
     - orchestre de percussions
     - instrumentarium orff
-    - instrumentarium orff
-
-- synonym: "owi"
+- synonym: owi
   examples: |
     - orchestre de vents
-    - orchestre de vents
-
-- synonym: "pse"
+- synonym: pse
   examples: |
     - objet sonore
     - objets sonores
-
-- synonym: "vca"
+- synonym: vca
   examples: |
     - alto enfant
     - contralto enfant
-
-- synonym: "vcs"
+- synonym: vcs
   examples: |
     - soprano enfant
-    - soprano enfant
-
-- synonym: "singer"
+- synonym: singer
   examples: |
     - chanteur
     - chanteuse
-
-- synonym: "vcv"
+- synonym: vcv
   examples: |
     - voix d'enfant
     - voix enfantine
     - enfant
     - voix enfant
-
-- synonym: "vma"
+- synonym: vma
   examples: |
     - voix d'homme
     - voix homme
-
-- synonym: "vrc"
+- synonym: vrc
   examples: |
     - récitant enfant
     - voix parlée enfant
-    - récitant enfant
-
-- synonym: "vre"
+- synonym: vre
   examples: |
     - voix parlée
     - récitant
-    - voix parlée
-
-- synonym: "vrw"
+- synonym: vrw
   examples: |
     - récitante
     - voix parlée femme
     - récitant femme
-
-- synonym: "vunj"
+- synonym: vunj
   examples: |
     - voix haute
     - voix élevée
-
-- synonym: "vwo"
+- synonym: vwo
   examples: |
     - voix de femme
     - voix femme
-
-- synonym: "zac"
+- synonym: zac
   examples: |
     - acteur enfant
-    - acteur enfant
-
-- synonym: "zaw"
+- synonym: zaw
   examples: |
     - actrice
     - comédienne

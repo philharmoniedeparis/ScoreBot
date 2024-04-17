@@ -1,8 +1,6 @@
 version: "2.0"
-
 nlu:
-
-- synonym: "68610"
+- synonym: '68610'
   examples: |
     - chanson
     - cantilène
@@ -11,1023 +9,795 @@ nlu:
     - song
     - vaudeville
     - complainte
-
-- synonym: "67607"
+- synonym: '67607'
   examples: |
     - messe
     - credo
     - gloria
     - kyrie
     - messes
-
-- synonym: "67453"
+- synonym: '67453'
   examples: |
     - musiques de films
     - musique de film
-
-- synonym: "67551"
+- synonym: '67551'
   examples: |
     - berceuse
     - cancion de cuna
     - lullaby
     - nana flamenca
     - wiegenlied
-
-- synonym: "67721"
+- synonym: '67721'
   examples: |
     - contredanse
     - contra-dance
     - counterdance
     - kontretänze
-
-- synonym: "150278"
+- synonym: '150278'
   examples: |
     - rhythm and blues
     - motown sound
     - r'n'b'
     - soul music
-
-- synonym: "68912"
+- synonym: '68912'
   examples: |
     - variations
     - diferencia
     - division
     - thème et variations
-
-- synonym: "67157"
+- synonym: '67157'
   examples: |
     - air
     - air populaire
     - brunette
-
-- synonym: "68296"
+- synonym: '68296'
   examples: |
     - musique liturgique
     - canticle
     - cantique
-
-- synonym: "68753"
+- synonym: '68753'
   examples: |
     - fugue
     - fugues
     - fuguette
-
-- synonym: "145753"
+- synonym: '145753'
   examples: |
     - hard rock
     - black metal
     - heavy metal
-
-- synonym: "67710"
+- synonym: '67710'
   examples: |
     - hora lunga
     - hora
-
-- synonym: "67878"
+- synonym: '67878'
   examples: |
     - hymne
     - anthem
     - hymn
-
-- synonym: "68672"
+- synonym: '68672'
   examples: |
     - hymne religieuse
     - antienne
     - hymne religieux
-
-- synonym: "68617"
+- synonym: '68617'
   examples: |
     - mélodie
     - mélodies
     - melody
-
-- synonym: "67808"
+- synonym: '67808'
   examples: |
     - requiem
     - messe de requiem
     - messe des morts
-
-- synonym: "67760"
+- synonym: '67760'
   examples: |
     - mouvement perpétuel
     - moto perpetuo
     - motum perpetuum
-
-- synonym: "67803"
+- synonym: '67803'
   examples: |
     - musiques sacrées
     - musique sacrée
     - litanies
     - musique religieuse
-
-- synonym: "68560"
+- synonym: '68560'
   examples: |
     - psaume
     - psalm
     - psaumes
-
-- synonym: "67951"
+- synonym: '67951'
   examples: |
     - techno
     - musique techno
     - rave
-
-- synonym: "67147"
+- synonym: '67147'
   examples: |
     - valse
     - valses
     - walz
-
-- synonym: "68583"
+- synonym: '68583'
   examples: |
     - basse danse
     - basse-danse
-
-- synonym: "67899"
+- synonym: '67899'
   examples: |
     - branle
     - bransle
-
-- synonym: "68695"
+- synonym: '68695'
   examples: |
     - canon
     - caccia
-
-- synonym: "67287"
+- synonym: '67287'
   examples: |
     - cantate
     - cantata
-
-- synonym: "68576"
+- synonym: '68576'
   examples: |
     - cantate profane
     - cantates profanes
-
-- synonym: "67183"
+- synonym: '67183'
   examples: |
     - caprice
     - capriccio
-
-- synonym: "819687"
+- synonym: '819687'
   examples: |
     - cavatine
     - cavatina
-
-- synonym: "67618"
+- synonym: '67618'
   examples: |
     - chanson enfantine
     - chanson pour enfants
-
-- synonym: "67949"
+- synonym: '67949'
   examples: |
     - comédie musicale
     - comedies musicales
-
-- synonym: "64628"
+- synonym: '64628'
   examples: |
     - concerto
     - concertos
-
-- synonym: "153399"
+- synonym: '153399'
   examples: |
     - musique country
     - country music
-
-- synonym: "67369"
+- synonym: '67369'
   examples: |
     - czardas
     - csardas
-
-- synonym: "68805"
+- synonym: '68805'
   examples: |
     - divertissement
     - divertimento
-
-- synonym: "67487"
+- synonym: '67487'
   examples: |
     - etude
     - etudes
-
-- synonym: "68864"
+- synonym: '68864'
   examples: |
     - fantaisie
     - fantaisies
-
-- synonym: "67193"
+- synonym: '67193'
   examples: |
     - genre musical
     - forme musicale
-
-- synonym: "68106"
+- synonym: '68106'
   examples: |
     - fox-trot
     - foxtrot
-
-- synonym: "68613"
+- synonym: '68613'
   examples: |
     - cancan
     - french cancan
-
-- synonym: "67698"
+- synonym: '67698'
   examples: |
     - frottola
     - frottole
-
-- synonym: "68214"
+- synonym: '68214'
   examples: |
     - funk
     - funky music
-
-- synonym: "68060"
+- synonym: '68060'
   examples: |
     - rock
     - glam rock
-
-- synonym: "154228"
+- synonym: '154228'
   examples: |
     - hard-bop
     - hard bop
-
-- synonym: "146215"
+- synonym: '146215'
   examples: |
     - hip-hop
     - hip hop
-
-- synonym: "67908"
+- synonym: '67908'
   examples: |
     - théâtre musical
     - hörspiel scénique
-
-- synonym: "68676"
+- synonym: '68676'
   examples: |
     - intermezzo
     - intermède
-
-- synonym: "67685"
+- synonym: '67685'
   examples: |
     - entrée
     - intrada
-
-- synonym: "67564"
+- synonym: '67564'
   examples: |
     - lied
     - lieder
     - lieder romantique
     - lieder romantiques
-
-- synonym: "68684"
+- synonym: '68684'
   examples: |
     - madrigal
     - madrigaux
-
-- synonym: "68175"
+- synonym: '68175'
   examples: |
     - marche
     - marche nuptiale
-
-- synonym: "68625"
+- synonym: '68625'
   examples: |
     - pot-pourri
     - medley
-
-- synonym: "64624"
+- synonym: '64624'
   examples: |
     - opéra
     - melodramma
-
-- synonym: "68683"
+- synonym: '68683'
   examples: |
     - te deum
     - messe de te deum
-
-- synonym: "67243"
+- synonym: '67243'
   examples: |
     - motet
     - motets
-
-- synonym: "68585"
+- synonym: '68585'
   examples: |
     - musiques scéniques
     - musique scénique
     - musique de scene
-
-- synonym: "68905"
+- synonym: '68905'
   examples: |
     - nocturne
     - nocturnes
-
-- synonym: "151413"
+- synonym: '151413'
   examples: |
     - opera bouffe
     - opera buffa
-
-- synonym: "67732"
+- synonym: '67732'
   examples: |
     - oratorio
     - oratorios
-
-- synonym: "68854"
+- synonym: '68854'
   examples: |
     - passe-pied
     - passepied
-
-- synonym: "68792"
+- synonym: '68792'
   examples: |
     - pastorale
     - pastourelle
-
-- synonym: "67352"
+- synonym: '67352'
   examples: |
     - morceau de concours
     - pièce de concours
-
-- synonym: "68720"
+- synonym: '68720'
   examples: |
     - prélude
     - préludes
-
-- synonym: "67358"
+- synonym: '67358'
   examples: |
     - rhapsodie
     - rapsodie
-
-- synonym: "67910"
+- synonym: '67910'
   examples: |
     - récitatif
     - recitativo
-
-- synonym: "68772"
+- synonym: '68772'
   examples: |
     - ricercare
     - ricercar
-
-- synonym: "68591"
+- synonym: '68591'
   examples: |
     - rock'n roll
     - rock and roll
-
-- synonym: "68578"
+- synonym: '68578'
   examples: |
     - rondeau
     - rondeaux
-
-- synonym: "68626"
+- synonym: '68626'
   examples: |
     - sérénade
     - sérénades
-
-- synonym: "68838"
+- synonym: '68838'
   examples: |
     - sonate
     - sonata
-
-- synonym: "68568"
+- synonym: '68568'
   examples: |
     - suite de pièces
     - suite symphonique
-
-- synonym: "68594"
+- synonym: '68594'
   examples: |
     - suite
     - suites
-
-- synonym: "68008"
+- synonym: '68008'
   examples: |
     - poème symphonique
     - symphonic poem
-
-- synonym: "68680"
+- synonym: '68680'
   examples: |
     - symphonie
     - symphonies
-
-- synonym: "67301"
+- synonym: '67301'
   examples: |
     - tragédie lyrique
     - tragédie en musique
-
-- synonym: "67406"
+- synonym: '67406'
   examples: |
     - landler
     - tyrolienne
-
-- synonym: "68782"
+- synonym: '68782'
   examples: |
     - chanson polyphonique
     - villanelle
-
-- synonym: "67805"
+- synonym: '67805'
   examples: |
     - air d'opéra
-
-- synonym: "67750"
+- synonym: '67750'
   examples: |
     - air de concert
-
-- synonym: "68603"
+- synonym: '68603'
   examples: |
     - air de cour
-
-- synonym: "67457"
+- synonym: '67457'
   examples: |
     - allemande
-
-- synonym: "67725"
+- synonym: '67725'
   examples: |
     - anglaise
-
-- synonym: "67548"
+- synonym: '67548'
   examples: |
     - aria
-
-- synonym: "67764"
+- synonym: '67764'
   examples: |
     - ariette
-
-- synonym: "67985"
+- synonym: '67985'
   examples: |
     - arioso
-
-- synonym: "68563"
+- synonym: '68563'
   examples: |
     - aubade
-
-- synonym: "68605"
+- synonym: '68605'
   examples: |
     - badinerie
-
-- synonym: "67530"
+- synonym: '67530'
   examples: |
     - bagatelle
-
-- synonym: "68713"
+- synonym: '68713'
   examples: |
     - ballade
-
-- synonym: "67420"
+- synonym: '67420'
   examples: |
     - ballet
-
-- synonym: "67566"
+- synonym: '67566'
   examples: |
     - barcarolle
-
-- synonym: "67616"
+- synonym: '67616'
   examples: |
     - bergamasque
-
-- synonym: "67455"
+- synonym: '67455'
   examples: |
     - bicinium
-
-- synonym: "152612"
+- synonym: '152612'
   examples: |
     - boléro
-
-- synonym: "68130"
+- synonym: '68130'
   examples: |
     - bossa nova
-
-- synonym: "68874"
+- synonym: '68874'
   examples: |
     - bourrée
-
-- synonym: "67662"
+- synonym: '67662'
   examples: |
     - bourrée anglaise
-
-- synonym: "68650"
+- synonym: '68650'
   examples: |
     - burlesque
-
-- synonym: "67306"
+- synonym: '67306'
   examples: |
     - cabaret
-
-- synonym: "68558"
+- synonym: '68558'
   examples: |
     - canarie
-
-- synonym: "68024"
+- synonym: '68024'
   examples: |
     - cassation
-
-- synonym: "68386"
+- synonym: '68386'
   examples: |
     - cha cha cha
-
-- synonym: "67174"
+- synonym: '67174'
   examples: |
     - chaconne
-
-- synonym: "67987"
+- synonym: '67987'
   examples: |
     - chanson à boire
-
-- synonym: "885405"
+- synonym: '885405'
   examples: |
     - chanson française
-
-- synonym: "67162"
+- synonym: '67162'
   examples: |
     - chanson politique
-
-- synonym: "67975"
+- synonym: '67975'
   examples: |
     - chant de marins
-
-- synonym: "67964"
+- synonym: '67964'
   examples: |
     - chant sacré
-
-- synonym: "67398"
+- synonym: '67398'
   examples: |
     - charleston
-
-- synonym: "68169"
+- synonym: '68169'
   examples: |
     - chasse
-
-- synonym: "67897"
+- synonym: '67897'
   examples: |
     - chjama e rispondi
-
-- synonym: "67396"
+- synonym: '67396'
   examples: |
     - choral
-
-- synonym: "68658"
+- synonym: '68658'
   examples: |
     - comédie-ballet
-
-- synonym: "67818"
+- synonym: '67818'
   examples: |
     - comptine
-
-- synonym: "68740"
+- synonym: '68740'
   examples: |
     - concerto grosso
-
-- synonym: "67714"
+- synonym: '67714'
   examples: |
     - conte musical
-
-- synonym: "67462"
+- synonym: '67462'
   examples: |
     - courante
-
-- synonym: "68411"
+- synonym: '68411'
   examples: |
     - cycle de lieder
-
-- synonym: "68629"
+- synonym: '68629'
   examples: |
     - cycle de mélodies
-
-- synonym: "834400"
+- synonym: '834400'
   examples: |
     - drame musical
-
-- synonym: "67413"
+- synonym: '67413'
   examples: |
     - ecossaise
-
-- synonym: "67577"
+- synonym: '67577'
   examples: |
     - elégie
-
-- synonym: "149180"
+- synonym: '149180'
   examples: |
     - estampie
-
-- synonym: "67575"
+- synonym: '67575'
   examples: |
     - etude de concert
-
-- synonym: "68648"
+- synonym: '68648'
   examples: |
     - etude symphonique
-
-- synonym: "68174"
+- synonym: '68174'
   examples: |
     - exercice
-
-- synonym: "149279"
+- synonym: '149279'
   examples: |
     - fandango
-
-- synonym: "67568"
+- synonym: '67568'
   examples: |
     - flamenco
-
-- synonym: "68450"
+- synonym: '68450'
   examples: |
     - forlane
-
-- synonym: "68616"
+- synonym: '68616'
   examples: |
     - free jazz
-
-- synonym: "67925"
+- synonym: '67925'
   examples: |
     - fusion
-
-- synonym: "67444"
+- synonym: '67444'
   examples: |
     - gaillarde
-
-- synonym: "68061"
+- synonym: '68061'
   examples: |
     - garage
-
-- synonym: "68818"
+- synonym: '68818'
   examples: |
     - gavotte
-
-- synonym: "67387"
+- synonym: '67387'
   examples: |
     - gigue
-
-- synonym: "67738"
+- synonym: '67738'
   examples: |
     - gospel
-
-- synonym: "68244"
+- synonym: '68244'
   examples: |
     - grand motet
-
-- synonym: "67880"
+- synonym: '67880'
   examples: |
     - ground
-
-- synonym: "68654"
+- synonym: '68654'
   examples: |
     - guajira
-
-- synonym: "67680"
+- synonym: '67680'
   examples: |
     - habanera
-
-- synonym: "67639"
+- synonym: '67639'
   examples: |
     - hoquet
-
-- synonym: "68582"
+- synonym: '68582'
   examples: |
     - hornpipe
-
-- synonym: "145514"
+- synonym: '145514'
   examples: |
     - house music
-
-- synonym: "67533"
+- synonym: '67533'
   examples: |
     - impromptu
-
-- synonym: "67796"
+- synonym: '67796'
   examples: |
     - improvisation
-
-- synonym: "68888"
+- synonym: '68888'
   examples: |
     - invention
-
-- synonym: "68638"
+- synonym: '68638'
   examples: |
     - jacara
-
-- synonym: "68047"
+- synonym: '68047'
   examples: |
     - java
-
-- synonym: "68639"
+- synonym: '68639'
   examples: |
     - jota
-
-- synonym: "67879"
+- synonym: '67879'
   examples: |
     - lachrimae
-
-- synonym: "151100"
+- synonym: '151100'
   examples: |
     - lai
-
-- synonym: "67810"
+- synonym: '67810'
   examples: |
     - leçon de ténèbres
-
-- synonym: "67536"
+- synonym: '67536'
   examples: |
     - loure
-
-- synonym: "137308"
+- synonym: '137308'
   examples: |
     - magnificat
-
-- synonym: "68652"
+- synonym: '68652'
   examples: |
     - malaguena
-
-- synonym: "68611"
+- synonym: '68611'
   examples: |
     - mambo
-
-- synonym: "68460"
+- synonym: '68460'
   examples: |
     - marche funèbre
-
-- synonym: "67935"
+- synonym: '67935'
   examples: |
     - marche militaire
-
-- synonym: "767184"
+- synonym: '767184'
   examples: |
     - masque
-
-- synonym: "67532"
+- synonym: '67532'
   examples: |
     - mazurka
-
-- synonym: "67782"
+- synonym: '67782'
   examples: |
     - mélodie française
-
-- synonym: "153976"
+- synonym: '153976'
   examples: |
     - mélodrame
-
-- synonym: "68814"
+- synonym: '68814'
   examples: |
     - menuet
-
-- synonym: "68614"
+- synonym: '68614'
   examples: |
     - merengue
-
-- synonym: "68656"
+- synonym: '68656'
   examples: |
     - milonga
-
-- synonym: "67216"
+- synonym: '67216'
   examples: |
     - miserere
-
-- synonym: "68273"
+- synonym: '68271'
   examples: |
     - musette
-
-- synonym: "68353"
+- synonym: '68353'
   examples: |
     - musique à programme
-
-- synonym: "68161"
+- synonym: '68161'
   examples: |
     - musique de circonstance
-
-- synonym: "68149"
+- synonym: '68149'
   examples: |
     - musique klezmer
-
-- synonym: "67624"
+- synonym: '67624'
   examples: |
     - musique spectrale
-
-- synonym: "68351"
+- synonym: '68351'
   examples: |
     - negro spiritual
-
-- synonym: "67989"
+- synonym: '67989'
   examples: |
     - noël
-
-- synonym: "67927"
+- synonym: '67927'
   examples: |
     - ode
-
-- synonym: "68674"
+- synonym: '68674'
   examples: |
     - opéra pour enfants
-
-- synonym: "68269"
+- synonym: '68269'
   examples: |
     - opera seria
-
-- synonym: "68696"
+- synonym: '68696'
   examples: |
     - opéra-ballet
-
-- synonym: "67940"
+- synonym: '67940'
   examples: |
     - opéra-comique
-
-- synonym: "68056"
+- synonym: '68056'
   examples: |
     - opérette
-
-- synonym: "68598"
+- synonym: '68598'
   examples: |
     - padoana
-
-- synonym: "67263"
+- synonym: '67263'
   examples: |
     - pantomime
-
-- synonym: "67752"
+- synonym: '67752'
   examples: |
     - paraphrase
-
-- synonym: "153029"
+- synonym: '153029'
   examples: |
     - parodie
-
-- synonym: "67471"
+- synonym: '67471'
   examples: |
     - partita
-
-- synonym: "791218"
+- synonym: '791218'
   examples: |
     - paso doble
-
-- synonym: "67591"
+- synonym: '67591'
   examples: |
     - passacaille
-
-- synonym: "68599"
+- synonym: '68599'
   examples: |
     - passamezzo
-
-- synonym: "67953"
+- synonym: '67953'
   examples: |
     - passion
-
-- synonym: "67438"
+- synonym: '67438'
   examples: |
     - pavane
-
-- synonym: "68245"
+- synonym: '68245'
   examples: |
     - petit motet
-
-- synonym: "64626"
+- synonym: '64626'
   examples: |
     - pièce concertante
-
-- synonym: "67778"
+- synonym: '67778'
   examples: |
     - plain-chant
-
-- synonym: "67883"
+- synonym: '67883'
   examples: |
     - poème musical
-
-- synonym: "67295"
+- synonym: '67295'
   examples: |
     - polka
-
-- synonym: "67542"
+- synonym: '67542'
   examples: |
     - polonaise
-
-- synonym: "153031"
+- synonym: '153031'
   examples: |
     - quadrille
-
-- synonym: "67768"
+- synonym: '67768'
   examples: |
     - raga
-
-- synonym: "67367"
+- synonym: '67367'
   examples: |
     - ragtime
-
-- synonym: "151313"
+- synonym: '151313'
   examples: |
     - raï
-
-- synonym: "67265"
+- synonym: '67265'
   examples: |
     - rap
-
-- synonym: "68016"
+- synonym: '68016'
   examples: |
     - reel
     - reels
     - reels celtiques
     - reel celtique
-
-- synonym: "68198"
+- synonym: '68198'
   examples: |
     - reggae
-
-- synonym: "67590"
+- synonym: '67590'
   examples: |
     - rigaudon
-
-- synonym: "67467"
+- synonym: '67467'
   examples: |
     - romance
-
-- synonym: "68833"
+- synonym: '68833'
   examples: |
     - rondo
-
-- synonym: "67915"
+- synonym: '67915'
   examples: |
     - rumba
-
-- synonym: "68634"
+- synonym: '68634'
   examples: |
     - salsa
-
-- synonym: "68584"
+- synonym: '68584'
   examples: |
     - saltarelle
-
-- synonym: "67451"
+- synonym: '67451'
   examples: |
     - samba
-
-- synonym: "68849"
+- synonym: '68849'
   examples: |
     - sarabande
-
-- synonym: "68058"
+- synonym: '68058'
   examples: |
     - sardane
-
-- synonym: "67516"
+- synonym: '67516'
   examples: |
     - scherzo
-
-- synonym: "67672"
+- synonym: '67672'
   examples: |
     - sinfonia
-
-- synonym: "68287"
+- synonym: '68287'
   examples: |
     - singspiel
-
-- synonym: "68109"
+- synonym: '68109'
   examples: |
     - slow
-
-- synonym: "68252"
+- synonym: '68252'
   examples: |
     - swing
-
-- synonym: "744660"
+- synonym: '744660'
   examples: |
     - tambourin
-
-- synonym: "68844"
+- synonym: '68844'
   examples: |
     - tango
-
-- synonym: "67567"
+- synonym: '67567'
   examples: |
     - tarentelle
-
-- synonym: "68263"
+- synonym: '68263'
   examples: |
     - tiento
-
-- synonym: "67402"
+- synonym: '67402'
   examples: |
     - toccata
-
-- synonym: "68604"
+- synonym: '68604'
   examples: |
     - tombeau
-
-- synonym: "67982"
+- synonym: '67982'
   examples: |
     - tourdion
-
-- synonym: "68377"
+- synonym: '68377'
   examples: |
     - valse musette
-
-- synonym: "68601"
+- synonym: '68601'
   examples: |
     - villancico
-
-- synonym: "149187"
+- synonym: '149187'
   examples: |
     - virelai
-
-- synonym: "67305"
+- synonym: '67305'
   examples: |
     - vocalise
-
-- synonym: "68574"
+- synonym: '68574'
   examples: |
     - voluntary
-
-- synonym: "67983"
+- synonym: '67983'
   examples: |
     - musique de salon
-
-- synonym: "67227"
+- synonym: '67227'
   examples: |
     - musique traditionnelle
     - folklore
@@ -1036,116 +806,91 @@ nlu:
     - musique ethnique
     - musiques du monde
     - musique du monde
-
-- synonym: "67139"
+- synonym: '67139'
   examples: |
     - musique contemporaine
     - musique d'aujourd'hui
-
-- synonym: "67509"
+- synonym: '67509'
   examples: |
     - musique baroque
-
-- synonym: "67996"
+- synonym: '67996'
   examples: |
     - jazz
-
-- synonym: "67907"
+- synonym: '67907'
   examples: |
     - musique de variétés
     - variété
-
-- synonym: "68687"
+- synonym: '68687'
   examples: |
     - musique ancienne
-
-- synonym: "68522"
+- synonym: '68522'
   examples: |
     - musique classique
-
-- synonym: "68062"
+- synonym: '68062'
   examples: |
     - musique pop
     - pop
     - pop musique
     - pop music
-
-- synonym: "67958"
+- synonym: '67958'
   examples: |
     - musique romantique
     - romantique
-
-- synonym: "68116"
+- synonym: '68116'
   examples: |
     - musique de cirque
-
-- synonym: "154220"
+- synonym: '154220'
   examples: |
     - musique militaire
-
-- synonym: "67876"
+- synonym: '67876'
   examples: |
     - musiques actuelles
     - musiques amplifiées
     - maa
-
-- synonym: "68292"
+- synonym: '68292'
   examples: |
     - vérisme
-
-- synonym: "67921"
+- synonym: '67921'
   examples: |
     - musique cajun
     - cajun
-
-- synonym: "154221"
+- synonym: '154221'
   examples: |
     - musique populaire
-
-- synonym: "146743"
+- synonym: '146743'
   examples: |
     - musique mécanique
-
-- synonym: "67601"
+- synonym: '67601'
   examples: |
     - music hall
-
-- synonym: "154217"
+- synonym: '154217'
   examples: |
     - musique de chasse
-
-- synonym: "67931"
+- synonym: '67931'
   examples: |
     - musique néoclassique
-
-- synonym: "154214"
+- synonym: '154214'
   examples: |
     - musique afro-américaine
     - musique noire américaine
-
-- synonym: "142496"
+- synonym: '142496'
   examples: |
     - ecomusique
     - eco-musique
-
-- synonym: "154215"
+- synonym: '154215'
   examples: |
     - musique artificielle
-
-- synonym: "154222"
+- synonym: '154222'
   examples: |
     - musique primitive
-
-- synonym: "782144"
+- synonym: '782144'
   examples: |
     - entartete musik
     - musique dégénérée
-
-- synonym: "794636"
+- synonym: '794636'
   examples: |
     - musique d'ambiance
-
-- synonym: "68290"
+- synonym: '68290'
   examples: |
     - chanson traditionnelle
     - chansons populaires
@@ -1155,392 +900,301 @@ nlu:
     - chansons populaire
     - chant populaire
     - mélodie populaire
-
-- synonym: "67848"
+- synonym: '67848'
   examples: |
     - musique juive
-
-- synonym: "68080"
+- synonym: '68080'
   examples: |
     - bluegrass
-
-- synonym: "67922"
+- synonym: '67922'
   examples: |
     - musique créole
-
-- synonym: "67146"
+- synonym: '67146'
   examples: |
     - musique orientale
     - musique arabe
-
-- synonym: "68517"
+- synonym: '68517'
   examples: |
     - musique celtique
-
-- synonym: "67434"
+- synonym: '67434'
   examples: |
     - musique arabo-andalouse
-
-- synonym: "67874"
+- synonym: '67874'
   examples: |
     - musique slave
-
-- synonym: "143176"
+- synonym: '143176'
   examples: |
     - ka
     - gwo ka
     - gwoka
     - groka
-
-- synonym: "67474"
+- synonym: '67474'
   examples: |
     - musique indienne
-
-- synonym: "67423"
+- synonym: '67423'
   examples: |
     - musique tsigane
     - musique rom
     - musique tzigane
-
-- synonym: "68141"
+- synonym: '68141'
   examples: |
     - musique bretonne
-
-- synonym: "68208"
+- synonym: '68208'
   examples: |
     - calypso
-
-- synonym: "68863"
+- synonym: '68863'
   examples: |
     - musique africaine
-
-- synonym: "799141"
+- synonym: '799141'
   examples: |
     - musique occitane
     - musique de langue d'oc
     - musique provençale
-
-- synonym: "68597"
+- synonym: '68597'
   examples: |
     - musique sérielle
     - sérialisme
     - serialism
-
-- synonym: "68350"
+- synonym: '68350'
   examples: |
     - musique électroacoustique
     - musique acousmatique
     - musique électro-acoustique
     - musique expérimentale
-
-- synonym: "67887"
+- synonym: '67887'
   examples: |
     - musique minimaliste
     - minimalisme
-
-- synonym: "67606"
+- synonym: '67606'
   examples: |
     - musique aléatoire
     - combinatoire
-
-- synonym: "67867"
+- synonym: '67867'
   examples: |
     - musique répétitive
-
-- synonym: "68744"
+- synonym: '68744'
   examples: |
     - musique dodécaphonique
     - dodécaphonisme
-
-- synonym: "68917"
+- synonym: '68917'
   examples: |
     - musique informatique
     - informatique musicale
     - musique par ordinateur
     - musique et informatique
-
-- synonym: "68714"
+- synonym: '68714'
   examples: |
     - musique concrète
-
-- synonym: "68114"
+- synonym: '68114'
   examples: |
     - jazz standard
-
-- synonym: "67247"
+- synonym: '67247'
   examples: |
     - blues
-
-- synonym: "67452"
+- synonym: '67452'
   examples: |
     - boogie-woogie
     - boogie
     - boogie woogie
-
-- synonym: "68117"
+- synonym: '68117'
   examples: |
     - jazz vocal
-
-- synonym: "68533"
+- synonym: '68533'
   examples: |
     - be-bop
     - be bop
-
-- synonym: "67424"
+- synonym: '67424'
   examples: |
     - jazz manouche
     - jazz tsigane
     - jazz gitan
-
-- synonym: "67766"
+- synonym: '67766'
   examples: |
     - jazz-rock
-
-- synonym: "67784"
+- synonym: '67784'
   examples: |
     - latin jazz
-
-- synonym: "68423"
+- synonym: '68423'
   examples: |
     - jazz cubain
-
-- synonym: "154229"
+- synonym: '154229'
   examples: |
     - new orleans
     - jazz new orleans
-
-- synonym: "67807"
+- synonym: '67807'
   examples: |
     - musique médiévale
     - cantiga
     - chanson de laisse
     - musique du moyen age
-
-- synonym: "67997"
+- synonym: '67997'
   examples: |
     - musique de la renaissance
-
-- synonym: "68867"
+- synonym: '68867'
   examples: |
     - chant grégorien
     - grégorien
     - clausule
     - gregorian chant
-
-- synonym: "67648"
+- synonym: '67648'
   examples: |
     - ars nova
-
-- synonym: "146806"
+- synonym: '146806'
   examples: |
     - ars antiqua
-
-- synonym: "67847"
+- synonym: '67847'
   examples: |
     - musique électronique
-
-- synonym: "137234"
+- synonym: '137234'
   examples: |
     - zydeco
-
-- synonym: "139098"
+- synonym: '139098'
   examples: |
     - desi music
-
-- synonym: "143566"
+- synonym: '143566'
   examples: |
     - world music
-
-- synonym: "150718"
+- synonym: '150718'
   examples: |
     - musiques urbaines
-
-- synonym: "892028"
+- synonym: '892028'
   examples: |
     - dancehall
-
-- synonym: "897194"
+- synonym: '897194'
   examples: |
     - champeta
-
-- synonym: "902805"
+- synonym: '902805'
   examples: |
     - kwaito
-
-- synonym: "965977"
+- synonym: '965977'
   examples: |
     - afrobeat
-
-- synonym: "1074940"
+- synonym: '1074940'
   examples: |
     - rocksteady
     - rock steady
-
-- synonym: "1074941"
+- synonym: '1074941'
   examples: |
     - ska
     - musique ska
-
-- synonym: "68271"
-  examples: |
-    - musette
-
-- synonym: "153637"
+- synonym: '153637'
   examples: |
     - musique verte
-
-- synonym: "67968"
+- synonym: '67968'
   examples: |
     - fado
-
-- synonym: "891794"
+- synonym: '891794'
   examples: |
     - rebetiko
-
-- synonym: "148991"
+- synonym: '148991'
   examples: |
     - maqam
-
-- synonym: "799134"
+- synonym: '799134'
   examples: |
     - azawan
-
-- synonym: "992000"
+- synonym: '992000'
   examples: |
     - chaabi
-
-- synonym: "67435"
+- synonym: '67435'
   examples: |
     - nouba
-
-- synonym: "143148"
+- synonym: '143148'
   examples: |
     - malouf
-
-- synonym: "146061"
+- synonym: '146061'
   examples: |
     - tala
-
-- synonym: "154212"
+- synonym: '154212'
   examples: |
     - dhrupad
-
-- synonym: "799140"
+- synonym: '799140'
   examples: |
     - khyal
-
-- synonym: "904608"
+- synonym: '904608'
   examples: |
     - qawwali
-
-- synonym: "925786"
+- synonym: '925786'
   examples: |
     - thumri
-
-- synonym: "67141"
+- synonym: '67141'
   examples: |
     - temps réel
-
-- synonym: "67191"
+- synonym: '67191'
   examples: |
     - logiciel de création
-
-- synonym: "67726"
+- synonym: '67726'
   examples: |
     - echantillonneur
-
-- synonym: "68105"
+- synonym: '68105'
   examples: |
     - morphoscope
-
-- synonym: "68111"
+- synonym: '68111'
   examples: |
     - musique assistée par ordinateur
-
-- synonym: "68882"
+- synonym: '68882'
   examples: |
     - séquenceur
-
-- synonym: "68893"
+- synonym: '68893'
   examples: |
     - cao
     - composition assistée par ordinateur
-
-- synonym: "950125"
+- synonym: '950125'
   examples: |
     - cmao
     - composition musicale assistée par ordinateur
-
-- synonym: "1053038"
+- synonym: '1053038'
   examples: |
     - experimental
-
-- synonym: "145513"
+- synonym: '145513'
   examples: |
     - trip-hop
-
-- synonym: "145525"
+- synonym: '145525'
   examples: |
     - drum'n'bass
-
-- synonym: "145528"
+- synonym: '145528'
   examples: |
     - big beat
-
-- synonym: "145531"
+- synonym: '145531'
   examples: |
     - electro
-
-- synonym: "1053034"
+- synonym: '1053034'
   examples: |
     - ambient
-
-- synonym: "1053037"
+- synonym: '1053037'
   examples: |
     - downtempo
-
-- synonym: "68588"
+- synonym: '68588'
   examples: |
     - folk rock
     - folk
-
-- synonym: "68590"
+- synonym: '68590'
   examples: |
     - disco
-
-- synonym: "145748"
+- synonym: '145748'
   examples: |
     - gothique
     - rock gothique
-
-- synonym: "153056"
+- synonym: '153056'
   examples: |
     - punk rock
-
-- synonym: "154284"
+- synonym: '154284'
   examples: |
     - punta rock
-
-- synonym: "824623"
+- synonym: '824623'
   examples: |
     - opéra-rock
-
-- synonym: "1053042"
+- synonym: '1053042'
   examples: |
     - krautrock
-
-- synonym: "67271"
+- synonym: '67271'
   examples: |
     - logiciel de composition
-
-- synonym: "1053039"
+- synonym: '1053039'
   examples: |
     - acid techno
-
-- synonym: "1053040"
+- synonym: '1053040'
   examples: |
     - minimal techno
-
-- synonym: "1053041"
+- synonym: '1053041'
   examples: |
     - dub techno
