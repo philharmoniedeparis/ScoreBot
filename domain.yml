@@ -3,72 +3,46 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- get_sheet_music_by_casting:
-    use_entities: true
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- get_sheet_music_by_casting
 - ask_filter_criteria:
-    use_entities: false
+    use_entities: []
 - composer_choice:
-    use_entities: false
-- composer_is_selected:
-    use_entities: true
+    use_entities: []
+- composer_is_selected
 - genre_choice:
-    use_entities: false
-- genre_is_selected:
-    use_entities: true
+    use_entities: []
+- genre_is_selected
 - level_choice:
-    use_entities: false
-- level_is_selected:
-    use_entities: true
+    use_entities: []
+- level_is_selected
 - period_choice:
-    use_entities: false
-- period_is_selected:
-    use_entities: true
-- work_name_is_selected:
-    use_entities: true
+    use_entities: []
+- period_is_selected
+- work_name_is_selected
 - location_choice:
-    use_entities: false
-- location_is_selected:
-    use_entities: true
+    use_entities: []
+- location_is_selected
 - instrumentation_choice:
-    use_entities: false
-- instrumentation_is_selected:
-    use_entities: true
-- display_results:
-    use_entities: true
-- composer_manual_entry:
-    use_entities: true
-- genre_manual_entry:
-    use_entities: true
-- instrumentation_manual_entry:
-    use_entities: true
-- level_manual_entry:
-    use_entities: true
-- period_manual_entry:
-    use_entities: true
-- work_name_manual_entry:
-    use_entities: true
-- location_manual_entry:
-    use_entities: true
-- direct_query:
-    use_entities: true
-- out_of_scope:
-    use_entities: true
-- nlu_fallback:
-    use_entities: true
+    use_entities: []
+- instrumentation_is_selected
+- display_results
+- composer_manual_entry
+- genre_manual_entry
+- instrumentation_manual_entry
+- level_manual_entry
+- period_manual_entry
+- work_name_manual_entry
+- location_manual_entry
+- direct_query
+- out_of_scope
+- nlu_fallback
 entities:
 - number
 - medium
@@ -87,48 +61,30 @@ slots:
     influence_conversation: false
   agent:
     type: text
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
   genre:
     type: text
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
   instrumentation:
     type: text
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
   level:
     type: text
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
   work_name:
     type: text
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
   period:
     type: text
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
   location:
     type: text
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
   current_results:
     type: text
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
   display_buttons:
     type: text
-    initial_value: null
-    auto_fill: true
     influence_conversation: false
 responses:
   utter_greet:
@@ -144,34 +100,34 @@ responses:
   utter_please_rephrase:
   - text: Je suis désolé, je n'ai pas bien compris votre message. Pouvez-vous reformuler s'il-vous-plaît ?
   utter_ask_filter_criteria:
-    - text: "Cherchons une partition ensemble. Choisissez un critère ou posez-moi directement votre question (par exemple : je cherche une partition facile de musique contemporaine pour pianiste)"
-      buttons:
-        - title: "Compositeur"
-          payload: "/composer_choice"
-        - title: "Genre"
-          payload: "/genre_choice"
-        - title: "Instrumentation"
-          payload: "/instrumentation_choice"
-        - title: "Niveau"
-          payload: "/level_choice"
-        - title: "Période"
-          payload: "/period_choice"
-        - title: "Nom de l'oeuvre"
-          payload: "/work_name_manual_entry"
+  - buttons:
+    - payload: /composer_choice
+      title: Compositeur
+    - payload: /genre_choice
+      title: Genre
+    - payload: /instrumentation_choice
+      title: Instrumentation
+    - payload: /level_choice
+      title: Niveau
+    - payload: /period_choice
+      title: Période
+    - payload: /work_name_manual_entry
+      title: Nom de l'oeuvre
+    text: 'Cherchons une partition ensemble. Choisissez un critère ou posez-moi directement votre question (par exemple : je cherche une partition facile de musique contemporaine pour pianiste)'
   utter_composer_manual_entry:
-    - text: "Veuillez entrer le nom du compositeur que vous recherchez"
+  - text: Veuillez entrer le nom du compositeur que vous recherchez
   utter_genre_manual_entry:
-    - text: "Veuillez entrer le genre que vous recherchez"
+  - text: Veuillez entrer le genre que vous recherchez
   utter_instrumentation_manual_entry:
-    - text: "Veuillez entrer l'instrumentation que vous recherchez"
+  - text: Veuillez entrer l'instrumentation que vous recherchez
   utter_level_manual_entry:
-    - text: "Veuillez entrer le niveau que vous recherchez"
+  - text: Veuillez entrer le niveau que vous recherchez
   utter_period_manual_entry:
-    - text: "Veuillez entrer la période que vous recherchez"
+  - text: Veuillez entrer la période que vous recherchez
   utter_work_name_manual_entry:
-    - text: "Veuillez entrer le nom de l'oeuvre que vous recherchez"
-  utter_location_manual_entry:  
-    - text: "Veuillez entrer le lieu que vous recherchez"
+  - text: Veuillez entrer le nom de l'oeuvre que vous recherchez
+  utter_location_manual_entry:
+  - text: Veuillez entrer le lieu que vous recherchez
 actions:
 - action_get_sheet_music_by_casting
 - action_composer_choice
@@ -183,5 +139,3 @@ actions:
 - action_location_choice
 - action_work_name_choice
 - action_direct_query
-forms: {}
-e2e_actions: []
