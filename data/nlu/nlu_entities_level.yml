@@ -1,8 +1,6 @@
 version: "2.0"
-
 nlu:
-
-- synonym: "cycle-1"
+- synonym: cycle-1
   examples: |
     - faciles à jouer
     - facile à jouer
@@ -65,8 +63,7 @@ nlu:
     - troisième année
     - 4e année
     - de 4ème année
-
-- synonym: "cycle-2"
+- synonym: cycle-2
   examples: |
     - accessibles aux confirmés
     - accessible au confirmé
@@ -88,7 +85,6 @@ nlu:
     - pour un élève de niveaux confirmé en
     - pour se perfectionner en
     - pour continuer le
-    - 5 ans
     - 5 ans
     - 6 ans
     - six ans
@@ -123,8 +119,7 @@ nlu:
     - élèves en 7ème année
     - élève en 7ème année
     - septième année
-
-- synonym: "cycle-3"
+- synonym: cycle-3
   examples: |
     - de niveau expert
     - de niveaux experts
