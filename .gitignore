@@ -1,11 +1,13 @@
 models
 results
+domain_v3.yml
 env.yml
 action.json
 endpoints.yml
 **.db**
 rei.sh
 .rasa
+.DS_Store
 
 
 # Byte-compiled / optimized / DLL files

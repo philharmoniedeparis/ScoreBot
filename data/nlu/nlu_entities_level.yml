@@ -2,9 +2,14 @@ version: "2.0"
 nlu:
 - synonym: cycle-1
   examples: |
+    - facile
+    - faciles
     - faciles à jouer
     - facile à jouer
     - débutant
+    - de niveau débutant
+    - ayant un niveau débutant
+    - niveau débutant
     - accessibles aux débutants
     - accessible à un débutant
     - pour les débutants
@@ -121,6 +126,8 @@ nlu:
     - septième année
 - synonym: cycle-3
   examples: |
+    - difficile
+    - difficiles
     - de niveau expert
     - de niveaux experts
     - expert

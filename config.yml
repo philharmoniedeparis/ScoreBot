@@ -6,34 +6,40 @@ pipeline:
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
-  - name: WhitespaceTokenizer
-  - name: RegexFeaturizer
-  - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
-  - name: CountVectorsFeaturizer
-    analyzer: char_wb
-    min_ngram: 1
-    max_ngram: 4
-  - name: DIETClassifier
-    epochs: 12
-  - name: EntitySynonymMapper
-  - name: ResponseSelector
-    epochs: 100
-  - name: FallbackClassifier
-    threshold: 0.3
-    ambiguity_threshold: 0.1
-  - name: "DucklingEntityExtractor"
+- name: LanguageModelFeaturizer
+  model_name: "camembert"
+  model_weights: "camembert-large"
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: CRFEntityExtractor
+- name: DIETClassifier
+# Disable entity extraction in DIETClassifier as we're using CRFEntityExtractor
+  entity_recognition: False
+  epochs: 12
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 100
+- name: FallbackClassifier
+  threshold: 0.3
+  ambiguity_threshold: 0.1
+- name: "DucklingEntityExtractor"
     # url of the running duckling server
-    url: "http://localhost:8000"
+  url: "http://localhost:8000"
     # dimensions to extract
-    dimensions: ["number"]
-    locale: "fr_FR"
+  dimensions: ["number"]
+  locale: "fr_FR"
     # if not set the default timezone of Duckling is going to be used
     # needed to calculate dates from relative expressions like "tomorrow"
-    timezone: "Europe/Paris"
+  timezone: "Europe/Paris"
     # Timeout for receiving response from http url of the running duckling server
     # if not set the default timeout of duckling http url is set to 3 seconds.
-    timeout : 3
+  timeout: 3
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
@@ -41,5 +47,13 @@ policies:
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
-  - name: MemoizationPolicy
-  - name: RulePolicy
+- name: MemoizationPolicy
+  max_history: 20
+- name: TEDPolicy
+  max_history: 20
+  epochs: 20
+- name: RulePolicy
+  core_fallback_threshold: 0.3
+  core_fallback_action_name: "action_default_fallback"
+  enable_fallback_prediction: true
+assistant_id: 20230606-144751-hidden-melt

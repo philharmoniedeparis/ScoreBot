@@ -2,9 +2,14 @@ from collections import defaultdict
 
 level_sentences = {
     "cycle-1": [
+        "facile",
+        "faciles",
         "faciles à jouer",
         "facile à jouer",
         "débutant",
+        "de niveau débutant",
+        "ayant un niveau débutant",
+        "niveau débutant",
         "accessibles aux débutants",
         "accessible à un débutant",
         "pour les débutants",
@@ -44,6 +49,8 @@ level_sentences = {
         "pour continuer le ",
     ],
     "cycle-3": [
+        "difficile",
+        "difficiles",
         "de niveau expert",
         "de niveaux experts",
         "expert",

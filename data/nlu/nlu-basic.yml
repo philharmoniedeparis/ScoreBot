@@ -5,19 +5,49 @@ nlu:
     - hey
     - hello toi
     - hello
+    - hello !
     - salut
     - bonjour
     - comment ça va ?
     - ça va bien ?
     - yo
+    - slt
+    - bonjour
+    - bonjour toi
     - coucou
     - bonsoir
+
+- intent: direct_query
+  examples: |
+    - nouvelle recherche
+    - je veux faire une nouvelle recherche
+    - oublie cette recherche, je veux en faire une nouvelle
+    - résultats nuls nouvelle recherche
+    - lance une nouvelle recherche
+    - recommence
+    - recommencer
+    - je veux recommencer
+    - je veux recommencer ma recherche
+    - je veux recommencer à zéro
+    - je veux recommencer ma recherche à zéro
+    - je veux recommencer ma recherche à partir de zéro
+    - nouvelle recherche critères différents
+    - changer de critères
+    - je veux changer de critères
+    - efface tout
+    - efface tout et recommence
+    - oublie tout
+    - oublie et recommence
+
+
 - intent: goodbye
   examples: |
     - au revoir
     - à plus
     - salut
     - adieu
+    - merci salut
+    - allé salut
     - à la revoyure
     - à plus tard
     - bonne soirée
@@ -34,6 +64,12 @@ nlu:
     - tout à fait
     - c'est juste
     - c'est exact
+    - tout juste
+    - c'est tout juste
+    - c'est tout à fait ça
+    - exact
+    - c'est exact
+
 - intent: deny
   examples: |
     - non
@@ -44,6 +80,8 @@ nlu:
     - pas du tout
     - pas trop
     - je ne crois pas
+    - non merci
+
 - intent: mood_great
   examples: |
     - parfait

@@ -1,0 +1,116 @@
+version: "2.0"
+
+nlu:
+
+- lookup: "iaml"
+  examples: |
+    - soprano
+    - soprano lyrique
+    - soprano colorature
+    - soprano triplum dans la partition
+    - soprano triplum et motetus
+    - gestique
+    - voix
+    - voix moyenne
+    - voix moyenne
+    - instrument mélodique
+    - instrument mélodique
+    - ténor
+    - taille
+    - ténorino
+    - ténor
+    - taille
+    - ensemble instrumental
+    - ensemble instrumental
+    - ensemble vocal
+    - ensemble vocal
+    - voix grave
+    - voix grave
+    - choeur mixte
+    - chœur mixte
+    - danseur
+    - danseuse
+    - danseurs
+    - acrobate
+    - acrobate
+    - mime
+    - mime
+    - jongleur
+    - jongleur
+    - orchestre de chambre
+    - orchestre de chambre
+    - choeur
+    - chœur
+    - choeur d'adultes
+    - chœur d'adulte
+    - choeur a capella
+    - choeur unisson
+    - choeur a capella
+    - haute-contre
+    - haute contre
+    - acteur muet
+    - acteur
+    - comédien
+    - acteur homme
+    - orchestre à cordes
+    - orchestre a corde
+    - orchestre d'élèves
+    - orchestre symphonique
+    - grand orchestre
+    - contre-ténor
+    - haute-contre
+    - contre-ténor
+    - ensemble
+    - ensemble varié
+    - ensemble autre
+    - choeur d'enfants
+    - chœur d'enfants
+    - choeur enfants
+    - choeur d'hommes
+    - chœur d'hommes
+    - choeur hommes
+    - choeur parlé
+    - chœur parlé
+    - choeur parlé
+    - choeur de femmes
+    - chœur de femmes
+    - choeur femmes
+    - harmonie
+    - orchestre d'harmonie
+    - orchestre de percussions
+    - instrumentarium orff
+    - instrumentarium orff
+    - orchestre de vents
+    - orchestre de vents
+    - objet sonore
+    - objets sonores
+    - alto enfant
+    - contralto enfant
+    - soprano enfant
+    - soprano enfant
+    - chanteur
+    - chanteuse
+    - voix d'enfant
+    - voix enfantine
+    - enfant
+    - voix enfant
+    - voix d'homme
+    - voix homme
+    - récitant enfant
+    - voix parlée enfant
+    - récitant enfant
+    - voix parlée
+    - récitant
+    - voix parlée
+    - récitante
+    - voix parlée femme
+    - récitant femme
+    - voix haute
+    - voix élevée
+    - voix de femme
+    - voix femme
+    - acteur enfant
+    - acteur enfant
+    - actrice
+    - comédienne
+    - acteur femme

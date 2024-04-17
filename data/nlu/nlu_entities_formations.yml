@@ -6,12 +6,16 @@ nlu:
     - duo
     - duet
     - duos de
-- synonym: '3'
+    - duo de
+
+- synonym: "3"
   examples: |
     - trios
     - trio
     - trios de
-- synonym: '4'
+    - trio de
+
+- synonym: "4"
   examples: |
     - quatuors
     - quatuor

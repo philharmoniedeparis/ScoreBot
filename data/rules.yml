@@ -1,11 +1,10 @@
 version: "2.0"
 
 rules:
-
-- rule: Say hello anytime the user says hello
+- rule: welcome user
   steps:
-  - intent: greet
-  - action: utter_greet
+    - intent: greet
+    - action: utter_ask_filter_criteria
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
@@ -36,3 +35,85 @@ rules:
   steps:
   - intent: get_sheet_music_by_casting
   - action: action_get_sheet_music_by_casting
+
+# - rule: Composer choice
+#   steps:
+#   - intent: composer_choice
+#   - action: action_composer_choice
+
+# - rule: Genre choice
+#   steps:
+#   - intent: genre_choice
+#   - action: action_genre_choice
+
+# - rule: Formation choice
+#   steps:
+#   - intent: instrumentation_choice
+#   - action: action_instrumentation_choice
+
+- rule: Composer selected
+  steps:
+  - intent: composer_is_selected
+  - action: action_get_sheet_music_by_casting
+
+- rule: Genre selected
+  steps:
+  - intent: genre_is_selected
+  - action: action_get_sheet_music_by_casting
+
+- rule: Formation selected
+  steps:
+  - intent: instrumentation_is_selected
+  - action: action_get_sheet_music_by_casting
+
+- rule: Display results
+  steps:
+  - intent: display_results
+  - action: action_display_results
+
+- rule: Direct query
+  steps:
+  - intent: direct_query
+  - action: action_direct_query
+
+# - rule: Genre manual entry
+#   steps:
+#   - action: utter_genre_manual_entry
+#   - intent: genre_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Composer manual entry
+#   steps:
+#   - action: utter_composer_manual_entry
+#   - intent: composer_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Formation manual entry
+#   steps:
+#   - action: utter_instrumentation_manual_entry
+#   - intent: instrumentation_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Level manual entry
+#   steps:
+#   - action: utter_level_manual_entry
+#   - intent: level_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Period manual entry 
+#   steps:
+#   - action: utter_period_manual_entry
+#   - intent: period_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Work name manual entry
+#   steps:
+#   - action: utter_work_name_manual_entry
+#   - intent: work_name_is_selected
+#   - action: action_get_sheet_music_by_casting
+
+# - rule: Location manual entry
+#   steps:
+#   - action: utter_location_manual_entry
+#   - intent: location_is_selected
+#   - action: action_get_sheet_music_by_casting

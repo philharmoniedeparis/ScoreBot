@@ -1,6 +1,6 @@
 gitops:
   manifest_projects:
-    - id: "team_chatbot/chatbot_philarmonie"
+    - id: "team_chatbot/chatbot_philharmonie"
       default_namespace: rasa-x
       paths:
         # If 'paths' is not specified or is an empty list, the configuration below is used
@@ -9,4 +9,4 @@ gitops:
 
 ci_access:
   projects:
-    - id: team_chatbot/chatbot_philarmonie
+    - id: team_chatbot/chatbot_philharmonie
